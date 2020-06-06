@@ -110,7 +110,9 @@
 
 ## 计算机网络系列
 
-
+* 计算机网络基础入门
+* 你不得不知的计算机网络
+* 计算机网络应用层
 
 
 
@@ -214,6 +216,12 @@
 
 
 
+## MyBatis
+
+
+
+
+
 
 
 ## Spring 系列
@@ -248,12 +256,18 @@
 
 
 
-
-
 ## Kafka 系列教程
 
 * [真的，Kafka 入门一篇就够了](https://github.com/crisxuan/bestJavaer/blob/master/kafka/kafka-basic.md)
 * [你能说出这些 Kafka 的原理吗](https://github.com/crisxuan/bestJavaer/blob/master/kafka/kafka-deep.md)
+
+
+
+## Redis 系列教程
+
+
+
+
 
 
 
@@ -307,21 +321,24 @@
 
 ## 电子书籍
 
+>汇总了 99% 互联网公司所涉及到知识点的电子书。
+>
+>添加下方二维码回复 002 领取。
 
-
-
-
-
-
-
-
-
-
-
+![](https://raw.githubusercontent.com/crisxuan/bestJavaer/master/picture/dianzishu.png)
 
 ## 思维导图
 
-
+* 程序员必备硬核知识
+* 现代操作系统
+* Java 基础核心总结
+* HTTP 核心总结
+* Java.lang 包
+* I/O 流
+* Session、Cookie 和 Token
+* 锁的分类
+* AQS 框架
+* Java.net 包
 
 
 
@@ -329,7 +346,13 @@
 
 ## 关于认知
 
-
+* 2019 我是怎样熬过来的
+* 1w+ 的心路历程
+* 美国留学生关于教育、制度和考试的看法
+* 内心独白｜给粉蜜的一封信
+* 给朋友们一些自信｜写于2019年4月
+* 作者的一周
+* bilibili 关于后浪有感
 
 
 
@@ -344,6 +367,12 @@
 
 
 ## 我的 PDF
+
+作者硬肝了三本 PDF ，它们分别是
+
+* Java 核心基础总结
+* HTTP 核心总结
+* 程序员必知的硬核基础知识总结
 
 
 
