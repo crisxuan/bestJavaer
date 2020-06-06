@@ -55,10 +55,10 @@
 
 ## 操作系统系列
 
-* 硬核操作系统入门
-* 硬核操作系统之进程和线程
-* 硬核操作系统之内存管理
-* 硬核操作系统之文件系统
+* [硬核操作系统入门](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-overview.md)
+* [硬核操作系统之进程和线程](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-processandthread.md)
+* [硬核操作系统之内存管理](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-rammanage.md)
+* [硬核操作系统之文件系统](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-filesystem.md)
 * 硬核操作系统之输入输出
 * 硬核操作系统之死锁
 * 硬核操作系统之虚拟化和云
@@ -68,10 +68,12 @@
 * 硬核操作系统之 UNIX 系统研究
 * 硬核操作系统之 Android 系统研究
 * 硬核操作系统之如何设计操作系统
-* 操作系统面试题
-* 操作系统网站推荐
+* [操作系统核心概念](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-importantconcept.md)
+* [操作系统面试题](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-fiftyInterview.md)
+* [操作系统网站推荐](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-recommand.md)
 
 * 操作系统硬核回答
+* [计算机基础常识](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/computer-youshouldknow.md)
 
 ## 计算机入门系列
 
