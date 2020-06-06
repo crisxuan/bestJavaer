@@ -252,8 +252,8 @@
 
 ## Kafka 系列教程
 
-* 真的，Kafka 入门一篇就够了
-* 你能说出这些 Kafka 的原理吗
+* [真的，Kafka 入门一篇就够了](https://github.com/crisxuan/bestJavaer/blob/master/kafka/kafka-basic.md)
+* [你能说出这些 Kafka 的原理吗](https://github.com/crisxuan/bestJavaer/blob/master/kafka/kafka-deep.md)
 
 
 
