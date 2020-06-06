@@ -125,26 +125,26 @@
 
 ## Java 基础系列
 
-* Java 核心基础教程
-* String、StringBuffer 和 StringBuilder
-* 深入理解 static 关键字
-* 深入理解 Java 变量
-* 关于四种引用类型
-* Exception 和 Error 的区别
-* ArrayList 用法解析
-* LinkedList 用法解析
-* for 、foreach 、iterator 三种遍历方式的比较
-* 理解静态绑定与动态绑定
-* @SafeVarargs 使用说明
-* @SuppressWarnings 用法
-* Arrays.asList 解析
-* Enum to String 一般用法
-* Comparable 和 Comparator的理解
-* Effective Java - 覆盖 equals 时总要覆盖 hashCode
-* Effective Java - 覆盖equals遵守的约定
-* Effective Java - 构造器私有、枚举和单例
-* Effective Java - 静态方法与构造器
-* Effective Java - try-with-resources 优先于try-finally
+* [Java 核心基础教程](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-summary.md)
+* [String、StringBuffer 和 StringBuilder](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-stringstringbufferstringbuilder.md)
+* [深入理解 static 关键字](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-static.md)
+* [深入理解 Java 变量](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-varaibles.md)
+* [关于四种引用类型](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-references.md)
+* [Exception 和 Error 的区别](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-exceptionanderror.md)
+* [ArrayList 用法解析](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-arraylist.md)
+* [LinkedList 用法解析](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-linkedlist.md)
+* [for 、foreach 、iterator 三种遍历方式的比较](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-forandforeach.md)
+* [理解静态绑定与动态绑定](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-staticbinding.md)
+* [@SafeVarargs 使用说明](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/javav-%40safavargs.md)
+* [@SuppressWarnings 用法](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-%40suppresswarnings.md)
+* [Arrays.asList 解析](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-arrays.asList.md)
+* [Enum to String 一般用法](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-enumtostring.md)
+* [Comparable 和 Comparator的理解](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-comparableandcomparator.md)
+* [Effective Java - 覆盖 equals 时总要覆盖 hashCode](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/effectivejava-equalsandhashcode.md)
+* [Effective Java - 覆盖equals遵守的约定](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/effectivejava-overrideequals.md)
+* [Effective Java - 构造器私有、枚举和单例](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/effectivejava-privateconstructor.md)
+* [Effective Java - 静态方法与构造器](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/effectivejava-staticandmethod.md)
+* [Effective Java - try-with-resources 优先于try-finally](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/effectivejava-try-with-resources.md)
 * 学习 Java 网站推荐给你
 
 
