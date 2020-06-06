@@ -3,9 +3,7 @@
 
 >声明：这是完全手写的仓库，不严谨的地方请告知作者。期待大家 `star`。
 >
->本仓库仅供学习使用，商业用途请联系作者
->
-><img src="https://raw.githubusercontent.com/crisxuan/bestJavaer/master/qcode/cxuancode.jpeg" style="zoom:33%;" />
+>本仓库仅供学习使用，商业用途请联系作者 (微信： lx252279279 )
 
 这是一个成为更好的程序员的系列教程，内容涵盖操作系统、计算机基础知识、 计算机网络、Java 基础教程、JVM、并发、Spring 框架系列、ORM 框架、消息中间件等
 
@@ -17,18 +15,14 @@
 
 ## 计算机入门系列
 
-* 程序员需要了解的硬核知识之 CPU
-* 程序员需要了解的硬核知识之内存
-* 程序员需要了解的硬核知识之二进制
-* 程序员需要了解的硬核知识之磁盘
-* 程序员需要了解的硬核知识之压缩算法
-* 程序员需要了解的硬核知识之操作系统和应用
-* 程序员需要了解的硬核知识之操作系统入门
-* 程序员需要了解的硬核知识之控制硬件
-
-
-
-
+* [程序员需要了解的硬核知识之 CPU](https://github.com/crisxuan/bestJavaer/blob/master/computer-basic/computer-cpu.md)
+* [程序员需要了解的硬核知识之内存](https://github.com/crisxuan/bestJavaer/blob/master/computer-basic/computer-ram.md)
+* [程序员需要了解的硬核知识之二进制](https://github.com/crisxuan/bestJavaer/blob/master/computer-basic/computer-binary.md)
+* [程序员需要了解的硬核知识之磁盘](https://github.com/crisxuan/bestJavaer/blob/master/computer-basic/computer-disk.md)
+* [程序员需要了解的硬核知识之压缩算法](https://github.com/crisxuan/bestJavaer/blob/master/computer-basic/computer-compression.md)
+* [程序员需要了解的硬核知识之操作系统和应用](https://github.com/crisxuan/bestJavaer/blob/master/computer-basic/computer-osandapp.md)
+* [程序员需要了解的硬核知识之操作系统入门](https://github.com/crisxuan/bestJavaer/blob/master/computer-basic/computer-os.md)
+* [程序员需要了解的硬核知识之控制硬件](https://github.com/crisxuan/bestJavaer/blob/master/computer-basic/computer-disk.md)
 
 ## Linux 系列
 
