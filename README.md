@@ -86,6 +86,19 @@
 * [程序员需要了解的硬核知识之操作系统入门](https://github.com/crisxuan/bestJavaer/blob/master/computer-basic/computer-os.md)
 * [程序员需要了解的硬核知识之控制硬件](https://github.com/crisxuan/bestJavaer/blob/master/computer-basic/computer-disk.md)
 
+
+
+## HTTP 系列
+
+* 全面了解 HTTP 
+* HTTP. 全部响应头汇总
+* HTTP 黑科技
+* 全面了解 HTTPS
+* 全面了解 Cookies、Session 和 Token
+* HTTP 高频面试题
+
+
+
 ## Linux 系列
 
 
@@ -219,28 +232,6 @@
 
 
 
-
-
-## HTTP 系列
-
-* 全面了解 HTTP 
-* HTTP. 全部响应头汇总
-* HTTP 黑科技
-* 全面了解 HTTPS
-* 全面了解 Cookies、Session 和 Token
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Kafka 系列教程
 
 * 真的，Kafka 入门一篇就够了
@@ -275,6 +266,12 @@
 ## 思维导图
 
 
+
+
+
+
+
+## 关于认知
 
 
 
