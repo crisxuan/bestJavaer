@@ -95,7 +95,6 @@
 * [HTTP 核心概念](https://github.com/crisxuan/bestJavaer/blob/master/http/http-deepknow.md)
 * [全面了解 HTTPS](https://github.com/crisxuan/bestJavaer/blob/master/http/http-https.md)
 * [全面了解 Cookies、Session 和 Token](https://github.com/crisxuan/bestJavaer/blob/master/http/http-cookesessiontoken.md)
-* [HTTP 高频面试题](https://github.com/crisxuan/bestJavaer/blob/master/http/http-interview.md)
 
 ## Linux 系列
 
@@ -186,7 +185,7 @@
 
 ## 设计模式系列
 
-* 设计模式基础入门
+* [设计模式基础入门](https://github.com/crisxuan/bestJavaer/blob/master/design-pattern/designpattern-basic.md)
 
 
 
@@ -258,6 +257,12 @@
 
 
 
+## ZooKeeper 系列教程
+
+* [ZooKeeper 基础入门](https://github.com/crisxuan/bestJavaer/blob/master/zookeeper/zookeeper-basic.md)
+
+
+
 
 
 
@@ -278,7 +283,7 @@
 >
 > 所以笔者励志把每道面试题从根源上助你理解
 
-* HTTP 高频面试题
+* [HTTP 高频面试题](https://github.com/crisxuan/bestJavaer/blob/master/interview-answer/http-interview.md)
 * 用心为你写了 9 道 MySQL 面试题
 * Java 基础面试题汇总
 
@@ -312,6 +317,8 @@
 
 
 
+
+
 ## 思维导图
 
 
@@ -334,7 +341,11 @@
 
 
 
+
+
 ## 我的 PDF
+
+
 
 
 
