@@ -165,17 +165,16 @@
 
 ## 并发系列
 
-
-
-
-
-
-
-
+* [简单认识并发](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-concurrent-basic.md)
+* [看完你就明白的锁系列之锁的状态](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-lock-status.md)
+* [看完你就明白的锁系列之乐观锁和悲观锁](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-optimisticlock.md)
+* [看完你就明白的锁系列之自旋锁](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-spinlock.md)
+* [锁系列汇总](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-lock.md)
 
 ### 源码分析
 
-
+* [ReentrantLock 源码分析](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-reentrantlock.md)
+* 我花了 35 张图就为你让你了解 AQS
 
 
 
