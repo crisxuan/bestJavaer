@@ -174,7 +174,7 @@
 ### 源码分析
 
 * [ReentrantLock 源码分析](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-reentrantlock.md)
-* 我花了 35 张图就为你让你了解 AQS
+* [我花了 35 张图就为你让你了解 AQS](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-aqs.md)
 
 
 
@@ -186,7 +186,7 @@
 
 ## 设计模式系列
 
-
+* 设计模式基础入门
 
 
 
@@ -278,7 +278,9 @@
 >
 > 所以笔者励志把每道面试题从根源上助你理解
 
-
+* HTTP 高频面试题
+* 用心为你写了 9 道 MySQL 面试题
+* Java 基础面试题汇总
 
 
 
