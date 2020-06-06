@@ -125,7 +125,27 @@
 
 ## Java 基础系列
 
-
+* Java 核心基础教程
+* String、StringBuffer 和 StringBuilder
+* 深入理解 static 关键字
+* 深入理解 Java 变量
+* 关于四种引用类型
+* Exception 和 Error 的区别
+* ArrayList 用法解析
+* LinkedList 用法解析
+* for 、foreach 、iterator 三种遍历方式的比较
+* 理解静态绑定与动态绑定
+* @SafeVarargs 使用说明
+* @SuppressWarnings 用法
+* Arrays.asList 解析
+* Enum to String 一般用法
+* Comparable 和 Comparator的理解
+* Effective Java - 覆盖 equals 时总要覆盖 hashCode
+* Effective Java - 覆盖equals遵守的约定
+* Effective Java - 构造器私有、枚举和单例
+* Effective Java - 静态方法与构造器
+* Effective Java - try-with-resources 优先于try-finally
+* 学习 Java 网站推荐给你
 
 
 
@@ -280,6 +300,10 @@
 ## 优质 Github 推荐
 
 
+
+
+
+## 我的 PDF
 
 
 
