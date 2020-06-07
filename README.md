@@ -7,9 +7,7 @@
 >
 >**本仓库仅供学习使用，商业用途请联系作者 (微信： lx252279279 )**
 
-![](https://raw.githubusercontent.com/crisxuan/bestJavaer/master/qcode/javajianshesmall.png)
-
-
+![](https://raw.githubusercontent.com/crisxuan/bestJavaer/master/qcode/gongzhonghao.png)
 
 ![](https://img.shields.io/static/v1?label=bestjavaer&message=操作系统&color=blue)![](https://img.shields.io/static/v1?label=bestjavaer&message=计算机基础&color=<COLOR>)![](https://img.shields.io/static/v1?label=bestjavaer&message=计算机网络&color=yellowgreen)
 
@@ -311,10 +309,6 @@ waiting...
 
 
 
-
-
-
-
 ## 面试题系列
 
 > 笔者非常痛恨网上那种什么面试题汇总等文章，无非就是各种百度拿了前几句滥竽充数一样，这种宣扬背诵的做法和高中老师教学生应付考试是一样的，侥幸心理、凡事图快的心理才助长了社会浮躁的风气。
@@ -324,8 +318,6 @@ waiting...
 * [HTTP 高频面试题](https://github.com/crisxuan/bestJavaer/blob/master/interview-answer/http-interview.md)
 * [用心为你写了 9 道 MySQL 面试题](https://github.com/crisxuan/bestJavaer/blob/master/interview-answer/mysql-interview.md)
 * Java 基础面试题汇总
-
-
 
 
 
