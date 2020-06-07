@@ -7,7 +7,7 @@
 >
 >**本仓库仅供学习使用，商业用途请联系作者 (微信： lx252279279 )**
 
-![](https://raw.githubusercontent.com/crisxuan/bestJavaer/master/qcode/gongzhonghao.png)
+<img src="https://raw.githubusercontent.com/crisxuan/bestJavaer/master/qcode/gongzhonghao.png" style="zoom:50%;" />
 
 ![](https://img.shields.io/static/v1?label=bestjavaer&message=操作系统&color=blue)![](https://img.shields.io/static/v1?label=bestjavaer&message=计算机基础&color=<COLOR>)![](https://img.shields.io/static/v1?label=bestjavaer&message=计算机网络&color=yellowgreen)
 
