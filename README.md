@@ -10,10 +10,10 @@
 这是一个成为更好的程序员的系列教程内容涵盖
 
 * [操作系统](https://github.com/crisxuan/bestJavaer#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%B3%BB%E5%88%97)
-* [计算机基础知识](https://github.com/crisxuan/bestJavaer#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%B3%BB%E5%88%97)
+* [计算机基础知识](https://github.com/crisxuan/bestJavaer#%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%97)
 * [计算机网络](https://github.com/crisxuan/bestJavaer#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%B3%BB%E5%88%97)
-* [Java 基础教程](https://github.com/crisxuan/bestJavaer#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%B3%BB%E5%88%97)
-* [设计模式](https://github.com/crisxuan/bestJavaer#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%B3%BB%E5%88%97)
+* [Java 基础教程](https://github.com/crisxuan/bestJavaer#java-%E5%9F%BA%E7%A1%80%E7%B3%BB%E5%88%97)
+* [设计模式](https://github.com/crisxuan/bestJavaer#%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E7%B3%BB%E5%88%97)
 * JVM
 * 并发
 * Spring 框架系列
@@ -43,12 +43,13 @@
 * ELK
 * Netty
 * Linux
-* [算法](https://github.com/crisxuan/bestJavaer#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%B3%BB%E5%88%97)
-* [思维导图](https://github.com/crisxuan/bestJavaer#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%B3%BB%E5%88%97)
+* [算法](https://github.com/crisxuan/bestJavaer#%E7%AE%97%E6%B3%95)
+* [思维导图](https://github.com/crisxuan/bestJavaer#%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE)
 * [关于认知]([https://github.com/crisxuan/bestJavaer#%E5%85%B3%E4%BA%8E%E8%AE%A4%E7%9F%A5](https://github.com/crisxuan/bestJavaer#关于认知))
-* [电子书籍](https://github.com/crisxuan/bestJavaer#%E5%85%B3%E4%BA%8E%E8%AE%A4%E7%9F%A5)
-* [优质 Github](https://github.com/crisxuan/bestJavaer#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%B3%BB%E5%88%97)
-* [贡献者](https://github.com/crisxuan/bestJavaer#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%B3%BB%E5%88%97)
+* [电子书籍](https://github.com/crisxuan/bestJavaer#%E7%94%B5%E5%AD%90%E4%B9%A6%E7%B1%8D)
+* [我的PDF](https://github.com/crisxuan/bestJavaer#%E6%88%91%E7%9A%84-pdf)
+* [优质 Github](https://github.com/crisxuan/bestJavaer#%E4%BC%98%E8%B4%A8-github-%E6%8E%A8%E8%8D%90)
+* [贡献者](https://github.com/crisxuan/bestJavaer#%E8%B4%A1%E7%8C%AE%E8%80%85)
 * 等
 
 也包括一些常见的面试题。
@@ -89,8 +90,6 @@
 * [程序员需要了解的硬核知识之操作系统和应用](https://github.com/crisxuan/bestJavaer/blob/master/computer-basic/computer-osandapp.md)
 * [程序员需要了解的硬核知识之操作系统入门](https://github.com/crisxuan/bestJavaer/blob/master/computer-basic/computer-os.md)
 * [程序员需要了解的硬核知识之控制硬件](https://github.com/crisxuan/bestJavaer/blob/master/computer-basic/computer-disk.md)
-
-
 
 ## HTTP 系列
 
@@ -333,20 +332,16 @@
 
 ## 思维导图
 
-* 程序员必备硬核知识
-* 现代操作系统
-* Java 基础核心总结
-* HTTP 核心总结
-* Java.lang 包
-* I/O 流
-* Session、Cookie 和 Token
-* 锁的分类
-* AQS 框架
-* Java.net 包
-
-
-
-
+* [程序员必备硬核知识](https://github.com/crisxuan/bestJavaer/blob/master/mindmanage/computer-basic.png)
+* [现代操作系统](https://github.com/crisxuan/bestJavaer/blob/master/mindmanage/operating-system.png)
+* [Java 基础核心总结](https://github.com/crisxuan/bestJavaer/blob/master/mindmanage/java-basic.png)
+* [HTTP 核心总结](https://github.com/crisxuan/bestJavaer/blob/master/mindmanage/http.png)
+* [Java.lang 包](https://github.com/crisxuan/bestJavaer/blob/master/mindmanage/java-lang.png)
+* [I/O 流](https://github.com/crisxuan/bestJavaer/blob/master/mindmanage/java-io.png)
+* [Session、Cookie 和 Token](https://github.com/crisxuan/bestJavaer/blob/master/mindmanage/sessioncookieandtoken.png)
+* [锁的分类](https://github.com/crisxuan/bestJavaer/blob/master/mindmanage/java-lock.png)
+* [AQS 框架](https://github.com/crisxuan/bestJavaer/blob/master/mindmanage/java-aqs.png)
+* [Java.net 包](https://github.com/crisxuan/bestJavaer/blob/master/mindmanage/java-net.png)
 
 ## 关于认知
 
@@ -375,10 +370,6 @@
 * [Java 核心基础总结](https://github.com/crisxuan/bestJavaer/blob/master/mypdf/java-all.pdf)
 * [HTTP 核心总结](https://github.com/crisxuan/bestJavaer/blob/master/mypdf/http-all.pdf)
 * [程序员必知的硬核基础知识总结](https://github.com/crisxuan/bestJavaer/blob/master/mypdf/computer-basic.pdf)
-
-
-
-
 
 
 
