@@ -103,7 +103,8 @@
 
 ## Linux 系列
 
-
+* Linux 内存管理
+* Linux 物理内存和虚拟内存
 
 
 
@@ -119,7 +120,13 @@
 * [你不得不知的计算机网络](https://github.com/crisxuan/bestJavaer/blob/master/network/network-center.md)
 * [计算机网络应用层](https://github.com/crisxuan/bestJavaer/blob/master/network/network-appLevel.md)
 
-
+* 计算机网络 - TCP 详解
+* 计算机网络 - IP 详解
+* 计算机网络 - HTTP 面试题
+* 计算机网络 - 详解 TCP 三次握手四次挥手
+* 计算机网络 - 探究数据包在网络的历程
+* 计算机网络 - wireshark 实战
+* 计算机网络 - TCP 半连接和全链接队列
 
 
 
@@ -195,8 +202,8 @@
 
 * Java 内存模型
 * 一个对象从 JVM 的角度是如何创建的
-* 垃圾回收理论介绍
-* 垃圾回收实战篇
+* [垃圾回收理论介绍](https://github.com/crisxuan/bestJavaer/blob/master/JVM/jvm-gccollect.md)
+* [垃圾回收实战篇](https://github.com/crisxuan/bestJavaer/blob/master/JVM/jvm-gcuse.md)
 * 内存分配粗略与回收策略
 * 虚拟机性能监控工具与故障处理工具
 * 调优分析与实战
@@ -224,7 +231,7 @@
 
 ## MySQL
 
-* SQL 进阶技巧
+* [SQL 进阶技巧](https://github.com/crisxuan/bestJavaer/blob/master/mysql/sql-improve.md)
 
 
 
@@ -309,8 +316,6 @@
 
 
 
-
-
 ## 算法
 
 * [堆](https://github.com/crisxuan/bestJavaer/blob/master/algorithm/algorithm-heap.md)
@@ -364,8 +369,6 @@
 * [bilibili 关于后浪有感](https://github.com/crisxuan/bestJavaer/blob/master/aboutlife/aboutbilibili.md)
 * [电信诈骗](https://github.com/crisxuan/bestJavaer/blob/master/aboutlife/cxuan-deceive.md)
 
-
-
 ## 优质 Github 推荐
 
 * [计算机自学 Github](https://github.com/keithnull/TeachYourselfCS-CN/blob/master/TeachYourselfCS-CN.md)
@@ -380,11 +383,13 @@
 * [HTTP 核心总结](https://github.com/crisxuan/bestJavaer/blob/master/mypdf/http-all.pdf)
 * [程序员必知的硬核基础知识总结](https://github.com/crisxuan/bestJavaer/blob/master/mypdf/computer-basic.pdf)
 
-
-
 ## 贡献者
 
+* 公众号：码海
 
+* 公众号：小林Coding
+* 公众号：后端技术学堂
+* 公众号：一枝花算不算浪漫
 
 
 
