@@ -52,7 +52,7 @@
 * [面试题系列](https://github.com/crisxuan/bestJavaer#%E9%9D%A2%E8%AF%95%E9%A2%98%E7%B3%BB%E5%88%97)
 * [优质 Github](https://github.com/crisxuan/bestJavaer#%E4%BC%98%E8%B4%A8-github-%E6%8E%A8%E8%8D%90)
 * [贡献者](https://github.com/crisxuan/bestJavaer#%E8%B4%A1%E7%8C%AE%E8%80%85)
-* 每日一题计划
+* [每日一题计划](https://github.com/crisxuan/bestJavaer#%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98%E8%AE%A1%E5%88%92)
 * 等
 
 也包括一些常见的面试题。
@@ -151,7 +151,7 @@
 
 ### 源码分析
 
-
+waiting...
 
 
 
@@ -258,7 +258,7 @@
 
 ## SpringBoot 系列
 
-
+waiting...
 
 
 
@@ -279,7 +279,7 @@
 
 ## Redis 系列教程
 
-
+waiting...
 
 
 
@@ -333,7 +333,7 @@
 
 ## 实战篇
 
-
+waiting...
 
 
 
@@ -415,9 +415,13 @@
 
 * 动态代理是基于什么原理 
 
-  > 欢迎添加作者微信，参加每日一题计划
-  >
-  > <img src="https://raw.githubusercontent.com/crisxuan/bestJavaer/master/qcode/cxuancode.png" style="zoom:50%;" />
+  
+
+## 欢迎关注
+
+欢迎关注作者的微信公众号 **Java建设者**
+
+![](https://raw.githubusercontent.com/crisxuan/bestJavaer/master/qcode/javajianshecode.png)
 
 
 
