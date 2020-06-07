@@ -1,6 +1,5 @@
 > 之前的文章我们已经学习完了`BeanDefinition`的基本概念跟合并，其中多次提到了容器的扩展点，这篇文章我们就开始学习这方面的知识。这部分内容主要涉及官网中的`1.8`小结。按照官网介绍来说，容器的扩展点可以分类三类，`BeanPostProcessor`,`BeanFactoryPostProcessor`以及`FactoryBean`。本文我们主要学习`BeanFactoryPostProcessor`，对应官网中内容为`1.8.2`小节
 
-@[toc]
 #### 总览：
 
 先看看官网是怎么说的：![在这里插入图片描述](https://img-blog.csdnimg.cn/2020010700311376.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxOTA3OTkx,size_16,color_FFFFFF,t_70)

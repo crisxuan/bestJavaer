@@ -1,6 +1,6 @@
 > 在前面两篇关于容器扩展点的文章中，我们已经完成了对`BeanFactoryPostProcessor`很`FactoryBean`的学习，对于`BeanFactoryPostProcessor`而言，它能让我们对容器中的扫描出来的`BeanDefinition`做出修改以达到扩展的目的，而对于`FactoryBean`而言，它提供了一种特殊的创建`Bean`的手段，能让我们将一个对象直接放入到容器中，成为Spring所管理的一个`Bean`。而我们今天将要学习的`BeanPostProcessor`不同于上面两个接口，它主要干预的是Spring中Bean的整个生命周期（实例化---属性填充---初始化---销毁），关于Bean的生命周期将在下篇文章中介绍，如果不熟悉暂且知道这个概念即可，下面进入我们今天的正文。
 
-@[toc]
+
 按照惯例，我们先看看官网对`BeanPostProcessor`的介绍
 
 ### 官网介绍

@@ -1,5 +1,3 @@
-@[TOC]
-
 > 在前文中我们一起学习了Spring中的数据绑定，也就是整个`DataBinder`的体系，其中有提到`DataBinder`跟校验相关。可能对于Spring中的校验大部分同学跟我一一样，都只是知道可以通过`@Valid` / `@Validated`来对接口的入参进行校验，但是对于其底层的具体实现以及一些细节都不是很清楚，通过这篇文章我们就来彻底搞懂Spring中的校验机制。
 >
 > 在学习Spring中某个功能时，往往要从Java本身出发。比如我们之前介绍过的Spring中的国际化（见《Spring官网阅读（十一）》）、Spring中的`ResolvableType`（见《Spring杂谈》系列文章）等等，它们都是对Java本身的封装，沿着这个思路，我们要学习Spring中的数据校验，必然要先对Java中的数据校验有一定了解。

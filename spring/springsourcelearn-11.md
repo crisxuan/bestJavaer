@@ -1,5 +1,3 @@
-@[TOC]
-
 > 在前面的文章中，我们已经完成了官网中关于`IOC`内容核心的部分。包括容器的概念，Spring创建Bean的模型`BeanDefinition`的介绍，容器的扩展点（`BeanFactoryPostProcessor`，`FactroyBean`，`BeanPostProcessor`）以及最重要的Bean的生命周期等。接下来大概还要花三篇文章完成对官网中第一大节的其它内容的学习，之所以要这么做，是笔者自己粗读了一篇源码后，再读一遍官网，发现源码中的很多细节以及难点都在官网中介绍了。所以这里先跟大家一起把官网中的内容都过一遍，也是为了更好的进入源码学习阶段。
 >
 > 本文主要涉及到官网中的[1.13](https://docs.spring.io/spring/docs/5.1.13.BUILD-SNAPSHOT/spring-framework-reference/core.html#beans-environment),[1.15](https://docs.spring.io/spring/docs/5.1.13.BUILD-SNAPSHOT/spring-framework-reference/core.html#context-introduction),[1.16](https://docs.spring.io/spring/docs/5.1.13.BUILD-SNAPSHOT/spring-framework-reference/core.html#beans-beanfactory)小节中的内容以及[第二大节](https://docs.spring.io/spring/docs/5.1.13.BUILD-SNAPSHOT/spring-framework-reference/core.html#resources)的内容
@@ -848,7 +846,7 @@ System.out.println(resolver.resolvePlaceholders("My name is ${name} .I am ${age}
 - `BeanFactory`，负责配置、创建、管理Bean，`IOC`功能的实现主要就依赖于该接口子类实现。
 
         在上文，我们分析学习了国际化，以及Spring中环境的抽象（`Environment`）。对于国际化而言，首先我们要知道国际化到底是什么？简而言之，国际化就是**为每种语言提供一套相应的资源文件，并以规范化命名的方式保存在特定的目录中，由系统自动根据客户端语言选择适合的资源文件**。其次，我们也一起了解了java中的国际化，最后学习了Spring对java国际化的一些封装，也就是`MessageSource`接口
-    
+        
 	    对于[Spring中环境的抽象（`Environment`）](#env)这块内容比较多，主要要知道`Environment`完成了两个功能
 
 - 为程序运行提供不同的剖面，即`Profile`

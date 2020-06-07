@@ -1,4 +1,3 @@
-@[TOC]
 > 在上篇文章中我们已经对ApplicationContext的一部分内容做了介绍，ApplicationContext主要具有以下几个核心功能：
 >
 > 1. 国际化
@@ -9,7 +8,6 @@
 >
 > 在上篇文章我们已经分析学习了1，2两点，这篇文章我们继续之前的学习
 
-@[TOC]
 # 1、Spring的资源（Resource）
 
 首先需要说明的是，Spring并没有让ApplicationContext直接继承Resource接口，就像ApplicationContext接口也没有直接继承Environment接口一样。这应该也不难理解，采用这种组合的方式会让我们的类更加的轻量，也起到了解耦的作用。ApplicationContext跟Resource相关的接口的继承关系如下

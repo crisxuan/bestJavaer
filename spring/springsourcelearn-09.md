@@ -1,5 +1,3 @@
-
-
 > 在之前的文章中，我们一起学习过了官网上容器扩展点相关的知识，包括`FactoryBean`，`BeanFactroyPostProcessor`,`BeanPostProcessor`，其中`BeanPostProcessor`还剩一个很重要的知识点没有介绍，就是相关的`BeanPostProcessor`中的方法的执行时机。之所以在之前的文章中没有介绍是因为这块内容涉及到Bean的生命周期。在这篇文章中我们开始学习Bean的生命周期相关的知识，整个Bean的生命周期可以分为以下几个阶段：
 >
 > - 实例化（得到一个还没有经过属性注入跟初始化的对象）

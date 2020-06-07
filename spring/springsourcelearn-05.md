@@ -1,6 +1,6 @@
 > 上篇文章已经对`BeanDefinition`做了一系列的介绍，这篇文章我们开始学习`BeanDefinition`合并的一些知识，完善我们整个`BeanDefinition`的体系，Spring在创建一个bean时多次进行了`BeanDefinition`的合并，对这方面有所了解也是为以后阅读源码做准备。本文主要对应官网中的`1.7`小节
 
-@[toc]
+
 在[上篇文章](../Spring官网阅读（四）BeanDefinition（上）/Spring官网阅读（四）BeanDefinition.md)中，我们学习了`BeanDefinition`的一些属性，其中有以下几个属性：
 
 ```java

@@ -1,4 +1,3 @@
-@[TOC]
 > 在前面两篇文章中，我们已经对ApplicationContext的大部分内容做了介绍，包括国际化，Spring中的运行环境，Spring中的资源，Spring中的事件监听机制，还剩唯一一个BeanFactory相关的内容没有介绍，这篇文章我们就来介绍BeanFactory，这篇文章结束，关于ApplicationContext相关的内容我们也总算可以告一段落了。本文对应官网中的`1.16`及`1.15`小结
 
 前面我们也提到了ApplicationContext继承了BeanFactory接口，其继承关系如下：

@@ -2,7 +2,7 @@
 
 ## 一、PropertySource 简介
 
-​		__org.springframework.context.annotation.PropertySource__ 是一个注解，可以标记在类上、接口上、枚举上，在运行时起作用。而@Repeatable(value = PropertySources.class) 表示在PropertySources 中此注解时可以重复使用的。如下：![image-20190512114831995](/Users/mr.l/Library/Application Support/typora-user-images/image-20190512114831995.png)
+​		__org.springframework.context.annotation.PropertySource__ 是一个注解，可以标记在类上、接口上、枚举上，在运行时起作用。而@Repeatable(value = PropertySources.class) 表示在PropertySources 中此注解时可以重复使用的。
 
 ## 二、@PropertySource与Environment读取配置文件
 
@@ -142,15 +142,11 @@ public class TestBean {
 testBean = TestBean{name='liuXuan', age=18}
 Refreshing the spring context
 
-
-
 >__@Configuration : 相当于<beans> 标签，注意不是<bean>，一个配置类可以有多个bean，但是只能有一个<beans>__
 >
 >__@PropertySource: 用于引入外部属性配置，和Environment 配合一起使用。其中ignoreResourceNotFound 表示没有找到文件是否会报错，默认为false，就是会报错，一般开发情况应该使用默认值，设置为true相当于生吞异常，增加排查问题的复杂性。__
 >
 >引入PropertySource，注入Environment，然后就能用environment 获取配置文件中的value值。
-
-
 
 ## 三、@PropertySource与@Value读取配置文件
 
@@ -237,8 +233,6 @@ Db Driver Class = com.mysql.jdbc.Driver
 Db url = jdbc:mysql://localhost:3306/test
 Db username = cxuan
 Db password = 111111
-
-
 
 #### @Value 高级用法
 
@@ -381,8 +375,6 @@ Db username = cxuan
 Db password = 111111
 
 >可以看到上述代码并没有显示调用printValues 方法，默认是以单元测试的方式进行的。
-
-​		
 
 ## 四、@PropertySource 与 @Import
 
