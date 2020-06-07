@@ -7,13 +7,15 @@
 >
 >**本仓库仅供学习使用，商业用途请联系作者 (微信： lx252279279 )**
 
-<img src="https://raw.githubusercontent.com/crisxuan/bestJavaer/master/qcode/gongzhonghao.png" style="zoom:50%;" />
+![](https://raw.githubusercontent.com/crisxuan/bestJavaer/master/qcode/gongzhonghao.png)
 
 ![](https://img.shields.io/static/v1?label=bestjavaer&message=操作系统&color=blue)![](https://img.shields.io/static/v1?label=bestjavaer&message=计算机基础&color=<COLOR>)![](https://img.shields.io/static/v1?label=bestjavaer&message=计算机网络&color=yellowgreen)
 
 ![](https://img.shields.io/static/v1?label=bestjavaer&message=Java基础&color=orange)![](https://img.shields.io/static/v1?label=bestjavaer&message=设计模式&color=success)![](https://img.shields.io/static/v1?label=bestjavaer&message=JVM&color=important)![](https://img.shields.io/static/v1?label=bestjavaer&message=Java并发&color=9cf)
 
 ![](https://img.shields.io/static/v1?label=bestjavaer&message=Spring&color=blueviolet)![](https://img.shields.io/static/v1?label=bestjavaer&message=SpringBoot&color=informational)![](https://img.shields.io/static/v1?label=bestjavaer&message=Springcloud&color=ff69b4)
+
+![](https://raw.githubusercontent.com/crisxuan/bestJavaer/master/mindmanage/bestjavaer.png)
 
 这是一个成为更好的程序员的系列教程内容涵盖
 
@@ -87,7 +89,6 @@
 * [操作系统核心概念](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-importantconcept.md)
 * [操作系统面试题](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-fiftyInterview.md)
 * [操作系统网站推荐](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-recommand.md)
-
 * [操作系统硬核回答](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-howtolearn.md)
 * [计算机基础常识](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/computer-youshouldknow.md)
 
