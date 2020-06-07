@@ -193,12 +193,6 @@
 
 
 
-
-
-
-
-
-
 ## JVM 系列
 
 * Java 内存模型
@@ -304,7 +298,7 @@
 > 所以笔者励志把每道面试题从根源上助你理解
 
 * [HTTP 高频面试题](https://github.com/crisxuan/bestJavaer/blob/master/interview-answer/http-interview.md)
-* 用心为你写了 9 道 MySQL 面试题
+* [用心为你写了 9 道 MySQL 面试题](https://github.com/crisxuan/bestJavaer/blob/master/interview-answer/mysql-interview.md)
 * Java 基础面试题汇总
 
 
@@ -354,7 +348,7 @@
 
 * [2019 我是怎样熬过来的](https://github.com/crisxuan/bestJavaer/blob/master/aboutlife/cxuan-2019.md)
 * [这是对我最大的认可和鼓励](https://github.com/crisxuan/bestJavaer/blob/master/aboutlife/cxuan-confidence.md)
-* 1w+ 的心路历程
+* [1w+ 的心路历程](https://github.com/crisxuan/bestJavaer/blob/master/aboutlife/cxuan-1w%2B.md)
 * [美国留学生关于教育、制度和考试的看法](https://github.com/crisxuan/bestJavaer/blob/master/aboutlife/american-life.md)
 * [内心独白｜给粉蜜的一封信](https://github.com/crisxuan/bestJavaer/blob/master/aboutlife/cxuan-say.md)
 * [给朋友们一些自信｜写于2019年4月](https://github.com/crisxuan/bestJavaer/blob/master/aboutlife/cxuan-bibi.md)
@@ -364,23 +358,19 @@
 
 
 
-
-
 ## 优质 Github 推荐
 
-
-
-
-
-
+* 计算机自学 Github
+* Crash Course 的 Github
+* JavaGuide 的 Github
 
 ## 我的 PDF
 
 作者硬肝了三本 PDF ，它们分别是
 
-* Java 核心基础总结
-* HTTP 核心总结
-* 程序员必知的硬核基础知识总结
+* [Java 核心基础总结](https://github.com/crisxuan/bestJavaer/blob/master/mypdf/java-all.pdf)
+* [HTTP 核心总结](https://github.com/crisxuan/bestJavaer/blob/master/mypdf/http-all.pdf)
+* [程序员必知的硬核基础知识总结](https://github.com/crisxuan/bestJavaer/blob/master/mypdf/computer-basic.pdf)
 
 
 
