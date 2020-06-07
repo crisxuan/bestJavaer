@@ -52,6 +52,7 @@
 * [面试题系列](https://github.com/crisxuan/bestJavaer#%E9%9D%A2%E8%AF%95%E9%A2%98%E7%B3%BB%E5%88%97)
 * [优质 Github](https://github.com/crisxuan/bestJavaer#%E4%BC%98%E8%B4%A8-github-%E6%8E%A8%E8%8D%90)
 * [贡献者](https://github.com/crisxuan/bestJavaer#%E8%B4%A1%E7%8C%AE%E8%80%85)
+* 每日一题计划
 * 等
 
 也包括一些常见的面试题。
@@ -403,16 +404,20 @@
 ## 每日一题计划
 
 * byte的取值范围是多少，怎么计算出来的
+
 * HashMap 多线程操作导致死循环问题
+
 * Integer 缓存池
+
 * 你知道 fail-fast 和 fail-safe 吗
+
 * Arrays.asList 获得的 List 应该注意什么
-* 动态代理是基于什么原理
 
-欢迎添加作者微信，参加每日一题计划
+* 动态代理是基于什么原理 
+
+  > 欢迎添加作者微信，参加每日一题计划
+  >
+  > <img src="https://raw.githubusercontent.com/crisxuan/bestJavaer/master/qcode/cxuancode.png" style="zoom:50%;" />
 
 
 
-
-
- [http-all.pdf](../../Desktop/http-all.pdf) 
