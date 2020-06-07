@@ -1,4 +1,6 @@
-# MyBatis 想启动？得先问问它同不同意话说，我最近一直在研究 MyBatis ，研究 MyBatis ，必然逃不了研究 `Configuration` 对象，这个对象简直是太重要了，它是 MyBatis 起步的核心环境配置，下面我们来一起看一下 Configuration 类
+# MyBatis 想启动？得先问问它同不同意
+
+话说，我最近一直在研究 MyBatis ，研究 MyBatis ，必然逃不了研究 `Configuration` 对象，这个对象简直是太重要了，它是 MyBatis 起步的核心环境配置，下面我们来一起看一下 Configuration 类
 
 ## Configuration 的创建
 

@@ -22,7 +22,7 @@ UML 从目标系统的不同角度出发，定义了用**例图、类图、对�
 
 类有类名、属性和方法，下面是一个表示类图的例子
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20190930232231267.png" alt="image-20190930232231267" style="zoom: 50%;" />
+<img src="https://img2020.cnblogs.com/blog/1515111/202006/1515111-20200607095147597-1719439332.png" style="zoom:50%;" />
 
 上面的 no、name、school、age、sex 都表示的是属性，下面 display() 表示的是方法。
 
@@ -30,7 +30,7 @@ UML 从目标系统的不同角度出发，定义了用**例图、类图、对�
 
 接口（Interface）是一种特殊的类，它具有类的结构但不可被实例化，只可以被子类实现。接口一般用来设计类之间的关系
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20190930232659631.png" alt="image-20190930232659631" style="zoom:50%;" />
+<img src="https://img2020.cnblogs.com/blog/1515111/202006/1515111-20200607095153306-1857537615.png" style="zoom:50%;" />
 
 上面的手机接口有两个方法，可以表示call() 打电话，也可以表示receive() 接电话。
 
@@ -48,7 +48,7 @@ UML 从目标系统的不同角度出发，定义了用**例图、类图、对�
 
 在 UML 类图中，依赖关系使用带箭头的虚线来表示，箭头从使用类指向被依赖的类，例如下面这个例子
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20191001075829999.png" alt="image-20191001075829999" style="zoom:50%;" />
+<img src="https://img2020.cnblogs.com/blog/1515111/202006/1515111-20200607095201068-1075146330.png" style="zoom:50%;" />
 
 现代人需要依赖手机进行通讯和交流。在 UML 类图中，依赖关系使用带箭头的虚线来表示，箭头从使用类指向被依赖的类
 
@@ -58,7 +58,7 @@ UML 从目标系统的不同角度出发，定义了用**例图、类图、对�
 
 关联可以是双向的，也可以是单向的。在 UML 类图中，双向的关联可以用带两个箭头或者没有箭头的实线来表示，单向的关联用带一个箭头的实线来表示，箭头从使用类指向被关联的类。也可以在关联线的两端标注角色名，代表两种不同的角色。
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20191001080212818.png" alt="image-20191001080212818" style="zoom:50%;" />
+<img src="https://img2020.cnblogs.com/blog/1515111/202006/1515111-20200607095210377-1983466436.png" style="zoom:50%;" />
 
 例如一个老师和学生的关系是多对多的，一个老师可以教多个学生，一个学生有多个上课老师，那么一个学生同时也可以选择多门课程，学生和课程之间的关系也是多对多。
 
@@ -70,7 +70,7 @@ UML 从目标系统的不同角度出发，定义了用**例图、类图、对�
 
 在 UML 类图中，聚合关系可以用带空心菱形的实线来表示，菱形指向整体
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20191001090123391.png" alt="image-20191001090123391" style="zoom:50%;" />
+<img src="https://img2020.cnblogs.com/blog/1515111/202006/1515111-20200607095217939-1169297849.png" style="zoom:50%;" />
 
 一个学校会有多个老师，但是学校没有了，老师还依然会很存在。
 
@@ -82,7 +82,7 @@ UML 从目标系统的不同角度出发，定义了用**例图、类图、对�
 
 在 UML 类图中，组合关系用带实心菱形的实线来表示，菱形指向整体
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20191001090458005.png" alt="image-20191001090458005" style="zoom:50%;" />
+<img src="https://img2020.cnblogs.com/blog/1515111/202006/1515111-20200607095224718-1274871911.png" style="zoom:50%;" />
 
 钱包和钱是一个组合的关系，钱包是放钱的口袋，钱包丢了钱也就没了，所以是一种组合关系。
 
@@ -92,7 +92,7 @@ UML 从目标系统的不同角度出发，定义了用**例图、类图、对�
 
 在 UML 类图中，泛化关系用带空心三角箭头的实线来表示，箭头从子类指向父类。在代码实现时，使用面向对象的继承机制来实现泛化关系。例如，Student 类和 Teacher 类都是 Person 类的子类，
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20191001090837936.png" alt="image-20191001090837936" style="zoom:50%;" />
+<img src="https://img2020.cnblogs.com/blog/1515111/202006/1515111-20200607095231325-217504194.png" style="zoom:50%;" />
 
 * 实现关系
 
@@ -100,7 +100,7 @@ UML 从目标系统的不同角度出发，定义了用**例图、类图、对�
 
 在 UML 类图中，实现关系使用带空心三角箭头的虚线来表示，箭头从实现类指向接口。
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20191001091306137.png" alt="image-20191001091306137" style="zoom:50%;" />
+<img src="https://img2020.cnblogs.com/blog/1515111/202006/1515111-20200607095237370-242217868.png" style="zoom:50%;" />
 
 比如表示一个交通工具的接口，其中有一个 move 方法，有两个类 Bike 和 Car 分别实现了 Vehicle，那么也就实现了 move() 方法
 
@@ -114,7 +114,7 @@ UML 从目标系统的不同角度出发，定义了用**例图、类图、对�
 
 例如：你手机中的桌面主题，你无法修改已有的桌面主题，只能从网上下载新的桌面主题
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20191002165707999.png" alt="image-20191002165707999" style="zoom:50%;" />
+<img src="https://img2020.cnblogs.com/blog/1515111/202006/1515111-20200607095244940-85347732.png" style="zoom:50%;" />
 
 ### 单一职责原则（Single Responsiblity Principle）
 
@@ -122,7 +122,7 @@ UML 从目标系统的不同角度出发，定义了用**例图、类图、对�
 
 比如一个班级会有很多课代表，语文课代表、数学课代表、英语课代表等等，那么课代表只应该负责班级特定学科的工作，语文课代表不能插手数学课代表和英语课代表的工作。
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20191002170520409.png" alt="image-20191002170520409" style="zoom:50%;" />
+<img src="https://img2020.cnblogs.com/blog/1515111/202006/1515111-20200607095252960-54140016.png" style="zoom:50%;" />
 
 ### 里式替换原则（Liskov Substitution Principle）
 
@@ -130,7 +130,7 @@ UML 从目标系统的不同角度出发，定义了用**例图、类图、对�
 
 例如鸟有一个fly() 方法，燕子是一种鸟，燕子继承鸟类并重写了 fly() 方法，企鹅是一种鸟，企鹅继承了鸟类但是企鹅不能飞，这就相当于是改变了鸟类的功能，不能说企鹅不能飞，所以鸟不能飞
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20191002173245378.png" alt="image-20191002173245378" style="zoom:50%;" />
+<img src="https://img2020.cnblogs.com/blog/1515111/202006/1515111-20200607095300948-2047898276.png" style="zoom:50%;" />
 
 ### 依赖倒转原则（Dependency Inversion Principle）
 
@@ -140,7 +140,7 @@ UML 从目标系统的不同角度出发，定义了用**例图、类图、对�
 
 比如女人去商场购物，她可能买很多东西，不局限于只买一个包，她还可能买鞋，化妆品等。那么我们可以针对商品建模
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20191002222434279.png" alt="image-20191002222434279" style="zoom:50%;" />
+<img src="https://img2020.cnblogs.com/blog/1515111/202006/1515111-20200607095310044-1439224223.png" style="zoom:50%;" />
 
 ### 接口分离原则（Interface Segregation Principle）
 
@@ -151,7 +151,7 @@ UML 从目标系统的不同角度出发，定义了用**例图、类图、对�
 - 单一职责原则注重的是职责，而接口隔离原则注重的是对接口依赖的隔离。
 - 单一职责原则主要是约束类，它针对的是程序中的实现和细节；接口隔离原则主要约束接口，主要针对抽象和程序整体框架的构建。
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20191002223301882.png" alt="image-20191002223301882" style="zoom:50%;" />
+<img src="https://img2020.cnblogs.com/blog/1515111/202006/1515111-20200607095320056-456931612.png" style="zoom:50%;" />
 
 ### 迪米特原则（Principle of Least Knowledge）
 
