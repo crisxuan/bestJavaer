@@ -125,10 +125,6 @@
 
 
 
-
-
-
-
 ## Java 基础系列
 
 * [Java 核心基础教程](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-summary.md)
@@ -182,16 +178,10 @@
 * [ReentrantLock 源码分析](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-reentrantlock.md)
 * [我花了 35 张图就为你让你了解 AQS](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-aqs.md)
 
-* longAddr 源码分析
-* ThreadLoacal 源码分析
-* 线程池源码分析
-* FutureTask 源码分析
-
-
-
-
-
-
+* [longAddr 源码分析](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-longaddr.md)
+* [ThreadLoacal 源码分析](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-threadLocal.md)
+* [线程池源码分析](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-threadpool.md)
+* [FutureTask 源码分析](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/futuretask.md)
 
 ## 设计模式系列
 
@@ -229,6 +219,12 @@
 * [MyBatis 一级缓存](https://github.com/crisxuan/bestJavaer/blob/master/mybatis/mybatis-firstcache.md)
 * [MyBatis 二级缓存全详解](https://github.com/crisxuan/bestJavaer/blob/master/mybatis/mybatis-secondcache.md)
 * [MyBatis 启动流程](https://github.com/crisxuan/bestJavaer/blob/master/mybatis/mybatis-howtostart.md)
+
+
+
+## MySQL
+
+* SQL 进阶技巧
 
 
 
@@ -317,21 +313,15 @@
 
 ## 算法
 
-* 堆
-
-* B+ tree
-
-* 贪心算法
-
-* 排列组合
-
-* 递归
-
-* Trie 树
-
-  
-
-
+* [堆](https://github.com/crisxuan/bestJavaer/blob/master/algorithm/algorithm-heap.md)
+* [B+ tree](https://github.com/crisxuan/bestJavaer/blob/master/algorithm/algorithm-b%2Btree.md)
+* [贪心算法](https://github.com/crisxuan/bestJavaer/blob/master/algorithm/algorithm-greedy.md)
+* [动态规划](https://github.com/crisxuan/bestJavaer/blob/master/algorithm/algorithm-dynamicprogramming.md)
+* [链表](https://github.com/crisxuan/bestJavaer/blob/master/algorithm/algorithm-linkedlist.md)
+* [排列组合](https://github.com/crisxuan/bestJavaer/blob/master/algorithm/algorithm-permutations.md)
+* [递归](https://github.com/crisxuan/bestJavaer/blob/master/algorithm/algorithm-recursive.md)
+* [Trie 树](https://github.com/crisxuan/bestJavaer/blob/master/algorithm/algorithm-trie.md)
+* [深度优先和广度优先](https://github.com/crisxuan/bestJavaer/blob/master/algorithm/algorithm-depthandbreadth.md)
 
 ## 实战篇
 
@@ -378,9 +368,9 @@
 
 ## 优质 Github 推荐
 
-* 计算机自学 Github
-* Crash Course 的 Github
-* JavaGuide 的 Github
+* [计算机自学 Github](https://github.com/keithnull/TeachYourselfCS-CN/blob/master/TeachYourselfCS-CN.md)
+* [Crash Course 的 Github](https://github.com/1c7/Crash-Course-Computer-Science-Chinese)
+* [JavaGuide 的 Github](https://github.com/Snailclimb/JavaGuide)
 
 ## 我的 PDF
 
