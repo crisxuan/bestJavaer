@@ -79,7 +79,7 @@
 * [操作系统面试题](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-fiftyInterview.md)
 * [操作系统网站推荐](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-recommand.md)
 
-* 操作系统硬核回答
+* [操作系统硬核回答](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-howtolearn.md)
 * [计算机基础常识](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/computer-youshouldknow.md)
 
 ## 计算机入门系列
@@ -145,10 +145,6 @@
 * [Effective Java - 静态方法与构造器](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/effectivejava-staticandmethod.md)
 * [Effective Java - try-with-resources 优先于try-finally](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/effectivejava-try-with-resources.md)
 * 学习 Java 网站推荐给你
-
-
-
-
 
 
 
@@ -227,19 +223,41 @@
 
 ## Spring 系列
 
-
-
-
-
-
+* Spring Bean 全解析
+* Spring AOP 扫盲
+* Spring 注解配置的基本要素
+* Spring 中的 Null-Safety
+* Spring 中的验证、数据绑定和类型转换
+* PropertyPlaceholderConfigurer 用法
+* BeanFactory 和 FactoryBean 的理解
+* BeanFactory 和 ApplicationContext 的异同
+* 浅析PropertySource 基本使用
+* 一文了解ConfigurationConditon 接口
+* @Configuration 全部用法
+* Spring Resource 体系介绍
 
 
 
 ### 源码分析
 
-
-
-
+* Spring 官网阅读 01 - 容器和实例化
+* Spring 官网阅读 02 - 依赖注入和方法注入
+* Spring 官网阅读 03 - 自动注入
+* Spring 官网阅读 04 - BeanDefinition 上
+* Spring 官网阅读 05 - BeanDefinition 下
+* Spring 官网阅读 06 - 容器扩展点 一
+* Spring 官网阅读 07 - 容器扩展点 二
+* Spring 官网阅读 08 - 容器扩展点 三
+* Spring 官网阅读 09 - Spring Bean 生命周期上
+* Spring 官网阅读 10 - Spring Bean 生命周期 下
+* Spring 官网阅读 11 - ApplicationContext 详细介绍 上
+* Spring 官网阅读 12 - ApplicationContext 详细介绍 中
+* Spring 官网阅读 13 - ApplicationContext 详细介绍 下
+* Spring 官网阅读 14 - Spring 中 BeanWrapper 及类型转换
+* Spring 官网阅读 15 - Spring 中的格式化
+* Spring 官网阅读 16 - Spring 中的数据绑定
+* Spring 官网阅读 17 - Spring 中的数据校验
+* Spring 官网阅读 18 - Spring 中的 AOP
 
 
 
@@ -375,9 +393,12 @@
 
 ## 贡献者
 
-* 公众号
 
-* 公众号：小林Coding
+* 公众号：码海
+* 公众号：小林coding
+* 公众号：编程技术宇宙
+* 公众号：程序员 DMZ
+
 * 公众号：后端技术学堂
 * 公众号：一枝花算不算浪漫
 
