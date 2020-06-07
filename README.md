@@ -344,7 +344,9 @@
 >
 >添加下方二维码回复 002 领取。
 >
->![image-20200607152642968](/Users/mr.l/Library/Application Support/typora-user-images/image-20200607152642968.png)
+>![](https://github.com/crisxuan/bestJavaer/blob/master/qcode/programmercxuancode.jpg)
+>
+>
 
 ![](https://raw.githubusercontent.com/crisxuan/bestJavaer/master/picture/dianzishu.png)
 
