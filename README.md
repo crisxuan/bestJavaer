@@ -1,4 +1,4 @@
-# bestJavaer
+# 成为一个更好的Java程序员
 这是一个成为更好的 `Java 程序员`的系列教程
 
 >声明：这是完全手写的仓库，不严谨的地方请告知作者。
@@ -24,14 +24,14 @@
   * SpringCloud-Alibaba
   * 等
 * ORM 映射框架
-  * MyBatis
+  * [MyBatis](https://github.com/crisxuan/bestJavaer#mybatis)
   * JPA
   * Hibernate
 * [ZooKeeper](https://github.com/crisxuan/bestJavaer#zookeeper-%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B)
 * [Kafka](https://github.com/crisxuan/bestJavaer#kafka-%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B)
 * [Redis](https://github.com/crisxuan/bestJavaer#redis-%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B)
 * 数据库
-  * MySQL
+  * [MySQL](https://github.com/crisxuan/bestJavaer#mysql)
   * Oracle
   * MogonDB
   * PostgreSQL
@@ -345,8 +345,6 @@
 >添加下方二维码回复 002 领取。
 >
 >![](https://github.com/crisxuan/bestJavaer/blob/master/qcode/programmercxuancode.jpg)
->
->
 
 ![](https://raw.githubusercontent.com/crisxuan/bestJavaer/master/picture/dianzishu.png)
 
@@ -396,11 +394,25 @@
 * 公众号：小林coding
 * 公众号：编程技术宇宙
 * 公众号：程序员 DMZ
-
 * 公众号：后端技术学堂
 * 公众号：一枝花算不算浪漫
+* 期待你成为新的 Contributor
+
+
+
+## 每日一题计划
+
+* byte的取值范围是多少，怎么计算出来的
+* HashMap 多线程操作导致死循环问题
+* Integer 缓存池
+* 你知道 fail-fast 和 fail-safe 吗
+* Arrays.asList 获得的 List 应该注意什么
+* 动态代理是基于什么原理
+
+欢迎添加作者微信，参加每日一题计划
 
 
 
 
 
+ [http-all.pdf](../../Desktop/http-all.pdf) 
