@@ -11,15 +11,15 @@
 
 * [操作系统](https://github.com/crisxuan/bestJavaer#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%B3%BB%E5%88%97)
 * [计算机基础知识](https://github.com/crisxuan/bestJavaer#%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%97)
-* [计算机网络](https://github.com/crisxuan/bestJavaer#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%B3%BB%E5%88%97)
+* [计算机网络](https://github.com/crisxuan/bestJavaer#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%B3%BB%E5%88%97)
 * [Java 基础教程](https://github.com/crisxuan/bestJavaer#java-%E5%9F%BA%E7%A1%80%E7%B3%BB%E5%88%97)
 * [设计模式](https://github.com/crisxuan/bestJavaer#%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E7%B3%BB%E5%88%97)
-* JVM
-* 并发
+* [JVM](https://github.com/crisxuan/bestJavaer#jvm-%E7%B3%BB%E5%88%97)
+* [并发](https://github.com/crisxuan/bestJavaer#%E5%B9%B6%E5%8F%91%E7%B3%BB%E5%88%97)
 * Spring 框架系列
-  * Spring
+  * [Spring](https://github.com/crisxuan/bestJavaer#spring-%E7%B3%BB%E5%88%97)
   * SpringMVC
-  * SpringBoot
+  * [SpringBoot](https://github.com/crisxuan/bestJavaer#springboot-%E7%B3%BB%E5%88%97)
   * SpringCloud
   * SpringCloud-Alibaba
   * 等
@@ -27,9 +27,9 @@
   * MyBatis
   * JPA
   * Hibernate
-* ZooKeeper
-* Kafka
-* Redis
+* [ZooKeeper](https://github.com/crisxuan/bestJavaer#zookeeper-%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B)
+* [Kafka](https://github.com/crisxuan/bestJavaer#kafka-%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B)
+* [Redis](https://github.com/crisxuan/bestJavaer#redis-%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B)
 * 数据库
   * MySQL
   * Oracle
@@ -45,9 +45,11 @@
 * Linux
 * [算法](https://github.com/crisxuan/bestJavaer#%E7%AE%97%E6%B3%95)
 * [思维导图](https://github.com/crisxuan/bestJavaer#%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE)
-* [关于认知]([https://github.com/crisxuan/bestJavaer#%E5%85%B3%E4%BA%8E%E8%AE%A4%E7%9F%A5](https://github.com/crisxuan/bestJavaer#关于认知))
+* [关于认知](https://github.com/crisxuan/bestJavaer#%E5%85%B3%E4%BA%8E%E8%AE%A4%E7%9F%A5)
 * [电子书籍](https://github.com/crisxuan/bestJavaer#%E7%94%B5%E5%AD%90%E4%B9%A6%E7%B1%8D)
 * [我的PDF](https://github.com/crisxuan/bestJavaer#%E6%88%91%E7%9A%84-pdf)
+* [读者面试系列](https://github.com/crisxuan/bestJavaer#%E8%AF%BB%E8%80%85%E9%9D%A2%E8%AF%95%E7%B3%BB%E5%88%97)
+* [面试题系列](https://github.com/crisxuan/bestJavaer#%E9%9D%A2%E8%AF%95%E9%A2%98%E7%B3%BB%E5%88%97)
 * [优质 Github](https://github.com/crisxuan/bestJavaer#%E4%BC%98%E8%B4%A8-github-%E6%8E%A8%E8%8D%90)
 * [贡献者](https://github.com/crisxuan/bestJavaer#%E8%B4%A1%E7%8C%AE%E8%80%85)
 * 等
@@ -113,9 +115,9 @@
 
 ## 计算机网络系列
 
-* 计算机网络基础入门
-* 你不得不知的计算机网络
-* 计算机网络应用层
+* [计算机网络基础入门](https://github.com/crisxuan/bestJavaer/blob/master/network/network-basic.md)
+* [你不得不知的计算机网络](https://github.com/crisxuan/bestJavaer/blob/master/network/network-center.md)
+* [计算机网络应用层](https://github.com/crisxuan/bestJavaer/blob/master/network/network-appLevel.md)
 
 
 
@@ -180,7 +182,10 @@
 * [ReentrantLock 源码分析](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-reentrantlock.md)
 * [我花了 35 张图就为你让你了解 AQS](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-aqs.md)
 
-
+* longAddr 源码分析
+* ThreadLoacal 源码分析
+* 线程池源码分析
+* FutureTask 源码分析
 
 
 
@@ -312,9 +317,23 @@
 
 ## 算法
 
+* 堆
+
+* B+ tree
+
+* 贪心算法
+
+* 排列组合
+
+* 递归
+
+* Trie 树
+
+  
 
 
 
+## 实战篇
 
 
 
