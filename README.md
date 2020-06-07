@@ -9,11 +9,11 @@
 
 这是一个成为更好的程序员的系列教程内容涵盖
 
-* 操作系统
-* 计算机基础知识
-* 计算机网络
-* Java 基础教程
-* 设计模式
+* [操作系统](https://github.com/crisxuan/bestJavaer#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%B3%BB%E5%88%97)
+* [计算机基础知识](https://github.com/crisxuan/bestJavaer#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%B3%BB%E5%88%97)
+* [计算机网络](https://github.com/crisxuan/bestJavaer#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%B3%BB%E5%88%97)
+* [Java 基础教程](https://github.com/crisxuan/bestJavaer#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%B3%BB%E5%88%97)
+* [设计模式](https://github.com/crisxuan/bestJavaer#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%B3%BB%E5%88%97)
 * JVM
 * 并发
 * Spring 框架系列
@@ -43,8 +43,12 @@
 * ELK
 * Netty
 * Linux
-* 算法
-
+* [算法](https://github.com/crisxuan/bestJavaer#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%B3%BB%E5%88%97)
+* [思维导图](https://github.com/crisxuan/bestJavaer#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%B3%BB%E5%88%97)
+* [关于认知]([https://github.com/crisxuan/bestJavaer#%E5%85%B3%E4%BA%8E%E8%AE%A4%E7%9F%A5](https://github.com/crisxuan/bestJavaer#关于认知))
+* [电子书籍](https://github.com/crisxuan/bestJavaer#%E5%85%B3%E4%BA%8E%E8%AE%A4%E7%9F%A5)
+* [优质 Github](https://github.com/crisxuan/bestJavaer#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%B3%BB%E5%88%97)
+* [贡献者](https://github.com/crisxuan/bestJavaer#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%B3%BB%E5%88%97)
 * 等
 
 也包括一些常见的面试题。
