@@ -10,11 +10,7 @@
 
 这两篇的阅读和转载都是杠杠的（HTTP 这篇文章我还预约了几个转载，估计周一会看到）
 
-![image-20200112081342091](/Users/mr.l/Library/Application Support/typora-user-images/image-20200112081342091.png)![image-20200112081543847](/Users/mr.l/Library/Application Support/typora-user-images/image-20200112081543847.png)
-
-![image-20200112081351949](/Users/mr.l/Library/Application Support/typora-user-images/image-20200112081351949.png)
-
-![image-20200112081518262](/Users/mr.l/Library/Application Support/typora-user-images/image-20200112081518262.png)
+![](https://img2020.cnblogs.com/blog/1515111/202006/1515111-20200607063326967-351229052.png)
 
 要知道本号截止到现在的关注也就 `2100` 人，谢谢大家的分享和认可，**也欢迎大家分享和在看我的文章**。也欢迎大家加上星标及时关注。
 
@@ -26,7 +22,7 @@
 
 大家知道，交流群刚成立起来会探讨技术，但是后面如果维护不好的话就会变成吹水群，我不希望我的群变成这样，我后面会开吹水群，但是这个群一定是我`最在意的`，你可以看看我们之前讨论的效果
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200112082906021.png" alt="image-20200112082906021" style="zoom:50%;" />
+![](https://img2020.cnblogs.com/blog/1515111/202006/1515111-20200607063345677-451570052.png)
 
 我想说，这不就是 `付费知识星球` 才能学到的么？而且我的群是`免费`的。
 
@@ -65,14 +61,6 @@
 [看看这些文章有你喜欢的吗](https://mp.weixin.qq.com/s?__biz=MzU2NDg0OTgyMA==&mid=2247485079&idx=1&sn=29516c29b55ec2cb92da7b9e24cbfce4&chksm=fc45fb64cb3272727494cf5031b8de7f63a79e724c287935a404687f448a98c860683a137fbb&token=1412429027&lang=zh_CN#rd)
 
 `关注和联系我`
-
-![image-20200112085439238](/Users/mr.l/Library/Application Support/typora-user-images/image-20200112085439238.png)
-
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200112085450967.png" alt="image-20200112085450967" style="zoom:50%;" />
-
-
-
-
 
 
 

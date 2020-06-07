@@ -346,13 +346,15 @@
 
 ## 关于认知
 
-* 2019 我是怎样熬过来的
+* [2019 我是怎样熬过来的](https://github.com/crisxuan/bestJavaer/blob/master/aboutlife/cxuan-2019.md)
+* [这是对我最大的认可和鼓励](https://github.com/crisxuan/bestJavaer/blob/master/aboutlife/cxuan-confidence.md)
 * 1w+ 的心路历程
-* 美国留学生关于教育、制度和考试的看法
-* 内心独白｜给粉蜜的一封信
-* 给朋友们一些自信｜写于2019年4月
-* 作者的一周
-* bilibili 关于后浪有感
+* [美国留学生关于教育、制度和考试的看法](https://github.com/crisxuan/bestJavaer/blob/master/aboutlife/american-life.md)
+* [内心独白｜给粉蜜的一封信](https://github.com/crisxuan/bestJavaer/blob/master/aboutlife/cxuan-say.md)
+* [给朋友们一些自信｜写于2019年4月](https://github.com/crisxuan/bestJavaer/blob/master/aboutlife/cxuan-bibi.md)
+* [作者的一周](https://github.com/crisxuan/bestJavaer/blob/master/aboutlife/cxuan-oneweek.md)
+* [bilibili 关于后浪有感](https://github.com/crisxuan/bestJavaer/blob/master/aboutlife/aboutbilibili.md)
+* [电信诈骗](https://github.com/crisxuan/bestJavaer/blob/master/aboutlife/cxuan-deceive.md)
 
 
 
