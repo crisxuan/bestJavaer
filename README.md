@@ -93,6 +93,8 @@
 
 ## 计算机入门系列
 
+![](https://raw.githubusercontent.com/crisxuan/bestJavaer/master/mindmanage/computer-basic.png)
+
 * [程序员需要了解的硬核知识之 CPU](https://github.com/crisxuan/bestJavaer/blob/master/computer-basic/computer-cpu.md)
 * [程序员需要了解的硬核知识之内存](https://github.com/crisxuan/bestJavaer/blob/master/computer-basic/computer-ram.md)
 * [程序员需要了解的硬核知识之二进制](https://github.com/crisxuan/bestJavaer/blob/master/computer-basic/computer-binary.md)
@@ -103,6 +105,8 @@
 * [程序员需要了解的硬核知识之控制硬件](https://github.com/crisxuan/bestJavaer/blob/master/computer-basic/computer-disk.md)
 
 ## HTTP 系列
+
+![](https://raw.githubusercontent.com/crisxuan/bestJavaer/master/mindmanage/http.png)
 
 * [全面了解 HTTP](https://github.com/crisxuan/bestJavaer/blob/master/http/http-basic.md)
 * [HTTP 黑科技](https://github.com/crisxuan/bestJavaer/blob/master/http/http-advanced.md)
@@ -132,6 +136,8 @@
 * [计算机网络 - TCP 半连接和全链接队列](https://github.com/crisxuan/bestJavaer/blob/master/network/network-tcp-connect.md)
 
 ## Java 基础系列
+
+![](https://raw.githubusercontent.com/crisxuan/bestJavaer/master/mindmanage/java-basic.png)
 
 * [Java 核心基础教程](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-summary.md)
 * [String、StringBuffer 和 StringBuilder](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-stringstringbufferstringbuilder.md)
@@ -426,6 +432,8 @@ waiting...
 * Arrays.asList 获得的 List 应该注意什么
 
 * 动态代理是基于什么原理 
+
+* 谈谈你用到的设计模式以及应用场景
 
   
 
