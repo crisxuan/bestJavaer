@@ -56,6 +56,7 @@
 * [关于认知](https://github.com/crisxuan/bestJavaer#%E5%85%B3%E4%BA%8E%E8%AE%A4%E7%9F%A5)
 * [电子书籍](https://github.com/crisxuan/bestJavaer#%E7%94%B5%E5%AD%90%E4%B9%A6%E7%B1%8D)
 * [我的PDF](https://github.com/crisxuan/bestJavaer#%E6%88%91%E7%9A%84-pdf)
+* 编程故事集
 * [读者面试系列](https://github.com/crisxuan/bestJavaer#%E8%AF%BB%E8%80%85%E9%9D%A2%E8%AF%95%E7%B3%BB%E5%88%97)
 * [面试题系列](https://github.com/crisxuan/bestJavaer#%E9%9D%A2%E8%AF%95%E9%A2%98%E7%B3%BB%E5%88%97)
 * [优质 Github](https://github.com/crisxuan/bestJavaer#%E4%BC%98%E8%B4%A8-github-%E6%8E%A8%E8%8D%90)
@@ -363,6 +364,26 @@ waiting...
 * [作者的一周](https://github.com/crisxuan/bestJavaer/blob/master/aboutlife/cxuan-oneweek.md)
 * [bilibili 关于后浪有感](https://github.com/crisxuan/bestJavaer/blob/master/aboutlife/aboutbilibili.md)
 * [电信诈骗](https://github.com/crisxuan/bestJavaer/blob/master/aboutlife/cxuan-deceive.md)
+
+
+
+## 编程故事集
+
+* [Python一键转Jar包，Java调用Python新姿势](https://github.com/crisxuan/bestJavaer/blob/master/programming-story/Python一键转Jar包，Java调用Python新姿势！.md)
+* [[自绘图\]一网打尽！每个程序猿都该了解的黑客技术大汇总](https://github.com/crisxuan/bestJavaer/blob/master/programming-story/[自绘图]一网打尽！每个程序猿都该了解的黑客技术大汇总.md)
+* [一个整数＋1引发的灾难](https://github.com/crisxuan/bestJavaer/blob/master/programming-story/一个整数＋1引发的灾难.md)
+* [一个神秘URL酿大祸，差点让我背锅](https://github.com/crisxuan/bestJavaer/blob/master/programming-story/一个神秘URL酿大祸，差点让我背锅！.md)
+* [一网打尽！每个程序猿都该了解的黑客技术大汇总](https://github.com/crisxuan/bestJavaer/blob/master/programming-story/一网打尽！每个程序猿都该了解的黑客技术大汇总.md)
+* [为什么用上了HTTPS，还是被流量劫持？](https://github.com/crisxuan/bestJavaer/blob/master/programming-story/为什么用上了HTTPS，还是被流量劫持？.md)
+* [内核地址空间大冒险4：线程切换](https://github.com/crisxuan/bestJavaer/blob/master/programming-story/内核地址空间大冒险4：线程切换.md)
+* [可怕！CPU竟成了黑客的帮凶！](https://github.com/crisxuan/bestJavaer/blob/master/programming-story/可怕！CPU竟成了黑客的帮凶！.md)
+* [因为一个跨域请求，我差点丢了饭碗](https://github.com/crisxuan/bestJavaer/blob/master/programming-story/因为一个跨域请求，我差点丢了饭碗.md)
+* [如果平行宇宙也有编程语言](https://github.com/crisxuan/bestJavaer/blob/master/programming-story/如果平行宇宙也有编程语言.md)
+* [完了！CPU一味求快出事儿了！](https://github.com/crisxuan/bestJavaer/blob/master/programming-story/完了！CPU一味求快出事儿了！.md)
+* [看过无数Java GC文章，这5个问题你也未必知道！](https://github.com/crisxuan/bestJavaer/blob/master/programming-story/看过无数Java GC文章，这5个问题你也未必知道！.md)
+* [路由器里的广告秘密](https://github.com/crisxuan/bestJavaer/blob/master/programming-story/路由器里的广告秘密.md)
+
+
 
 ## 优质 Github 推荐
 
