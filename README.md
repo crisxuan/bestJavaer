@@ -199,6 +199,10 @@ waiting...
 
 ## JVM 系列
 
+![](https://raw.githubusercontent.com/crisxuan/bestJavaer/master/mindmanage/jvm.png)
+
+
+
 * Java 内存模型
 * 一个对象从 JVM 的角度是如何创建的
 * [垃圾回收理论介绍](https://github.com/crisxuan/bestJavaer/blob/master/JVM/jvm-gccollect.md)
@@ -215,6 +219,10 @@ waiting...
 
 
 ## MyBatis
+
+![](https://raw.githubusercontent.com/crisxuan/bestJavaer/master/mindmanage/mybatis.png)
+
+
 
 * [MyBatis 基础搭建及架构概述](https://github.com/crisxuan/bestJavaer/blob/master/mybatis/mybatis-base.md)
 * [MyBatis Configuration](https://github.com/crisxuan/bestJavaer/blob/master/mybatis/mybatis-configuration.md) 
@@ -237,6 +245,8 @@ waiting...
 
 
 ## Spring 系列
+
+![](https://raw.githubusercontent.com/crisxuan/bestJavaer/master/mindmanage/spring.png)
 
 * [Spring Bean 全解析](https://github.com/crisxuan/bestJavaer/blob/master/spring/spring-bean.md)
 * [Spring AOP 扫盲](https://github.com/crisxuan/bestJavaer/blob/master/spring/spring-aop.md)
