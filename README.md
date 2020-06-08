@@ -380,7 +380,6 @@ waiting...
 * [因为一个跨域请求，我差点丢了饭碗](https://github.com/crisxuan/bestJavaer/blob/master/programming-story/因为一个跨域请求，我差点丢了饭碗.md)
 * [如果平行宇宙也有编程语言](https://github.com/crisxuan/bestJavaer/blob/master/programming-story/如果平行宇宙也有编程语言.md)
 * [完了！CPU一味求快出事儿了！](https://github.com/crisxuan/bestJavaer/blob/master/programming-story/完了！CPU一味求快出事儿了！.md)
-* [看过无数Java GC文章，这5个问题你也未必知道！](https://github.com/crisxuan/bestJavaer/blob/master/programming-story/看过无数Java GC文章，这5个问题你也未必知道！.md)
 * [路由器里的广告秘密](https://github.com/crisxuan/bestJavaer/blob/master/programming-story/路由器里的广告秘密.md)
 
 
