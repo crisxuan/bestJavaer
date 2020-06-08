@@ -50,7 +50,7 @@
 * Nginx
 * ELK
 * Netty
-* Linux
+* [Linux](https://github.com/crisxuan/bestJavaer#linux-%E7%B3%BB%E5%88%97)
 * [算法](https://github.com/crisxuan/bestJavaer#%E7%AE%97%E6%B3%95)
 * [思维导图](https://github.com/crisxuan/bestJavaer#%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE)
 * [关于认知](https://github.com/crisxuan/bestJavaer#%E5%85%B3%E4%BA%8E%E8%AE%A4%E7%9F%A5)
@@ -320,6 +320,8 @@ waiting...
 
 
 ## ZooKeeper 系列教程
+
+![](https://raw.githubusercontent.com/crisxuan/bestJavaer/master/mindmanage/zookeeper.png)
 
 * [ZooKeeper 基础入门](https://github.com/crisxuan/bestJavaer/blob/master/zookeeper/zookeeper-basic.md)
 
