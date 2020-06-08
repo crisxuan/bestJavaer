@@ -7,8 +7,6 @@
 >
 >**本仓库仅供学习使用，商业用途请联系作者 (微信： lx252279279 )**
 
-![](https://raw.githubusercontent.com/crisxuan/bestJavaer/master/qcode/gongzhonghao.png)
-
 ![](https://img.shields.io/static/v1?label=bestjavaer&message=操作系统&color=blue)![](https://img.shields.io/static/v1?label=bestjavaer&message=计算机基础&color=<COLOR>)![](https://img.shields.io/static/v1?label=bestjavaer&message=计算机网络&color=yellowgreen)
 
 ![](https://img.shields.io/static/v1?label=bestjavaer&message=Java基础&color=orange)![](https://img.shields.io/static/v1?label=bestjavaer&message=设计模式&color=success)![](https://img.shields.io/static/v1?label=bestjavaer&message=JVM&color=important)![](https://img.shields.io/static/v1?label=bestjavaer&message=Java并发&color=9cf)
@@ -186,10 +184,6 @@ waiting...
 
 * [设计模式基础入门](https://github.com/crisxuan/bestJavaer/blob/master/design-pattern/designpattern-basic.md)
 
-
-
-
-
 ## JVM 系列
 
 * Java 内存模型
@@ -275,10 +269,6 @@ waiting...
 
 
 
-
-
-
-
 ## Kafka 系列教程
 
 * [真的，Kafka 入门一篇就够了](https://github.com/crisxuan/bestJavaer/blob/master/kafka/kafka-basic.md)
@@ -289,8 +279,6 @@ waiting...
 ## Redis 系列教程
 
 waiting...
-
-
 
 
 
@@ -336,9 +324,8 @@ waiting...
 
 ## 实战篇
 
-waiting...
-
-
+* [线上 OOM](https://github.com/crisxuan/bestJavaer/blob/master/product-use/four-oom.md) 
+* [高性能短链设计](https://github.com/crisxuan/bestJavaer/blob/master/product-use/high-perfomance-design.md)
 
 
 
@@ -390,6 +377,8 @@ waiting...
 * [Java 核心基础总结](https://github.com/crisxuan/bestJavaer/blob/master/mypdf/java-all.pdf)
 * [HTTP 核心总结](https://github.com/crisxuan/bestJavaer/blob/master/mypdf/http-all.pdf)
 * [程序员必知的硬核基础知识总结](https://github.com/crisxuan/bestJavaer/blob/master/mypdf/computer-basic.pdf)
+
+
 
 ## 贡献者
 
