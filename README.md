@@ -72,6 +72,8 @@
 
 ## 操作系统系列
 
+![](https://raw.githubusercontent.com/crisxuan/bestJavaer/master/mindmanage/os-simple.png)
+
 * [硬核操作系统入门](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-overview.md)
 * [硬核操作系统之进程和线程](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-processandthread.md)
 * [硬核操作系统之内存管理](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-rammanage.md)
@@ -171,6 +173,8 @@ waiting...
 
 ## 并发系列
 
+ ![](https://raw.githubusercontent.com/crisxuan/bestJavaer/master/mindmanage/java-concurrent.png)
+
 * [简单认识并发](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-concurrent-basic.md)
 * [看完你就明白的锁系列之锁的状态](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-lock-status.md)
 * [看完你就明白的锁系列之乐观锁和悲观锁](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-optimisticlock.md)
@@ -188,6 +192,8 @@ waiting...
 * [FutureTask 源码分析](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/futuretask.md)
 
 ## 设计模式系列
+
+![](https://raw.githubusercontent.com/crisxuan/bestJavaer/master/mindmanage/design-pattern.png)
 
 * [设计模式基础入门](https://github.com/crisxuan/bestJavaer/blob/master/design-pattern/designpattern-basic.md)
 
@@ -223,6 +229,8 @@ waiting...
 
 
 ## MySQL
+
+![](https://raw.githubusercontent.com/crisxuan/bestJavaer/master/mindmanage/mysql.png)
 
 * [SQL 进阶技巧](https://github.com/crisxuan/bestJavaer/blob/master/mysql/sql-improve.md)
 
@@ -278,6 +286,8 @@ waiting...
 
 ## Kafka 系列教程
 
+![](https://raw.githubusercontent.com/crisxuan/bestJavaer/master/mindmanage/kafka-system.png)
+
 * [真的，Kafka 入门一篇就够了](https://github.com/crisxuan/bestJavaer/blob/master/kafka/kafka-basic.md)
 * [你能说出这些 Kafka 的原理吗](https://github.com/crisxuan/bestJavaer/blob/master/kafka/kafka-deep.md)
 
@@ -285,7 +295,17 @@ waiting...
 
 ## Redis 系列教程
 
-waiting...
+![](https://raw.githubusercontent.com/crisxuan/bestJavaer/master/mindmanage/redis.png)
+
+
+
+
+
+## Nginx 系列教程
+
+![](https://raw.githubusercontent.com/crisxuan/bestJavaer/master/mindmanage/nginx.png)
+
+
 
 
 
