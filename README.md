@@ -380,6 +380,17 @@ waiting...
 
 ## 思维导图
 
+* [更好的Java程序员](https://raw.githubusercontent.com/crisxuan/bestJavaer/master/mindmanage/bestjavaer.png)
+* [设计模式](https://raw.githubusercontent.com/crisxuan/bestJavaer/master/mindmanage/design-pattern.png)
+* [Java并发](https://raw.githubusercontent.com/crisxuan/bestJavaer/master/mindmanage/java-concurrent.png)
+* [JVM](https://raw.githubusercontent.com/crisxuan/bestJavaer/master/mindmanage/jvm.png)
+* [Kafka体系](https://raw.githubusercontent.com/crisxuan/bestJavaer/master/mindmanage/kafka-system.png)
+* [MyBatis体系](https://raw.githubusercontent.com/crisxuan/bestJavaer/master/mindmanage/mybatis.png)
+* [MySQL](https://raw.githubusercontent.com/crisxuan/bestJavaer/master/mindmanage/mysql.png)
+* [Nginx](https://raw.githubusercontent.com/crisxuan/bestJavaer/master/mindmanage/nginx.png)
+* [Redis](https://raw.githubusercontent.com/crisxuan/bestJavaer/master/mindmanage/redis.png)
+* [Spring](https://raw.githubusercontent.com/crisxuan/bestJavaer/master/mindmanage/spring.png)
+* [ZooKeeper](https://raw.githubusercontent.com/crisxuan/bestJavaer/master/mindmanage/zookeeper.png)
 * [程序员必备硬核知识](https://github.com/crisxuan/bestJavaer/blob/master/mindmanage/computer-basic.png)
 * [现代操作系统](https://github.com/crisxuan/bestJavaer/blob/master/mindmanage/operating-system.png)
 * [Java 基础核心总结](https://github.com/crisxuan/bestJavaer/blob/master/mindmanage/java-basic.png)
