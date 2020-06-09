@@ -471,7 +471,7 @@ waiting...
 
 ## 欢迎关注
 
-欢迎关注作者的微信公众号 **Java建设者**
+欢迎关注作者的微信公众号 **Java建设者**，参加每日一题计划，给你分享作者硬肝的三本 PDF。
 
 ![](https://raw.githubusercontent.com/crisxuan/bestJavaer/master/qcode/javajianshecode.png)
 
