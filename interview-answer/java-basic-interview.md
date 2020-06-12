@@ -8,7 +8,7 @@
 * `面向对象的`：基于类和面向对象的编程语言。
 * `独立性的`： 支持**一次编写，到处运行**的独立编程语言，即编译后的代码可以在支持 Java 的所有平台上运行。
 
-![image-20200111133827971](/Users/mr.l/Library/Application Support/typora-user-images/image-20200111133827971.png)
+![](https://img2020.cnblogs.com/blog/1515111/202006/1515111-20200612142224855-369348130.png)
 
 #### Java 的特性
 
@@ -89,14 +89,14 @@ String 代表的是 Java 中的`字符串`，String 类比较特殊，它整个�
 
 equals 方法是 Object 类定义的方法，Object 是所有类的父类，当然也包括 String，String 重写了 `equals` 方法，下面我们来看看是怎么重写的
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200528063540309.png" alt="image-20200528063540309" style="zoom:50%;" />
+![](https://img2020.cnblogs.com/blog/1515111/202006/1515111-20200612142249452-328540131.png)
 
 * 首先会判断要比较的两个字符串它们的`引用`是否相等。如果引用相等的话，直接返回 true ，不相等的话继续下面的判断
 * 然后再判断被比较的对象是否是 String 的实例，如果不是的话直接返回 false，如果是的话，再比较两个字符串的长度是否相等，如果长度不想等的话也就没有比较的必要了；长度如果相同，会比较字符串中的每个 `字符` 是否相等，一旦有一个字符不相等，就会直接返回 false。
 
 下面是它的流程图
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200604170422094.png" alt="image-20200604170422094" style="zoom:50%;" />
+![](https://img2020.cnblogs.com/blog/1515111/202006/1515111-20200612142257414-1428177831.png)
 
 这里再提示一下，你可能有疑惑什么时候是 
 
@@ -131,7 +131,7 @@ private void StringOverrideEquals(){
 * 然后第二条语句返回 false，因为 s1 返回的是常量池中的对象，而 s2 返回的是堆中的对象
 * 第三条语句 s3.intern.equals(s1)，返回 true ，因为 s3 对象虽然在堆中创建了一个对象，但是 s3 中的 "aaa" 返回的是常量池中的对象。
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200605053255243.png" alt="image-20200605053255243" style="zoom:50%;" />
+![](https://img2020.cnblogs.com/blog/1515111/202006/1515111-20200612142320585-1477597877.png)
 
 ### 为什么重写 equals 方法必须重写 hashcode 方法
 
@@ -148,7 +148,7 @@ String str2 = "重地";
 
 我们来看一下 hashCode 官方的定义
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200605060441944.png" alt="image-20200605060441944" style="zoom:50%;" />
+![](https://img2020.cnblogs.com/blog/1515111/202006/1515111-20200612142329301-1659708264.png)
 
 总结起来就是
 
@@ -161,7 +161,7 @@ String str2 = "重地";
 
 一个或者两个，String s1 是声明了一个 String 类型的 s1 变量，它不是对象。使用 `new` 关键字会在堆中创建一个对象，另外一个对象是 `abc` ，它会在常量池中创建，所以一共创建了两个对象；如果 abc 在常量池中已经存在的话，那么就会创建一个对象。
 
-详细请翻阅笔者的另外一篇文章 [一篇与众不同的 String、StringBuffer、StringBuilde 详解](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247484794&idx=1&sn=22efd808fa5a9e68cacabd4b6e08fdc3&chksm=e999f068deee797eef9b46b160c06afa4d50e03b3626d1ae1aad05ddc37ec9001c4514264e0f&token=1065926980&lang=zh_CN#rd)
+详细请翻阅笔者的另外一篇文章 [一篇与众不同的 String、StringBuffer、StringBuilder 详解](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247484794&idx=1&sn=22efd808fa5a9e68cacabd4b6e08fdc3&chksm=e999f068deee797eef9b46b160c06afa4d50e03b3626d1ae1aad05ddc37ec9001c4514264e0f&token=1065926980&lang=zh_CN#rd)
 
 ### String 为什么是不可变的、jdk 源码中的 String 如何定义的、为什么这么设计。
 
@@ -218,7 +218,7 @@ final 是 Java 中的关键字，它表示的意思是 `不可变的`，在 Java
 
 ### byte的取值范围是多少，怎么计算出来的
 
-byte 的取值范围是 -128 -> 127 之间，一共是 256 个。一个 byte 类型在计算机中占据一个字节，那么就是 8 bit，所以最大就是 2^7 = 1111 1111。
+byte 的取值范围是 -128 -> 127 之间，一共是 256 位。一个 byte 类型在计算机中占据一个字节，那么就是 8 bit，所以最大就是 2^7 = 1111 1111。
 
 Java 中用`补码`来表示二进制数，补码的最高位是符号位，最高位用 0 表示正数，最高位 1 表示负数，正数的补码就是其`本身`，由于最高位是符号位，所以正数表示的就是 0111 1111 ，也就是 127。最大负数就是 1111 1111，这其中会涉及到两个 0 ，一个 +0 ，一个 -0 ，+0 归为正数，也就是 0 ，-0 归为负数，也就是 -128，所以 byte 的范围就是 -128 - 127。
 
@@ -230,16 +230,18 @@ HashMap 和 HashTable 都是基于哈希表实现的，其内部每个元素都�
 
 **不同点**
 
-* 父类不同：HashMap 继承了 `AbstractMap` 类，而 HashTable 继承了 `Dictionary` 类<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200422201038669.png" alt="image-20200422201038669" style="zoom:50%;" />
+* 父类不同：HashMap 继承了 `AbstractMap` 类，而 HashTable 继承了 `Dictionary` 类
+![](https://img2020.cnblogs.com/blog/1515111/202006/1515111-20200612142351219-1000398055.png)
+
 
 * 空值不同：HashMap 允许空的 key 和 value 值，HashTable 不允许空的 key 和 value 值。HashMap 会把 Null key 当做普通的 key 对待。不允许 null key 重复。
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200422201438169.png" alt="image-20200422201438169" style="zoom:50%;" />
+![](https://img2020.cnblogs.com/blog/1515111/202006/1515111-20200612142359164-1314465483.png)
 
 * 线程安全性：HashMap 不是线程安全的，如果多个外部操作同时修改 HashMap 的数据结构比如 add 或者是 delete，必须进行同步操作，仅仅对 key 或者 value 的修改不是改变数据结构的操作。可以选择构造线程安全的 Map 比如 `Collections.synchronizedMap` 或者是 `ConcurrentHashMap`。而 HashTable 本身就是线程安全的容器。
 * 性能方面：虽然 HashMap 和 HashTable 都是基于`单链表`的，但是 HashMap 进行 put 或者 get􏱤 操作，可以达到常数时间的性能；而 HashTable 的 put 和 get 操作都是加了 `synchronized` 锁的，所以效率很差。
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200422203504914.png" alt="image-20200422203504914" style="zoom:50%;" />
+![](https://img2020.cnblogs.com/blog/1515111/202006/1515111-20200612142407417-289210985.png)
 
 * 初始容量不同：HashTable 的初始长度是11，之后每次扩充容量变为之前的 2n+1（n为上一次的长度）而 HashMap 的初始长度为16，之后每次扩充变为原来的两倍。创建时，如果给定了容量初始值，那么HashTable 会直接使用你给定的大小，而 HashMap 会将其扩充为2的幂次方大小。
 
@@ -252,11 +254,11 @@ HashSet 继承于 AbstractSet 接口，实现了 Set、Cloneable,、java.io.Seri
 
 JDK1.7 中，HashMap 采用`位桶 + 链表`的实现，即使用`链表`来处理冲突，同一 hash 值的链表都存储在一个数组中。但是当位于一个桶中的元素较多，即 hash 值相等的元素较多时，通过 key 值依次查找的效率较低。
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200608062758034.png" alt="image-20200608062758034" style="zoom:50%;" />
+![](https://img2020.cnblogs.com/blog/1515111/202006/1515111-20200612142419278-619759701.png)
 
 所以，与 JDK 1.7 相比，JDK 1.8 在底层结构方面做了一些改变，当每个桶中元素大于 8 的时候，会转变为红黑树，目的就是优化查询效率。
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200608062815028.png" alt="image-20200608062815028" style="zoom:50%;" />
+![](https://img2020.cnblogs.com/blog/1515111/202006/1515111-20200612142427744-788758358.png)
 
 ### HashMap 的长度为什么是 2 的幂次方
 
@@ -373,17 +375,17 @@ ConcurrentHashMap 是线程安全的 Map，它也是高并发场景下的首选�
 
 Integer 缓存池也就是 `IntegerCache` ，它是 Integer 的静态内部类。
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200608064905703.png" alt="image-20200608064905703" style="zoom:50%;" />
+![](https://img2020.cnblogs.com/blog/1515111/202006/1515111-20200612142441234-819966512.png)
 
 它的默认值用于缓存 -128 - 127 之间的数字，如果有 -128 - 127 之间的数字的话，使用 new Integer 不用创建对象，会直接从缓存池中取，此操作会减少堆中对象的分配，有利于提高程序的运行效率。
 
 例如创建一个 Integer a = 24，其实是调用 Integer 的 `valueOf` ，可以通过反编译得出这个结论
 
-![image-20200608070239780](/Users/mr.l/Library/Application Support/typora-user-images/image-20200608070239780.png)
+![](https://img2020.cnblogs.com/blog/1515111/202006/1515111-20200612142452535-486111457.png)
 
 然后我们看一下 valueOf 方法
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200608070320992.png" alt="image-20200608070320992" style="zoom:50%;" />
+![](https://img2020.cnblogs.com/blog/1515111/202006/1515111-20200612142458324-599592811.png)
 
 如果在指定缓存池范围内的话，会直接返回缓存的值而不用创建新的 Integer 对象。
 
@@ -454,7 +456,7 @@ public E set(int index, E element) {
 
 虽然 set 方法也抛出了一场，但是由于 内部类 ArrayList 重写了 set 方法，所以支持其可以对元素进行修改。
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200605104835533.png" alt="image-20200605104835533" style="zoom:50%;" />
+![](https://img2020.cnblogs.com/blog/1515111/202006/1515111-20200612142812801-489050907.png)
 
 * Arrays.asList 不支持基础类型的转换
 
@@ -528,7 +530,7 @@ int 和 Integer 区别可就太多了
 
 Java I/O 方式有很多种，传统的 I/O 也称为 `BIO`，主要流有如下几种
 
-![image-20200608074130322](/Users/mr.l/Library/Application Support/typora-user-images/image-20200608074130322.png)
+![](https://img2020.cnblogs.com/blog/1515111/202006/1515111-20200612142833827-43182011.png)
 
 Java I/O 包的实现比较简单，但是容易出现性能瓶颈，传统的 I/O 是基于同步阻塞的。
 
@@ -540,7 +542,7 @@ JDK 1.7 之后对 NIO 进行了进一步改进，引入了 `异步非阻塞` 的
 
 一张思维导图镇场
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200608091001451.png" alt="image-20200608091001451" style="zoom:50%;" />
+![](https://img2020.cnblogs.com/blog/1515111/202006/1515111-20200612142841964-782762101.png)
 
 比如全局唯一性可以用 `单例模式`。
 
@@ -602,13 +604,13 @@ Object 类是所有对象的父类，它里面包含一些所有对象都能够�
 
 可以通过下面的流程来对对象的生命周期做一个总结
 
-![image-20200413181451153](/Users/mr.l/Library/Application Support/typora-user-images/image-20200413181451153.png)
+![](https://img2020.cnblogs.com/blog/1515111/202006/1515111-20200612142858427-570976764.png)
 
 对象被创建并初始化，对象在运行时被使用，然后离开对象的作用域，对象会变成不可达并会被垃圾收集器回收。图中用红色标明的区域表示对象处于强可达阶段。
 
 JDK1.2 介绍了 `java.lang.ref` 包，对象的生命周期有四个阶段：`􏲧强可达􏰛(Strongly Reachable􏰜)`、`软可达(Soft Reachable􏰜)`、`弱可达(Weak Reachable􏰜)`、 `幻象可达(Phantom Reachable􏰜)`。
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200413184614373.png" alt="image-20200413184614373" style="zoom: 67%;" />
+![](https://img2020.cnblogs.com/blog/1515111/202006/1515111-20200612142905288-82135601.png)
 
 如果只讨论符合垃圾回收条件的对象，那么只有三种：软可达、弱可达和幻象可达。
 
@@ -624,7 +626,7 @@ JDK1.2 介绍了 `java.lang.ref` 包，对象的生命周期有四个阶段：`�
 
 下面是一个不同可达性状态的转换图
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200413200706256.png" alt="image-20200413200706256" style="zoom:40%;" />
+![](https://img2020.cnblogs.com/blog/1515111/202006/1515111-20200612142914217-1812267242.png)
 
 判断可达性条件，也是 JVM 垃圾收集器决定如何处理对象的一部分考虑因素。
 
@@ -783,7 +785,8 @@ public class SubClass extends SuperClass{
 }
 ```
 
-SubClass 继承 SuperClass 后，在![image-20190213094959189](/Users/mr.l/Library/Application Support/typora-user-images/image-20190213094959189.png)是无法重写 sayHello 方法的，也就是说 sayHello() 方法是对子类隐藏的，但是你可以编写自己的 sayHello() 方法，也就是子类 SubClass 的sayHello() 方法，由此可见，方法由 static 关键词所修饰，也是编译时绑定
+SubClass 继承 SuperClass 后，在![](https://img2020.cnblogs.com/blog/1515111/202006/1515111-20200612142937697-1530350978.png)
+是无法重写 sayHello 方法的，也就是说 sayHello() 方法是对子类隐藏的，但是你可以编写自己的 sayHello() 方法，也就是子类 SubClass 的sayHello() 方法，由此可见，方法由 static 关键词所修饰，也是编译时绑定
 
 #### 动态绑定
 
@@ -848,5 +851,9 @@ Son 类继承 Father 类，并重写了父类的 dringMilk() 方法，在输出�
 1、使用动态绑定的前提条件能够提高代码的可用性，使代码更加灵活。
 
 2、多态是设计模式的基础，能够降低耦合性。
+
+我发起了一个 Github 项目，地址是 https://github.com/crisxuan/bestJavaer，欢迎各位 star，下面是具体介绍
+
+![](https://img2020.cnblogs.com/blog/1515111/202006/1515111-20200612143357701-631076981.png)
 
 

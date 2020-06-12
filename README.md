@@ -52,6 +52,7 @@
 * Netty
 * [Linux](https://github.com/crisxuan/bestJavaer#linux-%E7%B3%BB%E5%88%97)
 * [算法](https://github.com/crisxuan/bestJavaer#%E7%AE%97%E6%B3%95)
+* [实战篇](https://github.com/crisxuan/bestJavaer#%E5%AE%9E%E6%88%98%E7%AF%87)
 * [思维导图](https://github.com/crisxuan/bestJavaer#%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE)
 * [关于认知](https://github.com/crisxuan/bestJavaer#%E5%85%B3%E4%BA%8E%E8%AE%A4%E7%9F%A5)
 * [电子书籍](https://github.com/crisxuan/bestJavaer#%E7%94%B5%E5%AD%90%E4%B9%A6%E7%B1%8D)
@@ -345,7 +346,7 @@ waiting...
 
 * [HTTP 高频面试题](https://github.com/crisxuan/bestJavaer/blob/master/interview-answer/http-interview.md)
 * [用心为你写了 9 道 MySQL 面试题](https://github.com/crisxuan/bestJavaer/blob/master/interview-answer/mysql-interview.md)
-* Java 基础面试题汇总
+* [Java 基础面试题汇总](https://github.com/crisxuan/bestJavaer/blob/master/interview-answer/java-basic-interview.md)
 
 
 
@@ -365,9 +366,8 @@ waiting...
 
 * [线上 OOM](https://github.com/crisxuan/bestJavaer/blob/master/product-use/four-oom.md) 
 * [高性能短链设计](https://github.com/crisxuan/bestJavaer/blob/master/product-use/high-perfomance-design.md)
-* 
-
-
+* [直播平台的技术架构揭秘](https://github.com/crisxuan/bestJavaer/blob/master/design/直播平台的技术架构揭秘.md)
+* [线程池运用不当的一次线上事故](https://github.com/crisxuan/bestJavaer/blob/master/design/线程池运用不当的一次线上事故.md)
 
 ## 电子书籍
 
