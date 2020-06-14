@@ -1266,7 +1266,7 @@ RuntimeException
 
 ![YK0S3t.png](https://s1.ax1x.com/2020/05/08/YK0S3t.png)
 
-UncheckedException
+CheckedException
 
 ![YK0pgP.png](https://s1.ax1x.com/2020/05/08/YK0pgP.png)
 
