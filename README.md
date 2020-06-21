@@ -243,7 +243,7 @@ waiting...
 ![](https://raw.githubusercontent.com/crisxuan/bestJavaer/master/mindmanage/mysql.png)
 
 * [SQL 进阶技巧](https://github.com/crisxuan/bestJavaer/blob/master/mysql/sql-improve.md)
-* MySQL 基础入门大全
+* [MySQL 基础入门大全](https://github.com/crisxuan/bestJavaer/blob/master/mysql/mysql-basicall.md)
 
 
 
