@@ -242,6 +242,7 @@ waiting...
 ![](https://raw.githubusercontent.com/crisxuan/bestJavaer/master/mindmanage/mysql.png)
 
 * [SQL 进阶技巧](https://github.com/crisxuan/bestJavaer/blob/master/mysql/sql-improve.md)
+* MySQL 基础入门大全
 
 
 
@@ -368,6 +369,8 @@ waiting...
 * [高性能短链设计](https://github.com/crisxuan/bestJavaer/blob/master/product-use/high-perfomance-design.md)
 * [直播平台的技术架构揭秘](https://github.com/crisxuan/bestJavaer/blob/master/design/直播平台的技术架构揭秘.md)
 * [线程池运用不当的一次线上事故](https://github.com/crisxuan/bestJavaer/blob/master/design/线程池运用不当的一次线上事故.md)
+* 线上服务的GC问题
+* RPC 超时设置，一不小心就是线程事故
 
 ## 电子书籍
 
@@ -434,6 +437,21 @@ waiting...
 
 
 
+## 关于职场
+
+* 今年困难模式，你跳槽还只是靠大量投简历吗？
+* 培训机构出来的程序员常被鄙视，招谁惹谁了
+* 如何让程序员变得没朋友
+* 一个技术总监的忠告：精通那么多技术为何还是做不好一个项目？
+* 这样查生产问题，不做背锅侠
+* 最全干货：从写简历，到面试、谈薪酬的那些技巧和防坑指南
+
+
+
+
+
+
+
 ## 优质 Github 推荐
 
 * [计算机自学 Github](https://github.com/keithnull/TeachYourselfCS-CN/blob/master/TeachYourselfCS-CN.md)
@@ -459,6 +477,8 @@ waiting...
 * 公众号：程序员 DMZ
 * 公众号：后端技术学堂
 * 公众号：一枝花算不算浪漫
+* 公众号：IT人的职场进阶
+* 公众号：四猿外爬写作
 * 期待你成为新的 Contributor
 
 
