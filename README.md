@@ -80,7 +80,7 @@
 * [硬核操作系统之进程和线程](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-processandthread.md)
 * [硬核操作系统之内存管理](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-rammanage.md)
 * [硬核操作系统之文件系统](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-filesystem.md)
-* 硬核操作系统之输入输出
+* [硬核操作系统之输入输出](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-inputoutput.md)
 * 硬核操作系统之死锁
 * 硬核操作系统之虚拟化和云
 * 硬核操作系统之网络安全
@@ -370,8 +370,8 @@ waiting...
 * [高性能短链设计](https://github.com/crisxuan/bestJavaer/blob/master/product-use/high-perfomance-design.md)
 * [直播平台的技术架构揭秘](https://github.com/crisxuan/bestJavaer/blob/master/design/直播平台的技术架构揭秘.md)
 * [线程池运用不当的一次线上事故](https://github.com/crisxuan/bestJavaer/blob/master/design/线程池运用不当的一次线上事故.md)
-* 线上服务的GC问题
-* RPC 超时设置，一不小心就是线程事故
+* [线上服务的GC问题](https://github.com/crisxuan/bestJavaer/blob/master/design/%E7%BA%BF%E4%B8%8A%E6%9C%8D%E5%8A%A1%E7%9A%84GC%E9%97%AE%E9%A2%98.md)
+* [RPC 超时设置，一不小心就是线程事故](https://github.com/crisxuan/bestJavaer/blob/master/design/RPC%20%E8%B6%85%E6%97%B6%E8%AE%BE%E7%BD%AE%EF%BC%8C%E4%B8%80%E4%B8%8D%E5%B0%8F%E5%BF%83%E5%B0%B1%E6%98%AF%E7%BA%BF%E7%A8%8B%E4%BA%8B%E6%95%85.md)
 
 ## 电子书籍
 
@@ -440,14 +440,12 @@ waiting...
 
 ## 关于职场
 
-* 今年困难模式，你跳槽还只是靠大量投简历吗？
-* 培训机构出来的程序员常被鄙视，招谁惹谁了
-* 如何让程序员变得没朋友
-* 一个技术总监的忠告：精通那么多技术为何还是做不好一个项目？
-* 这样查生产问题，不做背锅侠
-* 最全干货：从写简历，到面试、谈薪酬的那些技巧和防坑指南
-
-
+* [今年困难模式，你跳槽还只是靠大量投简历吗？](https://github.com/crisxuan/bestJavaer/blob/master/aboutwork/%E4%BB%8A%E5%B9%B4%E5%9B%B0%E9%9A%BE%E6%A8%A1%E5%BC%8F%EF%BC%8C%E4%BD%A0%E8%B7%B3%E6%A7%BD%E8%BF%98%E5%8F%AA%E6%98%AF%E9%9D%A0%E5%A4%A7%E9%87%8F%E6%8A%95%E7%AE%80%E5%8E%86%E5%90%97%EF%BC%9F.md)
+* [培训机构出来的程序员常被鄙视，招谁惹谁了](https://github.com/crisxuan/bestJavaer/blob/master/aboutwork/%E5%9F%B9%E8%AE%AD%E6%9C%BA%E6%9E%84%E5%87%BA%E6%9D%A5%E7%9A%84%E7%A8%8B%E5%BA%8F%E5%91%98%E5%B8%B8%E8%A2%AB%E9%84%99%E8%A7%86%EF%BC%8C%E6%8B%9B%E8%B0%81%E6%83%B9%E8%B0%81%E4%BA%86.md)
+* [如何让程序员变得没朋友](https://github.com/crisxuan/bestJavaer/blob/master/aboutwork/%E5%A6%82%E4%BD%95%E8%AE%A9%E7%A8%8B%E5%BA%8F%E5%91%98%E5%8F%98%E5%BE%97%E6%B2%A1%E6%9C%8B%E5%8F%8B.md)
+* [一个技术总监的忠告：精通那么多技术为何还是做不好一个项目？](https://github.com/crisxuan/bestJavaer/blob/master/aboutwork/%E4%B8%80%E4%B8%AA%E6%8A%80%E6%9C%AF%E6%80%BB%E7%9B%91%E7%9A%84%E5%BF%A0%E5%91%8A%EF%BC%9A%E7%B2%BE%E9%80%9A%E9%82%A3%E4%B9%88%E5%A4%9A%E6%8A%80%E6%9C%AF%E4%B8%BA%E4%BD%95%E8%BF%98%E6%98%AF%E5%81%9A%E4%B8%8D%E5%A5%BD%E4%B8%80%E4%B8%AA%E9%A1%B9%E7%9B%AE%EF%BC%9F.md)
+* [这样查生产问题，不做背锅侠](https://github.com/crisxuan/bestJavaer/blob/master/aboutwork/%E8%BF%99%E6%A0%B7%E6%9F%A5%E7%94%9F%E4%BA%A7%E9%97%AE%E9%A2%98%EF%BC%8C%E4%B8%8D%E5%81%9A%E8%83%8C%E9%94%85%E4%BE%A0.md)
+* [最全干货：从写简历，到面试、谈薪酬的那些技巧和防坑指南](https://github.com/crisxuan/bestJavaer/blob/master/aboutwork/%E6%9C%80%E5%85%A8%E5%B9%B2%E8%B4%A7%EF%BC%9A%E4%BB%8E%E5%86%99%E7%AE%80%E5%8E%86%EF%BC%8C%E5%88%B0%E9%9D%A2%E8%AF%95%E3%80%81%E8%B0%88%E8%96%AA%E9%85%AC%E7%9A%84%E9%82%A3%E4%BA%9B%E6%8A%80%E5%B7%A7%E5%92%8C%E9%98%B2%E5%9D%91%E6%8C%87%E5%8D%97.md)
 
 
 
@@ -479,7 +477,7 @@ waiting...
 * 公众号：后端技术学堂
 * 公众号：一枝花算不算浪漫
 * 公众号：IT人的职场进阶
-* 公众号：四猿外爬写作
+* 公众号：四猿外怕写作
 * 期待你成为新的 Contributor
 
 
@@ -505,6 +503,22 @@ waiting...
 * 讲一讲 HashMap 中 put 的全过程
 
 * 谈一谈 Java 泛型和类型擦除
+
+* 聊一聊MySQL中的事务
+
+* 请说出你知道的索引失效的几种情况
+
+* 聊一聊 Spring bean 的生命周期
+
+* 讲一讲你所知道的垃圾收集器以及实现原理
+
+* 谈一谈你所知道的 ThreadLocal
+
+* 聊一聊 InnoDB 与 MyISAM 的区别
+
+* Redis 缓存穿透、缓存雪崩和缓存击穿原因，以及解决方案
+
+* 说一说进程通信有几种方式
 
   
 
