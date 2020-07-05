@@ -464,9 +464,9 @@ waiting...
 
 * 操作系统 PDF 
 
-* [Java 核心基础总结](https://github.com/crisxuan/bestJavaer/blob/master/mypdf/java-all.pdf)
-* [HTTP 核心总结](https://github.com/crisxuan/bestJavaer/blob/master/mypdf/http-all.pdf)
-* [程序员必知的硬核基础知识总结](https://github.com/crisxuan/bestJavaer/blob/master/mypdf/computer-basic.pdf)
+* Java 核心基础总结
+* HTTP 核心总结
+* 程序员必知的硬核基础知识总结
 
 
 
