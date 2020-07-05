@@ -81,7 +81,7 @@
 * [硬核操作系统之内存管理](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-rammanage.md)
 * [硬核操作系统之文件系统](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-filesystem.md)
 * [硬核操作系统之输入输出](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-inputoutput.md)
-* 硬核操作系统之死锁
+* [硬核操作系统之死锁](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-deadlock.md)
 * 硬核操作系统之虚拟化和云
 * 硬核操作系统之网络安全
 * 硬核操作系统之 Linux 系统研究
@@ -170,7 +170,7 @@
 
 ### 源码分析
 
-看完这篇 HashMap，和面试官扯皮就没问题了
+[看完这篇 HashMap，和面试官扯皮就没问题了](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-hashmap.md)
 
 
 
