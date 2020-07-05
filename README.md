@@ -122,6 +122,7 @@
 
 * [Linux 内存管理](https://github.com/crisxuan/bestJavaer/blob/master/linux/linux-rammanage.md)
 * [Linux 物理内存和虚拟内存](https://github.com/crisxuan/bestJavaer/blob/master/linux/linux-physicram.md)
+* Linux 开篇！！！
 
 ## 计算机网络系列
 
@@ -169,7 +170,7 @@
 
 ### 源码分析
 
-waiting...
+看完这篇 HashMap，和面试官扯皮就没问题了
 
 
 
@@ -459,7 +460,9 @@ waiting...
 
 ## 我的 PDF
 
-作者硬肝了三本 PDF ，它们分别是
+作者硬肝了四本 PDF ，它们分别是
+
+* 操作系统 PDF 
 
 * [Java 核心基础总结](https://github.com/crisxuan/bestJavaer/blob/master/mypdf/java-all.pdf)
 * [HTTP 核心总结](https://github.com/crisxuan/bestJavaer/blob/master/mypdf/http-all.pdf)
@@ -519,6 +522,22 @@ waiting...
 * Redis 缓存穿透、缓存雪崩和缓存击穿原因，以及解决方案
 
 * 说一说进程通信有几种方式
+
+* 聊一聊你知道的 AQS
+
+* 为什么单线程的 redis 这么快？
+
+* 聊一聊两阶段加锁、死锁、活锁、通信间死锁、饥饿的概念
+
+* 说一说 Java 中的几种引用类型，并分别详述各引用类型的特征
+
+* 说一说 你对happen-before 规则的理解
+
+* 地址栏输入 URL 发生了什么？
+
+* 说一说 DNS 的解析过程
+
+* 什么是 TIME-WAIT、为什么可以是三次挥手、为什么不能是两次握手、流量控制、滑动窗口、Nagle 算法、糊涂窗口综合症、拥塞控制、慢启动、拥塞避免、快重传、快恢复、长连接 VS 短连接
 
   
 
