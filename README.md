@@ -20,6 +20,7 @@
 * [Java基础面试题](https://github.com/crisxuan/bestJavaer/wiki/Java%E9%9D%A2%E8%AF%95%E9%A2%98)
 * [操作系统](https://github.com/crisxuan/bestJavaer#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%B3%BB%E5%88%97)
 * [计算机基础知识](https://github.com/crisxuan/bestJavaer#%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%97)
+* 深入理解计算机系统
 * [计算机网络](https://github.com/crisxuan/bestJavaer#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%B3%BB%E5%88%97)
 * [Java 基础教程](https://github.com/crisxuan/bestJavaer#java-%E5%9F%BA%E7%A1%80%E7%B3%BB%E5%88%97)
 * [设计模式](https://github.com/crisxuan/bestJavaer#%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E7%B3%BB%E5%88%97)
@@ -118,6 +119,12 @@
 * [程序员需要了解的硬核知识之操作系统和应用](https://github.com/crisxuan/bestJavaer/blob/master/computer-basic/computer-osandapp.md)
 * [程序员需要了解的硬核知识之操作系统入门](https://github.com/crisxuan/bestJavaer/blob/master/computer-basic/computer-os.md)
 * [程序员需要了解的硬核知识之控制硬件](https://github.com/crisxuan/bestJavaer/blob/master/computer-basic/computer-disk.md)
+
+## 深入理解计算机系统
+
+* 计算机系统入门概述
+
+
 
 ## HTTP 系列
 
