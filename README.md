@@ -245,11 +245,11 @@
 ![](https://raw.githubusercontent.com/crisxuan/bestJavaer/master/mindmanage/mysql.png)
 
 * [MySQL 基础入门大全](https://github.com/crisxuan/bestJavaer/blob/master/mysql/mysql-basicall.md)
-  * MySQL SQL 基本使用
-  * MySQL 数据类型
-  * MySQL 运算符
-  * MySQL 常用函数
-* MySQL 开发
+  * [MySQL SQL 基本使用](https://github.com/crisxuan/bestJavaer/blob/master/mysql/mysql-sql.md)
+  * [MySQL 数据类型](https://github.com/crisxuan/bestJavaer/blob/master/mysql/mysql-datatype.md)
+  * [MySQL 运算符](https://github.com/crisxuan/bestJavaer/blob/master/mysql/mysql-operator.md)
+  * [MySQL 常用函数](https://github.com/crisxuan/bestJavaer/blob/master/mysql/mysql-func.md)
+* [MySQL 开发](https://github.com/crisxuan/bestJavaer/blob/master/mysql/mysql-develop.md)
 * [SQL 进阶技巧](https://github.com/crisxuan/bestJavaer/blob/master/mysql/sql-improve.md)
 
 ## Spring 系列

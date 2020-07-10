@@ -1,7 +1,5 @@
 # MySQL 开发
 
-[toc]
-
 我们在 MySQL 入门篇主要介绍了基本的 SQL 命令、数据类型和函数，在局部以上知识后，你就可以进行 MySQL 的开发工作了，但是如果要成为一个合格的开发人员，你还要具备一些更高级的技能，下面我们就来探讨一下 MySQL 都需要哪些高级的技能
 
 ## MySQL 存储引擎
@@ -12,7 +10,7 @@
 
 MySQL 的架构可以按照三层模式来理解
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200623223242050.png" alt="image-20200623223242050" style="zoom:50%;" />
+![](https://img2020.cnblogs.com/blog/1515111/202007/1515111-20200706132644352-762193374.png)
 
 存储引擎也是 MySQL 的组建，它是一种软件，它所能做的和支持的功能主要有
 
@@ -43,9 +41,7 @@ MySQL 默认支持多种存储引擎，来适用不同数据库应用，用户�
 show variables like 'table_type';
 ```
 
-
-
-![image-20200624202451088](/Users/mr.l/Library/Application Support/typora-user-images/image-20200624202451088.png)
+![](https://img2020.cnblogs.com/blog/1515111/202007/1515111-20200706132653321-1448731651.png)
 
 奇怪，为什么没有了呢？网上求证一下，在 5.5.3 取消了这个参数
 
@@ -55,7 +51,7 @@ show variables like 'table_type';
 show engines \g
 ```
 
-![image-20200624202722068](/Users/mr.l/Library/Application Support/typora-user-images/image-20200624202722068.png)
+![](https://img2020.cnblogs.com/blog/1515111/202007/1515111-20200706132701846-916881020.png)
 
 在创建新表的时候，可以通过增加 `ENGINE` 关键字设置新建表的存储引擎。
 
@@ -63,21 +59,21 @@ show engines \g
 create table cxuan002(id int(10),name varchar(20)) engine = MyISAM;
 ```
 
-![image-20200624203716136](/Users/mr.l/Library/Application Support/typora-user-images/image-20200624203716136.png)
+![](https://img2020.cnblogs.com/blog/1515111/202007/1515111-20200706132710498-2129087271.png)
 
 上图我们指定了 `MyISAM` 的存储引擎。
 
 如果你不知道表的存储引擎怎么办？你可以通过 `show create table` 来查看
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200624203906631.png" alt="image-20200624203906631" style="zoom: 67%;" />
+![](https://img2020.cnblogs.com/blog/1515111/202007/1515111-20200706132718513-1446260200.png)
 
 如果不指定存储引擎的话，从MySQL 5.1 版本之后，MySQL 的默认内置存储引擎已经是 InnoDB了。建一张表看一下
 
-![image-20200624205932940](/Users/mr.l/Library/Application Support/typora-user-images/image-20200624205932940.png)
+![](https://img2020.cnblogs.com/blog/1515111/202007/1515111-20200706132728457-1031120122.png)
 
 如上图所示，我们没有指定默认的存储引擎，下面查看一下表
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200624210006548.png" alt="image-20200624210006548" style="zoom:67%;" />
+![](https://img2020.cnblogs.com/blog/1515111/202007/1515111-20200706132739877-1042995853.png)
 
 可以看到，默认的存储引擎是 `InnoDB`。
 
@@ -89,11 +85,11 @@ alter table cxuan003 engine = myisam;
 
 来更换，更换完成后回显示 **0 rows affected** ，但其实已经操作成功
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200628211520846.png" alt="image-20200628211520846" style="zoom:67%;" />
+![](https://img2020.cnblogs.com/blog/1515111/202007/1515111-20200706132751752-701092827.png)
 
 我们使用 `show create table` 查看一下表的 sql 就知道
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200628211557746.png" alt="image-20200628211557746" style="zoom:67%;" />
+![](https://img2020.cnblogs.com/blog/1515111/202007/1515111-20200706132758050-1708717669.png)
 
 ### 存储引擎特性
 
@@ -212,23 +208,23 @@ TEXT 和 BLOB 在删除数据后会存在一些性能上的问题，为了提高
 
 首先创建一张表，表中记录 blob 字段和 hash 值
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200703175950261.png" alt="image-20200703175950261" style="zoom: 67%;" />
+![](https://img2020.cnblogs.com/blog/1515111/202007/1515111-20200706132811453-1444792840.png)
 
 向 cxuan005 中插入数据，其中 hash 值作为 info 的散列值。
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200703180419490.png" alt="image-20200703180419490" style="zoom:67%;" />
+![](https://img2020.cnblogs.com/blog/1515111/202007/1515111-20200706132817165-601198698.png)
 
 然后再插入两条数据
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200703181341636.png" alt="image-20200703181341636" style="zoom:67%;" />
+![](https://img2020.cnblogs.com/blog/1515111/202007/1515111-20200706132823617-1807595218.png)
 
 插入一条 info 为 cxuan005 的数据
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200703181602717.png" alt="image-20200703181602717" style="zoom:67%;" />
+![](https://img2020.cnblogs.com/blog/1515111/202007/1515111-20200706132833167-1066282615.png)
 
 如果想要查询 info 为 cxuan005 的数据，可以通过查询 hash 列来进行查询
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200703181827188.png" alt="image-20200703181827188" style="zoom:67%;" />
+![](https://img2020.cnblogs.com/blog/1515111/202007/1515111-20200706132842239-285583278.png)
 
 这是合成索引的例子，如果要对 BLOB 进行模糊查询的话，就要使用前缀索引。
 
@@ -243,31 +239,29 @@ TEXT 和 BLOB 在删除数据后会存在一些性能上的问题，为了提高
 
 首先创建一个表 cxuan006 ，只为了测试浮点数问题，所以这里我们选择的数据类型是 float
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200704152148284.png" alt="image-20200704152148284" style="zoom:67%;" />
+![](https://img2020.cnblogs.com/blog/1515111/202007/1515111-20200706132849801-480771977.png)
 
 然后分别插入两条数据
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200704152556988.png" alt="image-20200704152556988" style="zoom:67%;" />
-
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200704152646811.png" alt="image-20200704152646811" style="zoom:67%;" />
+![](https://img2020.cnblogs.com/blog/1515111/202007/1515111-20200706132856319-580952636.png)
 
 然后执行查询，可以看到查询出来的两条数据执行的舍入不同
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200704153222844.png" alt="image-20200704153222844" style="zoom:67%;" />
+![](https://img2020.cnblogs.com/blog/1515111/202007/1515111-20200706132906606-150784557.png)
 
 为了清晰的看清楚浮点数与定点数的精度问题，再来看一个例子
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200704153522376.png" alt="image-20200704153522376" style="zoom:67%;" />
+![](https://img2020.cnblogs.com/blog/1515111/202007/1515111-20200706132919095-147664610.png)
 
 先修改 cxuan006 的两个字段为相同的长度和小数位数
 
 然后插入两条数据
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200704154741582.png" alt="image-20200704154741582" style="zoom:67%;" />
+![](https://img2020.cnblogs.com/blog/1515111/202007/1515111-20200706132925328-173481375.png)
 
 执行查询操作，可以发现，浮点数相较于定点数来说，会产生误差
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200704155118016.png" alt="image-20200704155118016" style="zoom:67%;" />
+![](https://img2020.cnblogs.com/blog/1515111/202007/1515111-20200706132931982-1014481538.png)
 
 ### 日期类型选择
 
@@ -278,9 +272,9 @@ TEXT 和 BLOB 在删除数据后会存在一些性能上的问题，为了提高
 这篇文中介绍过了日期类型的区别，我们这里就不再阐述了。下面主要介绍一下选择
 
 * TIMESTAMP 和时区相关，更能反映当前时间，如果记录的日期需要让不同时区的人使用，最好使用 TIMESTAMP。
-*  DATE 用于表示年月日，如果实际应用值需要保存年月日的话就可以使用 DATE。
-*  TIME 用于表示时分秒，如果实际应用值需要保存时分秒的话就可以使用 TIME。
-*  YEAR 用于表示年份，YEAR 有 2 位（最好使用4位）和 4 位格式的年。 默认是4位。如果实际应用只保存年份，那么用 1 bytes 保存 YEAR 类型完全可以。不但能够节约存储空间，还能提高表的操作效率。
+* DATE 用于表示年月日，如果实际应用值需要保存年月日的话就可以使用 DATE。
+* TIME 用于表示时分秒，如果实际应用值需要保存时分秒的话就可以使用 TIME。
+* YEAR 用于表示年份，YEAR 有 2 位（最好使用4位）和 4 位格式的年。 默认是4位。如果实际应用只保存年份，那么用 1 bytes 保存 YEAR 类型完全可以。不但能够节约存储空间，还能提高表的操作效率。
 
 ## MySQL 字符集
 
@@ -301,7 +295,7 @@ TEXT 和 BLOB 在删除数据后会存在一些性能上的问题，为了提高
 
 MySQL 支持多种字符集，可以使用 `show character set;` 来查看所有可用的字符集
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200704193541527.png" alt="image-20200704193541527" style="zoom:67%;" />
+![](https://img2020.cnblogs.com/blog/1515111/202007/1515111-20200706132955205-1513568840.png)
 
 或者使用
 
@@ -313,93 +307,7 @@ select character_set_name, default_collate_name, description, maxlen from inform
 
 使用 `information_schema.character_set` 来查看字符集和校对规则。
 
-![image-20200704193713613](/Users/mr.l/Library/Application Support/typora-user-images/image-20200704193713613.png)
+![](https://img2020.cnblogs.com/blog/1515111/202007/1515111-20200706133003359-1814346116.png)
 
-## 索引的设计和使用
-
-我们上面介绍到了索引的几种类型并对不同的索引类型做了阐述，阐明了优缺点等等，下面我们从设计角度来聊一下索引，关于索引，你必须要知道的一点就是：**索引是数据库用来提高性能的最常用工具**。
-
-### 索引概述
-
-所有的 MySQL 类型都可以进行索引，对相关列使用索引是提高 `SELECT` 查询性能的最佳途径。MyISAM 和 InnoDB 都是使用 `BTREE` 作为索引，MySQL 5 不支持`函数索引`，但是支持 `前缀索引`。
-
-前缀索引顾名思义就是对列字段的前缀做索引，前缀索引的长度和存储引擎有关系。MyISAM 前缀索引的长度支持到 1000 字节，InnoDB 前缀索引的长度支持到 767 字节，索引值重复性越低，查询效率也就越高。
-
-在 MySQL 中，主要有下面这几种索引
-
-* `全局索引(FULLTEXT)`：全局索引，目前只有 MyISAM 引擎支持全局索引，它的出现是为了解决针对文本的模糊查询效率较低的问题，并且只限于 CHAR、VARCHAR 和 TEXT 列。
-* `哈希索引(HASH)`：哈希索引是 MySQL 中用到的唯一 key-value 键值对的数据结构，很适合作为索引。HASH 索引具有一次定位的好处，不需要像树那样逐个节点查找，但是这种查找适合应用于查找单个键的情况，对于范围查找，HASH 索引的性能就会很低。默认情况下，MEMORY 存储引擎使用 HASH 索引，但也支持 BTREE 索引。
-* `B-Tree 索引`：B 就是 Balance 的意思，BTree 是一种平衡树，它有很多变种，最常见的就是 B+ Tree，它被 MySQL 广泛使用。
-* `R-Tree 索引`：R-Tree 在 MySQL 很少使用，仅支持 geometry 数据类型，支持该类型的存储引擎只有MyISAM、BDb、InnoDb、NDb、Archive几种，相对于 B-Tree 来说，R-Tree 的优势在于范围查找。
-
-索引可以在创建表的时候进行创建，也可以单独创建，下面我们采用单独创建的方式，我们在 cxuan004 上创建前缀索引
-
-![image-20200708152650812](/Users/mr.l/Library/Application Support/typora-user-images/image-20200708152650812.png)
-
-我们使用 `explain` 进行分析，可以看到 cxuan004 使用索引的情况
-
-![image-20200708152732107](/Users/mr.l/Library/Application Support/typora-user-images/image-20200708152732107.png)
-
-如果不想使用索引，可以删除索引，索引的删除语法是
-
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200708153020009.png" alt="image-20200708153020009" style="zoom:67%;" />
-
-### 索引设计原则
-
-创建索引的时候，要尽量考虑以下原则，便于提升索引的使用效率。
-
-* 选择`索引位置`，选择索引最合适的位置是出现在 `where` 语句中的列，而不是 `select` 关键字后的选择列表中的列。
-* 选择使用`唯一索引`，顾名思义，唯一索引的值是唯一的，可以更快速的确定某条记录，例如学生的学号就适合使用唯一性索引，而学生的性别则不适合使用，因为不管搜索哪个值，都差不多有一半的行。
-* 为经常使用的字段建立索引，如果某个字段经常用作查询条件，那么这个字段的查询速度在极大程度上影响整个表的查询速度，因此为这样的字段建立索引，可以提高整个表的查询速度。
-* 不要过度索引，限制索引数目，索引的数目不是越多越好，每个索引都会占据磁盘空间，索引越多，需要的磁盘空间就越大。
-* 尽量使用`前缀索引`，如果索引的值很长，那么查询速度会受到影响，这个时候应该使用前缀索引，对列的某几个字符进行索引，可以提高检索效率。
-* 利用最左前缀，在创建一个 n 列的索引时，实际上是创建了 MySQL 可利用的 n 个索引。多列索引可以起到几个索引的作用，利用索引最左边的列来匹配行，这样的列称为最左前缀。
-* 对于使用 InnoDB 存储引擎的表来说，记录会按照一定的顺序保存。如果有明确的主键定义，那么会按照主键的顺序进行保存；如果没有主键，但是有唯一索引，那么就按照唯一索引的顺序进行保存。如果既没有主键又没有唯一索引，那么表中会自动生成一个内部列，按照这个列的顺序进行保存。一般来说，使用主键的顺序是最快的
-* 删除不再使用或者很少使用的索引
-
-## 视图
-
-MySQL 从 5.0 开始就提供了视图功能，下面我们对视图功能进行介绍。
-
-### 什么是视图
-
-视图的英文名称是 `view`，它是一种虚拟存在的表。视图对于用户来说是透明的，它并不在数据库中实际存在，视图是使用数据库行和列动态组成的表，那么视图相对于数据库表来说，优势体现在哪里？
-
-视图相对于普通的表来说，优势包含下面这几项
-
-* 使用视图可以简化操作：使用视图我们不用关注表结构的定义，我们可以把经常使用的数据集合定义成视图，这样能够简化操作。
-* 安全性：用户对视图不可以随意的更改和删除，可以保证数据的安全性。 
-* 数据独立性：一旦视图的结构确定了， 可以屏蔽表结构变化对用户的影响， 数据库表增加列对视图没有影响；具有一定的独立性
-
-### 对视图的操作
-
-视图的操作包括创建或者修改视图、删除视图以及查看视图定义。
-
-#### 创建或修改视图
-
-使用 `create view` 来创建视图
-
-为了演示功能，我们先创建一张表 `product` 表，有三个字段，id，name，price，下面是建表语句
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-文章参考：
-
-《深入浅出 MySQL》
+![](https://img2020.cnblogs.com/blog/1515111/202007/1515111-20200706133035847-522276071.png)
 
