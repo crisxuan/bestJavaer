@@ -77,13 +77,14 @@
 ![](https://raw.githubusercontent.com/crisxuan/bestJavaer/master/mindmanage/os-simple.png)
 
 * [硬核操作系统入门](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-overview.md)
-  * 什么是操作系统
-  * 计算机硬件简介
-  * 操作系统博物馆
-  * 操作系统概念
-  * 系统调用
-  * 操作系统结构
+  * [什么是操作系统](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-whatisos.md)
+  * [计算机硬件简介](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-device.md)
+  * [操作系统博物馆](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-kindsofos.md)
+  * [操作系统概念](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-view.md)
+  * [系统调用](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-systemcall.md)
+  * [操作系统结构](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-structure.md)
 * [硬核操作系统之进程和线程](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-processandthread.md)
+  * 
 * [硬核操作系统之内存管理](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-rammanage.md)
 * [硬核操作系统之文件系统](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-filesystem.md)
 * [硬核操作系统之输入输出](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-inputoutput.md)
