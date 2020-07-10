@@ -250,6 +250,9 @@
   * [MySQL 运算符](https://github.com/crisxuan/bestJavaer/blob/master/mysql/mysql-operator.md)
   * [MySQL 常用函数](https://github.com/crisxuan/bestJavaer/blob/master/mysql/mysql-func.md)
 * [MySQL 开发](https://github.com/crisxuan/bestJavaer/blob/master/mysql/mysql-develop.md)
+  * MySQL 存储引擎
+  * MySQL 选择合适的数据类型
+  * MySQL 字符集
 * [SQL 进阶技巧](https://github.com/crisxuan/bestJavaer/blob/master/mysql/sql-improve.md)
 
 ## Spring 系列
