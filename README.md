@@ -84,7 +84,10 @@
   * [系统调用](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-systemcall.md)
   * [操作系统结构](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-structure.md)
 * [硬核操作系统之进程和线程](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-processandthread.md)
-  * 
+  * 操作系统进程
+  * 操作系统线程
+  * 操作系统进程间通信
+  * 操作系统调度
 * [硬核操作系统之内存管理](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-rammanage.md)
 * [硬核操作系统之文件系统](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-filesystem.md)
 * [硬核操作系统之输入输出](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-inputoutput.md)

@@ -1,7 +1,5 @@
 # 操作系统之进程和线程
 
-[toc]
-
 ![](https://img2020.cnblogs.com/blog/1515111/202003/1515111-20200304203148011-1400469821.png)
 
 
@@ -1543,31 +1541,3 @@ CTSS 在每次切换前都需要将当前进程换出到磁盘，并从磁盘上
 用户级线程和内核级线程之间的主要差别在于`性能`。用户级线程的切换需要少量的机器指令（想象一下Java程序的线程切换），而内核线程需要完整的上下文切换，修改内存映像，使高速缓存失效，这会导致了若干数量级的延迟。另一方面，在使用内核级线程时，一旦线程阻塞在 I/O 上就不需要在用户级线程中那样将整个进程挂起。
 
 从进程 A 的一个线程切换到进程 B 的一个线程，其消耗要远高于运行进程 A 的两个线程（涉及修改内存映像，修改高速缓存），内核对这种切换的消耗是了解到，可以通过这些信息作出决定。
-
-
-文章参考：
-
-《现代操作系统》
-
-《Modern Operating System》forth edition
-
-https://www.encyclopedia.com/computing/news-wires-white-papers-and-books/interactive-systems
-
-https://j00ru.vexillium.org/syscalls/nt/32/
-
-https://www.bottomupcs.com/process_hierarchy.xhtml
-
-https://en.wikipedia.org/wiki/Runtime_system
-
-https://en.wikipedia.org/wiki/Execution_model
-
-https://zhidao.baidu.com/question/113227654.html
-
-https://baike.baidu.com/item/等待队列/9223804?fr=aladdin
-
-http://www.columbia.edu/cu/computinghistory/7094.html
-
-https://baike.baidu.com/item/中断向量/4947039?fr=aladdin
-
-![](https://img2020.cnblogs.com/blog/1515111/202003/1515111-20200303152912581-509480210.png)
-
