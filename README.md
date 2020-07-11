@@ -90,7 +90,10 @@
   * [操作系统进程间通信](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-processcommunicate.md)
   * [操作系统调度](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-dispatch.md)
 * [硬核操作系统之内存管理](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-rammanage.md)
-  * 
+  * [操作系统无存储器抽象](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-nomemory.md)
+  * [操作系统地址空间](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-onememory.md)
+  * [操作系统虚拟地址](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-virtualmemory.md)
+  * [操作系统页面置换算法](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-pagereplacement.md)
 * [硬核操作系统之文件系统](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-filesystem.md)
 * [硬核操作系统之输入输出](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-inputoutput.md)
 * [硬核操作系统之死锁](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-deadlock.md)
@@ -122,9 +125,7 @@
 
 ## 深入理解计算机系统
 
-* 计算机系统入门概述
-
-
+* [计算机系统入门概述](https://github.com/crisxuan/bestJavaer/blob/master/computersystem/csapp-basic.md)
 
 ## HTTP 系列
 
@@ -563,6 +564,8 @@ Github 无法上传大文件，请读者们自行下载
 * 说一说 DNS 的解析过程
 
 * 什么是 TIME-WAIT、为什么可以是三次挥手、为什么不能是两次握手、流量控制、滑动窗口、Nagle 算法、糊涂窗口综合症、拥塞控制、慢启动、拥塞避免、快重传、快恢复、长连接 VS 短连接
+
+* [什么是 DMA](https://github.com/crisxuan/bestJavaer/wiki/%E4%BB%80%E4%B9%88%E6%98%AF-DMA)
 
   
 
