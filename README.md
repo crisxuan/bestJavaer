@@ -95,6 +95,12 @@
   * [操作系统虚拟地址](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-virtualmemory.md)
   * [操作系统页面置换算法](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-pagereplacement.md)
 * [硬核操作系统之文件系统](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-filesystem.md)
+  * [操作系统文件系统概述](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-filesystemvview.md)
+  * [操作系统文件](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-file.md)
+  * [操作系统目录](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-catalog.md)
+  * [操作系统文件系统实现](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-filesystemrealize.md)
+  * [操作系统文件管理和优化](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-fsmanage.md)
+
 * [硬核操作系统之输入输出](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-inputoutput.md)
 * [硬核操作系统之死锁](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-deadlock.md)
 * 硬核操作系统之虚拟化和云
