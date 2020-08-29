@@ -562,6 +562,20 @@ waiting...
 
 * [什么是 DMA](https://github.com/crisxuan/bestJavaer/wiki/%E4%BB%80%E4%B9%88%E6%98%AF-DMA)
 
+* 聊一聊你知道的 final、finally 和 finalize。
+
+* 请详述一下 HTTP 中 Get/Post 区别
+
+* ThreadPoolExecutor 的构造方法都有哪些参数，分别代表什么意思？
+
+* Synchronized 锁升级流程？
+
+* 你项目中使用优雅的判空方式
+
+* synchronized 和 ReentrantLock的区别？
+
+* CountDownLatch 和 CyclicBarrier 的区别
+
   
 
 ## 欢迎关注
