@@ -147,7 +147,9 @@
 
 * [Linux 开篇！！！](https://github.com/crisxuan/bestJavaer/blob/master/linux/linux-first.md)
 * [Linux 进程和线程](https://github.com/crisxuan/bestJavaer/blob/master/linux/linux-processandthread.md)
-* 
+* [Linux 内存管理](https://github.com/crisxuan/bestJavaer/blob/master/linux/linux-memroy-management.md)
+* [Linux IO管理](https://github.com/crisxuan/bestJavaer/blob/master/linux/linux-io.md)
+* [Linux 文件系统](https://github.com/crisxuan/bestJavaer/blob/master/linux/linux-file-system.md)
 
 ## 计算机网络系列
 
@@ -369,6 +371,7 @@ waiting...
 ## 读者面试系列
 
 * [今年面试这么难，到底如何进入大厂？](https://github.com/crisxuan/bestJavaer/blob/master/interview/interview-jingdong.md)
+* 外包面试之旅
 
 
 
