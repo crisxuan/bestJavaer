@@ -100,7 +100,6 @@
   * [操作系统目录](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-catalog.md)
   * [操作系统文件系统实现](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-filesystemrealize.md)
   * [操作系统文件管理和优化](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-fsmanage.md)
-
 * [硬核操作系统之输入输出](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-inputoutput.md)
 * [硬核操作系统之死锁](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-deadlock.md)
 * 硬核操作系统之虚拟化和云
@@ -172,6 +171,9 @@
 ![](https://raw.githubusercontent.com/crisxuan/bestJavaer/master/mindmanage/java-basic.png)
 
 * [Java 核心基础教程](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-summary.md)
+* [Java 代理](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-proxy.md)
+* [Java 反射](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-reflect.md)
+* [Java 集合](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-collections.md)
 * [String、StringBuffer 和 StringBuilder](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-stringstringbufferstringbuilder.md)
 * [深入理解 static 关键字](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-static.md)
 * [深入理解 Java 变量](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-varaibles.md)
@@ -453,6 +455,9 @@ waiting...
 * [作者的一周](https://github.com/crisxuan/bestJavaer/blob/master/aboutlife/cxuan-oneweek.md)
 * [bilibili 关于后浪有感](https://github.com/crisxuan/bestJavaer/blob/master/aboutlife/aboutbilibili.md)
 * [电信诈骗](https://github.com/crisxuan/bestJavaer/blob/master/aboutlife/cxuan-deceive.md)
+* 如何成为务实的程序员
+* 写给 25 岁的自己
+* 面试官和面试者在同一个群里是怎样的体验
 
 
 
