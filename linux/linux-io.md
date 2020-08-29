@@ -1,7 +1,5 @@
 # Linux IO 管理
 
-[toc]
-
 我们之前了解过了 Linux 的进程和线程、Linux 内存管理，那么下面我们就来认识一下 Linux 中的 I/O 管理。
 
 Linux 系统和其他 UNIX 系统一样，IO 管理比较直接和简洁。所有 IO 设备都被当作`文件`，通过在系统内部使用相同的 read 和 write 一样进行读写。
