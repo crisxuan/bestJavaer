@@ -145,10 +145,9 @@
 
 ## Linux 系列
 
-* [Linux 内存管理](https://github.com/crisxuan/bestJavaer/blob/master/linux/linux-rammanage.md)
-* [Linux 物理内存和虚拟内存](https://github.com/crisxuan/bestJavaer/blob/master/linux/linux-physicram.md)
 * [Linux 开篇！！！](https://github.com/crisxuan/bestJavaer/blob/master/linux/linux-first.md)
 * [Linux 进程和线程](https://github.com/crisxuan/bestJavaer/blob/master/linux/linux-processandthread.md)
+* 
 
 ## 计算机网络系列
 
@@ -480,29 +479,11 @@ waiting...
 * [这样查生产问题，不做背锅侠](https://github.com/crisxuan/bestJavaer/blob/master/aboutwork/%E8%BF%99%E6%A0%B7%E6%9F%A5%E7%94%9F%E4%BA%A7%E9%97%AE%E9%A2%98%EF%BC%8C%E4%B8%8D%E5%81%9A%E8%83%8C%E9%94%85%E4%BE%A0.md)
 * [最全干货：从写简历，到面试、谈薪酬的那些技巧和防坑指南](https://github.com/crisxuan/bestJavaer/blob/master/aboutwork/%E6%9C%80%E5%85%A8%E5%B9%B2%E8%B4%A7%EF%BC%9A%E4%BB%8E%E5%86%99%E7%AE%80%E5%8E%86%EF%BC%8C%E5%88%B0%E9%9D%A2%E8%AF%95%E3%80%81%E8%B0%88%E8%96%AA%E9%85%AC%E7%9A%84%E9%82%A3%E4%BA%9B%E6%8A%80%E5%B7%A7%E5%92%8C%E9%98%B2%E5%9D%91%E6%8C%87%E5%8D%97.md)
 
-
-
-
-
 ## 优质 Github 推荐
 
 * [计算机自学 Github](https://github.com/keithnull/TeachYourselfCS-CN/blob/master/TeachYourselfCS-CN.md)
 * [Crash Course 的 Github](https://github.com/1c7/Crash-Course-Computer-Science-Chinese)
 * [JavaGuide 的 Github](https://github.com/Snailclimb/JavaGuide)
-
-## 我的 PDF
-
-作者硬肝了四本 PDF ，它们分别是
-
-* 操作系统 PDF 
-
-* Java 核心基础总结
-* HTTP 核心总结
-* 程序员必知的硬核基础知识总结
-
-Github 无法上传大文件，请读者们自行下载
-
-![](https://raw.githubusercontent.com/crisxuan/bestJavaer/master/picture/mypdf.png)
 
 ## 贡献者
 
@@ -577,7 +558,7 @@ Github 无法上传大文件，请读者们自行下载
 
 ## 欢迎关注
 
-欢迎关注作者的微信公众号 **Java建设者**，参加每日一题计划，给你分享作者硬肝的四本 PDF。
+欢迎关注作者的微信公众号 **Java建设者**，参加每日一题计划，关注公众号回复 `PDF` 给你分享作者硬肝的四本 PDF。
 
 ![](https://raw.githubusercontent.com/crisxuan/bestJavaer/master/qcode/javajianshecode.png)
 
