@@ -212,6 +212,7 @@
 * [看完你就明白的锁系列之乐观锁和悲观锁](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-optimisticlock.md)
 * [看完你就明白的锁系列之自旋锁](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-spinlock.md)
 * [锁系列汇总](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-lock.md)
+* 
 
 ### 源码分析
 
@@ -456,9 +457,9 @@ waiting...
 * [作者的一周](https://github.com/crisxuan/bestJavaer/blob/master/aboutlife/cxuan-oneweek.md)
 * [bilibili 关于后浪有感](https://github.com/crisxuan/bestJavaer/blob/master/aboutlife/aboutbilibili.md)
 * [电信诈骗](https://github.com/crisxuan/bestJavaer/blob/master/aboutlife/cxuan-deceive.md)
-* 如何成为务实的程序员
-* 写给 25 岁的自己
-* 面试官和面试者在同一个群里是怎样的体验
+* [如何成为务实的程序员](https://github.com/crisxuan/bestJavaer/blob/master/aboutlife/good-programmer.md)
+* [写给 25 岁的自己](https://github.com/crisxuan/bestJavaer/blob/master/aboutlife/cxuan-25yearsold.md)
+* [面试官和面试者在同一个群里是怎样的体验](https://github.com/crisxuan/bestJavaer/blob/master/aboutlife/interviewer-story.md)
 
 
 
