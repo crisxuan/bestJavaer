@@ -59,11 +59,9 @@
 * [关于认知](https://github.com/crisxuan/bestJavaer#%E5%85%B3%E4%BA%8E%E8%AE%A4%E7%9F%A5)
 * [电子书籍](https://github.com/crisxuan/bestJavaer#%E7%94%B5%E5%AD%90%E4%B9%A6%E7%B1%8D)
 * [我的PDF](https://github.com/crisxuan/bestJavaer#%E6%88%91%E7%9A%84-pdf)
-* [编程故事集](https://github.com/crisxuan/bestJavaer#%E7%BC%96%E7%A8%8B%E6%95%85%E4%BA%8B%E9%9B%86)
 * [读者面试系列](https://github.com/crisxuan/bestJavaer#%E8%AF%BB%E8%80%85%E9%9D%A2%E8%AF%95%E7%B3%BB%E5%88%97)
 * [面试题系列](https://github.com/crisxuan/bestJavaer#%E9%9D%A2%E8%AF%95%E9%A2%98%E7%B3%BB%E5%88%97)
 * [优质 Github](https://github.com/crisxuan/bestJavaer#%E4%BC%98%E8%B4%A8-github-%E6%8E%A8%E8%8D%90)
-* [贡献者](https://github.com/crisxuan/bestJavaer#%E8%B4%A1%E7%8C%AE%E8%80%85)
 * [每日一题计划](https://github.com/crisxuan/bestJavaer#%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98%E8%AE%A1%E5%88%92)
 * 等
 
@@ -156,15 +154,6 @@
 * [你不得不知的计算机网络](https://github.com/crisxuan/bestJavaer/blob/master/network/network-center.md)
 * [计算机网络应用层](https://github.com/crisxuan/bestJavaer/blob/master/network/network-appLevel.md)
 
-* [计算机网络 - TCP 详解](https://github.com/crisxuan/bestJavaer/blob/master/network/network-tcp.md)
-
-* [计算机网络 - IP 详解](https://github.com/crisxuan/bestJavaer/blob/master/network/network-ip.md)
-* [计算机网络 - HTTP 面试题](https://github.com/crisxuan/bestJavaer/blob/master/network/network-http-interview.md)
-* [计算机网络 - 详解 TCP 三次握手四次挥手](https://github.com/crisxuan/bestJavaer/blob/master/network/network-threeandfour.md)
-* [计算机网络 - 探究数据包在网络的历程](https://github.com/crisxuan/bestJavaer/blob/master/network/network-datapacket.md)
-* [计算机网络 - ping](https://github.com/crisxuan/bestJavaer/blob/master/network/network-ping.md)
-* [计算机网络 - wireshark 实战](https://github.com/crisxuan/bestJavaer/blob/master/network/network-wiresharkuse.md)
-* [计算机网络 - TCP 半连接和全链接队列](https://github.com/crisxuan/bestJavaer/blob/master/network/network-tcp-connect.md)
 
 ## Java 基础系列
 
@@ -212,17 +201,14 @@
 * [看完你就明白的锁系列之乐观锁和悲观锁](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-optimisticlock.md)
 * [看完你就明白的锁系列之自旋锁](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-spinlock.md)
 * [锁系列汇总](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-lock.md)
-* 
+
+  
 
 ### 源码分析
 
 * [ReentrantLock 源码分析](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-reentrantlock.md)
 * [我花了 35 张图就为你让你了解 AQS](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-aqs.md)
 
-* [longAddr 源码分析](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-longaddr.md)
-* [ThreadLoacal 源码分析](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-threadLocal.md)
-* [线程池源码分析](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-threadpool.md)
-* [FutureTask 源码分析](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/futuretask.md)
 
 ## 设计模式系列
 
@@ -239,8 +225,8 @@
 
 * Java 内存模型
 * 一个对象从 JVM 的角度是如何创建的
-* [垃圾回收理论介绍](https://github.com/crisxuan/bestJavaer/blob/master/JVM/jvm-gccollect.md)
-* [垃圾回收实战篇](https://github.com/crisxuan/bestJavaer/blob/master/JVM/jvm-gcuse.md)
+* 垃圾回收理论介绍
+* 垃圾回收实战篇
 * 内存分配粗略与回收策略
 * 虚拟机性能监控工具与故障处理工具
 * 调优分析与实战
@@ -306,24 +292,7 @@
 
 ### 源码分析
 
-* [Spring 官网阅读 01 - 容器和实例化](https://github.com/crisxuan/bestJavaer/blob/master/spring/springsourcelearn-01.md)
-* [Spring 官网阅读 02 - 依赖注入和方法注入](https://github.com/crisxuan/bestJavaer/blob/master/spring/springsourcelearn-02.md)
-* [Spring 官网阅读 03 - 自动注入](https://github.com/crisxuan/bestJavaer/blob/master/spring/springsourcelearn-03.md)
-* [Spring 官网阅读 04 - BeanDefinition 上](https://github.com/crisxuan/bestJavaer/blob/master/spring/springsourcelearn-04.md)
-* [Spring 官网阅读 05 - BeanDefinition 下](https://github.com/crisxuan/bestJavaer/blob/master/spring/springsourcelearn-05.md)
-* [Spring 官网阅读 06 - 容器扩展点 一](https://github.com/crisxuan/bestJavaer/blob/master/spring/springsourcelearn-06.md)
-* [Spring 官网阅读 07 - 容器扩展点 二](https://github.com/crisxuan/bestJavaer/blob/master/spring/springsourcelearn-07.md)
-* [Spring 官网阅读 08 - 容器扩展点 三](https://github.com/crisxuan/bestJavaer/blob/master/spring/springsourcelearn-08.md)
-* [Spring 官网阅读 09 - Spring Bean 生命周期上](https://github.com/crisxuan/bestJavaer/blob/master/spring/springsourcelearn-09.md)
-* [Spring 官网阅读 10 - Spring Bean 生命周期 下](https://github.com/crisxuan/bestJavaer/blob/master/spring/springsourcelearn-10.md)
-* [Spring 官网阅读 11 - ApplicationContext 详细介绍 上](https://github.com/crisxuan/bestJavaer/blob/master/spring/springsourcelearn-11.md)
-* [Spring 官网阅读 12 - ApplicationContext 详细介绍 中](https://github.com/crisxuan/bestJavaer/blob/master/spring/springsourcelearn-12.md)
-* [Spring 官网阅读 13 - ApplicationContext 详细介绍 下](https://github.com/crisxuan/bestJavaer/blob/master/spring/springsourcelearn-13.md)
-* [Spring 官网阅读 14 - Spring 中 BeanWrapper 及类型转换](https://github.com/crisxuan/bestJavaer/blob/master/spring/springsourcelearn-14.md)
-* [Spring 官网阅读 15 - Spring 中的格式化](https://github.com/crisxuan/bestJavaer/blob/master/spring/springsourcelearn-15.md)
-* [Spring 官网阅读 16 - Spring 中的数据绑定](https://github.com/crisxuan/bestJavaer/blob/master/spring/springsourcelearn-16.md)
-* [Spring 官网阅读 17 - Spring 中的数据校验](https://github.com/crisxuan/bestJavaer/blob/master/spring/springsourcelearn-17.md)
-* [Spring 官网阅读 18 - Spring 中的 AOP](https://github.com/crisxuan/bestJavaer/blob/master/spring/springsourcelearn-18.md)
+
 
 ## SpringBoot 系列
 
@@ -393,24 +362,11 @@ waiting...
 
 ## 算法
 
-* [堆](https://github.com/crisxuan/bestJavaer/blob/master/algorithm/algorithm-heap.md)
-* [B+ tree](https://github.com/crisxuan/bestJavaer/blob/master/algorithm/algorithm-b%2Btree.md)
-* [贪心算法](https://github.com/crisxuan/bestJavaer/blob/master/algorithm/algorithm-greedy.md)
-* [动态规划](https://github.com/crisxuan/bestJavaer/blob/master/algorithm/algorithm-dynamicprogramming.md)
-* [链表](https://github.com/crisxuan/bestJavaer/blob/master/algorithm/algorithm-linkedlist.md)
-* [排列组合](https://github.com/crisxuan/bestJavaer/blob/master/algorithm/algorithm-permutations.md)
-* [递归](https://github.com/crisxuan/bestJavaer/blob/master/algorithm/algorithm-recursive.md)
-* [Trie 树](https://github.com/crisxuan/bestJavaer/blob/master/algorithm/algorithm-trie.md)
-* [深度优先和广度优先](https://github.com/crisxuan/bestJavaer/blob/master/algorithm/algorithm-depthandbreadth.md)
+
 
 ## 实战篇
 
-* [线上 OOM](https://github.com/crisxuan/bestJavaer/blob/master/product-use/four-oom.md) 
-* [高性能短链设计](https://github.com/crisxuan/bestJavaer/blob/master/product-use/high-perfomance-design.md)
-* [直播平台的技术架构揭秘](https://github.com/crisxuan/bestJavaer/blob/master/design/直播平台的技术架构揭秘.md)
-* [线程池运用不当的一次线上事故](https://github.com/crisxuan/bestJavaer/blob/master/design/线程池运用不当的一次线上事故.md)
-* [线上服务的GC问题](https://github.com/crisxuan/bestJavaer/blob/master/design/%E7%BA%BF%E4%B8%8A%E6%9C%8D%E5%8A%A1%E7%9A%84GC%E9%97%AE%E9%A2%98.md)
-* [RPC 超时设置，一不小心就是线程事故](https://github.com/crisxuan/bestJavaer/blob/master/design/RPC%20%E8%B6%85%E6%97%B6%E8%AE%BE%E7%BD%AE%EF%BC%8C%E4%B8%80%E4%B8%8D%E5%B0%8F%E5%BF%83%E5%B0%B1%E6%98%AF%E7%BA%BF%E7%A8%8B%E4%BA%8B%E6%95%85.md)
+
 
 ## 电子书籍
 
@@ -463,31 +419,15 @@ waiting...
 
 
 
-## 编程故事集
-
-* [Python一键转Jar包，Java调用Python新姿势](https://github.com/crisxuan/bestJavaer/blob/master/programming-story/Python一键转Jar包，Java调用Python新姿势！.md)
-* [[自绘图\]一网打尽！每个程序猿都该了解的黑客技术大汇总](https://github.com/crisxuan/bestJavaer/blob/master/programming-story/[自绘图]一网打尽！每个程序猿都该了解的黑客技术大汇总.md)
-* [一个整数＋1引发的灾难](https://github.com/crisxuan/bestJavaer/blob/master/programming-story/一个整数＋1引发的灾难.md)
-* [一个神秘URL酿大祸，差点让我背锅](https://github.com/crisxuan/bestJavaer/blob/master/programming-story/一个神秘URL酿大祸，差点让我背锅！.md)
-* [一网打尽！每个程序猿都该了解的黑客技术大汇总](https://github.com/crisxuan/bestJavaer/blob/master/programming-story/一网打尽！每个程序猿都该了解的黑客技术大汇总.md)
-* [为什么用上了HTTPS，还是被流量劫持？](https://github.com/crisxuan/bestJavaer/blob/master/programming-story/为什么用上了HTTPS，还是被流量劫持？.md)
-* [内核地址空间大冒险4：线程切换](https://github.com/crisxuan/bestJavaer/blob/master/programming-story/内核地址空间大冒险4：线程切换.md)
-* [可怕！CPU竟成了黑客的帮凶！](https://github.com/crisxuan/bestJavaer/blob/master/programming-story/可怕！CPU竟成了黑客的帮凶！.md)
-* [因为一个跨域请求，我差点丢了饭碗](https://github.com/crisxuan/bestJavaer/blob/master/programming-story/因为一个跨域请求，我差点丢了饭碗.md)
-* [如果平行宇宙也有编程语言](https://github.com/crisxuan/bestJavaer/blob/master/programming-story/如果平行宇宙也有编程语言.md)
-* [完了！CPU一味求快出事儿了！](https://github.com/crisxuan/bestJavaer/blob/master/programming-story/完了！CPU一味求快出事儿了！.md)
-* [路由器里的广告秘密](https://github.com/crisxuan/bestJavaer/blob/master/programming-story/路由器里的广告秘密.md)
-
 
 
 ## 关于职场
 
-* [今年困难模式，你跳槽还只是靠大量投简历吗？](https://github.com/crisxuan/bestJavaer/blob/master/aboutwork/%E4%BB%8A%E5%B9%B4%E5%9B%B0%E9%9A%BE%E6%A8%A1%E5%BC%8F%EF%BC%8C%E4%BD%A0%E8%B7%B3%E6%A7%BD%E8%BF%98%E5%8F%AA%E6%98%AF%E9%9D%A0%E5%A4%A7%E9%87%8F%E6%8A%95%E7%AE%80%E5%8E%86%E5%90%97%EF%BC%9F.md)
-* [培训机构出来的程序员常被鄙视，招谁惹谁了](https://github.com/crisxuan/bestJavaer/blob/master/aboutwork/%E5%9F%B9%E8%AE%AD%E6%9C%BA%E6%9E%84%E5%87%BA%E6%9D%A5%E7%9A%84%E7%A8%8B%E5%BA%8F%E5%91%98%E5%B8%B8%E8%A2%AB%E9%84%99%E8%A7%86%EF%BC%8C%E6%8B%9B%E8%B0%81%E6%83%B9%E8%B0%81%E4%BA%86.md)
-* [如何让程序员变得没朋友](https://github.com/crisxuan/bestJavaer/blob/master/aboutwork/%E5%A6%82%E4%BD%95%E8%AE%A9%E7%A8%8B%E5%BA%8F%E5%91%98%E5%8F%98%E5%BE%97%E6%B2%A1%E6%9C%8B%E5%8F%8B.md)
-* [一个技术总监的忠告：精通那么多技术为何还是做不好一个项目？](https://github.com/crisxuan/bestJavaer/blob/master/aboutwork/%E4%B8%80%E4%B8%AA%E6%8A%80%E6%9C%AF%E6%80%BB%E7%9B%91%E7%9A%84%E5%BF%A0%E5%91%8A%EF%BC%9A%E7%B2%BE%E9%80%9A%E9%82%A3%E4%B9%88%E5%A4%9A%E6%8A%80%E6%9C%AF%E4%B8%BA%E4%BD%95%E8%BF%98%E6%98%AF%E5%81%9A%E4%B8%8D%E5%A5%BD%E4%B8%80%E4%B8%AA%E9%A1%B9%E7%9B%AE%EF%BC%9F.md)
-* [这样查生产问题，不做背锅侠](https://github.com/crisxuan/bestJavaer/blob/master/aboutwork/%E8%BF%99%E6%A0%B7%E6%9F%A5%E7%94%9F%E4%BA%A7%E9%97%AE%E9%A2%98%EF%BC%8C%E4%B8%8D%E5%81%9A%E8%83%8C%E9%94%85%E4%BE%A0.md)
-* [最全干货：从写简历，到面试、谈薪酬的那些技巧和防坑指南](https://github.com/crisxuan/bestJavaer/blob/master/aboutwork/%E6%9C%80%E5%85%A8%E5%B9%B2%E8%B4%A7%EF%BC%9A%E4%BB%8E%E5%86%99%E7%AE%80%E5%8E%86%EF%BC%8C%E5%88%B0%E9%9D%A2%E8%AF%95%E3%80%81%E8%B0%88%E8%96%AA%E9%85%AC%E7%9A%84%E9%82%A3%E4%BA%9B%E6%8A%80%E5%B7%A7%E5%92%8C%E9%98%B2%E5%9D%91%E6%8C%87%E5%8D%97.md)
+
+
+
+
+
 
 ## 优质 Github 推荐
 
@@ -495,18 +435,7 @@ waiting...
 * [Crash Course 的 Github](https://github.com/1c7/Crash-Course-Computer-Science-Chinese)
 * [JavaGuide 的 Github](https://github.com/Snailclimb/JavaGuide)
 
-## 贡献者
 
-
-* 公众号：码海
-* 公众号：小林coding
-* 公众号：编程技术宇宙
-* 公众号：程序员 DMZ
-* 公众号：后端技术学堂
-* 公众号：一枝花算不算浪漫
-* 公众号：IT人的职场进阶
-* 公众号：四猿外怕写作
-* 期待你成为新的 Contributor
 
 ## 每日一题计划
 
