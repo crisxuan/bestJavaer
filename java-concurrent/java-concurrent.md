@@ -151,17 +151,17 @@ public class TSynchronized implements Runnable{
 
 当两个线程开始运行后，每个线程都会把 i 的值读入到 CPU 缓存中，然后执行 + 1 操作，再把 + 1 之后的值写入内存。因为线程间都有各自的虚拟机栈和程序计数器，他们彼此之间没有数据交换，所以当 aThread 执行 + 1 操作后，会把数据写入到内存，同时 bThread 执行 + 1 操作后，也会把数据写入到内存，因为 CPU 时间片的执行周期是不确定的，所以会出现当 aThread 还没有把数据写入内存时，bThread 就会读取内存中的数据，然后执行 + 1操作，再写回内存，从而覆盖 i 的值，导致 aThread 所做的努力白费。
 
-![image-20200731221940203](/Users/mr.l/Library/Application Support/typora-user-images/image-20200731221940203.png)
+<img src="https://s1.ax1x.com/2020/09/20/woUWHf.png" alt="011" border="0">
 
 为什么上面的线程切换会出现问题呢？
 
 我们先来考虑一下正常情况下（即不会出现线程安全性问题的情况下）两条线程的执行顺序
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200801080746890.png" alt="image-20200801080746890" style="zoom:50%;" />
+<img src="https://s1.ax1x.com/2020/09/20/woa929.png" alt="012" border="0">
 
 可以看到，当 aThread 在执行完整个 i++ 的操作后，操作系统对线程进行切换，由 aThread -> bThread，这是最理想的操作，一旦操作系统在任意 `读取/增加/写入` 阶段产生线程切换，都会产生线程安全问题。例如如下图所示
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200801081257052.png" alt="image-20200801081257052" style="zoom:50%;" />
+<img src="https://s1.ax1x.com/2020/09/20/woap8J.png" alt="013" border="0">
 
 最开始的时候，内存中 i = 0，aThread 读取内存中的值并把它读取到自己的寄存器中，执行 +1 操作，此时发生线程切换，bThread 开始执行，读取内存中的值并把它读取到自己的寄存器中，此时发生线程切换，线程切换至 aThread 开始运行，aThread 把自己寄存器的值写回到内存中，此时又发生线程切换，由 aThread -> bThread，线程 bThread 把自己寄存器的值 +1 然后写回内存，写完后内存中的值不是 2 ，而是 1， 内存中的 i 值被覆盖了。
 
@@ -179,7 +179,7 @@ public class TSynchronized implements Runnable{
 
 在并发编程中还有带来让人非常头疼的 `有序性` 问题，有序性顾名思义就是顺序性，在计算机中指的就是指令的先后执行顺序。一个非常显而易见的例子就是 JVM 中的`类加载`
 
-![image-20200801094944778](/Users/mr.l/Library/Application Support/typora-user-images/image-20200801094944778.png)
+<img src="https://s1.ax1x.com/2020/09/20/woUx5F.png" alt="014" border="0">
 
 这是一个 JVM 加载类的过程图，也称为类的生命周期，类从加载到 JVM 到卸载一共会经历五个阶段 **加载、连接、初始化、使用、卸载**。这五个过程的执行顺序是一定的，但是在连接阶段，也会分为三个过程，即 **验证、准备、解析** 阶段，这三个阶段的执行顺序不是确定的，通常交叉进行，在一个阶段的执行过程中会激活另一个阶段。
 
@@ -232,7 +232,7 @@ for(;;){}
 
 为什么线程切换会开销如此之大呢？线程间的切换会涉及到以下几个步骤
 
-![image-20200801200921669](/Users/mr.l/Library/Application Support/typora-user-images/image-20200801200921669.png)
+<img src="https://s1.ax1x.com/2020/09/20/woaSC4.png" alt="015" border="0">
 
 将 CPU 从一个线程切换到另一线程涉及挂起当前线程，保存其状态，例如寄存器，然后恢复到要切换的线程的状态，加载新的程序计数器，此时线程切换实际上就已经完成了；此时，CPU 不在执行线程切换代码，进而执行新的和线程关联的代码。
 
@@ -330,7 +330,7 @@ public class Retreent {
 
 `volatile` 是一种轻量级的 `synchronized`，也就是一种轻量级的加锁方式，volatile 通过保证共享变量的可见性来从侧面对对象进行加锁。可见性的意思就是当一个线程修改一个共享变量时，另外一个线程能够 `看见` 这个修改的值。volatile 的执行成本要比 `synchronized` 低很多，因为 volatile 不会引起线程的上下文切换。
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200802093213506.png" alt="image-20200802093213506" style="zoom:50%;" />
+<img src="https://s1.ax1x.com/2020/09/20/woUvUU.png" alt="016" border="0">
 
 我们还可以使用`原子类` 来保证线程安全，原子类其实就是 `rt.jar` 下面以 `atomic` 开头的类
 
@@ -374,7 +374,7 @@ public class Retreent {
 
 第一个并发模型是并行 worker 模型，客户端会把任务交给 `代理人(Delegator)`，然后由代理人把工作分配给不同的 `工人(worker)`。如下图所示
 
-![image-20200809163641024](/Users/mr.l/Library/Application Support/typora-user-images/image-20200809163641024.png)
+<img src="https://s1.ax1x.com/2020/09/20/woUquq.png" alt="020" border="0">
 
 并行 worker 的核心思想是，它主要有两个进程即代理人和工人，Delegator 负责接收来自客户端的任务并把任务下发，交给具体的 Worker 进行处理，Worker 处理完成后把结果返回给 Delegator，在 Delegator 接收到 Worker 处理的结果后对其进行汇总，然后交给客户端。
 
@@ -394,7 +394,7 @@ public class Retreent {
 
 实际的并行 Worker 要比我们图中画出的更复杂，主要是并行 Worker 通常会访问内存或共享数据库中的某些共享数据。
 
-![image-20200809170349834](/Users/mr.l/Library/Application Support/typora-user-images/image-20200809170349834.png)
+<img src="https://s1.ax1x.com/2020/09/20/woUHvn.png" alt="021" border="0">
 
 这些共享状态可能会使用一些工作队列来保存业务数据、数据缓存、数据库的连接池等。在线程通信中，线程需要确保共享状态是否能够让其他线程共享，而不是仅仅停留在 CPU 缓存中让自己可用，当然这些都是程序员在设计时就需要考虑的问题。线程需要避免 `竞态条件`，`死锁` 和许多其他共享状态造成的并发问题。
 
@@ -420,7 +420,7 @@ public class Retreent {
 
 第二种并发模型就是我们经常在生产车间遇到的 `流水线并发模型`，下面是流水线设计模型的流程图
 
-![image-20200809161735479](/Users/mr.l/Library/Application Support/typora-user-images/image-20200809161735479.png)
+<img src="https://s1.ax1x.com/2020/09/20/woU7gs.png" alt="022" border="0">
 
 这种组织架构就像是工厂中装配线中的 worker，每个 worker 只完成全部工作的一部分，完成一部分后，worker 会将工作转发给下一个 worker。
 
@@ -428,15 +428,15 @@ public class Retreent {
 
 使用流水线并发模型通常被设计为`非阻塞I/O`，也就是说，当没有给 worker 分配任务时，worker 会做其他工作。非阻塞I/O 意味着当 worker 开始 I/O 操作，例如从网络中读取文件，worker 不会等待 I/O 调用完成。因为 I/O 操作很慢，所以等待 I/O 非常耗费时间。在等待 I/O 的同时，CPU 可以做其他事情，I/O 操作完成后的结果将传递给下一个 worker。下面是非阻塞 I/O 的流程图
 
-![image-20200809170443871](/Users/mr.l/Library/Application Support/typora-user-images/image-20200809170443871.png)
+<img src="https://s1.ax1x.com/2020/09/20/woUoCQ.png" alt="023" border="0">
 
 在实际情况中，任务通常不会按着一条装配线流动，由于大多数程序需要做很多事情，因此需要根据完成的不同工作在不同的 worker 之间流动，如下图所示
 
-![image-20200809171252326](/Users/mr.l/Library/Application Support/typora-user-images/image-20200809171252326.png)
+<img src="https://s1.ax1x.com/2020/09/20/woUT3j.png" alt="024" border="0">
 
 任务还可能需要多个 worker 共同参与完成
 
-![image-20200809171620860](/Users/mr.l/Library/Application Support/typora-user-images/image-20200809171620860.png)
+<img src="https://s1.ax1x.com/2020/09/20/woU54g.png" alt="025" border="0">
 
 #### 响应式 - 事件驱动系统
 
@@ -448,13 +448,13 @@ public class Retreent {
 
 简单来说，Actor 模型是一个并发模型，它定义了一系列系统组件应该如何动作和交互的通用规则，最著名的使用这套规则的编程语言是 Erlang。一个参与者`Actor`对接收到的消息做出响应，然后可以创建出更多的 Actor 或发送更多的消息，同时准备接收下一条消息。
 
-![image-20200809175213747](/Users/mr.l/Library/Application Support/typora-user-images/image-20200809175213747.png)
+<img src="https://s1.ax1x.com/2020/09/20/woU4US.png" alt="026" border="0">
 
 #### Channels 模型
 
 在 Channel 模型中，worker 通常不会直接通信，与此相对的，他们通常将事件发送到不同的 `通道(Channel)`上，然后其他 worker 可以在这些通道上获取消息，下面是 Channel 的模型图
 
-![image-20200809175812324](/Users/mr.l/Library/Application Support/typora-user-images/image-20200809175812324.png)
+<img src="https://s1.ax1x.com/2020/09/20/woURDP.png" alt="027" border="0">
 
 有的时候 worker 不需要明确知道接下来的 worker 是谁，他们只需要将作者写入通道中，监听 Channel 的 worker 可以订阅或者取消订阅，这种方式降低了 worker 和 worker 之间的耦合性。
 
@@ -549,11 +549,11 @@ public static void main(String[] args) throws InterruptedException {
 
 这样的话，整个 main 方法只有一条执行线程也就是 main 线程，由两条执行线程变为一条执行线程
 
-![image-20200813065440217](/Users/mr.l/Library/Application Support/typora-user-images/image-20200813065440217.png)
+<img src="https://s1.ax1x.com/2020/09/20/woU2ut.png" alt="028" border="0">
 
 Thread 构造器只需要一个 Runnable 对象，调用 Thread 对象的 start() 方法为该线程执行必须的初始化操作，然后调用 Runnable 的 run 方法，以便在这个线程中启动任务。我们上面使用了线程的 `join` 方法，它用来等待线程的执行结束，如果我们不加 join 方法，它就不会等待 tJavaThread 的执行完毕，输出的结果可能就不是 `10000`
 
-![image-20200813065858854](/Users/mr.l/Library/Application Support/typora-user-images/image-20200813065858854.png)
+<img src="https://s1.ax1x.com/2020/09/20/woUhE8.png" alt="029" border="0">
 
 可以看到，在 run  方法还没有结束前，run 就被返回了。也就是说，程序不会等到 run 方法执行完毕就会执行下面的指令。
 
