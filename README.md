@@ -220,6 +220,16 @@
 
 
 
+## C 语言
+
+* C 语言基础入门
+
+
+
+
+
+
+
 ## MyBatis
 
 ![](https://raw.githubusercontent.com/crisxuan/bestJavaer/master/mindmanage/mybatis.png)
@@ -498,33 +508,33 @@ waiting...
 
 * 2020/08/31 索引的本质是什么？
 
-* 2020/09/01 解释下 Serialization 和 Deserialization
+* 2020/09/01 [解释下 Serialization 和 Deserialization](https://github.com/crisxuan/bestJavaer/wiki/%E8%A7%A3%E9%87%8A%E4%B8%8B-Serialization-%E5%92%8C-Deserialization)
 
 * 2020/09/02 MySQL 索引主要使用的数据结构有哪些。
 
-* 2020/09/03 描述一下 Java 动态代理的运行原理
+* 2020/09/03 [描述一下 Java 动态代理的运行原理](https://github.com/crisxuan/bestJavaer/wiki/%E6%8F%8F%E8%BF%B0%E4%B8%80%E4%B8%8B-Java-%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86%E7%9A%84%E8%BF%90%E8%A1%8C%E5%8E%9F%E7%90%86)
 
-* 2020/09/04 为什么 Java 中只有值传递？为什么？
+* 2020/09/04 [为什么 Java 中只有值传递？为什么？](https://github.com/crisxuan/bestJavaer/wiki/%E6%8F%8F%E8%BF%B0%E4%B8%80%E4%B8%8B%E5%80%BC%E4%BC%A0%E9%80%92%E5%92%8C%E5%BC%95%E7%94%A8%E4%BC%A0%E9%80%92%E7%9A%84%E5%8C%BA%E5%88%AB)
 
-* 2020/09/07 如果 redis 突然挂了 势必会同时对 mysql 造成很大压力，那么怎么避免呢
+* 2020/09/07 [如果 redis 突然挂了 势必会同时对 mysql 造成很大压力，那么怎么避免呢](https://github.com/crisxuan/bestJavaer/wiki/%E5%A6%82%E6%9E%9C-redis-%E7%AA%81%E7%84%B6%E6%8C%82%E4%BA%86-%E5%8A%BF%E5%BF%85%E4%BC%9A%E5%90%8C%E6%97%B6%E5%AF%B9-mysql-%E9%80%A0%E6%88%90%E5%BE%88%E5%A4%A7%E5%8E%8B%E5%8A%9B%EF%BC%8C%E9%82%A3%E4%B9%88%E6%80%8E%E4%B9%88%E9%81%BF%E5%85%8D%E5%91%A2)
 
-* 2020/09/08 在 Java 多线程中，notify 和 notifyall 的区别是？
+* 2020/09/08 [在 Java 多线程中，notify 和 notifyall 的区别是？](https://github.com/crisxuan/bestJavaer/wiki/%E5%9C%A8-Java-%E5%A4%9A%E7%BA%BF%E7%A8%8B%E4%B8%AD%EF%BC%8Cnotify-%E5%92%8C-notifyall-%E7%9A%84%E5%8C%BA%E5%88%AB%E6%98%AF-%3F)
 
 * 2020/09/09 Java 线程共有几种状态，分别是如何转换的？
 
-* 2020/09/10 你知道 ARP 么，聊一聊 ARP 协议原理？
+* 2020/09/10 [你知道 ARP 么，聊一聊 ARP 协议原理？](https://github.com/crisxuan/bestJavaer/wiki/%E4%BD%A0%E7%9F%A5%E9%81%93-ARP-%E4%B9%88%EF%BC%8C%E8%81%8A%E4%B8%80%E8%81%8A-ARP-%E5%8D%8F%E8%AE%AE%E5%8E%9F%E7%90%86%EF%BC%9F)
 
-* 2020/09/11 MySQL解释下 explain 显示的每个字断。
+* 2020/09/11 [MySQL 解释下 explain 显示的每个字断。](https://github.com/crisxuan/bestJavaer/wiki/MySQL-%E8%A7%A3%E9%87%8A%E4%B8%8B-explain-%E6%98%BE%E7%A4%BA%E7%9A%84%E6%AF%8F%E4%B8%AA%E5%AD%97%E6%96%AD)
 
-* 2020/09/14 聊一聊 Liunx下的 I/O 模型
+* 2020/09/14 [聊一聊 Liunx下的 I/O 模型](https://github.com/crisxuan/bestJavaer/wiki/%E8%81%8A%E4%B8%80%E8%81%8A-Liunx%E4%B8%8B%E7%9A%84-I-O-%E6%A8%A1%E5%9E%8B)
 
-* 2020/09/15 说一说 Spring 事务的传播特性
+* 2020/09/15 [说一说 Spring 事务的传播特性](https://github.com/crisxuan/bestJavaer/wiki/%E8%AF%B4%E4%B8%80%E8%AF%B4-Spring-%E4%BA%8B%E5%8A%A1%E7%9A%84%E4%BC%A0%E6%92%AD%E7%89%B9%E6%80%A7)
 
-* 2020/09/16 TCP 协议如何来保证传输的可靠性？
+* 2020/09/16 [TCP 协议如何来保证传输的可靠性？](https://github.com/crisxuan/bestJavaer/wiki/TCP-%E5%8D%8F%E8%AE%AE%E5%A6%82%E4%BD%95%E6%9D%A5%E4%BF%9D%E8%AF%81%E4%BC%A0%E8%BE%93%E7%9A%84%E5%8F%AF%E9%9D%A0%E6%80%A7%EF%BC%9F)
 
 * 2020/09/17 现有 25 匹马，5 个赛道，不用计时器，取前三名和前五名最少比赛次数是多少
 
-* 2020/09/18 说一说如何解决 ABA 问题？为什么能解决？解决思路是什么？
+* 2020/09/18 [说一说如何解决 ABA 问题？为什么能解决？解决思路是什么？](https://github.com/crisxuan/bestJavaer/wiki/%E8%AF%B4%E4%B8%80%E8%AF%B4%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3-ABA-%E9%97%AE%E9%A2%98%EF%BC%9F%E4%B8%BA%E4%BB%80%E4%B9%88%E8%83%BD%E8%A7%A3%E5%86%B3%EF%BC%9F%E8%A7%A3%E5%86%B3%E6%80%9D%E8%B7%AF%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F)
 
   
 
