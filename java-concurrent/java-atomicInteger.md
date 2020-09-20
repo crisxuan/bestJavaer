@@ -64,7 +64,7 @@ AtomicInteger 中的 `Incremental` 相关方法可以满足我们的需求
 
 * `getAndIncrement()` :  原子性的增加当前的值，并把结果返回。相当于 `i++` 的操作。
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200911085857825.png" alt="image-20200911085857825" style="zoom:67%;" />
+<img src="https://s1.ax1x.com/2020/09/20/wTFV0K.png" alt="wTFV0K.png" border="0" />
 
 为了验证是不是线程安全的，我们用下面的例子进行测试
 
