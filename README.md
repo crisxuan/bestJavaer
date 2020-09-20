@@ -189,7 +189,7 @@
 
 * [ReentrantLock 源码分析](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-reentrantlock.md)
 * [我花了 35 张图就为你让你了解 AQS](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-aqs.md)
-* AtomicInteger 的用法和实现原理
+* [AtomicInteger 的用法和实现原理](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-atomicInteger.md)
 
 
 ## 设计模式系列
@@ -197,7 +197,7 @@
 ![](https://raw.githubusercontent.com/crisxuan/bestJavaer/master/mindmanage/design-pattern.png)
 
 * [设计模式基础入门](https://github.com/crisxuan/bestJavaer/blob/master/design-pattern/designpattern-basic.md)
-* 我向面试官讲解了单例模式，他对我竖起了大拇指
+* [我向面试官讲解了单例模式，他对我竖起了大拇指](https://github.com/crisxuan/bestJavaer/blob/master/design-pattern/designpattern-singlaton.md)
 
 ## JVM 系列
 
@@ -327,8 +327,7 @@ waiting...
 
 * [今年面试这么难，到底如何进入大厂？](https://github.com/crisxuan/bestJavaer/blob/master/interview/interview-jingdong.md)
 * [外包面试之旅](https://github.com/crisxuan/bestJavaer/blob/master/interview/interview-zhongruan.md)
-
-
+* 今年秋招真的难，谁面谁知道
 
 ## 面试题系列
 
