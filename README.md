@@ -21,6 +21,8 @@
 * [操作系统](https://github.com/crisxuan/bestJavaer#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%B3%BB%E5%88%97)
 * [计算机基础知识](https://github.com/crisxuan/bestJavaer#%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%97)
 * 深入理解计算机系统
+* 汇编语言
+* [C 语言](https://github.com/crisxuan/bestJavaer#c-%E8%AF%AD%E8%A8%80)
 * [计算机网络](https://github.com/crisxuan/bestJavaer#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%B3%BB%E5%88%97)
 * [Java 基础教程](https://github.com/crisxuan/bestJavaer#java-%E5%9F%BA%E7%A1%80%E7%B3%BB%E5%88%97)
 * [设计模式](https://github.com/crisxuan/bestJavaer#%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E7%B3%BB%E5%88%97)
@@ -217,6 +219,12 @@
 * 虚拟机类加载机制
 * 虚拟机字节码执行引擎
 * 程序编译与代码优化
+
+
+
+## 汇编语言
+
+* [从指令集的角度看汇编](https://github.com/crisxuan/bestJavaer/blob/master/assembly/assembly01.md)
 
 
 
