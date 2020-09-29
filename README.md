@@ -172,7 +172,7 @@
 
 [看完这篇 HashMap，和面试官扯皮就没问题了](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-hashmap.md)
 
-
+AtomicXXX 的用法和实现原理
 
 ## 并发系列
 

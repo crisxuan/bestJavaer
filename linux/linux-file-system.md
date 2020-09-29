@@ -269,7 +269,7 @@ sort 进程将会输出到文件描述符1，也就是标准输出，写入管�
 
 一个 ext2 Linux 磁盘分区包含了一个文件系统，这个文件系统的布局如下所示
 
-![image-20200902053413984](/Users/mr.l/Library/Application Support/typora-user-images/image-20200902053413984.png)
+<img src="https://s1.ax1x.com/2020/09/29/0Z3k40.png" alt="linuxfilesystem009" border="0">
 
 Boot 块也就是第 0 块不是让 Linux 使用的，而是用来加载和引导计算机启动代码的。在块 0 之后，磁盘分区被分成多个组，这些组与磁盘柱面边界所处的位置无关。
 
@@ -287,7 +287,7 @@ Boot 块也就是第 0 块不是让 Linux 使用的，而是用来加载和引�
 
 目录文件的文件名最高不能超过 255 个字符，它的分配如下图所示
 
-![image-20200903061953482](/Users/mr.l/Library/Application Support/typora-user-images/image-20200903061953482.png)
+<img src="https://s1.ax1x.com/2020/09/29/0Z3CHs.png" alt="linuxfilesystem010" border="0">
 
 每一个目录都由整数个磁盘块组成，这样目录就可以整体的写入磁盘。在一个目录中，文件和子目录的目录项都是未经排序的，并且一个挨着一个。目录项不能跨越磁盘块，所以通常在每个磁盘块的尾部会有部分未使用的字节。
 
@@ -295,7 +295,7 @@ Boot 块也就是第 0 块不是让 Linux 使用的，而是用来加载和引�
 
 rec_len 域是如何扩展的呢？如下图所示
 
-![image-20200903063528798](/Users/mr.l/Library/Application Support/typora-user-images/image-20200903063528798.png)
+<img src="https://s1.ax1x.com/2020/09/29/0Z3iEn.png" alt="linuxfilesystem011" border="0">
 
 我们可以看到，中间的 `second` 被移除了，所以将其所在的域变为第一个目录项的填充。当然，这个填充可以作为后续的目录项。
 
@@ -333,7 +333,7 @@ n = read(fd,buffer,nbytes);
 
 这里使用的一种设计思想是在文件描述符表和 i - node 节点表之间插入一个新的表，叫做 `打开文件描述符(open-file-description table)`。文件的读写位置会在打开文件描述符表中存在，如下图所示
 
-![image-20200909040545998](/Users/mr.l/Library/Application Support/typora-user-images/image-20200909040545998.png)
+<img src="https://s1.ax1x.com/2020/09/29/0Z3ZgU.png" alt="linuxfilesystem012" border="0">
 
 我们使用 shell 、P1 和 P2 来描述一下父进程、子进程、子进程的关系。Shell 首先生成 P1，P1 的数据结构就是 Shell 的一个副本，因此两者都指向相同的打开文件描述符的表项。当 P1 运行完成后，Shell 的文件描述符仍会指向 P1 文件位置的打开文件描述。然后 Shell 生成了 P2，新的子进程自动继承文件的读写位置，甚至 P2 和 Shell 都不知道文件具体的读写位置。
 
@@ -377,7 +377,7 @@ NFS 最基本的思想是允许任意选定的一些`客户端`和`服务器`共
 
 每一个 NFS 服务都会导出一个或者多个目录供远程客户端访问。当一个目录可用时，它的所有子目录也可用。因此，通常整个目录树都会作为一个整体导出。服务器导出的目录列表会用一个文件来维护，这个文件是 `/etc/exports`，当服务器启动后，这些目录可以自动的被导出。客户端通过挂载这些导出的目录来访问它们。当一个客户端挂载了一个远程目录，这个目录就成为客户端目录层次的一部分，如下图所示。
 
-![image-20200913050726352](/Users/mr.l/Library/Application Support/typora-user-images/image-20200913050726352.png)
+<img src="https://s1.ax1x.com/2020/09/29/0Z3ECV.png" alt="linuxfilesystem013" border="0">
 
 在这个示例中，一号客户机挂载到服务器的 bin 目录下，因此它现在可以使用 shell 访问 /bin/cat 或者其他任何一个目录。同样，客户机 1 也可以挂载到 二号服务器上从而访问 /usr/local/projects/proj1 或者其他目录。二号客户机同样可以挂载到二号服务器上，访问路径是 /mnt/projects/proj2。
 
@@ -414,11 +414,9 @@ NFS 使用了标准的 UNIX 保护机制，使用 `rwx` 位来标示`所有者(o
 
 即使客户端和服务器的代码实现是独立于 NFS 协议的，大部分的 Linux 系统会使用一个下图的三层实现，顶层是系统调用层，系统调用层能够处理 open 、 read 、 close 这类的系统调用。在解析和参数检查结束后调用第二层，`虚拟文件系统 (VFS)` 层。
 
-![image-20200913124156681](/Users/mr.l/Library/Application Support/typora-user-images/image-20200913124156681.png)
+<img src="https://s1.ax1x.com/2020/09/29/0Z3evF.png" alt="linuxfilesystem014" border="0">
 
 VFS 层的任务是维护一个表，每个已经打开的文件都在表中有一个表项。VFS 层为每一个打开的文件维护着一个`虚拟i节点 `，简称为 v - node。v 节点用来说明文件是本地文件还是远程文件。如果是远程文件的话，那么 v - node 会提供足够的信息使客户端能够访问它们。对于本地文件，会记录其所在的文件系统和文件的 i-node ，因为现代操作系统能够支持多文件系统。虽然 VFS 是为了支持 NFS 而设计的，但是现代操作系统都会使用 VFS，而不管有没有 NFS。
-
-
 
 
 
