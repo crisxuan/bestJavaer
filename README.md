@@ -21,6 +21,7 @@
 * [操作系统](https://github.com/crisxuan/bestJavaer#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%B3%BB%E5%88%97)
 * [计算机基础知识](https://github.com/crisxuan/bestJavaer#%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%97)
 * [深入理解计算机系统](https://github.com/crisxuan/bestJavaer#%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F)
+* [HTTP 系列](https://github.com/crisxuan/bestJavaer#http-%E7%B3%BB%E5%88%97)
 * [汇编语言](https://github.com/crisxuan/bestJavaer#%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80)
 * [C 语言](https://github.com/crisxuan/bestJavaer#c-%E8%AF%AD%E8%A8%80)
 * [计算机网络](https://github.com/crisxuan/bestJavaer#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%B3%BB%E5%88%97)
@@ -172,7 +173,7 @@
 
 [看完这篇 HashMap，和面试官扯皮就没问题了](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-hashmap.md)
 
-AtomicXXX 的用法和实现原理
+[AtomicXXX 的用法和实现原理](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-atomicxxx.md)
 
 ## 并发系列
 
