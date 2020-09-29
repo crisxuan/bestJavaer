@@ -20,29 +20,29 @@
 * [Java基础面试题](https://github.com/crisxuan/bestJavaer/wiki/Java%E9%9D%A2%E8%AF%95%E9%A2%98)
 * [操作系统](https://github.com/crisxuan/bestJavaer#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%B3%BB%E5%88%97)
 * [计算机基础知识](https://github.com/crisxuan/bestJavaer#%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%97)
-* 深入理解计算机系统
-* 汇编语言
+* [深入理解计算机系统](https://github.com/crisxuan/bestJavaer#%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F)
+* [汇编语言](https://github.com/crisxuan/bestJavaer#%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80)
 * [C 语言](https://github.com/crisxuan/bestJavaer#c-%E8%AF%AD%E8%A8%80)
 * [计算机网络](https://github.com/crisxuan/bestJavaer#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%B3%BB%E5%88%97)
 * [Java 基础教程](https://github.com/crisxuan/bestJavaer#java-%E5%9F%BA%E7%A1%80%E7%B3%BB%E5%88%97)
 * [设计模式](https://github.com/crisxuan/bestJavaer#%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E7%B3%BB%E5%88%97)
 * [JVM](https://github.com/crisxuan/bestJavaer#jvm-%E7%B3%BB%E5%88%97)
 * [并发](https://github.com/crisxuan/bestJavaer#%E5%B9%B6%E5%8F%91%E7%B3%BB%E5%88%97)
-* Spring 框架系列
+* [Spring 框架系列](https://github.com/crisxuan/bestJavaer#spring-%E7%B3%BB%E5%88%97)
   * [Spring](https://github.com/crisxuan/bestJavaer#spring-%E7%B3%BB%E5%88%97)
   * SpringMVC
   * [SpringBoot](https://github.com/crisxuan/bestJavaer#springboot-%E7%B3%BB%E5%88%97)
   * SpringCloud
   * SpringCloud-Alibaba
   * 等
-* ORM 映射框架
+* [ORM 映射框架](https://github.com/crisxuan/bestJavaer#mybatis)
   * [MyBatis](https://github.com/crisxuan/bestJavaer#mybatis)
   * JPA
   * Hibernate
 * [ZooKeeper](https://github.com/crisxuan/bestJavaer#zookeeper-%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B)
 * [Kafka](https://github.com/crisxuan/bestJavaer#kafka-%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B)
 * [Redis](https://github.com/crisxuan/bestJavaer#redis-%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B)
-* 数据库
+* [数据库](https://github.com/crisxuan/bestJavaer#mysql)
   * [MySQL](https://github.com/crisxuan/bestJavaer#mysql)
   * Oracle
   * MogonDB
@@ -65,7 +65,6 @@
 * [面试题系列](https://github.com/crisxuan/bestJavaer#%E9%9D%A2%E8%AF%95%E9%A2%98%E7%B3%BB%E5%88%97)
 * [优质 Github](https://github.com/crisxuan/bestJavaer#%E4%BC%98%E8%B4%A8-github-%E6%8E%A8%E8%8D%90)
 * [每日一题计划](https://github.com/crisxuan/bestJavaer#%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98%E8%AE%A1%E5%88%92)
-* 等
 
 也包括一些常见的面试题。
 
@@ -236,8 +235,6 @@
 
 
 
-
-
 ## MyBatis
 
 ![](https://raw.githubusercontent.com/crisxuan/bestJavaer/master/mindmanage/mybatis.png)
@@ -345,7 +342,6 @@ waiting...
 
 * [今年面试这么难，到底如何进入大厂？](https://github.com/crisxuan/bestJavaer/blob/master/interview/interview-jingdong.md)
 * [外包面试之旅](https://github.com/crisxuan/bestJavaer/blob/master/interview/interview-zhongruan.md)
-* 今年秋招真的难，谁面谁知道
 * [京东面试之旅](https://github.com/crisxuan/bestJavaer/blob/master/interview/interview-jingdong-social.md)
 
 ## 面试题系列
@@ -368,15 +364,7 @@ waiting...
 
 
 
-## 电子书籍
 
->汇总了 99% 互联网公司所涉及到知识点的电子书。
->
->添加下方二维码回复 002 领取。
->
->![](https://github.com/crisxuan/bestJavaer/blob/master/qcode/programmercxuancode.jpg)
-
-![](https://raw.githubusercontent.com/crisxuan/bestJavaer/master/picture/dianzishu.png)
 
 ## 思维导图
 
@@ -441,7 +429,7 @@ waiting...
 
 * 2020/06/02 [byte的取值范围是多少，怎么计算出来的](https://github.com/crisxuan/bestJavaer/wiki/byte%E7%9A%84%E5%8F%96%E5%80%BC%E8%8C%83%E5%9B%B4%E6%98%AF%E5%A4%9A%E5%B0%91%EF%BC%8C%E6%80%8E%E4%B9%88%E8%AE%A1%E7%AE%97%E5%87%BA%E6%9D%A5%E7%9A%84)
 
-* 2020//06/03 [HashMap 多线程操作导致死循环问题](https://github.com/crisxuan/bestJavaer/wiki/HashMap-%E5%A4%9A%E7%BA%BF%E7%A8%8B%E6%93%8D%E4%BD%9C%E5%AF%BC%E8%87%B4%E6%AD%BB%E5%BE%AA%E7%8E%AF%E9%97%AE%E9%A2%98)
+* 2020/06/03 [HashMap 多线程操作导致死循环问题](https://github.com/crisxuan/bestJavaer/wiki/HashMap-%E5%A4%9A%E7%BA%BF%E7%A8%8B%E6%93%8D%E4%BD%9C%E5%AF%BC%E8%87%B4%E6%AD%BB%E5%BE%AA%E7%8E%AF%E9%97%AE%E9%A2%98)
 
 * 2020/06/04 [Integer 缓存池](https://github.com/crisxuan/bestJavaer/wiki/Integer-%E7%BC%93%E5%AD%98%E6%B1%A0)
 
