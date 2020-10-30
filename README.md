@@ -535,6 +535,38 @@ waiting...
 
 * 2020/09/18 [说一说如何解决 ABA 问题？为什么能解决？解决思路是什么？](https://github.com/crisxuan/bestJavaer/wiki/%E8%AF%B4%E4%B8%80%E8%AF%B4%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3-ABA-%E9%97%AE%E9%A2%98%EF%BC%9F%E4%B8%BA%E4%BB%80%E4%B9%88%E8%83%BD%E8%A7%A3%E5%86%B3%EF%BC%9F%E8%A7%A3%E5%86%B3%E6%80%9D%E8%B7%AF%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F)
 
+* 2020/09/21 [为什么 TCP 建立连接需要三次握手，两次不行吗？（快手真题）](https://github.com/crisxuan/bestJavaer/wiki/%E4%B8%BA%E4%BB%80%E4%B9%88-TCP-%E5%BB%BA%E7%AB%8B%E8%BF%9E%E6%8E%A5%E9%9C%80%E8%A6%81%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%EF%BC%8C%E4%B8%A4%E6%AC%A1%E4%B8%8D%E8%A1%8C%E5%90%97%EF%BC%9F)
+
+* 2020/09/22 [Threadlocal 是否存在内存泄漏问题？](https://github.com/crisxuan/bestJavaer/wiki/Threadlocal-%E6%98%AF%E5%90%A6%E5%AD%98%E5%9C%A8%E5%86%85%E5%AD%98%E6%B3%84%E6%BC%8F%E9%97%AE%E9%A2%98%EF%BC%9F)
+
+* 2020/09/23 [聊一聊 线上 oom 的排查方案？](https://github.com/crisxuan/bestJavaer/wiki/%E8%81%8A%E4%B8%80%E8%81%8A-%E7%BA%BF%E4%B8%8A-oom-%E7%9A%84%E6%8E%92%E6%9F%A5%E6%96%B9%E6%A1%88%EF%BC%9F)
+
+* 2020/09/24 [请举出可能形成数据库死锁的原因、如何能避免死锁。](https://github.com/crisxuan/bestJavaer/wiki/%E8%AF%B7%E4%B8%BE%E5%87%BA%E5%8F%AF%E8%83%BD%E5%BD%A2%E6%88%90%E6%95%B0%E6%8D%AE%E5%BA%93%E6%AD%BB%E9%94%81%E7%9A%84%E5%8E%9F%E5%9B%A0%E3%80%81%E5%A6%82%E4%BD%95%E8%83%BD%E9%81%BF%E5%85%8D%E6%AD%BB%E9%94%81%E3%80%82)
+
+* 2020/09/27 [聊一聊 HTTPS 的工作流程。](https://github.com/crisxuan/bestJavaer/wiki/HTTPS-%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86)
+
+* 2020/10/12 [简单说说你了解的类加载器，可以打破双亲委派么，怎么打破？](https://github.com/crisxuan/bestJavaer/wiki/%E7%AE%80%E5%8D%95%E8%AF%B4%E8%AF%B4%E4%BD%A0%E4%BA%86%E8%A7%A3%E7%9A%84%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%EF%BC%8C%E5%8F%AF%E4%BB%A5%E6%89%93%E7%A0%B4%E5%8F%8C%E4%BA%B2%E5%A7%94%E6%B4%BE%E4%B9%88%EF%BC%8C%E6%80%8E%E4%B9%88%E6%89%93%E7%A0%B4%EF%BC%9F)
+
+* 2020/10/13 [聊一聊 SpringBoot 自动注入原理](https://github.com/crisxuan/bestJavaer/wiki/SpringBoot-%E8%87%AA%E5%8A%A8%E6%B3%A8%E5%85%A5%E5%8E%9F%E7%90%86)
+
+* 2020/10/14 [MySQL 的自增 ID 用完了怎么办？](https://github.com/crisxuan/bestJavaer/wiki/MySQL-%E7%9A%84%E8%87%AA%E5%A2%9E-ID-%E7%94%A8%E5%AE%8C%E4%BA%86%E6%80%8E%E4%B9%88%E5%8A%9E%EF%BC%9F)
+
+* 2020/10/15 聊一聊你所知道的垃圾收集器及其算法？
+
+* 2020/10/16 什么是阻塞队列？阻塞队列的实现原理是什么？
+
+* 2020/10/17 [count(1) 和 count(*) 的区别是怎样的？](https://github.com/crisxuan/bestJavaer/wiki/count(1)-%E5%92%8C-count(*)-%E7%9A%84%E5%8C%BA%E5%88%AB%E6%98%AF%E6%80%8E%E6%A0%B7%E7%9A%84%EF%BC%9F)
+
+* 2020/10/21 JVM GC 响应优先与吞吐优先的区别是什么?
+
+* 2020/10/22 [什么是一致性哈希？](https://github.com/crisxuan/bestJavaer/wiki/%E4%BB%80%E4%B9%88%E6%98%AF%E4%B8%80%E8%87%B4%E6%80%A7%E5%93%88%E5%B8%8C%EF%BC%9F)
+
+* 2020/10/26 [聊一聊 Redis 的几种删除策略。](https://github.com/crisxuan/bestJavaer/wiki/%E8%81%8A%E4%B8%80%E8%81%8A-Redis-%E7%9A%84%E5%87%A0%E7%A7%8D%E5%88%A0%E9%99%A4%E7%AD%96%E7%95%A5%E3%80%82)
+
+* 2020/10/27 [什么是数据库范式？聊一聊数据库都有哪些范式？](https://github.com/crisxuan/bestJavaer/wiki/%E4%BB%80%E4%B9%88%E6%98%AF%E6%95%B0%E6%8D%AE%E5%BA%93%E8%8C%83%E5%BC%8F%EF%BC%9F%E8%81%8A%E4%B8%80%E8%81%8A%E6%95%B0%E6%8D%AE%E5%BA%93%E9%83%BD%E6%9C%89%E5%93%AA%E4%BA%9B%E8%8C%83%E5%BC%8F%EF%BC%9F)
+
+* 2020/10/28 为什么 finally 一定会执行？
+
   
 
 ## 欢迎关注
