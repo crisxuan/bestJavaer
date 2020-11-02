@@ -91,7 +91,6 @@
 * 硬核操作系统之 Android 系统研究
 * 硬核操作系统之如何设计操作系统
 * [操作系统核心概念](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-importantconcept.md)
-* [操作系统面试题](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-fiftyInterview.md)
 * [操作系统网站推荐](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-recommand.md)
 * [操作系统硬核回答](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-howtolearn.md)
 * [计算机基础常识](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/computer-youshouldknow.md)
@@ -150,6 +149,7 @@
 * [String、StringBuffer 和 StringBuilder](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-stringstringbufferstringbuilder.md)
 * [深入理解 static 关键字](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-static.md)
 * [深入理解 Java 变量](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-varaibles.md)
+* [深入理解 final、finally、finalize](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-final.md)
 * [关于四种引用类型](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-references.md)
 * [Exception 和 Error 的区别](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-exceptionanderror.md)
 * [ArrayList 用法解析](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-arraylist.md)
@@ -227,7 +227,7 @@
 
 * [从指令集的角度看汇编](https://github.com/crisxuan/bestJavaer/blob/master/assembly/assembly01.md)
 
-
+* [寄存器入门第一篇](https://github.com/crisxuan/bestJavaer/blob/master/assembly/assembly02.md)
 
 ## C 语言
 
@@ -356,7 +356,7 @@ waiting...
 * [用心为你写了 9 道 MySQL 面试题](https://github.com/crisxuan/bestJavaer/blob/master/interview-answer/mysql-interview.md)
 * [Java 基础面试题汇总](https://github.com/crisxuan/bestJavaer/blob/master/interview-answer/java-basic-interview.md)
 
-
+* [操作系统面试题](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-fiftyInterview.md)
 
 ## 算法
 
