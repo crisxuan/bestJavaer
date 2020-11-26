@@ -1,19 +1,19 @@
 # 计算机网络运输层
 
-* [运输层概述](https://github.com/crisxuan/bestJavaer/blob/master/network/computer-translayer.md#%E8%BF%90%E8%BE%93%E5%B1%82%E6%A6%82%E8%BF%B0)
-* [TCP 和 UDP 前置知识](https://github.com/crisxuan/bestJavaer/blob/master/network/computer-translayer.md#tcp-%E5%92%8C-udp-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86)
-  * [套接字](https://github.com/crisxuan/bestJavaer/blob/master/network/computer-translayer.md#%E5%A5%97%E6%8E%A5%E5%AD%97)
-    * [套接字类型](https://github.com/crisxuan/bestJavaer/blob/master/network/computer-translayer.md#%E5%A5%97%E6%8E%A5%E5%AD%97%E7%B1%BB%E5%9E%8B)
-    * [套接字处理过程](https://github.com/crisxuan/bestJavaer/blob/master/network/computer-translayer.md#%E5%A5%97%E6%8E%A5%E5%AD%97%E5%A4%84%E7%90%86%E8%BF%87%E7%A8%8B)
-  * [聊聊 IP](https://github.com/crisxuan/bestJavaer/blob/master/network/computer-translayer.md#%E8%81%8A%E8%81%8A-ip)
-  * [端口号](https://github.com/crisxuan/bestJavaer/blob/master/network/computer-translayer.md#%E7%AB%AF%E5%8F%A3%E5%8F%B7)
-    * [确定端口号](https://github.com/crisxuan/bestJavaer/blob/master/network/computer-translayer.md#%E7%A1%AE%E5%AE%9A%E7%AB%AF%E5%8F%A3%E5%8F%B7)
-  * 多路复用和多路分解
-    * 无连接的多路复用和多路分解
-    * 面向连接的多路复用与多路分解
-* UDP
-  * UDP 特点
-  * UDP 报文结构
+- [运输层概述](#-----)
+- [TCP 和 UDP 前置知识](#tcp---udp-----)
+  * [套接字](#---)
+    + [套接字类型](#-----)
+    + [套接字处理过程](#-------)
+  * [聊聊 IP](#---ip)
+  * [端口号](#---)
+    + [确定端口号](#-----)
+  * [多路复用和多路分解](#---------)
+    + [无连接的多路复用和多路分解](#-------------)
+    + [面向连接的多路复用与多路分解](#--------------)
+- [UDP](#udp)
+  * [UDP 特点](#udp---)
+  * [UDP 报文结构](#udp-----)
 
 `运输层`位于应用层和网络层之间，是 OSI 分层体系中的第四层，同时也是网络体系结构的重要部分。运输层主要负责网络上的端到端通信。
 
