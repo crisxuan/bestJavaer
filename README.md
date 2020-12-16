@@ -58,6 +58,7 @@
 * [Linux](https://github.com/crisxuan/bestJavaer#linux-%E7%B3%BB%E5%88%97)
 * [算法](https://github.com/crisxuan/bestJavaer#%E7%AE%97%E6%B3%95)
 * [实战篇](https://github.com/crisxuan/bestJavaer#%E5%AE%9E%E6%88%98%E7%AF%87)
+* 程序员
 * [思维导图](https://github.com/crisxuan/bestJavaer#%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE)
 * [关于认知](https://github.com/crisxuan/bestJavaer#%E5%85%B3%E4%BA%8E%E8%AE%A4%E7%9F%A5)
 * [电子书籍](https://github.com/crisxuan/bestJavaer#%E7%94%B5%E5%AD%90%E4%B9%A6%E7%B1%8D)
@@ -74,8 +75,6 @@
 不多说，搞起。
 
 ## 操作系统系列
-
-![](https://raw.githubusercontent.com/crisxuan/bestJavaer/master/mindmanage/os-simple.png)
 
 * [硬核操作系统入门](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-overview.md)
 * [硬核操作系统之进程和线程](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-processandthread.md)
@@ -97,8 +96,6 @@
 
 ## 计算机入门系列
 
-![](https://raw.githubusercontent.com/crisxuan/bestJavaer/master/mindmanage/computer-basic.png)
-
 * [程序员需要了解的硬核知识之 CPU](https://github.com/crisxuan/bestJavaer/blob/master/computer-basic/computer-cpu.md)
 * [程序员需要了解的硬核知识之内存](https://github.com/crisxuan/bestJavaer/blob/master/computer-basic/computer-ram.md)
 * [程序员需要了解的硬核知识之二进制](https://github.com/crisxuan/bestJavaer/blob/master/computer-basic/computer-binary.md)
@@ -113,8 +110,6 @@
 * [计算机系统入门概述](https://github.com/crisxuan/bestJavaer/blob/master/computersystem/csapp-basic.md)
 
 ## HTTP 系列
-
-![](https://raw.githubusercontent.com/crisxuan/bestJavaer/master/mindmanage/http.png)
 
 * [全面了解 HTTP](https://github.com/crisxuan/bestJavaer/blob/master/http/http-basic.md)
 * [HTTP 黑科技](https://github.com/crisxuan/bestJavaer/blob/master/http/http-advanced.md)
@@ -142,8 +137,6 @@
 
 ## Java 基础系列
 
-![](https://raw.githubusercontent.com/crisxuan/bestJavaer/master/mindmanage/java-basic.png)
-
 * [Java 核心基础教程](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-summary.md)
 * [Java 代理](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-proxy.md)
 * [Java 反射](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-reflect.md)
@@ -170,8 +163,6 @@
 * [Effective Java - try-with-resources 优先于try-finally](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/effectivejava-try-with-resources.md)
 * [学习 Java 网站推荐给你](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/learn-java.md)
 
-
-
 ### 源码分析
 
 [看完这篇 HashMap，和面试官扯皮就没问题了](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-hashmap.md)
@@ -179,8 +170,6 @@
 [AtomicXXX 的用法和实现原理](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-atomicxxx.md)
 
 ## 并发系列
-
- ![](https://raw.githubusercontent.com/crisxuan/bestJavaer/master/mindmanage/java-concurrent.png)
 
 * [简单认识并发](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-concurrent-basic.md)
 * [看完你就明白的锁系列之锁的状态](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-lock-status.md)
@@ -199,31 +188,12 @@
 
 ## 设计模式系列
 
-![](https://raw.githubusercontent.com/crisxuan/bestJavaer/master/mindmanage/design-pattern.png)
-
 * [设计模式基础入门](https://github.com/crisxuan/bestJavaer/blob/master/design-pattern/designpattern-basic.md)
 * [我向面试官讲解了单例模式，他对我竖起了大拇指](https://github.com/crisxuan/bestJavaer/blob/master/design-pattern/designpattern-singlaton.md)
 
 ## JVM 系列
 
-![](https://raw.githubusercontent.com/crisxuan/bestJavaer/master/mindmanage/jvm.png)
-
-
-
-* Java 内存模型
-* 一个对象从 JVM 的角度是如何创建的
-* 垃圾回收理论介绍
-* 垃圾回收实战篇
-* 内存分配粗略与回收策略
-* 虚拟机性能监控工具与故障处理工具
-* 调优分析与实战
-* 类文件结构
-* 字节码指令介绍
-* 虚拟机类加载机制
-* 虚拟机字节码执行引擎
-* 程序编译与代码优化
-
-
+TODO
 
 ## 汇编语言
 
@@ -235,13 +205,7 @@
 
 * [C 语言基础入门](https://github.com/crisxuan/bestJavaer/blob/master/cprograming/c-basic.md)
 
-
-
-
-
 ## MyBatis
-
-![](https://raw.githubusercontent.com/crisxuan/bestJavaer/master/mindmanage/mybatis.png)
 
 
 
@@ -255,11 +219,7 @@
 * [MyBatis 二级缓存全详解](https://github.com/crisxuan/bestJavaer/blob/master/mybatis/mybatis-secondcache.md)
 * [MyBatis 启动流程](https://github.com/crisxuan/bestJavaer/blob/master/mybatis/mybatis-howtostart.md)
 
-
-
 ## MySQL
-
-![](https://raw.githubusercontent.com/crisxuan/bestJavaer/master/mindmanage/mysql.png)
 
 * [MySQL 基础入门大全](https://github.com/crisxuan/bestJavaer/blob/master/mysql/mysql-basicall.md)
   * [MySQL SQL 基本使用](https://github.com/crisxuan/bestJavaer/blob/master/mysql/mysql-sql.md)
@@ -274,8 +234,6 @@
 
 ## Spring 系列
 
-![](https://raw.githubusercontent.com/crisxuan/bestJavaer/master/mindmanage/spring.png)
-
 * [Spring Bean 全解析](https://github.com/crisxuan/bestJavaer/blob/master/spring/spring-bean.md)
 * [Spring AOP 扫盲](https://github.com/crisxuan/bestJavaer/blob/master/spring/spring-aop.md)
 * [Spring 注解配置的基本要素](https://github.com/crisxuan/bestJavaer/blob/master/spring/spring-annotation.md)
@@ -289,58 +247,30 @@
 * [@Configuration 全部用法](https://github.com/crisxuan/bestJavaer/blob/master/spring/spring-configuration.md)
 * [Spring Resource 体系介绍](https://github.com/crisxuan/bestJavaer/blob/master/spring/spring-resource.md)
 
-
-
 ### 源码分析
 
-
+TODO
 
 ## SpringBoot 系列
 
-waiting...
-
-
-
-
-
-
+TODO
 
 ## Kafka 系列教程
-
-![](https://raw.githubusercontent.com/crisxuan/bestJavaer/master/mindmanage/kafka-system.png)
 
 * [真的，Kafka 入门一篇就够了](https://github.com/crisxuan/bestJavaer/blob/master/kafka/kafka-basic.md)
 * [你能说出这些 Kafka 的原理吗](https://github.com/crisxuan/bestJavaer/blob/master/kafka/kafka-deep.md)
 
-
-
 ## Redis 系列教程
 
-![](https://raw.githubusercontent.com/crisxuan/bestJavaer/master/mindmanage/redis.png)
-
-
-
-
+TODO
 
 ## Nginx 系列教程
 
-![](https://raw.githubusercontent.com/crisxuan/bestJavaer/master/mindmanage/nginx.png)
-
-
-
-
+TODO
 
 ## ZooKeeper 系列教程
 
-![](https://raw.githubusercontent.com/crisxuan/bestJavaer/master/mindmanage/zookeeper.png)
-
 * [ZooKeeper 基础入门](https://github.com/crisxuan/bestJavaer/blob/master/zookeeper/zookeeper-basic.md)
-
-
-
-
-
-
 
 ## 读者面试系列
 
@@ -411,11 +341,7 @@ waiting...
 
 
 
-
-
-## 关于职场
-
-
+## 程序员
 
 
 
@@ -568,6 +494,8 @@ waiting...
 * 2020/10/27 [什么是数据库范式？聊一聊数据库都有哪些范式？](https://github.com/crisxuan/bestJavaer/wiki/%E4%BB%80%E4%B9%88%E6%98%AF%E6%95%B0%E6%8D%AE%E5%BA%93%E8%8C%83%E5%BC%8F%EF%BC%9F%E8%81%8A%E4%B8%80%E8%81%8A%E6%95%B0%E6%8D%AE%E5%BA%93%E9%83%BD%E6%9C%89%E5%93%AA%E4%BA%9B%E8%8C%83%E5%BC%8F%EF%BC%9F)
 
 * 2020/10/28 为什么 finally 一定会执行？
+
+* 
 
   
 
