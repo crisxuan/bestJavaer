@@ -136,7 +136,7 @@
 * [Java 反射](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-reflect.md)
 * [Java 集合](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-collections.md)
 * [String、StringBuffer 和 StringBuilder](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-stringstringbufferstringbuilder.md)
-* Java 中的语法糖
+* [Java 中的语法糖](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-suger.md)
 * [深入理解 static 关键字](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-static.md)
 * [深入理解 Java 变量](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-varaibles.md)
 * [深入理解 final、finally、finalize](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-final.md)
@@ -338,7 +338,7 @@ TODO
 
 ## 程序员
 
-
+[程序员都必知的一些网站](https://github.com/crisxuan/bestJavaer/blob/master/programmer/website-recommand.md)
 
 
 
