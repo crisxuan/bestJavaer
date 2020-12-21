@@ -1,7 +1,5 @@
 # CountDownLatch 用法和源码解析
 
-[toc]
-
 `CountDownLatch` 是多线程控制的一种工具，它被称为 `门阀`、 `计数器`或者 `闭锁`。这个工具经常用来用来协调多个线程之间的同步，或者说起到线程之间的通信（而不是用作互斥的作用）。下面我们就来一起认识一下 CountDownLatch
 
 ## 认识 CountDownLatch
