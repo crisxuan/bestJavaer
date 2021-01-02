@@ -127,6 +127,7 @@
 * [TCP/IP 基础知识](https://github.com/crisxuan/bestJavaer/blob/master/network/computer-network-tcpip.md)
 * [计算机网络应用层协议](https://github.com/crisxuan/bestJavaer/blob/master/network/computer-application.md)
 * [计算机网络传输层](https://github.com/crisxuan/bestJavaer/blob/master/network/computer-translayer.md)
+* 计算机网络网络层
 
 
 ## Java 基础系列
@@ -158,11 +159,9 @@
 * [Effective Java - try-with-resources 优先于try-finally](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/effectivejava-try-with-resources.md)
 * [学习 Java 网站推荐给你](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/learn-java.md)
 
-### 源码分析
+### Java 基础源码分析
 
 [看完这篇 HashMap，和面试官扯皮就没问题了](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-hashmap.md)
-
-[AtomicXXX 的用法和实现原理](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-atomicxxx.md)
 
 ## 并发系列
 
@@ -171,15 +170,16 @@
 * [看完你就明白的锁系列之乐观锁和悲观锁](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-optimisticlock.md)
 * [看完你就明白的锁系列之自旋锁](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-spinlock.md)
 * [锁系列汇总](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-lock.md)
+* [并发编程超强入门汇总](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-concurrent.md)
 
-  
-
-### 源码分析
+### 并发源码分析
 
 * [ReentrantLock 源码分析](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-reentrantlock.md)
 * [我花了 35 张图就为你让你了解 AQS](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-aqs.md)
 * [AtomicInteger 的用法和实现原理](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-atomicInteger.md)
 * [CountDownLatch 用法和源码解释](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-countDownLatch.md)
+* [Atomic 基本数据类型的用法和实现原理](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-atomicxxx.md)
+* 
 
 
 ## 设计模式系列
