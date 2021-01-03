@@ -179,7 +179,7 @@
 * [AtomicInteger 的用法和实现原理](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-atomicInteger.md)
 * [CountDownLatch 用法和源码解释](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-countDownLatch.md)
 * [Atomic 基本数据类型的用法和实现原理](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-atomicxxx.md)
-* 
+* [AtomicReference 的用法和源码解析](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-atomicReference.md)
 
 
 ## 设计模式系列

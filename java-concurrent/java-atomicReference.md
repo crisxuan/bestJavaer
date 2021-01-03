@@ -74,19 +74,19 @@ public class BankCardTest {
 }
 ```
 
-在上面的代码中，我们首先声明了一个全局变量 BankCard，这个 BankCard 由 `volatile`进行修饰，目的就是在对其引用进行变化后对其他线程可见，然后每个打款人都存入一定数量的款项后，输出账户的金额变化，我们可以观察一下这个输出结果。
+在上面的代码中，我们首先声明了一个全局变量 BankCard，这个 BankCard 由 `volatile`进行修饰，目的就是在对其引用进行变化后对其他线程可见，在每个打款人都存入一定数量的款项后，输出账户的金额变化，我们可以观察一下这个输出结果。
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20210101090628983.png" alt="image-20210101090628983" style="zoom:50%;" />
+<img src="https://s3.ax1x.com/2021/01/03/spfQMD.png" style="zoom:50%;" />
 
 可以看到，我们预想最后的结果应该是 1100 元，但是最后却只存入了 900 元，那 200 元去哪了呢？我们可以断定上面的代码不是一个线程安全的操作。
 
 >问题出现在哪里？
 
-虽然每次 volatile 都能保证每个账户的金额都是最新的，但是由于上面的步骤中出现了组合操作，即`获取账户引用`和`更改账户引用`，每个单独的操作虽然都是原子性的，但是组合在一块就不是原子性的了。所以最后的结果会出现偏差。
+虽然每次 volatile 都能保证每个账户的金额都是最新的，但是由于上面的步骤中出现了组合操作，即`获取账户引用`和`更改账户引用`，每个单独的操作虽然都是原子性的，但是组合在一起就不是原子性的了。所以最后的结果会出现偏差。
 
 我们可以用如下线程切换图来表示一下这个过程的变化。
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20210101091907905.png" alt="image-20210101091907905" style="zoom:50%;" />
+![](https://s3.ax1x.com/2021/01/03/spflse.png)
 
 可以看到，最后的结果可能是因为在线程 t1 获取最新账户变化后，线程切换到 t2，t2 也获取了最新账户情况，然后再切换到 t1，t1 修改引用，线程切换到 t2，t2 修改引用，所以账户引用的值被修改了`两次`。
 
@@ -173,7 +173,7 @@ public class BankCardARTest {
 
 在上面的示例代码中，我们使用了 AtomicReference 封装了 BankCard 的引用，然后使用 `get()` 方法获得原子性的引用，接着使用 CAS 乐观锁进行非阻塞更新，更新的标准是如果使用 bankCardRef.get() 获取的值等于内存值的话，就会把银行卡账户的资金 + 100，我们观察一下输出结果。
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20210101204530596.png" alt="image-20210101204530596" style="zoom:50%;" />
+<img src="https://s3.ax1x.com/2021/01/03/spf8Zd.png" style="zoom:50%;" />
 
 可以看到，有一些输出是乱序执行的，出现这个原因很简单，有可能在输出结果之前，进行线程切换，然后打印了后面线程的值，然后线程切换回来再进行输出，但是可以看到，没有出现银行卡金额相同的情况。
 
@@ -203,7 +203,7 @@ Unsafe 的 `objectFieldOffset` 方法可以获取成员属性在内存中的地�
 
 get() 可以原子性的读取 AtomicReference 中的数据，set() 可以原子性的设置当前的值，因为 get() 和 set() 最终都是作用于 value 变量，而 value 是由 `volatile` 修饰的，所以 get 、set 相当于都是对内存进行读取和设置。如下图所示
 
-![image-20210103104836029](/Users/mr.l/Library/Application Support/typora-user-images/image-20210103104836029.png)
+![](https://s3.ax1x.com/2021/01/03/spf1qH.png)
 
 ### lazySet 方法
 
@@ -225,11 +225,11 @@ volatile 有内存屏障你知道吗？
 
 以原子方式设置为给定值并返回旧值。它的源码如下
 
-![image-20210101230009598](/Users/mr.l/Library/Application Support/typora-user-images/image-20210101230009598.png)
+![](https://s3.ax1x.com/2021/01/03/spfKxO.png)
 
 它会调用 `unsafe` 中的 getAndSetObject 方法，源码如下
 
-![image-20210101230105755](/Users/mr.l/Library/Application Support/typora-user-images/image-20210101230105755.png)
+![](https://s3.ax1x.com/2021/01/03/spfGdA.png)
 
 可以看到这个 getAndSet 方法涉及两个 cpp 实现的方法，一个是 `getObjectVolatile` ，一个是 `compareAndSwapObject` 方法，他们用在 do...while 循环中，也就是说，每次都会先获取最新对象引用的值，如果使用 CAS 成功交换两个对象的话，就会直接返回 `var5` 的值，var5 此时应该就是更新前的内存值，也就是旧值。
 
@@ -237,7 +237,7 @@ volatile 有内存屏障你知道吗？
 
 这就是 AtomicReference 非常关键的 CAS 方法了，与 AtomicInteger 不同的是，AtomicReference 是调用的 `compareAndSwapObject` ，而 AtomicInteger 调用的是 `compareAndSwapInt` 方法。这两个方法的实现如下
 
-![image-20210102153354587](/Users/mr.l/Library/Application Support/typora-user-images/image-20210102153354587.png)
+![](https://s3.ax1x.com/2021/01/03/spfJII.png)
 
 路径在 `hotspot/src/share/vm/prims/unsafe.cpp` 中。
 
@@ -245,11 +245,11 @@ volatile 有内存屏障你知道吗？
 
 因为对象存在于堆中，所以方法 `index_oop_from_field_offset_long` 应该是获取对象的内存地址，然后使用 `atomic_compare_exchange_oop` 方法进行对象的 CAS 交换。
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20210102153954240.png" alt="image-20210102153954240" style="zoom:50%;" />
+![](https://s3.ax1x.com/2021/01/03/spftit.png)
 
 这段代码会首先判断是否使用了 `UseCompressedOops`，也就是`指针压缩`。
 
-这里简单解释一下指针压缩的概念：JVM 最初的时候是 32 位的，但是随着 64 位 JVM 的兴起，也带来一个问题，内存占用空间更大了 ，但是 JVM 内存最好不要超过 32 G，为了节省空间，在 JDK 1.6 的版本后，我们在 64位中的 JVM 中可以开启`指针压缩（UseCompressedOops）`来压缩我们对象指针的大小，来帮助我们节约内存空间，在 JDK 8来说，这个指令是默认开启的。
+这里简单解释一下指针压缩的概念：JVM 最初的时候是 32 位的，但是随着 64 位 JVM 的兴起，也带来一个问题，内存占用空间更大了 ，但是 JVM 内存最好不要超过 32 G，为了节省空间，在 JDK 1.6 的版本后，我们在 64位中的 JVM 中可以开启`指针压缩（UseCompressedOops）`来压缩我们对象指针的大小，来帮助我们节省内存空间，在 JDK 8来说，这个指令是默认开启的。
 
 如果不开启指针压缩的话，64 位 JVM 会采用 8 字节（64位）存储真实内存地址，比之前采用4字节（32位）压缩存储地址带来的问题：
 
@@ -269,7 +269,13 @@ volatile 有内存屏障你知道吗？
 
 《Java 高并发详解》这本书给出了我们一个答案
 
-![image-20210103105002215](/Users/mr.l/Library/Application Support/typora-user-images/image-20210103105002215.png)
+![](https://s3.ax1x.com/2021/01/03/spfNJP.png)
+
+## 总结
+
+此篇文章主要介绍了 AtomicReference 的出现背景，AtomicReference 的使用场景，以及介绍了 AtomicReference 的源码，重点方法的源码分析。此篇 AtomicReference 的文章基本上涵盖了网络上所有关于 AtomicReference 的内容了，遗憾的是就是 cpp 源码可能分析的不是很到位，这需要充足的 C/C++ 编程知识，如果有读者朋友们有最新的研究成果，请及时告诉我。
+
+**另外，添加我的微信 becomecxuan，加入每日一题群，每天一道面试题分享，更多内容请参见我的 Github，成为最好的 bestJavaer，已经收录此篇文章，详情见原文链接**。
 
 
 
