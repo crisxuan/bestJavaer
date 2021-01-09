@@ -263,7 +263,7 @@ volatile 有内存屏障你知道吗？
 
 ### weakCompareAndSet 方法
 
-`weakCompareAndSet`: 妈的非常认真看了好几遍，发现 JDK1.8 的这个方法和 compareAndSet 方法完全一摸一样啊，坑我。。。
+`weakCompareAndSet`: 非常认真看了好几遍，发现 JDK1.8 的这个方法和 compareAndSet 方法完全一摸一样啊，坑我。。。
 
 但是真的是这样么？并不是，JDK 源码很博大精深，才不会设计一个重复的方法，你想想 JDK 团队也不是会犯这种低级团队，但是原因是什么呢？
 
