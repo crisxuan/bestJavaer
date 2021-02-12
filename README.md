@@ -218,15 +218,8 @@ TODO
 ## MySQL
 
 * [MySQL 基础入门大全](https://github.com/crisxuan/bestJavaer/blob/master/mysql/mysql-basicall.md)
-  * [MySQL SQL 基本使用](https://github.com/crisxuan/bestJavaer/blob/master/mysql/mysql-sql.md)
-  * [MySQL 数据类型](https://github.com/crisxuan/bestJavaer/blob/master/mysql/mysql-datatype.md)
-  * [MySQL 运算符](https://github.com/crisxuan/bestJavaer/blob/master/mysql/mysql-operator.md)
-  * [MySQL 常用函数](https://github.com/crisxuan/bestJavaer/blob/master/mysql/mysql-func.md)
 * [MySQL 开发](https://github.com/crisxuan/bestJavaer/blob/master/mysql/mysql-develop.md)
-  * [MySQL 存储引擎](https://github.com/crisxuan/bestJavaer/blob/master/mysql/mysql-storageengine.md)
-  * [MySQL 选择合适的数据类型](https://github.com/crisxuan/bestJavaer/blob/master/mysql/mysql-selectdatatype.md)
-  * [MySQL 字符集](https://github.com/crisxuan/bestJavaer/blob/master/mysql/mysql-charset.md)
-* [SQL 进阶技巧](https://github.com/crisxuan/bestJavaer/blob/master/mysql/sql-improve.md)
+* [MySQL 进阶技巧](https://github.com/crisxuan/bestJavaer/blob/master/mysql/mysql-improve.md)
 
 ## Spring 系列
 
@@ -258,7 +251,7 @@ TODO
 
 ## Redis 系列教程
 
-TODO
+缓存贯穿、缓存失效、缓存雪崩都是什么
 
 ## Nginx 系列教程
 
@@ -273,6 +266,7 @@ TODO
 * [今年面试这么难，到底如何进入大厂？](https://github.com/crisxuan/bestJavaer/blob/master/interview/interview-jingdong.md)
 * [外包面试之旅](https://github.com/crisxuan/bestJavaer/blob/master/interview/interview-zhongruan.md)
 * [京东面试之旅](https://github.com/crisxuan/bestJavaer/blob/master/interview/interview-jingdong-social.md)
+* 百度面试之旅
 
 ## 面试题系列
 
