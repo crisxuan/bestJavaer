@@ -182,6 +182,7 @@
 * [CountDownLatch 用法和源码解释](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-countDownLatch.md)
 * [Atomic 基本数据类型的用法和实现原理](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-atomicxxx.md)
 * [AtomicReference 的用法和源码解析](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-atomicReference.md)
+* [线程池超用心源码分析](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-threadpoolexecutor.md)
 
 
 ## 设计模式系列
@@ -266,7 +267,7 @@ TODO
 * [今年面试这么难，到底如何进入大厂？](https://github.com/crisxuan/bestJavaer/blob/master/interview/interview-jingdong.md)
 * [外包面试之旅](https://github.com/crisxuan/bestJavaer/blob/master/interview/interview-zhongruan.md)
 * [京东面试之旅](https://github.com/crisxuan/bestJavaer/blob/master/interview/interview-jingdong-social.md)
-* 百度面试之旅
+* [百度面试之旅](https://github.com/crisxuan/bestJavaer/blob/master/interview/interview-baidu.md)
 
 ## 面试题系列
 
