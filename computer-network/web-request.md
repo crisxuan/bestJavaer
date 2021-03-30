@@ -1,6 +1,6 @@
 # Web 页面的请求历程
 
-![image-20210330092732311](/Users/mr.l/Library/Application Support/typora-user-images/image-20210330092732311.png)
+![](https://z3.ax1x.com/2021/03/30/cPRJrF.png)
 
 Hey guys 各位读者姥爷们大家好，这里是程序员 cxuan 计算机网络连载系列的第 13 篇文章。
 
