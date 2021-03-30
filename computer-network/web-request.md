@@ -1,6 +1,6 @@
 # Web 页面的请求历程
 
-[toc]
+![image-20210330092732311](/Users/mr.l/Library/Application Support/typora-user-images/image-20210330092732311.png)
 
 Hey guys 各位读者姥爷们大家好，这里是程序员 cxuan 计算机网络连载系列的第 13 篇文章。
 
