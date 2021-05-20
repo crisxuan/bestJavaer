@@ -135,6 +135,7 @@
 * [一文了解 DHCP 协议](https://github.com/crisxuan/bestJavaer/blob/master/computer-network/network-dhcp.md)
 * [计算机网络数据链路层](https://github.com/crisxuan/bestJavaer/blob/master/computer-network/network-datalink.md)
 * [Web 页面的请求流程，超详细](https://github.com/crisxuan/bestJavaer/blob/master/computer-network/web-request.md)
+* [TCP 连接管理](https://github.com/crisxuan/bestJavaer/blob/master/computer-network/network-tcp-connect.md)
 
 
 ## Java 基础系列
@@ -188,6 +189,8 @@
 * [Atomic 基本数据类型的用法和实现原理](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-atomicxxx.md)
 * [AtomicReference 的用法和源码解析](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-atomicReference.md)
 * [线程池超用心源码分析](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-threadpoolexecutor.md)
+* [深入理解 volatile 关键字](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-volatile.md)
+* [Semaphore 用法和源码分析](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-semaphore.md)
 
 
 ## 设计模式系列
@@ -273,6 +276,7 @@ TODO
 * [外包面试之旅](https://github.com/crisxuan/bestJavaer/blob/master/interview/interview-zhongruan.md)
 * [京东面试之旅](https://github.com/crisxuan/bestJavaer/blob/master/interview/interview-jingdong-social.md)
 * [百度面试之旅](https://github.com/crisxuan/bestJavaer/blob/master/interview/interview-baidu.md)
+* [读者考研之旅](https://github.com/crisxuan/bestJavaer/blob/master/interview/interview-kaoyan.md)
 
 ## 面试题系列
 
@@ -527,9 +531,11 @@ TODO
 
 ## 欢迎关注
 
-欢迎关注作者的微信公众号 **Java建设者**，参加每日一题计划，关注公众号回复 `PDF` 给你分享作者硬肝的四本 PDF。
+欢迎关注作者的微信公众号 **程序员cxuan**，关注公众号回复 `cxuan` 给你分享作者硬肝的六本 PDF。
 
-![](https://raw.githubusercontent.com/crisxuan/bestJavaer/master/qcode/javajianshecode.png)
+![](https://z3.ax1x.com/2020/12/11/rkf8A0.jpg)
+
+
 
 
 
