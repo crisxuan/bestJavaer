@@ -167,7 +167,7 @@ private Node addWaiter(Node mode) {
 }
 ```
 
-这段代码首先会创建一个和当前线程绑定的`Node`节点，`Node`为双向链表。此时等待对内中的`tail`指针为空，直接调用`enq(node)`方法将当前线程加入等待队列尾部：
+这段代码首先会创建一个和当前线程绑定的`Node`节点，`Node`为双向链表。此时等待队列中的`tail`指针为空，直接调用`enq(node)`方法将当前线程加入等待队列尾部：
 
 ```java
 private Node enq(final Node node) {
