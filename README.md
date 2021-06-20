@@ -338,6 +338,7 @@ TODO
 * [如何成为务实的程序员](https://github.com/crisxuan/bestJavaer/blob/master/aboutlife/good-programmer.md)
 * [写给 25 岁的自己](https://github.com/crisxuan/bestJavaer/blob/master/aboutlife/cxuan-25yearsold.md)
 * [面试官和面试者在同一个群里是怎样的体验](https://github.com/crisxuan/bestJavaer/blob/master/aboutlife/interviewer-story.md)
+* 如何高效的学习技术？
 
 
 
