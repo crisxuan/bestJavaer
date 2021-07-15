@@ -16,7 +16,7 @@
 
 所以你就能理解 
 
-<img src="https://s1.ax1x.com/2020/09/29/0Zeguq.png" alt="assembly001" border="0" style="zoom:50%;" >
+<img src="https://tva1.sinaimg.cn/large/008i3skNly1gshz8dnrgaj30lo0se0wb.jpg" alt="image-20210715215518081" style="zoom:50%;" />
 
 这本书是讲啥的了。
 
@@ -24,13 +24,13 @@
 
 还有这本书
 
-<img src="https://s1.ax1x.com/2020/09/29/0ZefET.png" alt="assembly002" border="0" style="zoom:50%;" >
+<img src="https://tva1.sinaimg.cn/large/008i3skNly1gshz8keqbgj30te0xcago.jpg" alt="image-20210715215529859" style="zoom:50%;" />
 
 这本书又是讲啥的。
 
 这本书是讲 RISC-V 指令集的，因为指令集的不同也区分了三个版本，三个版本？？？嗯，还有下面这个
 
-<img src="https://s1.ax1x.com/2020/09/29/0ZeRbV.png" alt="assembly003" border="0" style="zoom:50%;" >
+<img src="https://tva1.sinaimg.cn/large/008i3skNly1gshz8qfyy4j30si0xujwx.jpg" alt="image-20210715215539834" style="zoom:50%;" />
 
 这本书是讲 ARM 指令集的。
 
@@ -67,7 +67,7 @@
 
 C 编译器会接收其他操作并把其转换为`汇编语言`输出，汇编语言是机器级别的代码表示。我们之前介绍过，C 语言程序的执行过程分为下面这几步
 
-<img src="https://s1.ax1x.com/2020/09/29/0Ze2D0.png" alt="assembly004" border="0">
+![image-20210715215548513](https://tva1.sinaimg.cn/large/008i3skNly1gshz8vxiy9j318y0cstac.jpg)
 
 下面我们更多的讨论都是基于汇编代码来讨论。
 
@@ -99,7 +99,7 @@ C 编译器会接收其他操作并把其转换为`汇编语言`输出，汇编�
 
 比如下面一个例子。
 
-<img src="https://s1.ax1x.com/2020/09/29/0Ze6vn.png" alt="assembly005" border="0">
+![image-20210715215554812](https://tva1.sinaimg.cn/large/008i3skNly1gshz8zvwncj317f0u0ae3.jpg)
 
 这是一段数值进行相加的操作，程序启动，在经过编译解析后会由操作系统把硬盘中的程序复制到内存中，示例中的程序是将 123 和 456 执行相加操作，并将结果输出到显示器上。由于使用机器语言难以描述，所以这是经过翻译后的结果，实际上每个指令和数据都可能分布在不同的地址上，但为了方便说明，把组成一条指令的内存和数据放在了一个内存地址上。
 
@@ -110,7 +110,7 @@ C 编译器会接收其他操作并把其转换为`汇编语言`输出，汇编�
 
 下面以条件分支为例来说明程序的执行过程（循环也很相似）
 
-<img src="https://s1.ax1x.com/2020/09/29/0Zeygs.png" alt="assembly006" border="0">
+![image-20210715215602747](https://tva1.sinaimg.cn/large/008i3skNly1gshz95083kj317k0soadx.jpg)
 
 程序的开始过程和顺序流程是一样的，CPU 从 0100 处开始执行命令，在 0100 和 0101 都是顺序执行，PC 的值顺序+1，执行到 0102 地址的指令时，判断 0106 寄存器的数值大于 0，跳转（jump）到 0104 地址的指令，将数值输出到显示器中，然后结束程序，0103 的指令被跳过了，这就和我们程序中的 `if()` 判断是一样的，在不满足条件的情况下，指令会直接跳过。所以 PC 的执行过程也就没有直接+1，而是下一条指令的地址。
 
@@ -126,7 +126,7 @@ C 编译器会接收其他操作并把其转换为`汇编语言`输出，汇编�
 
 汇编代码需要经过 `汇编器` 编译后才产生二进制代码，这个二进制代码就是目标代码，然后由链接器将其连接起来运行。
 
-<img src="https://s1.ax1x.com/2020/09/29/0Zes3j.png" alt="assembly007" border="0">
+![image-20210715215613193](https://tva1.sinaimg.cn/large/008i3skNly1gshz9bfztwj31800c8dhl.jpg)
 
 汇编语言主要分为以下三类
 
@@ -158,7 +158,7 @@ CPU 是计算机的大脑，它也是整个计算机的核心，它也是执行�
 * 数据线
 * 控制线
 
-<img src="https://s1.ax1x.com/2020/09/29/0ZewE8.png" alt="assembly008" border="0" style="zoom:50%;" >
+<img src="https://tva1.sinaimg.cn/large/008i3skNly1gshz9escjuj30qm0h4752.jpg" alt="image-20210715215618722" style="zoom:50%;" />
 
 CPU 与存储器之间的读写主要经过以下几步
 
@@ -180,7 +180,7 @@ CPU 与存储器之间的读写主要经过以下几步
 
 通过我们上面的探讨，我们知道 CPU 通过`地址总线`来指定存储位置的，地址总线上能传送多少不同的信息，CPU 就可以对多少个存储单元进行寻址。
 
-<img src="https://s1.ax1x.com/2020/09/29/0Ze0US.png" alt="assembly009" border="0" style="zoom:50%;" >
+<img src="https://tva1.sinaimg.cn/large/008i3skNly1gshz9kawwyj30s20s4myn.jpg" alt="image-20210715215627708" style="zoom:50%;" />
 
 上图中 CPU 和内存中间信息交换通过了 10 条地址总线，每一条线能够传递的数据都是 0 或 1 ，所以上图一次 CPU 和内存传递的数据是 2 的十次方。
 
@@ -200,7 +200,7 @@ CPU 与其他部件之间的控制是通过 `控制总线` 来完成的。有多
 
 内存 IC 是一个完整的结构，它内部也有电源、地址信号、数据信号、控制信号和用于寻址的 IC 引脚来进行数据的读写。下面是一个虚拟的 IC 引脚示意图
 
-<img src="https://s1.ax1x.com/2020/09/29/0ZeB4g.png" alt="assembly010" border="0">
+![image-20210715215636943](https://tva1.sinaimg.cn/large/008i3skNly1gshz9pxtz9j31520u0tau.jpg)
 
 图中 VCC 和 GND 表示电源，A0 - A9 是地址信号的引脚，D0 - D7 表示的是控制信号、RD 和 WR 都是好控制信号，我用不同的颜色进行了区分，将电源连接到 VCC 和 GND 后，就可以对其他引脚传递 0 和 1 的信号，大多数情况下，**+5V 表示1，0V 表示 0**。
 
@@ -212,7 +212,7 @@ CPU 与其他部件之间的控制是通过 `控制总线` 来完成的。有多
 
 下面是一次内存的读取过程。
 
-<img src="https://s1.ax1x.com/2020/09/29/0ZerCQ.png" alt="assembly011" border="0">
+![image-20210715215645817](https://tva1.sinaimg.cn/large/008i3skNly1gshz9vlb4kj30zo0u0jur.jpg)
 
 来详细描述一下这个过程，假设我们要向内存 IC 中写入 1byte 的数据的话，它的过程是这样的：
 
@@ -228,8 +228,6 @@ CPU 与其他部件之间的控制是通过 `控制总线` 来完成的。有多
 
 另外，我输出了 `六本` PDF，已免费提供下载，如下所示
 
-<img src="https://s1.ax1x.com/2020/09/29/0Zm8aT.png" alt="0Zm8aT.png" border="0" />
+![image-20210715215659666](https://tva1.sinaimg.cn/large/008i3skNly1gshza4l2jyj31920kedln.jpg)
 
-
-
-<img src="https://s1.ax1x.com/2020/09/29/0ZmYiF.png" alt="0ZmYiF.png" border="0" />
+![image-20210715215707172](https://tva1.sinaimg.cn/large/008i3skNly1gshza9ajtqj316k0o0tbc.jpg)
