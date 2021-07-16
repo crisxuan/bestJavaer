@@ -1,5 +1,20 @@
 # 	程序员需要了解的硬核知识之CPU
 
+* [程序员需要了解的硬核知识之CPU](#程序员需要了解的硬核知识之cpu)
+   * [CPU是什么](#cpu是什么)
+   * [CPU 实际做什么](#cpu-实际做什么)
+   * [CPU 的内部结构](#cpu-的内部结构)
+      * [CPU 是寄存器的集合体](#cpu-是寄存器的集合体)
+         * [计算机语言](#计算机语言)
+         * [汇编语言](#汇编语言)
+      * [程序计数器](#程序计数器)
+      * [条件分支和循环机制](#条件分支和循环机制)
+      * [标志寄存器](#标志寄存器)
+      * [函数调用机制](#函数调用机制)
+      * [通过地址和索引实现数组](#通过地址和索引实现数组)
+   * [CPU 指令执行过程](#cpu-指令执行过程)
+   * [总结](#总结)
+
 大家都是程序员，大家都是和计算机打交道的程序员，大家都是和计算机中软件硬件打交道的程序员，大家都是和`CPU`打交道的程序员，所以，不管你是玩儿硬件的还是做软件的，你的世界都少不了计算机最核心的 - CPU
 
 ## CPU是什么
@@ -187,29 +202,7 @@ CPU 的执行机制比较有意思，假设累加寄存器中存储的 XXX 和�
 * 还提到了函数调用机制是怎样的。
 * CPU 指令的执行过程
 
+![image-20210716163352584](https://tva1.sinaimg.cn/large/008i3skNly1gsivkbczxoj31l20t8al5.jpg)
 
+![image-20210716163433337](https://tva1.sinaimg.cn/large/008i3skNly1gsivl4khz9j31d60h8mze.jpg)
 
-下面为自己做个宣传，欢迎关注公众号 `Java建设者`，号主是Java技术栈，热爱技术，喜欢阅读，热衷于分享和总结，希望能把每一篇好文章分享给成长道路上的你。关注公众号回复 `002` 领取为你特意准备的大礼包，你一定会喜欢并收藏的。
-
-![](https://img2018.cnblogs.com/blog/1515111/201910/1515111-20191021131206623-1538389601.png)
-
-
-
-
-参考资料：
-
-https://en.wikipedia.org/wiki/Central_processing_unit
-
-https://www.digitaltrends.com/computing/what-is-a-cpu/
-
-https://baike.baidu.com/item/寄存器/187682?fr=aladdin
-
-https://baike.baidu.com/item/内存/103614?fr=aladdin
-
-https://blog.csdn.net/mark_lq/article/details/44245423
-
-https://baike.baidu.com/item/程序计数器/3219536?fr=aladdin
-
-《程序是怎样跑起来的》
-
-https://zhidao.baidu.com/question/124425422.html
