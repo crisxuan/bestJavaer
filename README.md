@@ -57,7 +57,6 @@
 * Netty
 * [Linux](https://github.com/crisxuan/bestJavaer#linux-%E7%B3%BB%E5%88%97)
 * [算法](https://github.com/crisxuan/bestJavaer#%E7%AE%97%E6%B3%95)
-* [实战篇](https://github.com/crisxuan/bestJavaer#%E5%AE%9E%E6%88%98%E7%AF%87)
 * 程序员
 * [思维导图](https://github.com/crisxuan/bestJavaer#%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE)
 * [关于认知](https://github.com/crisxuan/bestJavaer#%E5%85%B3%E4%BA%8E%E8%AE%A4%E7%9F%A5)
@@ -65,7 +64,6 @@
 * [我的PDF](https://github.com/crisxuan/bestJavaer#%E6%88%91%E7%9A%84-pdf)
 * [读者面试系列](https://github.com/crisxuan/bestJavaer#%E8%AF%BB%E8%80%85%E9%9D%A2%E8%AF%95%E7%B3%BB%E5%88%97)
 * [面试题系列](https://github.com/crisxuan/bestJavaer#%E9%9D%A2%E8%AF%95%E9%A2%98%E7%B3%BB%E5%88%97)
-* [优质 Github](https://github.com/crisxuan/bestJavaer#%E4%BC%98%E8%B4%A8-github-%E6%8E%A8%E8%8D%90)
 * [每日一题计划](https://github.com/crisxuan/bestJavaer#%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98%E8%AE%A1%E5%88%92)
 
 也包括一些常见的面试题。
@@ -85,7 +83,6 @@
 * [操作系统核心概念](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-importantconcept.md)
 * [操作系统网站推荐](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-recommand.md)
 * [操作系统硬核回答](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-howtolearn.md)
-* [计算机基础常识](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/computer-youshouldknow.md)
 * [操作系统超全面试题](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-interview-second.md)
 
 ## 计算机入门系列
@@ -122,25 +119,22 @@
 ## 计算机网络系列
 
 * [计算机网络基础入门](https://github.com/crisxuan/bestJavaer/blob/master/network/network-basic.md)
-* [你不得不知的计算机网络](https://github.com/crisxuan/bestJavaer/blob/master/network/network-center.md)
-* [计算机网络应用层](https://github.com/crisxuan/bestJavaer/blob/master/network/network-appLevel.md)
-* [计算机网络基础知识](https://github.com/crisxuan/bestJavaer/blob/master/network/computer-network-basic.md)
 * [TCP/IP 基础知识](https://github.com/crisxuan/bestJavaer/blob/master/network/computer-network-tcpip.md)
-* [计算机网络应用层协议](https://github.com/crisxuan/bestJavaer/blob/master/network/computer-application.md)
+* [计算机网络应用层](https://github.com/crisxuan/bestJavaer/blob/master/network/computer-application.md)
 * [计算机网络传输层](https://github.com/crisxuan/bestJavaer/blob/master/network/computer-translayer.md)
 * [计算机网络网络层](https://github.com/crisxuan/bestJavaer/blob/master/network/computer-internet.md)
+* [计算机网络数据链路层](https://github.com/crisxuan/bestJavaer/blob/master/computer-network/network-datalink.md)
 * [一文了解 ARP 协议](https://github.com/crisxuan/bestJavaer/blob/master/network/network-arp.md)
 * [一文了解 DNS 协议](https://github.com/crisxuan/bestJavaer/blob/master/network/network-dns.md)
 * [一文了解 ICMP 协议](https://github.com/crisxuan/bestJavaer/blob/master/computer-network/network-icmp.md)
 * [一文了解 DHCP 协议](https://github.com/crisxuan/bestJavaer/blob/master/computer-network/network-dhcp.md)
-* [计算机网络数据链路层](https://github.com/crisxuan/bestJavaer/blob/master/computer-network/network-datalink.md)
 * [Web 页面的请求流程，超详细](https://github.com/crisxuan/bestJavaer/blob/master/computer-network/web-request.md)
 * [TCP 连接管理](https://github.com/crisxuan/bestJavaer/blob/master/computer-network/network-tcp-connect.md)
 
 
 ## Java 基础系列
 
-* [Java 核心基础教程](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-summary.md)
+* [Java 基础核心总结](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-summary.md)
 * [Java 代理](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-proxy.md)
 * [Java 反射](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-reflect.md)
 * [Java 集合](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-collections.md)
@@ -151,20 +145,11 @@
 * [深入理解 final、finally、finalize](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-final.md)
 * [关于四种引用类型](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-references.md)
 * [Exception 和 Error 的区别](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-exceptionanderror.md)
-* [ArrayList 用法解析](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-arraylist.md)
-* [LinkedList 用法解析](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-linkedlist.md)
 * [for 、foreach 、iterator 三种遍历方式的比较](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-forandforeach.md)
 * [理解静态绑定与动态绑定](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-staticbinding.md)
-* [@SafeVarargs 使用说明](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/javav-%40safavargs.md)
 * [@SuppressWarnings 用法](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-%40suppresswarnings.md)
 * [Arrays.asList 解析](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-arrays.asList.md)
-* [Enum to String 一般用法](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-enumtostring.md)
 * [Comparable 和 Comparator的理解](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-comparableandcomparator.md)
-* [Effective Java - 覆盖 equals 时总要覆盖 hashCode](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/effectivejava-equalsandhashcode.md)
-* [Effective Java - 覆盖equals遵守的约定](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/effectivejava-overrideequals.md)
-* [Effective Java - 构造器私有、枚举和单例](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/effectivejava-privateconstructor.md)
-* [Effective Java - 静态方法与构造器](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/effectivejava-staticandmethod.md)
-* [Effective Java - try-with-resources 优先于try-finally](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/effectivejava-try-with-resources.md)
 * [学习 Java 网站推荐给你](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/learn-java.md)
 
 ### Java 基础源码分析
@@ -346,16 +331,6 @@ TODO
 
 [程序员都必知的一些网站](https://github.com/crisxuan/bestJavaer/blob/master/programmer/website-recommand.md)
 
-
-
-## 优质 Github 推荐
-
-* [计算机自学 Github](https://github.com/keithnull/TeachYourselfCS-CN/blob/master/TeachYourselfCS-CN.md)
-* [Crash Course 的 Github](https://github.com/1c7/Crash-Course-Computer-Science-Chinese)
-* [JavaGuide 的 Github](https://github.com/Snailclimb/JavaGuide)
-
-
-
 ## 每日一题计划
 
 * 2020/06/02 [byte的取值范围是多少，怎么计算出来的](https://github.com/crisxuan/bestJavaer/wiki/byte%E7%9A%84%E5%8F%96%E5%80%BC%E8%8C%83%E5%9B%B4%E6%98%AF%E5%A4%9A%E5%B0%91%EF%BC%8C%E6%80%8E%E4%B9%88%E8%AE%A1%E7%AE%97%E5%87%BA%E6%9D%A5%E7%9A%84)
@@ -532,7 +507,7 @@ TODO
 
 ## 欢迎关注
 
-欢迎关注作者的微信公众号 **程序员cxuan**，关注公众号回复 `cxuan` 给你分享作者硬肝的六本 PDF。
+欢迎关注作者的微信公众号「程序员cxuan」，关注公众号回复「cxuan」给你分享作者硬肝的六本 PDF，回复「网络」可以获取笔者总结的网络 PDF。
 
 ![](https://z3.ax1x.com/2020/12/11/rkf8A0.jpg)
 
