@@ -1,5 +1,11 @@
 # MyBatis 核心配置综述之 ResultSetHandler
 
+* [MyBatis 核心配置综述之 ResultSetHandler](#mybatis-核心配置综述之-resultsethandler)
+   * [ResultSetHandler 简介](#resultsethandler-简介)
+   * [ResultSetHandler 创建](#resultsethandler-创建)
+   * [ResultSetHandler 处理结果映射](#resultsethandler-处理结果映射)
+   * [DefaultResultSetHandler 源码解析](#defaultresultsethandler-源码解析)
+
 我们之前介绍过了MyBatis 四大核心配置之 Executor、StatementHandler、 ParameterHandler，今天本文的主题是介绍一下 MyBatis 最后一个神器也就是 ResultSetHandler。那么开始我们的讨论
 
 ## ResultSetHandler 简介
@@ -252,17 +258,9 @@ multipleResults.add(defaultResultHandler.getResultList());
 
 在 DefaultResultSetHandler 中处理完结果映射，并把上述结构返回给调用的客户端，从而执行完成一条完整的SQL语句。
 
-我的公众号二维码：欢迎关注
-![](https://img2018.cnblogs.com/blog/1515111/201908/1515111-20190808064211678-785830192.png)
+![image-20210716163352584](https://tva1.sinaimg.cn/large/008i3skNly1gsivkbczxoj31l20t8al5.jpg)
 
-
-
-
-文章参考：
-
-https://blog.csdn.net/qq924862077/article/details/52704191
-
-
+![image-20210716163433337](https://tva1.sinaimg.cn/large/008i3skNly1gsivl4khz9j31d60h8mze.jpg)
 
 
 

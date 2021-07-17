@@ -1,5 +1,21 @@
 # MySQL 开发
 
+* [MySQL 开发](#mysql-开发)
+   * [MySQL 存储引擎](#mysql-存储引擎)
+      * [存储引擎概述](#存储引擎概述)
+      * [存储引擎特性](#存储引擎特性)
+         * [MyISAM](#myisam)
+         * [InnoDB](#innodb)
+         * [MEMORY](#memory)
+         * [MERGE](#merge)
+      * [选择合适的存储引擎](#选择合适的存储引擎)
+   * [选择合适的数据类型](#选择合适的数据类型)
+      * [CHAR 和 VARCHAR 的选择](#char-和-varchar-的选择)
+      * [TEXT 与 BLOB](#text-与-blob)
+      * [浮点数和定点数的选择](#浮点数和定点数的选择)
+      * [日期类型选择](#日期类型选择)
+   * [MySQL 字符集](#mysql-字符集)
+
 我们在 MySQL 入门篇主要介绍了基本的 SQL 命令、数据类型和函数，在局部以上知识后，你就可以进行 MySQL 的开发工作了，但是如果要成为一个合格的开发人员，你还要具备一些更高级的技能，下面我们就来探讨一下 MySQL 都需要哪些高级的技能
 
 ## MySQL 存储引擎
@@ -309,5 +325,9 @@ select character_set_name, default_collate_name, description, maxlen from inform
 
 ![](https://img2020.cnblogs.com/blog/1515111/202007/1515111-20200706133003359-1814346116.png)
 
-![](https://img2020.cnblogs.com/blog/1515111/202007/1515111-20200706133035847-522276071.png)
+![image-20210716163352584](https://tva1.sinaimg.cn/large/008i3skNly1gsivkbczxoj31l20t8al5.jpg)
+
+![image-20210716163433337](https://tva1.sinaimg.cn/large/008i3skNly1gsivl4khz9j31d60h8mze.jpg)
+
+
 

@@ -1,5 +1,13 @@
 # MyBatis 基础搭建及架构概述
 
+* [MyBatis 基础搭建及架构概述](#mybatis-基础搭建及架构概述)
+   * [MyBatis 是什么？](#mybatis-是什么)
+   * [MyBatis 项目构建](#mybatis-项目构建)
+   * [MyBatis 整体架构](#mybatis-整体架构)
+      * [接口层](#接口层)
+      * [数据处理层](#数据处理层)
+      * [基础支持层](#基础支持层)
+
 ## MyBatis 是什么？
 
 MyBatis是第一个支持自定义SQL、存储过程和高级映射的类持久框架。MyBatis消除了大部分JDBC的样板代码、手动设置参数以及检索结果。MyBatis能够支持简单的XML和注解配置规则。使Map接口和POJO类映射到数据库字段和记录。
@@ -287,12 +295,7 @@ Mybatis中有一级缓存和二级缓存，这两级缓存都依赖于缓存模�
 
 在调用SqlSession相应方法执行数据库操作时，需要制定映射文件中定义的SQL节点，如果sql中出现了拼写错误，那就只能在运行时才能发现。为了能尽早发现这种错误，Mybatis通过Binding模块将用户自定义的Mapper接口与映射文件关联起来，系统可以通过调用自定义Mapper接口中的方法执行相应的SQL语句完成数据库操作，从而避免上述问题。注意，在开发中，我们只是创建了Mapper接口，而并没有编写实现类，这是因为Mybatis自动为Mapper接口创建了动态代理对象。有时，自定义的Mapper接口可以完全代替映射配置文件，但比如动态SQL语句啊等，还是写在映射配置文件中更好。
 
+![image-20210716163352584](https://tva1.sinaimg.cn/large/008i3skNly1gsivkbczxoj31l20t8al5.jpg)
 
+![image-20210716163433337](https://tva1.sinaimg.cn/large/008i3skNly1gsivl4khz9j31d60h8mze.jpg)
 
-相关参考：
-
-mybatis的整体架构 https://my.oschina.net/liuyuantao/blog/1860807
-
-[MyBatis框架的使用及源码分析(十) CacheExecutor，SimpleExecutor，BatchExecutor ，ReuseExecutor](https://www.cnblogs.com/zsg88/p/7566039.html)
-
-《深入理解mybatis原理》 MyBatis的架构设计以及实例分析  https://blog.csdn.net/luanlouis/article/details/40422941

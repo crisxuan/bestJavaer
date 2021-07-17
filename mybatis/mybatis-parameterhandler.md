@@ -1,5 +1,11 @@
 # MyBatis 核心配置综述之 ParameterHandler
 
+* [MyBatis 核心配置综述之 ParameterHandler](#mybatis-核心配置综述之-parameterhandler)
+   * [ParameterHandler 简介](#parameterhandler-简介)
+   * [ParameterHandler 创建](#parameterhandler-创建)
+   * [ParameterHandler 中的参数从何而来](#parameterhandler-中的参数从何而来)
+   * [ParameterHandler 解析](#parameterhandler-解析)
+
 MyBatis 四大核心组件我们已经了解到了两种，一个是 Executor ，它是MyBatis 解析SQL请求首先会经过的第一道关卡，它的主要作用在于创建缓存，管理 StatementHandler 的调用，为 StatementHandler 提供 Configuration 环境等。StatementHandler 组件最主要的作用在于创建 Statement 对象与数据库进行交流，还会使用 ParameterHandler 进行参数配置，使用 ResultSetHandler 把查询结果与实体类进行绑定。那么本篇就来了解一下第三个组件 ParameterHandler。
 
 ## ParameterHandler 简介
@@ -194,6 +200,7 @@ private Statement prepareStatement(StatementHandler handler, Log statementLog) t
 
 然后在生成 `preparedStatement` 调用`DefaultParameterHandler`进行参数赋值。
 
-公众号提供 优质Java资料 以及CSDN免费下载 权限，欢迎你关注我
-![](https://img2018.cnblogs.com/blog/1515111/201908/1515111-20190807231446837-350627522.png)
+![image-20210716163352584](https://tva1.sinaimg.cn/large/008i3skNly1gsivkbczxoj31l20t8al5.jpg)
+
+![image-20210716163433337](https://tva1.sinaimg.cn/large/008i3skNly1gsivl4khz9j31d60h8mze.jpg)
 

@@ -1,5 +1,19 @@
 # MyBatis 核心配置综述之Executor
 
+* [MyBatis 核心配置综述之Executor](#mybatis-核心配置综述之executor)
+   * [MyBatis四大组件之 Executor执行器](#mybatis四大组件之-executor执行器)
+      * [Executor的继承结构](#executor的继承结构)
+      * [Executor创建过程以及源码分析](#executor创建过程以及源码分析)
+      * [Executor接口的主要方法](#executor接口的主要方法)
+         * [大致流程](#大致流程)
+         * [query()方法](#query方法)
+         * [update() 方法](#update-方法)
+         * [queryCursor()方法](#querycursor方法)
+         * [flushStatements() 方法](#flushstatements-方法)
+         * [createCacheKey() 方法](#createcachekey-方法)
+         * [Executor 中的其他方法](#executor-中的其他方法)
+      * [Executor 的现实抽象](#executor-的现实抽象)
+
 上一篇我们对**SqlSession**和**SqlSessionFactory**的创建过程有了一个详细的了解，但上述的创建过程只是为SQL执行和SQL映射做了基础的铺垫而已，就和我们Spring源码为Bean容器的加载进行许多初始化的工作相同，那么做好前期的准备工作接下来该做什么了？该做数据库连接驱动管理和SQL解析工作了！那么本篇本章就来讨论一下数据库驱动连接管理和SQL解析的管理组件之 Executor执行器。
 
 ## MyBatis四大组件之 Executor执行器
@@ -287,7 +301,7 @@ Executor 中还有其他方法，提交commit，回滚rollback，判断是否时
 
 在上面的分析过程中我们了解到，Executor执行器是MyBatis中很重要的一个组件，Executor相当于是外包的boss，它定义了甲方(SQL)需要干的活(Executor的主要方法)，这个外包公司是个小公司，没多少人，每个人都需要干很多工作，boss接到开发任务的话，一般都找项目经理(CachingExecutor)，项目经理几乎不懂技术，它主要和技术leader(BaseExecutor)打交道，技术leader主要负责框架的搭建，具体的工作都会交给下面的程序员来做，程序员的技术也有优劣，高级程序员(BatchExecutor)、中级程序员(ReuseExecutor)、初级程序员(SimpleExecutor)，它们干的活也不一样。一般有新的项目需求传达到项目经理这里，项目经理先判断自己手里有没有现成的类库或者项目直接套用(Cache)，有的话就直接让技术leader拿来直接套用就好，没有的话就需要搭建框架，再把框架存入本地类库中，再进行解析。
 
+![image-20210716163352584](https://tva1.sinaimg.cn/large/008i3skNly1gsivkbczxoj31l20t8al5.jpg)
 
-
-![](https://img2020.cnblogs.com/blog/1515111/202006/1515111-20200603165951702-101215461.png)
+![image-20210716163433337](https://tva1.sinaimg.cn/large/008i3skNly1gsivl4khz9j31d60h8mze.jpg)
 

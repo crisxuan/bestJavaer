@@ -1,5 +1,13 @@
 # MyBatis 核心配置综述之StatementHandler
 
+* [MyBatis 核心配置综述之StatementHandler](#mybatis-核心配置综述之statementhandler)
+   * [MyBatis 四大组件之StatementHandler](#mybatis-四大组件之statementhandler)
+      * [StatementHandler 的基本构成](#statementhandler-的基本构成)
+      * [StatementHandler 对象创建以及源码分析](#statementhandler-对象创建以及源码分析)
+         * [prepare方法调用流程分析](#prepare方法调用流程分析)
+         * [parametersize 方法调用流程分析](#parametersize-方法调用流程分析)
+         * [update 方法调用流程分析](#update-方法调用流程分析)
+
 ## MyBatis 四大组件之StatementHandler
 
 `StatementHandler` 是四大组件中最重要的一个对象，负责操作 Statement 对象与数据库进行交流，在工作时还会使用 ParameterHandler 和 ResultSetHandler 对参数进行映射，对结果进行实体类的绑定
@@ -211,4 +219,7 @@ public void parameterize(Statement statement) throws SQLException {
 
 > Query 查询方法几乎和 update 方法相同，这里就不再详细的举例说明了
 
-![](https://img2020.cnblogs.com/blog/1515111/202006/1515111-20200603170022018-1797784838.png)
+![image-20210716163352584](https://tva1.sinaimg.cn/large/008i3skNly1gsivkbczxoj31l20t8al5.jpg)
+
+![image-20210716163433337](https://tva1.sinaimg.cn/large/008i3skNly1gsivl4khz9j31d60h8mze.jpg)
+

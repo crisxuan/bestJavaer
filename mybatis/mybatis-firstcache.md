@@ -1,5 +1,15 @@
 # MyBatis 一级缓存
 
+* [MyBatis 一级缓存](#mybatis-一级缓存)
+   * [什么是缓存](#什么是缓存)
+   * [什么是MyBatis中的缓存](#什么是mybatis中的缓存)
+   * [MyBatis 中的一级缓存](#mybatis-中的一级缓存)
+      * [初探一级缓存](#初探一级缓存)
+      * [探究一级缓存是如何失效的](#探究一级缓存是如何失效的)
+   * [一级缓存原理探究](#一级缓存原理探究)
+   * [还有其他要补充的吗？](#还有其他要补充的吗)
+   * [总结](#总结)
+
 ## 什么是缓存
 
 缓存就是内存中的一个对象，用于对数据库查询结果的保存，用于减少与数据库的交互次数从而降低数据库的压力，进而提高响应速度。
@@ -334,8 +344,6 @@ public int update(MappedStatement ms, Object parameter) throws SQLException {
 
 4. 手动清理缓存对一级缓存的影响： 由程序员自己去调用`clearCache`方法，这个方法就是清除缓存的方法，所以也就不存在缓存了。
 
-
-
 ## 总结
 
 所以此文章到底写了点什么呢？抛给你几个问题了解一下
@@ -344,13 +352,7 @@ public int update(MappedStatement ms, Object parameter) throws SQLException {
 2. 认识MyBatis缓存，MyBatis 一级缓存的失效方式
 3. MyBatis 一级缓存的执行流程，MyBatis 一级缓存究竟是什么？
 
+![image-20210716163352584](https://tva1.sinaimg.cn/large/008i3skNly1gsivkbczxoj31l20t8al5.jpg)
 
-
-文章参考：
-
-mybatis的缓存机制（一级缓存二级缓存和刷新缓存）和mybatis整合ehcache
-
-https://blog.csdn.net/u012373815/article/details/47069223
-
-[聊聊MyBatis缓存机制](
+![image-20210716163433337](https://tva1.sinaimg.cn/large/008i3skNly1gsivl4khz9j31d60h8mze.jpg)
 

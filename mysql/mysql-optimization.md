@@ -1,5 +1,21 @@
 # MySQL 优化
 
+* [MySQL 优化](#mysql-优化)
+   * [SQL 优化步骤](#sql-优化步骤)
+      * [通过 show status 命令了解 SQL 执行次数](#通过-show-status-命令了解-sql-执行次数)
+      * [定位执行效率较低的 SQL](#定位执行效率较低的-sql)
+      * [通过 EXPLAIN 命令分析 SQL 的执行计划](#通过-explain-命令分析-sql-的执行计划)
+   * [索引](#索引)
+      * [索引介绍](#索引介绍)
+      * [索引分类](#索引分类)
+      * [索引使用](#索引使用)
+         * [索引使用细则](#索引使用细则)
+      * [查看索引的使用情况](#查看索引的使用情况)
+   * [MySQL 分析表、检查表和优化表](#mysql-分析表检查表和优化表)
+      * [MySQL 分析表](#mysql-分析表)
+      * [MySQL 检查表](#mysql-检查表)
+      * [MySQL 优化表](#mysql-优化表)
+
 一般传统互联网公司很少接触到 SQL 优化问题，其原因是数据量小，大部分厂商的数据库性能能够满足日常的业务需求，所以不需要进行 SQL 优化，但是随着应用程序的不断变大，数据量的激增，数据库自身的性能跟不上了，此时就需要从 SQL 自身角度来进行优化，这也是我们这篇文章所讨论的。
 
 ## SQL 优化步骤
@@ -459,3 +475,8 @@ optimize table cxuan005;
 ![](https://z3.ax1x.com/2021/06/21/RkDD4P.png)
 
 我的存储引擎是 InnoDB 引擎，但是从图可以知道，InnoDB 不支持使用 optimize 优化，建议使用 recreate + analyze 进行优化。optimize 命令只对 MyISAM 、BDB 表起作用。
+
+![image-20210716163352584](https://tva1.sinaimg.cn/large/008i3skNly1gsivkbczxoj31l20t8al5.jpg)
+
+![image-20210716163433337](https://tva1.sinaimg.cn/large/008i3skNly1gsivl4khz9j31d60h8mze.jpg)
+

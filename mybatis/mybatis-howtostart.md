@@ -1,5 +1,31 @@
 # MyBatis 启动流程
 
+* [MyBatis 启动流程](#mybatis-启动流程)
+   * [初识 MyBatis](#初识-mybatis)
+      * [MyBatis 的特点](#mybatis-的特点)
+      * [MyBatis 整体架构](#mybatis-整体架构)
+         * [接口层](#接口层)
+         * [数据处理层](#数据处理层)
+         * [基础支持层](#基础支持层)
+   * [MyBatis 核心组件](#mybatis-核心组件)
+      * [SqlSessionFactory](#sqlsessionfactory)
+         * [重要配置](#重要配置)
+      * [SqlSession](#sqlsession)
+      * [MapperProxy](#mapperproxy)
+      * [Executor](#executor)
+         * [Executor 的继承结构](#executor-的继承结构)
+         * [Executor 的创建和选择](#executor-的创建和选择)
+         * [Executor 的具体执行过程](#executor-的具体执行过程)
+      * [StatementHandler](#statementhandler)
+         * [StatementHandler 的继承结构](#statementhandler-的继承结构)
+         * [StatementHandler 的创建和源码分析](#statementhandler-的创建和源码分析)
+      * [ParameterHandler](#parameterhandler)
+         * [ParameterHandler 介绍](#parameterhandler-介绍)
+         * [ParameterHandler 的解析过程](#parameterhandler-的解析过程)
+      * [ResultSetHandler](#resultsethandler)
+         * [ResultSetHandler 简介](#resultsethandler-简介)
+         * [ResultSetHandler 解析过程](#resultsethandler-解析过程)
+
 ## 初识 MyBatis
 
 MyBatis 是第一个支持自定义 SQL、存储过程和高级映射的类持久框架。MyBatis 消除了大部分 JDBC 的样板代码、手动设置参数以及检索结果。MyBatis 能够支持简单的 XML 和注解配置规则。使 Map 接口和 POJO 类映射到数据库字段和记录。
@@ -675,27 +701,7 @@ public List<Object> handleResultSets(Statement stmt) throws SQLException {
 
 在 DefaultResultSetHandler 中处理完结果映射，并把上述结构返回给调用的客户端，从而执行完成一条完整的SQL语句。
 
+![image-20210716163352584](https://tva1.sinaimg.cn/large/008i3skNly1gsivkbczxoj31l20t8al5.jpg)
 
-文章参考：
+![image-20210716163433337](https://tva1.sinaimg.cn/large/008i3skNly1gsivl4khz9j31d60h8mze.jpg)
 
-[MyBatis的优缺点以及特点](https://www.cnblogs.com/weibanggang/p/9759018.html)
-
-[mybatis基础，mybatis核心配置文件properties元素](https://www.cnblogs.com/tademeng/p/6538950.html)
-
-https://mybatis.org/mybatis-3/zh/configuration.html#properties
-
-[深入浅出Mybatis系列（十）---SQL执行流程分析（源码篇）](https://www.cnblogs.com/dongying/p/4142476.html)
-
-https://www.jianshu.com/p/19686af69b0d
-
-http://www.mybatis.org/mybatis-3/getting-started.html
-
-https://www.cnblogs.com/virgosnail/p/10067964.html
-
-https://blog.csdn.net/Roger_CoderLife/article/details/88707076
-
-https://blog.csdn.net/qq924862077/article/details/52704191
-
-[mybatis 源码分析（八）ResultSetHandler 详解](
-
-![](https://img2018.cnblogs.com/blog/1515111/202002/1515111-20200201131551800-551400069.png)https://www.cnblogs.com/sanzao/p/11466496.html)

@@ -1,5 +1,17 @@
 # MyBatis 想启动？得先问问它同不同意
 
+* [MyBatis 想启动？得先问问它同不同意](#mybatis-想启动得先问问它同不同意)
+   * [Configuration 的创建](#configuration-的创建)
+   * [Configuration 的标签以及使用](#configuration-的标签以及使用)
+   * [Configuration 标签的解析](#configuration-标签的解析)
+   * [Configuration 子标签的源码分析](#configuration-子标签的源码分析)
+      * [第一步：Properties 解析](#第一步properties-解析)
+      * [第二步：Settings 解析](#第二步settings-解析)
+      * [第三步：TypeAliases 解析](#第三步typealiases-解析)
+      * [第四步：Plugins 解析](#第四步plugins-解析)
+      * [其他步骤](#其他步骤)
+   * [总结](#总结)
+
 话说，我最近一直在研究 MyBatis ，研究 MyBatis ，必然逃不了研究 `Configuration` 对象，这个对象简直是太重要了，它是 MyBatis 起步的核心环境配置，下面我们来一起看一下 Configuration 类
 
 ## Configuration 的创建
@@ -529,15 +541,9 @@ SqlSessionFactoryBuilder 创建 XMLConfigBuilder ，XMLConfigBuilder 再创建 C
 
 大体上都是判断有无此 XNode 节点，然后判断它的子节点标签，得到标签的属性，放入 Configuration 对象中。
 
+![image-20210716163352584](https://tva1.sinaimg.cn/large/008i3skNly1gsivkbczxoj31l20t8al5.jpg)
 
-
-参考资料：
-
-[Mybatis-Configuration-详解](https://www.cnblogs.com/lifeibai/p/9036891.html)
-
-http://www.mybatis.org/mybatis-3/zh/configuration.html
-
-
+![image-20210716163433337](https://tva1.sinaimg.cn/large/008i3skNly1gsivl4khz9j31d60h8mze.jpg)
 
 
 

@@ -1,5 +1,32 @@
 # MySQL 高级主题
 
+* [MySQL 高级主题](#mysql-高级主题)
+   * [事务控制和锁定语句](#事务控制和锁定语句)
+      * [锁定语句](#锁定语句)
+      * [解锁语句](#解锁语句)
+   * [事务控制](#事务控制)
+      * [自动提交](#自动提交)
+      * [手动提交](#手动提交)
+         * [事务表和非事务表](#事务表和非事务表)
+   * [SQL 安全问题](#sql-安全问题)
+      * [SQL 注入简介](#sql-注入简介)
+   * [SQL Mode](#sql-mode)
+      * [SQL Mode 解决问题](#sql-mode-解决问题)
+      * [SQL Mode 三种作用域](#sql-mode-三种作用域)
+   * [SQL 正则表达式](#sql-正则表达式)
+   * [常见 SQL 技巧](#常见-sql-技巧)
+      * [RAND() 函数](#rand-函数)
+      * [GROUP BY + WITH ROLLUP](#group-by--with-rollup)
+      * [数据库名、表名大小写问题](#数据库名表名大小写问题)
+      * [外键问题](#外键问题)
+   * [MySQL 常用函数](#mysql-常用函数)
+      * [字符串函数](#字符串函数)
+      * [数值函数](#数值函数)
+      * [日期和时间函数](#日期和时间函数)
+      * [流程函数](#流程函数)
+      * [其他函数](#其他函数)
+   * [总结](#总结)
+
 之前两篇文章带你了解了 MySQL 的基础语法和 MySQL 的进阶内容，那么这篇文章我们来了解一下 MySQL 中的高级内容。
 
 ## 事务控制和锁定语句
@@ -833,19 +860,15 @@ interval 表示间隔类型的关键字，expr 是表达式，这个表达式对
 
 <img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200619171523449.png" alt="image-20200619171523449" style="zoom:67%;" />
 
-
-
-
-
 ## 总结
 
 这篇文章我带你手把手撸了一波 MySQL 的高级内容，其实说高级也不一定真的高级或者说难，其实就是区分不同梯度的东西。
 
-如果你觉得这篇文章还不错的话，欢迎点赞、在看、留言、分享。
-
-你的支持就是我撸文的动力！我是 cxuan，我们下篇文章见。
 
 
+![image-20210716163352584](https://tva1.sinaimg.cn/large/008i3skNly1gsivkbczxoj31l20t8al5.jpg)
+
+![image-20210716163433337](https://tva1.sinaimg.cn/large/008i3skNly1gsivl4khz9j31d60h8mze.jpg)
 
 
 
