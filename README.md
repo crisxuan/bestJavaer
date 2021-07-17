@@ -82,7 +82,6 @@
 * [硬核操作系统之死锁](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-deadlock.md)
 * [操作系统核心概念](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-importantconcept.md)
 * [操作系统网站推荐](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-recommand.md)
-* [操作系统硬核回答](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-howtolearn.md)
 * [操作系统超全面试题](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-interview-second.md)
 
 ## 计算机入门系列
@@ -118,18 +117,20 @@
 
 ## 计算机网络系列
 
-* [计算机网络基础入门](https://github.com/crisxuan/bestJavaer/blob/master/network/network-basic.md)
-* [TCP/IP 基础知识](https://github.com/crisxuan/bestJavaer/blob/master/network/computer-network-tcpip.md)
-* [计算机网络应用层](https://github.com/crisxuan/bestJavaer/blob/master/network/computer-application.md)
-* [计算机网络传输层](https://github.com/crisxuan/bestJavaer/blob/master/network/computer-translayer.md)
-* [计算机网络网络层](https://github.com/crisxuan/bestJavaer/blob/master/network/computer-internet.md)
+* [计算机网络基础知识](https://github.com/crisxuan/bestJavaer/blob/master/computer-network/computer-network-basic.md)
+* [TCP/IP 基础知识](https://github.com/crisxuan/bestJavaer/blob/master/computer-network/computer-network-tcpip.md)
+* [计算机网络应用层](https://github.com/crisxuan/bestJavaer/blob/master/computer-network/computer-application.md)
+* [计算机网络传输层](https://github.com/crisxuan/bestJavaer/blob/master/computer-network/computer-translayer.md)
+* [计算机网络网络层](https://github.com/crisxuan/bestJavaer/blob/master/computer-network/computer-internet.md)
 * [计算机网络数据链路层](https://github.com/crisxuan/bestJavaer/blob/master/computer-network/network-datalink.md)
-* [一文了解 ARP 协议](https://github.com/crisxuan/bestJavaer/blob/master/network/network-arp.md)
-* [一文了解 DNS 协议](https://github.com/crisxuan/bestJavaer/blob/master/network/network-dns.md)
+* [一文了解 ARP 协议](https://github.com/crisxuan/bestJavaer/blob/master/computer-network/network-arp.md)
+* [一文了解 DNS 协议](https://github.com/crisxuan/bestJavaer/blob/master/computer-network/network-dns.md)
 * [一文了解 ICMP 协议](https://github.com/crisxuan/bestJavaer/blob/master/computer-network/network-icmp.md)
 * [一文了解 DHCP 协议](https://github.com/crisxuan/bestJavaer/blob/master/computer-network/network-dhcp.md)
 * [Web 页面的请求流程，超详细](https://github.com/crisxuan/bestJavaer/blob/master/computer-network/web-request.md)
 * [TCP 连接管理](https://github.com/crisxuan/bestJavaer/blob/master/computer-network/network-tcp-connect.md)
+* [计算机网络自学指南](https://github.com/crisxuan/bestJavaer/blob/master/computer-network/computer-howtolearn.md)
+* [计算机网络核心概念](https://github.com/crisxuan/bestJavaer/blob/master/computer-network/network-concept.md)
 
 
 ## Java 基础系列
