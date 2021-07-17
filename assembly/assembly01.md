@@ -243,10 +243,7 @@ CPU 与其他部件之间的控制是通过 `控制总线` 来完成的。有多
 
 此篇文章我们主要探讨了指令集、指令集的分类，与汇编有关的硬件，总线都有哪些，分别的作用都是什么，然后我们以一次内存读取过程来连接一下 CPU 和内存的交互过程。
 
-原创不易，如有帮助还请各位读者四连（点在、在看、分享、留言），感谢各位大佬
+![image-20210716163352584](https://tva1.sinaimg.cn/large/008i3skNly1gsivkbczxoj31l20t8al5.jpg)
 
-另外，我输出了 `六本` PDF，已免费提供下载，如下所示
+![image-20210716163433337](https://tva1.sinaimg.cn/large/008i3skNly1gsivl4khz9j31d60h8mze.jpg)
 
-![image-20210715215659666](https://tva1.sinaimg.cn/large/008i3skNly1gshza4l2jyj31920kedln.jpg)
-
-![image-20210715215707172](https://tva1.sinaimg.cn/large/008i3skNly1gshza9ajtqj316k0o0tbc.jpg)
