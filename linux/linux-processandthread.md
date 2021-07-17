@@ -1,5 +1,29 @@
 # Linux 进程和线程
 
+* [Linux 进程和线程](#linux-进程和线程)
+   * [基本概念](#基本概念)
+   * [Linux 进程间通信](#linux-进程间通信)
+      * [信号 signal](#信号-signal)
+      * [管道 pipe](#管道-pipe)
+      * [共享内存 shared memory](#共享内存-shared-memory)
+      * [先入先出队列 FIFO](#先入先出队列-fifo)
+      * [消息队列 Message Queue](#消息队列-message-queue)
+      * [套接字 Socket](#套接字-socket)
+      * [Linux 中进程管理系统调用](#linux-中进程管理系统调用)
+         * [fork](#fork)
+         * [exec](#exec)
+         * [waitpid](#waitpid)
+         * [exit](#exit)
+   * [Linux 进程和线程的实现](#linux-进程和线程的实现)
+      * [Linux 进程](#linux-进程)
+      * [Linux 线程](#linux-线程)
+         * [用户级线程](#用户级线程)
+         * [内核级线程](#内核级线程)
+         * [混合实现](#混合实现)
+      * [Linux 调度](#linux-调度)
+         * [Linux 系统中的同步](#linux-系统中的同步)
+      * [Linux 启动](#linux-启动)
+
 上一篇文章
 
 https://github.com/crisxuan/bestJavaer/blob/master/linux/linux-first.md
@@ -534,7 +558,13 @@ login:
 
 ![](https://img2020.cnblogs.com/blog/1515111/202007/1515111-20200710065815985-356288213.png)
 
-![](https://img2020.cnblogs.com/blog/1515111/202007/1515111-20200710065854530-1764298749.png)
+
+
+![image-20210716163352584](https://tva1.sinaimg.cn/large/008i3skNly1gsivkbczxoj31l20t8al5.jpg)
+
+![image-20210716163433337](https://tva1.sinaimg.cn/large/008i3skNly1gsivl4khz9j31d60h8mze.jpg)
+
+
 
 
 

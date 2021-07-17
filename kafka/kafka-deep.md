@@ -1,5 +1,34 @@
 # 深入 Kafka
 
+* [深入 Kafka](#深入-kafka)
+   * [集群成员间的关系](#集群成员间的关系)
+   * [Broker Controller 的作用](#broker-controller-的作用)
+      * [控制器的选举](#控制器的选举)
+      * [控制器的作用](#控制器的作用)
+      * [broker controller 数据存储](#broker-controller-数据存储)
+      * [broker controller 故障转移](#broker-controller-故障转移)
+      * [broker controller 存在的问题](#broker-controller-存在的问题)
+      * [broker controller 内部设计原理](#broker-controller-内部设计原理)
+   * [副本机制](#副本机制)
+      * [Leader 副本](#leader-副本)
+      * [Follower 副本](#follower-副本)
+      * [同步复制和异步复制](#同步复制和异步复制)
+      * [ISR](#isr)
+      * [Unclean 领导者选举](#unclean-领导者选举)
+   * [Kafka 请求处理流程](#kafka-请求处理流程)
+      * [响应式模型](#响应式模型)
+      * [请求类型](#请求类型)
+   * [Kafka 重平衡流程](#kafka-重平衡流程)
+      * [在了解重平衡之前，你需要知道这两个角色](#在了解重平衡之前你需要知道这两个角色)
+      * [在了解重平衡之前，你需要知道状态机是什么](#在了解重平衡之前你需要知道状态机是什么)
+      * [重平衡流程](#重平衡流程)
+      * [从消费者看重平衡](#从消费者看重平衡)
+      * [从协调者来看重平衡](#从协调者来看重平衡)
+         * [新成员加入组](#新成员加入组)
+         * [组成员离开](#组成员离开)
+         * [组成员崩溃](#组成员崩溃)
+         * [重平衡时提交位移](#重平衡时提交位移)
+
 如果只是为了开发 Kafka 应用程序，或者只是在生产环境使用 Kafka，那么了解 Kafka 的内部工作原理不是必须的。不过，了解 Kafka 的内部工作原理有助于理解 Kafka 的行为，也利用快速诊断问题。下面我们来探讨一下这三个问题
 
 * Kafka 是如何进行复制的
@@ -371,37 +400,7 @@ Kafka 设计了一套`消费者组状态机(State Machine)` ，来帮助协调�
 
 这个过程我们就不再用图形来表示了，大致描述一下就是 消费者发送 JoinGroup 请求后，群组中的消费者必须在指定的时间范围内提交各自的位移，然后再开启正常的 JoinGroup/SyncGroup 请求发送。
 
-**如果大家认可我，请帮我点个赞，谢谢各位了。我们下篇技术文章见**。
+![image-20210716163352584](https://tva1.sinaimg.cn/large/008i3skNly1gsivkbczxoj31l20t8al5.jpg)
 
-![](https://img2018.cnblogs.com/blog/1515111/201912/1515111-20191223124455015-683851863.png)
+![image-20210716163433337](https://tva1.sinaimg.cn/large/008i3skNly1gsivl4khz9j31d60h8mze.jpg)
 
-
-文章参考：
-
-《Kafka 权威指南》
-
-https://blog.csdn.net/u013256816/article/details/80546337
-
-https://learning.oreilly.com/library/view/kafka-the-definitive/9781491936153/ch05.html#kafka_internals
-
-https://www.cnblogs.com/kevingrace/p/9021508.html
-
-https://www.cnblogs.com/huxi2b/p/6980045.html
-
-《极客时间-Kafka核心技术与实战》
-
-https://cwiki.apache.org/confluence/display/KAFKA/Kafka+Controller+Redesign
-
-https://cwiki.apache.org/confluence/display/KAFKA/Kafka+Controller+Internals
-
-[kafka 分区和副本以及kafaka 执行流程，以及消息的高可用](https://www.cnblogs.com/liyanbin/p/7815185.html)
-
-[Http中的同步请求和异步请求](https://www.cnblogs.com/Black-YeJing/p/9131124.html)
-
-[Reactor模式详解](https://www.cnblogs.com/winner-0715/p/8733787.html)
-
-https://kafka.apache.org/documentation/
-
-https://www.linkedin.com/pulse/partitions-rebalance-kafka-raghunandan-gupta
-
-https://cwiki.apache.org/confluence/display/KAFKA/Kafka+Detailed+Consumer+Coordinator+Design

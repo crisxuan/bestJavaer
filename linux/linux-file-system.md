@@ -1,5 +1,18 @@
 # Linux 文件系统
 
+* [Linux 文件系统](#linux-文件系统)
+   * [Linux 文件系统基本概念](#linux-文件系统基本概念)
+   * [Linux 文件系统调用](#linux-文件系统调用)
+   * [Linux 文件系统的实现](#linux-文件系统的实现)
+      * [Linux 虚拟文件系统](#linux-虚拟文件系统)
+      * [Linux Ext2 文件系统](#linux-ext2-文件系统)
+      * [Linux Ext4 文件系统](#linux-ext4-文件系统)
+      * [/proc 文件系统](#proc-文件系统)
+      * [NFS 网络文件系统](#nfs-网络文件系统)
+         * [NFS 架构](#nfs-架构)
+         * [NFS 协议](#nfs-协议)
+         * [NFS 实现](#nfs-实现)
+
 在 Linux 中，最直观、最可见的部分就是 `文件系统(file system)`。下面我们就来一起探讨一下关于 Linux 中国的文件系统，系统调用以及文件系统实现背后的原理和思想。这些思想中有一些来源于 MULTICS，现在已经被 Windows 等其他操作系统使用。Linux 的设计理念就是 `小的就是好的(Small is Beautiful)` 。虽然 Linux 只是使用了最简单的机制和少量的系统调用，但是 Linux 却提供了强大而优雅的文件系统。
 
 ## Linux 文件系统基本概念
@@ -418,23 +431,9 @@ NFS 使用了标准的 UNIX 保护机制，使用 `rwx` 位来标示`所有者(o
 
 VFS 层的任务是维护一个表，每个已经打开的文件都在表中有一个表项。VFS 层为每一个打开的文件维护着一个`虚拟i节点 `，简称为 v - node。v 节点用来说明文件是本地文件还是远程文件。如果是远程文件的话，那么 v - node 会提供足够的信息使客户端能够访问它们。对于本地文件，会记录其所在的文件系统和文件的 i-node ，因为现代操作系统能够支持多文件系统。虽然 VFS 是为了支持 NFS 而设计的，但是现代操作系统都会使用 VFS，而不管有没有 NFS。
 
+![image-20210716163352584](https://tva1.sinaimg.cn/large/008i3skNly1gsivkbczxoj31l20t8al5.jpg)
 
-
-关注公众号 程序员cxuan 回复 cxuan 领取优质资料。
-
-我自己写了六本 PDF ，非常硬核，链接如下
-
-我自己写了六本 PDF ，非常硬核，链接如下
-
-我自己写了六本 PDF ，非常硬核，链接如下
-
-![](https://img2020.cnblogs.com/blog/1515111/202009/1515111-20200928073258556-2142265096.png)
-
-[cxuan 呕心沥血肝了四本 PDF。](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247485329&idx=1&sn=673f306bb229e73e8f671443488b42d4&chksm=e999f283deee7b95a3cce247907b6557bf5f228c85434fc6cbadf42b2ec4c64443742a8bea7a&token=581641926&lang=zh_CN#rd)
-
-[cxuan 又肝了两本 PDF。](https://mp.weixin.qq.com/s?__biz=MzU2NDg0OTgyMA==&mid=2247494165&idx=1&sn=4e0247006bef89701529d765e6ce32a4&chksm=fc4617e6cb319ef0991ff70c8a769b92f59cf92122f27785b848604493653fdcc206d6830a23&token=794467841&lang=zh_CN#rd)
-
-
+![image-20210716163433337](https://tva1.sinaimg.cn/large/008i3skNly1gsivl4khz9j31d60h8mze.jpg)
 
 
 
