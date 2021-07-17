@@ -363,3 +363,8 @@ public enum Singleton {
 （6）为了防止多线程环境下，因为指令重排序导致变量报NPE，需要在单例对象上添加 volatile 关键字防止指令重排序
 
 （7）最优雅的实现方式是使用枚举，其代码精简，没有线程安全问题，且 Enum 类内部防止反射和反序列化时破坏单例。
+
+![image-20210716163352584](https://tva1.sinaimg.cn/large/008i3skNly1gsivkbczxoj31l20t8al5.jpg)
+
+![image-20210716163433337](https://tva1.sinaimg.cn/large/008i3skNly1gsivl4khz9j31d60h8mze.jpg)
+

@@ -1,5 +1,22 @@
 # 带你一步步解析 HTTPS 
 
+* [带你一步步解析 HTTPS](#带你一步步解析-https)
+   * [HTTPS 为什么会出现](#https-为什么会出现)
+      * [HTTPS 解决了什么问题](#https-解决了什么问题)
+      * [什么是 HTTPS](#什么是-https)
+      * [HTTPS 做了什么](#https-做了什么)
+   * [什么是 SSL/TLS](#什么是-ssltls)
+      * [认识 SSL/TLS](#认识-ssltls)
+      * [HTTPS 的内核是 HTTP](#https-的内核是-http)
+   * [探究 HTTPS](#探究-https)
+      * [对称加密](#对称加密)
+         * [加密分组](#加密分组)
+      * [非对称加密](#非对称加密)
+      * [混合加密](#混合加密)
+      * [摘要算法](#摘要算法)
+      * [认证](#认证)
+   * [总结](#总结)
+
 下面我们来一起学习一下 HTTPS ，首先问你一个问题，为什么有了 HTTP 之后，还需要有 HTTPS ？我突然有个想法，为什么我们面试的时候需要回答`标准答案`呢？为什么我们不说出我们自己的想法和见解，却要记住一些所谓的标准回答呢？**技术还有正确与否吗**？
 
 ## HTTPS 为什么会出现
@@ -208,46 +225,7 @@ HMAC 是 MAC 更进一步的拓展，它是使用 MAC 值 + Hash 值的组合方
 
 本篇文章我们主要讲述了 HTTPS 为什么会出现 ，HTTPS 解决了 HTTP 的什么问题，HTTPS 和 HTTP 的关系是什么，TLS 和 SSL 是什么，TLS 和 SSL 解决了什么问题？如何实现一个真正安全的数据传输？
 
-![](https://img2020.cnblogs.com/blog/1515111/202006/1515111-20200603170910090-837533246.png)
+![image-20210716163352584](https://tva1.sinaimg.cn/large/008i3skNly1gsivkbczxoj31l20t8al5.jpg)
 
-文章参考：
+![image-20210716163433337](https://tva1.sinaimg.cn/large/008i3skNly1gsivl4khz9j31d60h8mze.jpg)
 
-https://www.ssl.com/faqs/what-is-a-certificate-authority/
-
-https://www.ibm.com/support/knowledgecenter/en/SSFKSJ_7.1.0/com.ibm.mq.doc/sy10670_.htm
-
-https://en.wikipedia.org/wiki/Message_authentication_code
-
-https://en.wikipedia.org/wiki/HMAC
-
-https://www.quora.com/What-does-it-mean-to-add-a-salt-to-a-password-hash
-
-https://hpbn.co/transport-layer-security-tls/
-
-https://www.ssl2buy.com/wiki/symmetric-vs-asymmetric-encryption-what-are-differences
-
-https://crypto.stackexchange.com/questions/26410/whats-the-gcm-sha-256-of-a-tls-protocol
-
-https://en.wikipedia.org/wiki/Advanced_Encryption_Standard
-
-https://www.comparitech.com/blog/information-security/3des-encryption/
-
-《极客时间-透析 HTTP 协议》
-
-https://www.tutorialsteacher.com/https/how-ssl-works
-
-https://baike.baidu.com/item/密码系统/5823651
-
-https://baike.baidu.com/item/对称加密/2152944?fr=aladdin
-
-https://www.ssl.com/faqs/faq-what-is-ssl/
-
-https://en.wikipedia.org/wiki/HTTPS
-
-https://support.google.com/webmasters/answer/6073543?hl=en
-
-https://www.cloudflare.com/learning/ssl/why-is-http-not-secure/
-
-https://www.cisco.com/c/en/us/products/security/what-is-network-security.html
-
-https://www.freecodecamp.org/news/web-security-an-introduction-to-http-5fa07140f9b3/

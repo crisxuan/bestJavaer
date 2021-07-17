@@ -1,5 +1,61 @@
 # HTTP 核心概念
 
+* [HTTP 核心概念](#http-核心概念)
+   * [HTTP 标头](#http-标头)
+      * [通用标头](#通用标头)
+         * [Cache-Control](#cache-control)
+         * [Connection](#connection)
+         * [Date](#date)
+         * [Pragma](#pragma)
+         * [Trailer](#trailer)
+         * [Transfer-Encoding](#transfer-encoding)
+         * [Upgrade](#upgrade)
+         * [Via](#via)
+         * [Warning](#warning)
+      * [请求标头](#请求标头)
+         * [Accept](#accept)
+         * [Accept-Charset](#accept-charset)
+         * [Accept-Encoding](#accept-encoding)
+         * [Accept-Language](#accept-language)
+         * [Authorization](#authorization)
+         * [Expect](#expect)
+         * [From](#from)
+         * [Host](#host)
+         * [If-Match](#if-match)
+         * [If-Modified-Since](#if-modified-since)
+         * [If-None-Match](#if-none-match)
+         * [If-Range](#if-range)
+         * [If-Unmodified-Since](#if-unmodified-since)
+         * [Max-Forwards](#max-forwards)
+         * [Proxy-Authorization](#proxy-authorization)
+         * [Range](#range)
+         * [Referer](#referer)
+         * [TE](#te)
+         * [User-Agent](#user-agent)
+      * [响应标头](#响应标头)
+         * [Accept-Ranges](#accept-ranges)
+         * [Age](#age)
+         * [ETag](#etag)
+         * [Location](#location)
+         * [Proxy-Authenticate](#proxy-authenticate)
+         * [Retry-After](#retry-after)
+         * [Server](#server)
+         * [Vary](#vary)
+         * [www-Authenticate](#www-authenticate)
+         * [Access-Control-Allow-Origin](#access-control-allow-origin)
+      * [实体标头](#实体标头)
+         * [Allow](#allow)
+         * [Content-Encoding](#content-encoding)
+         * [Content-Language](#content-language)
+         * [Content-Length](#content-length)
+         * [Content-Location](#content-location)
+         * [Content-MD5](#content-md5)
+         * [Content-Range](#content-range)
+         * [Content-Type](#content-type)
+         * [Expires](#expires)
+         * [Last-Modified](#last-modified)
+   * [总结](#总结)
+
 上一篇文章我们大致讲解了一下 HTTP 的基本特征和使用，大家反响很不错，那么本篇文章我们就来深究一下 HTTP 的特性。我们接着上篇文章没有说完的 HTTP 标头继续来介绍（此篇文章会介绍所有标头的概念，但没有深入底层）
 
 ## HTTP 标头
@@ -871,24 +927,7 @@ Last-Modified: Wed, 21 Oct 2015 07:28:00 GMT
 
 本篇文章主要介绍了 HTTP 四种标头的基本概念，但是并没有涵盖全部，毕竟 HTTP 标头内容确实太多了，以上介绍的基本都是平常工作中常用的一些概念，下一篇文章预告 **HTTP 的黑科技**
 
-![](https://img2020.cnblogs.com/blog/1515111/202006/1515111-20200603170910090-837533246.png)
+![image-20210716163352584](https://tva1.sinaimg.cn/large/008i3skNly1gsivkbczxoj31l20t8al5.jpg)
 
-文章参考：
+![image-20210716163433337](https://tva1.sinaimg.cn/large/008i3skNly1gsivl4khz9j31d60h8mze.jpg)
 
-https://developer.mozilla.org/en-US/docs/Web/HTTP
-
-http://www.tcpipguide.com/free/t_HTTPGeneralHeaders.htm
-
-http://www.tcpipguide.com/free/t_HTTPCachingFeaturesandIssues.htm
-
-https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching#Cache_validation
-
-《图解 HTTP》
-
-https://www.w3.org/Protocols/rfc2616/rfc2616.html
-
-https://blog.csdn.net/qq_29405933/article/details/84315254
-
-https://en.wikipedia.org/wiki/List_of_HTTP_header_fields
-
-![](https://img2018.cnblogs.com/blog/1515111/202001/1515111-20200119202653621-400008680.png)

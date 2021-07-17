@@ -1,6 +1,54 @@
 # Java 基础面试题
 
-[toc]
+* [Java 基础面试题](#java-基础面试题)
+   * [Java 基础篇](#java-基础篇)
+      * [Java 有哪些特点](#java-有哪些特点)
+         * [Java 的特性](#java-的特性)
+      * [描述一下值传递和引用传递的区别](#描述一下值传递和引用传递的区别)
+      * [== 和 equals 区别是什么](#-和-equals-区别是什么)
+      * [String 中的 equals 是如何重写的](#string-中的-equals-是如何重写的)
+      * [为什么重写 equals 方法必须重写 hashcode 方法](#为什么重写-equals-方法必须重写-hashcode-方法)
+      * [String s1 = new String("abc") 在内存中创建了几个对象](#string-s1--new-stringabc-在内存中创建了几个对象)
+      * [String 为什么是不可变的、jdk 源码中的 String 如何定义的、为什么这么设计。](#string-为什么是不可变的jdk-源码中的-string-如何定义的为什么这么设计)
+      * [static 关键字是干什么用的？谈谈你的理解](#static-关键字是干什么用的谈谈你的理解)
+      * [final 关键字是干什么用的？谈谈你的理解](#final-关键字是干什么用的谈谈你的理解)
+      * [抽象类和接口的区别是什么](#抽象类和接口的区别是什么)
+      * [重写和重载的区别](#重写和重载的区别)
+      * [byte的取值范围是多少，怎么计算出来的](#byte的取值范围是多少怎么计算出来的)
+      * [HashMap 和 HashTable 的区别](#hashmap-和-hashtable-的区别)
+      * [HashMap 和 HashSet 的区别](#hashmap-和-hashset-的区别)
+      * [HashMap 的底层结构](#hashmap-的底层结构)
+      * [HashMap 的长度为什么是 2 的幂次方](#hashmap-的长度为什么是-2-的幂次方)
+      * [HashMap 多线程操作导致死循环问题](#hashmap-多线程操作导致死循环问题)
+      * [HashMap 线程安全的实现有哪些](#hashmap-线程安全的实现有哪些)
+      * [讲一下 HashMap put 的过程](#讲一下-hashmap-put-的过程)
+      * [ConcurrentHashMap 底层实现](#concurrenthashmap-底层实现)
+      * [Integer 缓存池](#integer-缓存池)
+      * [UTF-8 和 Unicode 的关系](#utf-8-和-unicode-的关系)
+      * [项目为 UTF-8 环境，char c = '中'，是否合法](#项目为-utf-8-环境char-c--中是否合法)
+      * [Arrays.asList 获得的 List 应该注意什么](#arraysaslist-获得的-list-应该注意什么)
+      * [Collection 和 Collections 的区别](#collection-和-collections-的区别)
+      * [你知道 fail-fast 和 fail-safe 吗](#你知道-fail-fast-和-fail-safe-吗)
+      * [ArrayList、LinkedList 和 Vector 的区别](#arraylistlinkedlist-和-vector-的区别)
+      * [Exception 和 Error 有什么区别](#exception-和-error-有什么区别)
+      * [String、StringBuilder 和 StringBuffer 有什么区别](#stringstringbuilder-和-stringbuffer-有什么区别)
+      * [动态代理是基于什么原理](#动态代理是基于什么原理)
+      * [int 和 Integer 的区别](#int-和-integer-的区别)
+      * [Java 提供了哪些 I/O 方式](#java-提供了哪些-io-方式)
+      * [谈谈你知道的设计模式](#谈谈你知道的设计模式)
+      * [Comparator 和 Comparable 有什么不同](#comparator-和-comparable-有什么不同)
+      * [Object 类中一般都有哪些方法](#object-类中一般都有哪些方法)
+      * [Java 泛型和类型擦除](#java-泛型和类型擦除)
+      * [反射的基本原理，反射创建类实例的三种方式是什么](#反射的基本原理反射创建类实例的三种方式是什么)
+      * [强引用、若引用、虚引用和幻象引用的区别](#强引用若引用虚引用和幻象引用的区别)
+      * [final、finally 和 finalize() 的区别](#finalfinally-和-finalize-的区别)
+      * [内部类有哪些分类，分别解释一下](#内部类有哪些分类分别解释一下)
+      * [说出几种常用的异常](#说出几种常用的异常)
+      * [静态绑定和动态绑定的区别](#静态绑定和动态绑定的区别)
+         * [绑定](#绑定)
+         * [静态绑定](#静态绑定)
+         * [动态绑定](#动态绑定)
+         * [动态绑定和静态绑定的特点](#动态绑定和静态绑定的特点)
 
 ## Java 基础篇
 
@@ -854,8 +902,7 @@ Son 类继承 Father 类，并重写了父类的 dringMilk() 方法，在输出�
 
 2、多态是设计模式的基础，能够降低耦合性。
 
-我发起了一个 Github 项目，地址是 https://github.com/crisxuan/bestJavaer，欢迎各位 star，下面是具体介绍
+![image-20210716163352584](https://tva1.sinaimg.cn/large/008i3skNly1gsivkbczxoj31l20t8al5.jpg)
 
-![](https://img2020.cnblogs.com/blog/1515111/202006/1515111-20200612143357701-631076981.png)
-
+![image-20210716163433337](https://tva1.sinaimg.cn/large/008i3skNly1gsivl4khz9j31d60h8mze.jpg)
 

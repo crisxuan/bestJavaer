@@ -429,3 +429,7 @@ int 是 C 语言的一个 `关键字(keyword)`，表示一种基本的 C 语言�
 
 这篇文章我们先介绍了 C 语言的特性，C 语言为什么这么火，C 语言的重要性，之后我们以一道 C 语言的入门程序讲起，我们讲了 C 语言的基本构成要素，C 语言在硬件上是如何运行的，C 语言的编译过程和执行过程等，在这之后我们又加深讲解了一下入门例子程序的组成特征。
 
+![image-20210716163352584](https://tva1.sinaimg.cn/large/008i3skNly1gsivkbczxoj31l20t8al5.jpg)
+
+![image-20210716163433337](https://tva1.sinaimg.cn/large/008i3skNly1gsivl4khz9j31d60h8mze.jpg)
+

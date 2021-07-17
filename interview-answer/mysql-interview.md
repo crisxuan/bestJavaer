@@ -1,6 +1,33 @@
-
-
 # MySQL 常见面试题
+
+* [MySQL 常见面试题](#mysql-常见面试题)
+   * [非关系型数据库和关系型数据库区别，优势比较](#非关系型数据库和关系型数据库区别优势比较)
+   * [MySQL 事务四大特性](#mysql-事务四大特性)
+   * [MySQL 常见存储引擎的区别](#mysql-常见存储引擎的区别)
+      * [MyISAM 存储引擎的特点](#myisam-存储引擎的特点)
+      * [InnoDB 存储引擎的特点](#innodb-存储引擎的特点)
+      * [MyISAM 和 InnoDB 存储引擎的对比](#myisam-和-innodb-存储引擎的对比)
+   * [MySQL 基础架构](#mysql-基础架构)
+      * [连接器](#连接器)
+      * [查询缓存](#查询缓存)
+      * [分析器](#分析器)
+      * [优化器](#优化器)
+      * [执行器](#执行器)
+   * [SQL 的执行顺序](#sql-的执行顺序)
+      * [FROM 连接](#from-连接)
+      * [ON 过滤](#on-过滤)
+      * [JOIN 连接](#join-连接)
+      * [WHERE 过滤](#where-过滤)
+      * [GROUP BY](#group-by)
+      * [HAVING](#having)
+      * [SELECT](#select)
+      * [DISTINCT](#distinct)
+      * [ORDER BY](#order-by)
+   * [什么是临时表，何时删除临时表](#什么是临时表何时删除临时表)
+   * [MySQL 常见索引类型](#mysql-常见索引类型)
+   * [varchar 和 char 的区别和使用场景](#varchar-和-char-的区别和使用场景)
+   * [什么是 内连接、外连接、交叉连接、笛卡尔积](#什么是-内连接外连接交叉连接笛卡尔积)
+   * [谈谈 SQL 优化的经验](#谈谈-sql-优化的经验)
 
 MySQL 一直是本人很薄弱的部分，后面会多输出 MySQL 的文章贡献给大家，毕竟 MySQL 涉及到数据存储、锁、磁盘寻道、分页等操作系统概念，而且互联网对 MySQL 的注重程度是不言而喻的，后面要加紧对 MySQL 的研究。写的如果不好，还请大家见谅。
 
@@ -414,58 +441,7 @@ MySQL 中没有 nvarchar 数据类型，所以直接比较的是 varchar 和 cha
 >
 >垂直分割：将经常一起使用的字段放在一个单独的表中，分割后的表记录之间是一一对应关系。
 
+![image-20210716163352584](https://tva1.sinaimg.cn/large/008i3skNly1gsivkbczxoj31l20t8al5.jpg)
 
-文章参考：
-
-https://www.cnblogs.com/sharpest/p/10390035.html
-
-https://blog.csdn.net/yl2isoft/article/details/17205413
-
-https://www.cnblogs.com/jinianjun/archive/2011/11/08/2240525.html
-
-https://www.cnblogs.com/huihuixi/p/12155165.html
-
-https://www.php.cn/faq/418056.html
-
-https://blog.csdn.net/w516162189/article/details/78914035
-
-https://baike.baidu.com/item/聚集索引/11041381?fr=aladdin
-
-https://blog.csdn.net/riemann_/article/details/90324846
-
-https://blog.csdn.net/qq_39101581/article/details/82461076
-
-https://blog.csdn.net/csdn_hklm/article/details/78394412
-
-https://zhidao.baidu.com/question/307471035920165604.html
-
-https://www.zhihu.com/question/24225007
-
-https://baike.baidu.com/item/索引/5716853
-
-https://www.cnblogs.com/ghostwu/p/8544333.html
-
-https://www.cnblogs.com/yuxiuyan/p/6511837.html
-
-https://www.jb51.net/article/147261.htm
-
-https://www.cnblogs.com/zhangchaocoming/p/11380724.html
-
-https://baike.baidu.com/item/myisam/8970102?fr=aladdin
-
-https://segmentfault.com/a/1190000019400925
-
-https://www.csdn.net/gather_2e/MtTaEg4sNDk5MC1ibG9n.html
-
-《极客时间》- MySQL实战45讲
-
-https://www.cnblogs.com/wyaokai/p/10921323.html
-
-https://www.cnblogs.com/hhhhuanzi/p/12296776.html
-
-https://zhidao.baidu.com/question/55127810.html
-
-https://www.cnblogs.com/limuzi1994/p/9684083.html
-
-![](https://img2020.cnblogs.com/blog/1515111/202004/1515111-20200418094321064-785289214.png)
+![image-20210716163433337](https://tva1.sinaimg.cn/large/008i3skNly1gsivl4khz9j31d60h8mze.jpg)
 

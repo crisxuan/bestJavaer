@@ -1,6 +1,27 @@
 # HTTP 常见面试题
 
-[toc]
+* [HTTP 常见面试题](#http-常见面试题)
+   * [HTTP 和 HTTPS 的区别](#http-和-https-的区别)
+   * [HTTP Get 和 Post 区别](#http-get-和-post-区别)
+   * [什么是无状态协议，HTTP 是无状态协议吗，怎么解决](#什么是无状态协议http-是无状态协议吗怎么解决)
+   * [UDP 和 TCP 的区别](#udp-和-tcp-的区别)
+      * [UDP 是什么](#udp-是什么)
+      * [TCP 是什么](#tcp-是什么)
+      * [TCP 和 UDP 的不同](#tcp-和-udp-的不同)
+   * [TCP 三次握手和四次挥手](#tcp-三次握手和四次挥手)
+      * [TCP 三次握手](#tcp-三次握手)
+      * [TCP 四次挥手](#tcp-四次挥手)
+   * [简述 HTTP1.0/1.1/2.0 的区别](#简述-http101120-的区别)
+      * [HTTP 1.0](#http-10)
+      * [HTTP 1.1](#http-11)
+      * [HTTP 2.0](#http-20)
+   * [请你说一下 HTTP 常见的请求头](#请你说一下-http-常见的请求头)
+      * [通用标头](#通用标头)
+      * [实体标头](#实体标头)
+      * [请求标头](#请求标头)
+      * [响应标头](#响应标头)
+   * [地址栏输入 URL 发生了什么](#地址栏输入-url-发生了什么)
+   * [HTTPS 的工作原理](#https-的工作原理)
 
 ## HTTP 和 HTTPS 的区别
 
@@ -451,33 +472,7 @@ TLS 具体的握手过程会根据所使用的`密钥交换算法的类型`和�
 
 * `实现了安全的非对称加密`：然后，服务器再发送 `ChangeCipherSpec` 和 `Finished` 告诉客户端解密完成，至此实现了 RSA 的非对称加密。
 
+![image-20210716163352584](https://tva1.sinaimg.cn/large/008i3skNly1gsivkbczxoj31l20t8al5.jpg)
 
-文章参考：
+![image-20210716163433337](https://tva1.sinaimg.cn/large/008i3skNly1gsivl4khz9j31d60h8mze.jpg)
 
-[What is a TLS handshake?](https://www.cloudflare.com/learning/ssl/what-happens-in-a-tls-handshake/)
-
-[Recursive and Iterative DNS Queries](https://www.omnisecu.com/tcpip/recursive-and-iterative-dns-queries.php)
-
-[DNS递归查询与迭代查询](https://www.cnblogs.com/qingdaofu/p/7399670.html)
-
-[TCP三次握手和四次挥手过程](https://www.cnblogs.com/Andya/p/7272462.html)
-
-[HTTP/1.0 AND 1.1, WHAT ARE THE DIFFERENCES?](https://www.dosarrest.com/ddos-blog/http1-0-and-1-1-what-are-the-differences/)
-
-[TCP Connection Termination](https://www.geeksforgeeks.org/tcp-connection-termination/)
-
-[Transmission_Control_Protocol](https://en.wikipedia.org/wiki/Transmission_Control_Protocol#Connection_establishment)
-
-[SYN](https://baike.baidu.com/item/syn)
-
-[TCP 3-Way Handshake (SYN, SYN-ACK,ACK)](https://www.guru99.com/tcp-3-way-handshake.html)
-
-[HTTP/2 相比 1.0 有哪些重大改进？](https://www.zhihu.com/question/34074946)
-
-[TCP vs UDP: What's the Difference?](https://www.guru99.com/tcp-vs-udp-understanding-the-difference.html)
-
-[计算机网络7层模型](https://blog.csdn.net/yuqilin520/article/details/82915269)
-
-[HTTP常见面试题](https://blog.csdn.net/yicixing7/article/details/79320821)
-
-![](https://img2020.cnblogs.com/blog/1515111/202004/1515111-20200420070706562-1307313439.png)

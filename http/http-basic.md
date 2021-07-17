@@ -1,5 +1,56 @@
 # 带你一步步解析 HTTP
 
+* [带你一步步解析 HTTP](#带你一步步解析-http)
+   * [认识 HTTP](#认识-http)
+      * [什么是超文本](#什么是超文本)
+      * [什么是传输](#什么是传输)
+      * [什么是协议](#什么是协议)
+   * [与 HTTP 有关的组件](#与-http-有关的组件)
+      * [网络模型](#网络模型)
+         * [应用层](#应用层)
+         * [运输层](#运输层)
+         * [网络层](#网络层)
+         * [链路层](#链路层)
+         * [物理层](#物理层)
+      * [OSI 模型](#osi-模型)
+      * [浏览器](#浏览器)
+      * [Web 服务器](#web-服务器)
+      * [CDN](#cdn)
+      * [WAF](#waf)
+      * [WebService](#webservice)
+      * [HTML](#html)
+      * [Web 页面构成](#web-页面构成)
+   * [与 HTTP 有关的协议](#与-http-有关的协议)
+      * [TCP/IP](#tcpip)
+      * [DNS](#dns)
+      * [URI / URL](#uri--url)
+      * [HTTPS](#https)
+   * [HTTP 请求响应过程](#http-请求响应过程)
+   * [HTTP 请求特征](#http-请求特征)
+   * [详解 HTTP 报文](#详解-http-报文)
+      * [HTTP 请求方法](#http-请求方法)
+      * [HTTP 请求 URL](#http-请求-url)
+      * [HTTP 版本](#http-版本)
+      * [请求头部](#请求头部)
+         * [通用标头](#通用标头)
+         * [实体标头](#实体标头)
+         * [请求标头](#请求标头)
+         * [内容协商](#内容协商)
+         * [响应标头](#响应标头)
+      * [非 HTTP/1.1 首部字段](#非-http11-首部字段)
+      * [End-to-end 首部和 Hop-by-hop 首部](#end-to-end-首部和-hop-by-hop-首部)
+         * [End-to-end（端到端） 首部](#end-to-end端到端-首部)
+         * [Hop-by-hop（逐跳） 首部](#hop-by-hop逐跳-首部)
+   * [HTTP 的优点和缺点](#http-的优点和缺点)
+      * [HTTP 的优点](#http-的优点)
+         * [简单灵活易扩展](#简单灵活易扩展)
+         * [应用广泛、环境成熟](#应用广泛环境成熟)
+         * [无状态](#无状态)
+      * [HTTP 的缺点](#http-的缺点)
+         * [无状态](#无状态-1)
+         * [明文](#明文)
+         * [性能](#性能)
+
 我是一名程序员，我的主要编程语言是 Java，我更是一名 Web 开发人员，所以我必须要了解 HTTP，所以本篇文章就来带你从 HTTP 入门到进阶，看完让你有一种恍然大悟、醍醐灌顶的感觉。
 
 最初在有网络之前，我们的电脑都是单机的，单机系统是孤立的，我还记得 05 年前那会儿家里有个电脑，想打电脑游戏还得两个人在一个电脑上玩儿，及其不方便。我就想为什么家里人不让上网，我的同学 xxx 家里有网，每次一提这个就落一通批评：xxx上xxx什xxxx么xxxx网xxxx看xxxx你xxxx考xxxx的xxxx那xxxx点xxxx分。虽然我家里没有上网，但是此时互联网已经在高速发展了，HTTP 就是高速发展的一个产物。
@@ -719,28 +770,7 @@ HTTP 协议里还有一把优缺点一体的双刃剑，就是**明文传输**�
 
 HTTP 的性能不算差，但不完全适应现在的互联网，还有很大的提升空间。
 
-![](https://img2020.cnblogs.com/blog/1515111/202006/1515111-20200603170910090-837533246.png)
+![image-20210716163352584](https://tva1.sinaimg.cn/large/008i3skNly1gsivkbczxoj31l20t8al5.jpg)
 
-参考资料：
+![image-20210716163433337](https://tva1.sinaimg.cn/large/008i3skNly1gsivl4khz9j31d60h8mze.jpg)
 
-https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Technical_overview
-
-《极客时间》- 透视 HTTP 协议
-
-https://developer.mozilla.org/en-US/docs/Web/HTTP
-
-https://baike.baidu.com/item/WEB服务器/8390210?fr=aladdin
-
-https://baike.baidu.com/item/内容分发网络/4034265
-
-https://baike.baidu.com/item/HTML/97049?fr=aladdin
-
-https://www.jianshu.com/p/3dd8f1879acb
-
-《计算机网络-自顶向下方法》
-
-《图解 HTTP》
-
-[HTTP协议的内容协商](https://www.cnblogs.com/hellohuman/p/3989904.html)
-
-https://www.w3school.com.cn/tags/att_form_accept_charset.asp

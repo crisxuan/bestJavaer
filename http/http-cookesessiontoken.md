@@ -1,5 +1,31 @@
 # Cooke、Session 和 Token
 
+* [Cooke、Session 和 Token](#cookesession-和-token)
+   * [Cookie 和 Session](#cookie-和-session)
+      * [Session 是什么](#session-是什么)
+      * [Session 如何判断是否是同一会话](#session-如何判断是否是同一会话)
+      * [Session 的缺点](#session-的缺点)
+      * [Cookies 是什么](#cookies-是什么)
+      * [创建 Cookie](#创建-cookie)
+         * [Set-Cookie 和 Cookie 标头](#set-cookie-和-cookie-标头)
+         * [会话 Cookies](#会话-cookies)
+         * [永久性 Cookies](#永久性-cookies)
+         * [Cookie 的 Secure 和 HttpOnly 标记](#cookie-的-secure-和-httponly-标记)
+      * [Cookie 的作用域](#cookie-的作用域)
+   * [JSON Web Token 和 Session Cookies 的对比](#json-web-token-和-session-cookies-的对比)
+      * [JWT 和 Session Cookies 的相同之处](#jwt-和-session-cookies-的相同之处)
+      * [什么是 Session Cookies](#什么是-session-cookies)
+      * [什么是 Json Web Tokens](#什么是-json-web-tokens)
+         * [JWT 的格式](#jwt-的格式)
+         * [拼凑在一起](#拼凑在一起)
+      * [JWT 和 Session Cookies 的不同](#jwt-和-session-cookies-的不同)
+         * [密码签名](#密码签名)
+         * [JSON 是无状态的](#json-是无状态的)
+         * [可扩展性](#可扩展性)
+         * [JWT 支持跨域认证](#jwt-支持跨域认证)
+      * [JWT 和 Session Cookies 的选型](#jwt-和-session-cookies-的选型)
+   * [后记](#后记)
+
 ![](https://img2020.cnblogs.com/blog/1515111/202004/1515111-20200405090920745-1422513552.png)
 
 
@@ -286,26 +312,7 @@ Session Cookies 只能用在`单个节点的域`或者它的`子域`中有效。
 * 如果禁用了 Cookies，服务器仍会将 sessionId 以 cookie 的方式发送给浏览器，但是，浏览器不再保存这个cookie (即sessionId) 了。
 * 如果想要继续使用 session，需要采用 `URL 重写` 的方式来实现，可以参考 https://www.cnblogs.com/Renyi-Fan/p/11012086.html
 
+![image-20210716163352584](https://tva1.sinaimg.cn/large/008i3skNly1gsivkbczxoj31l20t8al5.jpg)
 
+![image-20210716163433337](https://tva1.sinaimg.cn/large/008i3skNly1gsivl4khz9j31d60h8mze.jpg)
 
-相关参考：
-
-https://www.cnblogs.com/Renyi-Fan/p/11012086.html
-
-https://blog.csdn.net/qq_28296925/article/details/80921585
-
-https://www.cnblogs.com/-ROCKS/p/6108556.html
-
-https://www.allaboutcookies.org/manage-cookies/
-
-https://www.jianshu.com/p/4a124a10fcaf
-
-https://tools.ietf.org/html/rfc7519
-
-https://jwt.io/introduction/
-
-https://wp-rocket.me/blog/browser-cache-vs-cookies-difference/
-
-https://wp-rocket.me/blog/difference-json-web-tokens-vs-session-cookies/
-
-![](https://img2020.cnblogs.com/blog/1515111/202004/1515111-20200405090605799-2074553394.png

@@ -1,5 +1,83 @@
 # HTTP 进阶
 
+[HTTP 进阶](#http-进阶)
+   * [HTTP 内容协商](#http-内容协商)
+      * [什么是内容协商](#什么是内容协商)
+      * [内容协商的种类](#内容协商的种类)
+      * [为什么需要内容协商](#为什么需要内容协商)
+      * [内容协商标头](#内容协商标头)
+         * [Accept](#accept)
+         * [Accept-Charset](#accept-charset)
+         * [Accept-Language](#accept-language)
+         * [Accept-Encoding](#accept-encoding)
+         * [Content-Type](#content-type)
+         * [Content-Encoding](#content-encoding)
+      * [Content-Language](#content-language)
+   * [HTTP 认证](#http-认证)
+      * [通用 HTTP 认证框架](#通用-http-认证框架)
+      * [代理认证](#代理认证)
+         * [Proxy-Authenticate](#proxy-authenticate)
+         * [Proxy-Authorization](#proxy-authorization)
+      * [禁止访问](#禁止访问)
+         * [WWW-Authenticate 和 Proxy-Authenticate 头](#www-authenticate-和-proxy-authenticate-头)
+         * [Authorization 和 Proxy-Authorization 标头](#authorization-和-proxy-authorization-标头)
+   * [HTTP 缓存](#http-缓存)
+      * [不同类型的缓存](#不同类型的缓存)
+         * [不缓存过期资源](#不缓存过期资源)
+         * [私有缓存](#私有缓存)
+         * [共享缓存](#共享缓存)
+      * [缓存控制](#缓存控制)
+         * [不缓存](#不缓存)
+         * [缓存但需要验证](#缓存但需要验证)
+         * [私有和共享缓存](#私有和共享缓存)
+         * [缓存过期](#缓存过期)
+         * [缓存验证](#缓存验证)
+      * [什么是新鲜的数据](#什么是新鲜的数据)
+      * [缓存验证](#缓存验证-1)
+         * [Etag](#etag)
+         * [避免碰撞](#避免碰撞)
+         * [缓存未占用资源](#缓存未占用资源)
+   * [HTTP CROS 跨域](#http-cros-跨域)
+      * [Origin](#origin)
+      * [跨域的特点](#跨域的特点)
+      * [同源策略](#同源策略)
+      * [跨域请求](#跨域请求)
+      * [跨域功能概述](#跨域功能概述)
+      * [访问控制](#访问控制)
+         * [简单请求](#简单请求)
+         * [预检请求](#预检请求)
+         * [带凭证的请求](#带凭证的请求)
+         * [Access-Control-Allow-Origin](#access-control-allow-origin)
+         * [Access-Control-Allow-Credentials](#access-control-allow-credentials)
+         * [Access-Control-Allow-Headers](#access-control-allow-headers)
+         * [Access-Control-Allow-Methods](#access-control-allow-methods)
+         * [Access-Control-Expose-Headers](#access-control-expose-headers)
+         * [Access-Control-Max-Age](#access-control-max-age)
+         * [Access-Control-Request-Headers](#access-control-request-headers)
+         * [Origin](#origin-1)
+   * [HTTP 条件请求](#http-条件请求)
+      * [原则](#原则)
+      * [验证](#验证)
+         * [强验证](#强验证)
+         * [弱验证](#弱验证)
+      * [条件请求](#条件请求)
+         * [If-Match](#if-match)
+         * [If-None-Match](#if-none-match)
+         * [If-Modified-Since](#if-modified-since)
+         * [If-Range](#if-range)
+         * [If-Unmodified-Since](#if-unmodified-since)
+      * [条件请求示例](#条件请求示例)
+         * [缓存更新](#缓存更新)
+         * [断点续传](#断点续传)
+         * [通过乐观锁避免丢失更新](#通过乐观锁避免丢失更新)
+   * [HTTP Cookies](#http-cookies)
+      * [创建 Cookie](#创建-cookie)
+         * [Set-Cookie 和 Cookie 标头](#set-cookie-和-cookie-标头)
+         * [会话 Cookies](#会话-cookies)
+         * [永久性 Cookies](#永久性-cookies)
+         * [Cookie的 Secure 和 HttpOnly 标记](#cookie的-secure-和-httponly-标记)
+      * [Cookie 的作用域](#cookie-的作用域)
+
 这是 HTTP 系列的第三篇文章，此篇文章为 HTTP 的进阶文章。
 
 在前面两篇文章中我们讲述了 HTTP 的入门，HTTP 所有常用标头的概述，这篇文章我们来聊一下 HTTP 的一些 `黑科技`。
@@ -1281,17 +1359,7 @@ Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT;
 - `/docs/Web/`
 - `/docs/Web/HTTP`
 
-![](https://img2020.cnblogs.com/blog/1515111/202006/1515111-20200603170910090-837533246.png)
+![image-20210716163352584](https://tva1.sinaimg.cn/large/008i3skNly1gsivkbczxoj31l20t8al5.jpg)
 
+![image-20210716163433337](https://tva1.sinaimg.cn/large/008i3skNly1gsivl4khz9j31d60h8mze.jpg)
 
-文章参考：
-
-https://developer.mozilla.org/en-US/docs/
-
-https://www.jianshu.com/p/5c41c536d47f
-
-https://www.w3schools.com/php/default.asp
-
-https://www.jianshu.com/p/ea485e5665b3
-
-https://blog.csdn.net/qq_38098125/article/details/101213336

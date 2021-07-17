@@ -312,3 +312,14 @@ cxuan $
 当系统从主存复制一串字节到网络适配器时，数据流经过网络到达另一台机器，而不是说到达本地磁盘驱动器。类似的，系统可以读取其他系统发送过来的数据，把数据复制到自己的主存中。
 
 随着 internet 的出现，数据从一台主机复制到另一台主机的情况已经成为最重要的用途之一。比如，像电子邮件、即时通讯、FTP 和 telnet 这样的应用都是基于网络复制信息的功能。
+
+![image-20210716163352584](https://tva1.sinaimg.cn/large/008i3skNly1gsivkbczxoj31l20t8al5.jpg)
+
+![image-20210716163433337](https://tva1.sinaimg.cn/large/008i3skNly1gsivl4khz9j31d60h8mze.jpg)
+
+
+
+
+
+
+
