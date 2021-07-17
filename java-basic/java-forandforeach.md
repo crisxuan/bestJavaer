@@ -1,5 +1,14 @@
 # for 、foreach 、iterator 三种遍历方式的比较
 
+* [for 、foreach 、iterator 三种遍历方式的比较](#for-foreach-iterator-三种遍历方式的比较)
+      * [习惯用法](#习惯用法)
+      * [速度对比](#速度对比)
+      * [remove操作三种遍历方式的影响](#remove操作三种遍历方式的影响)
+         * [for循环的remove](#for循环的remove)
+         * [foreach 中的remove](#foreach-中的remove)
+         * [Iterator迭代器的remove](#iterator迭代器的remove)
+         * [后记：](#后记)
+
 ### 习惯用法
 
 **for、foreach循环、iterator迭代器**都是我们常用的一种遍历方式，你可以用它来遍历任何东西：包括数组、集合等

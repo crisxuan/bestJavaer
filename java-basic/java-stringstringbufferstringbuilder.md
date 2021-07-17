@@ -1,5 +1,19 @@
 # String、StringBuffer 和 StringBuilder 的区别
 
+* [String、StringBuffer 和 StringBuilder 的区别](#stringstringbuffer-和-stringbuilder-的区别)
+   * [碎碎念](#碎碎念)
+   * [简单认识这三个对象](#简单认识这三个对象)
+      * [String](#string)
+      * [StringBuffer](#stringbuffer)
+      * [StringBuilder](#stringbuilder)
+   * [深入理解 String、StringBuilder、StringBuffer](#深入理解-stringstringbuilderstringbuffer)
+      * [从设计角度理解](#从设计角度理解)
+      * [String](#string-1)
+      * [StringBuilder](#stringbuilder-1)
+      * [StringBuffer](#stringbuffer-1)
+      * [StringBuilder 和 StringBuffer 的扩容问题](#stringbuilder-和-stringbuffer-的扩容问题)
+   * [总结](#总结)
+
 ## 碎碎念
 
 这是一道老生常谈的问题了，字符串是不仅是 Java 中非常重要的一个对象，它在其他语言中也存在。比如 **C++、Visual Basic、C# 等**。字符串使用 String 来表示，字符串一旦被创建出来就不会被修改，当你想修改 StringBuffer 或者是 StringBuilder，出于效率的考量，虽然 String 可以通过 + 来创建多个对象达到字符串拼接的效果，但是这种拼接的效率相比 StringBuffer 和 StringBuilder，那就是心有余而力不足了。本篇文章我们一起来深入了解一下这三个对象。

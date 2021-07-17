@@ -1,12 +1,22 @@
 # Java 代理
 
+* [Java 代理](#java-代理)
+   * [代理模式](#代理模式)
+   * [静态代理与动态代理](#静态代理与动态代理)
+   * [常见的动态代理实现](#常见的动态代理实现)
+      * [JDK Proxy](#jdk-proxy)
+      * [CGLIB](#cglib)
+      * [JDK Proxy 和 CGLIB 的对比](#jdk-proxy-和-cglib-的对比)
+   * [动态代理的实际应用](#动态代理的实际应用)
+      * [Spring AOP](#spring-aop)
+
 说在前面：今天我们来聊一聊 Java 中的代理，先来聊聊故事背景：
 
 > 小明想购买法国某个牌子的香水送给女朋友，但是在国内没有货源售卖，亲自去法国又大费周章了，而小红现在正在法国玩耍，她和小明是好朋友，可以帮小明买到这个牌子的香水，于是小明就找到小红，答应给她多加 5% 的辛苦费，小红答应了，小明成功在中国买到了法国的香水。之后小红开启了疯狂的代购模式，赚到了很多手续费。
 
 在故事中，**小明是一个客户**，它让小红帮忙购买香水，**小红就成了一个代理对象**，而**香水提供商是一个真实的对象**，可以售卖香水，小明通过代理商小红，购买到法国的香水，这就是一个代购的例子。我画了一幅图帮助理解这个故事的整个结构。
 
-![](http://cdn.smallpineapple.top/image-20200819211449689.png)
+![image-20210717193558393](https://tva1.sinaimg.cn/large/008i3skNly1gsk6g2jo25j311c0940u6.jpg)
 
 这个故事是最典型的代理模式，代购从供应商购买货物后返回给调用者，也就是需要代理的小明。
 
@@ -91,11 +101,11 @@ public class XiaoMing {
 
 我们来看看运行结果，小红在向小明售卖香水前可以执行额外的其它操作，如果良心点的代购就会**打折、包邮···**，如果黑心点的代购就会**加手续费、售出不退还···**，是不是很刺激。
 
-![image-20200819212607989](http://cdn.smallpineapple.top/image-20200819212607989.png)
+![image-20210717193646964](https://tva1.sinaimg.cn/large/008i3skNly1gsk6gwghsuj311e0csq4d.jpg)
 
 我们来看看上面 4 个类组成的类图关系结构，可以发现**小红**和**香奈儿提供商**都实现了**售卖香水**这一接口，而小红内部增加了对提供商的引用，用于调用提供商的售卖香水功能。
 
-![image-20200819214058888](http://cdn.smallpineapple.top/image-20200819214058888.png)
+![image-20210717193655961](https://tva1.sinaimg.cn/large/008i3skNly1gsk6h1vp6rj31160iwtbd.jpg)
 
 实现代理模式，需要走以下几个步骤：
 
@@ -139,7 +149,7 @@ public class XiaoMing {
 
 - 小何访问小红，让小红卖给他红酒
 
-![image-20200820082820488](http://cdn.smallpineapple.top/image-20200820082820488.png)
+![image-20210717193705678](https://tva1.sinaimg.cn/large/008i3skNly1gsk6h80xflj311e0kodij.jpg)
 
 OK，事已至此，代码就不重复写了，我们来探讨一下，面对这种新增的场景，上面的这种实现方法有没有什么缺陷呢？
 
@@ -167,7 +177,7 @@ JDK Proxy 是 JDK 提供的一个动态代理机制，它涉及到两个核心�
 
 以小红代理卖香水的故事为例，香奈儿香水提供商依旧是真实对象，实现了`SellPerfume`接口，这里不再重新写了，重点是**小红代理**，这里的代理对象不再是小红一个人，而是一个**代理工厂**，里面会有许多的代理对象。我画了一幅图，你看了之后会很好理解：
 
-![image-20200820085642788](http://cdn.smallpineapple.top/image-20200820085642788.png)
+![image-20210717193714779](https://tva1.sinaimg.cn/large/008i3skNly1gsk6hdkxkij31140gumzj.jpg)
 
 小明来到代理工厂，需要购买一款法国在售的香奈儿香水，那么工厂就会**找一个可以实际的代理对象（动态实例化）**分配给小明，例如小红或者小花，让该代理对象完成小明的需求。**该代理工厂含有无穷无尽的代理对象可以分配，且每个对象可以代理的事情可以根据程序的变化而动态变化，无需修改代理工厂。**
 
@@ -175,7 +185,7 @@ JDK Proxy 是 JDK 提供的一个动态代理机制，它涉及到两个核心�
 
 我们看一下动态代理的 UML 类图结构长什么样子。
 
-![image-20200820090834069](http://cdn.smallpineapple.top/image-20200821113009611.png)
+![image-20210717193724578](https://tva1.sinaimg.cn/large/008i3skNly1gsk6hjqoo3j31180imacf.jpg)
 
 可以看到和静态代理区别不大，唯一的变动是代理对象，我做了标注：**由代理工厂生产**。
 
@@ -255,7 +265,7 @@ public class XiaoMing {
 
 > 注意看下图，相比`静态代理`的前置增强和后置增强，少了**小红**二字，实际上代理工厂分配的代理对象是随机的，不会针对某一个具体的代理对象，所以每次生成的代理对象都不一样，也就不确定是不是小红了，但是能够唯一确定的是，**这个代理对象能和小红一样帮小明买到香水！**
 
-![image-20200820104319179](http://cdn.smallpineapple.top/image-20200820104319179.png)
+![image-20210717193917931](https://tva1.sinaimg.cn/large/008i3skNly1gsk6jjgd58j311q0emta4.jpg)
 
 按照之前的故事线发展，小红去代理红酒，而**小明又想买法国的名牌红酒**，所以去找代理工厂，让它再分配一个人帮小明买红酒，代理工厂说：“当然没问题！我们是专业的！等着！”
 
@@ -299,7 +309,7 @@ public class XiaoMing {
 
 期待一下执行结果，你会很惊喜地发现，居然也能够代理售卖红酒了，但是我们**没有修改代理工厂**。
 
-![image-20200820105337247](http://cdn.smallpineapple.top/image-20200820105337247.png)
+![image-20210717193928366](https://tva1.sinaimg.cn/large/008i3skNly1gsk6jowi24j311k0e8dh7.jpg)
 
 回顾一下我们新增红酒代理功能时，需要`2`个步骤：
 
@@ -399,7 +409,7 @@ apply() 方法中注意有**两个非常重要的方法**：
 
 而 `proxyName` 是代理对象的名字，我们可以看到它利用了 **proxyClassNamePrefix + 计数器** 拼接成一个新的名字。所以在 DEBUG 时，停留在代理对象变量上，你会发现变量名是`$Proxy0`。
 
-![image-20200821110425359](http://cdn.smallpineapple.top/image-20200821110425359.png)
+![image-20210717193940478](https://tva1.sinaimg.cn/large/008i3skNly1gsk6jwvg1jj31180dotal.jpg)
 
 到了这里，源码分析完了，是不是感觉被掏空了？哈哈哈哈，其实我当时也有这种感觉，不过现在你也感觉到，JDK 的动态代理其实并不是特别复杂吧（只要你有毅力）
 
@@ -428,7 +438,7 @@ CGLIB不仅能够为 Java接口 做代理，而且**能够为普通的 Java类 �
 
 （2）CGLIB 代理中有两个核心的类：`MethodInterceptor`接口 和 `Enhancer`类，前者是实现一个代理工厂的根接口，后者是创建动态代理对象的类，在这里我再贴一次故事的结构图，帮助你们理解。
 
-![image-20200821113009611](http://cdn.smallpineapple.top/image-20200821113009611.png)
+![image-20210717193951153](https://tva1.sinaimg.cn/large/008i3skNly1gsk6k3e37lj311i0iitb3.jpg)
 
 首先我们来定义代理工厂`SellProxyFactory`。
 
@@ -529,7 +539,7 @@ public class XiaoMing {
 
 **AOP 可以将这些重复性的代码包装到额外的一层，监听方法的执行，当方法被调用时，通用的日志记录层会拦截掉该方法，在该方法调用前后记录日志，这样可以让方法专注于自己的业务逻辑而无需关注其它不必要的信息。**
 
-![2](http://cdn.smallpineapple.top/2-1597982180559.gif)
+<img src="https://mmbiz.qpic.cn/mmbiz_gif/libYRuvULTdWACbPmP3IthmrrO6mkE1YtPpC51RzVtTGyS2nCjrMfRSoU8qrnNicFfFjeQZOGQvJibdibmiciahRMOXA/640?wx_fmt=gif&tp=webp&wxfrom=5&wx_lazy=1">
 
 Spring AOP 有许多功能：提供缓存、提供日志环绕、事务处理······在这里，我会以**事务**作为例子向你讲解 Spring 底层是如何使用动态代理的。
 
@@ -555,3 +565,4 @@ try{
 ```
 
 如果多个方法都需要写这一段逻辑非常冗余，所以 Spring 给我们封装了一个注解 @Transactional，使用它后，调用方法时会监视方法，如果方法上含有该注解，就会自动帮我们把数据库相关操作的代码包裹起来，最终形成类似于上面的一段代码原理，当然这里并不准确，只是给你们一个大概的总览，了解Spring AOP 的本质在干什么，这篇文章讲解到这里，知识量应该也非常多了，好好消化上面的知识点，为后面的 Spring AOP 专题学习打下坚实的基础。
+

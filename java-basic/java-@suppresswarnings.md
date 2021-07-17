@@ -1,5 +1,11 @@
 # @SuppressWarnings 用法
 
+* [@SuppressWarnings 用法](#suppresswarnings-用法)
+   * [Idea 设置泛型检查，变量、方法未使用检查](#idea-设置泛型检查变量方法未使用检查)
+      * [设置泛型检查](#设置泛型检查)
+      * [设置变量未使用提示](#设置变量未使用提示)
+      * [变量未使用产生的警告](#变量未使用产生的警告)
+
 从Java 5.0起，您可以使用`java.lang.SuppressWarning`注释，来停用与编译单元子集相关的编译警告
 
 **作用**：用于抑制编译器产生警告信息。
@@ -160,12 +166,11 @@ https://blog.csdn.net/codejas/article/details/78657560
 - unqualified-field-access，抑制与栏位存取不合格相关的警告
 - unused，抑制与未用的程式码及停用的程式码相关的警告
 
-
-
 文章参考： https://www.ibm.com/support/knowledgecenter/zh-tw/SSQ2R2_9.1.1/org.eclipse.jdt.doc.user/tasks/task-suppress_warnings.htm 
-
-
 
 **后记: @SuppressWarning 注解的主要作用就是抑制编译时期所产生的警告，从而提高程序的可读性，对于上面 @SuppressWarning 的所有属性，读者不用全部记忆，读两遍加深印象即可。用到的时候从google或者本文章都可查询**
 
-![](https://img2020.cnblogs.com/blog/1515111/202006/1515111-20200603165518324-2057242740.png)
+![image-20210716163352584](https://tva1.sinaimg.cn/large/008i3skNly1gsivkbczxoj31l20t8al5.jpg)
+
+![image-20210716163433337](https://tva1.sinaimg.cn/large/008i3skNly1gsivl4khz9j31d60h8mze.jpg)
+

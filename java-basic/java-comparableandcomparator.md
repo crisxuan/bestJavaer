@@ -1,5 +1,15 @@
 # Comparable 和 Comparator的理解
 
+* [Comparable 和 Comparator的理解](#comparable-和-comparator的理解)
+   * [对Comparable 的解释](#对comparable-的解释)
+      * [compareTo()方法与equals()方法的比较](#compareto方法与equals方法的比较)
+      * [代码](#代码)
+         * [compareTo()方法抛出异常](#compareto方法抛出异常)
+   * [对Comparator 的解释](#对comparator-的解释)
+      * [Comparator比较器的方法](#comparator比较器的方法)
+      * [代码实现](#代码实现)
+   * [Comparable 和 Comparator 的对比](#comparable-和-comparator-的对比)
+
 ## 对Comparable 的解释
 
 Comparable是一个排序接口 
@@ -183,8 +193,7 @@ public class ComparatorTest {
 
 而对于一些自定义类，它们可能在不同情况下需要实现不同的比较策略，我们可以新创建 Comparator 接口，然后使用特定的 Comparator 实现进行比较。
 
+![image-20210716163352584](https://tva1.sinaimg.cn/large/008i3skNly1gsivkbczxoj31l20t8al5.jpg)
 
-![](https://img2020.cnblogs.com/blog/1515111/202006/1515111-20200603165626533-759227841.png)
-
-​		
+![image-20210716163433337](https://tva1.sinaimg.cn/large/008i3skNly1gsivl4khz9j31d60h8mze.jpg)
 

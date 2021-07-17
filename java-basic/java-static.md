@@ -1,5 +1,22 @@
 # 深入理解 static 关键字
 
+* [深入理解 static 关键字](#深入理解-static-关键字)
+   * [初识 static 关键字](#初识-static-关键字)
+      * [static 修饰变量](#static-修饰变量)
+      * [static 修饰方法](#static-修饰方法)
+      * [static 修饰代码块](#static-修饰代码块)
+      * [static 用作静态内部类](#static-用作静态内部类)
+      * [静态导包](#静态导包)
+   * [static 进阶知识](#static-进阶知识)
+      * [关于 static 的所属类](#关于-static-的所属类)
+      * [static 修饰变量的存储位置](#static-修饰变量的存储位置)
+      * [static 变量的生命周期](#static-变量的生命周期)
+      * [static 序列化](#static-序列化)
+      * [类加载顺序](#类加载顺序)
+      * [static 经常用作日志打印](#static-经常用作日志打印)
+      * [static 经常用作单例模式](#static-经常用作单例模式)
+   * [类的构造器是否是 static 的](#类的构造器是否是-static-的)
+
 static 是我们日常生活中经常用到的关键字，也是 Java 中非常重要的一个关键字，static 可以修饰变量、方法、做静态代码块、静态导包等，下面我们就来具体聊一聊这个关键字，我们先从基础开始，从基本用法入手，然后分析其原理、优化等。
 
 ## 初识 static 关键字

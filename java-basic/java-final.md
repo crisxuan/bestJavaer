@@ -1,5 +1,19 @@
 # 深入理解 final、finally 和 finalize 关键字
 
+* [深入理解 final、finally 和 finalize 关键字](#深入理解-finalfinally-和-finalize-关键字)
+   * [final、finally 和 finalize](#finalfinally-和-finalize)
+      * [final 修饰类、属性和方法](#final-修饰类属性和方法)
+      * [finally 保证程序一定被执行](#finally-保证程序一定被执行)
+      * [finalize 的作用](#finalize-的作用)
+   * [深入理解 final 、finally 和 finalize](#深入理解-final-finally-和-finalize)
+      * [final 设计](#final-设计)
+         * [空白 final](#空白-final)
+      * [final 能提高性能吗？](#final-能提高性能吗)
+      * [深入理解 finally](#深入理解-finally)
+         * [finally 的本质](#finally-的本质)
+         * [finally 一定会执行吗](#finally-一定会执行吗)
+      * [finalize 真的没用吗](#finalize-真的没用吗)
+
 <img src="https://s1.ax1x.com/2020/11/02/BBZApD.png" alt="final001" border="0">
 
 `final` 是 Java 中的关键字，它也是 Java 中很重要的一个关键字，final 修饰的类、方法、变量有不同的含义；`finally` 也是一个关键字，不过我们可以使用 finally 和其他关键字结合做一些组合操作； `finalize` 是一个不让人待见的方法，它是对象祖宗 `Object` 中的一个方法，finalize 机制现在已经不推荐使用了。本篇文章，cxuan 就带你从这三个关键字入手，带你从用法、应用、原理的角度带你深入浅出理解这三个关键字。

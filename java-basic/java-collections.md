@@ -1,4 +1,35 @@
-# 新手引导
+# 超全Java集合框架讲解
+
+* [超全Java集合框架讲解](#超全java集合框架讲解)
+   * [集合框架总览](#集合框架总览)
+      * [Iterator  Iterable ListIterator](#iterator--iterable-listiterator)
+      * [Map 和 Collection 接口](#map-和-collection-接口)
+   * [Map 集合体系详解](#map-集合体系详解)
+      * [HashMap](#hashmap)
+      * [LinkedHashMap](#linkedhashmap)
+      * [TreeMap](#treemap)
+      * [WeakHashMap](#weakhashmap)
+      * [Hashtable](#hashtable)
+   * [Collection 集合体系详解](#collection-集合体系详解)
+      * [Set 接口](#set-接口)
+      * [AbstractSet 抽象类](#abstractset-抽象类)
+      * [SortedSet 接口](#sortedset-接口)
+      * [HashSet](#hashset)
+      * [LinkedHashSet](#linkedhashset)
+      * [TreeSet](#treeset)
+   * [List 接口](#list-接口)
+      * [AbstractList  和 AbstractSequentialList](#abstractlist--和-abstractsequentiallist)
+      * [Vector](#vector)
+      * [Stack](#stack)
+      * [ArrayList](#arraylist)
+      * [LinkedList](#linkedlist)
+   * [Queue接口](#queue接口)
+      * [Deque 接口](#deque-接口)
+      * [AbstractQueue 抽象类](#abstractqueue-抽象类)
+      * [LinkedList](#linkedlist-1)
+      * [ArrayDeque](#arraydeque)
+      * [PriorityQueue](#priorityqueue)
+   * [文末总结](#文末总结)
 
 集合在我们日常开发使用的次数数不胜数，`ArrayList`/`LinkedList`/`HashMap`/`HashSet`······信手拈来，抬手就拿来用，在 IDE 上龙飞凤舞，但是作为一名合格的优雅的程序猿，仅仅了解怎么使用`API`是远远不够的，如果在调用`API`时，知道它内部发生了什么事情，就像开了`透视`外挂一样，洞穿一切，这种感觉才真的爽，而且这样就**不是集合提供什么功能给我们使用，而是我们选择使用它的什么功能了**。
 
@@ -872,3 +903,8 @@ PriorityQueue 总结：
 本文对整个集合体系的所有常用的集合类都分析了，这里并没有对集合内部的实现深入剖析，我想先从最宏观的角度让大家了解每个集合的的作用，应用场景，以及简单的对比，之后会抽时间对常见的集合进行源码剖析，尽情期待，感谢阅读！
 
 > 最后有些话想说：这篇文章花了我半个月去写，也是意义重大，多谢 `cxuan`哥一直指导我写文章，一步一步地去打磨出一篇好的文章真的非常不容易，写下的每一个字都能够让别人看得懂是一件非常难的事情，总结出最精华的知识分享给你们也是非常难的一件事情，希望能够一直进步下去！不忘初心，热爱分享，喜爱写作。
+
+![image-20210716163352584](https://tva1.sinaimg.cn/large/008i3skNly1gsivkbczxoj31l20t8al5.jpg)
+
+![image-20210716163433337](https://tva1.sinaimg.cn/large/008i3skNly1gsivl4khz9j31d60h8mze.jpg)
+

@@ -1,14 +1,32 @@
 # Java IO 体系
 
-[toc]
-
-
-
-
+* [Java IO 体系](#java-io-体系)
+   * [传统的 BIO](#传统的-bio)
+   * [BIO NIO 和 AIO 的区别](#bio-nio-和-aio-的区别)
+   * [什么是流](#什么是流)
+   * [流的分类](#流的分类)
+   * [节点流和处理流](#节点流和处理流)
+   * [Java IO 的核心类 File](#java-io-的核心类-file)
+   * [Java IO 流对象](#java-io-流对象)
+      * [字节流对象](#字节流对象)
+         * [InputStream](#inputstream)
+         * [OutputStream](#outputstream)
+      * [字符流对象](#字符流对象)
+         * [Reader](#reader)
+         * [Writer](#writer)
+   * [字节流与字符流的转换](#字节流与字符流的转换)
+   * [新潮的 NIO](#新潮的-nio)
+   * [缓冲区（Buffer）](#缓冲区buffer)
+   * [通道（Channel）](#通道channel)
+      * [示例：文件拷贝案例](#示例文件拷贝案例)
+      * [BIO 和 NIO 拷贝文件的区别](#bio-和-nio-拷贝文件的区别)
+      * [操作系统的零拷贝](#操作系统的零拷贝)
+   * [选择器（Selectors）](#选择器selectors)
+      * [选择键（SelectionKey）](#选择键selectionkey)
+      * [示例：简易的客户端服务器通信](#示例简易的客户端服务器通信)
+   * [总结](#总结)
 
 Java IO 是一个庞大的知识体系，很多人学着学着就会学懵了，包括我在内也是如此，所以本文将会从 Java 的 BIO 开始，一步一步深入学习，引出 JDK1.4 之后出现的 NIO 技术，对比 NIO 与 BIO 的区别，然后对 NIO 中重要的三个组成部分进行讲解（缓冲区、通道、选择器），最后实现一个**简易的客户端与服务器通信功能**。
-
-![](http://cdn.smallpineapple.top/sadasdasdsa312378126391.png)
 
 ## 传统的 BIO
 
@@ -46,7 +64,7 @@ Java IO流是一个庞大的生态环境，其内部提供了很多不同的**�
 >
 > 把图片转化成二进制数据集，把数据一点一点地传递到文件夹中 , 类似于水的流动 , 这样整体的数据就是一个数据流
 
-![未命名绘图](http://cdn.smallpineapple.top/未命名绘图-1598235636085.jpg)
+![image-20210717192230048](https://tva1.sinaimg.cn/large/008i3skNgy1gsk623yzlfj310w0a0q3v.jpg)
 
 IO 流读写数据的特点：
 
@@ -60,7 +78,7 @@ IO 流读写数据的特点：
 - **输入流**：从磁盘或者其它设备中将数据输入到进程中
 - **输出流**：将进程中的数据输出到磁盘或其它设备上保存
 
-![1](http://cdn.smallpineapple.top/1.jpg)
+![image-20210717192244308](https://tva1.sinaimg.cn/large/008i3skNgy1gsk62asjipj311o0awwfg.jpg)
 
 图示中的硬盘只是其中一种设备，还有非常多的设备都可以应用在IO流中，例如：打印机、硬盘、显示器、手机······
 
@@ -86,9 +104,7 @@ IO 流读写数据的特点：
 
 现在看 IO 是不是有一些思路了，不会觉得很混乱了，我们来看这四个类下的所有成员。
 
-![image-20200823091738251](http://cdn.smallpineapple.top/image-20200823091738251.png)
-
-[来自于 cxuan 的 《Java基础核心总结》]
+![image-20210717192257484](https://tva1.sinaimg.cn/large/008i3skNgy1gsk62inht7j30yo0f6myz.jpg)
 
 看到这么多的类是不是又开始觉得混乱了，不要慌，字节流和字符流下的输入流和输出流大部分都是一一对应的，有了上面的表格支撑，我们不需要再担心看见某个类会懵逼的情况了。
 
@@ -117,7 +133,7 @@ IO 流读写数据的特点：
 - **节点流**：节点流是**真正传输数据**的流对象，用于向特定的一个地方（节点）读写数据，称为节点流。例如 FileInputStream
 - **处理流**：处理流是**对节点流的封装**，使用外层的处理流读写数据，本质上是利用节点流的功能，外层的处理流可以提供额外的功能。处理流的基类都是以 `Filter` 开头。
 
-![1](http://cdn.smallpineapple.top/1-1598317951549.jpg)
+![image-20210717192307633](https://tva1.sinaimg.cn/large/008i3skNgy1gsk62paeonj61180a8ab002.jpg)
 
 上图将 `ByteArrayInputStream` 封装成 `DataInputStream`，可以将输入的字节数组转换为对应数据类型的数据。例如希望读入`int`类型数据，就会以`2`个字节为单位转换为一个数字。
 
@@ -166,7 +182,7 @@ Java 提供了 File类，它指向计算机操作系统中的文件和目录，�
 - w（Write）：代表该文件可以被当前用户写，操作权限的序号是 `2`
 - x（Execute）：该文件可以被当前用户执行，操作权限的序号是 `1`
 
-![image-20200825080020253](http://cdn.smallpineapple.top/image-20200825080020253.png)
+![image-20210717192337772](https://tva1.sinaimg.cn/large/008i3skNgy1gsk638b21hj30yu0q845l.jpg)
 
 `root root` 分别代表：**当前文件的所有者**，**当前文件所属的用户分组**。Linux 下文件的操作权限分为三种用户：
 
@@ -183,7 +199,7 @@ Java 提供了 File类，它指向计算机操作系统中的文件和目录，�
 
 所以，本小节将以字节流和字符流作为主要分割点，在其内部再细分为输入流和输出流进行讲解。
 
-![image-20200823091738251](http://cdn.smallpineapple.top/image-20200823091738251.png)
+![image-20210717192346921](https://tva1.sinaimg.cn/large/008i3skNgy1gsk63dnn4vj30za0f40uk.jpg)
 
 ### 字节流对象
 
@@ -193,7 +209,7 @@ Java 提供了 File类，它指向计算机操作系统中的文件和目录，�
 
 > 下面有非常多的类，我会介绍基类的方法，了解这些方法是**非常有必要**的，子类的功能基于父类去扩展，只有真正了解父类在做什么，学习子类的成本就会下降。
 
-![image-20200825084204026](http://cdn.smallpineapple.top/image-20200825084204026.png)
+![image-20210717192357542](https://tva1.sinaimg.cn/large/008i3skNgy1gsk63k5nwgj310i0patbm.jpg)
 
 #### InputStream
 
@@ -216,13 +232,13 @@ InputStream 是字节输入流的抽象基类，提供了通用的读方法，�
 |        public boolean markSupported()        | 判断该输入流是否支持 mark() 和 reset() 方法，即能否重复读取字节 |
 |       public synchronized void reset()       |     将流的位置重新定位在最后一次调用 mark() 方法时的位置     |
 
-![image-20200827082445395](http://cdn.smallpineapple.top/image-20200827082445395.png)
+![image-20210717192407909](https://tva1.sinaimg.cn/large/008i3skNgy1gsk63qlphpj311s0ji76l.jpg)
 
 **（1）ByteArrayInputStream**
 
 ByteArrayInputStream 内部包含一个 `buf` 字节数组缓冲区，该缓冲区可以从流中读取的字节数，使用 `pos` 指针指向读取下一个字节的下标位置，内部还维护了一个`count` 属性，代表能够读取 `count` 个字节。
 
-![bytearrayinputstream](http://cdn.smallpineapple.top/bytearrayinputstream1.gif)
+<img src="https://mmbiz.qpic.cn/mmbiz_gif/libYRuvULTdWBF8jpTZAOVApArmTUraFl7r9G70nbwpaIU8ib5hx1ZHeB4Nkb8eXkDZENiaCax8aL9IyXqagItF2g/640?wx_fmt=gif&tp=webp&wxfrom=5&wx_lazy=1">
 
 > 必须保证 pos 严格小于 count，而 count 严格小于 buf.length 时，才能够从缓冲区中读取数据
 
@@ -243,8 +259,6 @@ ByteArrayInputStream 内部包含一个 `buf` 字节数组缓冲区，该缓冲�
 它是 FilterInputStream 的子类，是一个**处理流**，它内部维护了一个缓冲数组`buf`。
 
 - 在读入字节的过程中可以将**读取到的字节数据回退给缓冲区中保存**，下次可以再次从缓冲区中读出该字节数据。所以**PushBackInputStream 允许多次读取输入流的字节数据**，只要将读到的字节放回缓冲区即可。
-
-![2](http://cdn.smallpineapple.top/pushBackInputStream.gif)
 
 需要注意的是如果回推字节时，如果缓冲区已满，会抛出 `IOException` 异常。
 
@@ -297,7 +311,7 @@ OutputStream 是字节输出流的抽象基类，提供了通用的写方法，�
 | public void flush()                           | 刷新此输出流，并强制写出所有缓冲的输出字节到指定位置，每次写完都要调用 |
 | public void close()                           | 关闭此输出流并释放与此流关联的所有系统资源                   |
 
-![image-20200827090101687](http://cdn.smallpineapple.top/image-20200827090101687.png)
+![image-20210717192728276](https://tva1.sinaimg.cn/large/008i3skNly1gsk677mqrlj311c0hyq56.jpg)
 
 OutputStream 中大多数的类和 InputStream 是对应的，只不过数据的流向不同而已。从上面的图可以看出：
 
@@ -315,7 +329,7 @@ OutputStream 中大多数的类和 InputStream 是对应的，只不过数据的
 
 > 字符输入流和字节输入流的组成非常相似，字符输入流是对字节输入流的**一层转换**，所有文件的存储都是**字节的存储**，在磁盘上保留的不是文件的字符，而是先把字符编码成字节，再保存到文件中。在读取文件时，读入的也是一个一个字节组成的字节序列，而 Java 虚拟机通过将字节序列，按照2个字节为单位转换为 Unicode 字符，实现字节到字符的映射。
 
-![image-20200827094740444](http://cdn.smallpineapple.top/image-20200827094740444.png)
+![image-20210717192739866](https://tva1.sinaimg.cn/large/008i3skNly1gsk67es4y9j30w60lqgnn.jpg)
 
 #### Reader
 
@@ -330,7 +344,7 @@ Reader 是字符输入流的抽象基类，它内部的重要方法如下所示�
 
 还有其它一些额外的方法，与字节输入流基类提供的方法是相同的，只是作用的对象不再是字节，而是字符。
 
-![image-20200827095911702](http://cdn.smallpineapple.top/image-20200827095911702.png)
+![image-20210717192749564](https://tva1.sinaimg.cn/large/008i3skNly1gsk67kunapj30yu0hatat.jpg)
 
 - Reader 是所有字符输入流的**抽象基类**
 - CharArrayReader 和 StringReader 是两种基本的节点流，它们分别从读取 **字符数组** 和 **字符串** 数据，StringReader 内部是一个 `String` 变量值，通过遍历该变量的字符，实现读取字符串，**本质上也是在读取字符数组**
@@ -351,7 +365,7 @@ Reader 是字符输出流的抽象基类，它内部的重要方法如下所示�
 | abstract public void flush()                              | 刷新，如果数据保存在缓冲区，调用该方法才会真正写出到指定位置 |
 | abstract public void close()                              | 关闭流对象，每次 IO 执行完毕后都需要关闭流对象，释放系统资源 |
 
-![image-20200827104837521](http://cdn.smallpineapple.top/image-2020082710483752111.png)
+![image-20210717192759962](https://tva1.sinaimg.cn/large/008i3skNly1gsk67remv6j310o0ha76h.jpg)
 
 - Writer 是所有的输出字符流的抽象基类
 
@@ -392,13 +406,13 @@ Reader 是字符输出流的抽象基类，它内部的重要方法如下所示�
 
 我们来看看 BIO 和 NIO 的区别，BIO 是**面向流**的 IO，它建立的通道都是**单向**的，所以输入和输出流的通道不相同，必须建立2个通道，通道内的都是传输==0101001···==的字节数据。
 
-![](http://cdn.smallpineapple.top/asdqweqweqe.jpg)
+![image-20210717192809741](https://tva1.sinaimg.cn/large/008i3skNly1gsk67xlsgoj311w0c6wga.jpg)
 
 而在 NIO 中，不再是面向流的 IO 了，而是面向**缓冲区**，它会建立一个**通道（Channel）**，该通道我们可以理解为**铁路**，该铁路上可以运输各种货物，而通道上会有一个**缓冲区（Buffer）**用于存储真正的数据，缓冲区我们可以理解为**一辆火车**。
 
 **通道（铁路）**只是作为运输数据的一个连接资源，而真正存储数据的是**缓冲区（火车）**。即**通道负责传输，缓冲区负责存储。**
 
-![](http://cdn.smallpineapple.top/20200902090452.png)
+![image-20210717192816723](https://tva1.sinaimg.cn/large/008i3skNly1gsk681qae4j311y0bqq4e.jpg)
 
 理解了上面的图之后，BIO 和 NIO 的主要区别就可以用下面这个表格简单概括。
 
@@ -413,7 +427,7 @@ Reader 是字符输出流的抽象基类，它内部的重要方法如下所示�
 
 缓冲区是**存储数据**的区域，在 Java 中，缓冲区就是数组，为了可以操作不同数据类型的数据，Java 提供了许多不同类型的缓冲区，**除了布尔类型以外**，其它基本数据类型都有对应的缓冲区数组对象。
 
-![](http://cdn.smallpineapple.top/20200906104811.png)
+![image-20210717192825029](https://tva1.sinaimg.cn/large/008i3skNly1gsk686wd71j31140jejtb.jpg)
 
 > 为什么没有布尔类型的缓冲区呢？
 >
@@ -500,11 +514,11 @@ public Class Main {
 
 执行结果如下图所示，首先我们往缓冲区中写入 2 个数据，position 在写模式下指向下标 2，然后调用 flip() 方法切换为读模式，limit 指向下标 2，position 从 0 开始读数据，读到下标为 2 时发现到达 limit 位置，不可继续读。
 
-![](http://cdn.smallpineapple.top/20200902104607.png)
+![image-20210717192839444](https://tva1.sinaimg.cn/large/008i3skNly1gsk68gf423j31220ccabe.jpg)
 
 整个过程可以用下图来理解，调用 flip() 方法以后，读出数据的同时 position 指针不断往后挪动，到达 limit 指针的位置时，该次读取操作结束。
 
-![](http://cdn.smallpineapple.top/20200902104730.png)
+![image-20210717192849489](https://tva1.sinaimg.cn/large/008i3skNly1gsk68mfnfnj31180qstad.jpg)
 
 > 介绍完缓冲区后，我们知道它是存储数据的空间，进程可以将缓冲区中的数据读取出来，也可以写入新的数据到缓冲区，那缓冲区的数据从哪里来，又怎么写出去呢？接下来我们需要学习传输数据的介质：通道（Channel）
 
@@ -514,7 +528,7 @@ public Class Main {
 
 通道是可以**双向读写**的，传统的 BIO 需要使用输入/输出流表示数据的流向，在 NIO 中可以减少通道资源的消耗。
 
-![](http://cdn.smallpineapple.top/20200906104847.png)
+![image-20210717192856970](https://tva1.sinaimg.cn/large/008i3skNly1gsk68r10g9j312m0c0gmu.jpg)
 
 通道类都保存在 `java.nio.channels` 包下，我们日常用到的几个重要的类有 4 个：
 
@@ -539,8 +553,6 @@ public Class Main {
 - 关闭所有流和通道（重要！）
 
 这是一张小菠萝的照片，它存在于`d:\小菠萝\`文件夹下，我们将它拷贝到 `d:\小菠萝分身\` 文件夹下。
-
-![](http://cdn.smallpineapple.top/myPhoto.png)
 
 ```java
 public class Test {
@@ -572,9 +584,7 @@ public class Test {
 
 我画了一张图帮助你理解上面的这一个过程。
 
-![](http://cdn.smallpineapple.top/20200904102845.png)
-
-
+![image-20210717192910051](https://tva1.sinaimg.cn/large/008i3skNly1gsk68z0rv1j312c08mt9y.jpg)
 
 > 有人会问，NIO 的文件拷贝和传统 IO 流的文件拷贝有何不同呢？我们在编程时感觉它们没有什么区别呀，**貌似只是 API 不同罢了**，我们接下来就去看看这两者之间的区别吧。
 
@@ -584,17 +594,17 @@ public class Test {
 
 操作系统最重要的就是**内核**，它既可以访问受保护的内存，也可以访问底层硬件设备，所以为了保护内核的安全，操作系统将底层的虚拟空间分为了**用户空间**和**内核空间**，其中用户空间就是给用户进程使用的，内核空间就是专门给操作系统底层去使用的。
 
-![](http://cdn.smallpineapple.top/20200904104123.png)
+![image-20210717192919678](https://tva1.sinaimg.cn/large/008i3skNly1gsk695gi3ej31180iujv4.jpg)
 
 接下来，有一个 Java 进程希望把小菠萝这张图片从磁盘上拷贝，那么内核空间和用户空间都会有一个**缓冲区**
 
 - 这张照片就会从磁盘中读出到**内核缓冲区**中保存，然后操作系统将内核缓冲区中的这张图片字节数据拷贝到用户进程的缓冲区中保存下来，对应着下面这幅图
 
-![](http://cdn.smallpineapple.top/20200904104823.png)
+![image-20210717192927322](https://tva1.sinaimg.cn/large/008i3skNly1gsk699s66uj310u0hsq6d.jpg)
 
 - 然后用户进程会希望把缓冲区中的字节数据写到磁盘上的另外一个地方，会将数据拷贝到 Socket 缓冲区中，最终操作系统再将 Socket 缓冲区的数据写到磁盘的指定位置上。
 
-![](http://cdn.smallpineapple.top/20200904105253.png)
+![image-20210717192934345](https://tva1.sinaimg.cn/large/008i3skNly1gsk69el3euj310m0i8tc5.jpg)
 
 这一轮操作下来，我们数数经过了几次数据的拷贝？`4` 次。有 2 次是**内核空间和用户空间之间的数据拷贝**，这两次拷贝涉及到**用户态和内核态的切换**，需要**CPU参与进来**，进行上下文切换。而另外 2 次是**硬盘和内核空间之间的数据拷贝**，这个过程利用到 DMA与系统内存交换数据，不需要 CPU 的参与。
 
@@ -617,7 +627,7 @@ public class Test {
 
 在 Java NIO 中，零拷贝是通过**用户空间和内核空间的缓冲区共享一块物理内存**实现的，也就是说上面的图可以演变成这个样子。
 
-![image-20200904122132978](http://cdn.smallpineapple.top/image-20200904122132978.png)
+![image-20210717192942792](https://tva1.sinaimg.cn/large/008i3skNly1gsk69jp2wkj311e0mmq72.jpg)
 这时，无论是用户空间还是内核空间操作自己的缓冲区，本质上都是**操作这一块共享内存**中的缓冲区数据，**省去了用户空间和内核空间之间的数据拷贝操作**。
 
 现在我们重新来拷贝文件，就会变成下面这个步骤：
@@ -629,7 +639,7 @@ public class Test {
 
 整个过程就如下面这幅图所示。
 
-![](http://cdn.smallpineapple.top/20200904123822.png)
+![image-20210717192951133](https://tva1.sinaimg.cn/large/008i3skNly1gsk69oz8snj31260oagpv.jpg)
 
 图中，**需要 CPU 参与工作的步骤只有第③个步骤**，对比于传统的 IO，CPU 需要在用户空间与内核空间之间参与拷贝工作，需要无意义地占用 2 次 CPU 资源，导致 CPU 资源的浪费。
 
@@ -646,11 +656,11 @@ public class Test {
 
 选择器是提升 IO 性能的灵魂之一，它底层利用了**多路复用 IO**机制，让选择器可以监听多个 IO 连接，根据 IO 的状态响应到服务器端进行处理。通俗地说：**选择器可以监听多个 IO 连接，而传统的 BIO 每个 IO 连接都需要有一个线程去监听和处理。**
 
-![](http://cdn.smallpineapple.top/20200906105002.png)
+![image-20210717193020860](https://tva1.sinaimg.cn/large/008i3skNly1gsk6a7nod1j312c0g2tar.jpg)
 
 图中很明显的显示了在 BIO 中，每个 Socket 都需要有一个专门的线程去处理每个请求，而在 NIO 中，只需要一个 Selector 即可监听各个 Socket 请求，而且 Selector 并不是阻塞的，所以**不会因为多个线程之间切换导致上下文切换带来的开销**。
 
-![image-20200904185402331](http://cdn.smallpineapple.top/20200904185407.png)
+![image-20210717193027896](https://tva1.sinaimg.cn/large/008i3skNly1gsk6abpde4j310q0jmdi1.jpg)
 
 在 Java NIO 中，选择器是使用 `Selector` 类表示，Selector 可以接收各种 IO 连接，在 IO 状态准备就绪时，会通知该通道注册的 Selector，Selector 在**下一次轮询**时会发现该 IO 连接就绪，进而处理该连接。
 
@@ -811,7 +821,7 @@ public class NIOClient {
 
 下图可以看见，在客户端给服务器端发送信息，服务器接收到消息后，可以将该条消息**分发给其它客户端**，就可以实现一个简单的**群聊系统**，我们还可以给这些客户端贴上标签例如**用户姓名，聊天等级······**，就可以标识每个客户端啦。在这里由于篇幅原因，我没有写出所有功能，因为使用原生的 NIO 实在是不太便捷。
 
-![](http://cdn.smallpineapple.top/20200906093418.png)
+![image-20210717193042510](https://tva1.sinaimg.cn/large/008i3skNly1gsk6akluc5j31240gojtg.jpg)
 
 我相信你们都是直接滑下来看这里的，我在写这段代码的时候也非常痛苦，甚至有点厌烦 Java 原生的 NIO 编程。实际上我们在日常开发中很少直接用 NIO 进行编程，通常都会用 Netty，Mina 这种服务器框架，它们都是很好地 NIO 技术，对 Java 原生的 NIO 进行了上层的封装、优化，简化开发难度，但是**在学习框架之前，我们需要了解它底层原生的技术，就像 Spring AOP 的动态代理，Spring IOC 容器的 Map 容器存储对象，Netty 底层的 NIO 基础······**
 
@@ -824,6 +834,3 @@ NIO 的三大板块基本上都介绍完了，我没有做过多详细的 API �
 - NIO 的三大重要模块：缓冲区（Buffer），通道（Channel），选择器（Selector）以及它们的作用
 - NIO 与 BIO 两者的对比：同步/非同步、阻塞/非阻塞，在文件 IO 和 网络 IO 中，使用 NIO 相对于使用 BIO 有什么优势
 
-[浅谈 Linux下的零拷贝机制](https://www.jianshu.com/p/e76e3580e356)
-
-[Java NIO学习笔记四（零拷贝详解）](https://blog.csdn.net/u013096088/article/details/79122671)

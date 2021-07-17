@@ -1,5 +1,17 @@
 # Exception 和 Error 
 
+* [Exception 和 Error](#exception-和-error)
+   * [认识 Exception](#认识-exception)
+      * [什么是 Throwable](#什么是-throwable)
+      * [常见的 Exception](#常见的-exception)
+      * [与 Exception 有关的 Java 关键字](#与-exception-有关的-java-关键字)
+         * [throws 和 throw](#throws-和-throw)
+         * [try 、finally 、catch](#try-finally-catch)
+         * [JDK1.7 使用 try...with...resources 优雅关闭资源](#jdk17-使用-trywithresources-优雅关闭资源)
+      * [异常处理的原则](#异常处理的原则)
+   * [什么是 Error](#什么是-error)
+   * [一道经典的面试题](#一道经典的面试题)
+
 在 Java 中的基本理念是 `结构不佳的代码不能运行`，发现错误的理想时期是在编译期间，因为你不用运行程序，只是凭借着对 Java 基本理念的理解就能发现问题。但是编译期并不能找出所有的问题，有一些 NullPointerException 和 ClassNotFoundException 在编译期找不到，这些异常是 RuntimeException 运行时异常，这些异常往往在运行时才能被发现。
 
 我们写 Java 程序经常会出现两种问题，一种是 java.lang.Exception ，一种是 java.lang.Error，都用来表示出现了异常情况，下面就针对这两种概念进行理解。
