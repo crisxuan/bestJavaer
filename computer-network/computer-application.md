@@ -1,5 +1,63 @@
 # 计算机网络的应用层
 
+* [计算机网络的应用层](#计算机网络的应用层)
+   * [应用层概念](#应用层概念)
+      * [应用层协议的定义](#应用层协议的定义)
+      * [应用层体系结构](#应用层体系结构)
+   * [进程通信](#进程通信)
+      * [进程与计算机网络之间的接口](#进程与计算机网络之间的接口)
+      * [进程寻址](#进程寻址)
+      * [应用程序如何选择运输服务](#应用程序如何选择运输服务)
+      * [因特网能够提供的运输服务](#因特网能够提供的运输服务)
+         * [TCP](#tcp)
+         * [UDP](#udp)
+   * [应用层协议](#应用层协议)
+      * [WWW 和 HTTP](#www-和-http)
+         * [URI / URL](#uri--url)
+         * [HTML](#html)
+         * [HTTP](#http)
+         * [Web 页面](#web-页面)
+         * [浏览器](#浏览器)
+         * [Web 服务器](#web-服务器)
+         * [CDN](#cdn)
+         * [WAF](#waf)
+         * [WebService](#webservice)
+      * [HTTP](#http-1)
+         * [HTTP 请求响应过程](#http-请求响应过程)
+         * [HTTP 请求特征](#http-请求特征)
+         * [持久链接和非持久链接](#持久链接和非持久链接)
+         * [HTTP 报文格式](#http-报文格式)
+      * [Cookie 和 Session](#cookie-和-session)
+         * [Session 是什么](#session-是什么)
+         * [Session 如何判断是否是同一会话](#session-如何判断是否是同一会话)
+         * [Session 的缺点](#session-的缺点)
+         * [Cookies 是什么](#cookies-是什么)
+         * [创建 Cookie](#创建-cookie)
+         * [Set-Cookie 和 Cookie 标头](#set-cookie-和-cookie-标头)
+         * [会话 Cookies](#会话-cookies)
+         * [永久性 Cookies](#永久性-cookies)
+         * [对 Cookie 的争论](#对-cookie-的争论)
+      * [Web 缓存](#web-缓存)
+      * [DASH](#dash)
+      * [CDN](#cdn-1)
+         * [CDN 内容选择策略](#cdn-内容选择策略)
+         * [CDN 工作流程](#cdn-工作流程)
+         * [CDN 集群选择策略](#cdn-集群选择策略)
+      * [DNS 因特网目录服务协议](#dns-因特网目录服务协议)
+         * [DNS 基本概述](#dns-基本概述)
+         * [DNS 工作概述](#dns-工作概述)
+         * [DNS 缓存](#dns-缓存)
+         * [DNS 记录和报文](#dns-记录和报文)
+      * [P2P 文件分发](#p2p-文件分发)
+         * [P2P 用来做什么](#p2p-用来做什么)
+         * [P2P 网络的作用](#p2p-网络的作用)
+      * [TELNET](#telnet)
+         * [SSH](#ssh)
+      * [FTP](#ftp)
+      * [SMTP](#smtp)
+         * [MIME 类型](#mime-类型)
+   * [后记](#后记)
+
 文章的整体脉络如下
 
 ![](https://s1.ax1x.com/2020/11/10/BbRMEq.png)
@@ -664,11 +722,9 @@ SSH 是加密的远程登录系统。使用 SSH 可以加密通信内容，即�
 
 这些应用层协议我们在日常工作中都会用到，我们不仅仅是用户，还是程序员，势必要对其进行了解，我给你画了一些图帮助你理解清楚这些协议，简化的背后却是复杂而艰巨的规范标准和开发的复杂。
 
-如果文章写的还不错，希望读者朋友们可以点赞、在看、分享、留言，这将是我继续更文的动力，也是我涨粉的动力，希望您可以支持下。
+![image-20210717083948590](https://tva1.sinaimg.cn/large/008i3skNly1gsjnhb9f5xj319s0tsn4g.jpg)
 
-
-
-
+![image-20210717084050334](https://tva1.sinaimg.cn/large/008i3skNly1gsjnidv1r3j315s0fs40g.jpg)
 
 
 

@@ -1,5 +1,20 @@
 # 计算机网络 TCP/IP 基础
 
+* [计算机网络 TCP/IP 基础](#计算机网络-tcpip-基础)
+   * [TCP/IP 的历史背景](#tcpip-的历史背景)
+   * [TCP/IP 标准](#tcpip-标准)
+   * [TCP/IP 协议簇](#tcpip-协议簇)
+      * [通信链路层](#通信链路层)
+         * [物理层](#物理层)
+         * [数据链路层](#数据链路层)
+      * [网络层](#网络层)
+      * [传输层](#传输层)
+      * [应用层](#应用层)
+   * [数据包的发送历程](#数据包的发送历程)
+      * [数据包结构](#数据包结构)
+      * [数据包发送历程](#数据包发送历程)
+   * [总结](#总结)
+
 <img src="https://s1.ax1x.com/2020/11/03/BsFFFf.png" alt="tcpipbasic001" border="0">
 
 要说我们接触计算机网络最多的协议，那势必离不开 TCP/IP 协议了，TCP/IP 协议同时也是互联网中最为著名的协议，下面我们就来一起聊一下 TCP/IP 协议。
@@ -24,7 +39,7 @@
 
 这里我们先来认识一下 TCP/IP 协议，TCP/IP 协议说的不仅仅只是 TCP 和 IP 这两种协议，实际上，TCP/IP 指的是协议簇，协议簇是啥呢？简单来说就是一系列协议的综合，如果下次再问你 TCP/IP 协议有哪些的话，可以把下面这张图甩给他
 
-<img src="https://s1.ax1x.com/2020/11/03/BsFmOs.png" alt="tcpipbasic003" border="0">
+![image-20210717084145861](https://tva1.sinaimg.cn/large/008i3skNly1gsjnjc8ik8j31020ig40n.jpg)
 
 以上的协议汇总起来，就是 TCP/IP 协议簇。
 
@@ -193,6 +208,10 @@ IP 包生成后，会由路由控制表判断应该发送至哪个主机，IP �
 这一篇文章 cxuan 还是在和你聊一些基础知识，这些基础知识是为下面文章提前预热准备的，下一篇文章我们会聊到数据链路层的相关知识，敬请期待。
 
 如果这篇文章还不错的话，希望各位小伙伴们点在、留言、在看、分享，cxuan 谢谢大家。
+
+![image-20210717083948590](https://tva1.sinaimg.cn/large/008i3skNly1gsjnhb9f5xj319s0tsn4g.jpg)
+
+![image-20210717084050334](https://tva1.sinaimg.cn/large/008i3skNly1gsjnidv1r3j315s0fs40g.jpg)
 
 
 
