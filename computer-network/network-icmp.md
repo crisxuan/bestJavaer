@@ -1,5 +1,24 @@
 # ICMP 协议
 
+* [ICMP 协议](#icmp-协议)
+   * [什么是 ICMP](#什么是-icmp)
+      * [ICMP 的主要功能](#icmp-的主要功能)
+      * [ICMP 在 IPv4 和 IPv6 的封装](#icmp-在-ipv4-和-ipv6-的封装)
+   * [ICMP 的主要消息](#icmp-的主要消息)
+      * [ICMP 目标不可达(类型 3)](#icmp-目标不可达类型-3)
+      * [ICMP 重定向消息(类型 5)](#icmp-重定向消息类型-5)
+      * [ICMP 超时消息(类型 11)](#icmp-超时消息类型-11)
+      * [ICMP 回送消息(类型 0 和 类型 8)](#icmp-回送消息类型-0-和-类型-8)
+      * [其他 ICMP 消息](#其他-icmp-消息)
+         * [ICMP 原点抑制消息(类型 4)](#icmp-原点抑制消息类型-4)
+         * [ICMP 路由器探索消息(类型 9、10)](#icmp-路由器探索消息类型-910)
+         * [ICMP 地址掩码消息(类型 17、18)](#icmp-地址掩码消息类型-1718)
+   * [ICMPv6](#icmpv6)
+      * [ICMPv6 的作用](#icmpv6-的作用)
+      * [ICMPv6 邻居探索](#icmpv6-邻居探索)
+      * [ICMPv6 的组播收听发现协议](#icmpv6-的组播收听发现协议)
+   * [与 ICMP 有关的攻击](#与-icmp-有关的攻击)
+
 ![](https://s3.ax1x.com/2021/02/25/yjV9UJ.png)
 
 
@@ -186,6 +205,10 @@ ICMPv6 除了包含 ICMPv4 的所有功能外，还有两个额外的功能。
 * 信息泄露本身不会造成危害，但是能够帮助辅助其他攻击。
 
 针对 TCP 的 ICMP 攻击已经记录在了 RFC5927 中。
+
+![image-20210717083948590](https://tva1.sinaimg.cn/large/008i3skNly1gsjnhb9f5xj319s0tsn4g.jpg)
+
+![image-20210717084050334](https://tva1.sinaimg.cn/large/008i3skNly1gsjnidv1r3j315s0fs40g.jpg)
 
 
 

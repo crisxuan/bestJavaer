@@ -1,5 +1,17 @@
 # DHCP 协议
 
+* [DHCP 协议](#dhcp-协议)
+   * [认识 DHCP](#认识-dhcp)
+      * [DHCP 服务器](#dhcp-服务器)
+      * [DHCP 的组件](#dhcp-的组件)
+   * [DHCP 工作机制](#dhcp-工作机制)
+      * [DHCP 报文](#dhcp-报文)
+      * [DHCP 状态机](#dhcp-状态机)
+      * [DHCP 冲突](#dhcp-冲突)
+   * [DHCP 中继代理](#dhcp-中继代理)
+   * [DHCP 认证](#dhcp-认证)
+   * [总结](#总结)
+
 ![](https://s3.ax1x.com/2021/03/09/61oaQS.png)
 
 哈喽小伙伴们大家好啊，这里是 cxuan 计算机网络连载系列的文章第 11 篇，本篇文章我们来聊一聊 DHCP 协议。在聊之前，先想象一个场景。
@@ -179,6 +191,10 @@ DHCP 客户端会向 DHCP 中继代理发送 DHCP 请求包，而 DHCP 中继代
 ## 总结
 
 这篇文章我和你探讨了计算机网络中一个比较容易忽视的概念，为什么说他容易忽视呢？因为我们平常开发过程中基本上不会管 IP 地址的配置的，也就是环境搭建的时候会用到一些，但是要系统学习计算机网络的话，DHCP 的重要性不可忽视，DHCP 包括工作机制、DHCP 报文消息，DHCP 状态机、DHCP 认证这些都是需要你了解并掌握的。
+
+![image-20210717083948590](https://tva1.sinaimg.cn/large/008i3skNly1gsjnhb9f5xj319s0tsn4g.jpg)
+
+![image-20210717084050334](https://tva1.sinaimg.cn/large/008i3skNly1gsjnidv1r3j315s0fs40g.jpg)
 
 
 
