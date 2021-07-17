@@ -1,5 +1,24 @@
 # 深入理解 AQS
 
+* [深入理解 AQS](#深入理解-aqs)
+      * [前言](#前言)
+      * [AQS实现原理](#aqs实现原理)
+      * [目录结构](#目录结构)
+      * [场景分析](#场景分析)
+         * [线程一加锁成功](#线程一加锁成功)
+         * [线程二抢占锁失败](#线程二抢占锁失败)
+         * [线程三抢占锁失败](#线程三抢占锁失败)
+         * [线程一释放锁](#线程一释放锁)
+         * [线程二唤醒继续加锁](#线程二唤醒继续加锁)
+         * [线程二释放锁/线程三加锁](#线程二释放锁线程三加锁)
+      * [公平锁实现原理](#公平锁实现原理)
+      * [Condition实现原理](#condition实现原理)
+         * [Condition简介](#condition简介)
+         * [Condition Demo示例](#condition-demo示例)
+         * [Condition实现原理图解](#condition实现原理图解)
+         * [Condition总结](#condition总结)
+      * [总结](#总结)
+
 ### 前言
 
 谈到并发，我们不得不说`AQS(AbstractQueuedSynchronizer)`，所谓的`AQS`即是抽象的队列式的同步器，内部定义了很多锁相关的方法，我们熟知的`ReentrantLock`、`ReentrantReadWriteLock`、`CountDownLatch`、`Semaphore`等都是基于`AQS`来实现的。
@@ -767,4 +786,8 @@ final boolean acquireQueued(final Node node, int arg) {
 1. 打通 Java 任督二脉 —— 并发数据结构的基石
 https://juejin.im/post/5c11d6376fb9a049e82b6253
 2. Java并发之AQS详解https://www.cnblogs.com/waterystone/p/4920797.html
+
+![image-20210716163352584](https://tva1.sinaimg.cn/large/008i3skNly1gsivkbczxoj31l20t8al5.jpg)
+
+![image-20210716163433337](https://tva1.sinaimg.cn/large/008i3skNly1gsivl4khz9j31d60h8mze.jpg)
 

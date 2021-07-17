@@ -1,5 +1,20 @@
 # 看完你就明白的锁系列之锁的状态
 
+* [看完你就明白的锁系列之锁的状态](#看完你就明白的锁系列之锁的状态)
+   * [Java 对象头](#java-对象头)
+   * [Synchronized锁](#synchronized锁)
+   * [Monitor](#monitor)
+   * [锁的分类及其解释](#锁的分类及其解释)
+      * [无锁](#无锁)
+      * [偏向锁](#偏向锁)
+         * [偏向锁的获取过程](#偏向锁的获取过程)
+         * [偏向锁的释放过程](#偏向锁的释放过程)
+         * [关闭偏向锁](#关闭偏向锁)
+         * [关于 epoch](#关于-epoch)
+      * [轻量级锁](#轻量级锁)
+         * [加锁过程](#加锁过程)
+      * [重量级锁](#重量级锁)
+
 看完你就会知道，线程如果锁住了某个资源，致使其他线程无法访问的这种锁被称为悲观锁，相反，线程不锁住资源的锁被称为乐观锁，而自旋锁是基于 CAS 机制实现的，CAS又是乐观锁的一种实现，那么对于锁来说，多个线程同步访问某个资源的流程细节是否一样呢？换句话说，在多线程同步访问某个资源时，锁的状态会如何变化呢？本篇文章来探讨一下。
 
 **锁状态的分类**
@@ -133,29 +148,7 @@ Hotspot 的作者经过研究发现，大多数情况下，锁不仅不存在多
 
 由此看来，monitor 对象存在于每个Java对象的对象头中(存储的指针的指向)，synchronized 锁便是通过这种方式获取锁的，也是为什么Java中任意对象可以作为锁的原因，同时也是 notify/notifyAll/wait 等方法存在于顶级对象Object中的原因。（部分来源于网络）
 
+![image-20210716163352584](https://tva1.sinaimg.cn/large/008i3skNly1gsivkbczxoj31l20t8al5.jpg)
 
-文章参考：
+![image-20210716163433337](https://tva1.sinaimg.cn/large/008i3skNly1gsivl4khz9j31d60h8mze.jpg)
 
-[不可不说的Java“锁”事](https://tech.meituan.com/2018/11/15/java-lock.html)
-
-[白话 Synchronized](https://www.jianshu.com/p/dd87f60ff37c)
-
-https://gist.github.com/arturmkrtchyan/43d6135e8a15798cc46c
-
-https://blog.csdn.net/zhoufanyang_china/article/details/54601311
-
-[Synchronized锁性能优化偏向锁轻量级锁升级 多线程中篇（五）](https://www.cnblogs.com/noteless/p/10509665.html)
-
-https://juejin.im/post/5bfe6ddee51d45491b0163eb
-
-https://zhuanlan.zhihu.com/p/29866981
-
-http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.94.8487&rep=rep1&type=pdf
-
-https://blogs.oracle.com/dave/biased-locking-in-hotspot
-
-[java 偏向锁、轻量级锁及重量级锁synchronized原理](
-
-下面为自己做个宣传，欢迎关注公众号 Java建设者，号主是Java技术栈，热爱技术，喜欢阅读，热衷于分享和总结，希望能把每一篇好文章分享给成长道路上的你。关注公众号回复 002 领取为你特意准备的大礼包，你一定会喜欢并收藏的。
-
-![](https://img2018.cnblogs.com/blog/1515111/201910/1515111-20191016112228923-1392800135.png)https://www.cnblogs.com/deltadeblog/p/9559035.html)

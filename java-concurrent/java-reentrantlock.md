@@ -1,5 +1,29 @@
 # ReentrantLock 源码分析
 
+* [ReentrantLock 源码分析](#reentrantlock-源码分析)
+   * [回答一个问题](#回答一个问题)
+   * [初识 ReentrantLock](#初识-reentrantlock)
+   * [ReentrantLock 基本方法](#reentrantlock-基本方法)
+      * [构造方法](#构造方法)
+      * [公平锁的加锁（lock）流程详解](#公平锁的加锁lock流程详解)
+      * [非公平锁的加锁（lock）流程详解](#非公平锁的加锁lock流程详解)
+      * [lockInterruptibly 以可中断的方式获取锁](#lockinterruptibly-以可中断的方式获取锁)
+      * [tryLock 尝试加锁](#trylock-尝试加锁)
+      * [tryLock 超时获取锁](#trylock-超时获取锁)
+      * [unlock 解锁流程](#unlock-解锁流程)
+   * [ReentrantLock 其他方法](#reentrantlock-其他方法)
+      * [isHeldByCurrentThread &amp; getHoldCount](#isheldbycurrentthread--getholdcount)
+      * [newCondition 创建 ConditionObject 对象](#newcondition-创建-conditionobject-对象)
+      * [isLocked 判断是否锁定](#islocked-判断是否锁定)
+      * [isFair 判断是否是公平锁的实例](#isfair-判断是否是公平锁的实例)
+      * [getOwner 判断锁拥有者](#getowner-判断锁拥有者)
+      * [hasQueuedThreads 是否有等待线程](#hasqueuedthreads-是否有等待线程)
+      * [isQueued 判断线程是否排队](#isqueued-判断线程是否排队)
+      * [getQueueLength 获取队列长度](#getqueuelength-获取队列长度)
+      * [getQueuedThreads 获取排队线程](#getqueuedthreads-获取排队线程)
+   * [回答上面那个问题](#回答上面那个问题)
+      * [还有什么要说的吗](#还有什么要说的吗)
+
 ## 回答一个问题
 
 在开始本篇文章的内容讲述前，先来回答我一个问题，为什么 JDK 提供一个 `synchronized` 关键字之后还要提供一个 Lock 锁，这不是多此一举吗？难道 JDK 设计人员都是沙雕吗？
@@ -437,17 +461,7 @@ Synchronzied 和 Lock 的主要区别如下：
 
   如果锁数量不为0或者上边的尝试又失败了，查看当前线程是不是已经是独占锁的线程了，如果是，则将当前的锁数量+1；如果不是，则将该线程封装在一个Node内，并加入到等待队列中去。等待被其前一个线程节点唤醒。
 
-![](https://img2018.cnblogs.com/blog/1515111/202001/1515111-20200106124656897-1947495458.png)
+![image-20210716163352584](https://tva1.sinaimg.cn/large/008i3skNly1gsivkbczxoj31l20t8al5.jpg)
 
+![image-20210716163433337](https://tva1.sinaimg.cn/large/008i3skNly1gsivl4khz9j31d60h8mze.jpg)
 
-文章参考：
-
-[【试验局】ReentrantLock中非公平锁与公平锁的性能测试](https://www.cnblogs.com/yulinfeng/p/6899316.html)
-
-[第五章 ReentrantLock源码解析1--获得非公平锁与公平锁lock()](https://www.cnblogs.com/java-zhao/p/5131544.html)
-
-https://juejin.im/post/5c95df97e51d4551d06d8e8e
-
-[【JUC】JDK1.8源码分析之ReentrantLock（三）](https://www.cnblogs.com/leesf456/p/5383609.html)
-
-https://www.lagou.com/lgeduarticle/73019.html

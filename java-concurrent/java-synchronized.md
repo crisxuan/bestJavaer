@@ -1,5 +1,26 @@
 # 深入理解 synchronized 关键字
 
+* [深入理解 synchronized 关键字](#深入理解-synchronized-关键字)
+   * [前言](#前言)
+   * [浅析 synchronized](#浅析-synchronized)
+   * [synchronized 的使用](#synchronized-的使用)
+      * [synchronized 修饰实例方法](#synchronized-修饰实例方法)
+      * [synchronized 修饰静态方法](#synchronized-修饰静态方法)
+      * [synchronized 修饰代码块](#synchronized-修饰代码块)
+   * [synchronized 底层原理](#synchronized-底层原理)
+      * [Monitor 对象](#monitor-对象)
+      * [对象内存布局](#对象内存布局)
+         * [对象头 Header](#对象头-header)
+         * [实例数据 Instance Data](#实例数据-instance-data)
+         * [对齐 Padding](#对齐-padding)
+   * [锁的升级流程](#锁的升级流程)
+      * [无锁](#无锁)
+      * [偏向锁](#偏向锁)
+      * [轻量级锁](#轻量级锁)
+      * [重量级锁](#重量级锁)
+   * [synchronized 代码块的底层实现](#synchronized-代码块的底层实现)
+   * [synchronized 修饰方法的底层原理](#synchronized-修饰方法的底层原理)
+
 ## 前言
 
 synchronized 这个关键字的重要性不言而喻，几乎可以说是并发、多线程必须会问到的关键字了。synchronized 会涉及到锁、升级降级操作、锁的撤销、对象头等。所以理解 synchronized 非常重要，本篇文章就带你从 synchronized 的基本用法、再到 synchronized 的深入理解，对象头等，为你揭开 synchronized 的面纱。
@@ -364,6 +385,10 @@ public class SynchronizedTest {
 ![image-20210531215902053](/Users/mr.l/Library/Application Support/typora-user-images/image-20210531215902053.png)
 
 从字节码上可以看出，synchronized 修饰的方法并没有使用 monitorenter 和 monitorexit 指令，取得代之是ACC_SYNCHRONIZED 标识，该标识指明了此方法是一个同步方法，JVM 通过该 ACC_SYNCHRONIZED 访问标志来辨别一个方法是否声明为同步方法，从而执行相应的同步调用。这就是 synchronized 锁在同步代码块上和同步方法上的实现差别。
+
+![image-20210716163352584](https://tva1.sinaimg.cn/large/008i3skNly1gsivkbczxoj31l20t8al5.jpg)
+
+![image-20210716163433337](https://tva1.sinaimg.cn/large/008i3skNly1gsivl4khz9j31d60h8mze.jpg)
 
 
 

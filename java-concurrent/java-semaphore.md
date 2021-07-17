@@ -1,5 +1,16 @@
 # Semaphore 用法和源码解析
 
+* [Semaphore 用法和源码解析](#semaphore-用法和源码解析)
+* [认识 Semaphore](#认识-semaphore)
+   * [Semaphore 是什么](#semaphore-是什么)
+   * [Semaphore 的使用场景](#semaphore-的使用场景)
+   * [Semaphore 使用](#semaphore-使用)
+   * [Semaphore 信号量的模型](#semaphore-信号量的模型)
+* [Semaphore 深入理解](#semaphore-深入理解)
+   * [Semaphore 基本属性](#semaphore-基本属性)
+   * [Semaphore 的公平性和非公平性](#semaphore-的公平性和非公平性)
+   * [其他 Semaphore 方法](#其他-semaphore-方法)
+
 这是并发线程工具类的第二篇文章，在第一篇中，我们分析过 `CountDownLatch` 的相关内容，你可以参考
 
 [一文搞懂 CountDownLatch 用法和源码！](https://mp.weixin.qq.com/s?__biz=MzkwMDE1MzkwNQ==&mid=2247495733&idx=1&sn=45e5d5d043ee713a8689e656628271d2&chksm=c04ae76bf73d6e7d45e8f288b1560853bb57d5c797db664e742e5d95f4063d0f5d217f461176&token=2034028508&lang=zh_CN#rd)
@@ -245,6 +256,10 @@ public void release(int permits) {
 **getQueuedThreads**：返回一个包含了等待获取许可的线程集合。
 
 **getQueueLength**：获取正在排队而进入阻塞状态的线程个数
+
+![image-20210716163352584](https://tva1.sinaimg.cn/large/008i3skNly1gsivkbczxoj31l20t8al5.jpg)
+
+![image-20210716163433337](https://tva1.sinaimg.cn/large/008i3skNly1gsivl4khz9j31d60h8mze.jpg)
 
 
 

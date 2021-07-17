@@ -1,5 +1,48 @@
 # Java 锁事
 
+* [Java 锁事](#java-锁事)
+   * [Java 锁分类](#java-锁分类)
+   * [线程是否需要对资源加锁](#线程是否需要对资源加锁)
+      * [悲观锁](#悲观锁)
+      * [乐观锁](#乐观锁)
+      * [两种锁的使用场景](#两种锁的使用场景)
+      * [乐观锁的实现方式](#乐观锁的实现方式)
+         * [版本号机制](#版本号机制)
+         * [CAS 算法](#cas-算法)
+      * [乐观锁的缺点](#乐观锁的缺点)
+         * [ABA 问题](#aba-问题)
+         * [循环开销大](#循环开销大)
+      * [CAS与synchronized的使用情景](#cas与synchronized的使用情景)
+   * [资源已被锁定，线程是否阻塞](#资源已被锁定线程是否阻塞)
+      * [自旋锁的提出背景](#自旋锁的提出背景)
+      * [什么是自旋锁](#什么是自旋锁)
+      * [自旋锁的原理](#自旋锁的原理)
+      * [自旋锁的优缺点](#自旋锁的优缺点)
+      * [自旋锁的实现](#自旋锁的实现)
+         * [TicketLock](#ticketlock)
+         * [CLHLock](#clhlock)
+         * [MCSLock](#mcslock)
+         * [CLHLock 和 MCSLock](#clhlock-和-mcslock)
+   * [多个线程并发访问资源](#多个线程并发访问资源)
+      * [锁状态的分类](#锁状态的分类)
+      * [Java 对象头](#java-对象头)
+      * [Synchronized锁](#synchronized锁)
+      * [Monitor](#monitor)
+      * [锁的分类及其解释](#锁的分类及其解释)
+         * [无锁](#无锁)
+         * [偏向锁](#偏向锁)
+         * [轻量级锁](#轻量级锁)
+         * [重量级锁](#重量级锁)
+   * [锁的公平性与非公平性](#锁的公平性与非公平性)
+      * [锁公平性的实现](#锁公平性的实现)
+      * [ReentrantLock 基本概述](#reentrantlock-基本概述)
+      * [ReentrantLock 如何实现锁公平性](#reentrantlock-如何实现锁公平性)
+   * [根据锁是否可重入进行区分](#根据锁是否可重入进行区分)
+      * [可重入锁](#可重入锁)
+      * [不可重入锁](#不可重入锁)
+   * [多个线程能够共享同一把锁](#多个线程能够共享同一把锁)
+      * [独占锁和共享锁](#独占锁和共享锁)
+
 ## Java 锁分类
 
 Java 中的锁有很多，可以按照不同的功能、种类进行分类，下面是我对 Java 中一些常用锁的分类，包括一些基本的概述
@@ -835,32 +878,7 @@ private synchronized void doSomethingElse(){
 
 在 ReentrantReadWriteLock 里面，读锁和写锁的锁主体都是 Sync，但读锁和写锁的加锁方式不一样。读锁是共享锁，写锁是独享锁。读锁的共享锁可保证并发读非常高效，而读写、写读、写写的过程互斥，因为读锁和写锁是分离的。所以ReentrantReadWriteLock的并发性相比一般的互斥锁有了很大提升。
 
-欢迎关注
-![](https://img2018.cnblogs.com/blog/1515111/201912/1515111-20191217100018809-1999163542.png)
+![image-20210716163352584](https://tva1.sinaimg.cn/large/008i3skNly1gsivkbczxoj31l20t8al5.jpg)
 
+![image-20210716163433337](https://tva1.sinaimg.cn/large/008i3skNly1gsivl4khz9j31d60h8mze.jpg)
 
-
-
-文章参考：
-
-[Java 多线程之悲观锁与乐观锁](https://www.cnblogs.com/renhui/p/9755789.html)
-
-https://baike.baidu.com/item/悲观锁
-
-https://blog.csdn.net/qq_34337272/article/details/81252853
-
-http://www.blogjava.net/jinfeng_wang/archive/2016/12/14/432088.html
-
-https://blog.hufeifei.cn/ 关于自旋锁的文章
-
-https://en.wikipedia.org/wiki/Ticket_lock
-
-https://blog.stephencleary.com/2013/04/recursive-re-entrant-locks.html
-
-https://researcher.watson.ibm.com/researcher/files/us-bacon/Bacon03Retrospective.pdf
-
-https://tech.meituan.com/2018/11/15/java-lock.html
-
-https://www.jianshu.com/p/eaea337c5e5b
-
-https://blog.csdn.net/oChangWen/article/details/77622889

@@ -1,5 +1,23 @@
 # AtomicInteger 的用法和实现原理
 
+* [AtomicInteger 的用法和实现原理](#atomicinteger-的用法和实现原理)
+   * [了解 AtomicInteger](#了解-atomicinteger)
+      * [AtomicInteger 的基本属性](#atomicinteger-的基本属性)
+      * [AtomicInteger 的构造方法](#atomicinteger-的构造方法)
+      * [AtomicInteger 中的方法](#atomicinteger-中的方法)
+         * [Get  和 Set](#get--和-set)
+         * [Incremental 操作](#incremental-操作)
+         * [Decremental 操作](#decremental-操作)
+         * [LazySet 方法](#lazyset-方法)
+         * [GetAndSet 方法](#getandset-方法)
+         * [CAS 方法](#cas-方法)
+         * [AddAndGet](#addandget)
+      * [深入 AtomicInteger](#深入-atomicinteger)
+         * [AtomicInteger 的底层实现原理](#atomicinteger-的底层实现原理)
+         * [乐观锁](#乐观锁)
+         * [ABA 问题](#aba-问题)
+      * [后记](#后记)
+
 i++ 不是线程安全的操作，因为它不是一个原子性操作。
 
 那么，如果我想要达到类似 i++ 的这种效果，我应该使用哪些集合或者说工具类呢？
@@ -388,4 +406,7 @@ JDK 1.5 以后的 `AtomicStampedReference `类就提供了此种能力，其中�
 
 如果上面大佬们对这两个问题有兴趣，欢迎交流。
 
+![image-20210716163352584](https://tva1.sinaimg.cn/large/008i3skNly1gsivkbczxoj31l20t8al5.jpg)
+
+![image-20210716163433337](https://tva1.sinaimg.cn/large/008i3skNly1gsivl4khz9j31d60h8mze.jpg)
 

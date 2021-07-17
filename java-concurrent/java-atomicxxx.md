@@ -1,5 +1,33 @@
 # Atomicxxx 的用法和实现原理
 
+* [Atomicxxx 的用法和实现原理](#atomicxxx-的用法和实现原理)
+   * [了解 AtomicInteger](#了解-atomicinteger)
+      * [AtomicInteger 的基本属性](#atomicinteger-的基本属性)
+      * [AtomicInteger 的构造方法](#atomicinteger-的构造方法)
+      * [AtomicInteger 中的方法](#atomicinteger-中的方法)
+         * [Get  和 Set](#get--和-set)
+         * [Incremental 操作](#incremental-操作)
+         * [Decremental 操作](#decremental-操作)
+         * [LazySet 方法](#lazyset-方法)
+         * [GetAndSet 方法](#getandset-方法)
+         * [CAS 方法](#cas-方法)
+         * [AddAndGet](#addandget)
+      * [深入 AtomicInteger](#深入-atomicinteger)
+         * [AtomicInteger 的底层实现原理](#atomicinteger-的底层实现原理)
+         * [乐观锁](#乐观锁)
+         * [ABA 问题](#aba-问题)
+   * [认识 AtomicBoolean](#认识-atomicboolean)
+      * [AtomicBoolean 创建](#atomicboolean-创建)
+      * [AtomicBoolean 基本方法](#atomicboolean-基本方法)
+         * [Get](#get)
+         * [CompareAndSet](#compareandset)
+         * [Set](#set)
+         * [LazySet](#lazyset)
+         * [GetAndSet](#getandset)
+   * [AtomicLong](#atomiclong)
+      * [CAS 方法](#cas-方法-1)
+      * [LazySet](#lazyset-1)
+
 i++ 不是线程安全的操作，因为它不是一个原子性操作。
 
 那么，如果我想要达到类似 i++ 的这种效果，我应该使用哪些集合或者说工具类呢？
@@ -547,27 +575,9 @@ lazySet 的底层调用的是 `unsafe.putOrderedLong` 方法，它的底层源�
 
 其他的方法其实大同小异了。
 
+![image-20210716163352584](https://tva1.sinaimg.cn/large/008i3skNly1gsivkbczxoj31l20t8al5.jpg)
 
-
-关注公众号 程序员cxuan 回复 cxuan 领取优质资料。
-
-我自己写了六本 PDF ，非常硬核，链接如下
-
-我自己写了六本 PDF ，非常硬核，链接如下
-
-我自己写了六本 PDF ，非常硬核，链接如下
-
-![](https://img2020.cnblogs.com/blog/1515111/202009/1515111-20200928073258556-2142265096.png)
-
-[cxuan 呕心沥血肝了四本 PDF。](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247485329&idx=1&sn=673f306bb229e73e8f671443488b42d4&chksm=e999f283deee7b95a3cce247907b6557bf5f228c85434fc6cbadf42b2ec4c64443742a8bea7a&token=581641926&lang=zh_CN#rd)
-
-[cxuan 又肝了两本 PDF。](https://mp.weixin.qq.com/s?__biz=MzU2NDg0OTgyMA==&mid=2247494165&idx=1&sn=4e0247006bef89701529d765e6ce32a4&chksm=fc4617e6cb319ef0991ff70c8a769b92f59cf92122f27785b848604493653fdcc206d6830a23&token=794467841&lang=zh_CN#rd)
-
-
-
-
-
-
+![image-20210716163433337](https://tva1.sinaimg.cn/large/008i3skNly1gsivl4khz9j31d60h8mze.jpg)
 
 
 

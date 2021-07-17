@@ -1,5 +1,17 @@
 # 看完你就明白的锁系列之自旋锁
 
+* [看完你就明白的锁系列之自旋锁](#看完你就明白的锁系列之自旋锁)
+   * [自旋锁的提出背景](#自旋锁的提出背景)
+   * [什么是自旋锁](#什么是自旋锁)
+      * [自旋锁的原理](#自旋锁的原理)
+   * [自旋锁的优缺点](#自旋锁的优缺点)
+   * [自旋锁的实现](#自旋锁的实现)
+      * [TicketLock](#ticketlock)
+      * [CLHLock](#clhlock)
+      * [MCSLock](#mcslock)
+      * [CLHLock 和 MCSLock](#clhlock-和-mcslock)
+   * [总结](#总结)
+
 ## 自旋锁的提出背景
 
 由于在多处理器环境中某些资源的有限性，有时需要互斥访问(mutual exclusion)，这时候就需要引入锁的概念，只有获取了锁的线程才能够对资源进行访问，由于多线程的核心是CPU的时间分片，所以同一时刻只能有一个线程获取到锁。那么就面临一个问题，那么没有获取到锁的线程应该怎么办？
@@ -262,19 +274,7 @@ public class MCSLock {
 
 所以我们又引出了CLHLock和MCSLock，CLHLock和MCSLock通过链表的方式避免了减少了处理器缓存同步，极大的提高了性能，区别在于CLHLock是通过轮询其前驱节点的状态，而MCS则是查看当前节点的锁状态。
 
+![image-20210716163352584](https://tva1.sinaimg.cn/large/008i3skNly1gsivkbczxoj31l20t8al5.jpg)
 
-
-文章参考：
-
-https://blog.csdn.net/qq_34337272/article/details/81252853
-
-http://www.blogjava.net/jinfeng_wang/archive/2016/12/14/432088.html
-
-https://blog.hufeifei.cn/ 关于自旋锁的文章
-
-https://en.wikipedia.org/wiki/Ticket_lock
-
-
-
-![](https://img2020.cnblogs.com/blog/1515111/202006/1515111-20200603170522518-930440046.png)
+![image-20210716163433337](https://tva1.sinaimg.cn/large/008i3skNly1gsivl4khz9j31d60h8mze.jpg)
 

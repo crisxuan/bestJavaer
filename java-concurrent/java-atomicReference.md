@@ -1,5 +1,18 @@
 # AtomicReference 用法和源码分析
 
+* [AtomicReference 用法和源码分析](#atomicreference-用法和源码分析)
+   * [AtomicReference 基本使用](#atomicreference-基本使用)
+      * [使用 synchronized 保证线程安全性](#使用-synchronized-保证线程安全性)
+   * [了解 AtomicReference](#了解-atomicreference)
+      * [使用 AtomicReference 保证线程安全性](#使用-atomicreference-保证线程安全性)
+      * [AtomicReference 源码解析](#atomicreference-源码解析)
+      * [get and set](#get-and-set)
+      * [lazySet 方法](#lazyset-方法)
+      * [getAndSet 方法](#getandset-方法)
+      * [compareAndSet 方法](#compareandset-方法)
+      * [weakCompareAndSet 方法](#weakcompareandset-方法)
+   * [总结](#总结)
+
 我们之前了解过了 AtomicInteger、AtomicLong、AtomicBoolean 等原子性工具类，下面我们继续了解一下位于 `java.util.concurrent.atomic` 包下的工具类。
 
 关于 AtomicInteger、AtomicLong、AtomicBoolean 相关的内容请查阅
@@ -275,7 +288,9 @@ volatile 有内存屏障你知道吗？
 
 此篇文章主要介绍了 AtomicReference 的出现背景，AtomicReference 的使用场景，以及介绍了 AtomicReference 的源码，重点方法的源码分析。此篇 AtomicReference 的文章基本上涵盖了网络上所有关于 AtomicReference 的内容了，遗憾的是就是 cpp 源码可能分析的不是很到位，这需要充足的 C/C++ 编程知识，如果有读者朋友们有最新的研究成果，请及时告诉我。
 
-**另外，添加我的微信 becomecxuan，加入每日一题群，每天一道面试题分享，更多内容请参见我的 Github，成为最好的 bestJavaer，已经收录此篇文章，详情见原文链接**。
+![image-20210716163352584](https://tva1.sinaimg.cn/large/008i3skNly1gsivkbczxoj31l20t8al5.jpg)
+
+![image-20210716163433337](https://tva1.sinaimg.cn/large/008i3skNly1gsivl4khz9j31d60h8mze.jpg)
 
 
 

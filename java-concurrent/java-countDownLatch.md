@@ -1,5 +1,16 @@
 # CountDownLatch 用法和源码解析
 
+* [CountDownLatch 用法和源码解析](#countdownlatch-用法和源码解析)
+   * [认识 CountDownLatch](#认识-countdownlatch)
+   * [CountDownLatch 的使用](#countdownlatch-的使用)
+      * [CountDownLatch 应用场景](#countdownlatch-应用场景)
+      * [CountDownLatch 用法](#countdownlatch-用法)
+   * [CountDownLatch 源码分析](#countdownlatch-源码分析)
+      * [Sync 内部类](#sync-内部类)
+      * [await 方法](#await-方法)
+      * [countDown 方法](#countdown-方法)
+   * [总结](#总结)
+
 `CountDownLatch` 是多线程控制的一种工具，它被称为 `门阀`、 `计数器`或者 `闭锁`。这个工具经常用来用来协调多个线程之间的同步，或者说起到线程之间的通信（而不是用作互斥的作用）。下面我们就来一起认识一下 CountDownLatch
 
 ## 认识 CountDownLatch
@@ -503,5 +514,7 @@ private void doReleaseShared() {
 
 本文是 CountDownLatch 的基本使用和源码分析，CountDownLatch 就是一个基于 AQS 的计数器，它内部的方法都是围绕 AQS 框架来谈的，除此之外还有其他比如 ReentrantLock、Semaphore 等都是 AQS 的实现，所以要研究并发的话，离不开对 AQS 的探讨。CountDownLatch 的源码看起来很少，比较简单，但是其内部比如 await 方法的调用链路却很长，也值得花费时间深入研究。
 
-我是 cxuan，一枚技术创作的程序员。如果本文你觉得不错的话，跪求读者点赞、在看、分享！
+![image-20210716163352584](https://tva1.sinaimg.cn/large/008i3skNly1gsivkbczxoj31l20t8al5.jpg)
+
+![image-20210716163433337](https://tva1.sinaimg.cn/large/008i3skNly1gsivl4khz9j31d60h8mze.jpg)
 

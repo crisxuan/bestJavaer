@@ -1,5 +1,25 @@
 # 简单认识并发
 
+* [简单认识并发](#简单认识并发)
+   * [并发的多面性](#并发的多面性)
+      * [更快的执行](#更快的执行)
+      * [改进代码的设计](#改进代码的设计)
+   * [基本的线程机制](#基本的线程机制)
+      * [定义任务](#定义任务)
+      * [Thread 类](#thread-类)
+      * [使用 Executor](#使用-executor)
+         * [CachedThreadPool](#cachedthreadpool)
+         * [FixedThreadPool](#fixedthreadpool)
+         * [SingleThreadExecutor](#singlethreadexecutor)
+      * [从任务中产生返回值](#从任务中产生返回值)
+      * [休眠](#休眠)
+      * [优先级](#优先级)
+      * [作出让步](#作出让步)
+      * [后台线程](#后台线程)
+      * [ThreadFactory](#threadfactory)
+      * [加入一个线程](#加入一个线程)
+      * [线程异常捕获](#线程异常捕获)
+
 到目前为止，你学到的都是顺序编程，顺序编程的概念就是某一时刻只有一个任务在执行，顺序编程固然能够解决很多问题，但是对于某种任务，如果能够并发的执行程序中重要的部分就显得尤为重要，同时也可以极大提高程序运行效率，享受并发为你带来的便利。但是，熟练掌握并发编程理论和技术，对于只会CRUD的你来说是一种和你刚学面向对象一样的一种飞跃。
 
 正如你所看到的，当并行的任务彼此干涉时，实际的并发问题就会接踵而至。而且并发问题不是很难复现，在你实际的测试过程中往往会忽略它们，因为故障是偶尔发生的，这也是我们研究它们的必要条件：如果你对并发问题置之不理，那么你最终会承受它给你带来的损害。
@@ -490,10 +510,7 @@ public class CaptureUncaughtException {
 
 在程序中添加了额外的追踪机制，用来验证工厂创建的线程会传递给`UncaughtExceptionHandler`，你可以看到，未捕获的异常是通过 `uncaughtException ` 来捕获的。
 
+![image-20210716163352584](https://tva1.sinaimg.cn/large/008i3skNly1gsivkbczxoj31l20t8al5.jpg)
 
+![image-20210716163433337](https://tva1.sinaimg.cn/large/008i3skNly1gsivl4khz9j31d60h8mze.jpg)
 
-文章来源：
-
-《Java编程思想》
-
-https://www.javatpoint.com/join()-method
