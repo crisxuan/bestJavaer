@@ -249,5 +249,7 @@ public class VariablesInJava {
 }
 ```
 
-![](https://img2020.cnblogs.com/blog/1515111/202005/1515111-20200523072109768-85726720.png)
+![image-20210716163352584](https://tva1.sinaimg.cn/large/008i3skNly1gsivkbczxoj31l20t8al5.jpg)
+
+![image-20210716163433337](https://tva1.sinaimg.cn/large/008i3skNly1gsivl4khz9j31d60h8mze.jpg)
 

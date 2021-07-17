@@ -2729,8 +2729,7 @@ public class CompareNull {
 
 思维导图持续更新中～～～ 欢迎关注公众号 `程序员cxuan` 领取超全思维导图。
 
+![image-20210716163352584](https://tva1.sinaimg.cn/large/008i3skNly1gsivkbczxoj31l20t8al5.jpg)
 
+![image-20210716163433337](https://tva1.sinaimg.cn/large/008i3skNly1gsivl4khz9j31d60h8mze.jpg)
 
-## 注释和错误
-
-* 对于 ^ 和 ~ 的事例和解释反了。

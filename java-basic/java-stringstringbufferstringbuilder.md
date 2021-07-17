@@ -436,4 +436,7 @@ private int newCapacity(int minCapacity) {
 
 如果有错误的地方，还请大佬们提出宝贵意见。
 
-![](https://img2020.cnblogs.com/blog/1515111/202006/1515111-20200606094539174-1895083252.png)
+![image-20210716163352584](https://tva1.sinaimg.cn/large/008i3skNly1gsivkbczxoj31l20t8al5.jpg)
+
+![image-20210716163433337](https://tva1.sinaimg.cn/large/008i3skNly1gsivl4khz9j31d60h8mze.jpg)
+

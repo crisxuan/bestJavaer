@@ -300,4 +300,7 @@ remove()方法：
 
 **如果你有什么问题或者好的建议，欢迎你与我一起讨论**
 
-![](https://img2020.cnblogs.com/blog/1515111/202006/1515111-20200603165659148-1913194081.png)
+![image-20210716163352584](https://tva1.sinaimg.cn/large/008i3skNly1gsivkbczxoj31l20t8al5.jpg)
+
+![image-20210716163433337](https://tva1.sinaimg.cn/large/008i3skNly1gsivl4khz9j31d60h8mze.jpg)
+

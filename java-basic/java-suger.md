@@ -418,6 +418,10 @@ public class StringAppendTest {
 
 我们要在敞开怀抱拥抱变化的同时也要掌握其 `屠龙之技`。
 
+![image-20210716163352584](https://tva1.sinaimg.cn/large/008i3skNly1gsivkbczxoj31l20t8al5.jpg)
+
+![image-20210716163433337](https://tva1.sinaimg.cn/large/008i3skNly1gsivl4khz9j31d60h8mze.jpg)
+
 
 
 

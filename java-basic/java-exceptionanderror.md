@@ -313,30 +313,7 @@ Error 是程序无法处理的错误，表示运行应用程序中较严重问�
 
 * NoClassDefFoundError 是链接错误，发生在链接阶段，当解析引用找不到对应的类，就会触发；而 ClassNotFoundException 是发生在运行时的异常。
 
+![image-20210716163352584](https://tva1.sinaimg.cn/large/008i3skNly1gsivkbczxoj31l20t8al5.jpg)
 
+![image-20210716163433337](https://tva1.sinaimg.cn/large/008i3skNly1gsivl4khz9j31d60h8mze.jpg)
 
-文章参考：
-
-https://www.java67.com/2012/12/noclassdeffounderror-vs-classnotfoundexception-java.html
-
-《极客时间-Java核心技术 36 讲》
-
-《深入理解 Java 虚拟机》第二版
-
-《Effective Java 第三版》
-
-https://www.cnblogs.com/xiohao/p/3547443.html
-
-https://blog.csdn.net/qq_29229567/article/details/80773970
-
-https://blog.csdn.net/riemann_/article/details/87522352
-
-《Java编程思想》
-
-https://www.cnblogs.com/xz816111/p/8466048.html
-
-https://docs.oracle.com/javase/specs/jls/se9/html/jls-11.html#jls-11.1.1
-
-jdk 1.8 源码注释
-
-![](https://img2020.cnblogs.com/blog/1515111/202004/1515111-20200408140402572-1082111324.png)

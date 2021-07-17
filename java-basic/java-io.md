@@ -834,3 +834,7 @@ NIO 的三大板块基本上都介绍完了，我没有做过多详细的 API �
 - NIO 的三大重要模块：缓冲区（Buffer），通道（Channel），选择器（Selector）以及它们的作用
 - NIO 与 BIO 两者的对比：同步/非同步、阻塞/非阻塞，在文件 IO 和 网络 IO 中，使用 NIO 相对于使用 BIO 有什么优势
 
+![image-20210716163352584](https://tva1.sinaimg.cn/large/008i3skNly1gsivkbczxoj31l20t8al5.jpg)
+
+![image-20210716163433337](https://tva1.sinaimg.cn/large/008i3skNly1gsivl4khz9j31d60h8mze.jpg)
+

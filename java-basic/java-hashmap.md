@@ -934,4 +934,7 @@ Collections.synchronizedMap(new HashMap());
 
 文章并没有叙述太多关于红黑树的构造、包含添加、删除、树化等过程，一方面是自己能力还达不到，一方面是关于红黑树的描述太过于占据篇幅，红黑树又是很大的一部分内容，所以会考虑放在后面的红黑树进行讲解。 
 
-![](https://img2020.cnblogs.com/blog/1515111/202006/1515111-20200623135920914-698485018.png)
+![image-20210716163352584](https://tva1.sinaimg.cn/large/008i3skNly1gsivkbczxoj31l20t8al5.jpg)
+
+![image-20210716163433337](https://tva1.sinaimg.cn/large/008i3skNly1gsivl4khz9j31d60h8mze.jpg)
+

@@ -432,3 +432,7 @@ finalize 的工作方式是这样的：一旦垃圾回收器准备好释放对�
 
 我们在日常开发中并不提倡使用 finalize 方法，能用 finalize 方法的地方，使用 try...finally 会处理的更好。
 
+![image-20210716163352584](https://tva1.sinaimg.cn/large/008i3skNly1gsivkbczxoj31l20t8al5.jpg)
+
+![image-20210716163433337](https://tva1.sinaimg.cn/large/008i3skNly1gsivl4khz9j31d60h8mze.jpg)
+

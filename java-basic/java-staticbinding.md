@@ -204,9 +204,7 @@ Son类继承Father类，并重写了父类的dringMilk()方法，在输出结果
 
 2、多态是设计模式的基础，能够降低耦合性。
 
+![image-20210716163352584](https://tva1.sinaimg.cn/large/008i3skNly1gsivkbczxoj31l20t8al5.jpg)
 
-
-参考： https://blog.csdn.net/zhangjk1993/article/details/24066085
-
-![](https://img2020.cnblogs.com/blog/1515111/202006/1515111-20200603165611243-322062504.png)
+![image-20210716163433337](https://tva1.sinaimg.cn/large/008i3skNly1gsivl4khz9j31d60h8mze.jpg)
 

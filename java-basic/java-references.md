@@ -158,15 +158,7 @@ JDK1.2 介绍了 `java.lang.ref` 包，对象的生命周期有四个阶段：`�
 
 java.lang.ref.Reference 为软（soft）引用、弱（weak）引用、虚（phantom）引用的父类。因为 Reference 对象和垃圾回收密切配合实现，该类可能不能被直接子类化。
 
+![image-20210716163352584](https://tva1.sinaimg.cn/large/008i3skNly1gsivkbczxoj31l20t8al5.jpg)
 
-
-文章参考：
-
-https://www.jianshu.com/p/f86d3a43eec5
-
-《深入理解Java虚拟机》第二版
-
-http://www.kdgregory.com/index.php?page=java.refobj
-
-![](https://img2020.cnblogs.com/blog/1515111/202004/1515111-20200425182113271-1042895100.png)
+![image-20210716163433337](https://tva1.sinaimg.cn/large/008i3skNly1gsivl4khz9j31d60h8mze.jpg)
 

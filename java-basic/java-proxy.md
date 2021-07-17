@@ -566,3 +566,7 @@ try{
 
 如果多个方法都需要写这一段逻辑非常冗余，所以 Spring 给我们封装了一个注解 @Transactional，使用它后，调用方法时会监视方法，如果方法上含有该注解，就会自动帮我们把数据库相关操作的代码包裹起来，最终形成类似于上面的一段代码原理，当然这里并不准确，只是给你们一个大概的总览，了解Spring AOP 的本质在干什么，这篇文章讲解到这里，知识量应该也非常多了，好好消化上面的知识点，为后面的 Spring AOP 专题学习打下坚实的基础。
 
+![image-20210716163352584](https://tva1.sinaimg.cn/large/008i3skNly1gsivkbczxoj31l20t8al5.jpg)
+
+![image-20210716163433337](https://tva1.sinaimg.cn/large/008i3skNly1gsivl4khz9j31d60h8mze.jpg)
+

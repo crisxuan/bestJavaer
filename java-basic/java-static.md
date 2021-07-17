@@ -172,8 +172,6 @@ public class StaticTest {
 
 我们在了解了 static 关键字的用法之后，来看一下 static 深入的用法，也就是由浅入深，慢慢来，前戏要够～
 
-
-
 ### 关于 static 的所属类
 
 static 所修饰的属性和方法都属于类的，不会属于任何对象；它们的调用方式都是 `类名.属性名/方法名`，而实例变量和局部变量都是属于具体的对象实例。
@@ -318,10 +316,9 @@ public class test.StaticTest {
 
 ![](https://img2020.cnblogs.com/blog/1515111/202005/1515111-20200531112733139-60373309.png)
 
-
 从这个角度来讲，`invokestatic` 指令是专门用来执行 static 方法的指令；`invokespecial` 是专门用来执行实例方法的指令；从这个角度来讲，构造器也不是静态的。
 
-![](https://img2020.cnblogs.com/blog/1515111/202005/1515111-20200531112752970-188801451.png)
+![image-20210716163352584](https://tva1.sinaimg.cn/large/008i3skNly1gsivkbczxoj31l20t8al5.jpg)
 
-
+![image-20210716163433337](https://tva1.sinaimg.cn/large/008i3skNly1gsivl4khz9j31d60h8mze.jpg)
 

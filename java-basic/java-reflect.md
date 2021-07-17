@@ -565,3 +565,8 @@ System.out.println("窥觑到小菠萝的体重是：" + weight.get(sp));
 - 反射的作用：**在运行时才确定实例化对象，使程序更加健壮**，面对需求变更时，可以最大程度地做到不修改程序源码应对不同的场景，实例化不同类型的对象。
 - 反射的应用场景常见的有`3`个：Spring的 IOC 容器，反射+工厂模式 使工厂类更稳定，JDBC连接数据库时加载驱动类
 - 反射的`3`个特点：增加程序的灵活性、破坏类的封装性以及性能损耗
+
+![image-20210716163352584](https://tva1.sinaimg.cn/large/008i3skNly1gsivkbczxoj31l20t8al5.jpg)
+
+![image-20210716163433337](https://tva1.sinaimg.cn/large/008i3skNly1gsivl4khz9j31d60h8mze.jpg)
+
