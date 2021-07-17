@@ -611,7 +611,7 @@ int main(int argc,char *argv[]){
 
 ```c
 while(TRUE){
-  while(turn != 0){
+  while(turn == 0){
     /* 进入关键区域 */
     critical_region();
     turn = 1;
@@ -625,7 +625,7 @@ while(TRUE){
 
 ```c
 while(TRUE){
-  while(turn != 1){
+  while(turn == 1){
     critical_region();
     turn = 0;
     noncritical_region();
