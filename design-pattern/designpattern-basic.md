@@ -1,5 +1,22 @@
 # 设计模式超强总结
 
+* [设计模式超强总结](#设计模式超强总结)
+   * [UML中类图以及类图之间的关系](#uml中类图以及类图之间的关系)
+      * [类、接口和类图](#类接口和类图)
+         * [类](#类)
+         * [接口](#接口)
+         * [类图](#类图)
+   * [设计模式的原则](#设计模式的原则)
+      * [开闭原则（Open Closed Principle）](#开闭原则open-closed-principle)
+      * [单一职责原则（Single Responsiblity Principle）](#单一职责原则single-responsiblity-principle)
+      * [里式替换原则（Liskov Substitution Principle）](#里式替换原则liskov-substitution-principle)
+      * [依赖倒转原则（Dependency Inversion Principle）](#依赖倒转原则dependency-inversion-principle)
+      * [接口分离原则（Interface Segregation Principle）](#接口分离原则interface-segregation-principle)
+      * [迪米特原则（Principle of Least Knowledge）](#迪米特原则principle-of-least-knowledge)
+   * [二十三种设计模式](#二十三种设计模式)
+      * [设计模式概述](#设计模式概述)
+      * [设计模式的类型](#设计模式的类型)
+
 `设计模式（Design pattern）`代表了最佳的实践，通常被有经验的面向对象的软件开发人员所采用。设计模式是软件开发人员在软件开发过程中面临的一般问题的解决方案。
 
 设计模式是一套被反复使用的、多数人知晓的、经过分类编目的、代码设计经验的总结。使用设计模式是为了重用代码、让代码更容易被他人理解、保证代码可靠性。 
