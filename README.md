@@ -7,6 +7,8 @@
 >
 >**本仓库仅供学习使用，商业用途请联系作者 (微信： lx252279279 )**
 
+<img src="https://tva1.sinaimg.cn/large/008i3skNgy1gslc3jdiv5j305k05ka9z.jpg" alt="image-20210718193703133" style="zoom:50%;" />
+
 ![](https://img.shields.io/static/v1?label=bestjavaer&message=操作系统&color=blue)![](https://img.shields.io/static/v1?label=bestjavaer&message=计算机基础&color=<COLOR>)![](https://img.shields.io/static/v1?label=bestjavaer&message=计算机网络&color=yellowgreen)
 
 ![](https://img.shields.io/static/v1?label=bestjavaer&message=Java基础&color=orange)![](https://img.shields.io/static/v1?label=bestjavaer&message=设计模式&color=success)![](https://img.shields.io/static/v1?label=bestjavaer&message=JVM&color=important)![](https://img.shields.io/static/v1?label=bestjavaer&message=Java并发&color=9cf)
@@ -21,6 +23,7 @@
 * [操作系统](https://github.com/crisxuan/bestJavaer#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%B3%BB%E5%88%97)
 * [计算机基础知识](https://github.com/crisxuan/bestJavaer#%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%97)
 * [深入理解计算机系统](https://github.com/crisxuan/bestJavaer#%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F)
+* 优质 github 推荐
 * [HTTP 系列](https://github.com/crisxuan/bestJavaer#http-%E7%B3%BB%E5%88%97)
 * [汇编语言](https://github.com/crisxuan/bestJavaer#%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80)
 * [C 语言](https://github.com/crisxuan/bestJavaer#c-%E8%AF%AD%E8%A8%80)
@@ -72,7 +75,7 @@
 
 不多说，搞起。
 
-## 操作系统系列
+## 操作系统系列👍
 
 * [硬核操作系统入门](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-overview.md)
 * [硬核操作系统之进程和线程](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-processandthread.md)
@@ -84,38 +87,7 @@
 * [操作系统网站推荐](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-recommand.md)
 * [操作系统超全面试题](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-interview-second.md)
 
-## 计算机入门系列
-
-* [程序员需要了解的硬核知识之 CPU](https://github.com/crisxuan/bestJavaer/blob/master/computer-basic/computer-cpu.md)
-* [程序员需要了解的硬核知识之内存](https://github.com/crisxuan/bestJavaer/blob/master/computer-basic/computer-ram.md)
-* [程序员需要了解的硬核知识之二进制](https://github.com/crisxuan/bestJavaer/blob/master/computer-basic/computer-binary.md)
-* [程序员需要了解的硬核知识之磁盘](https://github.com/crisxuan/bestJavaer/blob/master/computer-basic/computer-disk.md)
-* [程序员需要了解的硬核知识之压缩算法](https://github.com/crisxuan/bestJavaer/blob/master/computer-basic/computer-compression.md)
-* [程序员需要了解的硬核知识之操作系统和应用](https://github.com/crisxuan/bestJavaer/blob/master/computer-basic/computer-osandapp.md)
-* [程序员需要了解的硬核知识之操作系统入门](https://github.com/crisxuan/bestJavaer/blob/master/computer-basic/computer-os.md)
-* [程序员需要了解的硬核知识之控制硬件](https://github.com/crisxuan/bestJavaer/blob/master/computer-basic/computer-disk.md)
-
-## 深入理解计算机系统
-
-* [计算机系统入门概述](https://github.com/crisxuan/bestJavaer/blob/master/computersystem/csapp-basic.md)
-
-## HTTP 系列
-
-* [全面了解 HTTP](https://github.com/crisxuan/bestJavaer/blob/master/http/http-basic.md)
-* [HTTP 黑科技](https://github.com/crisxuan/bestJavaer/blob/master/http/http-advanced.md)
-* [HTTP 核心概念](https://github.com/crisxuan/bestJavaer/blob/master/http/http-deepknow.md)
-* [全面了解 HTTPS](https://github.com/crisxuan/bestJavaer/blob/master/http/http-https.md)
-* [全面了解 Cookies、Session 和 Token](https://github.com/crisxuan/bestJavaer/blob/master/http/http-cookesessiontoken.md)
-
-## Linux 系列
-
-* [Linux 开篇！！！](https://github.com/crisxuan/bestJavaer/blob/master/linux/linux-first.md)
-* [Linux 进程和线程](https://github.com/crisxuan/bestJavaer/blob/master/linux/linux-processandthread.md)
-* [Linux 内存管理](https://github.com/crisxuan/bestJavaer/blob/master/linux/linux-memroy-management.md)
-* [Linux IO管理](https://github.com/crisxuan/bestJavaer/blob/master/linux/linux-io.md)
-* [Linux 文件系统](https://github.com/crisxuan/bestJavaer/blob/master/linux/linux-file-system.md)
-
-## 计算机网络系列
+## 计算机网络系列👍
 
 * [计算机网络基础知识](https://github.com/crisxuan/bestJavaer/blob/master/computer-network/computer-network-basic.md)
 * [TCP/IP 基础知识](https://github.com/crisxuan/bestJavaer/blob/master/computer-network/computer-network-tcpip.md)
@@ -132,8 +104,7 @@
 * [计算机网络自学指南](https://github.com/crisxuan/bestJavaer/blob/master/computer-network/computer-howtolearn.md)
 * [计算机网络核心概念](https://github.com/crisxuan/bestJavaer/blob/master/computer-network/network-concept.md)
 
-
-## Java 基础系列
+## Java 基础系列👍
 
 * [Java 基础核心总结](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-summary.md)
 * [Java 代理](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-proxy.md)
@@ -177,6 +148,37 @@
 * [线程池超用心源码分析](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-threadpoolexecutor.md)
 * [深入理解 volatile 关键字](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-volatile.md)
 * [Semaphore 用法和源码分析](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-semaphore.md)
+
+## 计算机入门系列
+
+* [程序员需要了解的硬核知识之 CPU](https://github.com/crisxuan/bestJavaer/blob/master/computer-basic/computer-cpu.md)
+* [程序员需要了解的硬核知识之内存](https://github.com/crisxuan/bestJavaer/blob/master/computer-basic/computer-ram.md)
+* [程序员需要了解的硬核知识之二进制](https://github.com/crisxuan/bestJavaer/blob/master/computer-basic/computer-binary.md)
+* [程序员需要了解的硬核知识之磁盘](https://github.com/crisxuan/bestJavaer/blob/master/computer-basic/computer-disk.md)
+* [程序员需要了解的硬核知识之压缩算法](https://github.com/crisxuan/bestJavaer/blob/master/computer-basic/computer-compression.md)
+* [程序员需要了解的硬核知识之操作系统和应用](https://github.com/crisxuan/bestJavaer/blob/master/computer-basic/computer-osandapp.md)
+* [程序员需要了解的硬核知识之操作系统入门](https://github.com/crisxuan/bestJavaer/blob/master/computer-basic/computer-os.md)
+* [程序员需要了解的硬核知识之控制硬件](https://github.com/crisxuan/bestJavaer/blob/master/computer-basic/computer-disk.md)
+
+## 深入理解计算机系统
+
+* [计算机系统入门概述](https://github.com/crisxuan/bestJavaer/blob/master/computersystem/csapp-basic.md)
+
+## HTTP 系列
+
+* [全面了解 HTTP](https://github.com/crisxuan/bestJavaer/blob/master/http/http-basic.md)
+* [HTTP 黑科技](https://github.com/crisxuan/bestJavaer/blob/master/http/http-advanced.md)
+* [HTTP 核心概念](https://github.com/crisxuan/bestJavaer/blob/master/http/http-deepknow.md)
+* [全面了解 HTTPS](https://github.com/crisxuan/bestJavaer/blob/master/http/http-https.md)
+* [全面了解 Cookies、Session 和 Token](https://github.com/crisxuan/bestJavaer/blob/master/http/http-cookesessiontoken.md)
+
+## Linux 系列
+
+* [Linux 开篇！！！](https://github.com/crisxuan/bestJavaer/blob/master/linux/linux-first.md)
+* [Linux 进程和线程](https://github.com/crisxuan/bestJavaer/blob/master/linux/linux-processandthread.md)
+* [Linux 内存管理](https://github.com/crisxuan/bestJavaer/blob/master/linux/linux-memroy-management.md)
+* [Linux IO管理](https://github.com/crisxuan/bestJavaer/blob/master/linux/linux-io.md)
+* [Linux 文件系统](https://github.com/crisxuan/bestJavaer/blob/master/linux/linux-file-system.md)
 
 
 ## 设计模式系列
@@ -275,6 +277,16 @@ TODO
 * [Java 基础面试题汇总](https://github.com/crisxuan/bestJavaer/blob/master/interview-answer/java-basic-interview.md)
 
 * [操作系统面试题](https://github.com/crisxuan/bestJavaer/blob/master/operating-system/os-fiftyInterview.md)
+
+## 优质 github 推荐
+
+* [JavaGuide 的 github](https://github.com/Snailclimb/JavaGuide) 
+
+>推荐理由：非常硬核的一个面试题仓库，有非常多的小伙伴通过这个项目进入到了大厂，强烈推荐。
+
+* [macrozheng 的 github](https://github.com/macrozheng/mall)
+
+>推荐理由：一整套完整的电商系统，包括前台商城系统及后台管理系统，基于 SpringBoot+MyBatis 实现，采用 Docker 容器化部署，实用性非常强的一个 github ，写在简历上非常加分。
 
 ## 算法
 
