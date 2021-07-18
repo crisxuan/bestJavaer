@@ -7,7 +7,7 @@
 >
 >**本仓库仅供学习使用，商业用途请联系作者 (微信： lx252279279 )**
 
-<img src="https://tva1.sinaimg.cn/large/008i3skNgy1gslc3jdiv5j305k05ka9z.jpg" alt="image-20210718193703133" style="zoom:50%;" />
+![image-20210718221749417](https://tva1.sinaimg.cn/large/008i3skNgy1gslgqsilcpj317406adfw.jpg)
 
 ![](https://img.shields.io/static/v1?label=bestjavaer&message=操作系统&color=blue)![](https://img.shields.io/static/v1?label=bestjavaer&message=计算机基础&color=<COLOR>)![](https://img.shields.io/static/v1?label=bestjavaer&message=计算机网络&color=yellowgreen)
 
@@ -23,7 +23,7 @@
 * [操作系统](https://github.com/crisxuan/bestJavaer#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%B3%BB%E5%88%97)
 * [计算机基础知识](https://github.com/crisxuan/bestJavaer#%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%97)
 * [深入理解计算机系统](https://github.com/crisxuan/bestJavaer#%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F)
-* 优质 github 推荐
+* [优质 github 推荐](https://github.com/crisxuan/bestJavaer#%E4%BC%98%E8%B4%A8-github-%E6%8E%A8%E8%8D%90)
 * [HTTP 系列](https://github.com/crisxuan/bestJavaer#http-%E7%B3%BB%E5%88%97)
 * [汇编语言](https://github.com/crisxuan/bestJavaer#%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80)
 * [C 语言](https://github.com/crisxuan/bestJavaer#c-%E8%AF%AD%E8%A8%80)
