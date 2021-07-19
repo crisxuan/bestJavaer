@@ -116,6 +116,7 @@
 * [深入理解 Java 变量](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-varaibles.md)
 * [深入理解 final、finally、finalize](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-final.md)
 * [关于四种引用类型](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-references.md)
+* [Java 创建对象的五种方式](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-createobject.md)
 * [Exception 和 Error 的区别](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-exceptionanderror.md)
 * [for 、foreach 、iterator 三种遍历方式的比较](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-forandforeach.md)
 * [理解静态绑定与动态绑定](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-staticbinding.md)
@@ -130,6 +131,7 @@
 
 ## 并发系列
 
+* [JSR-133 都解决了哪些问题](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-jsr133.md)
 * [简单认识并发](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-concurrent-basic.md)
 * [看完你就明白的锁系列之锁的状态](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-lock-status.md)
 * [看完你就明白的锁系列之乐观锁和悲观锁](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-optimisticlock.md)
@@ -217,6 +219,7 @@ TODO
 * [MySQL 基础入门大全](https://github.com/crisxuan/bestJavaer/blob/master/mysql/mysql-basicall.md)
 * [MySQL 开发](https://github.com/crisxuan/bestJavaer/blob/master/mysql/mysql-develop.md)
 * [MySQL 进阶技巧](https://github.com/crisxuan/bestJavaer/blob/master/mysql/mysql-improve.md)
+* [MySQL 调优](https://github.com/crisxuan/bestJavaer/blob/master/mysql/mysql-optimization.md)
 
 ## Spring 系列
 

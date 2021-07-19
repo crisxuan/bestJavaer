@@ -15,6 +15,20 @@
       * [MySQL 分析表](#mysql-分析表)
       * [MySQL 检查表](#mysql-检查表)
       * [MySQL 优化表](#mysql-优化表)
+   * [常用 SQL 优化](#常用-sql-优化)
+      * [导入的优化](#导入的优化)
+      * [insert 的优化](#insert-的优化)
+      * [group by 的优化](#group-by-的优化)
+      * [order by 的优化](#order-by-的优化)
+      * [优化嵌套查询](#优化嵌套查询)
+      * [count 的优化](#count-的优化)
+      * [limit 分页的优化](#limit-分页的优化)
+      * [SQL 中 IN 包含的值不应该太多](#sql-中-in-包含的值不应该太多)
+      * [只需要一条数据的情况](#只需要一条数据的情况)
+      * [如果没有使用索引，就尽量减少排序](#如果没有使用索引就尽量减少排序)
+      * [尽量用 union all 来代替 union](#尽量用-union-all-来代替-union)
+      * [where 条件优化](#where-条件优化)
+      * [查询时，尽量指定查询的字段名](#查询时尽量指定查询的字段名)
 
 一般传统互联网公司很少接触到 SQL 优化问题，其原因是数据量小，大部分厂商的数据库性能能够满足日常的业务需求，所以不需要进行 SQL 优化，但是随着应用程序的不断变大，数据量的激增，数据库自身的性能跟不上了，此时就需要从 SQL 自身角度来进行优化，这也是我们这篇文章所讨论的。
 
@@ -475,6 +489,164 @@ optimize table cxuan005;
 ![](https://z3.ax1x.com/2021/06/21/RkDD4P.png)
 
 我的存储引擎是 InnoDB 引擎，但是从图可以知道，InnoDB 不支持使用 optimize 优化，建议使用 recreate + analyze 进行优化。optimize 命令只对 MyISAM 、BDB 表起作用。
+
+## 常用 SQL 优化
+
+前面我们介绍了使用索引来优化 MySQL ，那么对于 SQL 的各种语法，句法来说，应该怎样优化呢？下面，我会从 SQL 命令的角度来聊一波 SQL 优化。
+
+### 导入的优化
+
+对于 MyISAM 类型的表，可以通过下面这种方式导入大量的数据
+
+```mysql
+ALTER TABLE tblname DISABLE KEYS;
+loading the data
+ALTER TABLE tblname ENABLE KEYS;
+```
+
+这两个命令用来打开或者关闭 MyISAM 表非唯一索引的更新。在导入大量的数据到一个非空的 MyISAM 表时，通过设置这两个命令，可以提高导入的效率。对于导入大量数据到一个空的 MyISAM 表，默认就是先导入数据然后才创建索引，所以不用进行设置。
+
+但是对于 InnoDB 搜索引擎的表来说，这样做不能提高导入效率，我们有以下几种方式可以提高导入的效率：
+
+1. 因为 InnoDB 类型的表是按照主键的顺序保存的，所以将导入的数据按照主键的顺序排列，可以有效的提高导入数据的效率。如果 InnoDB 表没有主键，那么系统会默认创建一个内部列作为主键，所以如果可以给表创建一个主键，将可以利用这个优势提高导入数据的效率。
+2. 在导入数据前执行 SET UNIQUE_CHECKS = 0，关闭唯一性校验，在导入结束后执行SETUNIQUE_CHECKS = 1，恢复唯一性校验，可以提高导入的效率。
+3. 如果应用使用自动提交的方式，建议在导入前执行 SET AUTOCOMMIT = 0，关闭自动提交，导入结束后再执行 SET AUTOCOMMIT = 1，打开自动提交，也可以提高导入的效率。
+
+### insert 的优化
+
+当进行插入语句的时候，可以考虑采用下面这几种方式进行优化
+
+* 如果向同一张表插入多条数据的话，最好一次性插入，这样可以减少数据库建立连接 -> 断开连接的时间，如下所示
+
+```mysql
+insert into test values(1,2),(1,3),(1,4)
+```
+
+* 如果向不同的表插入多条数据，可以使用 **insert delayed** 语句提高执行效率。delayed 的含义是让 insert 语句马上执行，要么数据都会放在内存的队列中，并没有真正写入磁盘。
+* 对于 MyISAM 表来说，可以增加 bulk_insert_buffer_size 的值提高插入效率。
+* 最好将索引和数据文件在不同的磁盘上存放。
+
+### group by 的优化
+
+在使用分组和排序的场景下，如果先进行 Group By 再进行 Order By 的话，可以指定 **order by null** 禁止排序，因为 order by null 可以避免 `filesort` ，filesort 往往很耗费时间。如下所示
+
+```mysql
+explain select id,sum(moneys) from sales2 group by id order by null;
+```
+
+### order by 的优化
+
+在执行计划中，经常可以看到 `Extra` 列出现了 filesort，filesort 是一种文件排序，这种排序方式比较慢，我们认为是不好的排序，需要进行优化。
+
+![image-20210629093920867](https://tva1.sinaimg.cn/large/008i3skNgy1gsmfpkk830j31ie06sgnz.jpg)
+
+优化的方式是要使用索引。
+
+我们在 cxuan005 上创建一个索引。
+
+```mysql
+create index idx on cxuan005(id);
+```
+
+![image-20210629095458317](https://tva1.sinaimg.cn/large/008i3skNgy1gsmfpibkknj30g003474m.jpg)
+
+然后我们使用查询字段和排序相同的顺序进行查询。
+
+```mysql
+explain select id from cxuan005 where id > '111' order by id;
+```
+
+![image-20210629095636413](https://tva1.sinaimg.cn/large/008i3skNgy1gsmfpmu5m4j31jg06u76m.jpg)
+
+可以看到，在这次查询中，使用的是 `Using index`。这表明我们使用的是索引。
+
+如果创建索引和 order by 的顺序不一致，将会使用 Using filesort。
+
+```mysql
+explain select id from cxuan005 where id > '111' order by info;
+```
+
+![image-20210629101103501](https://tva1.sinaimg.cn/large/008i3skNgy1gsmfpleacxj31jy06udi7.jpg)
+
+MySQL 支持两种方式的排序，filesort 和 index，Using index 是指 MySQL 扫描索引本身完成排序。index 效率高，filesort 效率低。
+
+order by 在满足下面这些情况下才会使用 index
+
+* order by 语句使用索引最左前列。
+* 使用 where 子句与 order by 子句条件列组合满足索引最左前列。
+
+### 优化嵌套查询
+
+嵌套查询是我们经常使用的一种查询方式，这种查询方式可以使用 SELECT 语句来创建一个单独的查询结果，然后把这个结果当作嵌套语句的查询范围用在另一个查询语句中。使用时子查询可以将一个复杂的查询拆分成一个个独立的部分，逻辑上更易于理解以及代码的维护和重复使用。
+
+但是某些情况下，子查询的效率不高，一般使用 `join` 来替代子查询。
+
+使用嵌套查询的 SQL 语句进行 explain 分析如下
+
+```mysql
+explain select c05.id from cxuan005 c05 where id not in (select id from cxuan003);
+```
+
+![image-20210629152925407](https://tva1.sinaimg.cn/large/008i3skNgy1gsmfpm9ch1j31uu07itc3.jpg)
+
+从 explain 的结果可以看出，主表的查询是 index ，子查询是 index_subquery ，这两个执行效率都不高。我们使用 join 来优化后的分析计划如下。
+
+```mysql
+explain select c05.id from cxuan005 c05 left join cxuan003 c03 on c05.id = c03.id;
+```
+
+![image-20210629153729525](https://tva1.sinaimg.cn/large/008i3skNgy1gsmfpjhqt6j31nm07ytbs.jpg)
+
+从 explain 分析结果可以看到，主表查询和子查询分别是 index 和 ref，而 ref 的执行效率相对较高，一般 type 的效率由高到低是 System-->const-->eq_ref-->ref--> fulltext-->ref_or_null-->index_merge-->unique_subquery-->index_subquery-->range-->index-->all 。
+
+### count 的优化
+
+count 我们大家用的太多了，一般都用来统计某一列结果集的行数，当 MySQL 确认括号内的表达式不可能为空时，实际上就是在统计行数。
+
+其实 count 还有另一层统计方式：**统计某个列值的数量**，在统计列值数量的时候，它默认不会统计 `NULL` 值。
+
+我们经常犯的一个错误就是，在括号内指定一个列但是却希望统计结果集的行数。如果想要知道结果集行数的话，最好使用 count(*)。
+
+### limit 分页的优化
+
+通常我们的系统会进行分页，一般情况下我们会使用 limit 加上偏移量来实现。同时还会加上 order by 语句进行排序。如果使用索引的情况下，效率一般不会有什么问题，如果没有使用索引的话，MySQL 就可能会做大量的文件排序操作。
+
+通常我们可能会遇到比如 limit 1000 , 50 这种情况，抛弃 1000 条，只取 50 条，这样的代价非常高，如果所有页面被访问的频率相同，那么这样的查询平均需要访问半个表的数据。
+
+要优化这种查询，要么**限制分页的数量**，要么**优化大偏移量的性能**。
+
+### SQL 中 IN 包含的值不应该太多
+
+MySQL 中对 IN 做了相应的优化，MySQL 会将全部的常量存储在一个数组里面，如果数值较多，产生的消耗也会变大，比如
+
+```mysql
+select name from dual where num in(4,5,6)
+```
+
+像这种 SQL 语句的话，能用 between 使用就不要再使用 in 了。
+
+### 只需要一条数据的情况
+
+如果只需要一条数据的情况下，推荐使用 `limit 1`，这样会使执行计划中的 type 变为 `const`。
+
+### 如果没有使用索引，就尽量减少排序
+
+### 尽量用 union all 来代替 union
+
+union 和 union all 的差异主要是前者需要将结果集合并后再进行唯一性过滤操作，这就会涉及到排序，增加大量的 CPU 运算，加大资源消耗及延迟。当然，union all 的前提条件是两个结果集没有重复数据。
+
+### where 条件优化
+
+* 避免在 WHERE 字句中对字段进行 NULL 判断
+
+* 避免在 WHERE 中使用 != 或 <> 操作符
+* 不建议使用 % 前缀模糊查询，例如 LIKE “%name”或者LIKE “%name%”，这种查询会导致索引失效而进行全表扫描。但是可以使用LIKE “name%”。
+* 避免在 where 中对字段进行表达式操作，比如 **select user_id,user_project from table_name where age*2=36 ** 就是一种表达式操作，建议改为 **select user_id,user_project from table_name where age=36/2 **
+* 建议在 where 子句中确定 column 的类型，避免 column 字段的类型和传入的参数类型不一致的时候发生的类型转换。
+
+### 查询时，尽量指定查询的字段名
+
+我们在日常使用 select 查询时，尽量使用 select 字段名 这种方式，避免直接 **select * **，这样增加很多不必要的消耗（cpu、io、内存、网络带宽）；而且查询效率比较低。
 
 ![image-20210716163352584](https://tva1.sinaimg.cn/large/008i3skNly1gsivkbczxoj31l20t8al5.jpg)
 
