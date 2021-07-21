@@ -285,11 +285,7 @@ TODO
 
 * [JavaGuide 的 github](https://github.com/Snailclimb/JavaGuide) 
 
->推荐理由：非常硬核的一个面试题仓库，有非常多的小伙伴通过这个项目进入到了大厂，强烈推荐。
-
-* [macrozheng 的 github](https://github.com/macrozheng/mall)
-
->推荐理由：一整套完整的电商系统，包括前台商城系统及后台管理系统，基于 SpringBoot+MyBatis 实现，采用 Docker 容器化部署，实用性非常强的一个 github ，写在简历上非常加分。
+* [小傅哥的 Github](https://github.com/fuzhengwei/CodeGuide/wiki)
 
 ## 算法
 
@@ -340,8 +336,6 @@ TODO
 * [写给 25 岁的自己](https://github.com/crisxuan/bestJavaer/blob/master/aboutlife/cxuan-25yearsold.md)
 * [面试官和面试者在同一个群里是怎样的体验](https://github.com/crisxuan/bestJavaer/blob/master/aboutlife/interviewer-story.md)
 * 如何高效的学习技术？
-
-
 
 ## 程序员
 
