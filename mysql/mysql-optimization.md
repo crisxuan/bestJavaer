@@ -40,13 +40,13 @@
 
 首先，我们可以使用 **show status** 命令查看服务器状态信息。show status 命令会显示每个服务器变量 variable_name 和 value，状态变量是只读的。如果使用 SQL 命令，可以使用 like 或者 where 条件来限制结果。like 可以对变量名做标准模式匹配。
 
- ![](https://z3.ax1x.com/2021/06/20/RkizE8.png)
+![image-20210725220256076](https://tva1.sinaimg.cn/large/008i3skNly1gstjnb23z0j30lu0d1jsk.jpg)
 
 图我没有截全，下面还有很多变量，读者可以自己尝试一下。也可以在操作系统上使用 **mysqladmin extended-status** 命令来获取这些消息。
 
 但是我执行 mysqladmin extended-status 后，出现这个错误。
 
-![](https://z3.ax1x.com/2021/06/20/RkFrrt.png)
+![image-20210725220304607](https://tva1.sinaimg.cn/large/008i3skNly1gstjne9m71j30lv02kjrn.jpg)
 
 应该是我没有输入密码的原因，使用 **mysqladmin -P3306 -uroot -p -h127.0.0.1 -r -i 1 extended-status** 后，问题解决。
 
@@ -61,7 +61,7 @@
 
 下面是 Com_ 为开头的参数，参数很多，我同样没有截全。
 
-<img src="https://z3.ax1x.com/2021/06/20/RkFDKI.png" style="zoom:50%;" />
+![image-20210725220310637](https://tva1.sinaimg.cn/large/008i3skNly1gstjni4axjj30840eiq40.jpg)
 
 Com_xxx 表示的是每个 xxx 语句执行的次数，我们通常关心的是 select 、insert 、update、delete 语句的执行次数，即
 
@@ -115,7 +115,7 @@ long_query_time = 2
 show variables like "%slow%";
 ```
 
-![](https://z3.ax1x.com/2021/06/20/RkF0xA.png)
+![image-20210725220321492](https://tva1.sinaimg.cn/large/008i3skNly1gstjnomxdhj30ls086q3x.jpg)
 
 启用慢查询日志
 
@@ -123,17 +123,17 @@ show variables like "%slow%";
 set global slow_query_log='ON';
 ```
 
-![](https://z3.ax1x.com/2021/06/20/RkFw2d.png)
+![image-20210725220329215](https://tva1.sinaimg.cn/large/008i3skNly1gstjntupetj30lr03k0t0.jpg)
 
 然后再次查询慢查询是否开启
 
-![](https://z3.ax1x.com/2021/06/20/RkFaPe.png)
+![image-20210725220338780](https://tva1.sinaimg.cn/large/008i3skNly1gstjnzv6mhj30lq088t9o.jpg)
 
 如图所示，我们已经开启了慢查询日志。
 
 慢查询日志会在查询结束以后才记录，所以在应用反应执行效率出现问题的时候慢查询日志并不能定位问题，此时应该使用 **show processlist** 命令查看当前 MySQL 正在进行的线程。包括线程的状态、是否锁表等，可以实时的查看 SQL 执行情况。同样，使用**mysqladmin processlist**语句也能得到此信息。
 
-![](https://z3.ax1x.com/2021/06/20/RkFd8H.png)
+![image-20210725220348702](https://tva1.sinaimg.cn/large/008i3skNly1gstjo6j215j30m404w74y.jpg)
 
 下面就来解释一下各个字段对应的概念
 
@@ -162,17 +162,17 @@ https://blog.csdn.net/weixin_34357436/article/details/91768402
 explain select * from test1;
 ```
 
-![](https://z3.ax1x.com/2021/06/20/RkFN5D.png)
+![image-20210725220359537](https://tva1.sinaimg.cn/large/008i3skNly1gstjocrso4j30m003lq3i.jpg)
 
 上表中涉及内容如下
 
 * select_type：表示常见的 SELECT 类型，常见的有 SIMPLE，SIMPLE 表示的是简单的 SQL 语句，不包括 UNION 或者子查询操作，比如下面这段就是 SIMPLE 类型。
 
-![](https://z3.ax1x.com/2021/06/20/RkFtUO.png)
+![image-20210725220950577](https://tva1.sinaimg.cn/large/008i3skNly1gstjug59bdj30lz03f3z3.jpg)
 
 PRIMARY ，查询中最外层的 SELECT（如两表做 UNION 或者存在子查询的外层的表操作为 PRIMARY，内层的操作为 UNION），比如下面这段子查询。
 
-![](https://z3.ax1x.com/2021/06/20/RkFYVK.png)
+![image-20210725221000038](https://tva1.sinaimg.cn/large/008i3skNly1gstjulovtjj30m303iq3i.jpg)
 
 UNION，在 UNION 操作中，查询中处于内层的 SELECT（内层的 SELECT 语句与外层的 SELECT 语句没有依赖关系时）。
 
@@ -216,7 +216,7 @@ SUBQUERY：子查询中首个SELECT（如果有多个子查询存在），如我
 
 上面就是 type 内容的大致解释，关于 type 我们经常会在 SQL 调优的环节使用 explain 分析其类型，然后改进查询方式，越靠近 system 其查询效率越高，越靠近 all 其查询效率越低。
 
-![](https://z3.ax1x.com/2021/06/20/RkFGb6.png)
+![image-20210725221018222](https://tva1.sinaimg.cn/large/008i3skNly1gstjux8ja9j30me0av74n.jpg)
 
 * possible_keys ：表示查询时，可能使用的索引。
 * key ：表示实际使用的索引。
@@ -252,7 +252,7 @@ SUBQUERY：子查询中首个SELECT（如果有多个子查询存在），如我
   create index normal_index on cxuan003(id);
   ```
 
-  ![](https://z3.ax1x.com/2021/06/20/RkF8Dx.png)
+  ![image-20210725221035791](https://tva1.sinaimg.cn/large/008i3skNly1gstjv7wo4cj30kx03kwev.jpg)
 
   删除方式 
 
@@ -260,7 +260,7 @@ SUBQUERY：子查询中首个SELECT（如果有多个子查询存在），如我
   drop index normal_index on cxuan003;
   ```
 
-  ![](https://z3.ax1x.com/2021/06/20/RkF3K1.png)
+  ![image-20210725221050699](https://tva1.sinaimg.cn/large/008i3skNly1gstjvh4jffj30kk03st94.jpg)
 
 * 唯一索引：唯一索引列的值必须唯一，允许有空值，如果是组合索引，则列值的组合必须唯一，创建方式如下
 
@@ -268,7 +268,7 @@ SUBQUERY：子查询中首个SELECT（如果有多个子查询存在），如我
   create unique index normal_index on cxuan003(id);
   ```
 
-  ![](https://z3.ax1x.com/2021/06/20/RkFlvR.png)
+  ![image-20210725221100948](https://tva1.sinaimg.cn/large/008i3skNly1gstjvnmw2hj30kv02z0t0.jpg)
 
 * 主键索引：是一种特殊的索引，一个表只能有一个主键，不允许有空值。一般是在建表的时候同时创建主键索引。
 
@@ -280,7 +280,7 @@ SUBQUERY：子查询中首个SELECT（如果有多个子查询存在），如我
   )
   ```
 
-  ![](https://z3.ax1x.com/2021/06/20/RkFQ29.png)
+  ![image-20210725221205132](https://tva1.sinaimg.cn/large/008i3skNly1gstjwsr29cj30l406lq3j.jpg)
 
 * 组合索引：指多个字段上创建的索引，只有在查询条件中使用了创建索引时的第一个字段，索引才会被使用。使用组合索引时遵循最左前缀原则，下面我们就会创建组合索引。
 
@@ -307,15 +307,15 @@ SUBQUERY：子查询中首个SELECT（如果有多个子查询存在），如我
 
 索引可以在创建表的时候进行创建，也可以单独创建，下面我们采用单独创建的方式，我们在 cxuan004 上创建前缀索引
 
-![](https://z3.ax1x.com/2021/06/20/RkFM8J.png)
+![image-20210725221243114](https://tva1.sinaimg.cn/large/008i3skNly1gstjxfg2uvj30lt043jrt.jpg)
 
 我们使用 `explain` 进行分析，可以看到 cxuan004 使用索引的情况
 
-![](https://z3.ax1x.com/2021/06/20/RkFKC4.png)
+![image-20210725221251567](https://tva1.sinaimg.cn/large/008i3skNly1gstjxkm40cj30m203aaai.jpg)
 
 如果不想使用索引，可以删除索引，索引的删除语法是
 
-![](https://z3.ax1x.com/2021/06/20/RkFn5F.png)
+![image-20210725221259304](https://tva1.sinaimg.cn/large/008i3skNly1gstjxpmwv5j30ln04iwey.jpg)
 
 #### 索引使用细则
 
@@ -325,7 +325,7 @@ SUBQUERY：子查询中首个SELECT（如果有多个子查询存在），如我
 create index id_hash_index on cxuan005(id,hash);
 ```
 
-![](https://z3.ax1x.com/2021/06/20/RkFmUU.png)
+![image-20210725221312587](https://tva1.sinaimg.cn/large/008i3skNly1gstjxyfmmhj30lt03ft92.jpg)
 
 然后根据 id 进行执行计划的分析
 
@@ -333,7 +333,7 @@ create index id_hash_index on cxuan005(id,hash);
 explain select * from cxuan005 where id = '333';
 ```
 
-![](https://z3.ax1x.com/2021/06/20/RkFAuq.png)
+![image-20210725221329531](https://tva1.sinaimg.cn/large/008i3skNly1gstjy95ugxj30m603agm3.jpg)
 
 可以发现，即使 where 条件中使用的不是复合索引（Id 、hash），索引仍然能够使用，这就是索引的前缀特性。但是如果只按照 hash 进行查询的话，索引就不会用到。
 
@@ -341,7 +341,7 @@ explain select * from cxuan005 where id = '333';
 explain select * from cxuan005 where hash='8fd1f12575f6b39ee7c6d704eb54b353';
 ```
 
-![](https://z3.ax1x.com/2021/06/20/RkFED0.png)
+![image-20210725221338261](https://tva1.sinaimg.cn/large/008i3skNly1gstjye3zntj30m203b0t9.jpg)
 
 如果 where 条件使用了 like 查询，并且 `%` 不在第一个字符，索引才可能被使用。
 
@@ -351,7 +351,7 @@ explain select * from cxuan005 where hash='8fd1f12575f6b39ee7c6d704eb54b353';
 explain select * from cxuan005 where id like '%1';
 ```
 
-![](https://z3.ax1x.com/2021/06/20/RkFFvn.png)
+![image-20210725221345937](https://tva1.sinaimg.cn/large/008i3skNly1gstjyipxcyj30m4038gm2.jpg)
 
 可以看到，如果第一个字符是 % ，则没有使用索引。
 
@@ -359,7 +359,7 @@ explain select * from cxuan005 where id like '%1';
 explain select * from cxuan005 where id like '1%';
 ```
 
-![](https://z3.ax1x.com/2021/06/20/RkFeET.png)
+![image-20210725221354590](https://tva1.sinaimg.cn/large/008i3skNly1gstjyo8s7jj30m102q3yv.jpg)
 
 如果使用了 % 号，就会触发索引。
 
@@ -369,7 +369,7 @@ explain select * from cxuan005 where id like '1%';
 explain select * from cxuan005 where id is null;
 ```
 
-![](https://z3.ax1x.com/2021/06/20/RkFigs.png)
+![image-20210725221402396](https://tva1.sinaimg.cn/large/008i3skNly1gstjyt4pb9j30lv02wjrr.jpg)
 
 还有一些情况是存在索引但是 MySQL 并不会使用的情况。
 
@@ -381,7 +381,7 @@ explain select * from cxuan005 where id is null;
   explain select * from cxuan005 where id = 111 and info = 'cxuan';
   ```
 
-  ![](https://z3.ax1x.com/2021/06/20/RkFP3j.png)
+  ![image-20210725221411013](https://tva1.sinaimg.cn/large/008i3skNly1gstjyy1mllj30l8038q3d.jpg)
 
   我们从 explain 的执行结果可以看到，虽然 possible_keys 选项上仍然有 id_hash_index 索引，但是从 key、key_len 可以得知，这条 SQL 语句并未使用索引。
 
@@ -391,7 +391,7 @@ explain select * from cxuan005 where id is null;
   explain select * from cxuan005 where hash = '8fd1f12575f6b39ee7c6d704eb54b353';
   ```
 
-  ![](https://z3.ax1x.com/2021/06/20/RkFCCQ.png)
+  ![image-20210725221418223](https://tva1.sinaimg.cn/large/008i3skNly1gstjz2pvyuj30lb03bwez.jpg)
 
 * 如果 where 条件的列参与了计算，那么也不会使用索引
 
@@ -399,7 +399,7 @@ explain select * from cxuan005 where id is null;
   explain select * from cxuan005 where id + '111' = '666';
   ```
 
-  ![](https://z3.ax1x.com/2021/06/20/RkiXut.png)
+  ![image-20210725221424993](https://tva1.sinaimg.cn/large/008i3skNly1gstjz6xyayj30l8036wew.jpg)
 
 * 索引列使用函数，一样也不会使用索引
 
@@ -407,7 +407,7 @@ explain select * from cxuan005 where id is null;
   explain select * from cxuan005 where concat(id,'111') = '666';
   ```
 
-  ![](https://z3.ax1x.com/2021/06/20/RkivHf.png)
+  ![image-20210725221433421](https://tva1.sinaimg.cn/large/008i3skNly1gstjzc52jxj30l4033mxl.jpg)
 
 * 索引列使用了 like ，并且 `%` 位于第一个字符，则不会使用索引。
 
@@ -415,15 +415,15 @@ explain select * from cxuan005 where id is null;
 
 * 当数据类型出现隐式转换时，比如 varchar 不加单引号可能转换为 int 类型时，会使索引无效，触发全表扫描。比如下面这两个例子能够显而易见的说明这一点
 
-  ![](https://z3.ax1x.com/2021/06/20/RkFVbV.png)
+  ![image-20210725221450982](https://tva1.sinaimg.cn/large/008i3skNly1gstjznrqqrj30l606ut9s.jpg)
 
 * 在索引列上使用 IS NOT NULL 操作
 
-  ![](https://z3.ax1x.com/2021/06/20/RkFSUS.png)
+  ![image-20210725221500897](https://tva1.sinaimg.cn/large/008i3skNly1gstjztl480j30ld032dgb.jpg)
 
 * 在索引字段上使用 <>，!=。不等于操作符是永远不会用到索引的，因此对它的处理只会产生全表扫描。
 
-  ![](https://z3.ax1x.com/2021/06/21/RkDy38.png)
+  ![image-20210725221516453](https://tva1.sinaimg.cn/large/008i3skNly1gstk03on3yj30l806l3zo.jpg)
 
 
 关于设置索引但是索引没有生效的场景还有很多，这个需要小伙伴们工作中不断总结和完善，不过我上面总结的这些索引失效的情景，能够覆盖大多数索引失效的场景了。
@@ -434,9 +434,7 @@ explain select * from cxuan005 where id is null;
 
 还有一个值是 `Handler_read_rnd_next`，这个值高则意味着查询运行效率不高，应该建立索引来进行抢救。这个值的含义是在数据文件中读下一行的请求数。如果正在进行大量的表扫描，Handler_read_rnd_next 的值比较高，就说明表索引不正确或写入的查询没有利用索引。
 
-<img src="https://z3.ax1x.com/2021/06/21/RkD0AI.png" style="zoom:50%;" />
-
-
+![image-20210725221523808](https://tva1.sinaimg.cn/large/008i3skNly1gstk07krnej608h06kmxh02.jpg)
 
 ## MySQL 分析表、检查表和优化表
 
@@ -452,7 +450,7 @@ explain select * from cxuan005 where id is null;
 analyze table cxuan005;
 ```
 
-<img src="https://z3.ax1x.com/2021/06/21/RkDs9f.png" style="zoom:50%;" />
+![image-20210725221609223](https://tva1.sinaimg.cn/large/008i3skNly1gstk11blszj30dy053q3b.jpg)
 
 分析结果涉及到的字段属性如下
 
@@ -474,7 +472,7 @@ Msg_text：显示信息。
 check table cxuan005;
 ```
 
-<img src="https://z3.ax1x.com/2021/06/21/RkDBNt.png" style="zoom:50%;" />
+![image-20210725221721399](https://tva1.sinaimg.cn/large/008i3skNly1gstk29bhdvj30do04t74l.jpg)
 
 检查表的主要目的就是检查一个或者多个表是否有错误。Check Table 对 MyISAM 和 InnoDB 表有作用。Check Table 也可以检查视图的错误。
 
@@ -486,7 +484,7 @@ MySQL 优化表适用于删除了大量的表数据，或者对包含 VARCHAR、
 optimize table cxuan005;
 ```
 
-![](https://z3.ax1x.com/2021/06/21/RkDD4P.png)
+![image-20210725221753373](https://tva1.sinaimg.cn/large/008i3skNly1gstk2u98lrj30m404haaj.jpg)
 
 我的存储引擎是 InnoDB 引擎，但是从图可以知道，InnoDB 不支持使用 optimize 优化，建议使用 recreate + analyze 进行优化。optimize 命令只对 MyISAM 、BDB 表起作用。
 
