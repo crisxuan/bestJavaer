@@ -151,7 +151,7 @@
 * [线程池超用心源码分析](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-threadpoolexecutor.md)
 * [深入理解 volatile 关键字](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-volatile.md)
 * [Semaphore 用法和源码分析](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-semaphore.md)
-* happens - before 原则剖析
+* [happens - before 原则剖析](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-happensbefore.md)
 
 ## 计算机入门系列
 
@@ -514,7 +514,6 @@ TODO
 
 * 2020/12/16 Spring IOC 和 AOP 中都用到了哪些设计模式？
 
-  
 
 ## 欢迎关注
 
