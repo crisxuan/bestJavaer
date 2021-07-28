@@ -140,13 +140,13 @@ If an action a happens-before an action b, and b happens before an action c, the
 
 和 start 规则一起使用，其实我们在上面描述 start 规则的时候已经描述了，只不过上面那幅图少画了一条线，也就是 ThreadB.start happens - before 线程 B 读共享变量，由于 ThreadB.start 要 happens - before 线程 B 开始执行，然而从程序定义的顺序来说，线程 B 的执行 happens - before 线程 B 读共享变量，所以根据线程传递规则来说，线程 A 修改共享变量 happens - before 线程 B 读共享变量，如下图所示。
 
-![image-20210721200410696](/Users/mr.l/Library/Application Support/typora-user-images/image-20210721200410696.png)
+![image-20210728222125020](https://tva1.sinaimg.cn/large/008i3skNgy1gsx11ahb5nj317c0qu0we.jpg)
 
 **和 join() 规则一起使用**
 
 假设线程 A 在执行的过程中，通过执行 ThreadB.join 来等待线程 B 终止。同时，假设线程 B 在终止之前修改了一些共享变量，线程 A 从 ThreadB.join 返回后会读这些共享变量。
 
-![image-20210728215313166](/Users/mr.l/Library/Application Support/typora-user-images/image-20210728215313166.png)
+![image-20210728222117033](https://tva1.sinaimg.cn/large/008i3skNgy1gsx115orvbj315u0u0goc.jpg)
 
 在上图中，2 happens - before 4 由 join 规则来产生，4 happens - before 5 是程序顺序规则，所以根据线程传递规则，将会有 2 happens - before 5，这也意味着，线程 A 执行操作 ThreadB.join 并成功返回后，线程 B 中的任意操作将对线程 A 可见。
 
