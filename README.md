@@ -142,6 +142,7 @@
 ### 并发源码分析
 
 * [ReentrantLock 源码分析](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-reentrantlock.md)
+* [JSR - 133 都有哪些内容](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-jsr133.md)
 * [我花了 35 张图就为你让你了解 AQS](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-aqs.md)
 * [AtomicInteger 的用法和实现原理](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-atomicInteger.md)
 * [CountDownLatch 用法和源码解释](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-countDownLatch.md)
@@ -150,6 +151,7 @@
 * [线程池超用心源码分析](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-threadpoolexecutor.md)
 * [深入理解 volatile 关键字](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-volatile.md)
 * [Semaphore 用法和源码分析](https://github.com/crisxuan/bestJavaer/blob/master/java-concurrent/java-semaphore.md)
+* happens - before 原则剖析
 
 ## 计算机入门系列
 
