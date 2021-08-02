@@ -175,6 +175,7 @@
 * [HTTP 核心概念](https://github.com/crisxuan/bestJavaer/blob/master/http/http-deepknow.md)
 * [全面了解 HTTPS](https://github.com/crisxuan/bestJavaer/blob/master/http/http-https.md)
 * [全面了解 Cookies、Session 和 Token](https://github.com/crisxuan/bestJavaer/blob/master/http/http-cookesessiontoken.md)
+* <img src="https://tva1.sinaimg.cn/large/008i3skNgy1gt2sg295pnj30e80e80th.jpg" alt="image-20210802215734878" style="zoom:10%;" /> [图解 HTTP 连接管理](https://github.com/crisxuan/bestJavaer/blob/master/http/http-manageconnection.md)
 
 ## Linux 系列
 
