@@ -351,7 +351,9 @@ TODO
 
 我的读者群几乎隔一段时间就会发送招聘信息，这些招聘信息良莠不齐，而且大多太过分散，需要的时候看不到，不需要的时候又出现了。所以为了能够让更多人享受到内推的福利和好处，我这边汇总了一下自己读者的内推信息，如果有需要，可以联系对应的负责人。
 
-
+* [腾讯内推](https://github.com/crisxuan/bestJavaer/blob/master/interview-jd/tencent.md)
+* [新奥内推](https://github.com/crisxuan/bestJavaer/blob/master/interview-jd/xinao.md)
+* [美团内推](https://github.com/crisxuan/bestJavaer/blob/master/interview-jd/meituan.md)
 
 
 
