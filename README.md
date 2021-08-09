@@ -116,6 +116,7 @@
 * [深入理解 Java 变量](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-varaibles.md)
 * [深入理解 final、finally、finalize](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-final.md)
 * [关于四种引用类型](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-references.md)
+* [Java 浅拷贝和深拷贝](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-clone.md)
 * [Java 创建对象的五种方式](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-createobject.md)
 * [Exception 和 Error 的区别](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-exceptionanderror.md)
 * [for 、foreach 、iterator 三种遍历方式的比较](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-forandforeach.md)
