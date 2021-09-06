@@ -163,7 +163,7 @@
 * [程序员需要了解的硬核知识之压缩算法](https://github.com/crisxuan/bestJavaer/blob/master/computer-basic/computer-compression.md)
 * [程序员需要了解的硬核知识之操作系统和应用](https://github.com/crisxuan/bestJavaer/blob/master/computer-basic/computer-osandapp.md)
 * [程序员需要了解的硬核知识之操作系统入门](https://github.com/crisxuan/bestJavaer/blob/master/computer-basic/computer-os.md)
-* [程序员需要了解的硬核知识之控制硬件](https://github.com/crisxuan/bestJavaer/blob/master/computer-basic/computer-disk.md)
+* [程序员需要了解的硬核知识之控制硬件](https://github.com/crisxuan/bestJavaer/blob/master/computer-basic/computer-hardware.md)
 
 ## 深入理解计算机系统
 
