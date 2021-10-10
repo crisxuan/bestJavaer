@@ -68,6 +68,7 @@
 * [读者面试系列](https://github.com/crisxuan/bestJavaer#%E8%AF%BB%E8%80%85%E9%9D%A2%E8%AF%95%E7%B3%BB%E5%88%97)
 * [面试题系列](https://github.com/crisxuan/bestJavaer#%E9%9D%A2%E8%AF%95%E9%A2%98%E7%B3%BB%E5%88%97)
 * [每日一题计划](https://github.com/crisxuan/bestJavaer#%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98%E8%AE%A1%E5%88%92)
+* 书籍观后感
 
 也包括一些常见的面试题。
 
@@ -347,6 +348,12 @@ TODO
 ## 每日一题计划
 
 * [2020 年每日一题](https://github.com/crisxuan/bestJavaer/blob/master/interview/2020-interview-everyday.md)
+
+## 书籍观后感
+
+* 如何评价《Java 并发编程艺术》这本书？
+
+
 
 ## 内推计划
 
