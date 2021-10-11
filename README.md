@@ -351,7 +351,7 @@ TODO
 
 ## 书籍观后感
 
-* 如何评价《Java 并发编程艺术》这本书？
+* [如何评价《Java 并发编程艺术》这本书？](https://github.com/crisxuan/bestJavaer/blob/master/book-view/read-theArtOfJavaConcurrencyProgramming.md)
 
 
 
