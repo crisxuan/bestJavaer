@@ -118,6 +118,7 @@
 * [深入理解 final、finally、finalize](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-final.md)
 * [浅拷贝和深拷贝](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-shallowcloneanddeepclone.md)
 * [关于四种引用类型](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-references.md)
+* [Java 开发最容易忽视的 10 个 Bug](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-ignoretenmistakes.md)
 * [Java 浅拷贝和深拷贝](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-clone.md)
 * [Java 创建对象的五种方式](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-createobject.md)
 * [Exception 和 Error 的区别](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-exceptionanderror.md)
@@ -179,6 +180,7 @@
 * [全面了解 HTTPS](https://github.com/crisxuan/bestJavaer/blob/master/http/http-https.md)
 * [全面了解 Cookies、Session 和 Token](https://github.com/crisxuan/bestJavaer/blob/master/http/http-cookesessiontoken.md)
 * [图解 HTTP 连接管理](https://github.com/crisxuan/bestJavaer/blob/master/http/http-manageconnection.md)
+* [HTTP 2.0]()
 
 ## Linux 系列
 
