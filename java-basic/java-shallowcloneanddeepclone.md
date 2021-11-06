@@ -287,6 +287,14 @@ public void test() {
 
 * 实现此接口的类应该使用公共方法重写 Object 的clone() 方法，因为 Object 的 clone() 方法是一个受保护的方法。
 
+## 最后
+
+cxuan 写了六本 PDF，全网下载量已经 10w + ，每本都非常硬核，你可以关注下方公众号在后台回复「cxuan」即可领取。
+
+![image-20210716163352584](https://tva1.sinaimg.cn/large/008i3skNly1gsivkbczxoj31l20t8al5.jpg)
+
+![image-20210716163433337](https://tva1.sinaimg.cn/large/008i3skNly1gsivl4khz9j31d60h8mze.jpg)
+
 
 
 
