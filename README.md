@@ -65,7 +65,7 @@
 * [关于认知](https://github.com/crisxuan/bestJavaer#%E5%85%B3%E4%BA%8E%E8%AE%A4%E7%9F%A5)
 * [电子书籍](https://github.com/crisxuan/bestJavaer#%E7%94%B5%E5%AD%90%E4%B9%A6%E7%B1%8D)
 * [我的PDF](https://github.com/crisxuan/bestJavaer#%E6%88%91%E7%9A%84-pdf)
-* [读者面试系列](https://github.com/crisxuan/bestJavaer#%E8%AF%BB%E8%80%85%E9%9D%A2%E8%AF%95%E7%B3%BB%E5%88%97)
+* [读者系列](https://github.com/crisxuan/bestJavaer#%E8%AF%BB%E8%80%85%E9%9D%A2%E8%AF%95%E7%B3%BB%E5%88%97)
 * [面试题系列](https://github.com/crisxuan/bestJavaer#%E9%9D%A2%E8%AF%95%E9%A2%98%E7%B3%BB%E5%88%97)
 * [每日一题计划](https://github.com/crisxuan/bestJavaer#%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98%E8%AE%A1%E5%88%92)
 * 书籍观后感
@@ -116,6 +116,7 @@
 * [深入理解 static 关键字](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-static.md)
 * [深入理解 Java 变量](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-varaibles.md)
 * [深入理解 final、finally、finalize](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-final.md)
+* [浅拷贝和深拷贝](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-shallowcloneanddeepclone.md)
 * [关于四种引用类型](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-references.md)
 * [Java 浅拷贝和深拷贝](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-clone.md)
 * [Java 创建对象的五种方式](https://github.com/crisxuan/bestJavaer/blob/master/java-basic/java-createobject.md)
@@ -181,11 +182,11 @@
 
 ## Linux 系列
 
-* [Linux 开篇！！！](https://github.com/crisxuan/bestJavaer/blob/master/linux/linux-first.md)
-* [Linux 进程和线程](https://github.com/crisxuan/bestJavaer/blob/master/linux/linux-processandthread.md)
-* [Linux 内存管理](https://github.com/crisxuan/bestJavaer/blob/master/linux/linux-memroy-management.md)
-* [Linux IO管理](https://github.com/crisxuan/bestJavaer/blob/master/linux/linux-io.md)
-* [Linux 文件系统](https://github.com/crisxuan/bestJavaer/blob/master/linux/linux-file-system.md)
+* [Linux 操作系统之开篇！！！](https://github.com/crisxuan/bestJavaer/blob/master/linux/linux-first.md)
+* [Linux 操作系统之进程和线程](https://github.com/crisxuan/bestJavaer/blob/master/linux/linux-processandthread.md)
+* [Linux 操作系统之内存管理](https://github.com/crisxuan/bestJavaer/blob/master/linux/linux-memroy-management.md)
+* [Linux 操作系统之IO管理](https://github.com/crisxuan/bestJavaer/blob/master/linux/linux-io.md)
+* [Linux 操作系统之文件系统](https://github.com/crisxuan/bestJavaer/blob/master/linux/linux-file-system.md)
 
 
 ## 设计模式系列
@@ -195,7 +196,7 @@
 
 ## JVM 系列
 
-TODO
+* [JVM 面试题总结](https://github.com/crisxuan/bestJavaer/blob/master/jvm/jvm-interviewanswer.md)
 
 ## 汇编语言
 
@@ -273,6 +274,7 @@ TODO
 * [京东面试之旅](https://github.com/crisxuan/bestJavaer/blob/master/interview/interview-jingdong-social.md)
 * [百度面试之旅](https://github.com/crisxuan/bestJavaer/blob/master/interview/interview-baidu.md)
 * [读者考研之旅](https://github.com/crisxuan/bestJavaer/blob/master/interview/interview-kaoyan.md)
+* [上海妹子的一天是怎样的](https://github.com/crisxuan/bestJavaer/blob/master/reader/thedayofshanghai.md)
 
 ## 面试题系列
 
