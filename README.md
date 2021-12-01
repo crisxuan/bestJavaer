@@ -204,12 +204,13 @@
 ## 汇编语言
 
 * [从指令集的角度看汇编](https://github.com/crisxuan/bestJavaer/blob/master/assembly/assembly01.md)
-
 * [寄存器入门第一篇](https://github.com/crisxuan/bestJavaer/blob/master/assembly/assembly02.md)
+* [汇编 Debug 实战](https://github.com/crisxuan/bestJavaer/blob/master/assembly/assembly03.md)
 
 ## C 语言
 
 * [C 语言基础入门](https://github.com/crisxuan/bestJavaer/blob/master/cprograming/c-basic.md)
+* [C 语言数据](https://github.com/crisxuan/bestJavaer/blob/master/cprograming/c-data.md)
 
 ## MyBatis
 
