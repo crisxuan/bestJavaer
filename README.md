@@ -104,6 +104,12 @@
 * [TCP 连接管理](https://github.com/crisxuan/bestJavaer/blob/master/computer-network/network-tcp-connect.md)
 * [计算机网络自学指南](https://github.com/crisxuan/bestJavaer/blob/master/computer-network/computer-howtolearn.md)
 * [计算机网络核心概念](https://github.com/crisxuan/bestJavaer/blob/master/computer-network/network-concept.md)
+* 什么是 Socket
+* 计算机网络核心概念第二版
+* 一文了解 NAT 协议
+* 一文了解 QUIC 协议
+* 计算机网络发展史
+* 学计算机网络，看计算机自顶向下好还是谢希仁的计算机好？
 
 ## Java 基础系列👍
 
