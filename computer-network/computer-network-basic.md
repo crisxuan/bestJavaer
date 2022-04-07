@@ -457,15 +457,15 @@ PPP 协议是点对点协议，英文*Point to Point Protocol*，是一种链路
 
 单播最大的特点就是 1 对 1，早期的固定电话就是单播的一个例子，单播示意图如下。
 
-<img src="https://s1.ax1x.com/2020/10/19/0zPaoq.png" alt="computer network1018" border="0">
+<img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h10uirzhjaj20zd0u0q4x.jpg" alt="image-20220407082047672" style="zoom:50%;" />
 
 ​																				图 1-14
 
 ### 广播(Broadcast)
 
-我们一般小时候经常会跳`广播体操`，这就是广播的一个事例，主机和与他连接的所有端系统相连，主机将信号发送给所有的端系统。
+我们一般小时候经常会跳广播体操，这就是广播的一个事例，主机和与他连接的所有端系统相连，主机将信号发送给所有的端系统。
 
-<img src="https://s1.ax1x.com/2020/10/19/0zPUwn.png" alt="computer network1019" border="0">
+<img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h10ukhz8kgj21030u0mzk.jpg" alt="image-20220407082229630" style="zoom:50%;" />
 
 ​																			图 1-15
 
@@ -473,15 +473,15 @@ PPP 协议是点对点协议，英文*Point to Point Protocol*，是一种链路
 
 多播与广播很类似，也是将消息发送给多个接收主机，不同之处在于多播需要限定在某一组主机作为接收端。
 
-<img src="https://s1.ax1x.com/2020/10/19/0zPJyQ.png" alt="computer network1020" border="0">
+<img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h10v4vbdcdj21170u0tb0.jpg" alt="image-20220407084203992" style="zoom:50%;" />
 
-​																	图 1-16
+​																				图 1-16
 
 #### 任播(Anycast)
 
 任播是在特定的多台主机中选出一个接收端的通信方式。虽然和多播很相似，但是行为与多播不同，任播是从许多目标机群中选出一台最符合网络条件的主机作为目标主机发送消息。然后被选中的特定主机将返回一个单播信号，然后再与目标主机进行通信。
 
-<img src="https://s1.ax1x.com/2020/10/19/0zPlJf.png" alt="computer network1021" border="0">
+<img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h10v8gj1y0j218s0u0mzi.jpg" alt="image-20220407084531079" style="zoom:50%;" />
 
 ​																			图 1-17
 
