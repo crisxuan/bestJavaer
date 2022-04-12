@@ -51,7 +51,7 @@
 
 <img src="https://s1.ax1x.com/2020/10/19/0zPLTI.png" alt="computer network1001" border="0">
 
-​																				图 1
+<div align = "center">图1</div>
 
 如果说计算机把我们从工业时代带到了信息时代，那么计算机网络就可以说把我们带到了网络时代。随着使用计算机人数的不断增加，计算机也经历了一系列的快速发展，从大型通用计算机 -> 超级计算机 -> 小型机 -> 个人电脑 -> 工作站 -> 便携式电脑 -> 智能手机终端等都是这一过程的产物。计算机网络也逐渐从**独立模式**演变为了**网络互联模式**。
 
@@ -59,13 +59,13 @@
 
 ![image-20220403085440540](https://tva1.sinaimg.cn/large/e6c9d24ely1h0w90nvudyj20wj0u0jtt.jpg)
 
-​																				图 1-1
+<div align = "center">图 1-1</div>
 
 如图 1-1 可以看到，在独立模式下，每个人都需要排队等待其他人在一个机器上完成工作后，其他用户才能使用。这样的数据是单独管理的。
 
 ![image-20220403214821415](https://tva1.sinaimg.cn/large/e6c9d24ely1h0wvds51stj218w0rmdhe.jpg)
 
-​																				图 1-2
+<div align = "center">图 1-2</div>
 
 如图 1-2，从单机模式切换到了网络互联模式，在这种模式下，每个人都能独立的使用计算机，还会有一个服务器，来为客户端 A、B、C 提供服务。在网络互联模式下，数据一般是集中管理的。
 
@@ -163,9 +163,9 @@ CNNIC（中国互联网络信息中心）每年都会公布我国互联网发展
 
 ![image-20220405092155695](https://tva1.sinaimg.cn/large/e6c9d24ely1h0yl1mj68sj21is0caq48.jpg)
 
-​																			图 1-3
+<div align = "center">图 1-3</div>
 
-这种计算机的价格比较昂贵，并不是每个人都能够使用的，这也就客观暗示着，只有专门的操作员才能使用计算机，用户把程序提交给操作员，由操作员排队执行程序，等一段时间后，用户再来提取结果（API程序员的早期原型。。。。。。）
+这种计算机的价格比较昂贵，并不是每个人都能够使用的，这也就客观暗示着，只有专门的操作员才能使用计算机，用户把程序提交给操作员，由操作员排队执行程序，等一段时间后，用户再来提取结果（API 程序员的早期原型。。。。。。）
 
 这种计算机的高效性并没有很好的体现，因为涉及到各种操作不断切换，让计算机计算甚至不如手动运算快。
 
@@ -175,7 +175,7 @@ CNNIC（中国互联网络信息中心）每年都会公布我国互联网发展
 
 ![image-20220406091021043](https://tva1.sinaimg.cn/large/e6c9d24ely1h0zqbyl1buj20ya0u0wfk.jpg)
 
-​																					图 1-4
+<div align = "center">图 1-4</div>
 
 分时系统出现以来，计算机的可用性得到了极大的改善。分时系统的出现意味着计算机越来越贴近我们的生活。
 
@@ -235,7 +235,7 @@ ISO 在制定标准化 OSI 模型之前，对网络体系结构相关的问题�
 
 <img src="https://s1.ax1x.com/2020/10/19/0zPRT1.png" alt="computer network1009" border="0" style="zoom:50%;" >
 
-​																					图 1-5
+<div align = "center">图 1-5</div>
 
 在 OSI 标准模型中，每一层协议都接收由它下一层所提供的特定服务，并且负责为上一层提供服务，上层协议和下层协议之间通常会开放接口，同一层之间的交互所遵守的约定叫做协议。
 
@@ -245,13 +245,13 @@ ISO 在制定标准化 OSI 模型之前，对网络体系结构相关的问题�
 
 <img src="https://s1.ax1x.com/2020/10/19/0zPgm9.png" alt="computer network1010" border="0" style="zoom:50%;" >
 
-​																						图 1-6
+<div align = "center">图 1-6</div>
 
 互联网的通信协议都对应了 7 层中的某一层，通过这一点，可以了解协议在整个网络模型中的作用，一般来说，各个分层的主要作用如下
 
 <img src="https://s1.ax1x.com/2020/10/19/0zPfFx.png" alt="computer network1011" border="0">
 
-​																					图 1-7
+<div align = "center">图 1-7</div>
 
 * `应用层`：应用层是 OSI 标准模型的最顶层，是直接为应用进程提供服务的。其作用是在实现多个系统应用进程相互通信的同时，完成一系列业务处理所需的服务。包括文件传输、电子邮件远程登录和远端接口调用等协议。
 * `表示层`:  表示层向上对应用进程服务，向下接收会话层提供的服务，表示层位于 OSI 标准模型的第六层，表示层的主要作用就是将设备的固有数据格式转换为网络标准传输格式。
@@ -269,12 +269,12 @@ OSI 模型共有七层，从下到上分别是物理层、数据链路层、网�
 
 <img src="https://s1.ax1x.com/2020/10/19/0zPyy4.png" alt="computer network1012" border="0" style="zoom:50%;" >
 
-​																					图 1-8
+<div align = "center">图 1-8</div>
 
 和 OSI 七层网络协议的主要区别如下
 
 * 应用层、表示层、会话层三个层次提供的服务相差不是很大，所以在 TCP/IP 协议中，它们被合并为应用层一个层次。
-* 由于数据链路层和物理层的内容很相似，所以在 TCP/IP 协议中它们被归并在网络接口层一个层次里。
+* 由于通信（数据）链路层和物理层的内容很相似，所以在 TCP/IP 协议中它们被归并在网络接口层一个层次里。
 
 >我们的主要研究对象就是 TCP/IP 的四层协议。
 
@@ -341,7 +341,7 @@ PPP 协议是点对点协议，英文*Point to Point Protocol*，是一种链路
 
 ![image-20220406150529213](https://tva1.sinaimg.cn/large/e6c9d24ely1h100lh9tufj21j80hignw.jpg)
 
-​																					图 1-9																
+<div align = "center">图 1-9</div>															
 
 由图 1-9 可以看出，分组 1、2、3 向交换器进行分组传输，并且交换机已经收到了分组 1 发送的比特，此时交换机会直接进行转发吗？答案是不会的，交换机会把你的分组先缓存在本地。这就和考试作弊一样，一个学霸要经过学渣 A 给学渣 B 传答案，学渣 A 在收到答案后，它可能直接把卷子传过去吗？学渣 A 说，等我先把答案抄完（保存功能）后再把卷子给你，当然一个及其有素质的学渣就另说了。
 
@@ -357,7 +357,7 @@ PPP 协议是点对点协议，英文*Point to Point Protocol*，是一种链路
 
 ![image-20220406083258130](https://tva1.sinaimg.cn/large/e6c9d24ely1h0zp97s8njj21lq0u0dj4.jpg)
 
-​																				图 1-10
+<div align = "center">图 1-10</div>
 
 下面来一个情景模拟： 假定主机 A 和 主机 B 要向主机 E 发送分组，主机 A 和 B 首先通过 100 Mbps 以太网链路将其数据包发送到第一台路由器，然后路由器将这些数据包定向到 15 Mbps 的链路。如果在较短的时间间隔内，数据包到达路由器的速率（转换为每秒比特数）超过 15 Mbps，则在数据包在链路输出缓冲区中排队之前，路由器上会发生拥塞，然后再传输到链路上。例如，如果主机 A 和主机 B 背靠背同时发了 5 包数据，那么这些数据包中的大多数将花费一些时间在队列中等待。实际上，这种情况与许多普通情况完全相似，例如，当我们排队等候银行出纳员或在收费站前等候时。
 
@@ -379,7 +379,7 @@ PPP 协议是点对点协议，英文*Point to Point Protocol*，是一种链路
 
 <img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h101euouh9j21780q0mzi.jpg" alt="image-20220406153343002" style="zoom:50%;" />
 
-​																				图 1-11
+<div align = "center">图 1-11</div>
 
 在这个网络中，4条链路用于4台电路交换机。这些链路中的每一条都有4条电路，因此每条链路能支持4条并行的链接。每台主机都与一台交换机直接相连，当两台主机需要通信时，该网络在两台主机之间创建一条专用的*端到端的链接(end-to-end connection)*。
 
@@ -389,7 +389,7 @@ PPP 协议是点对点协议，英文*Point to Point Protocol*，是一种链路
 
 ### 分组交换网的时延、丢包和吞吐量
 
-因特网可以看成是一种基础设施，该基础设施为运行在端系统上的分布式应用提供服务。我们希望在计算机网络中任意两个端系统之间传递数据都不会造成数据丢失，这是一个极高的目标，实践中难以达到。所以，在实践中必须要限制端系统之间的吞吐量用来控制数据丢失。如果在端系统之间引入时延，也不能保证不会丢失分组问题。所以我们从时延、丢包和吞吐量三个层面来看一下计算机网络
+因特网可以看成是一种基础设施，该基础设施为运行在端系统上的分布式应用提供服务。我们希望在计算机网络中任意两个端系统之间传递数据都不会造成数据丢失，这是一个极高的目标，实践中难以达到。所以，在实践中必须要限制端系统之间的吞吐量用来控制数据丢失。如果在端系统之间引入时延，也不能保证不会丢失分组问题。所以我们从时延、丢包和吞吐量三个层面来看一下计算机网络。
 
 #### 分组交换中的时延
 
@@ -403,7 +403,7 @@ PPP 协议是点对点协议，英文*Point to Point Protocol*，是一种链路
 
 ![image-20220406160248915](https://tva1.sinaimg.cn/large/e6c9d24ely1h102951j3kj21po0qmjud.jpg)
 
-​																				图 1-12
+<div align = "center">图 1-12</div>
 
 分组由端系统经过通信链路传输到路由器 A，路由器 A 检查分组头部以映射出适当的传输链路，并将分组送入该链路。仅当该链路没有其他分组正在传输并且没有其他分组排在该该分组前面时，才能在这条链路上自由的传输该分组。如果该链路当前繁忙或者已经有其他分组排在该分组前面时，新到达的分组将会加入排队。下面我们分开讨论一下这四种时延。
 
@@ -437,7 +437,7 @@ PPP 协议是点对点协议，英文*Point to Point Protocol*，是一种链路
 
 <img src="https://s1.ax1x.com/2020/10/19/0zP0YV.png" alt="computer network1017" border="0" style="zoom:50%;" >
 
-​																				图 1-13
+<div align = "center">图 1-13</div>
 
 横轴是 La/R 流量强度，纵轴是平均排队时延。
 
@@ -459,7 +459,7 @@ PPP 协议是点对点协议，英文*Point to Point Protocol*，是一种链路
 
 <img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h10uirzhjaj20zd0u0q4x.jpg" alt="image-20220407082047672" style="zoom:50%;" />
 
-​																				图 1-14
+<div align = "center">图 1-14</div>
 
 ### 广播(Broadcast)
 
@@ -467,7 +467,7 @@ PPP 协议是点对点协议，英文*Point to Point Protocol*，是一种链路
 
 <img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h10ukhz8kgj21030u0mzk.jpg" alt="image-20220407082229630" style="zoom:50%;" />
 
-​																			图 1-15
+<div align = "center">图 1-15</div>
 
 #### 多播(Multicast)
 
@@ -475,7 +475,7 @@ PPP 协议是点对点协议，英文*Point to Point Protocol*，是一种链路
 
 <img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h10v4vbdcdj21170u0tb0.jpg" alt="image-20220407084203992" style="zoom:50%;" />
 
-​																				图 1-16
+<div align = "center">图 1-16</div>
 
 #### 任播(Anycast)
 
@@ -483,7 +483,7 @@ PPP 协议是点对点协议，英文*Point to Point Protocol*，是一种链路
 
 <img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h10v8gj1y0j218s0u0mzi.jpg" alt="image-20220407084531079" style="zoom:50%;" />
 
-​																			图 1-17
+<div align = "center">图 1-17</div>
 
 ## 物理媒介
 
@@ -495,7 +495,7 @@ PPP 协议是点对点协议，英文*Point to Point Protocol*，是一种链路
 
 <img src="https://s1.ax1x.com/2020/10/19/0zPYLj.png" alt="computer network1022" border="0">
 
-​																				图 1-18
+<div align = "center">图 1-18</div>
 
 双绞铜线由两根绝缘的铜线组成，每根大约 1cm 粗，以规则的螺旋形状排列，通常许多双绞线捆扎在一起形成电缆，并在双绞馅的外面套上保护层。一对电缆构成了一个通信链路。无屏蔽双绞线一般常用在局域网（LAN）中。
 
@@ -505,7 +505,7 @@ PPP 协议是点对点协议，英文*Point to Point Protocol*，是一种链路
 
 <img src="https://s1.ax1x.com/2020/10/19/0zP8SS.png" alt="computer network1023" border="0">
 
-​																				图 1-19
+<div align = "center">图 1-19</div>
 
 借助于这种结构以及特殊的绝缘体和保护层，同轴电缆能够达到较高的传输速率，同轴电缆普遍应用在在电缆电视系统中。同轴电缆常被用户引导型共享媒介。
 
@@ -515,7 +515,7 @@ PPP 协议是点对点协议，英文*Point to Point Protocol*，是一种链路
 
 <img src="https://s1.ax1x.com/2020/10/19/0zPwF0.png" alt="computer network1024" border="0">
 
-​																					图 1-20
+<div align = "center">图 1-20</div>
 
 一般长途电话网络全面使用光纤，光纤也广泛应用于因特网的主干。
 
