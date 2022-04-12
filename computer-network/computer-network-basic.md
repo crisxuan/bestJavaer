@@ -233,7 +233,7 @@ CNNIC（中国互联网络信息中心）每年都会公布我国互联网发展
 
 ISO 在制定标准化 OSI 模型之前，对网络体系结构相关的问题进行了充分的讨论，最终提出了作为通信协议设计指标的 OSI 参考模型。这一模型将通信协议中必要的功能分为了 7 层。通过这 7 层分层，使那些比较复杂的协议简单化。
 
-<img src="https://s1.ax1x.com/2020/10/19/0zPRT1.png" alt="computer network1009" border="0" style="zoom:50%;" >
+![image-20220412213925650](https://gitee.com/cxuan-personal/picgo/raw/master/img/image-20220412213925650.png)
 
 <div align = "center">图 1-5</div>
 
@@ -243,13 +243,13 @@ ISO 在制定标准化 OSI 模型之前，对网络体系结构相关的问题�
 
 上图只是简单的介绍了一下层与层之间的通信规范和上层与下层的通信规范，并未介绍具体的网络协议分层，实际上，OSI 标准模型将复杂的协议整理并分为了易于理解的 7 层。如下图所示
 
-<img src="https://s1.ax1x.com/2020/10/19/0zPgm9.png" alt="computer network1010" border="0" style="zoom:50%;" >
+![image-20220412213932282](https://gitee.com/cxuan-personal/picgo/raw/master/img/image-20220412213932282.png)
 
 <div align = "center">图 1-6</div>
 
 互联网的通信协议都对应了 7 层中的某一层，通过这一点，可以了解协议在整个网络模型中的作用，一般来说，各个分层的主要作用如下
 
-<img src="https://s1.ax1x.com/2020/10/19/0zPfFx.png" alt="computer network1011" border="0">
+![image-20220412213942842](https://gitee.com/cxuan-personal/picgo/raw/master/img/image-20220412213942842.png)
 
 <div align = "center">图 1-7</div>
 
@@ -267,7 +267,7 @@ TCP/IP 协议是我们程序员接触最多的协议，实际上，TCP/IP 又被
 
 OSI 模型共有七层，从下到上分别是物理层、数据链路层、网络层、运输层、会话层、表示层和应用层。但是这显然是有些复杂的，所以在TCP/IP协议中，它们被简化为了四个层次
 
-<img src="https://s1.ax1x.com/2020/10/19/0zPyy4.png" alt="computer network1012" border="0" style="zoom:50%;" >
+![image-20220412213952100](https://gitee.com/cxuan-personal/picgo/raw/master/img/image-20220412213952100.png)
 
 <div align = "center">图 1-8</div>
 
@@ -493,7 +493,7 @@ PPP 协议是点对点协议，英文*Point to Point Protocol*，是一种链路
 
 最便宜且最常用的引导性传输媒介就是双绞铜线，多年以来，它一直应用于电话网。从电话机到本地电话交换机的连线超过 99% 都是使用的双绞铜线，例如下面就是双绞铜线的实物图。
 
-<img src="https://s1.ax1x.com/2020/10/19/0zPYLj.png" alt="computer network1022" border="0">
+![image-20220412214144735](https://gitee.com/cxuan-personal/picgo/raw/master/img/image-20220412214144735.png)
 
 <div align = "center">图 1-18</div>
 
@@ -503,7 +503,7 @@ PPP 协议是点对点协议，英文*Point to Point Protocol*，是一种链路
 
 与双绞线类似，同轴电缆也是由两个铜导体组成，下面是实物图。
 
-<img src="https://s1.ax1x.com/2020/10/19/0zP8SS.png" alt="computer network1023" border="0">
+![image-20220412214153713](https://gitee.com/cxuan-personal/picgo/raw/master/img/image-20220412214153713.png)
 
 <div align = "center">图 1-19</div>
 
@@ -513,7 +513,7 @@ PPP 协议是点对点协议，英文*Point to Point Protocol*，是一种链路
 
 光纤是一种细而柔软的、能够引导光脉冲的媒介，每个脉冲表示一个比特。一根光纤能够支持极高的比特率，高达数十甚至数百 Gbps。它们不受电磁干扰。光纤是一种引导型物理媒介，下面是光纤的实物图。
 
-<img src="https://s1.ax1x.com/2020/10/19/0zPwF0.png" alt="computer network1024" border="0">
+![image-20220412214203293](https://gitee.com/cxuan-personal/picgo/raw/master/img/image-20220412214203293.png)
 
 <div align = "center">图 1-20</div>
 
@@ -526,6 +526,10 @@ PPP 协议是点对点协议，英文*Point to Point Protocol*，是一种链路
 ### 卫星无线电信道
 
 一颗卫星电信道连接地球上的两个或多个微博发射器/接收器，它们称为地面站。通信中经常使用两类卫星：同步卫星和近地卫星。
+
+## 后记
+
+这一篇文章是之前计算机网络基础总结的订正版本，因为后面会搞事情，所以每一章我这边可能都会修改一些内容然后发出来，想要大家读一下，提一些真挚的改正意见，比如需要加入哪些内容，哪些内容需要修改，cxuan 会诚恳的接受的，谢谢各位。
 
 ![image-20210717083948590](https://tva1.sinaimg.cn/large/008i3skNly1gsjnhb9f5xj319s0tsn4g.jpg)
 
