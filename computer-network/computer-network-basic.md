@@ -377,7 +377,7 @@ PPP 协议是点对点协议，英文*Point to Point Protocol*，是一种链路
 
 下面显示了一个电路交换网络
 
-<img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h101euouh9j21780q0mzi.jpg" alt="image-20220406153343002" style="zoom:50%;" />
+![image-20220412225950137](https://gitee.com/cxuan-personal/picgo/raw/master/img/image-20220412225950137.png)
 
 <div align = "center">图 1-11</div>
 
@@ -435,7 +435,7 @@ PPP 协议是点对点协议，英文*Point to Point Protocol*，是一种链路
 
 现在考虑 La / R <= 1 时的情况。流量到达的性质将影响排队时延。如果流量是周期性到达的，即每 L / R 秒到达一个分组，则每个分组将到达一个空队列中，不会有排队时延。如果流量是突发性到达的，则可能会有很大的平均排队时延。一般可以用下面这幅图表示平均排队时延与流量强度的关系
 
-<img src="https://s1.ax1x.com/2020/10/19/0zP0YV.png" alt="computer network1017" border="0" style="zoom:50%;" >
+![image-20220412214312235](https://gitee.com/cxuan-personal/picgo/raw/master/img/image-20220412214312235.png)
 
 <div align = "center">图 1-13</div>
 
@@ -457,7 +457,7 @@ PPP 协议是点对点协议，英文*Point to Point Protocol*，是一种链路
 
 单播最大的特点就是 1 对 1，早期的固定电话就是单播的一个例子，单播示意图如下。
 
-<img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h10uirzhjaj20zd0u0q4x.jpg" alt="image-20220407082047672" style="zoom:50%;" />
+![image-20220412230035408](https://gitee.com/cxuan-personal/picgo/raw/master/img/image-20220412230035408.png)
 
 <div align = "center">图 1-14</div>
 
@@ -465,7 +465,7 @@ PPP 协议是点对点协议，英文*Point to Point Protocol*，是一种链路
 
 我们一般小时候经常会跳广播体操，这就是广播的一个事例，主机和与他连接的所有端系统相连，主机将信号发送给所有的端系统。
 
-<img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h10ukhz8kgj21030u0mzk.jpg" alt="image-20220407082229630" style="zoom:50%;" />
+![image-20220412230053948](https://gitee.com/cxuan-personal/picgo/raw/master/img/image-20220412230053948.png)
 
 <div align = "center">图 1-15</div>
 
@@ -473,7 +473,7 @@ PPP 协议是点对点协议，英文*Point to Point Protocol*，是一种链路
 
 多播与广播很类似，也是将消息发送给多个接收主机，不同之处在于多播需要限定在某一组主机作为接收端。
 
-<img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h10v4vbdcdj21170u0tb0.jpg" alt="image-20220407084203992" style="zoom:50%;" />
+![image-20220412230108827](https://gitee.com/cxuan-personal/picgo/raw/master/img/image-20220412230108827.png)
 
 <div align = "center">图 1-16</div>
 
@@ -481,7 +481,7 @@ PPP 协议是点对点协议，英文*Point to Point Protocol*，是一种链路
 
 任播是在特定的多台主机中选出一个接收端的通信方式。虽然和多播很相似，但是行为与多播不同，任播是从许多目标机群中选出一台最符合网络条件的主机作为目标主机发送消息。然后被选中的特定主机将返回一个单播信号，然后再与目标主机进行通信。
 
-<img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h10v8gj1y0j218s0u0mzi.jpg" alt="image-20220407084531079" style="zoom:50%;" />
+![image-20220412230127099](https://gitee.com/cxuan-personal/picgo/raw/master/img/image-20220412230127099.png)
 
 <div align = "center">图 1-17</div>
 
