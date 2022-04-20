@@ -353,6 +353,7 @@ TODO
 * [写给 25 岁的自己](https://github.com/crisxuan/bestJavaer/blob/master/aboutlife/cxuan-25yearsold.md)
 * [面试官和面试者在同一个群里是怎样的体验](https://github.com/crisxuan/bestJavaer/blob/master/aboutlife/interviewer-story.md)
 * [程序员的水平能有多低？](https://github.com/crisxuan/bestJavaer/blob/master/aboutlife/cxuan-lowprogrammer.md)
+* [自媒体技术的困境]{https://github.com/crisxuan/bestJavaer/blob/master/aboutlife/selfmedia-difficult.md}
 
 ## 程序员
 
