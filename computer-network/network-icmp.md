@@ -19,13 +19,13 @@
       * [ICMPv6 的组播收听发现协议](#icmpv6-的组播收听发现协议)
    * [与 ICMP 有关的攻击](#与-icmp-有关的攻击)
 
-![](https://s3.ax1x.com/2021/02/25/yjV9UJ.png)
+![image-20220427084629199](https://tva1.sinaimg.cn/large/e6c9d24ely1h1nznp3nojj21wk0u0wir.jpg)
 
 
 
 我们之前的文章中了解过 TCP/IP 协议，我那时候码了一句
 
-![](https://s3.ax1x.com/2021/02/25/yjVC59.png)
+![image-20220427085343138](https://tva1.sinaimg.cn/large/e6c9d24ely1h1nzv65vpqj22da09277a.jpg)
 
 原文链接见如下：
 
@@ -35,48 +35,52 @@
 
 ## 什么是 ICMP
 
-ICMP 的全称是 `Internet Control Message Protocol(互联网控制协议)`，它是一种互联网套件，它用于**IP 协议中发送控制消息**。也就是说，ICMP 是依靠 IP 协议来完成信息发送的，它是 IP 的主要部分，但是从体系结构上来讲，它位于 IP 之上，因为 ICMP 报文是承载在 IP 分组中的，就和 TCP 与 UDP 报文段作为 IP 有效载荷被承载那样。这也就是说，当主机收到一个指明上层协议为 ICMP 的 IP 数据报时，它会分解出该数据报的内容给 ICMP，就像分解数据报的内容给 TCP 和 UDP 一样。
+ICMP 的全称是 *Internet Control Message Protocol(互联网控制协议)*，它是一种互联网套件，它用于**IP 协议中发送控制消息**。也就是说，ICMP 是依靠 IP 协议来完成信息发送的，它是 IP 的主要部分，但是从体系结构上来讲，它位于 IP 之上，因为 ICMP 报文是承载在 IP 分组中的，就和 TCP 与 UDP 报文段作为 IP 有效载荷被承载那样。这也就是说，当主机收到一个指明上层协议为 ICMP 的 IP 数据报时，它会分解出该数据报的内容给 ICMP，就像分解数据报的内容给 TCP 和 UDP 一样。
 
-ICMP 协议和 TCP、UDP 等协议不同，它不用于传输数据，只是用来发送消息。因为 IP 协议现在有两类版本：IPv4 和 IPv6 ，所以 ICMP 也有两个版本：**ICMPv4 和 ICMPv6**。
+ICMP 协议和 TCP、UDP 等协议不同，它不用于传输数据，只是用来发送消息。由于 IP 协议现在有两类版本：IPv4 和 IPv6 ，所以 ICMP 也有两个版本：**ICMPv4 和 ICMPv6**。
 
 ### ICMP 的主要功能
 
-对于 ICMP 的功能，主要分为两个
+对于 ICMP 的功能，主要分为两个：
 
-* ICMP 的第一个功能是**确认 IP 包是否能够成功到达目标地址**，当两个设备通过互联网相连时，任意一个设备发送给另一个设备的 IP 包如果没有到达，就会生成 ICMP 数据包发送给设备共享。
-* ICMP 的第二个功能是进行`网络诊断`，经常使用 ICMP 数据包的两个终端程序是 `ping` 和 `traceroute`，traceroute 程序用于显示两台互联网设备之间可能的路径并测量数据包在 IP 网络上的时延。ping 程序是 traceroute 的简化版本，我们经常使用 ping 命令来测试两台设备之间是否互联，ping 通常用来测试两台主机之间的连接速度，并准确报告数据包到达目的地并返回后所花费的时间。
+* ICMP 的第一个功能是**确认 IP 包是否能够成功到达目标地址**，当两个设备进行互联时，其中一个设备发送给另一个设备的 IP 包如果没有到达，就会生成 ICMP 数据包发送给设备共享。
+* ICMP 的第二个功能是进行网络诊断，经常使用 ICMP 数据包的两个终端程序是 `ping` 和 `traceroute`，traceroute 程序用于显示两台互联网设备之间可能的路径并测量数据包在 IP 网络上的时延。ping 程序是 traceroute 的简化版本，我们经常使用 ping 命令来测试两台设备之间网络是否正常，ping 还可以显示两台设备之间的延迟情况，并准确报告数据包到达目的地并返回后所花费的时间。
 
-现在我们知道了，如果在 IP 通信过程中由于某个 IP 包由于某种原因未能到达目标主机，那么这个具体的原因将由 ICMP 进行通知，下面是一个 ICMP 的通知示意图
+![image-20220427100735542](https://tva1.sinaimg.cn/large/e6c9d24ely1h1o2018oudj20p80700uk.jpg)
 
-![](https://s3.ax1x.com/2021/02/25/yjVF81.png)
+现在我们知道了，如果在 IP 通信过程中由于某个 IP 包由于某种原因未能到达目标主机，那么这个具体的原因将由 ICMP 进行通知，下面是一个 ICMP 的通知示意图：
 
-上面我们只是画出了路由器 2 给主机 A 发送了一个 ICMP 数据包，而没有画出具体的通知类型，但实际情况是，上面发送的是`目标不可达类型(Destination unreachable)`，ICMP 也是具有不同的通知类型的，下面我们汇总了 ICMP 数据包的具体通知类型。
+![image-20220427085402123](https://tva1.sinaimg.cn/large/e6c9d24ely1h1nzvi1hajj21e90u0wi3.jpg)
 
-![](https://s3.ax1x.com/2021/02/25/yjViCR.png)
+这张图显示了这样的一个过程：主机 A 想要给主机 B 发送一个 IP 数据包，主机 A 发送的数据包经过路由器 1 到达了路由器 2 ，由于路由器 2 不知道主机 B 的 MAC 地址，所以路由器 2 发送了一个 ARP 请求，没有回应，再经过重试时间后再次发送，还没有回应。。。。。。经过多次 ARP 请求后没有得到回应后，路由器 2 就会给主机 A 发送一个 ICMP 消息，告诉其发送的 IP 数据包没有到达主机 B 。
 
-上表显示的 ICMP 通知类型主要分为两类：有关 IP 数据报传递的 ICMP 报文，这类报文也叫做`差错报文(error message)`，以及有关信息采集和配置的 ICMP 报文，这类报文也被称为查询 query 或者信息类报文。
+我们只是画出了路由器 2 给主机 A 发送了一个 ICMP 数据包，而没有画出具体的通知类型，但实际情况是，上面发送的是*目标不可达类型(Destination unreachable)*，ICMP 的通知类型也有很多，下面我为你汇总了 ICMP 数据包的具体通知类型。
 
-信息类报文包括回送请求和回送应答(类型 8 和 类型 0 )，路由器公告和路由器请求(类型 9 和 类型 0 )。最常见的差错报文类型包括目标不可达(类型 3 )、重定向(类型 5)、超时(类型 11)。
+![image-20220427085438631](https://tva1.sinaimg.cn/large/e6c9d24ely1h1nzw4wsl8j21kx0u042s.jpg)
+
+上表显示的 ICMP 通知类型主要分为两类：有关 IP 数据报传递的 ICMP 报文，这类报文也叫做*差错报文(error message)*，以及有关信息采集和配置的 ICMP 报文，这类报文也被称为查询报文、信息类报文。
+
+信息类报文包括回送请求和回送应答(类型 8 和 类型 0 )，路由器公告和路由器请求(类型 9 和 类型10 )。最常见的差错报文类型包括目标不可达(类型 3 )、重定向(类型 5)、超时(类型 11)。
 
 ### ICMP 在 IPv4 和 IPv6 的封装
 
-我们知道，ICMP 是承载在 IP 内部的，而且 IPv4 和 IPv6 的封装位置不同：
+我们知道，ICMP 是承载在 IP 内部的，而且 IPv4 和 IPv6 的封装位置不同。
 
-ICMP 在 IPv4 协议中的封装
+ICMP 在 IPv4 协议中的封装：
 
-![](https://s3.ax1x.com/2021/02/25/yjVpE4.png)
+![image-20220427085704470](https://tva1.sinaimg.cn/large/e6c9d24ely1h1nzynm0qdj22b40hodhs.jpg)
 
-ICMP 在 IPv6 协议中的封装
+ICMP 在 IPv6 协议中的封装：
 
-![](https://s3.ax1x.com/2021/02/25/yjVAv6.png)
+![image-20220427085735883](https://tva1.sinaimg.cn/large/e6c9d24ely1h1nzz9wgo0j22ec0h0q5k.jpg)
 
-上面两张图显示了 ICMPV4 和 ICMPv6 的报文格式。开头的 4 个字节在所有的报文中都是一样的。但是其余部分在不同的报文中却不一样。
+上面两张图显示了 ICMPv4 和 ICMPv6 的报文格式。开头的 4 个字节在所有的报文中都是一样的。但是其余部分在不同的报文中却不一样。
 
-ICMP 头部包含了整个 ICMP 数据段的`校验和`，具体格式如下
+ICMP 头部包含了整个 ICMP 数据段的校验和，具体格式如下：
 
-![](https://s3.ax1x.com/2021/02/25/yjVkgx.png)
+![image-20220427085819658](https://tva1.sinaimg.cn/large/e6c9d24ely1h1nzzywhm8j22440pewhx.jpg)
 
-所有的 ICMP 报文都以 8 位的`类型(Type)` 和`代码(Code)` 字段开始，其后的 `16 位`校验和涵盖了整个报文，ICMPv4 和 ICMPv6 种的类型和代码字段是不同的。
+所有的 ICMP 报文都以 8 位的*类型(Type)*和*代码(Code)*字段开始，其后的 16 位校验和涵盖了整个报文，ICMPv4 和 ICMPv6 种的类型和代码字段是不同的。
 
 ## ICMP 的主要消息
 
@@ -84,21 +88,21 @@ ICMP 头部包含了整个 ICMP 数据段的`校验和`，具体格式如下
 
 我们知道，路由器无法将 IP 数据报发送给目标地址时，会给发送端主机返回一个`目标不可达(Destination Unreachable Message)` 的 ICMP 消息，并且会在消息中显示不可达的具体原因。
 
-![](https://s3.ax1x.com/2021/02/25/yjVebD.png)
+![image-20220427090026179](https://tva1.sinaimg.cn/large/e6c9d24ely1h1o026ga7zj22gg0s6gw4.jpg)
 
 实际通信过程中会显示各种各样的不可达信息，比如错误代码时 1 表示主机不可达，它指的是路由表中没有主机的信息，或者主机没有连接到网络的意思。一些 ICMP 不可达信息的具体原因如下
 
-![](https://s3.ax1x.com/2021/02/25/yjVVKK.png)
+![image-20220427090049836](https://tva1.sinaimg.cn/large/e6c9d24ely1h1o02kqz44j21960u043s.jpg)
 
 ### ICMP 重定向消息(类型 5)
 
-如果路由器发现发送端主机使用了次优的路径发送数据，那么它会返回一个 `ICMP 重定向(ICMP Redirect Message)` 的消息给这个主机。这个 ICMP 重定向消息包含了最合适的**路由信息和源数据**。这种情况会发生在路由器持有更好的路由信息的情况下。路由器会通过这样的 ICMP 消息给发送端主机一个更合适的发送路由。
+如果路由器发现发送端主机使用了次优的路径发送数据，那么它会返回一个 *ICMP 重定向(ICMP Redirect Message)* 的消息给这个主机。这个 ICMP 重定向消息包含了最合适的**路由信息和源数据**。这种情况会发生在路由器持有更好的路由信息的情况下。路由器会通过这样的 ICMP 消息给发送端主机一个更合适的发送路由。
 
-![](https://s3.ax1x.com/2021/02/25/yjVZDO.png)
+![image-20220427090252943](https://tva1.sinaimg.cn/large/e6c9d24ely1h1o04pi7zhj222g0u0wiv.jpg)
 
 主机 Host 的 IP 地址为 10.0.0.100。主机的路由表中有一个默认路由条目，指向路由器 G1 的 IP 地址 10.0.0.1 作为默认网关。路由器 G1 在将数据包转发到目的网络 X 时，会使用路由器 G2 的 IP 地址 10.0.0.2 作为下一跳。 
 
-当主机向目的网络 X 发送数据包时，会发生以下情况
+当主机向目的网络 X 发送数据包时，会发生以下情况：
 
 1. IP 地址为 10.0.0.1 的网关 G1 在其所连接的网络上接收来自 10.0.0.100 的数据包。
 2. 网关 G1 检查其路由表，并在通往数据包目的网络 X 的路由中获取下一个网关 G2 的 IP 地址 10.0.0.2。
@@ -114,53 +118,53 @@ ICMP 头部包含了整个 ICMP 数据段的`校验和`，具体格式如下
 
 如果 Host 主机采用了 ICMP 提供的重定向路径的话，那么 Host 就会直接把数据包发送至网络 X，如下图所示
 
-![](https://s3.ax1x.com/2021/02/25/yjVnVe.png)
+![image-20220427090318204](https://tva1.sinaimg.cn/large/e6c9d24ely1h1o055r8rtj22ec0q40wy.jpg)
 
 在主机为 G2 作为下一跳的网络 X 创建路由缓存条目后，这些优势在网络中可见：
 
-- 交换机和路由器 G1 之间链路的带宽利用率在两个方向上都会降低
-- 由于从主机到网络 X 的流量不再流经此节点，因此路由器 G1 的 CPU 使用率降低
+- 交换机和路由器 G1 之间链路的带宽利用率在两个方向上都会降低。
+- 由于从主机到网络 X 的流量不再流经此节点，因此路由器 G1 的 CPU 使用率降低。
 - 主机和网络 X 之间的端到端网络延迟得到改善。 
 
-ICMP 重定向示例如下
+ICMP 重定向示例如下：
 
-![](https://s3.ax1x.com/2021/02/25/yjVQPA.png)
+![image-20220427090358911](https://tva1.sinaimg.cn/large/e6c9d24ely1h1o05v2czaj214k0u0grq.jpg)
 
 ### ICMP 超时消息(类型 11)
 
-在 IP 数据包中有一个叫做 `TTL(Time To Live, 生存周期)` ，它的值在每经过路由器一跳之后都会减 1，IP 数据包减为 0 时会被丢弃。此时，IP 路由器会发送一个 ICMP 超时消息(ICMP TIme Exceeded Message, 错误号 0)发送给主机，通知该包已经被丢弃。
+在 IP 数据包中有一个叫做 *TTL(Time To Live, 生存周期)* ，它的值在每经过路由器一跳之后都会减 1，IP 数据包减为 0 时会被丢弃。此时，IP 路由器会发送一个 ICMP 超时消息(ICMP TIme Exceeded Message, 错误号 0)发送给主机，通知该包已经被丢弃。
 
-设置生存周期的主要目的就是为了防止路由器控制遇到问题发生循环状况时，避免 IP 包无休止的在网络上转发，如下图所示
+设置生存周期的主要目的就是为了防止路由器控制遇到问题发生循环状况时，避免 IP 包无休止的在网络上转发，如下图所示：
 
-![](https://s3.ax1x.com/2021/02/25/yjVuUH.png)
+![image-20220427090758378](https://tva1.sinaimg.cn/large/e6c9d24ely1h1o0a048yoj21in0u0gph.jpg)
 
 > 这里给大家推荐一款比较好用的追踪超时消息的工具 `traceroute`，它可以显示出由执行程序的主机到达特定主机之前需要经过多少路由器。 traceroute 的官网如下 http://www.traceroute.org
 
 ### ICMP 回送消息(类型 0 和 类型 8)
 
-ICMP 回送消息用于判断相互通信的主机之间是否连通，也就是判断所发送的数据包是否能够到达目标主机。可以向对端主机发送`回送请求的消息(ICMP Echo Request Message,类型 8)`，也可以接收对端主机发送来的回送消息(ICMP Echo Reply Message, 类型 0 )。网络上最常用的 ping 命令就是利用这个实现的。
+ICMP 回送消息用于判断相互通信的主机之间是否连通，也就是判断所发送的数据包是否能够到达目标主机。可以向对端主机发送*回送请求的消息(ICMP Echo Request Message,类型 8)*，也可以接收对端主机发送来的回送消息(ICMP Echo Reply Message, 类型 0 )。网络上最常用的 ping 命令就是利用这个实现的。
 
-![](https://s3.ax1x.com/2021/02/25/yjVK5d.png)
+![image-20220427091635535](https://tva1.sinaimg.cn/large/e6c9d24ely1h1o0iz1r8vj21vu0u0td2.jpg)
 
 ### 其他 ICMP 消息
 
 #### ICMP 原点抑制消息(类型 4)
 
-在使用低速率网络的情况下，网络通信可能会遇到网络拥堵的情况下，ICMP 的原点抑制就是为了应对这种情况的。当路由器向低速线路发送数据时，其发送队列的残存数据报变为 0 从而无法发送时，可以向 IP 数据报的源地址发送一个 `ICMP 原点抑制(ICMP Source Quench Message)` 消息，收到这个消息的主机了解到线路某处发生了拥堵，从而抑制 IP 数据报的发送。
+在使用低速率网络的情况下，网络通信可能会遇到网络拥堵的情况下，ICMP 的原点抑制就是为了应对这种情况的。当路由器向低速线路发送数据时，其发送队列的残存数据报变为 0 从而无法发送时，可以向 IP 数据报的源地址发送一个 *ICMP 原点抑制(ICMP Source Quench Message)* 消息，收到这个消息的主机了解到线路某处发生了拥堵，从而抑制 IP 数据报的发送。
 
-![](https://s3.ax1x.com/2021/02/25/yjVl8I.png)
+![image-20220427091658785](https://tva1.sinaimg.cn/large/e6c9d24ely1h1o0jdpl6sj21yd0u0gq6.jpg)
 
 不过这个 ICMP 消息可能会引起不公平的网络通信，一般不被使用。
 
 #### ICMP 路由器探索消息(类型 9、10)
 
-ICMP 路由器探索消息主要用于`路由器发现(Router Discovery, RD)`，它主要分为两种，`路由器请求(Router Solicitation, 类型 10)` 和`路由器响应(Router Advertisement, 类型 9)`。主机会在任意路由连接组播的网络上发送一个 RS 消息，想要选择一个路由器进行学习，以此来作为默认路由，而相对应的该路由会发送一个 RA 消息来作为默认路由的响应。
+ICMP 路由器探索消息主要用于*路由器发现(Router Discovery, RD)*，它主要分为两种，*路由器请求(Router Solicitation, 类型 10)*和*路由器响应(Router Advertisement, 类型 9)*。主机会在任意路由连接组播的网络上发送一个 RS 消息，想要选择一个路由器进行学习，以此来作为默认路由，而相对应的该路由会发送一个 RA 消息来作为默认路由的响应。
 
-![](https://s3.ax1x.com/2021/02/25/yjV12t.png)
+<img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h1o0jptjboj20u00y50uw.jpg" alt="image-20220427091718607" style="zoom:50%;" />
 
 #### ICMP 地址掩码消息(类型 17、18)
 
-主要用于主机或者路由器想要了解子网掩码的情况。可以向那些目标主机或路由器发送 `ICMP 地址掩码请求消息(ICMP Address Mask Request, 类型 17)` 和 `ICMP 地址掩码应答消息(ICMP Address Mask Reply, 类型 18)` 获取子网掩码信息。
+主要用于主机或者路由器想要了解子网掩码的情况。可以向那些目标主机或路由器发送 *ICMP 地址掩码请求消息(ICMP Address Mask Request, 类型 17)*和 *ICMP 地址掩码应答消息(ICMP Address Mask Reply, 类型 18)*获取子网掩码信息。
 
 ## ICMPv6
 
@@ -168,29 +172,29 @@ ICMP 路由器探索消息主要用于`路由器发现(Router Discovery, RD)`，
 
 IPv4 中 ICMP 仅仅作为一个辅助作用支持 IPv4。也就是说，在 IPv4 时期，即使没有 ICMP，也能进行正常的 IP 数据包的发送和接收，也就是 IP 通信。但是在 IPv6 中，ICMP 的作用被放大了，如果没有 ICMP，则不能进行正常的 IP 通信。
 
-尤其在 IPv6 中，从 IP 定位 MAC 地址的协议从 ARP 转为 ICMP 的`邻居探索消息(Neighbor Discovery)` 。这种邻居探索消息融合了 IPv4 的 ARP、ICMP 重定向以及 ICMP 的路由选择等功能于一体。甚至还提供了自动设置 IP 的功能。
+尤其在 IPv6 中，从 IP 定位 MAC 地址的协议从 ARP 转为 ICMP 的*邻居探索消息(Neighbor Discovery)* 。这种邻居探索消息融合了 IPv4 的 ARP、ICMP 重定向以及 ICMP 的路由选择等功能于一体。甚至还提供了自动设置 IP 的功能。
 
-在 IPv6 中，ICMP 消息主要分为两类：一类是`错误消息`，一类是`信息消息`。0 - 127 属于错误消息；128 - 255 属于信息消息。
+在 IPv6 中，ICMP 消息主要分为两类：一类是错误消息，一类是信息消息。0 - 127 属于错误消息；128 - 255 属于信息消息。
 
 RFC 2463 中描述了以下消息类型：
 
-![](https://s3.ax1x.com/2021/02/25/yjVJr8.png)
+![image-20220427092600633](https://tva1.sinaimg.cn/large/e6c9d24ely1h1o0srrejvj20vf0u00wm.jpg)
 
 ICMPv6 除了包含 ICMPv4 的所有功能外，还有两个额外的功能。
 
 ### ICMPv6 邻居探索
 
-邻居探索是 ICMPv6 非常重要的功能，主要表示的类型是 133 - 137 之间的消息叫做`邻居探索消息`。这种邻居探索消息对于 IPv6 通信起到举足轻重的作用。邻居请求消息用于查询 IPv6 地址于 MAC 地址的对应关系。邻居请求消息利用 IPv6 的多播地址实现传输。
+邻居探索是 ICMPv6 非常重要的功能，主要表示的类型是 133 - 137 之间的消息叫做**邻居探索消息**。这种邻居探索消息对于 IPv6 通信起到举足轻重的作用。邻居请求消息用于查询 IPv6 地址于 MAC 地址的对应关系。邻居请求消息利用 IPv6 的多播地址实现传输。
 
-![](https://s3.ax1x.com/2021/02/25/yjV3xP.png)
+![image-20220427094754006](https://tva1.sinaimg.cn/large/e6c9d24ely1h1o1fjt53gj21pw0u0dko.jpg)
 
-此外，由于 IPv6 实现了即插即用的功能，所以在没有 `DHCP` 服务器的环境下也能实现 IP 地址的自动获取。如果是一个没有路由器的网络，就使用 MAC 地址作为链路本地单播地址。如果在一个有路由器的网络环境中，可以从路由器获得 IPv6 地址的前面部分，后面部分使用 MAC 地址进行设置。此时可以利用路由器请求消息和路由器公告消息进行设置。
+此外，由于 IPv6 实现了即插即用的功能，所以在没有 DHCP 服务器的环境下也能实现 IP 地址的自动获取。如果是一个没有路由器的网络，就使用 MAC 地址作为链路本地单播地址。如果在一个有路由器的网络环境中，可以从路由器获得 IPv6 地址的前面部分，后面部分使用 MAC 地址进行设置。此时可以利用路由器请求消息和路由器公告消息进行设置。
 
-![](https://s3.ax1x.com/2021/02/25/yjVGKf.png)
+![image-20220427094830245](https://tva1.sinaimg.cn/large/e6c9d24ely1h1o1g6hvxlj21v00u0gq0.jpg)
 
 ### ICMPv6 的组播收听发现协议
 
-`组播收听发现协议（MLD，Multicast Listener Discovery）`由子网内的组播成员管理。MLD 协议定义了3条ICMPv6 消息：
+*组播收听发现协议(MLD，Multicast Listener Discovery)* 由子网内的组播成员管理。MLD 协议定义了3条ICMPv6 消息：
 
 * 组播收听查询消息：组播路由器向子网内的组播收听者发送此消息，以获取组播收听者的状态。
 * 组播收听者报告消息：组播收听者向组播路由器汇报当前状态，包括离开某个组播组。
