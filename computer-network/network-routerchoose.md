@@ -26,11 +26,11 @@
 
 静态路由会让你做大量且重复的设置路由的工作，效率低而且任务量很大，并且扩展性比较差，一旦新增一个路由，就会让你把所有的路由重新设置一遍，甚至还有单点问题，当传输节点中某一个路由出现故障时，数据基本不会饶过这个路由，需要管理员把路由重新设置才能继续发送。
 
-![image-20210623104309245](/Users/mr.l/Library/Application Support/typora-user-images/image-20210623104309245.png)
+![image-20220505232804847](https://tva1.sinaimg.cn/large/e6c9d24ely1h1xy3fbdb4j218a0j2jsr.jpg)
 
 使用动态路由也需要手动设置一些东西，只不过需要设置的是路由协议，每个路由协议的复杂程度不同，所以设置的难以程度也不同，比如 RIP 协议的设置过程就比较简单，OSPF 的设置过程就比较繁琐。不过一旦设置完成后，如果要新增加一个路由，就只需要设置新增加的单个路由就可以，而且避免了单点问题，动态路由能够选择其他路径从而绕过故障路由。
 
-![image-20210623105222901](/Users/mr.l/Library/Application Support/typora-user-images/image-20210623105222901.png)
+![image-20220505232837507](https://tva1.sinaimg.cn/large/e6c9d24ely1h1xy3sz3yfj217o0iugnb.jpg)
 
 虽然静态路由和动态路由都各有利弊，但是你把他们结合以来一起使用就可以了。成年人全都要。
 
