@@ -29,7 +29,7 @@
 
 那么路由器如何把 IP 地址解析为我们熟悉的网址呢？这时候就需要 DNS 出现了。
 
-<img src="https://s3.ax1x.com/2021/01/17/ssO7gx.png" style="zoom:50%;" />
+![image-20220428201651772](https://gitee.com/cxuan-personal/picgo/raw/master/img/image-20220428201651772.png)
 
 <div align = "center">图 7-1</div>
 
@@ -80,7 +80,7 @@ DNS 最早的设计是只有一台 DNS 服务器。这台服务器会包含所�
 
 大致来说有三种 DNS 服务器：*根 DNS 服务器、 顶级域(Top-Level Domain, TLD) DNS 服务器和权威 DNS 服务器*。这些服务器的层次模型如下图所示。
 
-![](https://s3.ax1x.com/2021/01/17/ssOLDO.png)
+![image-20220428201746350](https://gitee.com/cxuan-personal/picgo/raw/master/img/image-20220428201746350.png)
 
 <div align = "center">图 7-2</div>
 
@@ -124,7 +124,7 @@ DNS 最早的设计是只有一台 DNS 服务器。这台服务器会包含所�
 
 整个流程如下图所示
 
-![](https://s3.ax1x.com/2021/01/17/ssOObD.png)
+![image-20220428201801676](https://gitee.com/cxuan-personal/picgo/raw/master/img/image-20220428201801676.png)
 
 <div align = "center">图 7-3</div>
 
@@ -132,7 +132,7 @@ DNS 最早的设计是只有一台 DNS 服务器。这台服务器会包含所�
 
 进行 DNS 查询的主机和软件叫做 *DNS 解析器*，用户所使用的工作站和个人电脑都属于解析器。一个解析器要至少注册一个以上域名服务器的 IP 地址。DNS 解析器是 DNS 查找的第一站，其**负责与发出初始请求的客户端打交道**。解析器启动查询序列，最终使 URL 转换为必要的 IP 地址。
 
-![](https://s3.ax1x.com/2021/01/17/ssOHv6.png)
+![image-20220428201843399](https://gitee.com/cxuan-personal/picgo/raw/master/img/image-20220428201843399.png)
 
 <div align = "center">图 7-4</div>
 
@@ -144,13 +144,13 @@ DNS 查找中会出现三种类型的查询。通过组合使用这些查询，*
 
 1. `递归查询`：在递归查询中，DNS 客户端要求 DNS 服务器（一般为 DNS 递归解析器）将使用所请求的资源记录响应客户端，或者如果解析器无法找到该记录，则返回错误消息。
 
-   ![](https://s3.ax1x.com/2021/01/17/ssOjVe.png)
+   ![image-20220428202032041](https://gitee.com/cxuan-personal/picgo/raw/master/img/image-20220428202032041.png)
 
    <div align = "center">图 7-5</div>
 
 2. `迭代查询`：在迭代查询中，如果所查询的 DNS 服务器与查询名称不匹配，则其将返回对较低级别域名空间具有权威性的 DNS 服务器的引用。然后，DNS 客户端将对引用地址进行查询。此过程继续使用查询链中的其他 DNS 服务器，直至发生错误或超时为止。
 
-   ![](https://s3.ax1x.com/2021/01/17/ssOvUH.png)
+   ![image-20220428202053528](https://gitee.com/cxuan-personal/picgo/raw/master/img/image-20220428202053528.png)
 
    <div align = "center">图 7-6</div>
 
@@ -172,9 +172,9 @@ DNS 数据可缓存到各种不同的位置上，每个位置均将存储 DNS �
 
 现如今的 Web 浏览器设计默认将 DNS 记录缓存一段时间。因为越靠近 Web 浏览器进行 DNS 缓存，为检查缓存并向 IP 地址发出请求的次数就越少。发出对 DNS 记录的请求时，浏览器缓存是针对所请求的记录而检查的第一个位置。
 
-在 chrome 浏览器中，你可以使用 chrome://net-internals/#dns 查看 DNS 缓存的状态。
+在 chrome 浏览器中，你可以使用 chrome://net-internals/#dns 查看 DNS 缓存的记录。
 
-![](https://s3.ax1x.com/2021/01/17/ssXSPA.png)
+![image-20220428202222966](https://gitee.com/cxuan-personal/picgo/raw/master/img/image-20220428202222966.png)
 
 <div align = "center">图 7-7</div>
 
@@ -220,7 +220,9 @@ DNS 有两种报文，一种是查询报文，一种是响应报文，并且这�
 * 事务 ID: TransactionID 由客户端设置，由服务器返回。TransactionID 占用 2 个字节。它是 DNS 的标识，对于同一个请求报文和响应报文来说，这个字段的值是相同的，以此来区分客户端请求和响应。
 * 标志：标志字段占用 2 个字节。标志字段有很多，而且也比较重要，下面我给你列出来了所有的标志字段。
 
-![](https://s3.ax1x.com/2021/01/17/ssXp8I.png)
+![image-20220428202301432](https://gitee.com/cxuan-personal/picgo/raw/master/img/image-20220428202301432.png)
+
+<div align = "center">图 7-9</div>
 
 每个字段的含义如下
 
@@ -238,7 +240,9 @@ DNS 有两种报文，一种是查询报文，一种是响应报文，并且这�
 
 相信读者跟我一样，只看这些字段没什么意思，下面我们就通过抓包的方式，看一下具体的 DNS 报文。
 
-![](https://s3.ax1x.com/2021/01/17/ssXCxP.png)
+![image-20220428204149757](https://gitee.com/cxuan-personal/picgo/raw/master/img/image-20220428204149757.png)
+
+<div align = "center">图 7-10</div>
 
 现在我们可以看一下具体的 DNS 报文，通过 `query` 可知这是一个请求报文，这个报文的标识符是 `0xcd28`，它的标志如下。
 
@@ -254,7 +258,9 @@ DNS 有两种报文，一种是查询报文，一种是响应报文，并且这�
 
 然后我们看一下响应报文。
 
-![](https://s3.ax1x.com/2021/01/17/ssXiKf.png)
+![image-20220428204207549](https://gitee.com/cxuan-personal/picgo/raw/master/img/image-20220428204207549.png)
+
+<div align = "center">图 7-11</div>
 
 可以看到，标志位也是 `0xcd28`，可以说明这就是上面查询请求的响应。
 
@@ -269,6 +275,8 @@ DNS 有两种报文，一种是查询报文，一种是响应报文，并且这�
 
 ![image-20220421212759011](https://gitee.com/cxuan-personal/picgo/raw/master/img/image-20220421212759011.png)
 
+<div align = "center">图 7-12</div>
+
 这部分中每个字段的含义如下：
 
 * `查询名（Query Name）`：指定要查询的域名，有时候也是 IP 地址，用于反向查询。
@@ -277,11 +285,15 @@ DNS 有两种报文，一种是查询报文，一种是响应报文，并且这�
 
 同样的，我们再使用 wireshark 查看一下查询区域。
 
-![](https://s3.ax1x.com/2021/01/17/ssXEVg.png)
+![image-20220428204227934](https://gitee.com/cxuan-personal/picgo/raw/master/img/image-20220428204227934.png)
+
+<div align = "center">图 7-13</div>
 
 可以看到，这是对 mobile-gtalk.l.google.com 发起的 DNS 查询请求，查询类型是 A（0x0001），那么得到的响应类型应该也是 A ，A 表示的是 IPv4 类型，如果 Type 是 AAAA，那么就表示的是 IPv6 类型。
 
-![](https://s3.ax1x.com/2021/01/17/ssXkqS.png)
+![image-20220428204245020](https://gitee.com/cxuan-personal/picgo/raw/master/img/image-20220428204245020.png)
+
+<div align = "center">图 7-14</div>
 
 如上图所示，响应类型也是 A。
 
@@ -290,6 +302,8 @@ DNS 有两种报文，一种是查询报文，一种是响应报文，并且这�
 资源记录部分是 DNS 报文的最后三个字段，包括回答问题区域、权威名称服务器记录、附加信息区域，这三个字段均采用一种称为资源记录的格式，如下图所示
 
 ![image-20220421221316782](https://gitee.com/cxuan-personal/picgo/raw/master/img/image-20220421221316782.png)
+
+<div align = "center">图 7-15</div>
 
 资源记录部分的字段含义如下
 
@@ -302,7 +316,9 @@ DNS 有两种报文，一种是查询报文，一种是响应报文，并且这�
 
 资源记录部分只有在 DNS 响应包中才会出现。下面我们就来通过响应报文看一下具体的字段示例。
 
-![](https://s3.ax1x.com/2021/01/17/ssXVaQ.png)
+![image-20220428204306209](https://gitee.com/cxuan-personal/picgo/raw/master/img/image-20220428204306209.png)
+
+<div align = "center">图 7-16</div>
 
 其中，域名的值是 mobile-gtalk.l.google.com ，类型是 A，类是 1，生存时间是 5 秒，数据长度是 4 字节，资源数据表示的地址是 63.233.189.188。
 
@@ -341,7 +357,9 @@ PTR 记录会存储 IP 地址，反向查询时，PTR 中存储的 IP 地址会�
 
 SOA 记录除具有 DNS 解析器响应的字段外，还具有一些额外的字段，如下
 
-![](https://s3.ax1x.com/2021/01/17/ssXmPs.png)
+![image-20220428204321912](https://gitee.com/cxuan-personal/picgo/raw/master/img/image-20220428204321912.png)
+
+<div align = "center">图 7-17</div>
 
 具体字段含义
 
@@ -354,15 +372,11 @@ SOA 记录除具有 DNS 解析器响应的字段外，还具有一些额外的�
 
 上面提到了主要名称服务器和辅助名称服务器，他们之间的关系如下。
 
-![](https://s3.ax1x.com/2021/01/17/ssXZ5j.png)
+![image-20220428204343304](https://gitee.com/cxuan-personal/picgo/raw/master/img/image-20220428204343304.png)
+
+<div align = "center">图 7-18</div>
 
 这块我们主要解释了 RR 类型为 A（IPv4） 和 SOA 的记录，除此之外还有很多类型，这篇文章就不再详细介绍了，读者朋友们可以阅读 《TCP/IP 卷一 协议》和 cloudflare 的官网 https://www.cloudflare.com/learning/dns/dns-records/ 查阅，值得一提的是，cloudflare 是一个学习网络协议非常好的网站。
-
-### DNS UPDATE 动态更新
-
-
-
-
 
 ### 区域传输和 DNS NOTIFY
 
@@ -389,13 +403,19 @@ nslookup 是一款用来解决 DNS 相关问题排查的工具。
 
 ![image-20220424223200434](https://gitee.com/cxuan-personal/picgo/raw/master/img/image-20220424223200434.png)
 
+<div align = "center">图 7-19</div>
+
 这样就会开始一个 nslookup 的命令提示符，然后你再输入想要查询的域名即可，如下所示：
 
 ![image-20220424223339474](https://gitee.com/cxuan-personal/picgo/raw/master/img/image-20220424223339474.png)
 
+<div align = "center">图 7-20</div>
+
 非交互式就是直接输入 nslookup 你想要查询的内容即可，比如我们还以 baidu 为例子。
 
 ![image-20220424225011827](https://gitee.com/cxuan-personal/picgo/raw/master/img/image-20220424225011827.png)
+
+<div align = "center">图 7-21</div>
 
 其实查询出来的内容是一样的，使用方式其实也大相径庭。
 
@@ -409,6 +429,8 @@ nslookup 一般用于查询下面这些常见的场景：
 
 ![image-20220425223752404](https://gitee.com/cxuan-personal/picgo/raw/master/img/image-20220425223752404.png)
 
+<div align = "center">图 7-22</div>
+
 会分为两种查询结果，一种是 *Non-authoritative answer*，这表明我们想查询的这个网址是从本地 DNS cache 也就是 DNS 缓存中查询出来的，而不是从本地 DNS 经过 DNS 查询后得到的真实域名。
 
 还有一种就是 *Authoritative answers*，这种就是本地 DNS 经过 DNS 查询后得到的真实域名。
@@ -421,11 +443,15 @@ nslookup 一般用于查询下面这些常见的场景：
 
 ![image-20220426214741766](https://gitee.com/cxuan-personal/picgo/raw/master/img/image-20220426214741766.png)
 
+<div align = "center">图 7-23</div>
+
 与 nslookup 不同的使，dig 也是一款 DNS 网络排查工具，它会从你的网络连接中选取一块可用的连接进行解析和使用，不过 windows 10 下默认不支持 dig 命令工具的使用，mac 倒是支持。
 
 下面是 mac 下的 dig 命令。
 
 <img src="https://gitee.com/cxuan-personal/picgo/raw/master/img/image-20220426215202305.png" alt="image-20220426215202305" style="zoom:50%;" />
+
+<div align = "center">图 7-24</div>
 
 不过，贴心的我给你整理出来了 windows10 下 dig 的安装和配置使用 （https://www.csdn.net/tags/Mtjacg0sMjU1ODQtYmxvZwO0O0OO0O0O.html）
 
@@ -433,9 +459,13 @@ nslookup 一般用于查询下面这些常见的场景：
 
 ![image-20220426215310664](https://gitee.com/cxuan-personal/picgo/raw/master/img/image-20220426215310664.png)
 
+<div align = "center">图 7-25</div>
+
 下面我们就来介绍一下 dig 这款工具都用哪些用法以及各个参数的含义，我们以 *dig baidu.com* 来进行说明
 
 ![image-20220426221115836](https://gitee.com/cxuan-personal/picgo/raw/master/img/image-20220426221115836.png)
+
+<div align = "center">图 7-26</div>
 
 如上图所示，最上面的 
 
@@ -473,15 +503,51 @@ www.a.shifen.com.       57      IN      A       220.181.38.149
 
 最后是统计部分，这块没什么好说的了。
 
+除此之外，dig 还有一些其他查询方式。
 
+### -x 进行反向 DNS 查询
 
+我们知道，DNS 可以把域名转换为 IP ，同时也可以把 IP 转换成对应的域名，其中 -x 就是进行反向 DNS 查询，如下所示：
 
+![image-20220428061405003](https://gitee.com/cxuan-personal/picgo/raw/master/img/image-20220428061405003.png)
 
+<div align = "center">图 7-27</div>
 
+可以看到 QUESTION SECTION 和 ANSWER SECTION 中都是 PTR，这表示反向 DNS 查询，后面的域名显示了这是一个 google 的  DNS。反向 DNS 查询中，IP 地址要加上 *in-addr.arpa*。
 
+同样的，我们还可以在查询的时候加上 in-addr.arpa，其结果是一样的。
 
+![image-20220428064037211](https://gitee.com/cxuan-personal/picgo/raw/master/img/image-20220428064037211.png)
 
+<div align = "center">图 7-28</div>
 
+我们通常喜欢使用 -x，因为这会减少输入的工作量。
+
+### +noall +answer
+
+这告诉 dig 只打印 DNS 响应中的*ANSWER*部分内容，如下所示
+
+![image-20220428073736268](https://gitee.com/cxuan-personal/picgo/raw/master/img/image-20220428073736268.png)
+
+<div align = "center">图 7-29</div>
+
+### +short
+
+dig +short  就像是 dig +noall +answer 的阉割版，它只显示很少的内容。
+
+![image-20220428195722608](https://gitee.com/cxuan-personal/picgo/raw/master/img/image-20220428195722608.png)
+
+<div align = "center">图 7-30</div>
+
+### +trace
+
+dig +trace 能够模仿 DNS 解析器在查找域名时的做法 ，即它会从根服务器开始查询，一直到权威 DNS 服务器。相当于链路追踪的一个作用。
+
+![image-20220428200008319](https://gitee.com/cxuan-personal/picgo/raw/master/img/image-20220428200008319.png)
+
+<div align = "center">图 7-31</div>
+
+除了我们上面介绍的 nslookup 和 dig 之外，还有其他 DNS 检测工具，比如 dog 、drill ，都是很好用的 DNS 网络排查工具，大家可以查阅相关资料进行使用，这里我就不再进行详细的介绍了。
 
 ## DNS 安全
 
@@ -508,16 +574,6 @@ DNSSEC 又叫做 DNS 安全扩展，DNSSEC 通过对数据进行数字签名来�
 有一些攻击是针对服务器进行的，这就需要 DNS 防火墙的登场了，DNS 防火墙是一种可以为 DNS 服务器提供许多安全和性能服务的工具。DNS 防火墙位于用户的 DNS 解析器和他们尝试访问的网站或服务的权威名称服务器之间。防火墙提供限速访问，以关闭试图淹没服务器的攻击者。如果服务器确实由于攻击或任何其他原因而导致停机，则 DNS 防火墙可以通过提供来自缓存的 DNS 响应来使操作员的站点或服务正常运行。
 
 除了上述两种防御手段外，本身 DNS 区域的运营商就会采取进步一措施保护 DNS 服务器，比如配置 DNS 基础架构，来防止 DDoS 攻击。
-
-
-
-
-
-
-
-
-
-
 
 ## 总结
 
