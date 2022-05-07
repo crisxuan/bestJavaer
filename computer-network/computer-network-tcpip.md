@@ -17,7 +17,7 @@
 
 <img src="https://s1.ax1x.com/2020/11/03/BsFFFf.png" alt="tcpipbasic001" border="0">
 
-​																													图 2 - 1
+<div align = "center">图2</div>
 
 要说我们开发人员接触计算机网络最多的协议，那势必离不开 TCP/IP 协议了，TCP/IP 协议同时也是互联网中最为著名的协议，下面我们就来一起聊一下 TCP/IP 协议。
 
@@ -27,7 +27,7 @@
 
 <img src="https://s1.ax1x.com/2020/11/03/BsFumn.png" alt="tcpipbasic002" border="0">
 
-​																												图 2 - 2
+<div align = "center">图 2-1</div>
 
 如图 2 -2 ，在两个节点通信的过程中，即使几个节点遭到破坏，却依然能够通过改变线路等方式达使两个节点之间进行通信。
 
@@ -45,7 +45,7 @@ TCP/IP 协议说的不仅仅只是 TCP 和 IP 这两种协议，实际上，TCP/
 
 ![image-20210717084145861](https://tva1.sinaimg.cn/large/008i3skNly1gsjnjc8ik8j31020ig40n.jpg)
 
-​																													图 2 - 3
+<div align = "center">图 2-2</div>
 
 图 2 - 3 只是列出来了一部分各个层次之间的重点协议，实际上 TCP/IP 协议簇中的协议数量要比图 2 - 3 的要多。
 
@@ -69,7 +69,7 @@ TCP/IP 协议是我们程序员接触最多的协议，OSI 模型共有七层，
 
 <img src="https://s1.ax1x.com/2020/11/03/BsFeyj.png" alt="tcpipbasic004" border="0" style="zoom:50%;" >
 
-​																														 图 2 - 4 
+<div align = "center">图 2-3</div>
 
 下面我们从通信链路层开始介绍一下这些层以及与层之间的协议。
 
@@ -105,7 +105,7 @@ IP 还隐含着数据链路层的功能，通过 IP 协议，相互通信的主�
 
 <img src="https://s1.ax1x.com/2020/11/03/BsFkY8.png" alt="tcpipbasic006" border="0">
 
-​																													图 2 - 5
+<div align = "center">图 2-4</div>
 
 传输层最主要的功能就是让应用程序之间完成通信和数据交换。在计算机内部运行着很多应用程序，每个应用程序都对应一个端口号，我们一般使用端口号来区分这些应用程序。
 
@@ -127,7 +127,7 @@ UDP 常用于分组数据较少或者广播、多播等视频通信和多媒体�
 
 <img src="https://s1.ax1x.com/2020/11/03/BsFCwt.png" alt="tcpipbasic007" border="0">
 
-​																													图 2 - 6
+<div align = "center">图 2-5</div>
 
 ## 数据包的发送历程
 
@@ -139,7 +139,7 @@ UDP 常用于分组数据较少或者广播、多播等视频通信和多媒体�
 
 <img src="https://s1.ax1x.com/2020/11/03/BsFPTP.png" alt="tcpipbasic008" border="0">
 
-​																										图 2 - 7
+<div align = "center">图 2-6</div>
 
 在上面的每个分层中，每一层都会对要发送的数据增加一个首部，这个首部中包含了该层必要的信息。下面我们就来聊一聊数据包的发送过程以及每一层都添加了哪些必要信息。
 
@@ -175,7 +175,7 @@ IP 包生成后，会由路由控制表判断应该发送至哪个主机，IP �
 
 <img src="https://s1.ax1x.com/2020/11/03/BsFZlQ.png" alt="tcpipbasic009" border="0">
 
-​																														图 2 - 8
+<div align = "center">图 2-7</div>
 
 如上图所示，左侧是数据的发送处理过程，应用层的数据经过层层处理后会变为可以发送的数据包，经过物理介质发送至指定主机中。
 
@@ -209,7 +209,7 @@ IP 包生成后，会由路由控制表判断应该发送至哪个主机，IP �
 
 <img src="https://s1.ax1x.com/2020/11/03/BsFVSg.png" alt="tcpipbasic010" border="0">
 
-​																														图 2 - 9
+<div align = "center">图 2-8</div>
 
 在数据包的发送过程中，各层以此对数据包添加了首部信息，每个首部都包含发送端和接收端地址以及上一层的协议类型。以太网会使用 MAC 地址、IP 会使用 IP 地址、TCP/UDP 则会用端口号作为识别两端主机的地址。
 
