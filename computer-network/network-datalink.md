@@ -93,7 +93,7 @@ Flag 位位于帧的开头和结尾，两个连续的标志指示帧的结束和
 
 链路接入主要指的是 MAC 协议，*MAC(Medium Access Control)*协议规定了帧在链路上的传输规则。我们知道，数据链路层是 OSI 标准模型的第二层，它还能够向下分为 *The logical link control (LLC)* 层和*The medium access control (MAC)* 层。
 
-![image-20220410221645163](https://gitee.com/cxuan-personal/picgo/raw/master/img/image-20220410221645163.png)
+![image-20220509161801777](https://tva1.sinaimg.cn/large/e6c9d24ely1h228545iozj212u0tqmzq.jpg)
 
 <div align = "center">图 6-4</div>
 
@@ -113,13 +113,13 @@ MAC 层负责传输介质的流控制和多路复用，它的主要功能如下
 
 在 MAC 层中，有一个非常关键的概念就是 MAC 地址。MAC 地址主要用于识别数据链路中互联的节点，如下图所示
 
-![image-20220410221654028](https://gitee.com/cxuan-personal/picgo/raw/master/img/image-20220410221654028.png)
+![image-20220509161825475](https://tva1.sinaimg.cn/large/e6c9d24ely1h2285ja3j2j21ai0lejuw.jpg)
 
 <div align = "center">图 6-5</div>
 
 MAC 地址长 48 bit，在使用*网卡(NIC)*的情况下，MAC 地址一般都会烧入 ROM 中。因此，任何一个网卡的 MAC 地址都是唯一的。MAC 地址的结构如下。
 
-![image-20220410221706945](https://gitee.com/cxuan-personal/picgo/raw/master/img/image-20220410221706945.png)
+![image-20220509161836765](https://tva1.sinaimg.cn/large/e6c9d24ely1h2285ppsonj21320hajv5.jpg)
 
 <div align = "center">图 6-6</div>
 
@@ -133,7 +133,7 @@ MAC 地址中的 3 - 24 位表示厂商识别码，每个 NIC 厂商都有特定
 
 链路层的可靠交付通常用于出错率很高的链路，例如无线链路，它的目的是在本地纠正出错的帧，而不是通过运输层或应用层协议强制进行端到端的数据传输。对于出错率较低的链路，比如光纤、同轴电缆和双绞线来说，链路层的交付开销是没有必要的，由于这个原因，这些链路通常不提供可靠的交付。
 
-![image-20220410221715381](https://gitee.com/cxuan-personal/picgo/raw/master/img/image-20220410221715381.png)
+![image-20220509162429585](https://tva1.sinaimg.cn/large/e6c9d24ely1h228buel7dj21ku0iowie.jpg)
 
 <div align = "center">图 6-6</div>
 
@@ -183,19 +183,19 @@ MAC 地址中的 3 - 24 位表示厂商识别码，每个 NIC 厂商都有特定
 
 争用是发生在共享介质，*载波监听多路访问(CSMA)* 上的数据访问方式。在这种访问方式下，网络中各个介质会采用**先到先得**的方式占用载波信道发送数据。如果多个介质同时发送帧，就势必会产生冲突，继而导致通信性能的下降和网络拥堵。下面是争用的处理方式。
 
-![](https://z3.ax1x.com/2021/03/21/656Ij1.png)
+![image-20220509162923544](https://tva1.sinaimg.cn/large/e6c9d24ely1h228gxw1bhj21em0k6gnf.jpg)
 
 <div align = "center">图 6-7</div>
 
 如上图所示，假如 A 想要给 C 发送数据，那么介质 A 会在确认周围没有其他介质要给 C 发送数据后，也就是经过一段时间后，A 会把数据马上发送给 C。
 
-![](https://z3.ax1x.com/2021/03/21/6565cR.png)
+![image-20220509162935491](https://tva1.sinaimg.cn/large/e6c9d24ely1h228h4ycm3j21go0kq0vx.jpg)
 
 <div align = "center">图 6-8</div>
 
 每个介质在接受到 A 发送的数据后，会从 A 报文中解析出来 MAC 地址判断是否是发送给自己的数据包，如果不是的话就是丢弃这条数据。
 
-![](https://z3.ax1x.com/2021/03/21/656439.png)
+![image-20220509162954445](https://tva1.sinaimg.cn/large/e6c9d24ely1h228hgyarmj21ls0jqq4r.jpg)
 
 <div align = "center">图 6-9</div>
 
@@ -207,7 +207,7 @@ MAC 地址中的 3 - 24 位表示厂商识别码，每个 NIC 厂商都有特定
 
 下面是 CSMA/CD 的改良版。
 
-![](https://z3.ax1x.com/2021/03/21/656h9J.png)
+![image-20220509163031354](https://tva1.sinaimg.cn/large/e6c9d24ely1h228i3w48zj21f00g6q4u.jpg)
 
 <div align = "center">图 6-10</div>
 
@@ -215,7 +215,7 @@ MAC 地址中的 3 - 24 位表示厂商识别码，每个 NIC 厂商都有特定
 
 下面是 *CD(Collision Detection)* 的示意图。
 
-![](https://z3.ax1x.com/2021/03/21/656Wh4.png)
+![image-20220509163044957](https://tva1.sinaimg.cn/large/e6c9d24ely1h228icfz7dj21fg0fudhh.jpg)
 
 <div align = "center">图 6-11</div>
 
@@ -236,25 +236,25 @@ MAC 地址中的 3 - 24 位表示厂商识别码，每个 NIC 厂商都有特定
 
 下面是令牌的传递示意图。
 
-![](https://z3.ax1x.com/2021/03/21/656RNF.png)
+<img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h228in4jgrj20wv0u00u2.jpg" alt="image-20220509163101820" style="zoom:50%;" />
 
 <div align = "center">图 6-12</div>
 
 最一开始，令牌位于介质 A 处，此时介质 A 拥有数据传输的能力，然后介质 A 把令牌传递给介质 B。
 
-![](https://z3.ax1x.com/2021/03/21/6562AU.png)
+<img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h228ixe4ylj20zo0u076z.jpg" alt="image-20220509163117881" style="zoom:50%;" />
 
 <div align = "center">图 6-13</div>
 
 此时 B 持有令牌，所以介质 B 具有发送数据的能力。
 
-![](https://z3.ax1x.com/2021/03/21/656c7T.png)
+<img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h228j6hmmlj214l0u0whk.jpg" alt="image-20220509163132896" style="zoom:50%;" />
 
 <div align = "center">图 6-14</div>
 
 这个数据最终会由 D 接收，然后 D 就会设置一个已接收数据的标志位，然后数据会继续向下发送。
 
-![](https://z3.ax1x.com/2021/03/21/6566BV.png)
+<img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h228ji0fesj214s0u0whf.jpg" alt="image-20220509163151168" style="zoom:50%;" />
 
 <div align = "center">图 6-15</div>
 
@@ -272,13 +272,13 @@ MAC 地址中的 3 - 24 位表示厂商识别码，每个 NIC 厂商都有特定
 
 下面是非共享介质型网络的通信示意图。
 
-![](https://z3.ax1x.com/2021/03/21/656yn0.png)
+![image-20220509163206274](https://tva1.sinaimg.cn/large/e6c9d24ely1h228jr2t7uj21ko0r441g.jpg)
 
 <div align = "center">图 6-16</div>
 
 如图所示，主机 A 发送了一个目标地址为 B，源地址为 A 的交换机，由交换机负责将数据转发给介质 B，如下图所示
 
-![](https://z3.ax1x.com/2021/03/21/656rXq.png)
+![image-20220509163215352](https://tva1.sinaimg.cn/large/e6c9d24ely1h228jwquy1j21eh0u0wii.jpg)
 
 <div align = "center">图 6-17</div>
 
@@ -294,13 +294,13 @@ MAC 地址中的 3 - 24 位表示厂商识别码，每个 NIC 厂商都有特定
 
 以太网交换机中的各个端口会根据介质的 MAC 地址来转发数据，那么转发数据肯定得有所依靠啊，这时可以参考的表就叫做*转发表(Forwarding Table)*，转发表中记录着每个介质的 MAC 地址。转发表不需要我们手动维护，交换机会自动维护转发表。交换机会自学每个数据包的经过介质的 MAC 地址，如下图所示
 
-![](https://z3.ax1x.com/2021/03/21/656dhQ.png)
+![image-20220509163230442](https://tva1.sinaimg.cn/large/e6c9d24ely1h228k65iscj21hy0tkdk8.jpg)
 
 <div align = "center">图 6-19</div>
 
 由于不知道主机 B 的 MAC 地址，所以主机 A 发送的数据会经过交换机广播给以太网内的其他主机，主机 B 接收到数据后，会给主机 A 回送消息。
 
-![](https://z3.ax1x.com/2021/03/21/656B1s.png)
+![image-20220509163243019](https://tva1.sinaimg.cn/large/e6c9d24ely1h228ke2gs9j21h80sg781.jpg)
 
 <div align = "center">图 6-20</div>
 
@@ -310,7 +310,7 @@ MAC 地址中的 3 - 24 位表示厂商识别码，每个 NIC 厂商都有特定
 
 在网络通信的过程中，由于网络链路的冗余或者路由线路冗余可能会造成`闭环`，也就是我们所称的`环路`。环路会导致数据报文在网络中不断重复复制，最终导致网络设备负载过重，无法正常运行。影响的范围可能会扩散至整个局域网，导致整个局域网里的计算机无法正常使用网络。
 
-![](https://z3.ax1x.com/2021/03/21/656Tnx.png)
+![image-20220509163257243](https://tva1.sinaimg.cn/large/e6c9d24ely1h228kmzrr2j21fw0u0adm.jpg)
 
 <div align = "center">图 6-21</div>
 
@@ -330,7 +330,7 @@ MAC 地址中的 3 - 24 位表示厂商识别码，每个 NIC 厂商都有特定
 
 >那么虚拟局域网究竟是什么呢？
 
-![](https://z3.ax1x.com/2021/03/21/6560pj.png)
+![image-20220509163324700](https://tva1.sinaimg.cn/large/e6c9d24ely1h228l4752kj216a0s8di3.jpg)
 
 <div align = "center">图 6-22</div>
 
@@ -350,7 +350,7 @@ MAC 地址中的 3 - 24 位表示厂商识别码，每个 NIC 厂商都有特定
 
 在以太网链路上的数据包被称为以太帧，以太帧开头有一个叫做*前导码(Preamble)* 的部分，它是由 0、1 数字交替组合而成。前导码的末尾最后是一个叫做 *SFD(Start Frame Delimiter)* 的域，值为 11。前导码与 SFD 共同占用 8 个字节。
 
-![](https://z3.ax1x.com/2021/03/21/656UAS.png)
+![image-20220509163337589](https://tva1.sinaimg.cn/large/e6c9d24ely1h228lc79z3j21f40ey0uo.jpg)
 
 <div align = "center">图 6-23</div>
 
@@ -358,9 +358,9 @@ MAC 地址中的 3 - 24 位表示厂商识别码，每个 NIC 厂商都有特定
 >
 >IEEE802.3 是电气和电子工程师协会 （IEEE）标准的集合制定的标准。
 
-这是以太帧的前导码部分，下面是以太帧的本体部分
+这是以太帧的前导码部分，下面是以太帧的本体部分。
 
-![](https://z3.ax1x.com/2021/03/21/656atg.png)
+![image-20220509163351268](https://tva1.sinaimg.cn/large/e6c9d24ely1h228lkkxncj21e40jaadw.jpg)
 
 <div align = "center">图 6-24</div>
 
@@ -382,7 +382,7 @@ LLC 和 SNAP 就是逻辑链路控制的首部信息，那么现在你应该明�
 
 由于网络上的数据发送频率和计算机总线上的频率不相同，因此在适配器中装有对数据进行缓存的存储芯片。在主板上插入适配器时，还要把适配器的驱动程序安装在操作系统中。
 
-![image-20220413225543728](https://gitee.com/cxuan-personal/picgo/raw/master/img/image-20220413225543728.png)
+![image-20220509163443274](https://tva1.sinaimg.cn/large/e6c9d24ely1h228mhipj9j21g80p6jut.jpg)
 
 <div align = "center">图 6-25</div>
 
@@ -411,7 +411,7 @@ PPP 协议是指一套计算机通信协议，它提供通过点对点链路传�
 
 PPP 帧格式分为首部、信息部分和尾部三个模块，如下图所示
 
-![](https://gitee.com/cxuan-personal/picgo/raw/master/img/image-20220411204920642.png)
+![image-20220509163452432](https://tva1.sinaimg.cn/large/e6c9d24ely1h228mmz7i7j21la0iuaco.jpg)
 
 <div align = "center">图 6-26</div>
 
