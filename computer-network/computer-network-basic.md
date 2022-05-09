@@ -234,7 +234,7 @@ CNNIC（中国互联网络信息中心）每年都会公布我国互联网发展
 
 ISO 在制定标准化 OSI 模型之前，对网络体系结构相关的问题进行了充分的讨论，最终提出了作为通信协议设计指标的 OSI 参考模型。这一模型将通信协议中必要的功能分为了 7 层。通过这 7 层分层，使那些比较复杂的协议简单化。
 
-![image-20220412213925650](https://gitee.com/cxuan-personal/picgo/raw/master/img/image-20220412213925650.png)
+![image-20220507170249144](https://tva1.sinaimg.cn/large/e6c9d24ely1h1zy6zzen7j20we0u0adh.jpg)
 
 <div align = "center">图 1-5</div>
 
@@ -250,7 +250,7 @@ ISO 在制定标准化 OSI 模型之前，对网络体系结构相关的问题�
 
 互联网的通信协议都对应了 7 层中的某一层，通过这一点，可以了解协议在整个网络模型中的作用，一般来说，各个分层的主要作用如下
 
-![image-20220412213942842](https://gitee.com/cxuan-personal/picgo/raw/master/img/image-20220412213942842.png)
+![image-20220507170233258](https://tva1.sinaimg.cn/large/e6c9d24ely1h1zy6qye2mj212g0u043u.jpg)
 
 <div align = "center">图 1-7</div>
 
@@ -458,7 +458,7 @@ PPP 协议是点对点协议，英文*Point to Point Protocol*，是一种链路
 
 单播最大的特点就是 1 对 1，早期的固定电话就是单播的一个例子，单播示意图如下。
 
-![image-20220412230035408](https://gitee.com/cxuan-personal/picgo/raw/master/img/image-20220412230035408.png)
+<img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h1zy7na7z2j20u00uddhq.jpg" alt="image-20220507170326176" style="zoom:50%;" />
 
 <div align = "center">图 1-14</div>
 
@@ -466,7 +466,7 @@ PPP 协议是点对点协议，英文*Point to Point Protocol*，是一种链路
 
 我们一般小时候经常会跳广播体操，这就是广播的一个事例，主机和与他连接的所有端系统相连，主机将信号发送给所有的端系统。
 
-![image-20220412230053948](https://gitee.com/cxuan-personal/picgo/raw/master/img/image-20220412230053948.png)
+<img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h1zy7yf7abj21040u0acd.jpg" alt="image-20220507170343656" style="zoom:50%;" />
 
 <div align = "center">图 1-15</div>
 
@@ -474,7 +474,7 @@ PPP 协议是点对点协议，英文*Point to Point Protocol*，是一种链路
 
 多播与广播很类似，也是将消息发送给多个接收主机，不同之处在于多播需要限定在某一组主机作为接收端。
 
-![image-20220412230108827](https://gitee.com/cxuan-personal/picgo/raw/master/img/image-20220412230108827.png)
+<img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h1zy87xaj2j213k0u0mzj.jpg" alt="image-20220507170359915" style="zoom:50%;" />
 
 <div align = "center">图 1-16</div>
 
@@ -482,7 +482,7 @@ PPP 协议是点对点协议，英文*Point to Point Protocol*，是一种链路
 
 任播是在特定的多台主机中选出一个接收端的通信方式。虽然和多播很相似，但是行为与多播不同，任播是从许多目标机群中选出一台最符合网络条件的主机作为目标主机发送消息。然后被选中的特定主机将返回一个单播信号，然后再与目标主机进行通信。
 
-![image-20220412230127099](https://gitee.com/cxuan-personal/picgo/raw/master/img/image-20220412230127099.png)
+<img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h1zy8gnkhrj216k0u0jto.jpg" alt="image-20220507170412173" style="zoom:50%;" />
 
 <div align = "center">图 1-17</div>
 
