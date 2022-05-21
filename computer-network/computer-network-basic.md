@@ -17,8 +17,6 @@
          * [TCP 协议](#tcp-协议)
          * [UDP 协议](#udp-协议)
          * [FTP 协议](#ftp-协议)
-         * <div align = "center">图2 - 1</div>
-         
          * [SMTP 协议](#smtp-协议)
          * [SLIP 协议](#slip-协议)
          * [PPP 协议](#ppp-协议)
