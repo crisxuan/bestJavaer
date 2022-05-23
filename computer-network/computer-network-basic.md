@@ -492,7 +492,7 @@ PPP 协议是点对点协议，英文*Point to Point Protocol*，是一种链路
 
 最便宜且最常用的引导性传输媒介就是双绞铜线，多年以来，它一直应用于电话网。从电话机到本地电话交换机的连线超过 99% 都是使用的双绞铜线，例如下面就是双绞铜线的实物图。
 
-![image-20220521110540428](https://picturesforarticle.oss-cn-beijing.aliyuncs.com/img/image-20220521110540428.png)
+<img src="https://picturesforarticle.oss-cn-beijing.aliyuncs.com/img/image-20220521110540428.png" alt="image-20220521110540428" style="zoom:50%;" />
 
 <div align = "center">图 1-18</div>
 
@@ -502,7 +502,7 @@ PPP 协议是点对点协议，英文*Point to Point Protocol*，是一种链路
 
 与双绞线类似，同轴电缆也是由两个铜导体组成，下面是实物图。
 
-![image-20220521110559153](https://picturesforarticle.oss-cn-beijing.aliyuncs.com/img/image-20220521110559153.png)
+<img src="https://picturesforarticle.oss-cn-beijing.aliyuncs.com/img/image-20220521110559153.png" alt="image-20220521110559153" style="zoom:50%;" />
 
 <div align = "center">图 1-19</div>
 
@@ -512,7 +512,7 @@ PPP 协议是点对点协议，英文*Point to Point Protocol*，是一种链路
 
 光纤是一种细而柔软的、能够引导光脉冲的媒介，每个脉冲表示一个比特。一根光纤能够支持极高的比特率，高达数十甚至数百 Gbps。它们不受电磁干扰。光纤是一种引导型物理媒介，下面是光纤的实物图。
 
-![image-20220521110611152](https://picturesforarticle.oss-cn-beijing.aliyuncs.com/img/image-20220521110611152.png)
+<img src="https://picturesforarticle.oss-cn-beijing.aliyuncs.com/img/image-20220521110611152.png" alt="image-20220521110611152" style="zoom:50%;" />
 
 <div align = "center">图 1-20</div>
 

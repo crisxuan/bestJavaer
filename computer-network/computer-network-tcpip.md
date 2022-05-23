@@ -25,7 +25,7 @@
 
 最初还没有 TCP/IP 协议的时候，也就是在 20 世纪 60 年代，许多国家和地区认识到通信技术的重要性。美国国防部希望能够研究一种即使通信线路被破坏也能够通过其他路线进行通信的技术。为了实现这种技术，出现了**分组网络**。
 
-<img src="https://s1.ax1x.com/2020/11/03/BsFumn.png" alt="tcpipbasic002" border="0">
+![image-20220521141549072](https://picturesforarticle.oss-cn-beijing.aliyuncs.com/img/image-20220521141549072.png)
 
 <div align = "center">图 2-1</div>
 
