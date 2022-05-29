@@ -219,11 +219,7 @@ OSPF 除了上述这些报文的特点之外，还有一些其他特点：
 
 * 类型 1 ：hello 报文，这个报文会定期以组播的形式发送，主要作用就是维护和邻居路由器的可达性，确保能够双向通信，但是并不是所有的报文都会建立关系，必须和报文中的所有字段都匹配后，才能建立。下面是 hello 报文的字段。
 
-
-
-图
-
-
+<img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h2oxsfk717j20u013y0y7.jpg" alt="image-20220529074655129" style="zoom:50%;" />
 
 Nestwork Mask：网络掩码。
 
@@ -241,11 +237,7 @@ Neighbor：邻居。此处填充的是邻居的 Router ID。
 
 * 类型 2 ：数据库分组（Database Description），用于向相邻站点同步自己的链路数据库中的链路状态信息。
 
-
-
-图
-
-
+<img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h2oxsxq4a9j20u00xo0xb.jpg" alt="image-20220529074726254" style="zoom:50%;" />
 
 Interface MTU：最大接口数据单元，由此接口发出最大的 IP 数据长度，默认为 0 。
 
@@ -258,15 +250,9 @@ M/S：此位设置为 1 表示为 master 路由器。
 DD sequence number DD 报文序列号。主从双方利用序列号来保证 DD 报文传输的可靠性和完整性。
 LSA headers：DD 报文中所含 LSA 的头部信息。
 
-* 类型 3：链路状态请求 ( Link State Request ) 分组，
+* 类型 3：链路状态请求 ( Link State Request ) 分组，用 LSR 报文请求完整的 LSA 消息。
 
-
-
-图
-
-
-
-用 LSR 报文请求完整的 LSA 消息。
+<img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h2oxtgkg0lj20u00xe77s.jpg" alt="image-20220529074756603" style="zoom:50%;" />
 
 LS Type ：链路状态类型。
 
@@ -274,31 +260,17 @@ Link State ID：LSA 标识。
 
 Advertising Router：产生该 LSA 的路由器 Router ID。
 
-
-
 * 类型 4: 链路状态更新 ( Link State Update ) 分组，
 
-
-
-图
-
-
+<img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h2oxtyu16dj20u00xk776.jpg" alt="image-20220529074826037" style="zoom:50%;" />
 
 路由器收到 LSR 后会以 LSU 报文进行回应，在 LSU 报文中就包含了对方请求的 LSA 完整的信息。
 
 详细的 LSA 报文通常会分开来写，包括 LSA Header，Router-LSA，Network-LSA。
 
+* 类型 5: 链路状态确认 ( Link State Acknowledgment ) 分组，用来对接受到的 LSU 报文进行确认。内容是需要确认的 LS A的 header，一个 LSACK 报文可以对多个 LSA 进行确认。
 
-
-* 类型 5: 链路状态确认 ( Link State Acknowledgment ) 分组，
-
-
-
-图
-
-
-
-用来对接受到的 LSU 报文进行确认。内容是需要确认的 LS A的 header，一个 LSACK 报文可以对多个 LSA 进行确认。
+<img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h2oxuadx4uj20u00wttb4.jpg" alt="image-20220529074844559" style="zoom:50%;" />
 
 OSPF 规定，每隔 10 s 就要交换一次 Hello 分组，来判断网络链路是否可达，这就很像某种心跳检测机制。路由表就会根据 Hello 分组的检测结果来制定的。在正常情况下，绝大多数分组都是 Hello 分组，如果在 40 s 内没有收到发过来的 Hello 分组，就会认为相邻路由器不可达，应该立刻修改链路状态数据库中所记录的链路信息，还要重新制定路由表。
 
@@ -308,21 +280,10 @@ OSPF 规定，每隔 10 s 就要交换一次 Hello 分组，来判断网络链�
 
 所以，OSPF 通过使用数据库分组和相邻路由器交换链路信息状态来得到全网的状态链路数据库，下面是组合成状态链路数据库所需要发送过的 OSPF 报文。
 
-
-
-图
-
-
+<img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h2pc7h4l2yj217i0u0aee.jpg" alt="image-20220529160547563" style="zoom:50%;" />
 
 这样一来，就会建立状态链路数据库，在网络运行过程中发生路由状态变更的话，只需要发送链路状态更新分组即可，更新完成后需要发送链路状态确认报文。
 
 而且 OSPF 不像 RIP 一样具有好消息传播快，坏消息传播慢的问题。
-
-
-
-
-
-
-
 
 
