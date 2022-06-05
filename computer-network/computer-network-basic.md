@@ -392,7 +392,7 @@ PPP 协议是点对点协议，英文*Point to Point Protocol*，是一种链路
 
 #### 分组交换中的时延
 
-计算机网络中的分组从一台主机（源）出发，经过一系列路由器传输，在另一个端系统中结束它的历程。在这整个传输历程中，分组会涉及到四种最主要的时延：**节点处理时延(nodal processing delay)、排队时延(queuing delay)、传输时延(total nodal delay)和传播时延(propagation delay)**。这四种时延加起来就是*节点总时延(total nodal delay)*。
+计算机网络中的分组从一台主机（源）出发，经过一系列路由器传输，在另一个端系统中结束它的历程。在这整个传输历程中，分组会涉及到四种最主要的时延：**节点处理时延(nodal processing delay)、排队时延(queuing delay)、传输时延(transmission delay)和传播时延(propagation delay)**。这四种时延加起来就是*节点总时延(total nodal delay)*。
 
 如果用 dproc dqueue dtrans dpop 分别表示处理时延、排队时延、传输时延和传播时延，则节点的总时延由以下公式决定:  dnodal = dproc + dqueue + dtrans + dpop。
 
