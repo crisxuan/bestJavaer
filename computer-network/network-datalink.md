@@ -35,7 +35,7 @@
 
 数据链路层，按照 OSI 七层模型来划分的话，就属于物理层的上层
 
-![image-20220410221521910](https://gitee.com/cxuan-personal/picgo/raw/master/img/image-20220410221521910.png)
+<img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3efay8pt3j20bk0mo3ze.jpg" alt="image-20220620085210383" style="zoom:50%;" />
 
 <div align = "center">图 6-1</div>
 

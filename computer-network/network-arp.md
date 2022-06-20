@@ -93,7 +93,7 @@ ARP 协议的全称是 `Address Resolution Protocol(地址解析协议)`，它�
 
 标志主要分为`三类`: C 、M 或 P，C 表示的是由 ARP 协议动态学习。M 类可以通过 arp -s 增加一条。P 类表示的是 `发布`，对于任何 P 类项目，主机对输入的 ARP 请求都返回一个 ARP 响应。这个选项用于配置代理 ARP。
 
-比如我们在 Windows 中进行 ARP 缓存查询
+比如我们在 Windows 中可以使用 arp -a 进行缓存查询（arp -a 用于查询计算机中的 ARP 缓存表）
 
 ![image-20220509155902458](https://tva1.sinaimg.cn/large/e6c9d24ely1h227lcwvplj20u00vb0wv.jpg)
 
