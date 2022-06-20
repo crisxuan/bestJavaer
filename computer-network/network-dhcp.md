@@ -12,8 +12,6 @@
    * [DHCP 认证](#dhcp-认证)
    * [总结](#总结)
 
-![image-20220509153910589](https://tva1.sinaimg.cn/large/e6c9d24ely1h2270ufswxj217w0dita8.jpg)
-
 假如你现在站在地铁上或者坐在办公室中，你的手机也好，电脑也好都有一个 `IP 地址`，**这个 IP 地址是你动输入的**，你需要写下面这些东西 ......
 
 <img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h2272avhg5j20ur0u00uo.jpg" alt="image-20220509154043964" style="zoom:50%;" />

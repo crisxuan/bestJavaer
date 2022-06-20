@@ -19,10 +19,6 @@
       * [ICMPv6 的组播收听发现协议](#icmpv6-的组播收听发现协议)
    * [与 ICMP 有关的攻击](#与-icmp-有关的攻击)
 
-![image-20220427084629199](https://tva1.sinaimg.cn/large/e6c9d24ely1h1nznp3nojj21wk0u0wir.jpg)
-
-
-
 我们之前的文章中了解过 TCP/IP 协议，我那时候码了一句
 
 ![image-20220427085343138](https://tva1.sinaimg.cn/large/e6c9d24ely1h1nzv65vpqj22da09277a.jpg)
