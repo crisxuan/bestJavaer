@@ -2,6 +2,36 @@
 
 [toc]
 
+> 这是计算机网络连载系列的第十五篇文章，前十四篇文章见
+>
+> [计算机网络基础知识总结](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247486242&idx=1&sn=fac49b0b79515a5ed6afd4b341aff87b&chksm=e999fe30deee772637e1c52fb9001c60e60a772e7adba6701329c81974e76c57bb7b2e570225&token=850264305&lang=zh_CN#rd)
+>
+> [TCP/IP 基础知识总结](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247486408&idx=1&sn=c332ae7ae448f3eb98865003ecade589&chksm=e999fedadeee77cc6281d1b170bd906b58220d6cd83054bc741821f4167f1f18ceee9ba0e449&token=850264305&lang=zh_CN#rd)
+>
+> [计算机网络应用层](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247486507&idx=1&sn=622cc363b34bce54f4953076faa1cad6&chksm=e999f939deee702f2444df83ad9805de8c70fb88b89d299fdf0a82b3463e253f32372963c039&token=1398464113&lang=zh_CN#rd)
+>
+> [计算机网络传输层](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247487108&idx=1&sn=7b47f421bb1dee4edb357a10399b7fec&chksm=e999fb96deee7280a17bfff44c27ef11a60e93e48f9da738670a779ecf6accb5a6a4ebd3cbcc&token=1398464113&lang=zh_CN#rd)
+>
+> [计算机网络网络层](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247487683&idx=1&sn=e0949e72e039759545450852d8bc0ada&chksm=e999e5d1deee6cc7ab9e42b50329924fee39c45955516b406046605d27928825a0f628d13e7c&token=1398464113&lang=zh_CN#rd)
+>
+> [计算机网络链路层](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247488884&idx=1&sn=0fdb91b7f5081d2e24c82d891fcc6126&chksm=e999e066deee69704d162b97be2ff0d33225fa9a3d12e4d3bec90a34996e7db7134535f36e8e&token=1398464113&lang=zh_CN#rd)
+>
+> [计算机网络 ARP 协议](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247487804&idx=1&sn=f001a24a308053b3723dfb12d36045ee&chksm=e999e42edeee6d383fbb411792e22e4028bb8c2441255786f50cf848443af7b1bd5e382078dc&token=1398464113&lang=zh_CN#rd)
+>
+> [计算机网络 DNS 协议](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247487880&idx=1&sn=fd38ce30ae82fa7d08e5f83fabb9d497&chksm=e999e49adeee6d8c1adacbfe27dc59097e4cb9d39c6a04802b0fe61877653330e75721cbde0b&token=1398464113&lang=zh_CN#rd)
+>
+> [计算机网络 ICMP 协议](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247488316&idx=1&sn=360c3e6eb45e9cbd7c38f3d43e8850e7&chksm=e999e62edeee6f3806dfe9b5c8d00c5e521cae1a1e7b85fd33d7a7c64fa897b3632dd31b9d50&token=1398464113&lang=zh_CN#rd)
+>
+> [计算机网络 DHCP 协议](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247488546&idx=1&sn=9a8ec2b6900d930e51c55d01de3dd7b5&chksm=e999e130deee6826bac33f3f395f763b33b7cbe6809ae5e3b02a2e24daf816b13851d4f3246e&token=1398464113&lang=zh_CN#rd)
+>
+> [计算机网络 NAT 协议](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247495224&idx=1&sn=8146e152840c65adccf7e4e1044e3860&chksm=e99a1b2adeed923c154dac426bd36d24a1243a1d0fd6125aeade22645aafbc172fa5d930dfbe&token=1398464113&lang=zh_CN#rd)
+>
+> [计算机网络 web 请求过程](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247489155&idx=1&sn=8bcd1dda63e3e34c672973fd56e4f48f&chksm=e999e391deee6a8735ab4b0c0473b79cbeee577c2f8c4fb964e5ef6d932dc1614151b6a8a554&token=1398464113&lang=zh_CN#rd)
+>
+> [计算机网络 Socket](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247494554&idx=1&sn=6cfa7a5ac3bd443e7734b0a688b53294&chksm=e99a1e88deed979ed721e9885dcb4a0ac86bd4fd14eb76056832050762eeb9b8c7423870f2fc&token=1398464113&lang=zh_CN#rd)
+>
+> [计算机网络路由协议](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247496972&idx=1&sn=fa73c2e35ae34f3e0a8f0055cd78825c&chksm=e99a001edeed890883feda823a31dbb537461de86f33b14a00c271a1b0bf097ead0905e5fe0a&token=1398464113&lang=zh_CN#rd)
+
 这篇文章我们来聊一聊 HTTP 2.0，以及 HTTP 2.0 它在 HTTP 1.1 的基础上做了哪些改变，以及 HTTP 2.0 都有哪些特征，那么废话不多说，下面开始本篇文章。
 
 哦对了，如果你没有看过笔者的 HTTP 1.1 系列的相关文章，建议你先阅读笔者的下面几篇文章，非常 nice，看完保准你有收获。
@@ -38,11 +68,15 @@ HTTP 还有一个被抱怨最多的问题就是它的**队头阻塞(head of bloc
 
 <img src="https://tva1.sinaimg.cn/large/008i3skNly1gtwaiussdmj60vv0u00u602.jpg" alt="image-20210828102427830" style="zoom:50%;" />
 
+<div align = "center">图 15-1</div>
+
 如果第一个请求没有被处理，那么 2 3 4 5 这四个请求会直接阻塞在客户端，等到请求 1 被处理完毕后，才能逐个发出。网络通畅的时候性能影响不大，不过一旦请求 1 因为某些原因没有抵达服务器，或者请求因为网络阻塞没有及时返回，影响的就是所有后续请求，导致后续请求无限阻塞下去，问题就变得比较严重了。
 
 不过在 HTTP 1.1 中，也提出了**流水线(pipelining)**的设计，pipelining 就被用来解决队头阻塞的问题，如下图所示
 
 ![image-20210828151722164](https://tva1.sinaimg.cn/large/008i3skNly1gtwizoqqftj61150u0tbr02.jpg)
+
+<div align = "center">图 15-2</div>
 
 虽然这种流水线的设计乍一看像是能够解决阻塞问题，因为右图中这三个请求没有等到响应到达后再进行发送，而是直接依次发送，但是实际上，并不是那么回事。
 
@@ -72,6 +106,8 @@ SPDY 的目标在于解决 HTTP 的缺陷，即延迟和安全性。我们上面
 为了增加解决这些问题的可行性，聪明的 Google 一开始就避开了从传输层动手，而且打算利用开源社区的力量以提高扩散的力度，对于协议使用者来说，也只需要在请求的 header 里设置 user agent，然后在服务端做好支持即可，极大的降低了部署的难度。SPDY 的设计如下
 
 <img src="https://tva1.sinaimg.cn/large/008i3skNly1gtwuwt5v1dj60v00myab002.jpg" alt="image-20210828220948867" style="zoom:50%;" />
+
+<div align = "center">图 15-3</div>
 
 可以看到，SPDY 位于 HTTP 之下，SSL 之上，这样可以轻松的兼容老版本的 HTTP 协议，SPDY 的功能分为基础功能和高级功能两部分，基础功能是默认启用的，高级功能需要手动启用。
 
@@ -115,11 +151,15 @@ HTTP 1.x 的诞生使用的是`明文`协议，它的格式主要由三部分构
 
 ![image-20210829114232831](https://tva1.sinaimg.cn/large/008i3skNly1gtxiege2ktj60kr0dhdgl02.jpg)
 
+<div align = "center">图 15-4</div>
+
 在 HTTP 2.0 报文中，length 定义了整个 *frame* 的开始到结束，type 定了 frame 的类型，一种有十种，flags 定义了一些重要的参数，stream id 用作流控制，剩下的 payload 就是 request 的正文。
 
 虽然 HTTP 2.0 报文格式看上去和 HTTP 1.x 的完全不同，但是实际上 HTTP 2.0 并没有改变 HTTP 1.x 的语义，它只是在 HTTP 1.x 的基础上封装了一层，如下图所示
 
 ![image-20210829120754200](https://tva1.sinaimg.cn/large/008i3skNly1gtxj4unh04j60nh0f7myc02.jpg)
+
+<div align = "center">图 15-5</div>
 
 从上图可以看到，HTTP 1.x 中的请求行、请求头被 HTTP 2.0 封装成为了 *HEADERS Frame*，而 HTTP 1.x 中的报文体被 HTTP 2.0 封装成为了 *Data Frame*。调试的时候浏览器甚把 HTTP 2.0 的 frame 自动还原成HTTP 1.x的格式。
 
@@ -128,6 +168,8 @@ HTTP 1.x 的诞生使用的是`明文`协议，它的格式主要由三部分构
 我们上面聊到，HTTP 1.x 并没有真正意义上的解决连接复用问题，所以 HTTP 2.0 要解决的一大难题就是**连接共享(MultiPlexing)**，连接共享意味着客户端与服务器之间也只需要一个连接即可，这样即使来自很多流的数据包也能够混合在一起通过同样连接传输，再根据不同帧首部的 stream id 标识符重新连接将不同的数据流进行组装。
 
 ![image-20210831221340797](https://tva1.sinaimg.cn/large/008i3skNly1gu0bvqr1f2j60mo05jq3c02.jpg)
+
+<div align = "center">图 15-6</div>
 
 >什么是 stream？
 

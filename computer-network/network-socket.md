@@ -7,6 +7,32 @@
    * [断开连接](#断开连接)
    * [删除套接字](#删除套接字)
 
+> 这是计算机网络连载系列的第十三篇文章，前十二篇文章见
+>
+> [计算机网络基础知识总结](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247486242&idx=1&sn=fac49b0b79515a5ed6afd4b341aff87b&chksm=e999fe30deee772637e1c52fb9001c60e60a772e7adba6701329c81974e76c57bb7b2e570225&token=850264305&lang=zh_CN#rd)
+>
+> [TCP/IP 基础知识总结](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247486408&idx=1&sn=c332ae7ae448f3eb98865003ecade589&chksm=e999fedadeee77cc6281d1b170bd906b58220d6cd83054bc741821f4167f1f18ceee9ba0e449&token=850264305&lang=zh_CN#rd)
+>
+> [计算机网络应用层](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247486507&idx=1&sn=622cc363b34bce54f4953076faa1cad6&chksm=e999f939deee702f2444df83ad9805de8c70fb88b89d299fdf0a82b3463e253f32372963c039&token=1398464113&lang=zh_CN#rd)
+>
+> [计算机网络传输层](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247487108&idx=1&sn=7b47f421bb1dee4edb357a10399b7fec&chksm=e999fb96deee7280a17bfff44c27ef11a60e93e48f9da738670a779ecf6accb5a6a4ebd3cbcc&token=1398464113&lang=zh_CN#rd)
+>
+> [计算机网络网络层](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247487683&idx=1&sn=e0949e72e039759545450852d8bc0ada&chksm=e999e5d1deee6cc7ab9e42b50329924fee39c45955516b406046605d27928825a0f628d13e7c&token=1398464113&lang=zh_CN#rd)
+>
+> [计算机网络链路层](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247488884&idx=1&sn=0fdb91b7f5081d2e24c82d891fcc6126&chksm=e999e066deee69704d162b97be2ff0d33225fa9a3d12e4d3bec90a34996e7db7134535f36e8e&token=1398464113&lang=zh_CN#rd)
+>
+> [计算机网络 ARP 协议](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247487804&idx=1&sn=f001a24a308053b3723dfb12d36045ee&chksm=e999e42edeee6d383fbb411792e22e4028bb8c2441255786f50cf848443af7b1bd5e382078dc&token=1398464113&lang=zh_CN#rd)
+>
+> [计算机网络 DNS 协议](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247487880&idx=1&sn=fd38ce30ae82fa7d08e5f83fabb9d497&chksm=e999e49adeee6d8c1adacbfe27dc59097e4cb9d39c6a04802b0fe61877653330e75721cbde0b&token=1398464113&lang=zh_CN#rd)
+>
+> [计算机网络 ICMP 协议](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247488316&idx=1&sn=360c3e6eb45e9cbd7c38f3d43e8850e7&chksm=e999e62edeee6f3806dfe9b5c8d00c5e521cae1a1e7b85fd33d7a7c64fa897b3632dd31b9d50&token=1398464113&lang=zh_CN#rd)
+>
+> [计算机网络 DHCP 协议](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247488546&idx=1&sn=9a8ec2b6900d930e51c55d01de3dd7b5&chksm=e999e130deee6826bac33f3f395f763b33b7cbe6809ae5e3b02a2e24daf816b13851d4f3246e&token=1398464113&lang=zh_CN#rd)
+>
+> [计算机网络 NAT 协议](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247495224&idx=1&sn=8146e152840c65adccf7e4e1044e3860&chksm=e99a1b2adeed923c154dac426bd36d24a1243a1d0fd6125aeade22645aafbc172fa5d930dfbe&token=1398464113&lang=zh_CN#rd)
+>
+> [计算机网络 web 请求过程](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247489155&idx=1&sn=8bcd1dda63e3e34c672973fd56e4f48f&chksm=e999e391deee6a8735ab4b0c0473b79cbeee577c2f8c4fb964e5ef6d932dc1614151b6a8a554&token=1398464113&lang=zh_CN#rd)
+
 之前的计算机网络系列文章中没有详细介绍 Socket ，这篇文章我们来聊一下 Socket。
 
 关于对 Socket 的认识，大致分为下面几个主题，Socket 是什么，Socket 是如何创建的，Socket 是如何连接并收发数据的，Socket 套接字的删除等。
@@ -17,6 +43,8 @@
 
 ![image-20211209214203022](https://tva1.sinaimg.cn/large/008i3skNly1gx7wxm9gqjj310s0u00va.jpg)
 
+<div align = "center">图 13-1</div>
+
 Socket 相当于是应用程序的"大门"，我们在网络中发送的报文都会经过这道大门才能够进入到应用程序中，让应用程序来使用报文中的数据。
 
 如果你看我之前的文章你应该知道，协议栈其实是位于操作系统中一些协议的堆叠，这些协议包括 **TCP、UDP、ARP、ICMP、IP** 等。通常某个协议的设计都是为了解决某些问题，比如 TCP 协议的设计就解决了安全可靠的传输问题；UDP 协议的设计就是报文小，传输效率高，性能佳；ARP 协议的设计是通过 IP 地址查询物理（Mac）地址；ICMP 协议设计的目的是在 IP 报文无法发送到目标主机时，返回错误消息给发送方；IP 设计的目的是为了实现大规模主机的互联互通。
@@ -24,6 +52,8 @@ Socket 相当于是应用程序的"大门"，我们在网络中发送的报文�
 应用程序比如浏览器、电子邮件、文件传输服务器等产生的数据，会经过传输层协议作为载体进行传输。不过应用程序是不会和传输层直接建立联系的，而是有一个能够连接应用层和传输层之间的套件，这个套件就是 `Socket`。
 
 <img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h31rcwuwdlj210o0t876w.jpg" alt="image-20220609095554896" style="zoom:50%;" />
+
+<div align = "center">图 13-2</div>
 
 在上面这幅图中，应用程序包含 Socket 和解析器，解析器的作用就是向 DNS 服务器发起查询，查询目标 IP 地址。
 
@@ -50,6 +80,8 @@ netstat -ano
 
 ![image-20211212141054433](https://tva1.sinaimg.cn/large/008i3skNly1gxb0r4vy7dj314n0u0tf7.jpg)
 
+<div align = "center">图 13-3</div>
+
 图中的每一行都是一个套接字，每一列是一个元组，所以一个套接字就是五元组（协议、本地地址、外部地址、状态、PID）。有的时候也被叫做四元组，四元组不包括协议字段。
 
 比如图中的第一行，它的协议就是 TCP，本地地址和远程地址都是 0.0.0.0（0.0.0.0 表示通信还没有开始，IP 地址暂时还未确定），而本地端口已知是 135，但是远程端口还未知，此时的状态是 `LISTENING`，LISTENING 表示 TCP 正在等待与远程主机建立连接（关于各种状态之间的转换，大家可以阅读笔者的这篇文章 [TCP ，丫的终于来了！！](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247490677&idx=1&sn=d91b0edc0b25cdda0b2b2c635f53761e&chksm=e999e967deee607162d3c907987fbc77d2f45ca6a7b403e68587174a0048909c2840ad0935e3&token=288895417&lang=zh_CN#rd)）最后一个元组是 PID，即进程标识符，PID 就像我们的身份证号码，能够精确定位唯一的进程。我们可以通过 Win 下的任务管理器和 Mac 下的活动监视器来查询 PID。
@@ -57,6 +89,8 @@ netstat -ano
 ![image-20220609102126678](https://tva1.sinaimg.cn/large/e6c9d24ely1h31s3hlzibj21sm0nk42s.jpg)
 
 ![image-20220609154751835](https://tva1.sinaimg.cn/large/e6c9d24ely1h321j4cgt0j20lv08hac3.jpg)
+
+<div align = "center">图 13-4</div>
 
 >现在你应该大致清楚 Socket 是干什么的了，它就是一个描述符。那么，这个描述符是啥时候有的？或者说这个描述符是啥时候创建的呢？
 
@@ -73,6 +107,8 @@ netstat -ano
 套接字创建完成后，就可以进行数据收发操作了，不过在数据收发之前，还需要建立连接这个过程。只不过这个连接并不是真实的连接：可以理解为把一根管子连在两个电脑之间。
 
 ![image-20211212222747227](https://tva1.sinaimg.cn/large/008i3skNly1gxbf460luaj31420j80u9.jpg)
+
+<div align = "center">图 13-5</div>
 
 套接字刚刚创建完成后，还没有数据，也不知道通信对象是谁。在这种状态下，即使你让客户端应用程序委托协议栈发送数据，它也不知道发送到哪里。所以浏览器需要根据网址来查询服务器的 IP 地址，这就是 DNS 解析器的工作，查询到目标主机后，再把目标主机的 IP 告诉协议栈，至此，客户端这边就准备好了。
 
@@ -120,6 +156,8 @@ connect(<描述符>、<服务器IP地址和端口号>)
 
 ![image-20211213212630888](https://tva1.sinaimg.cn/large/008i3skNly1gxciyopgpuj316a0bcgmj.jpg)
 
+<div align = "center">图 13-6</div>
+
 * 另一个判断标准是时间，当应用程序产生的数据比较少，协议栈向缓冲区放置数据效率不高时，如果每次都等到 MSS 再发送的话，可能因为等待时间太长造成延迟，在这种情况下，即使数据长度没有到达 MSS，也应该把数据发送出去。
 
 所以现在客户端和服务器之间都各自有自己的发送缓冲区和接收缓冲区。
@@ -132,6 +170,8 @@ connect(<描述符>、<服务器IP地址和端口号>)
 
 ![image-20211213214837847](https://tva1.sinaimg.cn/large/008i3skNly1gxcjlpbrh9j319b0u0gp8.jpg)
 
+<div align = "center">图 13-7</div>
+
 到现在，网络包已经准备好发往服务器了，但是数据发送操作还没有结束，因为服务器还未确认是否已经收到网络包。因此在客户端发送数据包之后，还需要服务器进行确认。
 
 TCP 模块在拆分数据时，会计算出网络包偏移量，这个偏移量就是相对于数据从头开始计算的第几个字节，并将算好的字节数写在 TCP 头部，TCP 模块还会生成一个网络包的序号（SYN），这个序号是唯一的，这个序号就是用来让服务器进行确认的。
@@ -141,6 +181,8 @@ TCP 模块在拆分数据时，会计算出网络包偏移量，这个偏移量�
 我们来看一下实际的工作过程。
 
 ![image-20211214150014759](https://tva1.sinaimg.cn/large/008i3skNly1gxddf3nvnhj30u00xnwi2.jpg)
+
+<div align = "center">图 13-8</div>
 
 首先，客户端在连接时需要计算出序号初始值，并将这个值发送给服务器。接下来，服务器通过这个初始值计算出 确认号并返回给客户端。初始值在通信过程中有可能会丢弃，因此当服务器收到初始值后需要返回确认号用于确认。同时，服务器也需要计算出从服务器到客户端方向的序号初始值，并将这个值发送给客户端。然后，客户端也需要根据服务器发来的初始值计算出确认号发送给服务器，至此，连接建立完成，接下来就可以进入数据收发阶段了。
 
@@ -157,6 +199,8 @@ TCP 模块在拆分数据时，会计算出网络包偏移量，这个偏移量�
 当通信双方不再需要收发数据时，需要断开连接。不同的应用程序断开连接的时机不同。以 Web 为例，浏览器向 Web 服务器发送请求消息，Web  服务器再返回响应消息，这时收发数据就全部结束了，服务器可能会首先发起断开响应，当然客户端也有可能会首先发起（谁先断开连接是应用程序做出的判断），与协议栈无关。
 
 ![image-20211214165500080](https://tva1.sinaimg.cn/large/008i3skNly1gxdgqhaiylj30u00wwgo9.jpg)
+
+<div align = "center">图 13-9</div>
 
 无论哪一方发起断开连接的请求，都会调用 Socket 库的 close 程序。我们以服务器断开连接为例，服务器发起断开连接请求，协议栈会生成断开连接的 TCP 头部，其实就是设置 FIN 位，然后委托 IP 模块向客户端发送数据，与此同时，**服务器的套接字会记录下断开连接的相关信息**。
 
@@ -175,6 +219,8 @@ TCP 模块在拆分数据时，会计算出网络包偏移量，这个偏移量�
 总得来说，两个端系统之间的数据收发操作中，需要调用 socket 的方法流程图如下所示：
 
 <img src="https://s3.ax1x.com/2020/11/26/DwCkF0.png" style="zoom:50%;" />
+
+<div align = "center">图 13-10</div>
 
 1. socket 中的 API 用于创建通信链路中的端点，创建完成后，会返回描述该套接字的套接字描述符。
 

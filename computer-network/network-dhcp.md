@@ -12,9 +12,31 @@
    * [DHCP 认证](#dhcp-认证)
    * [总结](#总结)
 
+> 这是计算机网络连载系列的第十篇文章，前九篇文章见
+>
+> [计算机网络基础知识总结](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247486242&idx=1&sn=fac49b0b79515a5ed6afd4b341aff87b&chksm=e999fe30deee772637e1c52fb9001c60e60a772e7adba6701329c81974e76c57bb7b2e570225&token=850264305&lang=zh_CN#rd)
+>
+> [TCP/IP 基础知识总结](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247486408&idx=1&sn=c332ae7ae448f3eb98865003ecade589&chksm=e999fedadeee77cc6281d1b170bd906b58220d6cd83054bc741821f4167f1f18ceee9ba0e449&token=850264305&lang=zh_CN#rd)
+>
+> [计算机网络应用层](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247486507&idx=1&sn=622cc363b34bce54f4953076faa1cad6&chksm=e999f939deee702f2444df83ad9805de8c70fb88b89d299fdf0a82b3463e253f32372963c039&token=1398464113&lang=zh_CN#rd)
+>
+> [计算机网络传输层](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247487108&idx=1&sn=7b47f421bb1dee4edb357a10399b7fec&chksm=e999fb96deee7280a17bfff44c27ef11a60e93e48f9da738670a779ecf6accb5a6a4ebd3cbcc&token=1398464113&lang=zh_CN#rd)
+>
+> [计算机网络网络层](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247487683&idx=1&sn=e0949e72e039759545450852d8bc0ada&chksm=e999e5d1deee6cc7ab9e42b50329924fee39c45955516b406046605d27928825a0f628d13e7c&token=1398464113&lang=zh_CN#rd)
+>
+> [计算机网络链路层](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247488884&idx=1&sn=0fdb91b7f5081d2e24c82d891fcc6126&chksm=e999e066deee69704d162b97be2ff0d33225fa9a3d12e4d3bec90a34996e7db7134535f36e8e&token=1398464113&lang=zh_CN#rd)
+>
+> [计算机网络 ARP 协议](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247487804&idx=1&sn=f001a24a308053b3723dfb12d36045ee&chksm=e999e42edeee6d383fbb411792e22e4028bb8c2441255786f50cf848443af7b1bd5e382078dc&token=1398464113&lang=zh_CN#rd)
+>
+> [计算机网络 DNS 协议](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247487880&idx=1&sn=fd38ce30ae82fa7d08e5f83fabb9d497&chksm=e999e49adeee6d8c1adacbfe27dc59097e4cb9d39c6a04802b0fe61877653330e75721cbde0b&token=1398464113&lang=zh_CN#rd)
+>
+> [计算机网络 ICMP 协议](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247488316&idx=1&sn=360c3e6eb45e9cbd7c38f3d43e8850e7&chksm=e999e62edeee6f3806dfe9b5c8d00c5e521cae1a1e7b85fd33d7a7c64fa897b3632dd31b9d50&token=1398464113&lang=zh_CN#rd)
+
 假如你现在站在地铁上或者坐在办公室中，你的手机也好，电脑也好都有一个 `IP 地址`，**这个 IP 地址是你动输入的**，你需要写下面这些东西 ......
 
 <img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h2272avhg5j20ur0u00uo.jpg" alt="image-20220509154043964" style="zoom:50%;" />
+
+<div align = "center">图 10-1</div>
 
 电脑配置这些还好，直接咔咔咔的配置完了，如果你用的是手机，那么你需要点到 IP 地址，输入 IP 地址，点到子网掩码，输入子网掩码，点到默认路由，输入路由，点到 DNS 服务器，输入 DNS 服务器 ...... 这玩意这么麻烦啊，恰好你刚配置完，领导叫你开会，得嘞，刚配置好的地址白瞎了。换了一个环境，需要重新配置 IP 地址，于是你把上面的步骤再重复了一遍，这时候散会了，然后你炸了。。。。。。
 
@@ -29,6 +51,8 @@
 DHCP 与 IP 密切相关，它是 IP 网络上所使用的协议。如果你想要使用 DHCP 提供服务的话，那么在整条通信链路上就需要 `DHCP 服务器`的存在，连接到网络的设备使用 DHCP 协议从 DHCP 服务器请求 IP 地址。DHCP 服务器会为设备分配一个唯一的 IP 地址。
 
 <img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h2273san06j214g0nmq4m.jpg" alt="image-20220509154209275" style="zoom:50%;" />
+
+<div align = "center">图 10-2</div>
 
 > 除了 IP 地址外，DHCP 服务器还会把子网掩码，默认路由，DNS 服务器告诉你。
 
@@ -101,6 +125,8 @@ DHCP 的工作机制比较简单，无非就是客户端向服务器租借 IP �
 
 ![image-20220509154534172](https://tva1.sinaimg.cn/large/e6c9d24ely1h2277cbj3lj21ta0todlx.jpg)
 
+<div align = "center">图 10-3</div>
+
 查找包的阶段主要分为两步：第一步是 DHCP 发现包，第二步是 DHCP 提供包。
 
 DHCP 客户端在通信链路上发起`广播`，看看链路上有没有能提供 DHCP 包的服务器，然后通信链路上的各个节点会检查自己是否能够提供 DHCP 包，这时 DHCP 服务器说它能够提供 DHCP 包，然后 DHCP 就发出一个 DHCP 包沿着通信链路返回给 DHCP 客户端。
@@ -108,6 +134,8 @@ DHCP 客户端在通信链路上发起`广播`，看看链路上有没有能提�
 第二个阶段是 DHCP 的请求阶段。
 
 ![image-20220509154617923](https://tva1.sinaimg.cn/large/e6c9d24ely1h22783nnpgj21ev0u0n1w.jpg)
+
+<div align = "center">图 10-4</div>
 
 DHCP 的请求包也分为两步：第一步是 DHCP 请求包，第二步是 DHCP 确认包。
 
@@ -124,6 +152,8 @@ DHCP 客户端在通信链路上发起 DHCP 请求包，请求包主要是告诉
 状态之间的转换（箭头）是由于接收和发送消息或者计时器到期才发生的转换。下面是 DHCP 的状态轮转图。
 
 ![image-20220509154641588](https://tva1.sinaimg.cn/large/e6c9d24ely1h2278ige76j217i0u0tcp.jpg)
+
+<div align = "center">图 10-5</div>
 
 客户端在开始时没有消息，此时处于 `INIT` 状态，然后客户端会在通信链路上发起一个广播 `DHCP DISCOVER`。
 
@@ -153,11 +183,15 @@ DHCP 客户端在通信链路上发起 DHCP 请求包，请求包主要是告诉
 
 ![image-20220509154703138](https://tva1.sinaimg.cn/large/e6c9d24ely1h2278vwgepj20um0a6wg0.jpg)
 
+<div align = "center">图 10-6</div>
+
 ## DHCP 中继代理
 
 常规家庭网络（土豪除外）中大多数都只有一个`以太网`，也就是 LAN 网段，一个 DHCP 服务器完全可以满足 LAN 中的客户机使用。但是，在更复杂的网络中，比如企业或者学校，一台 DHCP 服务器显然就无法满足了。因此，这种情况下，往往需要 DHCP 的统一管理，具体实现方式可以通过 `DHCP 中继代理` 来转发 DHCP 流量，如下图所示。
 
 ![image-20220509154724356](https://tva1.sinaimg.cn/large/e6c9d24ely1h227993mutj21ji0u0acg.jpg)
+
+<div align = "center">图 10-7</div>
 
 如上图所示，存在两个网段 A 和网段 B，DHCP 客户机和 DHCP 服务器不在一个网段内，所以我们在通信链路上架设了一个中继代理，DHCP 客户机通过访问中继代理以达到访问 DHCP 服务器的目的。
 
@@ -172,6 +206,8 @@ DHCP 客户端会向 DHCP 中继代理发送 DHCP 请求包，而 DHCP 中继代
 为了避免这些问题，在 [RFC3118] 中指定了一种认证 DHCP 消息的方法。 它定义了一个 DHCP 选项，即Authentication 选项，如下所示
 
 <img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h2279llkmtj20zk0najtc.jpg" alt="image-20220509154744592" style="zoom:50%;" />
+
+<div align = "center">图 10-8</div>
 
 认证选项的主要目的就是**确定 DHCP 消息是否来自一个授权的发送方**。
 

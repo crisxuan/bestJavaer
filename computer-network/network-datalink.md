@@ -20,6 +20,18 @@
    * [以太网](#以太网)
       * [以太帧格式](#以太帧格式)
 
+> 这是计算机网络连载系列的第六篇文章，前五篇文章见
+>
+> [计算机网络基础知识总结](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247486242&idx=1&sn=fac49b0b79515a5ed6afd4b341aff87b&chksm=e999fe30deee772637e1c52fb9001c60e60a772e7adba6701329c81974e76c57bb7b2e570225&token=850264305&lang=zh_CN#rd)
+>
+> [TCP/IP 基础知识总结](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247486408&idx=1&sn=c332ae7ae448f3eb98865003ecade589&chksm=e999fedadeee77cc6281d1b170bd906b58220d6cd83054bc741821f4167f1f18ceee9ba0e449&token=850264305&lang=zh_CN#rd)
+>
+> [计算机网络应用层](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247486507&idx=1&sn=622cc363b34bce54f4953076faa1cad6&chksm=e999f939deee702f2444df83ad9805de8c70fb88b89d299fdf0a82b3463e253f32372963c039&token=1398464113&lang=zh_CN#rd)
+>
+> [计算机网络传输层](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247487108&idx=1&sn=7b47f421bb1dee4edb357a10399b7fec&chksm=e999fb96deee7280a17bfff44c27ef11a60e93e48f9da738670a779ecf6accb5a6a4ebd3cbcc&token=1398464113&lang=zh_CN#rd)
+>
+> [计算机网络网络层](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247487683&idx=1&sn=e0949e72e039759545450852d8bc0ada&chksm=e999e5d1deee6cc7ab9e42b50329924fee39c45955516b406046605d27928825a0f628d13e7c&token=1398464113&lang=zh_CN#rd)
+
 下面我们把关注点放在数据链路层，如果没有数据链路层，计算机网络也就不复存在；这就好比大楼没有了地基，人没有了腿；所以，数据链路层的知识也固然重要，不少小伙伴只把关注点放在 TCP 和 IP 这两个协议上，这是一种狭隘的思想，需要及时纠正，计算机网络可不只有 TCP 和 IP。下面我就和你聊聊计算机中的数据链路层。
 
 ## 数据链路层
@@ -57,7 +69,7 @@
 
 网络层数据报就封装在*Payload Field*字段中。根据不同的物理介质，每个帧的结构也不同。帧的组成如下。
 
-![image-20220410221626955](https://gitee.com/cxuan-personal/picgo/raw/master/img/image-20220410221626955.png)
+![image-20220620204500208](https://picturesforarticle.oss-cn-beijing.aliyuncs.com/img/image-20220620204500208.png)
 
 <div align = "center">图 6-2</div>
 
@@ -70,7 +82,7 @@
 
 Flag 位位于帧的开头和结尾，两个连续的标志指示帧的结束和开始。
 
-![image-20220410221635498](https://gitee.com/cxuan-personal/picgo/raw/master/img/image-20220410221635498.png)
+![](https://picturesforarticle.oss-cn-beijing.aliyuncs.com/img/image-20220620204524849.png)
 
 <div align = "center">图 6-3</div>
 
@@ -416,8 +428,6 @@ PPP 帧格式分为首部、信息部分和尾部三个模块，如下图所示�
 首部中的第四个字段是协议字段，占用两个字节，如果协议是 0x0021 ，那么 PPP 信息部分就是 IP 数据报，如果协议是 0xC021 ，那么信息字段就 LCP 链路控制协议的数据。如果协议是 0x8021 ，那么就表示网络层的数据。
 
 当信息部分出现与标志字段一样的组合时，就需要采用一些措施来脱敏。脱敏的原则就是填充一些字段来使信息部分与标志字段错开，方式包括字节填充和零比特填充。
-
-
 
 ![image-20210717083948590](https://tva1.sinaimg.cn/large/008i3skNly1gsjnhb9f5xj319s0tsn4g.jpg)
 

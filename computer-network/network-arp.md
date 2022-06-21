@@ -13,6 +13,20 @@
       * [ARP 攻击分类](#arp-攻击分类)
    * [总结](#总结)
 
+> 这是计算机网络连载系列的第七篇文章，前六篇文章见
+>
+> [计算机网络基础知识总结](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247486242&idx=1&sn=fac49b0b79515a5ed6afd4b341aff87b&chksm=e999fe30deee772637e1c52fb9001c60e60a772e7adba6701329c81974e76c57bb7b2e570225&token=850264305&lang=zh_CN#rd)
+>
+> [TCP/IP 基础知识总结](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247486408&idx=1&sn=c332ae7ae448f3eb98865003ecade589&chksm=e999fedadeee77cc6281d1b170bd906b58220d6cd83054bc741821f4167f1f18ceee9ba0e449&token=850264305&lang=zh_CN#rd)
+>
+> [计算机网络应用层](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247486507&idx=1&sn=622cc363b34bce54f4953076faa1cad6&chksm=e999f939deee702f2444df83ad9805de8c70fb88b89d299fdf0a82b3463e253f32372963c039&token=1398464113&lang=zh_CN#rd)
+>
+> [计算机网络传输层](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247487108&idx=1&sn=7b47f421bb1dee4edb357a10399b7fec&chksm=e999fb96deee7280a17bfff44c27ef11a60e93e48f9da738670a779ecf6accb5a6a4ebd3cbcc&token=1398464113&lang=zh_CN#rd)
+>
+> [计算机网络网络层](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247487683&idx=1&sn=e0949e72e039759545450852d8bc0ada&chksm=e999e5d1deee6cc7ab9e42b50329924fee39c45955516b406046605d27928825a0f628d13e7c&token=1398464113&lang=zh_CN#rd)
+>
+> [计算机网络链路层](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247488884&idx=1&sn=0fdb91b7f5081d2e24c82d891fcc6126&chksm=e999e066deee69704d162b97be2ff0d33225fa9a3d12e4d3bec90a34996e7db7134535f36e8e&token=1398464113&lang=zh_CN#rd)
+
 只要确定了 IP 地址后，就能够向这个 IP 地址所在的主机发送数据报，这是我们所熟知的事情。但是再往深了想，IP 地址只是标识网络层的地址，那么在网络层下方数据链路层是不是也有一个地址能够告诉对方主机自己的地址呢？是的，这个地址就是`MAC 地址`。
 
 ## 认识 MAC 地址
@@ -25,9 +39,13 @@ MAC 地址主要用于识别数据链路中互联的节点，如下图所示
 
 ![image-20220509155601471](https://tva1.sinaimg.cn/large/e6c9d24ely1h227i83yktj219i0lydj9.jpg)
 
+<div align = "center">图 7-1</div>
+
 MAC 地址长 48 bit，在使用`网卡(NIC)` 的情况下，MAC 地址一般都会烧入 ROM 中。因此，任何一个网卡的 MAC 地址都是唯一的。MAC 地址的结构如下
 
 ![image-20220509155619113](https://tva1.sinaimg.cn/large/e6c9d24ely1h227iiqd36j213s0i6780.jpg)
+
+<div align = "center">图 7-2</div>
 
 MAC 地址中的 3 - 24 位表示厂商识别码，每个 NIC 厂商都有特定唯一的识别数字。25 - 48 位是厂商内部为识别每个网卡而用。因此，可以保证全世界不会有相同 MAC 地址的网卡。
 
@@ -47,13 +65,19 @@ ARP 协议的全称是 `Address Resolution Protocol(地址解析协议)`，它�
 
 ![image-20220509155645228](https://tva1.sinaimg.cn/large/e6c9d24ely1h227iz6usej21si0ra77j.jpg)
 
+<div align = "center">图 7-3</div>
+
 主机 A 想要获取主机 B 的 MAC 地址，通过主机 A 会通过`广播` 的方式向以太网上的所有主机发送一个 `ARP 请求包`，这个 ARP 请求包中包含了主机 A 想要知道的主机 B 的 IP 地址的 MAC 地址。
 
 ![image-20220509155705448](https://tva1.sinaimg.cn/large/e6c9d24ely1h227jbwtstj21rc0qe79v.jpg)
 
+<div align = "center">图 7-4</div>
+
 主机 A 发送的 ARP 请求包会被同一链路上的所有主机/路由器接收并进行解析。每个主机/路由器都会检查 ARP 请求包中的信息，如果 ARP 请求包中的`目标 IP 地址` 和自己的相同，就会将自己主机的 MAC 地址写入响应包返回主机 A。
 
 ![image-20220509155721862](https://tva1.sinaimg.cn/large/e6c9d24ely1h227jm6h9oj21rg0qsjvp.jpg)
+
+<div align = "center">图 7-5</div>
 
 由此，可以通过 ARP 从 IP 地址获取 MAC 地址，实现同一链路内的通信。
 
@@ -71,9 +95,13 @@ ARP 协议的全称是 `Address Resolution Protocol(地址解析协议)`，它�
 
 ![image-20220509155749741](https://tva1.sinaimg.cn/large/e6c9d24ely1h227k3i9fej21rc0s043r.jpg)
 
+<div align = "center">图 7-6</div>
+
 一般来说，发送过一次 ARP 请求后，再次发送相同请求的几率比较大，因此使用 ARP 缓存能够减少 ARP 包的发送，除此之外，不仅仅 ARP 请求的发送方能够缓存 ARP 接收方的 MAC 地址，接收方也能够缓存 ARP 请求方的 IP 和 MAC 地址，如下所示
 
 ![image-20220509155806642](https://tva1.sinaimg.cn/large/e6c9d24ely1h227ke8srdj21qh0u0q84.jpg)
+
+<div align = "center">图 7-7</div>
 
 不过，**MAC 地址的缓存有一定期限，超过这个期限后，缓存的内容会被清除**。
 
@@ -82,6 +110,8 @@ ARP 协议的全称是 `Address Resolution Protocol(地址解析协议)`，它�
 在 Linux 中使用 arp 查询缓存
 
 ![image-20220509155829967](https://tva1.sinaimg.cn/large/e6c9d24ely1h227ksmu8dj20ze05mt9o.jpg)
+
+<div align = "center">图 7-8</div>
 
 主要包含五项
 
@@ -97,6 +127,8 @@ ARP 协议的全称是 `Address Resolution Protocol(地址解析协议)`，它�
 
 ![image-20220509155902458](https://tva1.sinaimg.cn/large/e6c9d24ely1h227lcwvplj20u00vb0wv.jpg)
 
+<div align = "center">图 7-9</div>
+
 Windows 中的 ARP 程序显示了 IPv4 的地址，它的接口是十六进制数，Windows 版本还指出地址是手动输入还是 ARP 动态学习的。在上面的例子中，既有静态的也有动态的。48 位的 MAC 地址被显示为 6 个十六进制数，在 Linux 中使用 `:` 号，在 Windows 中使用 `-` 进行分隔。
 
 ## ARP 结构
@@ -104,6 +136,8 @@ Windows 中的 ARP 程序显示了 IPv4 的地址，它的接口是十六进制�
 我们上面说到，ARP 对想要知道 MAC 地址的目标主机会首先发送 ARP 请求，那么这个请求中都携带哪些信息呢？下面 cxuan 就来和你聊一下。下面是在以太网中转换一个 IPv4 的地址常用的 ARP 请求或响应的报文格式。
 
 ![image-20220509155931133](https://tva1.sinaimg.cn/large/e6c9d24ely1h227lv7lr0j21wk0oa79j.jpg)
+
+<div align = "center">图 7-10</div>
 
 前面 14 个字节构成标准以太网的首部，前两个字段 DST 和 SRC 分别表示 `以太网的目的地址` 和 `以太网的源地址`，以太网的目的地址如果是 `ff:ff:ff:ff:ff:ff` 全部为 1 表示广播地址，在同一广播域中的所有以太网接口可以接收这些帧。后面紧跟着的是 ARP 请求的长度/类型，ARP 请求 和 ARP 应答这个值为 `0x0806`。
 
@@ -123,9 +157,13 @@ Windows 中的 ARP 程序显示了 IPv4 的地址，它的接口是十六进制�
 
 ![image-20220509155947764](https://tva1.sinaimg.cn/large/e6c9d24ely1h227m4o5awj218e0hkdhf.jpg)
 
+<div align = "center">图 7-11</div>
+
 下载完成后阅读安装说明的手册，阅读后会发现需要安装两个插件，根据提示安装即可，然后我们打开 WireShark ，开始报文拦截，下面是我解惑的 ARP 数据包
 
 ![image-20220509155956676](https://tva1.sinaimg.cn/large/e6c9d24ely1h227mab8phj218e06amzt.jpg)
+
+<div align = "center">图 7-12</div>
 
 这款软件很好的一个地方是对不同的数据包会有不同的颜色标识，这点非常好。
 
@@ -133,11 +171,15 @@ Windows 中的 ARP 程序显示了 IPv4 的地址，它的接口是十六进制�
 
 ![image-20220509160008630](https://tva1.sinaimg.cn/large/e6c9d24ely1h227mhsid9j218s0ky0yw.jpg)
 
+<div align = "center">图 7-13</div>
+
 可以看到，这就是一个完整的 ARP 请求包，我们使用的硬件类型是以太网，协议类型是 IPv4 ，默认值是 0x0800，然后硬件大小是 6 个字节，协议大小占用 2 个字节，Op 的全称是 Opcode ，Op = 1 表示这是一个 ARP 请求，然后是发送方的硬件地址和协议地址，接收方的硬件地址和协议地址。
 
 ARP 响应如下
 
 ![image-20220509160021140](https://tva1.sinaimg.cn/large/e6c9d24ely1h227mpqvdlj218w0iwgr0.jpg)
+
+<div align = "center">图 7-14</div>
 
 可以看到 Op = 2，表示这是 ARP 响应。
 
@@ -146,6 +188,8 @@ ARP 响应如下
 使用 `tcpdump -i ens33` 可以打印出在 ens33 地址下的数据包，下面是我截取的 ARP 数据包。
 
 ![image-20220509160031899](https://tva1.sinaimg.cn/large/e6c9d24ely1h227mwb6x9j218e08egqn.jpg)
+
+<div align = "center">图 7-15</div>
 
 更多关于 tcpdump 的用法，你可以参考这篇博客
 
@@ -163,15 +207,21 @@ https://www.cnblogs.com/ggjucheng/archive/2012/01/14/2322659.html
 
 ![image-20220509160105593](https://tva1.sinaimg.cn/large/e6c9d24ely1h227nhltdij21k40awgmu.jpg)
 
+<div align = "center">图 7-16</div>
+
 平常我们设置 IP 地址一般会有两种方式，`手动设置` 和 `DHCP 动态获取`
 
 ![image-20220509160115514](https://tva1.sinaimg.cn/large/e6c9d24ely1h227nnmhvvj21760m60x4.jpg)
+
+<div align = "center">图 7-17</div>
 
 但是对于嵌入式设备来说，它没有任何输入接口，也无法通过 DHCP 获取动态地址。
 
 在这种情况下，就要使用到 RARP 了，你需要准备一个 RARP 服务器，在这个服务器上注册设备的 MAC 地址和 IP 地址，然后将设备接入网络，设备会发出一条 IP 和 MAC 地址的查询请求给服务器，服务器会告诉设备其 IP 地址和 MAC 地址。
 
 ![image-20220509160131417](https://tva1.sinaimg.cn/large/e6c9d24ely1h227ny0xf3j21fa0gygn9.jpg)
+
+<div align = "center">图 7-18</div>
 
 ## ARP 攻击
 

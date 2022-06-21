@@ -32,11 +32,23 @@
       * [隧道技术](#隧道技术)
    * [总结](#总结)
 
+> 这是计算机网络连载系列的第五篇文章，前四篇文章见
+>
+> [计算机网络基础知识总结](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247486242&idx=1&sn=fac49b0b79515a5ed6afd4b341aff87b&chksm=e999fe30deee772637e1c52fb9001c60e60a772e7adba6701329c81974e76c57bb7b2e570225&token=850264305&lang=zh_CN#rd)
+>
+> [TCP/IP 基础知识总结](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247486408&idx=1&sn=c332ae7ae448f3eb98865003ecade589&chksm=e999fedadeee77cc6281d1b170bd906b58220d6cd83054bc741821f4167f1f18ceee9ba0e449&token=850264305&lang=zh_CN#rd)
+>
+> [计算机网络应用层](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247486507&idx=1&sn=622cc363b34bce54f4953076faa1cad6&chksm=e999f939deee702f2444df83ad9805de8c70fb88b89d299fdf0a82b3463e253f32372963c039&token=1398464113&lang=zh_CN#rd)
+>
+> [计算机网络传输层](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247487108&idx=1&sn=7b47f421bb1dee4edb357a10399b7fec&chksm=e999fb96deee7280a17bfff44c27ef11a60e93e48f9da738670a779ecf6accb5a6a4ebd3cbcc&token=1398464113&lang=zh_CN#rd)
+
 前面我们学习了运输层如何为客户端和服务器输送数据的，提供进程端到端的通信。那么下面我们将学习网络层实际上是怎样实现主机到主机的通信服务的。**几乎每个端系统都有网络层这一部分**。所以，网络层必然是很重要的。下面我将花费大量篇幅来介绍一下计算机网络层的知识。
 
 ## 网络层概述
 
 网络层是 OSI 参考模型的第三层，它位于传输层和链路层之间，网络层的主要目的是实现两个端系统之间透明的数据传输。
+
+<div align = "center">图 5-1</div>
 
 网络层的作用从表面看上去非常简单，即将分组从一台主机移动到另外一台主机。为了实现这个功能，网络层需要两种功能
 
@@ -57,7 +69,7 @@
 
 ![image-20220407093937486](https://tva1.sinaimg.cn/large/e6c9d24ely1h10wsr360dj216y0gmdi2.jpg)
 
-​																			图 5-2
+<div align = "center">图 5-2</div>
 
 上图中有一个 1001 分组到达路由器后，首先会在转发表中进行索引，然后由路由选择算法决定分组要走的路径。每台路由器都有两种功能：**转发和路由选择**。下面我们就来聊一聊路由器的工作原理。
 
@@ -67,7 +79,7 @@
 
 ![image-20220407094041412](https://tva1.sinaimg.cn/large/e6c9d24ely1h10wtvf0zaj21ec0u0wj3.jpg)
 
-​																		图 5-3
+<div align = "center">图 5-3</div>
 
 * `输入端口`：它有很多功能。输入端口查找/转发功能对路由器的交换功能来说至关重要，由路由器的交换结构来决定输出端口，具体来讲应该是查询转发表来确定的。
 * `交换结构`：就是将路由器的输入端口连接到它的输出端口。这种交换结构组成了是路由器内部的网络。
@@ -82,7 +94,7 @@
 
 ![image-20220407095005687](https://tva1.sinaimg.cn/large/e6c9d24ely1h10x3nkxoaj217c0ak75c.jpg)
 
-​																		图 5-4
+<div align = "center">图 5-4</div>
 
 每个输入端口中都有一个路由处理器维护的**路由表的副本**，根据路由处理器进行更新。这个路由表的副本能够使每个输入端口进行切换，而无需经过路由处理器统一处理。这是一种分散式的切换，这种方式避免了路由选择器统一处理造成转发瓶颈。
 
@@ -98,7 +110,7 @@
 
 <img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h10x9bmykvj213c0sk41u.jpg" alt="image-20220407095532499" style="zoom:50%;" />
 
-​																		图 5-5
+<div align = "center">图 5-5</div>
 
 可以看到，对于这个例子来说，路由器转发表中不需要那么多条链路，只需要四条就够，即对应输出链路 0 1 2 3 。也就是说，能够使用 4 个转发表就可以实现亿级链路。
 
@@ -108,7 +120,7 @@
 
 ![image-20220407095643756](https://tva1.sinaimg.cn/large/e6c9d24ely1h10xak9jwdj21300gujt2.jpg)
 
-​																		图 5-6
+<div align = "center">图 5-6</div>
 
 如果存在一个匹配项，那么就会转发到对应的链路上，可能不好理解，我举个例子来说吧。
 
@@ -128,19 +140,19 @@
 
 ![image-20220407095821396](https://tva1.sinaimg.cn/large/e6c9d24ely1h10xc8wj0tj219s0homzb.jpg)
 
-​																				图 5-7
+<div align = "center">图 5-7</div>
 
 * 经过总线交换：在这种处理方式中，总线经由输入端口直接将分组传送到输出端口，中间不需要路由选择器的干预。总线的工作流程如下：输入端口给分组分配一个标签，然后分组经由总线发送给所有的输出端口，每个输出端口都会判断标签中的端口和自己的是否匹配，如果匹配的话，那么这个输出端口就会把标签拆掉，这个标签只用于交换机内部跨越总线。如果同时有多个分组到达路由器的话，那么只有一个分组能够被处理，其他分组需要再进入交换结构前等待。
 
 ![image-20220407104515107](https://tva1.sinaimg.cn/large/e6c9d24ely1h10yp1pm94j219i0i2jte.jpg)
 
-​																				图 5-8
+<div align = "center">图 5-8</div>
 
 * 经过互联网络交换：克服单一、共享式总线带宽限制的一种方法是使用一个更复杂的互联网络。如下图所示
 
 <img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h10ypriz0dj212v0u00uz.jpg" alt="image-20220407104556938" style="zoom:50%;" />
 
-​																		图 5-9
+<div align = "center">图 5-9</div>
 
 每条垂直的的总线在交叉点与每条水平的总线交叉，交叉点通过交换结构控制器能够在任何时候开启和闭合。当分组到达输入端口 A 时，如果需要转发到端口 X，交换机控制器会闭合 A 到 X 交叉部分的交叉点，然后端口 A 在总线上进行分组转发。这种网络互联式的交换结构是*非阻塞的(non-blocking)*的，也就是说 A -> X 的交叉点闭合不会影响 B -> Y 的链路。如果来自两个不同输入端口的两个分组其目的地为相同的输出端口的话，这种情况下只能有一个分组被交换，另外一个分组必须进行等待。
 
@@ -150,7 +162,7 @@
 
 ![image-20220407105614802](https://tva1.sinaimg.cn/large/e6c9d24ely1h10z0hbjuwj216q0dmdgx.jpg)
 
-​																		图 5-10
+<div align = "center">图 5-10</div>
 
 在输入端口中有等待进入交换的排队队列，而在输出端口中有等待转发的排队队列，排队的位置和程度取决于**流量负载、交换结构**的相对频率和线路速率。
 
@@ -175,7 +187,7 @@
 
 ![image-20220407105642368](https://tva1.sinaimg.cn/large/e6c9d24ely1h10z0yv68gj21ag0hetaw.jpg)
 
-​																		图 5-11
+<div align = "center">图 5-11</div>
 
 在 A 队列中，输入队列中的两个分组会发送至同一个目的地 X，假设在交换结构正要发送 A 中的分组，在这个时候，C 队列中也有一个分组发送至 X，在这种情况下，C 中发送至 X 的分组将会等待，不仅如此，C 队列中发送至 Y 输出端口的分组也会等待，即使 Y 中没有出现竞争的情况。这种现象叫做*线路前部阻塞(Head-Of-The-Line, HOL)*。
 
@@ -191,13 +203,13 @@
 
 ![image-20220407110656535](https://tva1.sinaimg.cn/large/e6c9d24ely1h10zbm489nj217y0g4tag.jpg)
 
-​																			图 5-12
+<div align = "center">图 5-12</div>
 
 如上图所示，A B C 每个输入端口都到达了一个分组，而且这个分组都是发往 X 的，同一时间只能处理一个分组，然后这时，又有两个分组分别由 A B 发往 X，所以此时有 4 个分组在 X 中进行等待。
 
 ![image-20220407110721674](https://tva1.sinaimg.cn/large/e6c9d24ely1h10zc1mnumj218k0gk762.jpg)
 
-​																			图 5-13
+<div align = "center">图 5-13</div>
 
 等上一个分组被转发完成后，输出端口就会选择在剩下的分组中根据*分组调度(packet scheduleer)*选择一个分组来进行传输，我们下面就会聊到分组传输。
 
@@ -211,7 +223,7 @@
 
 ![image-20220407110819936](https://tva1.sinaimg.cn/large/e6c9d24ely1h10zd20vo6j20zs0d6t9g.jpg)
 
-​																			图 5-14
+<div align = "center">图 5-14</div>
 
 FIFO 调度规则按照分组到达输出链路队列的相同次序来选择分组，先到达队列的分组将先会被转发。在这种抽象模型中，如果队列已满，那么弃尾的分组将是队列末尾的后面一个。
 
@@ -221,7 +233,7 @@ FIFO 调度规则按照分组到达输出链路队列的相同次序来选择分
 
 ![image-20220407110857860](https://tva1.sinaimg.cn/large/e6c9d24ely1h10zdpzaeyj21800c675g.jpg)
 
-​																		图 5-15
+<div align = "center">图 5-15</div>
 
 通常情况下，每个优先级不同的分组有自己的优先级类，每个优先级类有自己的队列，分组传输会首先从优先级高的队列中进行，在同一类优先级的分组之间的选择通常是以 FIFO 的方式完成。
 
@@ -231,7 +243,7 @@ FIFO 调度规则按照分组到达输出链路队列的相同次序来选择分
 
 ![image-20220407110920596](https://tva1.sinaimg.cn/large/e6c9d24ely1h10ze3xz0bj217y0g0gmx.jpg)
 
-​																	图 5-16
+<div align = "center">图 5-16</div>
 
 在循环加权公平排队中，类 1 的分组被传输，接着是类 2 的分组，最后是类 3 的分组，这算是一个循环，然后接下来又重新开始，又从 1 -> 2 -> 3 这个顺序进行轮询。每个队列也是一个先入先出的队列。
 
@@ -249,7 +261,7 @@ IP 主要分为三个部分，分别是 **IP 寻址、路由和分包组包**。
 
 ![image-20220407110946363](https://tva1.sinaimg.cn/large/e6c9d24ely1h10zejyc9fj215e0jiabr.jpg)
 
-​																			图 5-17
+<div align = "center">图 5-17</div>
 
 在 IP 数据报发送的链路中，有可能链路非常长，比如说由中国发往美国的一个数据报，由于网络抖动等一些意外因素可能会导致数据报丢失，这时我们在这条链路中会放入一些中转站，一方面能够判断数据报是否丢失，另一方面能够控制数据报的转发，这个中转站就是我们前面聊过的路由器，这个转发过程就是路由控制。
 
@@ -273,6 +285,8 @@ IPv4 由 32 位正整数来表示，在计算机内部会转化为二进制来�
 
 ![image-20220509160904561](https://tva1.sinaimg.cn/large/e6c9d24ely1h227vsuik4j21mg0famzg.jpg)
 
+<div align = "center">图 5-18</div>
+
 那么上面这个 32 位的 IP 地址就会被转换为十进制的 156.197.1.1。
 
 除此之外，从图中我们还可以得到如下信息
@@ -284,6 +298,8 @@ IP 地址的总个数有 2^32 次幂个，这个数值算下来是 `4294967296` 
 实际上 IP 不会以主机的个数来配置的，而是根据设备上的 `网卡(NIC)` 进行配置，每一块网卡都会设置一个或者多个 IP 地址，而且通常一台路由器会有至少两块网卡，所以可以设置两个以上的 IP 地址，所以主机的数量远远达不到 43 亿。
 
 ![image-20220509160917044](https://tva1.sinaimg.cn/large/e6c9d24ely1h227w0gq7wj21g20nydiz.jpg)
+
+<div align = "center">图 5-19</div>
 
 #### IP 地址构造和分类
 
@@ -307,9 +323,13 @@ IP 地址分为四类，分别是 **A类、B类、C类、D类、E类**，它会�
 
 ![image-20220509160950904](https://tva1.sinaimg.cn/large/e6c9d24ely1h227wlokyxj21850u00wu.jpg)
 
+<div align = "center">图 5-20</div>
+
 根据不同的 IP 范围，有下面不同的地总空间分类
 
 <img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h227wugi3aj20lm0aut9q.jpg" alt="image-20220509161005721" style="zoom:50%;" />
+
+<div align = "center">表 5-1</div>
 
 #### 子网掩码
 
@@ -319,9 +339,13 @@ IP 地址分为四类，分别是 **A类、B类、C类、D类、E类**，它会�
 
 ![image-20220509161032674](https://tva1.sinaimg.cn/large/e6c9d24ely1h227xbt5xgj21nc0hsdiy.jpg)
 
+<div align = "center">图 5-21</div>
+
 用 `1` 表示 IP 网络地址的比特范围，`0` 表示 IP 主机地址的范围。将他们用十进制表示，那么这三类的表示如下
 
 ![image-20220509161100650](https://tva1.sinaimg.cn/large/e6c9d24ely1h227xtco7ij21l20hijsu.jpg)
+
+<div align = "center">图 5-22</div>
 
 #### 保留地址
 
@@ -336,6 +360,8 @@ IP 地址分为四类，分别是 **A类、B类、C类、D类、E类**，它会�
 | 192.168.0.0/16 | 192.168.0.0–192.168.255.255 | 65 536      | 用于专用网络内的本地通信 |
 | 224.0.0.0/4    | 224.0.0.0–239.255.255.255   | 268 435 456 | 用于 IP 多播             |
 | 192.0.0.0/24   | 192.0.0.0–192.0.0.255       | 256         | IETF协议分配             |
+
+<div align = "center">表 5-2</div>
 
 ### IP 协议版本
 
@@ -355,6 +381,8 @@ IPv4 的数据报格式如下
 
 ![image-20220509161137438](https://tva1.sinaimg.cn/large/e6c9d24ely1h227yge0ibj21rs0pqwkt.jpg)
 
+<div align = "center">图 5-23</div>
+
 IPv4 数据报中的关键字及其解释
 
 * `版本字段(Version)`占用 4 bit，通信双方使用的版本必须一致，对于 IPv4 版本来说，字段值是 4。
@@ -362,6 +390,8 @@ IPv4 数据报中的关键字及其解释
 * `服务类型(Differential Services Codepoint，DSCP)` 占用 6 bit，以便使用不同的 IP 数据报，比如一些低时延、高吞吐量和可靠性的数据报。服务类型如下表所示
 
 <img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h227yx59skj20na0ikgn0.jpg" alt="image-20220509161204808" style="zoom:50%;" />
+
+<div align = "center">图 5-24</div>
 
 * `拥塞通告(Explicit Congestion Notification，ECN)` 占用 2 bit，它允许在不丢弃报文的同时通知对方网络拥塞的发生。ECN 是一种可选的功能，仅当两端都支持并希望使用，且底层网络支持时才被使用。		最开始 DSCP 和 ECN 统称为 TOS，也就是区分服务，但是后来被细化为了 DSCP 和 ECN。
 
@@ -397,11 +427,15 @@ IPv4 数据报中的关键字及其解释
 
 ![image-20220509161225517](https://tva1.sinaimg.cn/large/e6c9d24ely1h227zaymfsj21620kegou.jpg)
 
+<div align = "center">图 5-25</div>
+
 #### IPv4 分片
 
 一个链路层帧能承载的最大数据量叫做`最大传输单元(Maximum Transmission Unit, MTU)`，每个 IP 数据报封装在链路层帧中从一台路由器传到下一台路由器。因为每个链路层所支持的最大 MTU 不一样，当数据报的大小超过 MTU 后，会在链路层进行分片，每个数据报会在链路层单独封装，每个较小的片都被称为 `片(fragement)`。
 
 ![image-20220509161248131](https://tva1.sinaimg.cn/large/e6c9d24ely1h227zon678j214h0u0q6b.jpg)
+
+<div align = "center">图 5-26</div>
 
 每个片在到达目的地后会进行重组，准确的来说是在运输层之前会进行重组，TCP 和 UDP 都会希望发送完整的、未分片的报文，出于性能的原因，分片重组不会在路由器中进行，而是会在目标主机中进行重组。
 
@@ -418,6 +452,8 @@ IPv4 数据报中的关键字及其解释
 我们先来看一下 IPv6 的地址是怎样的
 
 ![image-20220509161332841](https://tva1.sinaimg.cn/large/e6c9d24ely1h2280gjw91j21gt0u00x1.jpg)
+
+<div align = "center">图 5-27</div>
 
 * `版本`与 IPv4 一样，版本号由 4 bit 构成，IPv6 版本号的值为 6。
 * `流量类型(Traffic Class)` 占用 8 bit，它就相当于 IPv4 中的服务类型(Type Of Service)。
@@ -444,9 +480,13 @@ IPv6 首部中没有标识和标志字段，**对 IP 进行分片时，需要使
 
 ![image-20220509161355212](https://tva1.sinaimg.cn/large/e6c9d24ely1h2280u0qn5j21960kignp.jpg)
 
+<div align = "center">图 5-28</div>
+
 具体的扩展首部表如下所示
 
 <img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h2280zftgoj216k0kw41n.jpg" alt="image-20220509161403879" style="zoom:50%;" />
+
+<div align = "center">图 5-29</div>
 
 下面我们来看一下 IPv6 都有哪些特点
 
@@ -474,13 +514,19 @@ IPv6 的特点在 IPv4 中得以实现，但是即便实现了 IPv4 的操作系
 
 ![image-20220509161427778](https://tva1.sinaimg.cn/large/e6c9d24ely1h2281enw4fj21r20dudj4.jpg)
 
+<div align = "center">图 5-30</div>
+
 * 用十六进制数表示
 
 ![image-20220509161438722](https://tva1.sinaimg.cn/large/e6c9d24ely1h2281lcs09j21ia08c3zj.jpg)
 
+<div align = "center">图 5-31</div>
+
 * 出现两个冒号的情况
 
 ![image-20220509161448994](https://tva1.sinaimg.cn/large/e6c9d24ely1h2281rgseyj21ns0fydha.jpg)
+
+<div align = "center">图 5-32</div>
 
 如上图所示，A120 和 4CD 中间的 0 被 :: 所取代了。
 
@@ -508,9 +554,13 @@ IPv6 的特点在 IPv4 中得以实现，但是即便实现了 IPv4 的操作系
 
 ![image-20220509161519297](https://tva1.sinaimg.cn/large/e6c9d24ely1h2282axfxyj21v40bi40d.jpg)
 
+<div align = "center">图 5-33</div>
+
 借助于隧道，在隧道发送端的 IPv6 节点可将整个 IPv6 数据报放到一个 IPv4 数据报的`数据(有效载荷)` 字段中，于是，IPv4 数据报的地址被设置为指向隧道接收端的 IPv6 的节点，比如上面的 E 节点。然后再发送给隧道中的第一个节点 C，如下所示
 
 ![image-20220509161552228](https://tva1.sinaimg.cn/large/e6c9d24ely1h2282v8s1ij21w40r87ah.jpg)
+
+<div align = "center">图 5-34</div>
 
 隧道中间的 IPv4 提供路由，路由器不知道这个 IPv4 内部包含一个指向 IPv6 的地址。隧道接收端的 IPv6 节点收到 IPv4 数据报，会确定这个 IPv4 数据报含有一个 IPv6 数据报，通过观察数据报长度和数据得知。然后取出 IPv6 数据报，再为 IPv6 提供路由，就好像两个节点直接相连传输数据报一样。
 

@@ -1,4 +1,4 @@
-# 计算机网络运输层
+# 计算机网络传输层
 
 * [计算机网络运输层](#计算机网络运输层)
    * [运输层概述](#运输层概述)
@@ -35,7 +35,17 @@
          * [拥塞避免](#拥塞避免)
          * [快速恢复](#快速恢复)
 
-`运输层`位于应用层和网络层之间，是 OSI 分层体系中的第四层，同时也是网络体系结构的重要部分。运输层主要负责网络上的端到端通信。
+> 这是计算机网络连载系列的第四篇文章，前三篇文章见
+>
+> [计算机网络基础知识总结](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247486242&idx=1&sn=fac49b0b79515a5ed6afd4b341aff87b&chksm=e999fe30deee772637e1c52fb9001c60e60a772e7adba6701329c81974e76c57bb7b2e570225&token=850264305&lang=zh_CN#rd)
+>
+> [TCP/IP 基础知识总结](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247486408&idx=1&sn=c332ae7ae448f3eb98865003ecade589&chksm=e999fedadeee77cc6281d1b170bd906b58220d6cd83054bc741821f4167f1f18ceee9ba0e449&token=850264305&lang=zh_CN#rd)
+>
+> [计算机网络应用层](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247486507&idx=1&sn=622cc363b34bce54f4953076faa1cad6&chksm=e999f939deee702f2444df83ad9805de8c70fb88b89d299fdf0a82b3463e253f32372963c039&token=1398464113&lang=zh_CN#rd)
+
+今天我们主要来聊一下计算机网络传输层的相关知识。
+
+传输层位于应用层和网络层之间，是 OSI 分层体系中的第四层，同时也是网络体系结构的重要部分。运输层主要负责网络上的端到端通信。
 
 <img src="https://s3.ax1x.com/2020/11/26/DwCCes.png" style="zoom:50%;" />
 

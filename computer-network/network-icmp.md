@@ -19,6 +19,24 @@
       * [ICMPv6 的组播收听发现协议](#icmpv6-的组播收听发现协议)
    * [与 ICMP 有关的攻击](#与-icmp-有关的攻击)
 
+> 这是计算机网络连载系列的第九篇文章，前八篇文章见
+>
+> [计算机网络基础知识总结](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247486242&idx=1&sn=fac49b0b79515a5ed6afd4b341aff87b&chksm=e999fe30deee772637e1c52fb9001c60e60a772e7adba6701329c81974e76c57bb7b2e570225&token=850264305&lang=zh_CN#rd)
+>
+> [TCP/IP 基础知识总结](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247486408&idx=1&sn=c332ae7ae448f3eb98865003ecade589&chksm=e999fedadeee77cc6281d1b170bd906b58220d6cd83054bc741821f4167f1f18ceee9ba0e449&token=850264305&lang=zh_CN#rd)
+>
+> [计算机网络应用层](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247486507&idx=1&sn=622cc363b34bce54f4953076faa1cad6&chksm=e999f939deee702f2444df83ad9805de8c70fb88b89d299fdf0a82b3463e253f32372963c039&token=1398464113&lang=zh_CN#rd)
+>
+> [计算机网络传输层](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247487108&idx=1&sn=7b47f421bb1dee4edb357a10399b7fec&chksm=e999fb96deee7280a17bfff44c27ef11a60e93e48f9da738670a779ecf6accb5a6a4ebd3cbcc&token=1398464113&lang=zh_CN#rd)
+>
+> [计算机网络网络层](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247487683&idx=1&sn=e0949e72e039759545450852d8bc0ada&chksm=e999e5d1deee6cc7ab9e42b50329924fee39c45955516b406046605d27928825a0f628d13e7c&token=1398464113&lang=zh_CN#rd)
+>
+> [计算机网络链路层](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247488884&idx=1&sn=0fdb91b7f5081d2e24c82d891fcc6126&chksm=e999e066deee69704d162b97be2ff0d33225fa9a3d12e4d3bec90a34996e7db7134535f36e8e&token=1398464113&lang=zh_CN#rd)
+>
+> [计算机网络 ARP 协议](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247487804&idx=1&sn=f001a24a308053b3723dfb12d36045ee&chksm=e999e42edeee6d383fbb411792e22e4028bb8c2441255786f50cf848443af7b1bd5e382078dc&token=1398464113&lang=zh_CN#rd)
+>
+> [计算机网络 DNS 协议](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247487880&idx=1&sn=fd38ce30ae82fa7d08e5f83fabb9d497&chksm=e999e49adeee6d8c1adacbfe27dc59097e4cb9d39c6a04802b0fe61877653330e75721cbde0b&token=1398464113&lang=zh_CN#rd)
+
 我们之前的文章中了解过 TCP/IP 协议，我那时候码了一句
 
 ![image-20220427085343138](https://tva1.sinaimg.cn/large/e6c9d24ely1h1nzv65vpqj22da09277a.jpg)
@@ -27,7 +45,7 @@
 
 [TCP/IP 基础知识总结](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247486408&idx=1&sn=c332ae7ae448f3eb98865003ecade589&chksm=e999fedadeee77cc6281d1b170bd906b58220d6cd83054bc741821f4167f1f18ceee9ba0e449&token=2029952495&lang=zh_CN#rd)
 
-下面我们就来真正认识一下 ICMP 协议
+下面我们就来真正认识一下 ICMP 协议。
 
 ## 什么是 ICMP
 
@@ -44,15 +62,21 @@ ICMP 协议和 TCP、UDP 等协议不同，它不用于传输数据，只是用�
 
 ![image-20220427100735542](https://tva1.sinaimg.cn/large/e6c9d24ely1h1o2018oudj20p80700uk.jpg)
 
+<div align = "center">图 9-1</div>
+
 现在我们知道了，如果在 IP 通信过程中由于某个 IP 包由于某种原因未能到达目标主机，那么这个具体的原因将由 ICMP 进行通知，下面是一个 ICMP 的通知示意图：
 
 ![image-20220427085402123](https://tva1.sinaimg.cn/large/e6c9d24ely1h1nzvi1hajj21e90u0wi3.jpg)
+
+<div align = "center">图 9-2</div>
 
 这张图显示了这样的一个过程：主机 A 想要给主机 B 发送一个 IP 数据包，主机 A 发送的数据包经过路由器 1 到达了路由器 2 ，由于路由器 2 不知道主机 B 的 MAC 地址，所以路由器 2 发送了一个 ARP 请求，没有回应，再经过重试时间后再次发送，还没有回应。。。。。。经过多次 ARP 请求后没有得到回应后，路由器 2 就会给主机 A 发送一个 ICMP 消息，告诉其发送的 IP 数据包没有到达主机 B 。
 
 我们只是画出了路由器 2 给主机 A 发送了一个 ICMP 数据包，而没有画出具体的通知类型，但实际情况是，上面发送的是*目标不可达类型(Destination unreachable)*，ICMP 的通知类型也有很多，下面我为你汇总了 ICMP 数据包的具体通知类型。
 
 ![image-20220427085438631](https://tva1.sinaimg.cn/large/e6c9d24ely1h1nzw4wsl8j21kx0u042s.jpg)
+
+<div align = "center">表 9-1</div>
 
 上表显示的 ICMP 通知类型主要分为两类：有关 IP 数据报传递的 ICMP 报文，这类报文也叫做*差错报文(error message)*，以及有关信息采集和配置的 ICMP 报文，这类报文也被称为查询报文、信息类报文。
 
@@ -66,15 +90,21 @@ ICMP 在 IPv4 协议中的封装：
 
 ![image-20220427085704470](https://tva1.sinaimg.cn/large/e6c9d24ely1h1nzynm0qdj22b40hodhs.jpg)
 
+<div align = "center">图 9-3</div>
+
 ICMP 在 IPv6 协议中的封装：
 
 ![image-20220427085735883](https://tva1.sinaimg.cn/large/e6c9d24ely1h1nzz9wgo0j22ec0h0q5k.jpg)
+
+<div align = "center">图 9-4</div>
 
 上面两张图显示了 ICMPv4 和 ICMPv6 的报文格式。开头的 4 个字节在所有的报文中都是一样的。但是其余部分在不同的报文中却不一样。
 
 ICMP 头部包含了整个 ICMP 数据段的校验和，具体格式如下：
 
 ![image-20220427085819658](https://tva1.sinaimg.cn/large/e6c9d24ely1h1nzzywhm8j22440pewhx.jpg)
+
+<div align = "center">图 9-5</div>
 
 所有的 ICMP 报文都以 8 位的*类型(Type)*和*代码(Code)*字段开始，其后的 16 位校验和涵盖了整个报文，ICMPv4 和 ICMPv6 种的类型和代码字段是不同的。
 
@@ -86,15 +116,21 @@ ICMP 头部包含了整个 ICMP 数据段的校验和，具体格式如下：
 
 ![image-20220427090026179](https://tva1.sinaimg.cn/large/e6c9d24ely1h1o026ga7zj22gg0s6gw4.jpg)
 
+<div align = "center">图 9-6</div>
+
 实际通信过程中会显示各种各样的不可达信息，比如错误代码时 1 表示主机不可达，它指的是路由表中没有主机的信息，或者主机没有连接到网络的意思。一些 ICMP 不可达信息的具体原因如下
 
 ![image-20220427090049836](https://tva1.sinaimg.cn/large/e6c9d24ely1h1o02kqz44j21960u043s.jpg)
+
+<div align = "center">表 9-2</div>
 
 ### ICMP 重定向消息(类型 5)
 
 如果路由器发现发送端主机使用了次优的路径发送数据，那么它会返回一个 *ICMP 重定向(ICMP Redirect Message)* 的消息给这个主机。这个 ICMP 重定向消息包含了最合适的**路由信息和源数据**。这种情况会发生在路由器持有更好的路由信息的情况下。路由器会通过这样的 ICMP 消息给发送端主机一个更合适的发送路由。
 
 ![image-20220427090252943](https://tva1.sinaimg.cn/large/e6c9d24ely1h1o04pi7zhj222g0u0wiv.jpg)
+
+<div align = "center">图 9-7</div>
 
 主机 Host 的 IP 地址为 10.0.0.100。主机的路由表中有一个默认路由条目，指向路由器 G1 的 IP 地址 10.0.0.1 作为默认网关。路由器 G1 在将数据包转发到目的网络 X 时，会使用路由器 G2 的 IP 地址 10.0.0.2 作为下一跳。 
 
@@ -116,6 +152,8 @@ ICMP 头部包含了整个 ICMP 数据段的校验和，具体格式如下：
 
 ![image-20220427090318204](https://tva1.sinaimg.cn/large/e6c9d24ely1h1o055r8rtj22ec0q40wy.jpg)
 
+<div align = "center">图 9-8</div>
+
 在主机为 G2 作为下一跳的网络 X 创建路由缓存条目后，这些优势在网络中可见：
 
 - 交换机和路由器 G1 之间链路的带宽利用率在两个方向上都会降低。
@@ -126,6 +164,8 @@ ICMP 重定向示例如下：
 
 ![image-20220427090358911](https://tva1.sinaimg.cn/large/e6c9d24ely1h1o05v2czaj214k0u0grq.jpg)
 
+<div align = "center">图 9-9</div>
+
 ### ICMP 超时消息(类型 11)
 
 在 IP 数据包中有一个叫做 *TTL(Time To Live, 生存周期)* ，它的值在每经过路由器一跳之后都会减 1，IP 数据包减为 0 时会被丢弃。此时，IP 路由器会发送一个 ICMP 超时消息(ICMP TIme Exceeded Message, 错误号 0)发送给主机，通知该包已经被丢弃。
@@ -133,6 +173,8 @@ ICMP 重定向示例如下：
 设置生存周期的主要目的就是为了防止路由器控制遇到问题发生循环状况时，避免 IP 包无休止的在网络上转发，如下图所示：
 
 ![image-20220427090758378](https://tva1.sinaimg.cn/large/e6c9d24ely1h1o0a048yoj21in0u0gph.jpg)
+
+<div align = "center">图 9-10</div>
 
 > 这里给大家推荐一款比较好用的追踪超时消息的工具 `traceroute`，它可以显示出由执行程序的主机到达特定主机之前需要经过多少路由器。 traceroute 的官网如下 http://www.traceroute.org
 
@@ -142,6 +184,8 @@ ICMP 回送消息用于判断相互通信的主机之间是否连通，也就是
 
 ![image-20220427091635535](https://tva1.sinaimg.cn/large/e6c9d24ely1h1o0iz1r8vj21vu0u0td2.jpg)
 
+<div align = "center">图 9-11</div>
+
 ### 其他 ICMP 消息
 
 #### ICMP 源点抑制消息(类型 4)
@@ -150,6 +194,8 @@ ICMP 回送消息用于判断相互通信的主机之间是否连通，也就是
 
 ![image-20220427091658785](https://tva1.sinaimg.cn/large/e6c9d24ely1h1o0jdpl6sj21yd0u0gq6.jpg)
 
+<div align = "center">图 9-12</div>
+
 不过这个 ICMP 消息可能会引起不公平的网络通信，一般不被使用。
 
 #### ICMP 路由器探索消息(类型 9、10)
@@ -157,6 +203,8 @@ ICMP 回送消息用于判断相互通信的主机之间是否连通，也就是
 ICMP 路由器探索消息主要用于*路由器发现(Router Discovery, RD)*，它主要分为两种，*路由器请求(Router Solicitation, 类型 10)*和*路由器响应(Router Advertisement, 类型 9)*。主机会在任意路由连接组播的网络上发送一个 RS 消息，想要选择一个路由器进行学习，以此来作为默认路由，而相对应的该路由会发送一个 RA 消息来作为默认路由的响应。
 
 <img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h1o0jptjboj20u00y50uw.jpg" alt="image-20220427091718607" style="zoom:50%;" />
+
+<div align = "center">图 9-13</div>
 
 #### ICMP 地址掩码消息(类型 17、18)
 
@@ -178,6 +226,8 @@ ICMP 路由器探索消息主要用于*路由器发现(Router Discovery, RD)*，
 | 差错报告报文  | 11     | ICMP 超时        |
 | 差错报告报文  | 12     | 参数问题         |
 | 查询报文      | 0 或 8 | 回送请求或回答   |
+
+<div align = "center">表 9-3</div>
 
 这里需要解释一下这个参数问题，当路由器或者目标主机收到的数据包中的首部字段的值存在问题，就会丢弃数据报，同时发送 ICMP 响应消息。
 
@@ -202,6 +252,8 @@ RFC 2463 中描述了以下消息类型：
 
 ![image-20220427092600633](https://tva1.sinaimg.cn/large/e6c9d24ely1h1o0srrejvj20vf0u00wm.jpg)
 
+<div align = "center">表 9-4</div>
+
 ICMPv6 除了包含 ICMPv4 的所有功能外，还有两个额外的功能。
 
 ### ICMPv6 邻居探索
@@ -210,9 +262,13 @@ ICMPv6 除了包含 ICMPv4 的所有功能外，还有两个额外的功能。
 
 ![image-20220427094754006](https://tva1.sinaimg.cn/large/e6c9d24ely1h1o1fjt53gj21pw0u0dko.jpg)
 
+<div align = "center">图 9-14</div>
+
 此外，由于 IPv6 实现了即插即用的功能，所以在没有 DHCP 服务器的环境下也能实现 IP 地址的自动获取。如果是一个没有路由器的网络，就使用 MAC 地址作为链路本地单播地址。如果在一个有路由器的网络环境中，可以从路由器获得 IPv6 地址的前面部分，后面部分使用 MAC 地址进行设置。此时可以利用路由器请求消息和路由器公告消息进行设置。
 
 ![image-20220427094830245](https://tva1.sinaimg.cn/large/e6c9d24ely1h1o1g6hvxlj21v00u0gq0.jpg)
+
+<div align = "center">图 9-15</div>
 
 ### ICMPv6 的组播收听发现协议
 
@@ -235,7 +291,6 @@ ICMPv6 除了包含 ICMPv4 的所有功能外，还有两个额外的功能。
 ![image-20210717083948590](https://tva1.sinaimg.cn/large/008i3skNly1gsjnhb9f5xj319s0tsn4g.jpg)
 
 ![image-20210717084050334](https://tva1.sinaimg.cn/large/008i3skNly1gsjnidv1r3j315s0fs40g.jpg)
-
 
 
 

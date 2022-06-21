@@ -21,13 +21,29 @@
       * [DNS 防火墙](#dns-防火墙)
    * [总结](#总结)
 
+> 这是计算机网络连载系列的第八篇文章，前七篇文章见
+>
+> [计算机网络基础知识总结](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247486242&idx=1&sn=fac49b0b79515a5ed6afd4b341aff87b&chksm=e999fe30deee772637e1c52fb9001c60e60a772e7adba6701329c81974e76c57bb7b2e570225&token=850264305&lang=zh_CN#rd)
+>
+> [TCP/IP 基础知识总结](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247486408&idx=1&sn=c332ae7ae448f3eb98865003ecade589&chksm=e999fedadeee77cc6281d1b170bd906b58220d6cd83054bc741821f4167f1f18ceee9ba0e449&token=850264305&lang=zh_CN#rd)
+>
+> [计算机网络应用层](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247486507&idx=1&sn=622cc363b34bce54f4953076faa1cad6&chksm=e999f939deee702f2444df83ad9805de8c70fb88b89d299fdf0a82b3463e253f32372963c039&token=1398464113&lang=zh_CN#rd)
+>
+> [计算机网络传输层](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247487108&idx=1&sn=7b47f421bb1dee4edb357a10399b7fec&chksm=e999fb96deee7280a17bfff44c27ef11a60e93e48f9da738670a779ecf6accb5a6a4ebd3cbcc&token=1398464113&lang=zh_CN#rd)
+>
+> [计算机网络网络层](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247487683&idx=1&sn=e0949e72e039759545450852d8bc0ada&chksm=e999e5d1deee6cc7ab9e42b50329924fee39c45955516b406046605d27928825a0f628d13e7c&token=1398464113&lang=zh_CN#rd)
+>
+> [计算机网络链路层](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247488884&idx=1&sn=0fdb91b7f5081d2e24c82d891fcc6126&chksm=e999e066deee69704d162b97be2ff0d33225fa9a3d12e4d3bec90a34996e7db7134535f36e8e&token=1398464113&lang=zh_CN#rd)
+>
+> [计算机网络 ARP 协议](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247487804&idx=1&sn=f001a24a308053b3723dfb12d36045ee&chksm=e999e42edeee6d383fbb411792e22e4028bb8c2441255786f50cf848443af7b1bd5e382078dc&token=1398464113&lang=zh_CN#rd)
+
 试想一个问题，我们人类可以有多少种识别自己的方式？可以通过身份证来识别，可以通过社保卡号来识别，也可以通过驾驶证来识别，尽管有多种识别方式，但在特定的环境下，某种识别方法会比其他方法更为适合。因特网上的主机和人类一样，可以使用多种方式进行标识。互联网上主机的一种标识方法是使用它的主机名，比如 www.baidu.com、www.google.com 等。这是我们人类习惯的记忆方式，因特网中的主机却不会这么记忆，它们喜欢定长的、有层次结构的 IP 地址。
 
 那么路由器如何把 IP 地址解析为我们熟悉的网址呢？这时候就需要 DNS 出现了。
 
 ![image-20220522221654727](https://picturesforarticle.oss-cn-beijing.aliyuncs.com/img/image-20220522221654727.png)
 
-<div align = "center">图 7-1</div>
+<div align = "center">图 8-1</div>
 
 DNS 的全称是 *Domain Name Systems*，它是一个由分层的*DNS 服务器（DNS server）*实现的分布式数据库；它还是一个使得主机能够查询分布式数据库的应用层协议。DNS 协议运行在 UDP 协议上，使用 53 端口。
 
@@ -78,7 +94,7 @@ DNS 最早的设计是只有一台 DNS 服务器。这台服务器会包含所�
 
 ![image-20220522222621839](https://picturesforarticle.oss-cn-beijing.aliyuncs.com/img/image-20220522222621839.png)
 
-<div align = "center">图 7-2</div>
+<div align = "center">图 8-2</div>
 
 假设现在一个 DNS 客户端想要知道 www.amazon.com 的 IP 地址，那么上面的域名服务器是如何解析的呢？
 
@@ -122,7 +138,7 @@ DNS 最早的设计是只有一台 DNS 服务器。这台服务器会包含所�
 
 ![image-20220522222702760](https://picturesforarticle.oss-cn-beijing.aliyuncs.com/img/image-20220522222702760.png)
 
-<div align = "center">图 7-3</div>
+<div align = "center">图 8-3</div>
 
 ### DNS 解析器
 
@@ -130,7 +146,7 @@ DNS 最早的设计是只有一台 DNS 服务器。这台服务器会包含所�
 
 ![image-20220522222728653](https://picturesforarticle.oss-cn-beijing.aliyuncs.com/img/image-20220522222728653.png)
 
-<div align = "center">图 7-4</div>
+<div align = "center">图 8-4</div>
 
 DNS 递归查询和 DNS 递归解析器不同，该查询是指向需要解析该查询的 DNS 解析器发出请求。DNS 递归解析器是一种计算机，其接受递归查询并通过发出必要的请求来处理响应。
 
@@ -142,13 +158,13 @@ DNS 查找中会出现三种类型的查询。通过组合使用这些查询，*
 
    ![image-20220522222808624](https://picturesforarticle.oss-cn-beijing.aliyuncs.com/img/image-20220522222808624.png)
 
-   <div align = "center">图 7-5</div>
+   <div align = "center">图 8-5</div>
 
 2. `迭代查询`：在迭代查询中，如果所查询的 DNS 服务器与查询名称不匹配，则其将返回对较低级别域名空间具有权威性的 DNS 服务器的引用。然后，DNS 客户端将对引用地址进行查询。此过程继续使用查询链中的其他 DNS 服务器，直至发生错误或超时为止。
 
    ![image-20220522222823402](https://picturesforarticle.oss-cn-beijing.aliyuncs.com/img/image-20220522222823402.png)
 
-   <div align = "center">图 7-6</div>
+   <div align = "center">图 8-6</div>
 
 3. `非递归查询`：当 DNS 解析器客户端查询 DNS 服务器以获取其有权访问的记录时通常会进行此查询，因为其对该记录具有权威性，或者该记录存在于其缓存内。DNS 服务器通常会缓存 DNS 记录，查询到来后能够直接返回缓存结果，以防止更多带宽消耗和上游服务器上的负载。
 
@@ -172,7 +188,7 @@ DNS 数据可缓存到各种不同的位置上，每个位置均将存储 DNS �
 
 ![image-20220522222836592](https://picturesforarticle.oss-cn-beijing.aliyuncs.com/img/image-20220522222836592.png)
 
-<div align = "center">图 7-7</div>
+<div align = "center">图 8-7</div>
 
 #### 操作系统内核缓存
 
@@ -199,13 +215,13 @@ RR 会有不同的类型，下面是不同类型的 RR 汇总表。
 | PTR 记录    | 指针，用于反向查找（IP地址到域名解析）      |
 | SRV 记录    | SRV记录，用于映射可用服务。                 |
 
-<div align = "center">表 7-1</div>
+<div align = "center">表 8-1</div>
 
 DNS 有两种报文，一种是查询报文，一种是响应报文，并且这两种报文有着相同的格式，下面是 DNS 的报文格式。
 
 ![image-20220522222853912](https://picturesforarticle.oss-cn-beijing.aliyuncs.com/img/image-20220522222853912.png)
 
-<div align = "center">图 7-8</div>
+<div align = "center">图 8-8</div>
 
 下面我们就来看一下详细的报文字段。
 
@@ -218,7 +234,7 @@ DNS 有两种报文，一种是查询报文，一种是响应报文，并且这�
 
 ![image-20220522222904531](https://picturesforarticle.oss-cn-beijing.aliyuncs.com/img/image-20220522222904531.png)
 
-<div align = "center">图 7-9</div>
+<div align = "center">图 8-9</div>
 
 每个字段的含义如下
 
@@ -238,7 +254,7 @@ DNS 有两种报文，一种是查询报文，一种是响应报文，并且这�
 
 ![image-20220522222916495](https://picturesforarticle.oss-cn-beijing.aliyuncs.com/img/image-20220522222916495.png)
 
-<div align = "center">图 7-10</div>
+<div align = "center">图 8-10</div>
 
 现在我们可以看一下具体的 DNS 报文，通过 `query` 可知这是一个请求报文，这个报文的标识符是 `0xcd28`，它的标志如下。
 
@@ -256,7 +272,7 @@ DNS 有两种报文，一种是查询报文，一种是响应报文，并且这�
 
 ![image-20220522223057224](https://picturesforarticle.oss-cn-beijing.aliyuncs.com/img/image-20220522223057224.png)
 
-<div align = "center">图 7-11</div>
+<div align = "center">图 8-11</div>
 
 可以看到，标志位也是 `0xcd28`，可以说明这就是上面查询请求的响应。
 
@@ -271,7 +287,7 @@ DNS 有两种报文，一种是查询报文，一种是响应报文，并且这�
 
 ![image-20220522223107310](https://picturesforarticle.oss-cn-beijing.aliyuncs.com/img/image-20220522223107310.png)
 
-<div align = "center">图 7-12</div>
+<div align = "center">图 8-12</div>
 
 这部分中每个字段的含义如下：
 
@@ -283,13 +299,13 @@ DNS 有两种报文，一种是查询报文，一种是响应报文，并且这�
 
 ![image-20220522223118788](https://picturesforarticle.oss-cn-beijing.aliyuncs.com/img/image-20220522223118788.png)
 
-<div align = "center">图 7-13</div>
+<div align = "center">图 8-13</div>
 
 可以看到，这是对 mobile-gtalk.l.google.com 发起的 DNS 查询请求，查询类型是 A（0x0001），那么得到的响应类型应该也是 A ，A 表示的是 IPv4 类型，如果 Type 是 AAAA，那么就表示的是 IPv6 类型。
 
 ![image-20220522223129433](https://picturesforarticle.oss-cn-beijing.aliyuncs.com/img/image-20220522223129433.png)
 
-<div align = "center">图 7-14</div>
+<div align = "center">图 8-14</div>
 
 如上图所示，响应类型也是 A。
 
@@ -299,7 +315,7 @@ DNS 有两种报文，一种是查询报文，一种是响应报文，并且这�
 
 ![image-20220522223142611](https://picturesforarticle.oss-cn-beijing.aliyuncs.com/img/image-20220522223142611.png)
 
-<div align = "center">图 7-15</div>
+<div align = "center">图 8-15</div>
 
 资源记录部分的字段含义如下
 
@@ -314,7 +330,7 @@ DNS 有两种报文，一种是查询报文，一种是响应报文，并且这�
 
 ![image-20220522223154603](https://picturesforarticle.oss-cn-beijing.aliyuncs.com/img/image-20220522223154603.png)
 
-<div align = "center">图 7-16</div>
+<div align = "center">图 8-16</div>
 
 其中，域名的值是 mobile-gtalk.l.google.com ，类型是 A，类是 1，生存时间是 5 秒，数据长度是 4 字节，资源数据表示的地址是 63.233.189.188。
 
@@ -355,7 +371,7 @@ SOA 记录除具有 DNS 解析器响应的字段外，还具有一些额外的�
 
 ![image-20220522223207185](https://picturesforarticle.oss-cn-beijing.aliyuncs.com/img/image-20220522223207185.png)
 
-<div align = "center">图 7-17</div>
+<div align = "center">图 8-17</div>
 
 具体字段含义
 
@@ -370,7 +386,7 @@ SOA 记录除具有 DNS 解析器响应的字段外，还具有一些额外的�
 
 ![image-20220522223219531](https://picturesforarticle.oss-cn-beijing.aliyuncs.com/img/image-20220522223219531.png)
 
-<div align = "center">图 7-18</div>
+<div align = "center">图 8-18</div>
 
 这块我们主要解释了 RR 类型为 A（IPv4） 和 SOA 的记录，除此之外还有很多类型，这篇文章就不再详细介绍了，读者朋友们可以阅读 《TCP/IP 卷一 协议》和 cloudflare 的官网 https://www.cloudflare.com/learning/dns/dns-records/ 查阅，值得一提的是，cloudflare 是一个学习网络协议非常好的网站。
 
@@ -399,19 +415,19 @@ nslookup 是一款用来解决 DNS 相关问题排查的工具。
 
 ![image-20220522223231318](https://picturesforarticle.oss-cn-beijing.aliyuncs.com/img/image-20220522223231318.png)
 
-<div align = "center">图 7-19</div>
+<div align = "center">图 8-19</div>
 
 这样就会开始一个 nslookup 的命令提示符，然后你再输入想要查询的域名即可，如下所示：
 
 ![image-20220522223242997](https://picturesforarticle.oss-cn-beijing.aliyuncs.com/img/image-20220522223242997.png)
 
-<div align = "center">图 7-20</div>
+<div align = "center">图 8-20</div>
 
 非交互式就是直接输入 nslookup 你想要查询的内容即可，比如我们还以 baidu 为例子。
 
 ![image-20220522223257525](https://picturesforarticle.oss-cn-beijing.aliyuncs.com/img/image-20220522223257525.png)
 
-<div align = "center">图 7-21</div>
+<div align = "center">图 8-21</div>
 
 其实查询出来的内容是一样的，使用方式其实也大相径庭。
 
@@ -425,7 +441,7 @@ nslookup 一般用于查询下面这些常见的场景：
 
 ![image-20220522223308813](https://picturesforarticle.oss-cn-beijing.aliyuncs.com/img/image-20220522223308813.png)
 
-<div align = "center">图 7-22</div>
+<div align = "center">图 8-22</div>
 
 会分为两种查询结果，一种是 *Non-authoritative answer*，这表明我们想查询的这个网址是从本地 DNS cache 也就是 DNS 缓存中查询出来的，而不是从本地 DNS 经过 DNS 查询后得到的真实域名。
 
@@ -439,7 +455,7 @@ nslookup 一般用于查询下面这些常见的场景：
 
 ![image-20220522223318456](https://picturesforarticle.oss-cn-beijing.aliyuncs.com/img/image-20220522223318456.png)
 
-<div align = "center">图 7-23</div>
+<div align = "center">图 8-23</div>
 
 与 nslookup 不同的使，dig 也是一款 DNS 网络排查工具，它会从你的网络连接中选取一块可用的连接进行解析和使用，不过 windows 10 下默认不支持 dig 命令工具的使用，mac 倒是支持。
 
@@ -447,7 +463,7 @@ nslookup 一般用于查询下面这些常见的场景：
 
 ![image-20220522223331003](https://picturesforarticle.oss-cn-beijing.aliyuncs.com/img/image-20220522223331003.png)
 
-<div align = "center">图 7-24</div>
+<div align = "center">图 8-24</div>
 
 不过，贴心的我给你整理出来了 windows10 下 dig 的安装和配置使用 （https://www.csdn.net/tags/Mtjacg0sMjU1ODQtYmxvZwO0O0OO0O0O.html）
 
@@ -455,13 +471,13 @@ nslookup 一般用于查询下面这些常见的场景：
 
 ![image-20220522223341971](https://picturesforarticle.oss-cn-beijing.aliyuncs.com/img/image-20220522223341971.png)
 
-<div align = "center">图 7-25</div>
+<div align = "center">图 8-25</div>
 
 下面我们就来介绍一下 dig 这款工具都用哪些用法以及各个参数的含义，我们以 *dig baidu.com* 来进行说明
 
 ![image-20220522223351305](https://picturesforarticle.oss-cn-beijing.aliyuncs.com/img/image-20220522223351305.png)
 
-<div align = "center">图 7-26</div>
+<div align = "center">图 8-26</div>
 
 如上图所示，最上面的 
 
@@ -507,7 +523,7 @@ www.a.shifen.com.       57      IN      A       220.181.38.149
 
 ![image-20220522223402689](https://picturesforarticle.oss-cn-beijing.aliyuncs.com/img/image-20220522223402689.png)
 
-<div align = "center">图 7-27</div>
+<div align = "center">图 8-27</div>
 
 可以看到 QUESTION SECTION 和 ANSWER SECTION 中都是 PTR，这表示反向 DNS 查询，后面的域名显示了这是一个 google 的  DNS。反向 DNS 查询中，IP 地址要加上 *in-addr.arpa*。
 
@@ -515,7 +531,7 @@ www.a.shifen.com.       57      IN      A       220.181.38.149
 
 ![image-20220522223415784](https://picturesforarticle.oss-cn-beijing.aliyuncs.com/img/image-20220522223415784.png)
 
-<div align = "center">图 7-28</div>
+<div align = "center">图 8-28</div>
 
 我们通常喜欢使用 -x，因为这会减少输入的工作量。
 
@@ -525,7 +541,7 @@ www.a.shifen.com.       57      IN      A       220.181.38.149
 
 ![image-20220522223426856](https://picturesforarticle.oss-cn-beijing.aliyuncs.com/img/image-20220522223426856.png)
 
-<div align = "center">图 7-29</div>
+<div align = "center">图 8-29</div>
 
 ### +short
 
@@ -533,7 +549,7 @@ dig +short  就像是 dig +noall +answer 的阉割版，它只显示很少的内
 
 ![image-20220522223436890](https://picturesforarticle.oss-cn-beijing.aliyuncs.com/img/image-20220522223436890.png)
 
-<div align = "center">图 7-30</div>
+<div align = "center">图 8-30</div>
 
 ### +trace
 
@@ -541,7 +557,7 @@ dig +trace 能够模仿 DNS 解析器在查找域名时的做法 ，即它会从
 
 ![image-20220522223459127](https://picturesforarticle.oss-cn-beijing.aliyuncs.com/img/image-20220522223459127.png)
 
-<div align = "center">图 7-31</div>
+<div align = "center">图 8-31</div>
 
 除了我们上面介绍的 nslookup 和 dig 之外，还有其他 DNS 检测工具，比如 dog 、drill ，都是很好用的 DNS 网络排查工具，大家可以查阅相关资料进行使用，这里我就不再进行详细的介绍了。
 

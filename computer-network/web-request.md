@@ -11,11 +11,37 @@
    * [服务器发送回一个 HTTP 响应](#服务器发送回一个-http-响应)
    * [浏览器显示 HTML 的相关内容](#浏览器显示-html-的相关内容)
 
+> 这是计算机网络连载系列的第十二篇文章，前十一篇文章见
+>
+> [计算机网络基础知识总结](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247486242&idx=1&sn=fac49b0b79515a5ed6afd4b341aff87b&chksm=e999fe30deee772637e1c52fb9001c60e60a772e7adba6701329c81974e76c57bb7b2e570225&token=850264305&lang=zh_CN#rd)
+>
+> [TCP/IP 基础知识总结](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247486408&idx=1&sn=c332ae7ae448f3eb98865003ecade589&chksm=e999fedadeee77cc6281d1b170bd906b58220d6cd83054bc741821f4167f1f18ceee9ba0e449&token=850264305&lang=zh_CN#rd)
+>
+> [计算机网络应用层](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247486507&idx=1&sn=622cc363b34bce54f4953076faa1cad6&chksm=e999f939deee702f2444df83ad9805de8c70fb88b89d299fdf0a82b3463e253f32372963c039&token=1398464113&lang=zh_CN#rd)
+>
+> [计算机网络传输层](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247487108&idx=1&sn=7b47f421bb1dee4edb357a10399b7fec&chksm=e999fb96deee7280a17bfff44c27ef11a60e93e48f9da738670a779ecf6accb5a6a4ebd3cbcc&token=1398464113&lang=zh_CN#rd)
+>
+> [计算机网络网络层](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247487683&idx=1&sn=e0949e72e039759545450852d8bc0ada&chksm=e999e5d1deee6cc7ab9e42b50329924fee39c45955516b406046605d27928825a0f628d13e7c&token=1398464113&lang=zh_CN#rd)
+>
+> [计算机网络链路层](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247488884&idx=1&sn=0fdb91b7f5081d2e24c82d891fcc6126&chksm=e999e066deee69704d162b97be2ff0d33225fa9a3d12e4d3bec90a34996e7db7134535f36e8e&token=1398464113&lang=zh_CN#rd)
+>
+> [计算机网络 ARP 协议](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247487804&idx=1&sn=f001a24a308053b3723dfb12d36045ee&chksm=e999e42edeee6d383fbb411792e22e4028bb8c2441255786f50cf848443af7b1bd5e382078dc&token=1398464113&lang=zh_CN#rd)
+>
+> [计算机网络 DNS 协议](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247487880&idx=1&sn=fd38ce30ae82fa7d08e5f83fabb9d497&chksm=e999e49adeee6d8c1adacbfe27dc59097e4cb9d39c6a04802b0fe61877653330e75721cbde0b&token=1398464113&lang=zh_CN#rd)
+>
+> [计算机网络 ICMP 协议](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247488316&idx=1&sn=360c3e6eb45e9cbd7c38f3d43e8850e7&chksm=e999e62edeee6f3806dfe9b5c8d00c5e521cae1a1e7b85fd33d7a7c64fa897b3632dd31b9d50&token=1398464113&lang=zh_CN#rd)
+>
+> [计算机网络 DHCP 协议](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247488546&idx=1&sn=9a8ec2b6900d930e51c55d01de3dd7b5&chksm=e999e130deee6826bac33f3f395f763b33b7cbe6809ae5e3b02a2e24daf816b13851d4f3246e&token=1398464113&lang=zh_CN#rd)
+>
+> [计算机网络 NAT 协议](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247495224&idx=1&sn=8146e152840c65adccf7e4e1044e3860&chksm=e99a1b2adeed923c154dac426bd36d24a1243a1d0fd6125aeade22645aafbc172fa5d930dfbe&token=1398464113&lang=zh_CN#rd)
+
 到现在为止，我们算是把应用层、运输层、网络层和数据链路层都介绍完了，那么现在是时候把这些内容都串起来，做一个全面的回顾了。那么我这就以 Web 页面的请求历程为例，来和你聊聊计算机网络中这些协议是怎样工作的、数据包是怎么收发的，从输入 URL 、敲击会车到最终完成页面呈现在你面前的这个过程。
 
 首先，我打开了 Web Browser ，然后在 Google 浏览器 URL 地址栏中输入了 `maps.google.com`。
 
 ![](https://z3.ax1x.com/2021/03/30/cPcwPP.png)
+
+<div align = "center">图 12-1</div>
 
 然后 ......
 
@@ -49,6 +75,8 @@
 
 ![](https://z3.ax1x.com/2021/03/30/cPc08f.png)
 
+<div align = "center">图 12-2</div>
+
 如果上面四个步骤中都不存在 DNS 记录，那么就表示不存在 DNS 缓存，这个时候就需要发起 DNS 查询，以查找目标网址（本示例中是 maps.google.com）的 IP 地址。
 
 ## 发起 DNS 查询
@@ -66,8 +94,6 @@
 - `远距离集中式数据库(distant centralized database)`，单个 DNS 服务器不可能 `邻近` 所有的用户，假设在美国的 DNS 服务器不可能临近让澳大利亚的查询使用，其中查询请求势必会经过低速和拥堵的链路，造成严重的时延。
 - `维护(maintenance)`，维护成本巨大，而且还需要频繁更新。
 
-所以在当今网络情况下 DNS 不可能集中式设计，因为它完全没有可扩展能力，所以采用`分布式设计`，这种设计的特点如下
-
 **分布式、层次数据库**。
 
 首先分布式设计首先解决的问题就是 DNS 服务器的扩展性问题，因此 DNS 使用了大量的 DNS 服务器，它们的组织模式一般是层次方式，并且分布在全世界范围内。**没有一台 DNS 服务器能够拥有因特网上所有主机的映射**。相反，这些映射分布在所有的 DNS 服务器上。
@@ -77,6 +103,8 @@
 ![](https://z3.ax1x.com/2021/03/30/cPca5t.png)
 
 ![](https://z3.ax1x.com/2021/03/30/cPcUUI.png)
+
+<div align = "center">图 12-3</div>
 
 - `根 DNS 服务器` ，有 400 多个根域名服务器遍及全世界，这些根域名服务器由 13 个不同的组织管理。根域名服务器的清单和组织机构可以在 https://root-servers.org/ 中找到，根域名服务器提供 TLD 服务器的 IP 地址。
 - `顶级域 DNS 服务器`，对于每个顶级域名比如 com、org、net、edu 和 gov 和所有的国家级域名 uk、fr、ca 和 jp 都有 TLD 服务器或服务器集群。所有的顶级域列表参见 https://tld-list.com/ 。TDL 服务器提供了权威 DNS 服务器的 IP 地址。
@@ -90,9 +118,13 @@ DNS 查找中会出现三种类型的查询。通过组合使用这些查询，*
 
 ![](https://z3.ax1x.com/2021/03/30/cPcNVA.png)
 
+<div align = "center">图 12-4</div>
+
 * `迭代查询`：在迭代查询中，如果所查询的 DNS 服务器与查询名称不匹配，则其将返回对较低级别域名空间具有权威性的 DNS 服务器的引用。然后，DNS 客户端将对引用地址进行查询。此过程继续使用查询链中的其他 DNS 服务器，直至发生错误或超时为止。
 
 ![](https://z3.ax1x.com/2021/03/30/cPcYbd.png)
+
+<div align = "center">图 12-5</div>
 
 * `非递归查询`：当 DNS 解析器客户端查询 DNS 服务器以获取其有权访问的记录时通常会进行此查询，因为其对该记录具有权威性，或者该记录存在于其缓存内。DNS 服务器通常会缓存 DNS 记录，查询到来后能够直接返回缓存结果，以防止更多带宽消耗和上游服务器上的负载。
 
@@ -127,13 +159,19 @@ ARP 的大致工作流程如下
 
 ![](https://z3.ax1x.com/2021/03/30/cPcGKe.png)
 
+<div align = "center">图 12-6</div>
+
 主机 A 想要获取主机 B 的 MAC 地址，通过主机 A 会通过`广播` 的方式向以太网上的所有主机发送一个 `ARP 请求包`，这个 ARP 请求包中包含了主机 A 想要知道的主机 B 的 IP 地址的 MAC 地址。
 
 ![](https://z3.ax1x.com/2021/03/30/cPc3vD.png)
 
+<div align = "center">图 12-7</div>
+
 主机 A 发送的 ARP 请求包会被同一链路上的所有主机/路由器接收并进行解析。每个主机/路由器都会检查 ARP 请求包中的信息，如果 ARP 请求包中的`目标 IP 地址` 和自己的相同，就会将自己主机的 MAC 地址写入响应包返回主机 A
 
 ![](https://z3.ax1x.com/2021/03/30/cPcJDH.png)
+
+<div align = "center">图 12-8</div>
 
 由此，可以通过 ARP 从 IP 地址获取 MAC 地址，实现同一链路内的通信。
 
@@ -149,9 +187,13 @@ ARP 的大致工作流程如下
 
 ![](https://z3.ax1x.com/2021/03/30/cPc1gO.png)
 
+<div align = "center">图 12-9</div>
+
 一般来说，发送过一次 ARP 请求后，再次发送相同请求的几率比较大，因此使用 ARP 缓存能够减少 ARP 包的发送，除此之外，不仅仅 ARP 请求的发送方能够缓存 ARP 接收方的 MAC 地址，接收方也能够缓存 ARP 请求方的 IP 和 MAC 地址，如下所示
 
 ![](https://z3.ax1x.com/2021/03/30/cPcl8K.png)
+
+<div align = "center">图 12-10</div>
 
 不过，**MAC 地址的缓存有一定期限，超过这个期限后，缓存的内容会被清除**。
 
@@ -170,6 +212,8 @@ ARP 的大致工作流程如下
 - 我们发送一个数据链路层的 ARP 请求：
 
 ![](https://z3.ax1x.com/2021/03/30/cPcK4x.png)
+
+<div align = "center">图 12-11</div>
 
 根据连接主机和路由器的硬件类型不同，可以分为以下几种情况：
 
@@ -191,6 +235,8 @@ ARP 的大致工作流程如下
 
 ![](https://z3.ax1x.com/2021/03/30/cPcAvF.png)
 
+<div align = "center">图 12-12</div>
+
 现在我们有了 DNS 服务器或者默认网关的 IP 地址，我们可以继续 DNS 请求了：
 
 - 使用 53 端口向 DNS 服务器发送 UDP 请求包，如果响应包太大，会使用 TCP 协议
@@ -206,6 +252,8 @@ ARP 的大致工作流程如下
 
 ![](https://z3.ax1x.com/2021/03/30/cPceb9.png)
 
+<div align = "center">图 12-13</div>
+
 这里就不再详细介绍了，读者朋友们可以阅读 cxuan 的这篇文章 [TCP/IP 基础知识详解](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247486408&idx=1&sn=c332ae7ae448f3eb98865003ecade589&chksm=e999fedadeee77cc6281d1b170bd906b58220d6cd83054bc741821f4167f1f18ceee9ba0e449&token=1623097963&lang=zh_CN#rd)详细了解。
 
 ## 浏览器与目标服务器建立 TCP 连接
@@ -217,6 +265,8 @@ TCP 的连接建立需要经过 TCP/IP 的三次握手，三次握手的过程�
 假设图中左端是客户端主机，右端是服务端主机，一开始，两端都处于`CLOSED（关闭）`状态。
 
 ![](https://z3.ax1x.com/2021/03/30/cPcuU1.png)
+
+<div align = "center">图 12-14</div>
 
 1. 服务端进程准备好接收来自外部的 TCP 连接。然后服务端进程处于 `LISTEN` 状态，等待客户端连接请求。
 2. 客户端向服务器发出连接请求，请求中首部同步位 SYN = 1，同时选择一个初始序号 sequence ，简写 seq = x。SYN 报文段不允许携带数据，只消耗一个序号。此时，客户端进入 `SYN-SEND` 状态。
@@ -233,6 +283,8 @@ TCP 的连接建立需要经过 TCP/IP 的三次握手，三次握手的过程�
 除了请求类型外，HTTP 请求还包含很多很多信息，最常见的有 Host、Connection 、User-agent、Accept-language 等
 
 ![](https://z3.ax1x.com/2021/03/30/cPcVu4.png)
+
+<div align = "center">图 12-15</div>
 
 首先 Host 表示的是对象所在的主机。`Connection: close` 表示的是浏览器需要告诉服务器使用的是`非持久连接`。它要求服务器在发送完响应的对象后就关闭连接。`User-agent`: 这是请求头用来告诉 Web 服务器，浏览器使用的类型是 `Mozilla/5.0`，即 Firefox 浏览器。`Accept-language` 告诉 Web 服务器，浏览器想要得到对象的法语版本，前提是服务器需要支持法语类型，否则将会发送服务器的默认版本。下面我们针对主要的实体字段进行介绍（具体的可以参考 https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers MDN 官网学习）
 
@@ -255,6 +307,8 @@ HTTP 的请求标头分为四种： `通用标头`、`请求标头`、`响应标
 比如下面就是一个响应体
 
 ![](https://z3.ax1x.com/2021/03/30/cPcZDJ.png)
+
+<div align = "center">图 12-16</div>
 
 关于深入理解 HTTP 请求和响应，可以参考这篇文章 
 

@@ -11,6 +11,28 @@
    * [NAT 的应用](#nat-的应用)
    * [使用 NAT 的意义](#使用-nat-的意义)
 
+> 这是计算机网络连载系列的第十一篇文章，前十篇文章见
+>
+> [计算机网络基础知识总结](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247486242&idx=1&sn=fac49b0b79515a5ed6afd4b341aff87b&chksm=e999fe30deee772637e1c52fb9001c60e60a772e7adba6701329c81974e76c57bb7b2e570225&token=850264305&lang=zh_CN#rd)
+>
+> [TCP/IP 基础知识总结](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247486408&idx=1&sn=c332ae7ae448f3eb98865003ecade589&chksm=e999fedadeee77cc6281d1b170bd906b58220d6cd83054bc741821f4167f1f18ceee9ba0e449&token=850264305&lang=zh_CN#rd)
+>
+> [计算机网络应用层](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247486507&idx=1&sn=622cc363b34bce54f4953076faa1cad6&chksm=e999f939deee702f2444df83ad9805de8c70fb88b89d299fdf0a82b3463e253f32372963c039&token=1398464113&lang=zh_CN#rd)
+>
+> [计算机网络传输层](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247487108&idx=1&sn=7b47f421bb1dee4edb357a10399b7fec&chksm=e999fb96deee7280a17bfff44c27ef11a60e93e48f9da738670a779ecf6accb5a6a4ebd3cbcc&token=1398464113&lang=zh_CN#rd)
+>
+> [计算机网络网络层](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247487683&idx=1&sn=e0949e72e039759545450852d8bc0ada&chksm=e999e5d1deee6cc7ab9e42b50329924fee39c45955516b406046605d27928825a0f628d13e7c&token=1398464113&lang=zh_CN#rd)
+>
+> [计算机网络链路层](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247488884&idx=1&sn=0fdb91b7f5081d2e24c82d891fcc6126&chksm=e999e066deee69704d162b97be2ff0d33225fa9a3d12e4d3bec90a34996e7db7134535f36e8e&token=1398464113&lang=zh_CN#rd)
+>
+> [计算机网络 ARP 协议](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247487804&idx=1&sn=f001a24a308053b3723dfb12d36045ee&chksm=e999e42edeee6d383fbb411792e22e4028bb8c2441255786f50cf848443af7b1bd5e382078dc&token=1398464113&lang=zh_CN#rd)
+>
+> [计算机网络 DNS 协议](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247487880&idx=1&sn=fd38ce30ae82fa7d08e5f83fabb9d497&chksm=e999e49adeee6d8c1adacbfe27dc59097e4cb9d39c6a04802b0fe61877653330e75721cbde0b&token=1398464113&lang=zh_CN#rd)
+>
+> [计算机网络 ICMP 协议](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247488316&idx=1&sn=360c3e6eb45e9cbd7c38f3d43e8850e7&chksm=e999e62edeee6f3806dfe9b5c8d00c5e521cae1a1e7b85fd33d7a7c64fa897b3632dd31b9d50&token=1398464113&lang=zh_CN#rd)
+>
+> [计算机网络 DHCP 协议](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247488546&idx=1&sn=9a8ec2b6900d930e51c55d01de3dd7b5&chksm=e999e130deee6826bac33f3f395f763b33b7cbe6809ae5e3b02a2e24daf816b13851d4f3246e&token=1398464113&lang=zh_CN#rd)
+
 ## 什么是 NAT 协议
 
 我们的计算机要想访问互联网上的信息，就需要一个地址，而且这个地址是大家（其他主机）所认可的，是公共的，这个地址也叫做**公有 IP 地址**。	
@@ -29,6 +51,8 @@
 
 ![image-20220221082848527](https://tva1.sinaimg.cn/large/e6c9d24ely1gzktv39zq9j21l00o2wjh.jpg)
 
+<div align = "center">图 11-1</div>
+
 私有网络中的客户端 A （IP 192.168.1.6）想向公共网络中的服务器（IP 122.122.122.122）发送数据包，当这个数据包经过 NAT 路由器的时候，就会把它的私有 IP 192.168.1.6 转换为公有的 IP 12.34.56.78，然后这个数据包的源地址就变为 12.34.56.78 ，它经由 Internet 发送给 IP 为 122.122.122.122 的目标服务器。
 
 >NAT 路由器其实就是相当于在路由器上安装的 NAT 软件，装有 NAT 软件的路由器就叫做 NAT 路由器。
@@ -36,6 +60,8 @@
 NAT 路由器不仅可以把私有 IP 转换为公有 IP ，还可以把公有 IP 转换为私有 IP ，这种转换是双向的。
 
 ![image-20220221085746750](https://tva1.sinaimg.cn/large/e6c9d24ely1gzkup8pyptj218c08emxv.jpg)
+
+<div align = "center">图 11-2</div>
 
 拿上图来说，意思就是服务器 122.122.122.122 发送一个数据包，这个数据包通过 Internet 发送给 NAT 路由器，NAT 路由器把它转换为目标地址是 192.168.1.6 的数据包，然后再发送给客户端 A。
 
@@ -47,6 +73,8 @@ NAT 路由器不仅可以把私有 IP 转换为公有 IP ，还可以把公有 I
 
 <img src="https://tva1.sinaimg.cn/large/e6c9d24ely1gzkwpw3gtrj20pk0hw41c.jpg" alt="image-20220221100722602" style="zoom:50%;" />
 
+<div align = "center">图 11-3</div>
+
 所以，NAT 路由器内部有一张用来记录转换地址的表，也就是一件可以解释的事情了，所以 NAT 路由器在进行地址转换时，会按照其内部的映射关系来进行处理。
 
 上面只是一台客户端进行 NAT 转换的情形，但是现实生活中我们私有网络中不可能只有一台客户端进行通信，所以当私有网络中所有的客户端都需要上网，进行 NAT 转换的时候，是不是 NAT 路由器会为每一个客户端生成一个 IP 地址呢？如果全世界范围内的私有网络都这么转换的话，那么公有 IP 地址的数量势必会承受非常大的压力。
@@ -54,6 +82,8 @@ NAT 路由器不仅可以把私有 IP 转换为公有 IP ，还可以把公有 I
 针对这种情况，提出了使用 IP 地址和端口号一起转换的方式（NAPT），如下图所示。
 
 ![image-20220221143753479](https://tva1.sinaimg.cn/large/e6c9d24ely1gzl4j4dk1hj21kh0u0dme.jpg)
+
+<div align = "center">图 11-4</div>
 
 这个大致过程和上面 NAT 的转换模式相同，不一样的是，使用 NAPT 会把客户端 A 和客户端 B 的数据包源地址 192.168.1.6:80、192.168.1.7:80 转换为 12.34.56.78:80 和 12.34.56.78:90 ，然后再发送给目标服务器。在转换的过程中，NAT 路由器会生成转换表，通过转换表就可以正确地转换地址和端口的组合，使客户端 A 和客户端 B 与服务器之间进行通信。
 
