@@ -42,7 +42,6 @@ int main(void){
 int sum(int a,int b){
 	
 	return a + b;
-	
 }
 ```
 
@@ -125,7 +124,6 @@ int main(void){
 void sum(int a,int b){
 	
 	int sumAll =  a + b;
-	
 	printf("sumAll = %d\n",sumAll);
 	
 }
@@ -139,25 +137,37 @@ void sum(int a,int b){
 
 ![image-20220627224608926](https://tva1.sinaimg.cn/large/e6c9d24ely1h3n6rc717rj2126088t9c.jpg)
 
-
-
-
-
-
-
-
-
-
-
-函数的返回值可有可无，这个依据返回值类型来进行定义，返回值通过
+当然并不是所有的函数都需要返回值，而且 return 语句后面也不一定需要表达式，当 return 语句后面没有表达式时，函数不会向调用者返回值。返回值通过
 
 ```c
 return 表达式
 ```
 
-进行返回，这个返回值的表达式类型和返回值类型是一致的。
+进行返回，这个返回值的表达式类型和函数定义的返回值类型是一致的。
 
-当然并不是所有的函数都需要返回值，而且 return 语句后面也不一定需要表达式，当 return 语句后面没有表达式时，函数不会向调用者返回值。
+我们还用上面的 sum 函数来举例子
+
+```c
+int sum(int a,int b){
+	
+	return a + b;
+}
+```
+
+可以看到，sum 函数的表达式返回了 a + b，这其实就是一个表达式。而我们可以看到上面的 int main 方法，它的返回值是 0 ，这就是返回了一个常量。
+
+return 后面可以不返回任何值，只是单独写一个 return 也是 C 允许，这种方式相当于没有返回任何值，所以它的函数类型可以定义为 void ，如下代码所示
+
+```c
+// 函数定义 
+void sum(int a,int b){
+	
+	int sumAll =  a + b;	
+	printf("sumAll = %d\n",sumAll);
+	
+	return ; 
+}
+```
 
 
 
