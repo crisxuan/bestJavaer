@@ -56,8 +56,6 @@
 
 <img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h46ivd0cvdj20u0140tgr.jpg" alt="image-20220714161144741" style="zoom:50%;" />
 
-
-
 ## 备婚闭坑
 
 最近两年疫情不断反复把大家折腾的够呛，我们也是，备婚在 21 年就开始了，找酒店、找婚策、租婚纱、装修房子、拍婚纱照、买西装、准备各种喜品等。
@@ -82,7 +80,7 @@
 
 石家庄地区大部分婚纱摄影都是同一个老板，披着不同的羊皮分拨收割你，你去哪里都是被收割的韭菜。
 
-还有**千 ！万 ！ 不 ！ 要 ！ 去 ！ 蒙 ！娜 ！ 丽 ！ 莎 ！**，身边无数去蒙娜丽莎拍照的朋友均反应自己被收割，5000 多拍了一片苞米地，简直了。
+还有**千 ！万 ！ 不 ！ 要 ！ 去 ！ 蒙 ！娜 ！ 丽 ！ 莎 **，身边无数去蒙娜丽莎拍照的朋友均反应自己被收割，花了5000 大价钱拍了一片苞米地，简直了。
 
 这里我**建议找工作室**，首先工作室大部分都是由上进心的创业青年，而且很多都是摄影技术出身，对于美感，拍摄手法都有独特的研究，首先你想拍的样子基本上都能保证，二来工作室服务客人少，你的大部分需求能得到满足，然后工作室的价格相对便宜一些，很多都是在认真做事，有什么事情可以好商量，他们很注重口碑。
 
@@ -104,7 +102,7 @@
 
 ### 婚庆避坑
 
-婚庆公司也分为三种
+婚庆公司也分为三种：
 
 第一种是驻店婚庆，这种婚庆一般只和特定的酒店合作，我们举行婚礼的那个酒店也有驻店婚庆，不过给我的感觉不太好，首先这种婚庆一般都直接打包套餐价，价格不透明，而且这种婚庆的一些布置案例都大差不差，也能存在东西二次利用的情况，第三一点婚庆接待给我的感觉是她想割我韭菜。。。。。。
 
@@ -120,15 +118,23 @@
 
 ## 秀恩爱
 
-又到了群众朋友们最喜欢的环节了，话不多上，上图。
+又到了群众朋友们最喜欢的环节了，话不多说，上图。
+
+<img src="https://picturesforarticle.oss-cn-beijing.aliyuncs.com/img/image-20220726205230244.png" alt="image-20220726205230244" style="zoom:50%;" />
+
+<img src="https://picturesforarticle.oss-cn-beijing.aliyuncs.com/img/image-20220726205305842.png" alt="image-20220726205305842" style="zoom:50%;" />
+
+<img src="https://picturesforarticle.oss-cn-beijing.aliyuncs.com/img/image-20220726205318327.png" alt="image-20220726205318327" style="zoom:50%;" />
+
+<img src="https://picturesforarticle.oss-cn-beijing.aliyuncs.com/img/image-20220726205329191.png" alt="image-20220726205329191" style="zoom:50%;" />
+
+<img src="https://picturesforarticle.oss-cn-beijing.aliyuncs.com/img/image-20220726205336955.png" alt="image-20220726205336955" style="zoom:50%;" />
+
+![image-20220726205345860](https://picturesforarticle.oss-cn-beijing.aliyuncs.com/img/image-20220726205345860.png)
+
+![image-20220726205352040](https://picturesforarticle.oss-cn-beijing.aliyuncs.com/img/image-20220726205352040.png)
 
 <img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h4at7xvkr8j21900u0ah5.jpg" alt="image-20220718091151392" style="zoom:50%;" />
-
-
-
-
-
-
 
 最后，我的结婚请柬给朋友们、老师们都是一个一个去送的，我觉得这是一件很有意义的事情，因为结婚那天会非常忙，很多朋友照顾不到位，这是唯一的能够和大家单独接触的机会，我觉得还是值得的。
 
