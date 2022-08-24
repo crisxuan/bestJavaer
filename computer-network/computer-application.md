@@ -95,7 +95,7 @@
 
 ### 应用层体系结构
 
-*应用层体系结构 (Application Architecture)*定义了应用层端系统之间数据交换的方式，一般来说，主流的体系结构有两种：
+*应用层体系结构(Application Architecture)*定义了应用层端系统之间数据交换的方式，一般来说，主流的体系结构有两种：
 
 * `客户-服务器体系结构 ( client-server architecture )`
 * `对等体系结构 ( P2P architecture )`
