@@ -138,3 +138,8 @@ NAT 主要可以实现以下几个功能：**数据包伪装、负载均衡、�
 ## 使用 NAT 的意义
 
 NAT（NAPT）实际上是为了解决 IPv4 枯竭而开发的技术，不过，现在随着 IPv6 的开发，在 IPv6 中为了提高网络安全也在使用 NAT，在 IPv4 和 IPv6 的通信中经常使用 NAT-PT。然而在安全机制上 IPv4 也潜在着威胁，在配置和管理上也是一个挑战。如果要从根本上解决 IP 地址资源的问题，IPv6 才是最根本之路。
+
+![image-20210717083948590](https://tva1.sinaimg.cn/large/008i3skNly1gsjnhb9f5xj319s0tsn4g.jpg)
+
+![image-20210717084050334](https://tva1.sinaimg.cn/large/008i3skNly1gsjnidv1r3j315s0fs40g.jpg)
+
