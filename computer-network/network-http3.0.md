@@ -58,7 +58,7 @@ HTTP 3.0 于 2022 年 6 月 6 日正式发布，IETF 把 HTTP 3.0 标准制定�
 
 ![image-20220715185929315](https://picturesforarticle.oss-cn-beijing.aliyuncs.com/img/image-20220715185929315.png)
 
-<div align = "center">图 16-1</div>
+<div align = "center">图 17-1</div>
 
 TCP 的主要作用是以正确的顺序将整个字节流从一个端点传输到另一个端点，但是当流中的某些数据包丢失时，TCP 需要重新发送这些丢失的数据包，等到丢失的数据包到达对应端点时才能够被 HTTP 处理，这被称为 TCP 的队头阻塞问题。
 
@@ -68,7 +68,7 @@ TCP 的主要作用是以正确的顺序将整个字节流从一个端点传输�
 
 ![image-20220715191041133](https://picturesforarticle.oss-cn-beijing.aliyuncs.com/img/image-20220715191041133.png)
 
-<div align = "center">图 16-2</div>
+<div align = "center">图 17-2</div>
 
 ## QUIC 协议
 
@@ -80,7 +80,7 @@ QUIC 的小写是 quic，谐音 quick，意思就是`快`。它是 Google 提出
 
 ![image-20220317213125577](https://tva1.sinaimg.cn/large/e6c9d24ely1h0d7crqxlkj213b0u0jww.jpg)
 
-<div align = "center">图 16-3</div>
+<div align = "center">图 17-3</div>
 
 对于很多短连接场景，这种握手延迟影响较大，而且无法消除。毕竟 RTT 是人类和效率的终极斗争。
 
@@ -100,7 +100,7 @@ TCP 一般采用的是**自适应重传算法**，这个超时时间会根据往
 
 ![image-20220318092115994](https://tva1.sinaimg.cn/large/e6c9d24ely1h0drvdgzb3j21510u0wh7.jpg)
 
-<div align = "center">图 16-4</div>
+<div align = "center">图 17-4</div>
 
 比如有一个 PN = 10 的数据包在发送的过程中由于某些原因迟迟没到服务器，那么客户端会重传一个 PN = 11 的数据包，经过一段时间后客户端收到 PN = 10 的响应后再回送响应报文，此时的 RTT 就是 PN = 10 这个数据包在网络中的生存时间，这样计算相对比较准确。
 
@@ -109,6 +109,8 @@ TCP 一般采用的是**自适应重传算法**，这个超时时间会根据往
 QUIC 引入了一个 *stream offset* 的概念，一个 stream 可以传输多个 stream offset，每个 stream offset 其实就是一个 PN 标识的数据，即使某个 PN 标识的数据丢失，PN + 1 后，它重传的仍旧是 PN 所标识的数据，等到所有 PN 标识的数据发送到服务器，就会进行重组，以此来保证数据可靠性。到达服务器的 stream offset 会按照顺序进行组装，这同时也保证了数据的顺序性。
 
 ![image-20220318102638665](https://tva1.sinaimg.cn/large/e6c9d24ely1h0dtrehfv1j21ay0u0djl.jpg)
+
+<div align = "center">图 17-5</div>
 
 众所周知，TCP 协议的具体实现是由操作系统内核来完成的，应用程序只能使用，不能对内核进行修改，随着移动端和越来越多的设备接入互联网，性能逐渐成为一个非常重要的衡量指标。虽然移动网络发展的非常快，但是用户端的更新却非常缓慢，我仍然看见有很多地区很多计算机还仍旧使用 xp 系统，尽管它早已发展了很多年。服务端系统不依赖用户升级，但是由于操作系统升级涉及到底层软件和运行库的更新，所以也比较保守和缓慢。
 
