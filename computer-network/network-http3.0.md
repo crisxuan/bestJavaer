@@ -1,8 +1,6 @@
 # HTTP 3.0
 
-[toc]
-
->这是计算机网络连载系列的第十五篇文章，前十四篇文章见
+>这是计算机网络连载系列的第十七篇文章，前十六篇文章见
 >
 >[计算机网络基础知识总结](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247486242&idx=1&sn=fac49b0b79515a5ed6afd4b341aff87b&chksm=e999fe30deee772637e1c52fb9001c60e60a772e7adba6701329c81974e76c57bb7b2e570225&token=850264305&lang=zh_CN#rd)
 >
@@ -33,6 +31,8 @@
 >[计算机网络路由协议](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247496972&idx=1&sn=fa73c2e35ae34f3e0a8f0055cd78825c&chksm=e99a001edeed890883feda823a31dbb537461de86f33b14a00c271a1b0bf097ead0905e5fe0a&token=1398464113&lang=zh_CN#rd)
 >
 >[计算机网络HTTP/2.0](https://github.com/crisxuan/bestJavaer/blob/master/computer-network/network-http2.0.md)
+>
+>[计算机网络QUIC协议](https://github.com/crisxuan/bestJavaer/blob/master/computer-network/network-quic.md)
 
 HTTP 3.0 是 HTTP 协议的第三个主要版本，前两个分别是 HTTP 1.0 和 HTTP 2.0 ，但其实 HTTP 1.1 我认为才是真正的 HTTP 1.0。
 
@@ -135,3 +135,8 @@ TCP 协议头部没有经过加密和认证，所以在传输的过程中很可�
 连接平滑迁移指的是，你的手机或者移动设备在 4G 信号下和 WiFi 等网络情况下切换，不会断线重连，用户甚至无任何感知，能够直接实现平滑的信号切换。
 
 QUCI 协议已经被写在了 [RFC 9000](https://datatracker.ietf.org/doc/html/rfc9000) 中。
+
+![image-20210717083948590](https://tva1.sinaimg.cn/large/008i3skNly1gsjnhb9f5xj319s0tsn4g.jpg)
+
+![image-20210717084050334](https://tva1.sinaimg.cn/large/008i3skNly1gsjnidv1r3j315s0fs40g.jpg)
+
