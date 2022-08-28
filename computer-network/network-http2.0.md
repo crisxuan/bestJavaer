@@ -1,6 +1,20 @@
 # HTTP 2.0
 
-[toc]
+* [HTTP 2.0](#http-20)
+   * [最初的 HTTP](#最初的-http)
+      * [HTTP 的瓶颈](#http-的瓶颈)
+   * [SPDY](#spdy)
+      * [认识 SPDY](#认识-spdy)
+      * [SPDY 基础功能](#spdy-基础功能)
+      * [SPDY 高级功能](#spdy-高级功能)
+   * [初探 HTTP 2.0](#初探-http-20)
+   * [HTTP 2.0 的主要变化](#http-20-的主要变化)
+      * [二进制格式](#二进制格式)
+      * [连接共享](#连接共享)
+      * [头部压缩](#头部压缩)
+      * [服务端推送](#服务端推送)
+   * [HTTP 2.0 的缺陷](#http-20-的缺陷)
+   * [总结](#总结)
 
 > 这是计算机网络连载系列的第十五篇文章，前十四篇文章见
 >
@@ -206,3 +220,8 @@ HTTP 2.0 带给我们最惊艳的莫过于多路复用了，虽然多路复用�
 ## 总结
 
 这篇文章我们主要聊了一下 HTTP从1.x 到 SPDY，再到 HTTP 2.0 的协议变迁以及 HTTP 1.0、1.1 的痛点和弊端，SPDY 的出现背景以及发现情况，然后 HTTP 2.0 的主要特征、HTTP 2.0 相对于 HTTP 1.x 有了哪些改变，它的缺点有哪些。
+
+![image-20210717083948590](https://tva1.sinaimg.cn/large/008i3skNly1gsjnhb9f5xj319s0tsn4g.jpg)
+
+![image-20210717084050334](https://tva1.sinaimg.cn/large/008i3skNly1gsjnidv1r3j315s0fs40g.jpg)
+

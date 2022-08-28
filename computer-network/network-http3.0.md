@@ -1,6 +1,38 @@
 # HTTP 3.0
 
-[toc]
+>这是计算机网络连载系列的第十七篇文章，前十六篇文章见
+>
+>[计算机网络基础知识总结](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247486242&idx=1&sn=fac49b0b79515a5ed6afd4b341aff87b&chksm=e999fe30deee772637e1c52fb9001c60e60a772e7adba6701329c81974e76c57bb7b2e570225&token=850264305&lang=zh_CN#rd)
+>
+>[TCP/IP 基础知识总结](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247486408&idx=1&sn=c332ae7ae448f3eb98865003ecade589&chksm=e999fedadeee77cc6281d1b170bd906b58220d6cd83054bc741821f4167f1f18ceee9ba0e449&token=850264305&lang=zh_CN#rd)
+>
+>[计算机网络应用层](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247486507&idx=1&sn=622cc363b34bce54f4953076faa1cad6&chksm=e999f939deee702f2444df83ad9805de8c70fb88b89d299fdf0a82b3463e253f32372963c039&token=1398464113&lang=zh_CN#rd)
+>
+>[计算机网络传输层](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247487108&idx=1&sn=7b47f421bb1dee4edb357a10399b7fec&chksm=e999fb96deee7280a17bfff44c27ef11a60e93e48f9da738670a779ecf6accb5a6a4ebd3cbcc&token=1398464113&lang=zh_CN#rd)
+>
+>[计算机网络网络层](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247487683&idx=1&sn=e0949e72e039759545450852d8bc0ada&chksm=e999e5d1deee6cc7ab9e42b50329924fee39c45955516b406046605d27928825a0f628d13e7c&token=1398464113&lang=zh_CN#rd)
+>
+>[计算机网络链路层](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247488884&idx=1&sn=0fdb91b7f5081d2e24c82d891fcc6126&chksm=e999e066deee69704d162b97be2ff0d33225fa9a3d12e4d3bec90a34996e7db7134535f36e8e&token=1398464113&lang=zh_CN#rd)
+>
+>[计算机网络 ARP 协议](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247487804&idx=1&sn=f001a24a308053b3723dfb12d36045ee&chksm=e999e42edeee6d383fbb411792e22e4028bb8c2441255786f50cf848443af7b1bd5e382078dc&token=1398464113&lang=zh_CN#rd)
+>
+>[计算机网络 DNS 协议](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247487880&idx=1&sn=fd38ce30ae82fa7d08e5f83fabb9d497&chksm=e999e49adeee6d8c1adacbfe27dc59097e4cb9d39c6a04802b0fe61877653330e75721cbde0b&token=1398464113&lang=zh_CN#rd)
+>
+>[计算机网络 ICMP 协议](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247488316&idx=1&sn=360c3e6eb45e9cbd7c38f3d43e8850e7&chksm=e999e62edeee6f3806dfe9b5c8d00c5e521cae1a1e7b85fd33d7a7c64fa897b3632dd31b9d50&token=1398464113&lang=zh_CN#rd)
+>
+>[计算机网络 DHCP 协议](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247488546&idx=1&sn=9a8ec2b6900d930e51c55d01de3dd7b5&chksm=e999e130deee6826bac33f3f395f763b33b7cbe6809ae5e3b02a2e24daf816b13851d4f3246e&token=1398464113&lang=zh_CN#rd)
+>
+>[计算机网络 NAT 协议](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247495224&idx=1&sn=8146e152840c65adccf7e4e1044e3860&chksm=e99a1b2adeed923c154dac426bd36d24a1243a1d0fd6125aeade22645aafbc172fa5d930dfbe&token=1398464113&lang=zh_CN#rd)
+>
+>[计算机网络 web 请求过程](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247489155&idx=1&sn=8bcd1dda63e3e34c672973fd56e4f48f&chksm=e999e391deee6a8735ab4b0c0473b79cbeee577c2f8c4fb964e5ef6d932dc1614151b6a8a554&token=1398464113&lang=zh_CN#rd)
+>
+>[计算机网络 Socket](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247494554&idx=1&sn=6cfa7a5ac3bd443e7734b0a688b53294&chksm=e99a1e88deed979ed721e9885dcb4a0ac86bd4fd14eb76056832050762eeb9b8c7423870f2fc&token=1398464113&lang=zh_CN#rd)
+>
+>[计算机网络路由协议](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247496972&idx=1&sn=fa73c2e35ae34f3e0a8f0055cd78825c&chksm=e99a001edeed890883feda823a31dbb537461de86f33b14a00c271a1b0bf097ead0905e5fe0a&token=1398464113&lang=zh_CN#rd)
+>
+>[计算机网络HTTP/2.0](https://github.com/crisxuan/bestJavaer/blob/master/computer-network/network-http2.0.md)
+>
+>[计算机网络QUIC协议](https://github.com/crisxuan/bestJavaer/blob/master/computer-network/network-quic.md)
 
 HTTP 3.0 是 HTTP 协议的第三个主要版本，前两个分别是 HTTP 1.0 和 HTTP 2.0 ，但其实 HTTP 1.1 我认为才是真正的 HTTP 1.0。
 
@@ -26,6 +58,8 @@ HTTP 3.0 于 2022 年 6 月 6 日正式发布，IETF 把 HTTP 3.0 标准制定�
 
 ![image-20220715185929315](https://picturesforarticle.oss-cn-beijing.aliyuncs.com/img/image-20220715185929315.png)
 
+<div align = "center">图 17-1</div>
+
 TCP 的主要作用是以正确的顺序将整个字节流从一个端点传输到另一个端点，但是当流中的某些数据包丢失时，TCP 需要重新发送这些丢失的数据包，等到丢失的数据包到达对应端点时才能够被 HTTP 处理，这被称为 TCP 的队头阻塞问题。
 
 那么可能就会有人考虑到去修改 TCP 协议，其实这已经是一件不可能完成的任务了。因为 TCP 存在的时间实在太长，已经充斥在各种设备中，并且这个协议是由操作系统实现的，更新起来不大现实。
@@ -33,6 +67,8 @@ TCP 的主要作用是以正确的顺序将整个字节流从一个端点传输�
 基于这个原因，**Google 就更起炉灶搞了一个基于 UDP 协议的 QUIC 协议，并且使用在了 HTTP/3 上**，HTTP/3 之前名为 HTTP-over-QUIC，从这个名字中我们也可以发现，HTTP/3 最大的改造就是使用了 QUIC。
 
 ![image-20220715191041133](https://picturesforarticle.oss-cn-beijing.aliyuncs.com/img/image-20220715191041133.png)
+
+<div align = "center">图 17-2</div>
 
 ## QUIC 协议
 
@@ -43,6 +79,8 @@ QUIC 的小写是 quic，谐音 quick，意思就是`快`。它是 Google 提出
 我们大家知道，HTTP 协议在传输层是使用了 TCP 进行报文传输，而且 HTTPS 、HTTP/2.0 还采用了 TLS 协议进行加密，这样就会导致三次握手的连接延迟：即 TCP 三次握手（一次）和 TLS 握手（两次），如下图所示。
 
 ![image-20220317213125577](https://tva1.sinaimg.cn/large/e6c9d24ely1h0d7crqxlkj213b0u0jww.jpg)
+
+<div align = "center">图 17-3</div>
 
 对于很多短连接场景，这种握手延迟影响较大，而且无法消除。毕竟 RTT 是人类和效率的终极斗争。
 
@@ -62,6 +100,8 @@ TCP 一般采用的是**自适应重传算法**，这个超时时间会根据往
 
 ![image-20220318092115994](https://tva1.sinaimg.cn/large/e6c9d24ely1h0drvdgzb3j21510u0wh7.jpg)
 
+<div align = "center">图 17-4</div>
+
 比如有一个 PN = 10 的数据包在发送的过程中由于某些原因迟迟没到服务器，那么客户端会重传一个 PN = 11 的数据包，经过一段时间后客户端收到 PN = 10 的响应后再回送响应报文，此时的 RTT 就是 PN = 10 这个数据包在网络中的生存时间，这样计算相对比较准确。
 
 >虽然 QUIC 保证了数据包的可靠性，但是数据的可靠性是如何保证的呢？
@@ -69,6 +109,8 @@ TCP 一般采用的是**自适应重传算法**，这个超时时间会根据往
 QUIC 引入了一个 *stream offset* 的概念，一个 stream 可以传输多个 stream offset，每个 stream offset 其实就是一个 PN 标识的数据，即使某个 PN 标识的数据丢失，PN + 1 后，它重传的仍旧是 PN 所标识的数据，等到所有 PN 标识的数据发送到服务器，就会进行重组，以此来保证数据可靠性。到达服务器的 stream offset 会按照顺序进行组装，这同时也保证了数据的顺序性。
 
 ![image-20220318102638665](https://tva1.sinaimg.cn/large/e6c9d24ely1h0dtrehfv1j21ay0u0djl.jpg)
+
+<div align = "center">图 17-5</div>
 
 众所周知，TCP 协议的具体实现是由操作系统内核来完成的，应用程序只能使用，不能对内核进行修改，随着移动端和越来越多的设备接入互联网，性能逐渐成为一个非常重要的衡量指标。虽然移动网络发展的非常快，但是用户端的更新却非常缓慢，我仍然看见有很多地区很多计算机还仍旧使用 xp 系统，尽管它早已发展了很多年。服务端系统不依赖用户升级，但是由于操作系统升级涉及到底层软件和运行库的更新，所以也比较保守和缓慢。
 
@@ -96,5 +138,7 @@ TCP 协议头部没有经过加密和认证，所以在传输的过程中很可�
 
 QUCI 协议已经被写在了 [RFC 9000](https://datatracker.ietf.org/doc/html/rfc9000) 中。
 
+![image-20210717083948590](https://tva1.sinaimg.cn/large/008i3skNly1gsjnhb9f5xj319s0tsn4g.jpg)
 
+![image-20210717084050334](https://tva1.sinaimg.cn/large/008i3skNly1gsjnidv1r3j315s0fs40g.jpg)
 

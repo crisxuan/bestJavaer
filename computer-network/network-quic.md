@@ -170,5 +170,6 @@ quic-go 是完全用 go 写的 QUIC 协议栈，开发很活跃，已在 Caddy �
 那么，对于中小团队或个人开发者来说，比较推荐的方案是最后一个，即采用 [caddy](https://github.com/mholt/caddy/wiki/QUIC) https://github.com/caddyserver/caddy/wiki/QUIC 来部署实现 QUIC。[caddy](https://github.com/mholt/caddy/wiki/QUIC) 这个项目本意并不是专门用来实现 QUIC 的，它是用来实现一个免签的 HTTPS web 服务器的（caddy 会自动续签证书）。而QUIC 只是它的一个附属功能（不过现实是——好像用它来实现 QUIC 的人更多）。
 
 从 Github 的技术趋势来说，有关 QUIC 的开源资源越来越多，有兴趣可以自已逐一研究研究：[https://github.com/search?q=quic](https://github.com/search%3Fq%3Dquic)
+![image-20210717083948590](https://tva1.sinaimg.cn/large/008i3skNly1gsjnhb9f5xj319s0tsn4g.jpg)
 
-​	
+![image-20210717084050334](https://tva1.sinaimg.cn/large/008i3skNly1gsjnidv1r3j315s0fs40g.jpg)
