@@ -38,7 +38,7 @@ Ada 被誉为世界上第一个女程序员。她是编程历史上的一位传�
 
 在 1842-43 年的九个月期间，Ada 翻译了意大利数学家[Luigi Menabrea ](https://en.wikipedia.org/wiki/Luigi_Menabrea)关于巴贝奇最新提出的机器[分析引擎](https://en.wikipedia.org/wiki/Analytical_Engine)的文章，并在文章中加满了她自己的理解和注释。
 
-![image-20220728203402995](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20220728203402995.png)
+![image-20220815220201404](https://picturesforarticle.oss-cn-beijing.aliyuncs.com/img/image-20220815220201404.png)
 
 由于解释分析引擎的功能是一项艰巨的任务；许多其他科学家没有掌握这个概念，英国机构对此也没有表现出什么兴趣，所以这项工作在当时社会是一项不切实际的任务。Ada 的这份笔记是计算机发展历史上一个重要的里程碑，它超越了这个时代，才得以使后来人们站在巨人的肩膀上窥探计算机的全貌。
 
