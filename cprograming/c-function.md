@@ -1,6 +1,17 @@
 # C 函数与程序控制
 
-[toc]
+* [C 函数与程序控制](#c-函数与程序控制)
+   * [函数创建以及使用](#函数创建以及使用)
+      * [函数参数](#函数参数)
+      * [函数返回值](#函数返回值)
+      * [函数类型](#函数类型)
+      * [函数声明](#函数声明)
+   * [程序控制语句](#程序控制语句)
+      * [while 循环](#while-循环)
+      * [for 循环](#for-循环)
+      * [do while 循环](#do-while-循环)
+      * [break 和 continue](#break-和-continue)
+   * [总结](#总结)
 
 下面我们来介绍一下 C 语言中一个非常重要的概念 - **函数 ( function ) **。首先就要先给函数下一个定义，函数就是完成特定任务的独立代码单元，这也就是说，一个函数肯定是要为了完成某种功能的，比如一个函数它能够执行加法运算，比如一个函数能交换两个数的值，还有一些函数可能只是为了打印某些东西等等。
 
@@ -254,7 +265,7 @@ int main()
 
 流程图如下：
 
-![image-20220702140030097](https://picturesforarticle.oss-cn-beijing.aliyuncs.com/img/image-20220702140030097.png)
+<img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h5pzrnevjpj20uq0qkdh5.jpg" alt="image-20220831154256661" style="zoom:50%;" />
 
 在 while 循环中的一个关键点就是进入 while 循环的判断，上面代码就是判断 i <= 10 ，这个表达式是关系运算符的一种。
 
@@ -309,7 +320,7 @@ for(表达式1;表达式2;表达式3)
 
 for 循环的流程图如下
 
-![image-20220702140102959](https://picturesforarticle.oss-cn-beijing.aliyuncs.com/img/image-20220702140102959.png)
+<img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h5pzy92jkoj20pe0zgdhl.jpg" alt="image-20220831154916371" style="zoom:50%;" />
 
 ### do while 循环
 
@@ -343,7 +354,7 @@ while ( 表达式 );
 
 do ... while 循环的流程图如下
 
-![image-20220702140126953](https://picturesforarticle.oss-cn-beijing.aliyuncs.com/img/image-20220702140126953.png)
+<img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h5q01vu3ffj20h80s4wff.jpg" alt="image-20220831155246143" style="zoom:50%;" />
 
 到现在为止， C 语言中的程序控制语句我们都了解了，那么该如何进行选择呢？
 
@@ -413,5 +424,4 @@ int main(void)
 这篇文章我主要和你聊了聊 C 语言中的函数，函数定义、函数返回值、参数以及程序控制流程中的三类循环的特点以及选型，最后又介绍了一下 break 和 continue 的作用。
 
 如果文章对你有帮助，还请各位小伙伴们三连支持哦！
-
 
