@@ -188,7 +188,6 @@
 * [全面了解 HTTPS](https://github.com/crisxuan/bestJavaer/blob/master/http/http-https.md)
 * [全面了解 Cookies、Session 和 Token](https://github.com/crisxuan/bestJavaer/blob/master/http/http-cookesessiontoken.md)
 * [图解 HTTP 连接管理](https://github.com/crisxuan/bestJavaer/blob/master/http/http-manageconnection.md)
-* [HTTP 2.0]()
 
 ## Linux 系列
 
@@ -218,6 +217,7 @@
 
 * [C 语言基础入门](https://github.com/crisxuan/bestJavaer/blob/master/cprograming/c-basic.md)
 * [C 语言数据](https://github.com/crisxuan/bestJavaer/blob/master/cprograming/c-data.md)
+* [C 函数与程序控制](https://github.com/crisxuan/bestJavaer/blob/master/cprograming/c-function.md)
 
 ## MyBatis
 
