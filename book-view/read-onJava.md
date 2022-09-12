@@ -38,7 +38,7 @@
 
 搞 Java 的应该都很清楚，国内还有一位周姓大佬写出来的深入理解 JVM 相关书籍至今无人超越，想要深入 JVM，那本书是你必看的经典。
 
-![image-20220530215914953](https://picturesforarticle.oss-cn-beijing.aliyuncs.com/img/image-20220530215914953.png)
+![image-20220912222128214](https://tva1.sinaimg.cn/large/e6c9d24egy1h646q4ee2uj20io0dkgoh.jpg)
 
 还有一个问题是这本书的很多代码命名不太规范，比如常见的 A()，B()，C()，f() 等方法命名，Parcel 1 - 11 类的命名（虽然我承认这对阅读有非常大的帮助），A B 等类的命名等。
 
