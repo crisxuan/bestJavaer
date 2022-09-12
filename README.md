@@ -6,6 +6,10 @@
 >此项目无法和 Dubbo 等开源框架相提并论，请读者不要盲目崇拜，此项目只是作者近来的读书、学习笔记总结。如果你 `star` 一下我会很高兴的。
 >
 >**本仓库仅供学习使用，商业用途请联系作者 (微信： lx252279279 )**
+>
+>欢迎关注作者的微信公众号「程序员cxuan」，关注公众号回复「cxuan」给你分享作者硬肝的六本 PDF，回复「网络」可以获取笔者总结的网络 PDF。
+>
+>![](https://z3.ax1x.com/2020/12/11/rkf8A0.jpg)
 
 ![image-20210718221749417](https://tva1.sinaimg.cn/large/008i3skNgy1gslgqsilcpj317406adfw.jpg)
 
@@ -377,13 +381,6 @@ TODO
 * [腾讯内推](https://github.com/crisxuan/bestJavaer/blob/master/interview-jd/tencent.md)
 * [新奥内推](https://github.com/crisxuan/bestJavaer/blob/master/interview-jd/xinao.md)
 * [美团内推](https://github.com/crisxuan/bestJavaer/blob/master/interview-jd/meituan.md)
-
-
-## 欢迎关注
-
-欢迎关注作者的微信公众号「程序员cxuan」，关注公众号回复「cxuan」给你分享作者硬肝的六本 PDF，回复「网络」可以获取笔者总结的网络 PDF。
-
-![](https://z3.ax1x.com/2020/12/11/rkf8A0.jpg)
 
 
 
