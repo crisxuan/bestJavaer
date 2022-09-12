@@ -1,9 +1,15 @@
 # 成为一个更好的Java程序员
-这是一个成为更好的 `Java 程序员`的系列教程
+这是一个成为更好的 `Java 程序员`的系列教程（微信搜索：程序员cxuan）
 
->声明：这是完全手写的仓库，不严谨的地方请告知作者。
+>声明：这是完全手写的仓库，不严谨的地方请提出 ISSUE 或者 PR，作者会及时处理。
 >
->此项目无法和 Dubbo 等开源框架相提并论，请读者不要盲目崇拜，此项目只是作者近来的读书、学习笔记总结。如果你 `star` 一下我会很高兴的。
+>此项目无法和 Dubbo 等开源框架相提并论，请读者不要盲目崇拜，此项目只是作者近来的读书、学习笔记总结。
+>
+>如果你 star 一下我会高兴一整天；
+>
+>如果你 fork 一下我会高兴一周；
+>
+>如果你 star + fork 我会爱上你的。
 >
 >**本仓库仅供学习使用，商业用途请联系作者 (微信： lx252279279 )**
 
@@ -354,7 +360,8 @@ TODO
 * [写给 25 岁的自己](https://github.com/crisxuan/bestJavaer/blob/master/aboutlife/cxuan-25yearsold.md)
 * [面试官和面试者在同一个群里是怎样的体验](https://github.com/crisxuan/bestJavaer/blob/master/aboutlife/interviewer-story.md)
 * [程序员的水平能有多低？](https://github.com/crisxuan/bestJavaer/blob/master/aboutlife/cxuan-lowprogrammer.md)
-* [自媒体技术的困境]{https://github.com/crisxuan/bestJavaer/blob/master/aboutlife/selfmedia-difficult.md}
+* [自媒体技术的困境](https://github.com/crisxuan/bestJavaer/blob/master/aboutlife/selfmedia-difficult.md)
+* [cxuan 结婚啦！！！](https://github.com/crisxuan/bestJavaer/blob/master/aboutlife/cxuan-marrige.md)
 
 ## 程序员
 
@@ -368,7 +375,7 @@ TODO
 
 * [如何评价《Java 并发编程艺术》这本书？](https://github.com/crisxuan/bestJavaer/blob/master/book-view/read-theArtOfJavaConcurrencyProgramming.md)
 
-
+* 如何评价《On Java 中文版这本书》？
 
 ## 内推计划
 
