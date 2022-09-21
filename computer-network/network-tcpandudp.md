@@ -4,7 +4,7 @@
 
 关于 TCP 和 UDP ，想必大家都看过一张这样的图。
 
-![image-20220818182534778](https://tva1.sinaimg.cn/large/e6c9d24ely1h5b3ewl3zqj206000w3ya.jpg)
+<img src="https://picturesforarticle.oss-cn-beijing.aliyuncs.com/img/image-20220831180906005.png" alt="image-20220831180906005" style="zoom:50%;" />
 
 有一个小姑娘在对着瓶口慢慢的喝水，下面写着可靠的传输，少女的衣服没有被水浸湿，这张图被称为 TCP 。
 
