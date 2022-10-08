@@ -56,7 +56,7 @@
 
 体系化的知识比零散的更容易记忆和理解，这正如一部好的电视剧，剧情环环相扣才能吸引观众。建议大家使用思维导图罗列知识点，构建体系结构，如下图所示：
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/libYRuvULTdVJnianau1DBNcCpM1B0QrpmRMTNOHvhjJTWs1aBUGcqlicIsGMZYNFBfmvcPQetp9jiaNicHgTicwNRnw/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![image-20220923211016855](https://tva1.sinaimg.cn/large/e6c9d24ely1h6guhex9v4j20nl10rq5m.jpg)
 
 ### 克服遗忘
 
