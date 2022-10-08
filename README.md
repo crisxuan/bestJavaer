@@ -362,6 +362,7 @@ TODO
 * [程序员的水平能有多低？](https://github.com/crisxuan/bestJavaer/blob/master/aboutlife/cxuan-lowprogrammer.md)
 * [自媒体技术的困境](https://github.com/crisxuan/bestJavaer/blob/master/aboutlife/selfmedia-difficult.md)
 * [cxuan 结婚啦！！！](https://github.com/crisxuan/bestJavaer/blob/master/aboutlife/cxuan-marrige.md)
+* [cxuan 国庆的躺平经历](https://github.com/crisxuan/bestJavaer/blob/master/aboutlife/cxuan-nationalday.md)
 
 ## 程序员
 
@@ -375,7 +376,7 @@ TODO
 
 * [如何评价《Java 并发编程艺术》这本书？](https://github.com/crisxuan/bestJavaer/blob/master/book-view/read-theArtOfJavaConcurrencyProgramming.md)
 * [如何评价《On Java 中文版》这本书？](https://github.com/crisxuan/bestJavaer/blob/master/book-view/read-onJava.md)
-* 《CSAPP》是一本什么书？
+* [《CSAPP》是一本什么书？](https://github.com/crisxuan/bestJavaer/blob/master/book-view/read-csapp.md)
 
 ## 内推计划
 
