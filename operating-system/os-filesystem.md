@@ -969,6 +969,8 @@ https://www.computerhope.com/jargon/r/regular-file.htm
 
 https://baike.baidu.com/item/固态硬盘/453510?fr=aladdin
 
+https://www.scaler.com/topics/directory-structure-in-os/
+
 《现代操作系统》第四版
 
 《Modern Operation System》fourth
