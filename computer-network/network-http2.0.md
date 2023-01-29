@@ -80,17 +80,13 @@ HTTP 还有一个被抱怨最多的问题就是它的**队头阻塞(head of bloc
 
 假如有五个请求被同时发出，如果第一个请求没有处理完成，就会导致后续的请求也无法得到处理，如下图所示
 
-<img src="https://tva1.sinaimg.cn/large/008i3skNly1gtwaiussdmj60vv0u00u602.jpg" alt="image-20210828102427830" style="zoom:50%;" />
-
-<div align = "center">图 15-1</div>
+![](http://www.cxuan.vip/image-20230128083935650.png)
 
 如果第一个请求没有被处理，那么 2 3 4 5 这四个请求会直接阻塞在客户端，等到请求 1 被处理完毕后，才能逐个发出。网络通畅的时候性能影响不大，不过一旦请求 1 因为某些原因没有抵达服务器，或者请求因为网络阻塞没有及时返回，影响的就是所有后续请求，导致后续请求无限阻塞下去，问题就变得比较严重了。
 
-不过在 HTTP 1.1 中，也提出了**流水线(pipelining)**的设计，pipelining 就被用来解决队头阻塞的问题，如下图所示
+不过在 HTTP 1.1 中，也提出了**流水线(pipelining)** 的设计，pipelining 就被用来解决队头阻塞的问题，如下图所示
 
-![image-20210828151722164](https://tva1.sinaimg.cn/large/008i3skNly1gtwizoqqftj61150u0tbr02.jpg)
-
-<div align = "center">图 15-2</div>
+![](http://www.cxuan.vip/image-20230128083956912.png)
 
 虽然这种流水线的设计乍一看像是能够解决阻塞问题，因为右图中这三个请求没有等到响应到达后再进行发送，而是直接依次发送，但是实际上，并不是那么回事。
 
@@ -119,9 +115,7 @@ SPDY 的目标在于解决 HTTP 的缺陷，即延迟和安全性。我们上面
 
 为了增加解决这些问题的可行性，聪明的 Google 一开始就避开了从传输层动手，而且打算利用开源社区的力量以提高扩散的力度，对于协议使用者来说，也只需要在请求的 header 里设置 user agent，然后在服务端做好支持即可，极大的降低了部署的难度。SPDY 的设计如下
 
-<img src="https://tva1.sinaimg.cn/large/008i3skNly1gtwuwt5v1dj60v00myab002.jpg" alt="image-20210828220948867" style="zoom:50%;" />
-
-<div align = "center">图 15-3</div>
+![](http://www.cxuan.vip/image-20230128084021882.png)
 
 可以看到，SPDY 位于 HTTP 之下，SSL 之上，这样可以轻松的兼容老版本的 HTTP 协议，SPDY 的功能分为基础功能和高级功能两部分，基础功能是默认启用的，高级功能需要手动启用。
 
@@ -163,17 +157,13 @@ HTTP 1.x 的诞生使用的是`明文`协议，它的格式主要由三部分构
 
 下面这幅图很好的诠释了 HTTP1.x 和 HTTP 2.0 使用的不同报文格式。
 
-![image-20210829114232831](https://tva1.sinaimg.cn/large/008i3skNly1gtxiege2ktj60kr0dhdgl02.jpg)
-
-<div align = "center">图 15-4</div>
+![](http://www.cxuan.vip/image-20230128084041119.png)
 
 在 HTTP 2.0 报文中，length 定义了整个 *frame* 的开始到结束，type 定了 frame 的类型，一种有十种，flags 定义了一些重要的参数，stream id 用作流控制，剩下的 payload 就是 request 的正文。
 
 虽然 HTTP 2.0 报文格式看上去和 HTTP 1.x 的完全不同，但是实际上 HTTP 2.0 并没有改变 HTTP 1.x 的语义，它只是在 HTTP 1.x 的基础上封装了一层，如下图所示
 
-![image-20210829120754200](https://tva1.sinaimg.cn/large/008i3skNly1gtxj4unh04j60nh0f7myc02.jpg)
-
-<div align = "center">图 15-5</div>
+![](http://www.cxuan.vip/image-20230128084105375.png)
 
 从上图可以看到，HTTP 1.x 中的请求行、请求头被 HTTP 2.0 封装成为了 *HEADERS Frame*，而 HTTP 1.x 中的报文体被 HTTP 2.0 封装成为了 *Data Frame*。调试的时候浏览器甚把 HTTP 2.0 的 frame 自动还原成HTTP 1.x的格式。
 
@@ -181,9 +171,7 @@ HTTP 1.x 的诞生使用的是`明文`协议，它的格式主要由三部分构
 
 我们上面聊到，HTTP 1.x 并没有真正意义上的解决连接复用问题，所以 HTTP 2.0 要解决的一大难题就是**连接共享(MultiPlexing)**，连接共享意味着客户端与服务器之间也只需要一个连接即可，这样即使来自很多流的数据包也能够混合在一起通过同样连接传输，再根据不同帧首部的 stream id 标识符重新连接将不同的数据流进行组装。
 
-![image-20210831221340797](https://tva1.sinaimg.cn/large/008i3skNly1gu0bvqr1f2j60mo05jq3c02.jpg)
-
-<div align = "center">图 15-6</div>
+![](http://www.cxuan.vip/image-20230128084128211.png)
 
 >什么是 stream？
 
@@ -221,7 +209,6 @@ HTTP 2.0 带给我们最惊艳的莫过于多路复用了，虽然多路复用�
 
 这篇文章我们主要聊了一下 HTTP从1.x 到 SPDY，再到 HTTP 2.0 的协议变迁以及 HTTP 1.0、1.1 的痛点和弊端，SPDY 的出现背景以及发现情况，然后 HTTP 2.0 的主要特征、HTTP 2.0 相对于 HTTP 1.x 有了哪些改变，它的缺点有哪些。
 
-![image-20210717083948590](https://tva1.sinaimg.cn/large/008i3skNly1gsjnhb9f5xj319s0tsn4g.jpg)
+如果你在阅读文章的过程中发现错误和问题，请及时与我联系！
 
-![image-20210717084050334](https://tva1.sinaimg.cn/large/008i3skNly1gsjnidv1r3j315s0fs40g.jpg)
-
+如果文章对你有帮助，希望小伙伴们三连走起！

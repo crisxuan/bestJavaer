@@ -43,9 +43,7 @@
 
 数据链路层，按照 OSI 七层模型来划分的话，就属于物理层的上层
 
-<img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3efay8pt3j20bk0mo3ze.jpg" alt="image-20220620085210383" style="zoom:50%;" />
-
-<div align = "center">图 6-1</div>
+![](http://www.cxuan.vip/image-20230123172337770.png)
 
 数据链路层是一种协议层，它有很多协议。数据链路层**用于跨物理层在网段节点之间传输数据**，通常指以太网、无线局域网等通信手段。数据链路层提供了在网络的两个实体之间传输数据的功能，并且提供了差错检测用于纠正物理层中发生的错误。
 
@@ -57,9 +55,9 @@
 
 #### 打包成帧
 
-*打包成帧(framing)*: 有的书中称为封装成帧，概念其实是一样的。每个数据报在传输之前，链路层协议都会在一段数据的前后添加首部和尾部，这样就构成了一个帧。帧是数据链路层的传输单元。
+**打包成帧(framing)**: 有的书中称为封装成帧，概念其实是一样的。每个数据报在传输之前，链路层协议都会在一段数据的前后添加首部和尾部，这样就构成了一个帧。帧是数据链路层的传输单元。
 
-一个帧的帧长等于帧的数据部分（Payload Field）加上帧首部（Header）和帧尾部（Trailer）长度。首部和尾部的主要功能就是用于**帧定界**，在发送帧时，会从帧首进行发送，所以为了提高传输效率，**应当使帧的数据部分长度尽可能大于首部和尾部的长度**。但是这个长度也不是没有边界的，链路层也规定了一个数据部分的上限，即*最大传输单元（MTU, Maximum Transfer Unit）*。
+一个帧的帧长等于帧的数据部分（Payload Field）加上帧首部（Header）和帧尾部（Trailer）长度。首部和尾部的主要功能就是用于**帧定界**，在发送帧时，会从帧首进行发送，所以为了提高传输效率，**应当使帧的数据部分长度尽可能大于首部和尾部的长度**。但是这个长度也不是没有边界的，链路层也规定了一个数据部分的上限，即**最大传输单元（MTU, Maximum Transfer Unit）**。
 
 帧定界符还有一个非常重要的作用就是它能够被检测出来是否是一个完整的帧，如果不是一个完整的帧，必须丢弃。
 
@@ -69,9 +67,7 @@
 
 网络层数据报就封装在*Payload Field*字段中。根据不同的物理介质，每个帧的结构也不同。帧的组成如下。
 
-![image-20220620204500208](https://picturesforarticle.oss-cn-beijing.aliyuncs.com/img/image-20220620204500208.png)
-
-<div align = "center">图 6-2</div>
+![](http://www.cxuan.vip/image-20230123172439971.png)
 
 帧中主要涉及的内容如下。
 
@@ -82,9 +78,7 @@
 
 Flag 位位于帧的开头和结尾，两个连续的标志指示帧的结束和开始。
 
-![](https://picturesforarticle.oss-cn-beijing.aliyuncs.com/img/image-20220620204524849.png)
-
-<div align = "center">图 6-3</div>
+![](http://www.cxuan.vip/image-20230123172452190.png)
 
 帧的类型主要有两种，固定大小的帧和可变大小的帧。
 
@@ -99,11 +93,9 @@ Flag 位位于帧的开头和结尾，两个连续的标志指示帧的结束和
 
 #### 链路接入
 
-链路接入主要指的是 MAC 协议，*MAC(Medium Access Control)*协议规定了帧在链路上的传输规则。我们知道，数据链路层是 OSI 标准模型的第二层，它还能够向下分为 *The logical link control (LLC)* 层和*The medium access control (MAC)* 层。
+链路接入主要指的是 MAC 协议，**MAC(Medium Access Control)** 协议规定了帧在链路上的传输规则。我们知道，数据链路层是 OSI 标准模型的第二层，它还能够向下分为 *The logical link control (LLC)* 层和*The medium access control (MAC)* 层。
 
-![image-20220509161801777](https://tva1.sinaimg.cn/large/e6c9d24ely1h228545iozj212u0tqmzq.jpg)
-
-<div align = "center">图 6-4</div>
+![image-20230123172527036](http://www.cxuan.vip/image-20230123172527036.png)
 
 LLC 层又叫做**逻辑控制链路层**，主要用于数据传输，它充当网络层和数据链路层中的媒体访问控制（MAC）子层之间的接口。LLC 层的主要功能如下
 
@@ -121,15 +113,11 @@ MAC 层负责传输介质的流控制和多路复用，它的主要功能如下
 
 在 MAC 层中，有一个非常关键的概念就是 MAC 地址。MAC 地址主要用于识别数据链路中互联的节点，如下图所示
 
-![image-20220509161825475](https://tva1.sinaimg.cn/large/e6c9d24ely1h2285ja3j2j21ai0lejuw.jpg)
-
-<div align = "center">图 6-5</div>
+![](http://www.cxuan.vip/image-20230123172559033.png)
 
 MAC 地址长 48 bit，在使用*网卡(NIC)*的情况下，MAC 地址一般都会烧入 ROM 中。因此，任何一个网卡的 MAC 地址都是唯一的。MAC 地址的结构如下。
 
-![image-20220509161836765](https://tva1.sinaimg.cn/large/e6c9d24ely1h2285ppsonj21320hajv5.jpg)
-
-<div align = "center">图 6-6</div>
+![](http://www.cxuan.vip/image-20230123172614191.png)
 
 MAC 地址中的 3 - 24 位表示厂商识别码，每个 NIC 厂商都有特定唯一的识别数字。25 - 48 位是厂商内部为识别每个网卡而用。因此，可以保证全世界不会有相同 MAC 地址的网卡。
 
@@ -141,9 +129,7 @@ MAC 地址中的 3 - 24 位表示厂商识别码，每个 NIC 厂商都有特定
 
 链路层的可靠交付通常用于出错率很高的链路，例如无线链路，它的目的是在本地纠正出错的帧，而不是通过运输层或应用层协议强制进行端到端的数据传输。对于出错率较低的链路，比如光纤、同轴电缆和双绞线来说，链路层的交付开销是没有必要的，由于这个原因，这些链路通常不提供可靠的交付。
 
-![image-20220509162429585](https://tva1.sinaimg.cn/large/e6c9d24ely1h228buel7dj21ku0iowie.jpg)
-
-<div align = "center">图 6-6</div>
+![](http://www.cxuan.vip/image-20230123172638149.png)
 
 #### 差错检测和纠正
 
@@ -189,23 +175,17 @@ MAC 地址中的 3 - 24 位表示厂商识别码，每个 NIC 厂商都有特定
 
 #### 争用
 
-争用是发生在共享介质，*载波监听多路访问(CSMA)* 上的数据访问方式。在这种访问方式下，网络中各个介质会采用**先到先得**的方式占用载波信道发送数据。如果多个介质同时发送帧，就势必会产生冲突，继而导致通信性能的下降和网络拥堵。下面是争用的处理方式。
+争用是发生在共享介质，**载波监听多路访问(CSMA)** 上的数据访问方式。在这种访问方式下，网络中各个介质会采用**先到先得**的方式占用载波信道发送数据。如果多个介质同时发送帧，就势必会产生冲突，继而导致通信性能的下降和网络拥堵。下面是争用的处理方式。
 
-![image-20220509162923544](https://tva1.sinaimg.cn/large/e6c9d24ely1h228gxw1bhj21em0k6gnf.jpg)
-
-<div align = "center">图 6-7</div>
+![](http://www.cxuan.vip/image-20230123205008029.png)
 
 如上图所示，假如 A 想要给 C 发送数据，那么介质 A 会在确认周围没有其他介质要给 C 发送数据后，也就是经过一段时间后，A 会把数据马上发送给 C。
 
-![image-20220509162935491](https://tva1.sinaimg.cn/large/e6c9d24ely1h228h4ycm3j21go0kq0vx.jpg)
-
-<div align = "center">图 6-8</div>
+![](http://www.cxuan.vip/image-20230123205026783.png)
 
 每个介质在接受到 A 发送的数据后，会从 A 报文中解析出来 MAC 地址判断是否是发送给自己的数据包，如果不是的话就是丢弃这条数据。
 
-![image-20220509162954445](https://tva1.sinaimg.cn/large/e6c9d24ely1h228hgyarmj21ls0jqq4r.jpg)
-
-<div align = "center">图 6-9</div>
+![](http://www.cxuan.vip/image-20230123205044816.png)
 
 上面这种方式会使用在一部分以太网中，但是另外一部分以太网却使用了 CSMA 的改良方式 - CSMA/CD 。CSMA/CD 会要求每个介质提前检查一下链路上是否有可能产生冲突的现象，一旦发生冲突，那么尽可能早地释放信道。它的具体工作原理大致如下：
 
@@ -215,17 +195,13 @@ MAC 地址中的 3 - 24 位表示厂商识别码，每个 NIC 厂商都有特定
 
 下面是 CSMA/CD 的改良版。
 
-![image-20220509163031354](https://tva1.sinaimg.cn/large/e6c9d24ely1h228i3w48zj21f00g6q4u.jpg)
-
-<div align = "center">图 6-10</div>
+![](http://www.cxuan.vip/image-20230123205153861.png)
 
 上图这个过程是 *CSMA(Carrier Sense Multiple Access)*，首先介质会监控载波信道上是否有数据存在，如果没有再发送，如果有，等一段时间再发送。
 
 下面是 *CD(Collision Detection)* 的示意图。
 
-![image-20220509163044957](https://tva1.sinaimg.cn/large/e6c9d24ely1h228icfz7dj21fg0fudhh.jpg)
-
-<div align = "center">图 6-11</div>
+![](http://www.cxuan.vip/image-20230123205216988.png)
 
 * 在发送数据 -> 发送完成后，如果电压一直处于规定范围内，就会认为数据已经正常发送。
 * 发送途中，如果电压超过了一定范围，就会认为是数据冲突。
@@ -244,27 +220,19 @@ MAC 地址中的 3 - 24 位表示厂商识别码，每个 NIC 厂商都有特定
 
 下面是令牌的传递示意图。
 
-<img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h228in4jgrj20wv0u00u2.jpg" alt="image-20220509163101820" style="zoom:50%;" />
-
-<div align = "center">图 6-12</div>
+![](http://www.cxuan.vip/image-20230123205241090.png)
 
 最一开始，令牌位于介质 A 处，此时介质 A 拥有数据传输的能力，然后介质 A 把令牌传递给介质 B。
 
-<img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h228ixe4ylj20zo0u076z.jpg" alt="image-20220509163117881" style="zoom:50%;" />
-
-<div align = "center">图 6-13</div>
+![](http://www.cxuan.vip/image-20230123205303746.png)
 
 此时 B 持有令牌，所以介质 B 具有发送数据的能力。
 
-<img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h228j6hmmlj214l0u0whk.jpg" alt="image-20220509163132896" style="zoom:50%;" />
-
-<div align = "center">图 6-14</div>
+![](http://www.cxuan.vip/image-20230123205322532.png)
 
 这个数据最终会由 D 接收，然后 D 就会设置一个已接收数据的标志位，然后数据会继续向下发送。
 
-<img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h228ji0fesj214s0u0whf.jpg" alt="image-20220509163151168" style="zoom:50%;" />
-
-<div align = "center">图 6-15</div>
+![](http://www.cxuan.vip/image-20230123205347404.png)
 
 令牌环是一项很成功的技术，尤其是在公司环境中使用，但后来被更高版本的以太网所取代。
 
@@ -276,19 +244,15 @@ MAC 地址中的 3 - 24 位表示厂商识别码，每个 NIC 厂商都有特定
 
 在这种方式下，网络中的每个介质会直接连上交换机，由交换机来转发数据帧。发送端和接收端不会共享通信介质，共享通信介质的意思就是介质之间直接通信。这种网络传输方式一般采用的是全双工通信。
 
-非共享介质型网络比较适合应用于搭建*虚拟局域网(VLAN)*，但是这种通信方式有一个及其致命的弱点：一旦交换机发生故障，那么与交换机相连的所有计算机都无法通信。
+非共享介质型网络比较适合应用于搭建**虚拟局域网(VLAN)**，但是这种通信方式有一个及其致命的弱点：一旦交换机发生故障，那么与交换机相连的所有计算机都无法通信。
 
 下面是非共享介质型网络的通信示意图。
 
-![image-20220509163206274](https://tva1.sinaimg.cn/large/e6c9d24ely1h228jr2t7uj21ko0r441g.jpg)
-
-<div align = "center">图 6-16</div>
+![](http://www.cxuan.vip/image-20230123205406214.png)
 
 如图所示，主机 A 发送了一个目标地址为 B，源地址为 A 的交换机，由交换机负责将数据转发给介质 B，如下图所示
 
-![image-20220509163215352](https://tva1.sinaimg.cn/large/e6c9d24ely1h228jwquy1j21eh0u0wii.jpg)
-
-<div align = "center">图 6-17</div>
+![](http://www.cxuan.vip/image-20230123205447730.png)
 
 非共享型网络是一种全双工通信的方式，每个介质在发送数据的同时也能够接受来自交换机传递过来的数据。
 
@@ -302,15 +266,11 @@ MAC 地址中的 3 - 24 位表示厂商识别码，每个 NIC 厂商都有特定
 
 以太网交换机中的各个端口会根据介质的 MAC 地址来转发数据，那么转发数据肯定得有所依靠啊，这时可以参考的表就叫做*转发表(Forwarding Table)*，转发表中记录着每个介质的 MAC 地址。转发表不需要我们手动维护，交换机会自动维护转发表。交换机会自学每个数据包的经过介质的 MAC 地址，如下图所示
 
-![image-20220509163230442](https://tva1.sinaimg.cn/large/e6c9d24ely1h228k65iscj21hy0tkdk8.jpg)
-
-<div align = "center">图 6-19</div>
+![](http://www.cxuan.vip/image-20230123205512365.png)
 
 由于不知道主机 B 的 MAC 地址，所以主机 A 发送的数据会经过交换机广播给以太网内的其他主机，主机 B 接收到数据后，会给主机 A 回送消息。
 
-![image-20220509163243019](https://tva1.sinaimg.cn/large/e6c9d24ely1h228ke2gs9j21h80sg781.jpg)
-
-<div align = "center">图 6-20</div>
+![](http://www.cxuan.vip/image-20230123205532140.png)
 
 在主机 B 给主机 A 回送消息后，交换机就知道主机 A 和主机 B 的 MAC 地址了，从此以后双方通信会在各自相连的端口之间进行。
 
@@ -318,9 +278,7 @@ MAC 地址中的 3 - 24 位表示厂商识别码，每个 NIC 厂商都有特定
 
 在网络通信的过程中，由于网络链路的冗余或者路由线路冗余可能会造成`闭环`，也就是我们所称的`环路`。环路会导致数据报文在网络中不断重复复制，最终导致网络设备负载过重，无法正常运行。影响的范围可能会扩散至整个局域网，导致整个局域网里的计算机无法正常使用网络。
 
-![image-20220509163257243](https://tva1.sinaimg.cn/large/e6c9d24ely1h228kmzrr2j21fw0u0adm.jpg)
-
-<div align = "center">图 6-21</div>
+![](http://www.cxuan.vip/image-20230123205554052.png)
 
 >那么如何检测网络中出现的环路呢？
 
@@ -338,9 +296,7 @@ MAC 地址中的 3 - 24 位表示厂商识别码，每个 NIC 厂商都有特定
 
 >那么虚拟局域网究竟是什么呢？
 
-![image-20220509163324700](https://tva1.sinaimg.cn/large/e6c9d24ely1h228l4752kj216a0s8di3.jpg)
-
-<div align = "center">图 6-22</div>
+![](http://www.cxuan.vip/image-20230123205620209.png)
 
 如上图所示，交换机按照端口区分了多个网段，从而区分了广播数据的传播范围，提高网络安全性。然而异构的两个网段之间，需要利用具有路由功能的交换机才能实现通信。
 
@@ -358,9 +314,7 @@ MAC 地址中的 3 - 24 位表示厂商识别码，每个 NIC 厂商都有特定
 
 在以太网链路上的数据包被称为以太帧，以太帧开头有一个叫做*前导码(Preamble)* 的部分，它是由 0、1 数字交替组合而成。前导码的末尾最后是一个叫做 *SFD(Start Frame Delimiter)* 的域，值为 11。前导码与 SFD 共同占用 8 个字节。
 
-![image-20220509163337589](https://tva1.sinaimg.cn/large/e6c9d24ely1h228lc79z3j21f40ey0uo.jpg)
-
-<div align = "center">图 6-23</div>
+![](http://www.cxuan.vip/image-20230123213832613.png)
 
 >以太网最后 2 bit 称为 SDF，而 IEEE802.3 中将最后 8 bit 称为 SDF。
 >
@@ -368,15 +322,15 @@ MAC 地址中的 3 - 24 位表示厂商识别码，每个 NIC 厂商都有特定
 
 这是以太帧的前导码部分，下面是以太帧的本体部分。
 
-![image-20220509163351268](https://tva1.sinaimg.cn/large/e6c9d24ely1h228lkkxncj21e40jaadw.jpg)
+![](http://www.cxuan.vip/image-20230123213934612.png)
 
-<div align = "center">图 6-24</div>
+
 
 以太帧体格式也有两种，一种是以太帧格式，一种是 IEEE802.3 标准以太帧格式。
 
 在以太帧格式中，以太帧的本体的前端是以太网的首部，总共占用 14 字节，分别是 6 字节的目标 MAC 地址、6 字节的源 MAC 地址和 2 字节的上层协议类型，如下图抓包所示：
 
-![image-20220917222243958](https://tva1.sinaimg.cn/large/e6c9d24ely1h69yuup423j20qs04k3z0.jpg)
+![](http://www.cxuan.vip/image-20230123213914507.png)
 
 后面是数据部分，占用 46 - 1500 字节，最后是 *FCS (Frame Check Sequence，帧检验序列)* 4 个字节。FCS 用于检查帧是否有所损坏，因为在通信过程中由于噪声干扰，可能会导致数据出现乱码位，从而使接收方选择丢弃这个帧序列。
 
@@ -388,7 +342,7 @@ IEEE 802.3 以太帧的格式与一般以太网帧格式有所不同，一般以
 
 LLC 和 SNAP 可以再进行细分：
 
-![image-20220917224347971](https://tva1.sinaimg.cn/large/e6c9d24ely1h69zgrpr4yj20oq08rmy7.jpg)
+![](http://www.cxuan.vip/image-20230123213959537.png)
 
 其中 DSAP 表示目的访问节点，SSAP 表示源访问节点，CTRL 的值一般是 03 ，表示无连接服务的IEEE 802.3无编号数据格式。OUI 表示 3 字节的唯一标识符，通常就是 MAC 中的厂商代码，Type 表示以太网所携带的上层数据类型。
 
@@ -400,9 +354,7 @@ LLC 和 SNAP 可以再进行细分：
 
 由于网络上的数据发送频率和计算机总线上的频率不相同，因此在网卡中装有对数据进行缓存的存储芯片。在主板上插入适配器时，还要把适配器的驱动程序安装在操作系统中，这个驱动程序会告诉网卡应该将存储器（RAM/ROM）中的哪个位置进行存储，此外网卡还要实现以太网协议才能够发送数据。
 
-![image-20220509163443274](https://tva1.sinaimg.cn/large/e6c9d24ely1h228mhipj9j21g80p6jut.jpg)
-
-<div align = "center">图 6-25</div>
+![](http://www.cxuan.vip/image-20230123214312041.png)
 
 网卡在接收和发送帧时，不会和 CPU 直接打交道，这时候 CPU 仍然可以做自己的事情。当收到有差错的帧时，网卡会丢弃这个帧，而不必发送通知给 CPU；当网卡收到正确的帧后，就会触发中断来告诉计算机，并把数据向上交付给网络层。如果计算机要发送 IP 数据包时，就会将 IP 数据包交给网卡，封装成帧后再发送给局域网。
 
@@ -441,9 +393,7 @@ CHAP 虽然也使用的密码，但是这种密码是一次性密码，使用这
 
 PPP 帧格式分为首部、信息部分和尾部三个模块，如下图所示。
 
-![image-20220509163452432](https://tva1.sinaimg.cn/large/e6c9d24ely1h228mmz7i7j21la0iuaco.jpg)
-
-<div align = "center">图 6-26</div>
+![](http://www.cxuan.vip/image-20230123214332501.png)
 
 首部分为 5 个字节，分别是 F（0x7E）、A（0xFF）、C（0x03），这些各占用一个字节，然后是 2 个字节的协议，中间是信息部分，一般信息部分不超过 1500 字节，尾部是 FCS 占用两字节，F（0x7E）占用一个字节。首部和尾部的 F 分别表示着帧头和帧尾，用来标识整个 PPP 帧。
 
@@ -457,19 +407,17 @@ PPP 帧格式分为首部、信息部分和尾部三个模块，如下图所示�
 
 而 PPPoE 解决了 PPP 和以太网的痛点，PPPoE 通过对 PPP 帧进行封装，在实现点对点通信的基础上提供了身份验证、加密和压缩功能，而且 PPPoE 帧中还有一个 *Session_ID* 很好的保证了用户的安全性。下面是 PPPoE 的报文：
 
-![image-20220918112140621](https://tva1.sinaimg.cn/large/e6c9d24ely1h6alde68cwj20q20aidgv.jpg)
+![](http://www.cxuan.vip/image-20230123214420581.png)
 
 可以看到，PPPoE 新增了下面这些报文字段：Ver 为四位，表示 PPPoE 的版本，值为 0x1，Type 为四位，表示 PPPoE 的类型，值为 0x1，Code 表示 PPPoE 报文类型，Code域为 0x00，表示会话数据。Code域为 0x09，表示 PADI 报文；Code域为 0x07，表示 PADO 或 PADT 报文；Code 域为 0x19，表示 PADR 报文；Code 域为0x65，表示 PADS 报文。Session_ID 表示的是源地址和目的地址的会话 ID ，这个 ID 一般是固定的，最后 Length 是 2 字节，定义 PPPoE 的 Payload 域长度。不包括以太网头部和 PPPoE 头部的长度。
 
+## 后记
 
+这篇文章我为你介绍了计算机链路层的相关知识，链路层的作用以及相关链路层协议。
 
+如果你在阅读文章的过程中发现错误和问题，请及时与我联系！
 
-
-![image-20210717083948590](https://tva1.sinaimg.cn/large/008i3skNly1gsjnhb9f5xj319s0tsn4g.jpg)
-
-![image-20210717084050334](https://tva1.sinaimg.cn/large/008i3skNly1gsjnidv1r3j315s0fs40g.jpg)
-
-
+如果文章对你有帮助，希望小伙伴们三连走起！
 
 
 

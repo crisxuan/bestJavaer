@@ -131,7 +131,7 @@ mov [bx],al
 
 初始内存示意图：
 
-<img src="http://www.cxuan.vip/image-20230121120829367.png" alt="image-20230121120829367" style="zoom:50%;" />
+<img src="http://www.cxuan.vip/image-20230121120829367.png" style="zoom:50%;" />
 
 下面我们就按照每一行指令来分析一下
 
@@ -141,19 +141,19 @@ inc bx 就是将寄存器 bx 的值加 1，此处有两条 inc 指令，所以�
 
 然后下面 （第七行指令）mov [bx],ax 就是将 ax 中的数据送入到 [bx] 中，也就是 1002H 处，指令执行后，2000:1002 单元的内容为 BE，2000:1003 单元的内容为 00，存放字型数据，执行完成后的示意图如下
 
-<img src="http://www.cxuan.vip/image-20230121120840427.png" alt="image-20230121120840427" style="zoom:50%;" />
+<img src="http://www.cxuan.vip/image-20230121120840427.png" style="zoom:50%;" />
 
 继续执行第 8、9 行的指令，inc bx ，执行完成后 bx = 1004H，然后执行第 10 行指令 mov [bx],ax ，指令执行前： ds = 2000H，bx = 1004H，mov [bx],ax 相当于是把 ax 中的数据送到 2000:1004 处，指令执行完成后，2000:1004 的单元内容为 BE ，如下示意图所示
 
-<img src="http://www.cxuan.vip/image-20230121120852660.png" alt="image-20230121120852660" style="zoom:50%;" />
+<img src="http://www.cxuan.vip/image-20230121120852660.png" style="zoom:50%;" />
 
 接下来执行第 11 行指令，inc bx，执行完成后 bx = 1005H，mov [bx],al 是把 al 中的数据送入内存 2000:1005 处，指令执行完成后，2000:1005 处的单元内容为 BE，如下示意图所示
 
-<img src="http://www.cxuan.vip/image-20230121120905026.png" alt="image-20230121120905026" style="zoom:50%;" />
+<img src="http://www.cxuan.vip/image-20230121120905026.png" style="zoom:50%;" />
 
 继续执行指令，第13、14 行指令和 11 、12 行指令一样，它的意思就是将 bx 的值加一之后，将 al 的值送入到指定地址处，执行完成后的 ds = 2000H，bx = 1006H，所以 2000:1006 处的内容是 BE（al 存储的数据），示意图如下
 
-<img src="http://www.cxuan.vip/image-20230121120922281.png" alt="image-20230121120922281" style="zoom:50%;" />
+<img src="http://www.cxuan.vip/image-20230121120922281.png" style="zoom:50%;" />
 
 想必大家跟完上面的流程后，应该对 [bx] 这个间接寻址方式有了比较深刻的认识。
 
@@ -294,15 +294,11 @@ codesg ends
 end
 ```
 
-## 预告
+## 总结
 
-能滑到这里的都是真爱！！
+这篇文章我为你讲解了一下汇编语言中的 loop 循环是如何实现的。
 
-最近我正在汇总一个汇编语言的超清超全脑图，到时候等文章完结之后会免费给大家放出来可供学习，先来个预告版本：
+如果你在阅读文章的过程中发现错误和问题，请及时与我联系！
 
-![image-20230105222915414](https://p.ipic.vip/27h0w4.png)
-
-各位小伙伴们敬请期待下~！！！！
-
-如果文章对你有帮助，希望各位小伙伴们三连走起！
+如果文章对你有帮助，希望小伙伴们三连走起！
 

@@ -51,9 +51,7 @@
 
 假如有五个请求被同时发出，如果第一个请求没有处理完成，就会导致后续的请求也无法得到处理，如下图所示
 
-<img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h0gnda4fsqj20n70ohwfi.jpg" alt="image-20220320210209531" style="zoom: 67%;" />
-
-<div align = "center">图 16-1</div>
+![](http://www.cxuan.vip/image-20230128084711099.png)
 
 如果第一个请求没有被处理，那么 2 3 4 5 这四个请求会直接阻塞在客户端，等到请求 1 被处理完毕后，才能逐个发出。网络通畅的时候性能影响不大，不过一旦请求 1 因为某些原因没有抵达服务器，或者请求因为网络阻塞没有及时返回，影响的就是所有后续请求，导致后续请求无限阻塞下去，问题就变得比较严重了。
 
@@ -67,9 +65,7 @@ HTTP/2.0 会将一个 TCP 连接切分成为多个 stream，每个 stream 都有
 
 HTTP/2.0 还能够将要传输的信息拆分为帧，并对它们进行二进制格式编码。也就是说，HTTP/2.0 会将 Header 头和 Data 数据分别进行拆分，而且拆分之后的二进制格式位于多个 stream 中。下面来看张图。
 
-![image-20220317191955276](https://tva1.sinaimg.cn/large/e6c9d24ely1h0d3jzbn5vj21d20u0wi0.jpg)
-
-<div align = "center">图 16-2</div>
+![](http://www.cxuan.vip/image-20230128084933820.png)
 
 可以看到，HTTP/2.0 通过这两种机制，将多个请求分到了不同的 stream 中，然后将请求进行分帧，进行二进制传输，每个 stream 可以不用保证顺序乱序发送，到达客户端后，客户端会根据每个 stream 进行重组，而且可以根据优先级来优先处理哪个 stream。
 
@@ -87,9 +83,7 @@ QUIC 的小写是 quic，谐音 quick，意思就是`快`。它是 Google 提出
 
 我们大家知道，HTTP 协议在传输层是使用了 TCP 进行报文传输，而且 HTTPS 、HTTP/2.0 还采用了 TLS 协议进行加密，这样就会导致三次握手的连接延迟：即 TCP 三次握手（一次）和 TLS 握手（两次），如下图所示。
 
-![image-20220317213125577](https://tva1.sinaimg.cn/large/e6c9d24ely1h0d7crqxlkj213b0u0jww.jpg)
-
-<div align = "center">图 16-3</div>
+![](http://www.cxuan.vip/image-20230128084955298.png)
 
 对于很多短连接场景，这种握手延迟影响较大，而且无法消除。
 
@@ -107,9 +101,7 @@ TCP 一般采用的是**自适应重传算法**，这个超时时间会根据往
 
 虽然 QUIC 没有使用 TCP 协议，但是它也保证了可靠性，QUIC 实现可靠性的机制是使用了 *Packet Number*，这个序列号可以认为是 synchronize  sequence number 的替代者，这个序列号也是递增的。与 syn 所不同的是，不管服务器有没有接收到数据包，这个 Packet Number 都会 + 1，而 syn 是只有服务器发送 ack 响应之后，syn 才会 + 1。
 
-![image-20220318092115994](https://tva1.sinaimg.cn/large/e6c9d24ely1h0drvdgzb3j21510u0wh7.jpg)
-
-<div align = "center">图 16-4</div>
+![](http://www.cxuan.vip/image-20230128085043287.png)
 
 比如有一个 PN = 10 的数据包在发送的过程中由于某些原因迟迟没到服务器，那么客户端会重传一个 PN = 11 的数据包，经过一段时间后客户端收到 PN = 10 的响应后再回送响应报文，此时的 RTT 就是 PN = 10 这个数据包在网络中的生存时间，这样计算相对比较准确。
 
@@ -117,9 +109,7 @@ TCP 一般采用的是**自适应重传算法**，这个超时时间会根据往
 
 QUIC 引入了一个 *stream offset* 的概念，一个 stream 可以传输多个 stream offset，每个 stream offset 其实就是一个 PN 标识的数据，即使某个 PN 标识的数据丢失，PN + 1 后，它重传的仍旧是 PN 所标识的数据，等到所有 PN 标识的数据发送到服务器，就会进行重组，以此来保证数据可靠性。到达服务器的 stream offset 会按照顺序进行组装，这同时也保证了数据的顺序性。
 
-![image-20220318102638665](https://tva1.sinaimg.cn/large/e6c9d24ely1h0dtrehfv1j21ay0u0djl.jpg)
-
-<div align = "center">图 16-5</div>
+![](http://www.cxuan.vip/image-20230128085113622.png)
 
 众所周知，TCP 协议的具体实现是由操作系统内核来完成的，应用程序只能使用，不能对内核进行修改，随着移动端和越来越多的设备接入互联网，性能逐渐成为一个非常重要的衡量指标。虽然移动网络发展的非常快，但是用户端的更新却非常缓慢，我仍然看见有很多地区很多计算机还仍旧使用 xp 系统，尽管它早已发展了很多年。服务端系统不依赖用户升级，但是由于操作系统升级涉及到底层软件和运行库的更新，所以也比较保守和缓慢。
 
@@ -170,6 +160,3 @@ quic-go 是完全用 go 写的 QUIC 协议栈，开发很活跃，已在 Caddy �
 那么，对于中小团队或个人开发者来说，比较推荐的方案是最后一个，即采用 [caddy](https://github.com/mholt/caddy/wiki/QUIC) https://github.com/caddyserver/caddy/wiki/QUIC 来部署实现 QUIC。[caddy](https://github.com/mholt/caddy/wiki/QUIC) 这个项目本意并不是专门用来实现 QUIC 的，它是用来实现一个免签的 HTTPS web 服务器的（caddy 会自动续签证书）。而QUIC 只是它的一个附属功能（不过现实是——好像用它来实现 QUIC 的人更多）。
 
 从 Github 的技术趋势来说，有关 QUIC 的开源资源越来越多，有兴趣可以自已逐一研究研究：[https://github.com/search?q=quic](https://github.com/search%3Fq%3Dquic)
-![image-20210717083948590](https://tva1.sinaimg.cn/large/008i3skNly1gsjnhb9f5xj319s0tsn4g.jpg)
-
-![image-20210717084050334](https://tva1.sinaimg.cn/large/008i3skNly1gsjnidv1r3j315s0fs40g.jpg)

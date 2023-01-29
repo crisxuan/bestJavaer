@@ -1,5 +1,7 @@
 # HTTP 3.0
 
+[toc]
+
 >这是计算机网络连载系列的第十七篇文章，前十六篇文章见
 >
 >[计算机网络基础知识总结](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247486242&idx=1&sn=fac49b0b79515a5ed6afd4b341aff87b&chksm=e999fe30deee772637e1c52fb9001c60e60a772e7adba6701329c81974e76c57bb7b2e570225&token=850264305&lang=zh_CN#rd)
@@ -54,11 +56,9 @@ HTTP 3.0 于 2022 年 6 月 6 日正式发布，IETF 把 HTTP 3.0 标准制定�
 
 随着网络的不断发展，每个网站所需资源（CSS、JavaScript、图像等）的数量逐年增加，浏览器发现自己在获取和呈现网页时需要越来越多的并发性。但是由于 HTTP 1.1 只能够允许客户端/服务器进行一次 HTTP 请求交换，因此在网络层获得并发性的唯一方法是并行使用多个 TCP 连接到同一个源，不过使用多个 TCP 链接就失去了  keep-Alive 的意义。
 
-然后出现了 *SPDY* 协议，主要解决 HTTP 1.1 效率不高的问题，包括降低延迟，压缩 header 等等，这些已经被 Chrome 浏览器证明能够产生优化效果，后来 HTTP 2.0 基于 SPDY ，并且引入了 **流( Stream )**的概念，它允许将不同的 HTTP 交换多路复用到同一个 TCP 连接上，从而达到让浏览器重用 TCP 链接的目的。
+然后出现了 *SPDY* 协议，主要解决 HTTP 1.1 效率不高的问题，包括降低延迟，压缩 header 等等，这些已经被 Chrome 浏览器证明能够产生优化效果，后来 HTTP 2.0 基于 SPDY ，并且引入了**流( Stream )** 的概念，它允许将不同的 HTTP 交换多路复用到同一个 TCP 连接上，从而达到让浏览器重用 TCP 链接的目的。
 
-![image-20220715185929315](https://picturesforarticle.oss-cn-beijing.aliyuncs.com/img/image-20220715185929315.png)
-
-<div align = "center">图 17-1</div>
+![](http://www.cxuan.vip/image-20230128084812565.png)
 
 TCP 的主要作用是以正确的顺序将整个字节流从一个端点传输到另一个端点，但是当流中的某些数据包丢失时，TCP 需要重新发送这些丢失的数据包，等到丢失的数据包到达对应端点时才能够被 HTTP 处理，这被称为 TCP 的队头阻塞问题。
 
@@ -66,9 +66,7 @@ TCP 的主要作用是以正确的顺序将整个字节流从一个端点传输�
 
 基于这个原因，**Google 就更起炉灶搞了一个基于 UDP 协议的 QUIC 协议，并且使用在了 HTTP/3 上**，HTTP/3 之前名为 HTTP-over-QUIC，从这个名字中我们也可以发现，HTTP/3 最大的改造就是使用了 QUIC。
 
-![image-20220715191041133](https://picturesforarticle.oss-cn-beijing.aliyuncs.com/img/image-20220715191041133.png)
-
-<div align = "center">图 17-2</div>
+![](http://www.cxuan.vip/image-20230128084824739.png)
 
 ## QUIC 协议
 
@@ -78,9 +76,7 @@ QUIC 的小写是 quic，谐音 quick，意思就是`快`。它是 Google 提出
 
 我们大家知道，HTTP 协议在传输层是使用了 TCP 进行报文传输，而且 HTTPS 、HTTP/2.0 还采用了 TLS 协议进行加密，这样就会导致三次握手的连接延迟：即 TCP 三次握手（一次）和 TLS 握手（两次），如下图所示。
 
-![image-20220317213125577](https://tva1.sinaimg.cn/large/e6c9d24ely1h0d7crqxlkj213b0u0jww.jpg)
-
-<div align = "center">图 17-3</div>
+![](http://www.cxuan.vip/image-20230128090530140.png)
 
 对于很多短连接场景，这种握手延迟影响较大，而且无法消除。毕竟 RTT 是人类和效率的终极斗争。
 
@@ -98,9 +94,7 @@ TCP 一般采用的是**自适应重传算法**，这个超时时间会根据往
 
 虽然 QUIC 没有使用 TCP 协议，但是它也保证了可靠性，QUIC 实现可靠性的机制是使用了 *Packet Number*，这个序列号可以认为是 synchronize  sequence number 的替代者，这个序列号也是递增的。与 syn 所不同的是，不管服务器有没有接收到数据包，这个 Packet Number 都会 + 1，而 syn 是只有服务器发送 ack 响应之后，syn 才会 + 1。
 
-![image-20220318092115994](https://tva1.sinaimg.cn/large/e6c9d24ely1h0drvdgzb3j21510u0wh7.jpg)
-
-<div align = "center">图 17-4</div>
+![](http://www.cxuan.vip/image-20230128090602116.png)
 
 比如有一个 PN = 10 的数据包在发送的过程中由于某些原因迟迟没到服务器，那么客户端会重传一个 PN = 11 的数据包，经过一段时间后客户端收到 PN = 10 的响应后再回送响应报文，此时的 RTT 就是 PN = 10 这个数据包在网络中的生存时间，这样计算相对比较准确。
 
@@ -108,9 +102,7 @@ TCP 一般采用的是**自适应重传算法**，这个超时时间会根据往
 
 QUIC 引入了一个 *stream offset* 的概念，一个 stream 可以传输多个 stream offset，每个 stream offset 其实就是一个 PN 标识的数据，即使某个 PN 标识的数据丢失，PN + 1 后，它重传的仍旧是 PN 所标识的数据，等到所有 PN 标识的数据发送到服务器，就会进行重组，以此来保证数据可靠性。到达服务器的 stream offset 会按照顺序进行组装，这同时也保证了数据的顺序性。
 
-![image-20220318102638665](https://tva1.sinaimg.cn/large/e6c9d24ely1h0dtrehfv1j21ay0u0djl.jpg)
-
-<div align = "center">图 17-5</div>
+![](http://www.cxuan.vip/image-20230128090628827.png)
 
 众所周知，TCP 协议的具体实现是由操作系统内核来完成的，应用程序只能使用，不能对内核进行修改，随着移动端和越来越多的设备接入互联网，性能逐渐成为一个非常重要的衡量指标。虽然移动网络发展的非常快，但是用户端的更新却非常缓慢，我仍然看见有很多地区很多计算机还仍旧使用 xp 系统，尽管它早已发展了很多年。服务端系统不依赖用户升级，但是由于操作系统升级涉及到底层软件和运行库的更新，所以也比较保守和缓慢。
 
@@ -137,8 +129,3 @@ TCP 协议头部没有经过加密和认证，所以在传输的过程中很可�
 连接平滑迁移指的是，你的手机或者移动设备在 4G 信号下和 WiFi 等网络情况下切换，不会断线重连，用户甚至无任何感知，能够直接实现平滑的信号切换。
 
 QUCI 协议已经被写在了 [RFC 9000](https://datatracker.ietf.org/doc/html/rfc9000) 中。
-
-![image-20210717083948590](https://tva1.sinaimg.cn/large/008i3skNly1gsjnhb9f5xj319s0tsn4g.jpg)
-
-![image-20210717084050334](https://tva1.sinaimg.cn/large/008i3skNly1gsjnidv1r3j315s0fs40g.jpg)
-

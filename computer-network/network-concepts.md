@@ -23,7 +23,7 @@
 6. `交换机`：英文术语 switch，是一种光电信号转发设备，它可以为接入交换机的任意两个网络节点提供独享的电信号通路，它是一种数据链路层设备。
 7. `集线器`：英文术语 hub，它是一种能够将多条以太网双绞线或光纤集合连接在同一段物理介质下的设备。它发生在物理层。
 
-![image-20220307085246124](https://tva1.sinaimg.cn/large/e6c9d24ely1h0118nqpjtj21p40jeq58.jpg)
+![](http://www.cxuan.vip/image-20230128093146996.png)
 
 交换机和集线器的功能非常相似，交换机具有记忆功能，它广播之后能够缓存目标 Mac，后续的数据包就会直接通过缓存的路径发送，交换机是一种全双工通信模式。而集线器工作的时候，如果局域网中的一台电脑要发送消息，则局域网内的所有电脑都可以接收到这个消息，安全性较差，而且集线器是一种半双工模式。所以现在大多数都是用交换机，集线器慢慢被淘汰了。
 
@@ -77,30 +77,30 @@
 
 31. `单播`：单播最大的特点就是 1 对 1，早期的固定电话就是单播的一个例子
 
-    <img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h02lv252m1j21160ma75m.jpg" alt="image-20220308173152944" style="zoom:50%;" />
+    ![](http://www.cxuan.vip/image-20230128093317339.png)
 
 32. `广播`：我们一般小时候经常会广播体操，这就是广播的一个事例，主机和与他连接的所有端系统相连，主机将信号发送给所有的端系统。
 
-<img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h02lvz4jfaj213w0kujse.jpg" alt="image-20220308173245652" style="zoom:50%;" />
+![](http://www.cxuan.vip/image-20230128093331385.png)
 
 34. `多播`：多播与广播很类似，也是将消息发送给多个接收主机，不同之处在于多播需要限定在某一组主机作为接收端。
 
-<img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h02lwpr098j211e0oywft.jpg" alt="image-20220308173328256" style="zoom:50%;" />
+![](http://www.cxuan.vip/image-20230128093346023.png)
 
 35. `任播`：任播是在特定的多台主机中选出一个接收端的通信方式。虽然和多播很相似，但是行为与多播不同，任播是从许多目标机群中选出一台最符合网络条件的主机作为目标主机发送消息。然后被选中的特定主机将返回一个单播信号，然后再与目标主机进行通信。
 
-<img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h02lx1ydrgj21240owwg4.jpg" alt="image-20220308173347438" style="zoom:50%;" />
+![image-20230128093356689](http://www.cxuan.vip/image-20230128093356689.png)
 
 ## 计算机网络应用层
 
 1. `应用程序体系结构`：其实就是应用层程序的两种组织结构，分为 CS 和 P2P。
 2. `客户-服务体系`：它是一种面向网络应用的体系结构。把系统中的不同端系统区分为客户和服务器两类，客户向服务器发出服务请求，由服务器完成所请求的服务，并把处理结果回送给客户。在客户-服务器体系结构中，有一个总是打开的主机称为 `服务器(Server)`，它提供来自于 `客户(client)` 的服务。我们最常见的服务器就是 `Web 服务器`，Web 服务器服务于来自 `浏览器` 的请求。
 
-<img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h01mk4fu9ej20vq0i4abf.jpg" alt="image-20220307211024918" style="zoom:50%;" />
+![](http://www.cxuan.vip/image-20230128093411676.png)
 
 3. `P2P 体系`：对等体系结构，相当于没有服务器了，大家都是客户机，每个客户既能发送请求，也能对请求作出响应。
 
-<img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h01mkch35kj213s0mcabe.jpg" alt="image-20220307211037415" style="zoom: 50%;" />
+![](http://www.cxuan.vip/image-20230128093433579.png)
 
 4. `进程`：进程其实就是运行在端系统的程序，应用程序进行通信的最基本单位就是进程。
 
@@ -108,7 +108,7 @@
 
 6. `套接字接口`：指的就是 socket 接口，这个接口规定了端系统之间通过因特网进行数据交换的方式。
 
-<img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h012i93k5qj21590u0te8.jpg" alt="image-20220307093637809" style="zoom:50%;" />
+![](http://www.cxuan.vip/image-20230128093517498.png)
 
 7. `客户端`：在客户-服务器架构中扮演请求方的角色，通常是 PC，智能手机等端系统。
 
@@ -120,7 +120,7 @@
 
 12. `URL`：它的全称是（Uniform Resource Locator），中文名称是统一资源定位符，它实际上是 URI 的一个子集。
 
-<img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h01mjwdk58j20pg0asgly.jpg" alt="image-20220307211009147" style="zoom:50%;" />
+![](http://www.cxuan.vip/image-20230128093532691.png)
 
 13. `HTML`：HTML 称为超文本标记语言，是一种标识性的语言。它包括一系列标签．通过这些标签可以将网络上的文档格式统一，使分散的 Internet 资源连接为一个逻辑整体。HTML 文本是由 HTML 命令组成的描述性文本，HTML 命令可以说明文字，图形、动画、声音、表格、链接等。
 
@@ -140,24 +140,24 @@
 25. `POP3`：邮件访问协议，协议较为简单，功能有限。
 26. `DNS 协议`：由于 IP 地址是计算机能够识别的地址，而我们人类不方便记忆这种地址，所以为了方便人类的记忆，使用 DNS 协议，来把我们容易记忆的网络地址映射称为主机能够识别的 IP 地址。
 
-<img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h01mktq1xhj20p40l2wfl.jpg" alt="image-20220307211105415" style="zoom:50%;" />
+![](http://www.cxuan.vip/image-20230128093622946.png)
 
 27. `根 DNS 服务器`：最顶级的 DNS 服务器，全世界有 400 多台根域名服务器，由 13 个不同的组织管理，根域名服务器提供 TLD 服务器的 IP 地址。
 28. `顶级域 DNS 服务器`：这个我们比较熟悉，像是常见的顶级域（如 com、org、net、edu 和 gov）和所有的国家顶级域（uk、fr、ca 和 jp），TLD 服务器提供了权威 DNS 服务器的 IP 地址。
 29. `权威 DNS 服务器`：这个服务器就是因特网上具有公共可访问主机的 DNS 记录的服务器。
 30. `本地 DNS 服务器`：一般来说，每个 ISP 都有一台本地 DNS 服务器，本地 DNS 服务器会临近主机端。
 
-![image-20220307214941635](https://tva1.sinaimg.cn/large/e6c9d24ely1h01np05u4cj21940g4ju3.jpg)
+![](http://www.cxuan.vip/image-20230128093656341.png)
 
 31. `TELNET 协议`：远程登陆协议，它允许用户(Telnet 客户端)通过一个协商过程来与一个远程设备进行通信，它为用户提供了在本地计算机上完成远程主机工作的能力。
 
-![image-20220309084438274](https://tva1.sinaimg.cn/large/e6c9d24ely1h03c8gkqfdj21840ba754.jpg)
+![](http://www.cxuan.vip/image-20230128093720801.png)
 
 32. `SSH 协议`：SSH 是一种建立在应用层上的安全加密协议。因为 TELNET 有一个非常明显的缺点，那就是在主机和远程主机的发送数据包的过程中是明文传输，未经任何安全加密，这样的后果是容易被互联网上不法分子嗅探到数据包来搞一些坏事，为了数据的安全性，我们一般使用 `SSH` 进行远程登录。
 
 33. `FTP 协议`：文件传输协议，是应用层协议之一。FTP 协议包括两个组成部分，分为 FTP 服务器和 FTP 客户端。其中 FTP 服务器用来存储文件，用户可以使用 FTP 客户端通过 FTP 协议访问位于 FTP 服务器上的资源。FTP 协议传输效率很高，一般用来传输大文件。
 
-![image-20220309084426705](https://tva1.sinaimg.cn/large/e6c9d24ely1h03c8bwixmj215o0c63zg.jpg)
+![](http://www.cxuan.vip/image-20230128093747483.png)
 
 34. `MIME 类型`，它表示的是互联网的资源类型，一般类型有 超文本标记语言文本 .html text/html、xml文档 .xml text/xml、普通文本 .txt text/plain、PNG图像 .png image/png、GIF图形 .gif image/gif、JPEG图形 .jpeg,.jpg image/jpeg、AVI 文件 .avi video/x-msvideo 等。
 35. `多路分解`：在接收端，运输层会检查源端口号和目的端口号等字段，然后标识出接收的套接字，从而将运输层报文段的数据交付到正确套接字的过程被称为多路分解。
@@ -198,7 +198,7 @@
 
 16. `接收缓存`：英文 receive buffer，同样在接收报文时，主机不会立刻对报文进行处理，而是存储到内核的接收缓冲区中，等待合适的时机再进行处理。
 
-    ![image-20220308093539652](https://tva1.sinaimg.cn/large/e6c9d24ely1h0283kjkt3j217q0nmwgn.jpg)
+    ![](http://www.cxuan.vip/image-20230128093805302.png)
 
 17. `SYN`：Synchronize Sequence Numbers，是 TCP/IP 建立连接时发送的数据包，这个数据包就是一个同步序列号，标识客户端发送的是哪个请求。
 
@@ -213,7 +213,7 @@
     * `SYN-RECEIVED`: 表示已接收并发送连接请求后等待连接确认，也就是 TCP 三次握手中第二步后服务端的状态
     * `ESTABLISHED`: 表示已经连接已经建立，可以将应用数据发送给其他主机
 
-    <img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h02bbzwt9ij210d0u0jv2.jpg" alt="image-20220308112733731" style="zoom:50%;" />
+    ![](http://www.cxuan.vip/image-20230128093830685.png)
 
 21. 四次挥手中的状态变化
 
@@ -225,13 +225,13 @@
     * `TIME-WAIT`: 表示等待足够的时间以确保远程 TCP 收到其连接终止请求的确认。
     * `CLOSED`: 表示连接已经关闭，无连接状态。
 
-    <img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h02bc91dp1j20vt0u0jvl.jpg" alt="image-20220308112749030" style="zoom:67%;" />
+    ![](http://www.cxuan.vip/image-20230128093846663.png)
 
 22. `滑动窗口`：英文 sliding window，它是一种流量控制技术，在互联网早期，通信双方通常不会考虑网络情况，一般都会直接进行通信，同时发送数据，很容易导致阻塞，谁也发不了数据，针对这种现象，提出了滑动窗口，通过滑动窗口，接收方会告诉发送方自己能够接收多少数据。
 
 23. `窗口长度`：窗口长度指的是已发送但还未确认的分组范围，如下图中的发送窗口结构就是窗口长度。
 
-    ![image-20220308135839897](https://tva1.sinaimg.cn/large/e6c9d24ely1h02fp7qgevj213a0miq76.jpg)
+    ![](http://www.cxuan.vip/image-20230128093932687.png)
 
 24. `累积确认`：TCP 规定在一段时间内发送方只要收到最后一条接收方返回的确认 ACK ，而不用重传报文段。
 
@@ -253,15 +253,15 @@
 
 6. `先入先出`：FIFO，或者称为 FCFS，先到达的分组优先进行处理。
 
-   <img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h03eir0s1fj213k0ca74y.jpg" alt="image-20220309100343211" style="zoom:50%;" />
+   ![](http://www.cxuan.vip/image-20230128094037356.png)
 
 7. `优先权排队`：priority queue，到达输出链路的分组会被放入优先级队列里面。
 
-   ![image-20220309100404137](https://tva1.sinaimg.cn/large/e6c9d24ely1h03ej40tfpj217y0cat9w.jpg)
+   ![](http://www.cxuan.vip/image-20230128094053989.png)
 
 8. `循环排队规则`：round robin queuing discipline，这种就是循环调度器会在队列进行轮流提供服务。
 
-   ![image-20220309100432639](https://tva1.sinaimg.cn/large/e6c9d24ely1h03ejmr6h4j216k0fkq48.jpg)
+   ![](http://www.cxuan.vip/image-20230128094110857.png)
 
 9. `IPv4`：网际协议的第四个版本，也是被广泛使用的一个版本。IPv4 是一种无连接的协议，无连接不保证数据的可靠性交付。使用 32 位的地址。
 
@@ -273,12 +273,12 @@
 
 13. `RARP`：RARP 就是将 ARP 协议反过来，通过 MAC 地址定位 IP 地址的一种协议。
 
-![image-20220309084454610](https://tva1.sinaimg.cn/large/e6c9d24ely1h03c8qw789j218u08wt9f.jpg)
+![](http://www.cxuan.vip/image-20230128094703319.png)
 
 14. `代理 ARP`：用于解决 ARP 包被路由器隔离的情况，通过代理 ARP 可以实现将 ARP 请求转发给临近的网段。
 15. `ICMP 协议`：Internet 报文控制协议，如果在 IP 通信过程中由于某个 IP 包由于某种原因未能到达目标主机，那么将会发送 ICMP 消息，ICMP 实际上是 IP 的一部分。
 
-![image-20220309084505703](https://tva1.sinaimg.cn/large/e6c9d24ely1h03c8zx3wdj218m0quq60.jpg)
+![](http://www.cxuan.vip/image-20230128094753646.png)
 
 16. `DHCP 协议`：DHCP 是一种动态主机配置协议，又被称为即插即用协议或者零配置协议，使用 DHCP 就能实现自动设置 IP 地址、统一管理 IP 地址分配，实现即插即用。
 17. `NAT 协议`：网络地址转换协议，它指的是所有本地地址的主机在接入网络时，都会要在 NAT 路由器上讲其转换成为全球 IP 地址，才能和其他主机进行通信。
@@ -310,7 +310,7 @@
 15. `非共享介质型网络`：与共享介质型网络相对，这种网络不会使用相同的通信介质。
 16. `令牌环`：一种共享介质型网络传输方式。
 
-<img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h03n9t7kpsj210e0u076i.jpg" alt="image-20220309150627463" style="zoom:50%;" />
+![](http://www.cxuan.vip/image-20230128094842926.png)
 
 17. `过滤`：在链路层是决定一个帧应该转发到某个接口还是应当将其丢弃的交换机的一种功能。
 18. `转发`：转发决定一个帧应该导向那个接口，并把帧移动到那些接口的交换机的一种功能。
@@ -346,8 +346,3 @@
 ## 总结
 
 计算机网络范围内重点概念非常多，这篇文章我总结了一部分我认为应该重点了解的概念，也许有一些概念解释的没那么清晰，你可以作为一个参考或者说索引，等遇到相关概念时，能够大致理解其意思，那么这篇文章的目的就达到了，如果文章对你有帮助，欢迎大家点赞、再看、分享，你的每一份支持是我更文最大的动力！
-
-![image-20210717083948590](https://tva1.sinaimg.cn/large/008i3skNly1gsjnhb9f5xj319s0tsn4g.jpg)
-
-![image-20210717084050334](https://tva1.sinaimg.cn/large/008i3skNly1gsjnidv1r3j315s0fs40g.jpg)
-

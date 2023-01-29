@@ -70,17 +70,13 @@
 
 应用层位于 TCP/IP 模型的最上层，同时应用层也对应 OSI 标准模型的第 5、6、7层，也就是**会话层、表现层、应用层**。
 
-<img src="https://s1.ax1x.com/2020/11/08/BTC458.png" style="zoom:50%;" />
-
-<div align = "center">图 3-1</div>
+![](http://www.cxuan.vip/image-20230122161612835.png)
 
 ## 应用层概念
 
 现如今，越来越多的应用程序通过计算机网络进行通信，这些应用包括 Web 浏览器、远程登录、电子邮件、文件传输、文件下载等，而这些应用的日常使用势必要遵循某种协议和规范，应用层协议正是进行这些行为活动的规则和标准。
 
-![](https://s1.ax1x.com/2020/11/08/BTPmGD.png)
-
-<div align = "center">图 3-2</div>
+![](http://www.cxuan.vip/image-20230122161631173.png)
 
 ### 应用层协议的定义
 
@@ -97,16 +93,14 @@
 
 **应用层体系结构 (Application Architecture)** 定义了应用层端系统之间数据交换的方式，一般来说，主流的体系结构有两种：
 
-* `客户-服务器体系结构 ( client-server architecture )`
-* `对等体系结构 ( P2P architecture )`
+* `客户-服务器体系结构 (client-server architecture)`
+* `对等体系结构 (P2P architecture)`
 
 在客户-服务器体系结构中，分为请求方和服务方。有一个总是打开的主机称为**服务端 (Server)**，它向**客户端 (client)** 提供服务。客户端会发送请求给服务端，服务端会根据客户端的请求做出响应。举一个简单的例子：我今天下馆子去，找到了一个饭店，这时候会有一个服务员热情接见我，我看完菜单给服务员说我想吃猪肉，这个"我想吃猪肉"就是请求，然后服务员报以热情的微笑并扇了我一巴掌，说："我们这是清真馆"，这个服务员对我笑并扇了我一巴掌然后对我说了句话，就是响应。
 
 我们最常见的服务端就是 Web 服务器，Web 服务器提供于来自浏览器的请求。我们日常访问百度、谷歌，其实就是在访问它们的 Web 服务器。
 
-<img src="https://s1.ax1x.com/2020/11/08/BTPnRe.md.png" alt="BTPnRe.png" border="0" />
-
-<div align = "center">图 3-3</div>
+![](http://www.cxuan.vip/image-20230122161702447.png)
 
 一般常见的 Web 服务器主要有 Apache、IIS、Jboss、Tomcat、WebSphere、WebLogic 等。
 
@@ -141,9 +135,7 @@ P2P 一个最大的特点就是**扩展性 (self-scalability)**，因为 P2P 网
 
 下图是一个通过套接字进行通信的示意图。
 
-![image-20220507083233672](https://tva1.sinaimg.cn/large/e6c9d24ely1h1zjg9xnckj21ma0tuwia.jpg)
-
-<div align = "center">图 3-4</div>
+![](http://www.cxuan.vip/image-20230122162013606.png)
 
 从图可以看到，Socket 属于主机或者服务进程的内部接口，由应用程序开发人员进行控制，两台端系统之间进行通信会通过 TCP 的缓冲区经由网络传输到另一个端系统的 TCP 缓冲区，Socket 从 TCP 缓冲区读取报文供应用程序内部使用。
 
@@ -193,8 +185,6 @@ P2P 一个最大的特点就是**扩展性 (self-scalability)**，因为 P2P 网
 |     交互式游戏      | 容忍丢失 | 弹性 |  是，100ms  |
 |    智能手机消息     | 不能丢失 | 弹性 |   无所谓    |
 
-<div align = "center">表 3-1</div>
-
 下面我们就来聊一聊这两种运输协议的应用场景：
 
 #### TCP
@@ -228,8 +218,6 @@ UDP 是一种轻量级的运输协议，它仅提供最小服务。UDP 是无连
 |  流式多媒体  |    HTTP    |      TCP       |
 |  因特网电话  |  SIP、RTP  |   TCP 或 UDP   |
 
-<div align = "center">表 3-2</div>
-
 下面我们着重介绍一下应用层都有哪些比较重要的应用协议。
 
 ## 应用层协议
@@ -238,9 +226,7 @@ UDP 是一种轻量级的运输协议，它仅提供最小服务。UDP 是无连
 
 **万维网 (WWW, World Wide Web)** 是将互联网中的信息以超文本的形式展现的系统，用来显示 WWW 结果的客户端被称为 Web 浏览器。通过浏览器，我们无需关注想要访问的内容在哪个服务器上，我们只需要知道我们想访问的内容就可以了。
 
-![image-20220507095827007](https://tva1.sinaimg.cn/large/e6c9d24ely1h1zlxgefctj216j0u0tau.jpg)
-
-<div align = "center">图 3-5</div>
+![](http://www.cxuan.vip/image-20230122162052854.png)
 
 WWW 定义了三个比较重要的概念，这些概念主要有：
 
@@ -256,9 +242,7 @@ WWW 定义了三个比较重要的概念，这些概念主要有：
 
 URI 不仅包括 URL，还包括 URN（统一资源名称），它们之间的关系如下
 
-<img src="https://s1.ax1x.com/2020/11/08/BTPAVx.png" style="zoom:50%;" />
-
-<div align = "center">图 3-6</div>
+![](http://www.cxuan.vip/image-20230122162121530.png)
 
 URI 已经不局限于标识互联网资源，它可以作为所有资源的识别码。
 
@@ -278,9 +262,7 @@ Web 页面也叫做 Web Page，它是由对象组成，一个对象简单来说�
 
 就如同各大邮箱使用电子邮件传送协议 SMTP 一样，浏览器是使用 HTTP 协议的主要载体，说到浏览器，你能想起来几种？是的，随着网景大战结束后，浏览器迅速发展，至今已经出现过的浏览器主要有 IE、Firefox、Chrome、Safari、Opera、Netscape、傲游等。
 
-<img src="https://s1.ax1x.com/2020/11/08/BTPEa6.png" style="zoom:50%;" />
-
-<div align = "center">图 3-7</div>
+![](http://www.cxuan.vip/image-20230122162138266.png)
 
 #### Web 服务器
 
@@ -354,23 +336,17 @@ HTTP 协议主要由三大部分组成：
 
 其中起始行和头部字段并成为请求头或者响应头，统称为 Header；消息正文也叫做实体，称为 body。HTTP 协议规定每次发送的报文必须要有 Header，但是可以没有 body，也就是说头信息是必须的，实体信息可以没有。而且在 header 和 body 之间必须要有一个空行（CRLF）。如果用一幅图来表示一下 HTTP 请求的话，我觉得应该是下面这样
 
-<img src="https://s1.ax1x.com/2020/11/08/BTPFq1.png" style="zoom:50%;" />
-
-<div align = "center">图 3-8</div>
+![](http://www.cxuan.vip/image-20230122162155393.png)
 
 如果细化一点的话，那就是下面这样：
 
-![](https://s1.ax1x.com/2020/11/08/BTPirR.png)
-
-<div align = "center">图 3-9</div>
+![](http://www.cxuan.vip/image-20230122223043549.png)
 
 这幅图需要注意一下，如果使用 GET 方法，是没有实体体的，如果你使用的是 POST 方法，才会有实体体。当用户提交表单时，HTTP 客户端通常使用 POST 方法；与此相反，HTML 表单的获取通常使用 GET 方法。HEAD 方法类似于 GET 方法，只不过 HEAD 方法不会返回对象。
 
 下面我们来看一下 HTTP 响应报文
 
-![](https://s1.ax1x.com/2020/11/08/BTPPM9.png)
-
-<div align = "center">图 3-10</div>
+![](http://www.cxuan.vip/image-20230122223103486.png)
 
 可以看到，请求报文和响应报文只有请求头是不同的，其他信息均一致。
 
@@ -398,9 +374,7 @@ HTTP 协议是一种无状态协议，即每次服务端接收到客户端的请
 
 服务器第一次接收到请求时，开辟了一块 Session 空间（创建了 Session 对象），同时生成一个 sessionId ，并通过响应头的 Set-Cookie：JSESSIONID=XXXXXXX 命令，向客户端发送要求设置 Cookie 的响应； 客户端收到响应后，在本机客户端设置了一个 JSESSIONID=XXXXXXX 的 Cookie 信息，该 Cookie 的过期时间为浏览器会话结束；
 
-![](https://s1.ax1x.com/2020/11/08/BTPSGF.png)
-
-<div align = "center">图 3-11</div>
+![](http://www.cxuan.vip/image-20230122223124193.png)
 
 接下来客户端每次向同一个网站发送请求时，请求头都会带上该 Cookie信息（包含 sessionId ），然后服务器通过读取请求头中的 Cookie 信息，获取名称为 JSESSIONID 的值，得到此次请求的 sessionId。
 
@@ -436,9 +410,7 @@ Cookie 曾经用于一般的客户端存储。虽然这是合法的，因为它�
 
 Set-Cookie HTTP 响应标头将 cookie 从服务器发送到用户代理。下面是一个发送 Cookie 的例子：
 
-![](https://s1.ax1x.com/2020/11/08/BTPp24.png)
-
-<div align = "center">图 3-12</div>
+![](http://www.cxuan.vip/image-20230122223140828.png)
 
 此标头告诉客户端存储 Cookie。
 
@@ -470,9 +442,7 @@ Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT;
 
 **Web 缓存 (Web cache)** 也叫做代理服务器缓存，它是代表 HTTP 服务器来满足用户需求的网络实体。Web 缓存器有自己的磁盘存储空间，并会在存储空间内保存最近请求过的对象，如下图所示
 
-![image-20220507104017036](https://tva1.sinaimg.cn/large/e6c9d24ely1h1zn4zpmjlj213z0u0n0j.jpg)
-
-<div align = "center">图 3-13</div>
+![](http://www.cxuan.vip/image-20230122223243050.png)
 
 Web 缓存可以在用户的浏览器中进行配置，一旦配置后，用户首先访问的就不是初始服务器了，需要先访问代理服务器判断请求的对象是否存在，如果代理服务器没有，再由代理服务器来请求初始服务器把对象返回给客户，同时在自己的磁盘空间保存对象。
 
@@ -515,9 +485,7 @@ CDN 管理分布在多个地理位置上的服务器，在它的服务器上存�
 
 CDN 可以是专用 CDN，即它由内容提供商自己所拥有；另一种 CDN 是 第三方 CDN，它代表多个内容提供商分发内容。下面我们来聊一下 CDN 工作流程，如下图所示：
 
-![image-20220507104723471](https://tva1.sinaimg.cn/large/e6c9d24ely1h1znce0ikgj21bs0u00wa.jpg)
-
-<div align = "center">图 3-14</div>
+![](http://www.cxuan.vip/image-20230122223306115.png)
 
 * 用户想要访问指定网站的内容。
 * 用户首先发起对本地 DNS，LDNS 的查询，LDNS 会将请求中继到网站 DNS 服务器，网站的 DNS 服务器会返回给 LDNS 一个网站 CDN 权威服务器的地址。
@@ -537,9 +505,7 @@ IP 地址现在简单表述一下，就是一个由 4 字节组成，并有着�
 
 然而，路由器喜欢的是 IP 地址进行解析，我们人类却便于记忆的是网址，那么路由器如何把 IP 地址解析为我们熟悉的网址地址呢？这时候就需要 DNS 出现了。
 
-<img src="https://s1.ax1x.com/2020/11/08/BTCXV0.png" style="zoom:50%;" />
-
-<div align = "center">图 3-15</div>
+![](http://www.cxuan.vip/image-20230122223327144.png)
 
 DNS 是一个由分层的 **DNS 服务器 (DNS server)** 实现的分布式数据库；它还是一个使得主机能够查询分布式数据库的应用层协议。DNS 服务器通常是运行 **BIND (Berkeley Internet Name Domain)** 软件的 UNIX 机器。DNS 协议运行在 UDP 上，使用 53 端口。
 
@@ -584,11 +550,9 @@ DNS 最早的一种简单设计只是在因特网上使用一个 DNS 服务器�
 
 首先分布式设计首先解决的问题就是 DNS 服务器的扩展性问题，因此 DNS 使用了大量的 DNS 服务器，它们的组织模式一般是层次方式，并且分布在全世界范围内。**没有一台 DNS 服务器能够拥有因特网上所有主机的映射**。相反，这些映射分布在所有的 DNS 服务器上。
 
-大致来说有三种 DNS 服务器：根 DNS 服务器、顶级域(Top-Level Domain, TLD) DNS 服务器和权威 DNS 服务器。这些服务器的层次模型如下图所示
+大致来说有三种 DNS 服务器：根 DNS 服务器、顶级域(Top-Level Domain, TLD) DNS 服务器和权威 DNS 服务器。这些服务器的层次模型如下图所示。
 
-![](https://s1.ax1x.com/2020/11/08/BTCLbq.png)
-
-<div align = "center">图 3-16</div>
+![](http://www.cxuan.vip/image-20230122224652507.png)
 
 假设现在一个 DNS 客户端想要知道 www.amazon.com 的 IP 地址，那么上面的域名服务器是如何解析的呢？首先，客户端会先根服务器之一进行关联，它将返回顶级域名 `com` 的 TLD 服务器的 IP 地址。该客户则与这些 TLD 服务器之一联系，它将为 amazon.com 返回权威服务器的 IP 地址。最后，该客户与 amazom.com 权威服务器之一联系，它为 www.amazom.com 返回其 IP 地址。
 
@@ -629,19 +593,15 @@ RR 会有不同的类型，下面是不同类型的 RR 汇总表
 | PTR 记录    | 指针，用于反向查找（IP地址到域名解析）      |
 | SRV 记录    | SRV记录，用于映射可用服务。                 |
 
-<div align = "center">表 3-3</div>
-
 **DNS 报文**
 
 DNS 有两种报文，一种是查询报文，一种是响应报文，并且这两种报文有着相同的格式，下面是 DNS 的报文格式
 
-![](https://s1.ax1x.com/2020/11/08/BTCjaV.png)
-
-<div align = "center">图 3-17</div>
+![](http://www.cxuan.vip/image-20230122230602823.png)
 
 下面对报文格式进行解释
 
-* 前 12 个报文是首部区域，也就是说首部区域有 12 个字节，第一个字段（标识符）是一个 16 比特的数，用于标示该查询。这个标识符会被复制到对查询的回答报文中，以便让客户用它来匹配发送的请求和接受到的回答。 标志字段含有若干标志，标志字段表示为 1 比特，它用于指出报文是 0-查询报文还是 1-响应报文。
+* 前 12 个字节是首部区域，也就是说首部区域有 12 个字节，第一个字段事务 ID 是一个 16 比特的数，用于标示该查询报文。这个标识符会被复制到对查询的回答报文中，以便让客户用它来匹配发送的请求和接受到的回答。标志字段含有若干标志，标志字段表示为 1 比特，它用于指出报文是 0-查询报文还是 1-响应报文。
 
 * 问题区域包含着正在进行的查询信息。这个区域包括：1) 名字字段，包含正在被查询的主机名字；2) 类型字段，指出有关该名字的正被询问的问题类型，例如主机地址是与一个名字相关联（类型 A）还是与某个名字的邮件服务器相关联（类型 MX）。
 * 在来自 DNS 服务器的回答中，回答区域包含了对最初请求的名字的资源记录。上面说过 DNS RR记录是个四元组，而且元组中的 Type 会有不同的类型。在回答报文的回答区域中可以包含多条 RR，因此一个主机名能够有多个 IP 地址。
@@ -654,9 +614,7 @@ DNS 有两种报文，一种是查询报文，一种是响应报文，并且这�
 
 P2P 的全称是 `Peer-to-peer, P2P` ，是一种分布式体系结构的计算机网络。在 P2P 体系中，所有的计算机和设备都被称为对等体，他们互相交换工作。对等网络中的每个对等方都等于其他对等方。网络中没有特权对等体，也没有主管理员设备。
 
-![](https://s1.ax1x.com/2020/11/08/BTCqrn.png)
-
-<div align = "center">图 3-18</div>
+![](http://www.cxuan.vip/image-20230122231241618.png)
 
 从某种意义上说，对等网络是计算机世界中最平等的网络。每个对等方都相等，并且每个对等方具有与其他对等方相同的权利和义务。对等体同时是客户端和服务器。
 
@@ -677,22 +635,20 @@ P2P 网络具有一些使它们有用的特征：
 
 TELNET 又称为远程登录，是一种应用层协议，它为用户提供了在本地机器上就能够操控远程主机工作的能力。例如下面这幅图所示。
 
-![image-20220507110420476](https://tva1.sinaimg.cn/large/e6c9d24ely1h1znu0c8mgj21ig0dwq4d.jpg)
-
-<div align = "center">图 3-19</div>
+![](http://www.cxuan.vip/image-20230122231304922.png)
 
 主机 A 可以直接通过 TELNET 协议访问主机 B。
 
 TELNET 利用 TCP 的一条连接，通过一条连接向主机发送文字命令并在主机上执行。
 
-使用 TELNET 协议进行远程登录时需要满足一下几个条件
+使用 TELNET 协议进行远程登录时需要满足一下几个条件：
 
-* 必须知道远程主机的 IP 地址或者域名
-* 必须知道登录标识和口令
+* 必须知道远程主机的 IP 地址或者域名。
+* 必须知道登录标识和口令。
 
->TELNET 远程登录一般使用 23 端口
+>TELNET 远程登录一般使用 23 端口。
 
-TELNET 的工作过程如下
+TELNET 的工作过程如下：
 
 * 本地主机与远程主机建立连接，这个连接其实是 TCP 连接，用户需要知道指定主机的 IP 地址或者域名
 * 与远程主机建立连接后，在本地主机终端上输入的字符都会以 *NVT (Net Virtual Terminal)* 的形式发送至远程主机，这个过程实际上是发送一个数据包到远程主机。
@@ -717,15 +673,11 @@ SSH 是加密的远程登录系统。使用 SSH 可以加密通信内容，即�
 
 > 由于 FTP 传输效率非常高，一般用来在网络上传输大的文件。
 
-![image-20220507111004927](https://tva1.sinaimg.cn/large/e6c9d24ely1h1znzzae3ej218q0dowg4.jpg)
-
-<div align = "center">图 3-20</div>
+![](http://www.cxuan.vip/image-20230122231317952.png)
 
 默认情况下 FTP 协议使用 TCP 端口中的 20 和 21 这两个端口，其中 20 用于传输数据，21 用于传输控制信息。FTP TCP 21 号端口上进行文件传输时，每次都会建立一个用于数据传输的 TCP 连接，数据传输完毕后，传输数据的这条连接也会被断开，在控制用的连接上继续进行命令或应答的处理。
 
-![image-20220507111402953](https://tva1.sinaimg.cn/large/e6c9d24ely1h1zo4435gsj21pa0t2wht.jpg)
-
-<div align = "center">图 3-21</div>
+![](http://www.cxuan.vip/image-20230122231358062.png)
 
 ### SMTP
 
@@ -735,17 +687,15 @@ SSH 是加密的远程登录系统。使用 SSH 可以加密通信内容，即�
 
 这种方法虽然能够保证电子邮件的完整性和有效性，但却不适合当今的互联网，因为早期的电子邮件只能在线发送，这种方式显然不够成熟。
 
-![image-20220507111555110](https://tva1.sinaimg.cn/large/e6c9d24ely1h1zo62dbvuj21cc0u041w.jpg)
+![](http://www.cxuan.vip/image-20230122231410041.png)
 
-<div align = "center">图 3-22</div>
+![](http://www.cxuan.vip/image-20230122231430162.png)
 
 针对于此，提出了邮件服务器的概念。邮件服务器构成了整个邮件系统的核心。每个接收方在其中的邮件服务器上会有一个**邮箱 (mailbox)** 存在。用户的邮箱管理和维护发送给他的报文。
 
 一个典型的邮件发送过程是：从发送方的用户代理开始，传输到发送方的邮件服务器，再传输到接收方的邮件服务器，然后在这里被分发到接收方的邮箱中。用接收方的用户想要从邮箱中读取邮件时，他的邮件服务器会对用户进行认证。如果发送方发送的邮件无法正确交付给接收方的服务器，那么发送方的用户代理会把邮件存储在一个**报文队列 (message queue)** 中，并在以后尝试再次发送。通常每 30 分钟发送一次，如果一段时间后还发送不成功，服务器就会删除报文队列中的邮件并以电子邮件的方式通知发送方。
 
-![image-20220507111713278](https://tva1.sinaimg.cn/large/e6c9d24ely1h1zo7f3xpej21ni0g6gnz.jpg)
-
-<div align = "center">图 3-23</div>
+![](http://www.cxuan.vip/image-20230122231521547.png)
 
 现在你知道了两台邮件服务器邮件发送的大体过程，那么，SMTP 是如何将邮件从 Alice 邮件服务器发送到 Bob 的邮件服务器的呢？主要分为下面三个阶段
 
@@ -757,7 +707,7 @@ SSH 是加密的远程登录系统。使用 SSH 可以加密通信内容，即�
 
 最一开始，互联网中的电子邮件只能处理文本格式，后来也逐渐扩展为 MIME 类型，我们上面也简单提到了一句 MIME 类型，**MIME (Multipurpose Internet Mail Extensions)** 是用途互联网邮件扩展类型。
 
-它是一个互联网标准，扩展了电子邮件标准，使其能够支持很多格式，这些格式如下
+它是一个互联网标准，扩展了电子邮件标准，使其能够支持很多格式，这些格式如下：
 
 * 超文本标记语言文本 .html text/html
 * xml文档 .xml text/xml
@@ -773,13 +723,4 @@ SSH 是加密的远程登录系统。使用 SSH 可以加密通信内容，即�
 
 这些应用层协议我们在日常工作中都会用到，我们不仅仅是用户，还是程序员，势必要对其进行了解，我给你画了一些图帮助你理解清楚这些协议，简化的背后却是复杂而艰巨的规范标准和开发的复杂。
 
-![image-20210717083948590](https://tva1.sinaimg.cn/large/008i3skNly1gsjnhb9f5xj319s0tsn4g.jpg)
-
-![image-20210717084050334](https://tva1.sinaimg.cn/large/008i3skNly1gsjnidv1r3j315s0fs40g.jpg)
-
-
-
-
-
-
-
+如果文章对你有帮助，希望各位小伙伴们三连走起！

@@ -49,9 +49,7 @@
 
 下面我们来聊一下 NAT 具体的工作机制，如下图所示。
 
-![image-20220221082848527](https://tva1.sinaimg.cn/large/e6c9d24ely1gzktv39zq9j21l00o2wjh.jpg)
-
-<div align = "center">图 11-1</div>
+![](http://www.cxuan.vip/image-20230124105913706.png)
 
 私有网络中的客户端 A （IP 192.168.1.6）想向公共网络中的服务器（IP 122.122.122.122）发送数据包，当这个数据包经过 NAT 路由器的时候，就会把它的私有 IP 192.168.1.6 转换为公有的 IP 12.34.56.78，然后这个数据包的源地址就变为 12.34.56.78 ，它经由 Internet 发送给 IP 为 122.122.122.122 的目标服务器。
 
@@ -59,9 +57,7 @@
 
 NAT 路由器不仅可以把私有 IP 转换为公有 IP ，还可以把公有 IP 转换为私有 IP ，这种转换是双向的。
 
-![image-20220221085746750](https://tva1.sinaimg.cn/large/e6c9d24ely1gzkup8pyptj218c08emxv.jpg)
-
-<div align = "center">图 11-2</div>
+![](http://www.cxuan.vip/image-20230124110039799.png)
 
 拿上图来说，意思就是服务器 122.122.122.122 发送一个数据包，这个数据包通过 Internet 发送给 NAT 路由器，NAT 路由器把它转换为目标地址是 192.168.1.6 的数据包，然后再发送给客户端 A。
 
@@ -71,9 +67,7 @@ NAT 路由器不仅可以把私有 IP 转换为公有 IP ，还可以把公有 I
 
 （我们可以使用 netstat -nr 来显示路由表的信息）
 
-<img src="https://tva1.sinaimg.cn/large/e6c9d24ely1gzkwpw3gtrj20pk0hw41c.jpg" alt="image-20220221100722602" style="zoom:50%;" />
-
-<div align = "center">图 11-3</div>
+![](http://www.cxuan.vip/image-20230124110057368.png)
 
 所以，NAT 路由器内部有一张用来记录转换地址的表，也就是一件可以解释的事情了，所以 NAT 路由器在进行地址转换时，会按照其内部的映射关系来进行处理。
 
@@ -81,9 +75,7 @@ NAT 路由器不仅可以把私有 IP 转换为公有 IP ，还可以把公有 I
 
 针对这种情况，提出了使用 IP 地址和端口号一起转换的方式（NAPT），如下图所示。
 
-![image-20220221143753479](https://tva1.sinaimg.cn/large/e6c9d24ely1gzl4j4dk1hj21kh0u0dme.jpg)
-
-<div align = "center">图 11-4</div>
+![](http://www.cxuan.vip/image-20230124110114438.png)
 
 这个大致过程和上面 NAT 的转换模式相同，不一样的是，使用 NAPT 会把客户端 A 和客户端 B 的数据包源地址 192.168.1.6:80、192.168.1.7:80 转换为 12.34.56.78:80 和 12.34.56.78:90 ，然后再发送给目标服务器。在转换的过程中，NAT 路由器会生成转换表，通过转换表就可以正确地转换地址和端口的组合，使客户端 A 和客户端 B 与服务器之间进行通信。
 
@@ -139,7 +131,10 @@ NAT 主要可以实现以下几个功能：**数据包伪装、负载均衡、�
 
 NAT（NAPT）实际上是为了解决 IPv4 枯竭而开发的技术，不过，现在随着 IPv6 的开发，在 IPv6 中为了提高网络安全也在使用 NAT，在 IPv4 和 IPv6 的通信中经常使用 NAT-PT。然而在安全机制上 IPv4 也潜在着威胁，在配置和管理上也是一个挑战。如果要从根本上解决 IP 地址资源的问题，IPv6 才是最根本之路。
 
-![image-20210717083948590](https://tva1.sinaimg.cn/large/008i3skNly1gsjnhb9f5xj319s0tsn4g.jpg)
+## 后记
 
-![image-20210717084050334](https://tva1.sinaimg.cn/large/008i3skNly1gsjnidv1r3j315s0fs40g.jpg)
+这篇文章我为你总结了一下 NAT 协议的作用、应用和潜在问题已经 NAT 的转换过程。
 
+如果你在阅读文章的过程中发现错误和问题，请及时与我联系！
+
+如果文章对你有帮助，希望小伙伴们三连走起！

@@ -34,9 +34,7 @@
 
 假如你现在站在地铁上或者坐在办公室中，你的手机也好，电脑也好都有一个 `IP 地址`，**这个 IP 地址是你动输入的**，你需要写下面这些东西 ......
 
-<img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h2272avhg5j20ur0u00uo.jpg" alt="image-20220509154043964" style="zoom:50%;" />
-
-<div align = "center">图 10-1</div>
+![](https://www.cxuan.vip/image-20230124104807822.png)
 
 电脑配置这些还好，直接咔咔咔的配置完了，如果你用的是手机，那么你需要点到 IP 地址，输入 IP 地址，点到子网掩码，输入子网掩码，点到默认路由，输入路由，点到 DNS 服务器，输入 DNS 服务器 ...... 这玩意这么麻烦啊，恰好你刚配置完，领导叫你开会，得嘞，刚配置好的地址白瞎了。换了一个环境，需要重新配置 IP 地址，于是你把上面的步骤再重复了一遍，这时候散会了，然后你炸了。。。。。。
 
@@ -50,9 +48,7 @@
 
 DHCP 与 IP 密切相关，它是 IP 网络上所使用的协议。如果你想要使用 DHCP 提供服务的话，那么在整条通信链路上就需要 `DHCP 服务器`的存在，连接到网络的设备使用 DHCP 协议从 DHCP 服务器请求 IP 地址。DHCP 服务器会为设备分配一个唯一的 IP 地址。
 
-<img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h2273san06j214g0nmq4m.jpg" alt="image-20220509154209275" style="zoom:50%;" />
-
-<div align = "center">图 10-2</div>
+![](https://www.cxuan.vip/image-20230124105222802.png)
 
 > 除了 IP 地址外，DHCP 服务器还会把子网掩码，默认路由，DNS 服务器告诉你。
 
@@ -123,9 +119,7 @@ DHCP 的工作机制比较简单，无非就是客户端向服务器租借 IP �
 
 第一个阶段是 DHCP 查找包的阶段
 
-![image-20220509154534172](https://tva1.sinaimg.cn/large/e6c9d24ely1h2277cbj3lj21ta0todlx.jpg)
-
-<div align = "center">图 10-3</div>
+![](https://www.cxuan.vip/image-20230124105252065.png)
 
 查找包的阶段主要分为两步：第一步是 DHCP 发现包，第二步是 DHCP 提供包。
 
@@ -133,9 +127,9 @@ DHCP 客户端在通信链路上发起`广播`，看看链路上有没有能提�
 
 第二个阶段是 DHCP 的请求阶段。
 
-![image-20220509154617923](https://tva1.sinaimg.cn/large/e6c9d24ely1h22783nnpgj21ev0u0n1w.jpg)
+![](https://www.cxuan.vip/image-20230124105313562.png)
 
-<div align = "center">图 10-4</div>
+
 
 DHCP 的请求包也分为两步：第一步是 DHCP 请求包，第二步是 DHCP 确认包。
 
@@ -151,9 +145,7 @@ DHCP 客户端在通信链路上发起 DHCP 请求包，请求包主要是告诉
 
 状态之间的转换（箭头）是由于接收和发送消息或者计时器到期才发生的转换。下面是 DHCP 的状态轮转图。
 
-![image-20220509154641588](https://tva1.sinaimg.cn/large/e6c9d24ely1h2278ige76j217i0u0tcp.jpg)
-
-<div align = "center">图 10-5</div>
+![](https://www.cxuan.vip/image-20230124105335806.png)
 
 客户端在开始时没有消息，此时处于 `INIT` 状态，然后客户端会在通信链路上发起一个广播 `DHCP DISCOVER`。
 
@@ -181,17 +173,13 @@ DHCP 客户端在通信链路上发起 DHCP 请求包，请求包主要是告诉
 
 当检测到 IP 冲突时，通常 Windows 系统和 Mac 系统会弹出 IP 冲突的弹窗。
 
-![image-20220509154703138](https://tva1.sinaimg.cn/large/e6c9d24ely1h2278vwgepj20um0a6wg0.jpg)
-
-<div align = "center">图 10-6</div>
+![](https://www.cxuan.vip/image-20230124105349097.png)
 
 ## DHCP 中继代理
 
 常规家庭网络（土豪除外）中大多数都只有一个`以太网`，也就是 LAN 网段，一个 DHCP 服务器完全可以满足 LAN 中的客户机使用。但是，在更复杂的网络中，比如企业或者学校，一台 DHCP 服务器显然就无法满足了。因此，这种情况下，往往需要 DHCP 的统一管理，具体实现方式可以通过 `DHCP 中继代理` 来转发 DHCP 流量，如下图所示。
 
-![image-20220509154724356](https://tva1.sinaimg.cn/large/e6c9d24ely1h227993mutj21ji0u0acg.jpg)
-
-<div align = "center">图 10-7</div>
+![](https://www.cxuan.vip/image-20230124105405299.png)
 
 如上图所示，存在两个网段 A 和网段 B，DHCP 客户机和 DHCP 服务器不在一个网段内，所以我们在通信链路上架设了一个中继代理，DHCP 客户机通过访问中继代理以达到访问 DHCP 服务器的目的。
 
@@ -205,9 +193,7 @@ DHCP 客户端会向 DHCP 中继代理发送 DHCP 请求包，而 DHCP 中继代
 
 为了避免这些问题，在 [RFC3118] 中指定了一种认证 DHCP 消息的方法。 它定义了一个 DHCP 选项，即Authentication 选项，如下所示
 
-<img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h2279llkmtj20zk0najtc.jpg" alt="image-20220509154744592" style="zoom:50%;" />
-
-<div align = "center">图 10-8</div>
+![](https://www.cxuan.vip/image-20230124105425659.png)
 
 认证选项的主要目的就是**确定 DHCP 消息是否来自一个授权的发送方**。
 
@@ -224,19 +210,6 @@ DHCP 客户端会向 DHCP 中继代理发送 DHCP 请求包，而 DHCP 中继代
 
 这篇文章我和你探讨了计算机网络中一个比较容易忽视的概念，为什么说他容易忽视呢？因为我们平常开发过程中基本上不会管 IP 地址的配置的，也就是环境搭建的时候会用到一些，但是要系统学习计算机网络的话，DHCP 的重要性不可忽视，DHCP 包括工作机制、DHCP 报文消息，DHCP 状态机、DHCP 认证这些都是需要你了解并掌握的。
 
-![image-20210717083948590](https://tva1.sinaimg.cn/large/008i3skNly1gsjnhb9f5xj319s0tsn4g.jpg)
+如果你在阅读文章的过程中发现错误和问题，请及时与我联系！
 
-![image-20210717084050334](https://tva1.sinaimg.cn/large/008i3skNly1gsjnidv1r3j315s0fs40g.jpg)
-
-
-
-
-
-
-
-
-
-
-
-
-
+如果文章对你有帮助，希望小伙伴们三连走起！

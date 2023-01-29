@@ -2,17 +2,17 @@
 
 最近两个周末去图书馆刷 CSAPP 完全停不下来啊，这种看不懂却还是强忍着痛苦硬逼着自己去看的感觉，真让我着迷。
 
-<img src="https://tva1.sinaimg.cn/large/008i3skNgy1gvrty0gfghj30se0n8abb.jpg" alt="image-20211025202910686" style="zoom: 25%;" />
+<img src="http://www.cxuan.vip/image-20230129072732146.png"/>
 
 这本书从真正意义上让我体会到了什么叫做看书五分钟，休息俩小时。
 
 不过大家可千万别学我，我相信在坐的各位绝对比我牛批，为什么？因为后面我给你推荐了一款神器，那么首先我们先来介绍一下这本书。
 
-<img src="https://tva1.sinaimg.cn/large/008i3skNgy1gvru6i06nzj30u0140n4j.jpg" alt="image-20211025203724031" style="zoom: 25%;" />
+![](http://www.cxuan.vip/68747470733a2f2f747661312e73696e61696d672e636e2f6c617267652f3030386933736b4e67793167767275366930366e7a6a333075303134306e346a2e6a7067.jpeg)
 
 这本书总共分成十二个章节，我给你绘制了一个思维导图，比较简单明了。
 
-![image-20211025225218317](https://tva1.sinaimg.cn/large/008i3skNly1gvry2unn7kj31580u0dii.jpg)
+![](http://www.cxuan.vip/image-20230129072812400.png)
 
 第一章是提纲挈领性质的一章，从一个 hello world 程序来引出 C、引出 UNIX、Linux ，引出 C 语言程序的编译过程，引出高速缓存、系统的硬件组成、存储结构、虚拟内存、网络编程、并发编程，非常 cool。第一章的内容虽然不难理解，却是能让人涨**自信心**的一章，这一章能让你产生一种激动的心情，因为内容不难，但是却能够开拓你的思路，把你的知识体系串联起来。
 
@@ -20,7 +20,7 @@
 
 第二章的内容比较枯燥，我个人认为需要一定的 C 语言基础，虽然这本书的简介中说如果你有 Java 基础的话。。。。。。
 
-![image-20211025230317641](https://tva1.sinaimg.cn/large/008i3skNly1gvryeapgkuj318c0fc0xs.jpg)
+![](http://www.cxuan.vip/image-20230129072824642.png)
 
 还是有点难顶的，所以建议学一波 C 。
 
@@ -38,7 +38,7 @@
 
 这一章也会和你聊聊指令集架构，这些架构和宏观意义上的应用层架构不一样，非常复杂，比如下面这个 ARM 架构
 
-![image-20211026083152130](https://tva1.sinaimg.cn/large/008i3skNly1gvsetx85icj311l0u0gsg.jpg)
+![](http://www.cxuan.vip/image-20230129072837267.png)
 
 这本书是一个值得熟读 N 遍的一本书。
 
@@ -62,7 +62,7 @@
 
 第七章：链接，我们使用 Linux 的时候，很多情况下会出现很多难以理解的错误，其中很多都是链接错误。链接分为静态链接和动态链接，我们写的 C 程序在执行的过程中都会经过链接阶段。
 
-![image-20211026162805480](https://tva1.sinaimg.cn/large/008i3skNly1gvssle2qv1j316c098jsq.jpg)
+![](http://www.cxuan.vip/image-20230129072856721.png)
 
 除了这一章内容之外，大家也可以看一下一本把链接讲的非常透彻的一本书：《程序员的自我修养 -- 链接, 装载与库》，主要讲授代码指令是如何保存的，库文件如何与应用程序代码静态链接，应用程序如何被装载到内存中并开始运行，动态链接如何实现，C/C++运行库的工作原理，以及操作系统提供的系统服务是如何被调用的。非常好的一本国产书。
 
@@ -96,13 +96,13 @@ IO 这部分介绍类 Unix 系统下的 I/O 读写，主要介绍系统层面的
 
 比如他分享的深入理解计算机系统的 B 站课程。
 
-![image-20211026170441694](https://tva1.sinaimg.cn/large/008i3skNgy1gvstnngypnj318o0u00z2.jpg)
+![](http://www.cxuan.vip/image-20230129072913952.png)
 
 看到这里有没有心潮澎湃的要马上学起来呢？
 
 还有一些电子书的下载渠道：
 
-![image-20211026170730582](https://tva1.sinaimg.cn/large/008i3skNgy1gvstqkms0oj31br0u0wjv.jpg)
+![](http://www.cxuan.vip/image-20230129072925292.png)
 
 CSAPP 不管是中英版本都有一些勘误，有一些已经改正了，有一些还没改，大家可以在 http://www.yiligong.org/csapp3e/ 反馈你见到的勘误，有一些是影响阅读的，但是有一些是影响理解的。
 
@@ -110,7 +110,7 @@ CSAPP 不管是中英版本都有一些勘误，有一些已经改正了，有�
 
 也就是说，对于这个网站的使用方法，大家可以从后往前看。
 
-![image-20211026171149888](https://tva1.sinaimg.cn/large/008i3skNgy1gvstux9ab8j32bs0rodm6.jpg)
+![](http://www.cxuan.vip/image-20230129072934819.png)
 
 ## 总结
 
@@ -119,10 +119,3 @@ CSAPP 不管是中英版本都有一些勘误，有一些已经改正了，有�
 这个回答里面有练习题的答案，还有学习这本书需要的前置知识，这个回答给我的感觉是答主已经刷过几遍了，作为过来人的经验还是值得学习的。
 
 最最最重要的就是做实验，你可以在 http://csapp.cs.cmu.edu/3e/labs.html 上找到 csapp 的所有实验。
-
-
-
-
-
-
-

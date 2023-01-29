@@ -63,15 +63,11 @@
 
 静态路由会让你做大量且重复的设置路由的工作，效率低而且任务量很大，并且扩展性比较差，一旦新增一个路由，就会让你把所有的路由重新设置一遍，甚至还有单点问题，当传输节点中某一个路由出现故障时，数据基本不会饶过这个路由，需要管理员把路由重新设置才能继续发送。
 
-![image-20220521110116504](https://picturesforarticle.oss-cn-beijing.aliyuncs.com/img/image-20220521110116504.png)
-
-<div align = "center">图 14-1</div>
+![](http://www.cxuan.vip/image-20230127180444379.png)
 
 使用动态路由也需要手动设置一些东西，只不过需要设置的是路由协议，每个路由协议的复杂程度不同，所以设置的难以程度也不同，比如 RIP 协议的设置过程就比较简单，OSPF 的设置过程就比较繁琐。不过一旦设置完成后，如果要新增加一个路由，就只需要设置新增加的单个路由就可以，而且避免了单点问题，动态路由能够选择其他路径从而绕过故障路由。
 
-![image-20220521110103677](https://picturesforarticle.oss-cn-beijing.aliyuncs.com/img/image-20220521110103677.png)
-
-<div align = "center">图 14-2</div>
+![](http://www.cxuan.vip/image-20230127180457074.png)
 
 虽然静态路由和动态路由都各有利弊，但是你把他们结合以来一起使用就可以了。成年人全都要。
 
@@ -129,9 +125,7 @@ RIP 1 和 RIP 2 的主要区别如下：
 
 下面是 RIP 2 的报文格式。
 
-![image-20220524081615626](https://tva1.sinaimg.cn/large/e6c9d24ely1h2j6j1qjr4j213o0sitbs.jpg)
-
-<div align = "center">图 14-3</div>
+![](http://www.cxuan.vip/image-20230127180614009.png)
 
 RIP 2 报文可以细分为首部部分和路由部分。
 
@@ -152,37 +146,27 @@ RIP 存在一个问题是当网络故障时，会经过较长时间才能将信�
 
 如下图所示，有一个网络1 和路由器 1，路由器 1 到网络 1 的 RIP 报文中的路由信息（为了方便描述，省略其他报字段信息）是"1,1，直接交付"，这个意思就是说：到网络 1 的距离是 1 个路由器的跳数，是直连的方式。
 
-![image-20220524081408719](https://tva1.sinaimg.cn/large/e6c9d24ely1h2j6gw0frqj219q09uq3t.jpg)
-
-<div align = "center">图 14-4</div>
+![](http://www.cxuan.vip/image-20230127180640014.png)
 
 此时加进来了网络 2 和路由器 R2，R2 到网络 1 的 RIP 报文是 "1,2，R1"，它表示路由器 R2 到网络 1 的距离是 2 跳，下一个路由器是 R1。
 
-![image-20220524081544860](https://tva1.sinaimg.cn/large/e6c9d24ely1h2j6ija5t6j21kk0e2406.jpg)
-
-<div align = "center">图 14-5</div>
+![](http://www.cxuan.vip/image-20230127180656049.png)
 
 好了，上面两幅图中都能正常发送 RIP 报文，相安无事。此时网络 1 出现了故障，导致 R1 无法直接到达网络 1，那么R1、 R2 此时 RIP 的报文该如何发送呢？
 
 实际上，与网络 1 直接相连的是 R1，所以 R1 首先知道网络 1 是不可用的，一旦 R1 知道网络 1 不可用，就会修改 RIP 报文为 "1，16，直接"，然后向 R2 同步路由表，如下图所示：
 
-![image-20220524081557850](https://tva1.sinaimg.cn/large/e6c9d24ely1h2j6iq7k5hj21mc0is77v.jpg)
-
-<div align = "center">图 14-6</div>
+![](http://www.cxuan.vip/image-20230127180713944.png)
 
 但是由于 RIP 协议本身的特性，这个路由表同步过程没那么快速的完成，而此时 R2 不知道网络 1 不可用，所以它还是继续经过 R1 向网络 1 发送报文。
 
 一旦 R2 的报文发送给 R1 ，R1 就会认为经过 R2 可以到达网络 1 ，所以 R1 就会把 RIP 报文修改为 "1,3，R2"，表明我到网络 1 的距离是 3 跳，下一个路由器要经过 R2 ，如下图所示
 
-![image-20220524081630633](https://tva1.sinaimg.cn/large/e6c9d24ely1h2j6jaq897j21j40h4q5z.jpg)
-
-<div align = "center">图 14-7</div>
+![](http://www.cxuan.vip/image-20230127180733156.png)
 
 同理，R2 收到 R1 的报文后会将其 RIP 报文修改为 "1,4，R1"。。。。。。然后不断进行 R1 和 R2 的循环。
 
-![image-20220524081639259](https://tva1.sinaimg.cn/large/e6c9d24ely1h2j6jfyamcj21ia0nm78h.jpg)
-
-<div align = "center">图 14-8</div>
+![](http://www.cxuan.vip/image-20230127180803425.png)
 
 这个循环什么时候终止呢？
 
@@ -192,9 +176,7 @@ RIP 存在一个问题是当网络故障时，会经过较长时间才能将信�
 
 一种方式就是控制跳数为 16，这相当于是从报文传输时间上进行控制；二是规定路由器不会再把收到的消息反向传输给发送端，这种方式被称为**水平分割**，如下图所示
 
-![image-20220524081648274](https://tva1.sinaimg.cn/large/e6c9d24ely1h2j6jljy1ij21ru0nuq5v.jpg)
-
-<div align = "center">图 14-9</div>
+![](http://www.cxuan.vip/image-20230127180832125.png)
 
 还有一种方式就是当路由信息发生变化时，不等待一定的时间（例如 30 秒）而是直接发送出去，这看起来是更容易想到的方式，想想也是，网络都断了，还要等待 30 s 才发送，真的很鸡肋。
 
@@ -218,9 +200,7 @@ OSPF 使用的是**分布式的链路状态协议**，而非像 RIP 那样的距
 
 首先 OSPF 没有跳数限制，而且 OSPF 会将自治系统划分为更小的**区域**，每个区域都有一个标识，当然区域的划分也是有范围的，最大不能超过 200 个，下面就是一个 OSPF 对自治系统内不同区域的划分。
 
-![image-20220526221110569](https://tva1.sinaimg.cn/large/e6c9d24egy1h2m5wpqvcmj21gl0u042q.jpg)
-
-<div align = "center">图 14-10</div>
+![](http://www.cxuan.vip/image-20230127180852574.png)
 
 这么做的好处是能够提高区域内的消息传输效率，减少通信量。想象一下，如果是一个特别大的自治系统内部不做任何划分的话，那么每个路由器同步一次消息需要多大的通信量啊。
 
@@ -238,7 +218,7 @@ OSPF 构成的数据包不大，这样可以减少通信量，还有一个好处
 
 下面是 OSPF 的报文以及各个字段的含义。
 
-<img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h2pn6ai1azj20u014btbp.jpg" alt="image-20220529222511102" style="zoom:50%;" />
+![](http://www.cxuan.vip/image-20230127180915731.png)
 
 <div align = "center">图 14-11</div>
 
@@ -274,9 +254,7 @@ OSPF 除了上述这些报文的特点之外，还有一些其他特点：
 
 * 类型 1 ：hello 报文，这个报文会定期以组播的形式发送，主要作用就是维护和邻居路由器的可达性，确保能够双向通信，但是并不是所有的报文都会建立关系，必须和报文中的所有字段都匹配后，才能建立。下面是 hello 报文的字段。
 
-<img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h2pn6mp5i2j20u01ajwkx.jpg" alt="image-20220529222531088" style="zoom:50%;" />
-
-<div align = "center">图 14-12</div>
+![](http://www.cxuan.vip/image-20230127181018464.png)
 
 Nestwork Mask：网络掩码。
 
@@ -294,9 +272,7 @@ Neighbor：邻居。此处填充的是邻居的 Router ID。
 
 * 类型 2 ：数据库分组（Database Description），用于向相邻站点同步自己的链路数据库中的链路状态信息。
 
-<img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h2pn6ux3izj20u00x8tcx.jpg" alt="image-20220529222544244" style="zoom:50%;" />
-
-<div align = "center">图 14-13</div>
+![](http://www.cxuan.vip/image-20230127181044734.png)
 
 Interface MTU：最大接口数据单元，由此接口发出最大的 IP 数据长度，默认为 0 。
 
@@ -311,9 +287,7 @@ LSA headers：DD 报文中所含 LSA 的头部信息。
 
 * 类型 3：链路状态请求 ( Link State Request ) 分组，用 LSR 报文请求完整的 LSA 消息。
 
-<img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h2pn75f1duj20u010042a.jpg" alt="image-20220529222601131" style="zoom:50%;" />
-
-<div align = "center">图 14-14</div>
+![image-20230127181109145](http://www.cxuan.vip/image-20230127181109145.png)
 
 LS Type ：链路状态类型。
 
@@ -323,9 +297,7 @@ Advertising Router：产生该 LSA 的路由器 Router ID。
 
 * 类型 4: 链路状态更新 ( Link State Update ) 分组，
 
-<img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h2pn7db6usj20u00z9acz.jpg" alt="image-20220529222613537" style="zoom:50%;" />
-
-<div align = "center">图 14-15</div>
+![](http://www.cxuan.vip/image-20230127181122960.png)
 
 路由器收到 LSR 后会以 LSU 报文进行回应，在 LSU 报文中就包含了对方请求的 LSA 完整的信息。
 
@@ -333,9 +305,7 @@ Advertising Router：产生该 LSA 的路由器 Router ID。
 
 * 类型 5: 链路状态确认 ( Link State Acknowledgment ) 分组，用来对接受到的 LSU 报文进行确认。内容是需要确认的 LS A的 header，一个 LSACK 报文可以对多个 LSA 进行确认。
 
-<img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h2pn7k975cj20u00yv76x.jpg" alt="image-20220529222625073" style="zoom:50%;" />
-
-<div align = "center">图 14-16</div>
+![](http://www.cxuan.vip/image-20230127181134645.png)
 
 OSPF 规定，每隔 10 s 就要交换一次 Hello 分组，来判断网络链路是否可达，这就很像某种心跳检测机制。路由表就会根据 Hello 分组的检测结果来制定的。在正常情况下，绝大多数分组都是 Hello 分组，如果在 40 s 内没有收到发过来的 Hello 分组，就会认为相邻路由器不可达，应该立刻修改链路状态数据库中所记录的链路信息，还要重新制定路由表。
 
@@ -347,9 +317,7 @@ OSPF 规定，每隔 10 s 就要交换一次 Hello 分组，来判断网络链�
 
 所以，OSPF 通过使用数据库分组和相邻路由器交换链路信息状态来得到全网的状态链路数据库，下面是组合成状态链路数据库所需要发送过的 OSPF 报文。
 
-<img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h2pc7h4l2yj217i0u0aee.jpg" alt="image-20220529160547563" style="zoom:50%;" />
-
-<div align = "center">图 14-17</div>
+![](http://www.cxuan.vip/image-20230127181204465.png)
 
 这样一来，就会建立状态链路数据库，在网络运行过程中发生路由状态变更的话，只需要发送链路状态更新分组即可，更新完成后需要发送链路状态确认报文。
 
@@ -371,9 +339,7 @@ BGP 的环境与 RIP、OSPF 的环境不一样，主要原因还是在于互联�
 
 下图是一个使用了 BGP 边界路由器和 AS 的关系示意图：
 
-![image-20220607204710359](https://tva1.sinaimg.cn/large/e6c9d24ely1h2zyxwt68ej21820u0did.jpg)
-
-<div align = "center">图 14-18</div>
+![](http://www.cxuan.vip/image-20230127181226141.png)
 
 BGP 所交换的网络可达性信息就是要到达某个网络所要经过的一系列的路由。当各个 BGP 边界路由器一旦交换了可达性信息之后，就会选择出来一条到达各个 AS 比较好的路由路径。
 
@@ -398,9 +364,7 @@ BGP 边界路由器可以使用 UPDATE 报文来更新路由：包括撤掉以�
 
 下面是 BGP 的报文格式：
 
-![image-20220607204724906](https://tva1.sinaimg.cn/large/e6c9d24ely1h2zyy4ebivj214e0u075y.jpg)
-
-<div align = "center">图 14-19</div>
+![](http://www.cxuan.vip/image-20230127181246136.png)
 
 上面介绍的四种报文类型它们具有通用的报文首部，首部为 19 字节，通用首部主要分为三个字段。
 
@@ -410,35 +374,31 @@ BGP 边界路由器可以使用 UPDATE 报文来更新路由：包括撤掉以�
 
 **OPEN**报文共有 6 个字段，如下图抓包所示
 
-![image-20220605080629139](https://picturesforarticle.oss-cn-beijing.aliyuncs.com/img/image-20220605080629139.png)
-
-<div align = "center">图 14-20</div>
+![](http://www.cxuan.vip/image-20230127181309395.png)
 
 前三个字段是 BGP 通用报文首部，下面的几个字段依次是 Version 版本 ( 1 字节，值为 4  )， My AS 本自治系统号( 2 字节，使用的是全球唯一的 16 位系统号 ) ， Hold Time 保持时间 ( 2 字节，以秒计算的保持为临站关系的时间 )，BGP Identifier BGP 标识符 ( 4 字节，路由器的 IP 地址 )，下面是可选长度和可选参数。
 
 **KEEPALIVE** 报文只有 BGP 19 字节的通用首部。
 
-![image-20220605080701943](https://picturesforarticle.oss-cn-beijing.aliyuncs.com/img/image-20220605080701943.png)
-
-<div align = "center">图 14-21</div>
+![](http://www.cxuan.vip/image-20230127181320143.png)
 
 **UPDATE** 报文有五个字段，如下图所示
 
-![image-20220605080906081](https://picturesforarticle.oss-cn-beijing.aliyuncs.com/img/image-20220605080906081.png)
-
-<div align = "center">图 14-22</div>
+![image-20230127181331769](http://www.cxuan.vip/image-20230127181331769.png)
 
 报文中的 Unfeasible routes length 表示不可行路由长度，后面有个字段报文没有列出来，就是 Withdrawn Routes ，要撤销的路由列表，后面的 Total Path Attribute Length 表示路径属性总长度，后面的 Path attributes 就表示路径属性，最后的 NLRI 标识发出这个报文的网络。
 
 **NOTIFICATION** 报文有三个字段，如下图所示
 
-![image-20220605080711723](https://picturesforarticle.oss-cn-beijing.aliyuncs.com/img/image-20220605080711723.png)
-
-<div align = "center">图 14-23</div>
+![](http://www.cxuan.vip/image-20230127181340744.png)
 
 主要包括差错代码 ( 1 字节 )，差错子代码 ( 1 字节 ) ，后面还有差错数据。
 
-![image-20210717083948590](https://tva1.sinaimg.cn/large/008i3skNly1gsjnhb9f5xj319s0tsn4g.jpg)
+## 总结
 
-![image-20210717084050334](https://tva1.sinaimg.cn/large/008i3skNly1gsjnidv1r3j315s0fs40g.jpg)
+这篇文章我给你总结了一些常见的路由算法和作用。
+
+如果你在阅读文章的过程中发现错误和问题，请及时与我联系！
+
+如果文章对你有帮助，希望小伙伴们三连走起！
 
