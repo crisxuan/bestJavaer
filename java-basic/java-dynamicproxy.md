@@ -21,7 +21,7 @@
 
 >这里能体现出一个非常重要的编程思想：不要随意去改源码，如果需要修改，可以通过代理的方式来扩展该方法。
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20201216234014690.png" alt="image-20201216234014690" style="zoom:50%;" />
+![](http://www.cxuan.vip/image-20230203181600495.png)
 
 如上图所示，用户不能直接使用目标对象，而是构造出一个代理对象，由代理对象作为中转，代理对象负责调用目标对象真正的行为，从而把结果返回给用户。
 
@@ -29,13 +29,13 @@
 
 代理其实就和经纪人一样，比如你是一个明星，有很多粉丝。你的流量很多，经常会有很多金主来找你洽谈合作等，你自己肯定忙不过来，因为你要处理的不只是谈合作这件事情，你还要懂才艺、拍戏、维护和粉丝的关系、营销等。为此，你找了一个经纪人，你让他负责和金主谈合作这件事，经纪人做事很认真负责，它圆满的完成了任务，于是，金主找你谈合作就变成了金主和你的经纪人谈合作，你就有更多的时间来忙其他事情了。如下图所示
 
-![image-20201223000812581](/Users/mr.l/Library/Application Support/typora-user-images/image-20201223000812581.png)
+![](http://www.cxuan.vip/image-20230203181613273.png)
 
 这是一种静态代理，因为这个`代理(经纪人)`是你自己亲自挑选的。
 
 但是后来随着你的业务逐渐拓展，你无法选择每个经纪人，所以你索性交给了代理公司来帮你做。如果你想在 B 站火一把，那就直接让代理公司帮你找到负责营销方面的代理人，如果你想维护和粉丝的关系，那你直接让代理公司给你找一些托儿就可以了，那么此时的关系图会变为如下
 
-![image-20201223003600623](/Users/mr.l/Library/Application Support/typora-user-images/image-20201223003600623.png)
+![](http://www.cxuan.vip/image-20230203181623201.png)
 
 此时你几乎所有的工作都是由代理公司来进行打理，而他们派出谁来帮你做这些事情你就不得而知了，这得根据实际情况来定，因为代理公司也不只是负责你一个明星，而且每个人所擅长的领域也不同，所以你只有等到有实际需求后，才会给你指定对应的代理人，这种情况就叫做`动态代理`。
 
@@ -192,7 +192,7 @@ public static void dynamicProxy(){
 
 上面我们提到 JDK 动态代理是基于接口的代理，而 CGLIB 动态代理**是针对类实现代理，主要是对指定的类生成一个子类，覆盖其中的方法** ，也就是说 CGLIB 动态代理采用类继承 -> 方法重写的方式进行的，下面我们先来看一下 CGLIB 动态代理的结构。
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20201224084138478.png" alt="image-20201224084138478" style="zoom:50%;" />
+![](http://www.cxuan.vip/image-20230203181632728.png)
 
 如上图所示，代理类继承于目标类，每次调用代理类的方法都会在拦截器中进行拦截，拦截器中再会调用目标类的方法。
 
@@ -300,7 +300,7 @@ public class AssistByteCode {
 
 流写完后，我们打开这个 `.class` 文件如下所示
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20201225103234200.png" alt="image-20201225103234200" style="zoom:50%;" />
+![](http://www.cxuan.vip/image-20230203181644484.png)
 
 ```java
 public class UserDaoImpl implements UserDao {
@@ -315,7 +315,7 @@ public class UserDaoImpl implements UserDao {
 
 可以对比一下上面发现 UserDaoImpl 发现编译器除了为我们添加了一个公有的构造器，其他基本一致。
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20201225143213105.png" alt="image-20201225143213105" style="zoom:50%;" />
+![](http://www.cxuan.vip/image-20230203181653950.png)
 
 经过这个简单的示例后，cxuan 给你演示一下如何使用 Javaassist 动态代理。
 
@@ -484,7 +484,7 @@ public class AsmProxy extends ClassLoader implements Opcodes {
 
 下面是我们生成 TargetServiceProxy 的目标类
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20201227104510461.png" alt="image-20201227104510461" style="zoom:50%;" />
+![](http://www.cxuan.vip/image-20230203181704181.png)
 
 > 至此，我们已经介绍了四种动态代理的方式，分别是**JDK 动态代理、CGLIB 动态代理、Javaassist 动态代理、ASM 动态代理**，那么现在思考一个问题，为什么会有动态代理的出现呢？或者说动态代理是基于什么原理呢？
 
@@ -497,3 +497,7 @@ public class AsmProxy extends ClassLoader implements Opcodes {
 另外还有需要注意的一点，从性能角度来讲，有些人得出结论说是 Java 动态代理要比 CGLIB 和 Javaassist 慢几十倍，其实，在主流 JDK 版本中，Java 动态代理可以提供相等的性能水平，**数量级的差距不是广泛存在的**。而且，在现代 JDK 中，反射已经得到了改进和优化。
 
 我们在选型中，性能考量并不是主要关注点，**可靠性、可维护性、编码工作量**同等重要。
+
+如果你在阅读文章的过程中发现错误和问题，请及时与我联系！
+
+如果文章对你有帮助，希望小伙伴们三连走起！

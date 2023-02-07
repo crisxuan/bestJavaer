@@ -40,7 +40,7 @@ System.out.println(aList.getClass() == bList.getClass());
 
 如下图所示
 
-![](https://s3.ax1x.com/2020/12/17/rGuQKI.png)
+![](http://www.cxuan.vip/image-20230203223444297.png)
 
 无法将一个 Integer 类型的数据放在 `List<String>` 和无法将一个 String 类型的数据放在 `List<Integer>` 中是一样会编译失败。
 
@@ -50,7 +50,7 @@ System.out.println(aList.getClass() == bList.getClass());
 
 我们先来了解一下基本数据类型的包装类都有哪些
 
-![](https://s3.ax1x.com/2020/12/17/rGuu2d.png)
+![](http://www.cxuan.vip/image-20230203223832287.png)
 
 也就是说，上面这些基本数据类型和包装类在进行转换的过程中会发生自动装箱/拆箱，例如下面代码
 
@@ -78,7 +78,7 @@ Integer i1 = new Integer(1).intValue();
 
 我们使用 javap -c 反编译一下上面的自动装箱和自动拆箱来验证一下
 
-![](https://s3.ax1x.com/2020/12/17/rGuKxA.png)
+![](http://www.cxuan.vip/image-20230203223845341.png)
 
 可以看到，在 Code 2 处调用 `invokestatic` 的时候，相当于是编译器自动为我们添加了一下 Integer.valueOf 方法从而把基本数据类型转换为了包装类型。
 
@@ -103,7 +103,7 @@ public enum School {
 
 下面我们使用 `javap` 反编译一下这个 School.class 。反编译完成之后的结果如下
 
-![](https://s3.ax1x.com/2020/12/17/rGumPe.png)
+![](http://www.cxuan.vip/image-20230203223857440.png)
 
 从图中我们可以看到，枚举其实就是一个继承于 `java.lang.Enum` 类的 class 。而里面的属性 STUDENT 和 TEACHER 本质也就是 `public static final ` 修饰的字段。这其实也是一种编译器的优化，毕竟 STUDENT 要比 public static final School STUDENT 的美观性、简洁性都要好很多。
 
@@ -178,7 +178,7 @@ public class OuterClass {
 
 我们来看一下内部类编译后的结果
 
-![](https://s3.ax1x.com/2020/12/17/rGun8H.png)
+![](http://www.cxuan.vip/image-20230204084054284.png)
 
 如上图所示，内部类经过编译后的 linkOuter() 方法会生成一个指向外部类的 this 引用，这个引用就是连接外部类和内部类的引用。
 
@@ -205,7 +205,7 @@ public class VariableArgs {
 
 变长参数也是一种语法糖，那么它是如何实现的呢？我们可以猜测一下其内部应该是由数组构成，否则无法接受多个值，那么我们反编译看一下是不是由数组实现的。
 
-![](https://s3.ax1x.com/2020/12/17/rGulrt.png)
+![](http://www.cxuan.vip/image-20230203224111655.png)
 
 可以看到，printMessage() 的参数就是使用了一个数组来接收，所以千万别被变长参数`忽悠`了！
 
@@ -292,7 +292,7 @@ public class SwitchCaseTest {
 
 我们反编译一下，看看我们的猜想是否正确
 
-![](https://s3.ax1x.com/2020/12/17/rGu8Vf.png)
+![](http://www.cxuan.vip/image-20230204084111272.png)
 
 根据字节码可以看到，进行 switch 的实际是 hashcode 进行判断，然后通过使用 equals 方法进行比较，因为字符串有可能会产生哈希冲突的现象。
 
@@ -334,7 +334,7 @@ public static void main(String[] args) {
 
 这段代码会发生什么？我们反编译看一下
 
-![](https://s3.ax1x.com/2020/12/17/rGu1qP.png)
+![](http://www.cxuan.vip/image-20230203224143874.png)
 
 我们可以看到，我们明明是使用了 if ...else 语句，但是编译器却只为我们编译了 DEBUG = true 的条件，
 
@@ -380,7 +380,7 @@ public class TryWithResourcesTest {
 
 我们可以看一下 try-with-resources 反编译之后的代码
 
-![](https://s3.ax1x.com/2020/12/17/rGuJIS.png)
+![](http://www.cxuan.vip/image-20230204084126345.png)
 
 可以看到，生成的 try-with-resources 经过编译后还是使用的 try...catch...finally 语句，只不过这部分工作由编译器替我们做了，这样能让我们的代码更加简洁，从而消除样板代码。
 
@@ -404,7 +404,7 @@ public class StringAppendTest {
 
 上面这段代码就包含了两种字符串拼接的结果，我们反编译看一下
 
-![](https://s3.ax1x.com/2020/12/17/rGuGa8.png)
+![](http://www.cxuan.vip/image-20230204084139759.png)
 
 首先来看一下 s1 ，s1 因为 = 号右边是两个常量，所以两个字符串拼接会被直接优化成为 `I am cxuan`。而 s2 由于在堆空间中分配了一个 cxuan 对象，所以 + 号两边进行字符串拼接会直接转换为 StringBuilder ，调用其 append 方法进行拼接，最后再调用 toString() 方法转换成字符串。
 
@@ -418,13 +418,6 @@ public class StringAppendTest {
 
 我们要在敞开怀抱拥抱变化的同时也要掌握其 `屠龙之技`。
 
-![image-20210716163352584](https://tva1.sinaimg.cn/large/008i3skNly1gsivkbczxoj31l20t8al5.jpg)
+如果你在阅读文章的过程中发现错误和问题，请及时与我联系！
 
-![image-20210716163433337](https://tva1.sinaimg.cn/large/008i3skNly1gsivl4khz9j31d60h8mze.jpg)
-
-
-
-
-
-
-
+如果文章对你有帮助，希望小伙伴们三连走起！

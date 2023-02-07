@@ -94,7 +94,7 @@ HTTP 通用标头之所以这样命名，是因为与其他三个类别不同，
 
 >请注意，在 Cache-Control 标头中只能出现一个指令，但是在消息中可以出现多个这样的标头。
 
-![](https://img2018.cnblogs.com/blog/1515111/202001/1515111-20200119202007799-1484558348.png)
+![](http://www.cxuan.vip/image-20230202213249541.png)
 
 上面这个表格其实会有四种分类
 
@@ -115,7 +115,7 @@ HTTP 通用标头之所以这样命名，是因为与其他三个类别不同，
 Cache-Control: no-cache
 ```
 
-![](https://img2018.cnblogs.com/blog/1515111/202001/1515111-20200119202019720-545342359.png)
+![](http://www.cxuan.vip/image-20230202213306924.png)
 
 举个例子你就明白了，No-Cache 就相当于是`吃着碗里的，占着锅里的`，如果锅里还有新的肉片，就先吃锅里的，如果锅里没有新的，再吃自己的，这里`锅里的`就相当于是源服务器产生的，`碗里的`就相当于是缓存的。
 
@@ -153,7 +153,7 @@ Cache-Control: must-revalidate
 
 `no-store` 、`no_cache` 、 `must-revalidate` 和 `max-age` 可以一起看，下面是一个这四个标头的流程图
 
-![](https://img2018.cnblogs.com/blog/1515111/202001/1515111-20200119202031222-1829206010.png)
+![](http://www.cxuan.vip/image-20230202213557104.png)
 
 **public**
 
@@ -163,7 +163,7 @@ Cache-Control: must-revalidate
 Cache-Control: public
 ```
 
-![](https://img2018.cnblogs.com/blog/1515111/202001/1515111-20200119202044059-1156135091.png)
+![](http://www.cxuan.vip/image-20230202213611342.png)
 
 **private**
 
@@ -173,7 +173,7 @@ Cache-Control: public
 Cache-Control: private
 ```
 
-![](https://img2018.cnblogs.com/blog/1515111/202001/1515111-20200119202102287-144066551.png)
+![](http://www.cxuan.vip/image-20230202213623143.png)
 
 **s-maxage**
 
@@ -266,7 +266,7 @@ Date: Wed, 21 Oct 2015 07:28:00 GMT
 
 表示的是格林威治标准时间，这个时间要比北京时间慢八个小时
 
-![](https://img2018.cnblogs.com/blog/1515111/202001/1515111-20200119202119831-657480710.png)
+![](http://www.cxuan.vip/image-20230202213633690.png)
 
 #### Pragma
 
@@ -314,7 +314,7 @@ Transfer-Encoding 也属于 `Hop-by-hop（逐跳） 首部` ，下面来回顾�
 
 下面回到讨论中来，Transfer-Encoding 用于两个节点之间传输消息，而不是资源本身。在多个节点传输消息的过程中，每一段消息的传输都可以使用不同的 `Transfer-Encoding`。如图所示
 
-![](https://img2018.cnblogs.com/blog/1515111/202001/1515111-20200119202133383-1391705404.png)
+![](http://www.cxuan.vip/image-20230202213647072.png)
 
 Transfer-Encoding 支持文件压缩，如果你想要以文件压缩后的形式发送的话。Transfer-Encoding 所有可选类型如下
 
@@ -352,7 +352,7 @@ Transfer-Encoding: gzip, chunked
 
 首部字段 Upgrade 用于检测 HTTP 协议及其他协议是否可使用更高的版本进行通信，其参数值可以用来指定一个完全不同的通信协议。
 
-![](https://img2018.cnblogs.com/blog/1515111/202001/1515111-20200119202144084-1563076281.png)
+![](http://www.cxuan.vip/image-20230202213659243.png)
 
 上图用例中，首部字段 `Upgrade` 指定的值为 `TLS/1.0`。请注意此处两个字段首部字段的对应关系，Connection 的值被指定为 Upgrade。
 Upgrade 首部字段产生作用的对象仅限于客户端和临近服务器之间。因此，使用首部字段 Upgrade 时，还需要额外指定 `Connection: Upgrade`。
@@ -362,7 +362,7 @@ Upgrade 首部字段产生作用的对象仅限于客户端和临近服务器之
 
 使用 Via 是为了跟踪客户端和服务器之间的请求/响应路径，避免请求循环以及能够识别`请求/响应`链中发送者协议的功能。Via 字段由代理服务器添加，不论是正向代理还是反向代理，并且可以出现在请求标头和响应标头中。它用于跟踪消息转发。例如下图所示
 
-![](https://img2018.cnblogs.com/blog/1515111/202001/1515111-20200119202151270-1114942686.png)
+![](http://www.cxuan.vip/image-20230202213714568.png)
 
 Via 后面的的 `1.1, 1.0` 表示接收服务器上的 HTTP 版本，Via 首部是为了跟踪路径，经常和 `TRACE` 方法一起使用。
 
@@ -376,7 +376,7 @@ Warning 通用 HTTP 标头通常会告知用户一些与缓存相关的问题的
 
 HTTP/1.1 中定义了 7 种警告。它们分别如下
 
-![](https://img2018.cnblogs.com/blog/1515111/202001/1515111-20200119202159275-1980969426.png)
+![](http://www.cxuan.vip/image-20230202213727529.png)
 
 ### 请求标头
 
@@ -507,7 +507,7 @@ Accept-Language: en-US,en;q=0.5
 
 HTTP `Authorization` 请求头用于向服务器认证用户代理的凭据，通常用在服务器以401未经授权状态和WWW-Authenticate标头响应之后，啥意思呢？你不明白的话我画张图给你看
 
-![](https://img2018.cnblogs.com/blog/1515111/202001/1515111-20200119202349931-1672351660.png)
+![](http://www.cxuan.vip/image-20230202213750422.png)
 
 请求标头 `Authorization` 是用来告知服务器，用户的认证信息，服务器在只有收到认证后才会返回给客户端 200 OK 的响应，如果没有认证信息，则会返回 401 并告知客户端需要认证信息。详细关于 Authorization 的信息，后面也会详细解释
 
@@ -706,7 +706,7 @@ ETag 对于条件请求来说真是太重要了。因为条件请求就是根据
 
 ETag 响应头是`特定版本`的标识，它能够使缓存变得更高效并能够节省带宽，因为如果缓存内容未发生变更，Web 服务器则不需要重新发送完整的响应。除此之外，ETag 能够防止资源同时更新互相覆盖。
 
-![](https://img2018.cnblogs.com/blog/1515111/202001/1515111-20200119202414891-731084102.png)
+![](http://www.cxuan.vip/image-20230202213827106.png)
 
 如果给定 URL 上的资源发生变更，必须生成一个新的 `ETag` 值，通过比较它们可以确定资源的两个表示形式是否相同。
 
@@ -728,7 +728,7 @@ ETag: W/"0815"
 
 Location 响应标头表示 URL 需要重定向页面，它仅仅与 `3xx(重定向)` 或 `201(已创建)` 状态响应一起使用。下面是一个页面重定向的过程
 
-![](https://img2018.cnblogs.com/blog/1515111/202001/1515111-20200119202423740-854658184.png)
+![](http://www.cxuan.vip/image-20230202213847919.png)
 
 使用首部字段 Location 可以将响应接受方引导至某个与请求 URI 位置不同的资源。
 
@@ -887,7 +887,7 @@ Content-MD5: e10adc3949ba59abbe56e057f20f883e
 
 首部字段 Content-MD5 是一串由 MD5 算法生成的值，其目的在于检查报文主体在传输过程中是否保持完整，有无被修改的情况，以及确认传输到达。
 
-![](https://img2018.cnblogs.com/blog/1515111/202001/1515111-20200119202441634-650508702.png)
+![](http://www.cxuan.vip/image-20230202213907659.png)
 
 #### Content-Range
 
@@ -927,7 +927,6 @@ Last-Modified: Wed, 21 Oct 2015 07:28:00 GMT
 
 本篇文章主要介绍了 HTTP 四种标头的基本概念，但是并没有涵盖全部，毕竟 HTTP 标头内容确实太多了，以上介绍的基本都是平常工作中常用的一些概念，下一篇文章预告 **HTTP 的黑科技**
 
-![image-20210716163352584](https://tva1.sinaimg.cn/large/008i3skNly1gsivkbczxoj31l20t8al5.jpg)
+如果你在阅读文章的过程中发现错误和问题，请及时与我联系！
 
-![image-20210716163433337](https://tva1.sinaimg.cn/large/008i3skNly1gsivl4khz9j31d60h8mze.jpg)
-
+如果文章对你有帮助，希望小伙伴们三连走起！

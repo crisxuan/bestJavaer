@@ -35,13 +35,11 @@
       * [工作集时钟页面置换算法](#工作集时钟页面置换算法)
       * [页面置换算法小结](#页面置换算法小结)
 
-![](https://img2020.cnblogs.com/blog/1515111/202003/1515111-20200309131902610-1427836925.png)
-
 `主存(RAM)` 是一件非常重要的资源，必须要认真对待内存。虽然目前大多数内存的增长速度要比 IBM 7094 要快的多，但是，程序大小的增长要比内存的增长还快很多。`不管存储器有多大，程序大小的增长速度比内存容量的增长速度要快的多`。下面我们就来探讨一下操作系统是如何创建内存并管理他们的。
 
 经过多年的研究发现，科学家提出了一种 `分层存储器体系(memory hierarchy)`，下面是分层体系的分类
 
-![](https://img2020.cnblogs.com/blog/1515111/202003/1515111-20200309131910432-231569263.png)
+![](https://www.cxuan.vip/image-20230131155147672.png)
 
 位于顶层的存储器速度最快，但是相对容量最小，成本非常高。层级结构向下，其访问速度会变慢，但是容量会变大，相对造价也就越便宜。（所以个人感觉相对存储容量来说，访问速度是更重要的）
 
@@ -726,40 +724,6 @@ LRU 与老化之前的第 2 个区别是，在老化期间，计数器具有有�
 
 总之，**最好的算法是老化算法和WSClock算法**。他们分别是基于 LRU 和工作集算法。他们都具有良好的性能并且能够被有效的实现。还存在其他一些好的算法，但实际上这两个可能是最重要的。
 
-![](https://img2020.cnblogs.com/blog/1515111/202006/1515111-20200603170910090-837533246.png)
+如果你在阅读文章的过程中发现错误和问题，请及时与我联系！
 
-文章参考：
-
-https://www.informit.com/articles/article.aspx?p=25260&seqNum=9
-
-https://gerardnico.com/computer/clock/tick
-
-https://en.wikipedia.org/wiki/Page_replacement_algorithm
-
-http://faculty.salina.k-state.edu/tim/ossg/Memory/virt_mem/page_replace.html
-
-https://www.geeksforgeeks.org/page-replacement-algorithms-in-operating-systems/
-
-https://www.geeksforgeeks.org/multilevel-paging-in-operating-system/
-
-https://en.wikipedia.org/wiki/Translation_lookaside_buffer
-
-https://electricalvoice.com/instruction-word-size-8085-microprocessor/
-
-https://en.wikipedia.org/wiki/Page_table
-
-https://www.javatpoint.com/os-page-table
-
-https://baike.baidu.com/item/内存/103614?fr=aladdin
-
-https://baike.baidu.com/item/数据段/5136260?fromtitle=data%20segment&fromid=18082638&fr=aladdin
-
-https://blog.csdn.net/One_L_Star/article/details/81901186
-
-《现代操作系统》第四版
-
-《Modern Operation System》fourth 
-
-https://baike.baidu.com/item/SATA硬盘/3947233?fr=aladdin
-
-https://baike.baidu.com/item/虚拟地址/1329947?fr=aladdin
+如果文章对你有帮助，希望小伙伴们三连走起！

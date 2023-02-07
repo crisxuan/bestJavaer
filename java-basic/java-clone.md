@@ -47,7 +47,7 @@ public static void main(String[] args) {
 
 如果用图表示的话，应该是下面这样的：
 
-![image-20210807143403402](https://tva1.sinaimg.cn/large/008i3skNly1gt87q44n8kj317s0sagnr.jpg)
+![](http://www.cxuan.vip/image-20230203222438167.png)
 
 > 不用纠结 Java 中到底是值传递还是引用传递这种无意义的争论中，你只要记得对于基本数据类型，传递的是数据类型的值，而对于引用类型来说，传递的是对象的引用，也就是对象的地址就可以了。
 
@@ -113,7 +113,7 @@ food = Food{name='milk', num=1, taste='fragrance'}
 
 我们还是通过图示来说明一下：
 
-![image-20210807170109613](https://tva1.sinaimg.cn/large/008i3skNly1gt8bz6cnrtj31860tc770.jpg)
+![](http://www.cxuan.vip/image-20230203222450341.png)
 
 这幅图看出门道了么？在堆区分别出现了两个 Food 对象，这同时表明 clone 方法会重新创建一个对象并为其分配一块内存区域；虽然出现了两个对象，但是两个对象中的属性值是一样的，这也是换汤不换药，虽然汤和药是不同的东西（对象），但是他们都溶于水（属性值）。
 
@@ -123,7 +123,7 @@ food = Food{name='milk', num=1, taste='fragrance'}
 
 词穷了。。。。。。
 
-![点击查看源网页](https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.mp.itc.cn%2Fupload%2F20170313%2F2cc9261dd65a4965b624222d92b3d655_th.jpg&refer=http%3A%2F%2Fimg.mp.itc.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1630912115&t=22022ded8ec378839b466b6b503e577f)
+![](http://www.cxuan.vip/image-20230203222503708.png)
 
 哦对，还有一种改头换面的形式，它就是我们所熟悉的`深拷贝(Deep copy)`，先来抛出一下深拷贝的定义：**在进行对象拷贝的基础上，对对象的成员变量也依次拷贝的方式被称为深拷贝**。
 
@@ -214,7 +214,7 @@ foodClone = Drink{name='milk'}
 
 用图示表示的话，应该是下面这样的：
 
-![image-20210807170417799](https://tva1.sinaimg.cn/large/008i3skNly1gt8c2g299cj317i0u0wi2.jpg)
+![](http://www.cxuan.vip/image-20230203222516077.png)
 
 这是深拷贝之后的内存分配图，现在可以看到，food 和 foodClone 完全是两个不同的对象，它们之间不存在纽带关系。
 
@@ -287,31 +287,6 @@ public void test() {
 
 * 实现此接口的类应该使用公共方法重写 Object 的clone() 方法，因为 Object 的 clone() 方法是一个受保护的方法。
 
-![image-20210716163352584](https://tva1.sinaimg.cn/large/008i3skNly1gsivkbczxoj31l20t8al5.jpg)
+如果你在阅读文章的过程中发现错误和问题，请及时与我联系！
 
-![image-20210716163433337](https://tva1.sinaimg.cn/large/008i3skNly1gsivl4khz9j31d60h8mze.jpg)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+如果文章对你有帮助，希望小伙伴们三连走起！

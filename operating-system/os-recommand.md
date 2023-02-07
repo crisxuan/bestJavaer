@@ -257,5 +257,3 @@ B 站视频
 《编译原理》：https://www.bilibili.com/video/av17649289?from=search&seid=5673462623145874347
 
 《数据库系统概念》：https://www.bilibili.com/video/av52007695?from=search&seid=9723583724024090244
-
-![](https://img2020.cnblogs.com/blog/1515111/202005/1515111-20200528174117069-1464561661.png)

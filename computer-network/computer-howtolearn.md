@@ -22,25 +22,25 @@
 
 学习计算机网络，我首先推荐的 UP 主湖科大教书匠，他讲的计算机网络十分通俗易懂，重点的地方讲的十分细致，并且还有一些实验，更好的是有考研 408 的难题的讲解，也是非常适合考研党，除了课程内容外还有很多习题讲解视频，特别赞的一点是每天动态里都会更新一道考研题，播放量也非常的多。
 
-![image-20210716172640287](https://tva1.sinaimg.cn/large/008i3skNgy1gsix39gnptj318q0ryjxj.jpg)
+![](http://www.cxuan.vip/image-20230131163750009.png)
 
 2. [2019 王道考研 计算机网络](https://www.bilibili.com/video/BV19E411D78Q?p=1)
 
 既然说到了考研，那我就不得不提一下王道考研了，恭喜你发现了宝藏。王道考研的计算机网络视频，播放量非常多，而且老师是一位小姐姐，声音十分动听，声音这么好听的老师给你讲课，妈妈再也不用担心我的学习了呢，总之，这个视频的质量也非常高，弹幕全是对小姐姐的高度评价。（王道考研其他的视频也不错哦，暗示一下：操作系统，数据结构等等）	
 
-![image-20210716172646786](https://tva1.sinaimg.cn/large/008i3skNgy1gsix3bpcx4j318y0rs77x.jpg)
+![](http://www.cxuan.vip/image-20230131163817682.png)
 
 3. [韩立刚计算机网络谢希仁](https://www.bilibili.com/video/BV1gV411h7r7?p=1)
 
 韩立刚老师所讲的计算机网络视频，内容比较多，但是讲解的通俗易懂，并且老师讲课的经验也十分的丰富。配套的教材是谢希仁老师的计算机网络教材，韩老师的最近的一个视频视频比较新，播放量还比较少，但是他讲的是真的不错，相比于王道考研所讲的计算机网络，韩老师更加细致一些。
 
-![image-20210717082425101](https://tva1.sinaimg.cn/large/008i3skNly1gsjn1asgg8j318i0rs44j.jpg)
+![](http://www.cxuan.vip/image-20230131164418394.png)
 
 4. [计算机网络（谢希仁第七版）-方老师](https://www.bilibili.com/video/BV1yE411G7Ma?p=1)
 
 在计算机网络方面，我还想推荐的一位老师就是方老师，也是一位小姐姐老师。她的视频配套的教材也是谢老师的网络教材，在线看的小伙伴也超多，弹幕都是对方老师的评价。
 
-![image-20210717082728484](https://tva1.sinaimg.cn/large/008i3skNly1gsjn4hblz4j318u0rggpy.jpg)
+![](http://www.cxuan.vip/image-20230131164443161.png)
 
 ## 博客
 
@@ -80,7 +80,7 @@ Tutorialspoint 系统学习计算机，不仅仅局限于计算机网络 [Comput
 
 《网络是怎样连接的》
 
-![image-20210717082738649](https://tva1.sinaimg.cn/large/008i3skNly1gsjn4n914dj312q0gg765.jpg)
+![](http://www.cxuan.vip/image-20230131164518207.png)
 
 这本书是日本人写的，它和《程序是怎样运行的》、《计算机是怎样跑起来的》统称为图解入门系列，最大的特点就是风趣幽默，简单易懂。这本书通过多图来解释浏览器中输入网址开始，一路追踪了到显示出网页内容为止的整个过程，以图配文，讲解了网络的全貌，并重点介绍了实际的网络设备和软件是如何工作的。
 
@@ -92,7 +92,7 @@ Tutorialspoint 系统学习计算机，不仅仅局限于计算机网络 [Comput
 
 《图解 HTTP》
 
-![image-20210717082745847](https://tva1.sinaimg.cn/large/008i3skNly1gsjn4rji6tj314k0g8abn.jpg)
+![](http://www.cxuan.vip/image-20230131164532823.png)
 
 《图解 HTTP》是 HTTP 协议的入门书籍，当然 HTTP 也是属于计算机网络的范畴，这本书适合于想要对 HTTP 有基本认知的程序员，同样也适合查漏补缺。
 
@@ -110,13 +110,13 @@ Tutorialspoint 系统学习计算机，不仅仅局限于计算机网络 [Comput
 
 《计算机网络 第七版》
 
-![image-20210717082756260](https://tva1.sinaimg.cn/large/008i3skNly1gsjn4y30rej316k0gugns.jpg)
+![](http://www.cxuan.vip/image-20230131164553599.png)
 
 这本书是一本计算机网络的圣经书籍，圣经就在于人人都应该读一下这本书，原著非常经典，翻译也很不错，我自己也马上就看完了，这本书会从顶层，也就是网络层逐步下探到物理层，一层一层的带你入门，解释各层之间的协议，主要特征是什么，一个数据包的发送历程。这本书并不局限于某个具体的协议，而是从宏观的角度来看待计算机网络到底是什么，里面有一些专业名词，理解并掌握后会对深入学习计算机网络非常有用。
 
 《计算机网络 谢希仁》
 
-![image-20210717082803295](https://tva1.sinaimg.cn/large/008i3skNly1gsjn52v5hxj314g0eawg0.jpg)
+![](http://www.cxuan.vip/image-20230131164611679.png)
 
 这本书是很多大学的教材，也是一本非常好的进阶书籍，这本书相对于自顶向下方法更多是对于通信网络的阐述。
 
@@ -126,7 +126,7 @@ Tutorialspoint 系统学习计算机，不仅仅局限于计算机网络 [Comput
 
 《HTTP 权威指南》
 
-![image-20210717082811170](https://tva1.sinaimg.cn/large/008i3skNly1gsjn57e2p0j313o0g4myu.jpg)
+![image-20230131164625240](http://www.cxuan.vip/image-20230131164625240.png)
 
 HTTP 权威指南是深入 HTTP 非常值得一看的书，这本书写的非常全了。
 
@@ -148,8 +148,6 @@ HTTP 权威指南是深入 HTTP 非常值得一看的书，这本书写的非常
 
 这是一本被翻译耽误的经典书，两个硬核作者 Kevin R. Fall 和 W. Richard Stevens 被南开大学的某计算机洗的译者给毁了。我第一开始读这本书以为是自己智商不够，原来是翻译 "瞎TM翻" 啊。语句不通且不说，您好歹走点心，改点措辞也行啊，纯碎是生搬硬套谷歌翻译啊，哎。
 
-![image-20210717082819698](https://tva1.sinaimg.cn/large/008i3skNly1gsjn5d17h5j313q0g276i.jpg)
-
 上面都是一些理论书籍，下面是稍微偏实战一些的书籍了。
 
 计算机网络实战最有效的当然就属于抓包了，有很多抓包工具比如
@@ -158,7 +156,7 @@ wireshark、sniffer、httpwatch、iptool、fiddle 等，但是我用的和使用
 
 《wireshark 数据包分析实战》
 
-![image-20210717082827980](https://tva1.sinaimg.cn/large/008i3skNly1gsjn5i6ihzj315a0gejtg.jpg)
+![](http://www.cxuan.vip/image-20230131164644933.png)
 
 初学者必备，介绍了wireshark安装，嗅探网络流量，wireshark的基本使用，用wireshark分析了一圈常用的TCP，UDP协议，也简要分析了HTTP等应用层协议，概要介绍了一些TCP重传的机制，最后是无线分析
 
@@ -168,7 +166,7 @@ wireshark、sniffer、httpwatch、iptool、fiddle 等，但是我用的和使用
 
 《wireshark 网络分析就是这么简单》
 
-![image-20210717082836588](https://tva1.sinaimg.cn/large/008i3skNly1gsjn5nbnkdj313a0d4ta5.jpg)
+![](http://www.cxuan.vip/image-20230131164703703.png)
 
 读的时候你会忍不住笑的，区别于《Wireshark数据包分析实战》，本书就像一本侦探小说集，以幽默风趣的语言风格，借助wireshark以理性的思考来不断探险，根据蛛丝马迹来“侦破案情”
 
@@ -176,7 +174,7 @@ wireshark、sniffer、httpwatch、iptool、fiddle 等，但是我用的和使用
 
 《Wireshark网络分析实战》
 
-![image-20210717082844214](https://tva1.sinaimg.cn/large/008i3skNly1gsjn5rzn59j31480e4q4o.jpg)
+![](http://www.cxuan.vip/image-20230131164727525.png)
 
 其内容涵盖了Wireshark的基础知识，抓包过滤器的用法，显示过滤器的用法，基本/高级信息统计工具的用法，Expert Info工具的用法，Wiresahrk在Ethernet、LAN及无线LAN中的用法，ARP和IP故障分析，TCP/UDP故障分析，HTTP和DNS故障分析，企业网应用程序行为分析，SIP、多媒体和IP电话，排除由低带宽或高延迟所引发的故障，认识网络安全等知识。
 
@@ -185,10 +183,3 @@ wireshark、sniffer、httpwatch、iptool、fiddle 等，但是我用的和使用
 借鉴一些大佬的回答，给你推荐一个斯坦福课程的实验
 
 推荐 Stanford 课程 cs144，配合《计算机网络：自顶向下方法》（Computer Networking: A Top-Down Approach）。具体来说就是跟着 cs144 的课程安排走一遍，**完成课程的lab**。
-
-
-
-![image-20210717083948590](https://tva1.sinaimg.cn/large/008i3skNly1gsjnhb9f5xj319s0tsn4g.jpg)
-
-![image-20210717084050334](https://tva1.sinaimg.cn/large/008i3skNly1gsjnidv1r3j315s0fs40g.jpg)
-

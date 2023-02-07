@@ -26,7 +26,7 @@
 
 我们大家都知道，HTTP 这个应用层协议是以 TCP 为基础来传输数据的。当你想访问一个资源（资源在网络中就是一个 URL）时，你需要先解析这个资源的 IP 地址和端口号，从而和这个 IP 和端口号所在的服务器建立 TCP 连接，然后 HTTP 客户端发起服务请求（GET）报文，服务器对服务器的请求报文做出响应，等到不需要交换报文时，客户端会关闭连接，下面我用图很好的说明了这个过程。
 
-![image-20210724171103538](https://tva1.sinaimg.cn/large/008i3skNly1gss5l85aedj30ls0koadh.jpg)
+![](http://www.cxuan.vip/image-20230202221231693.png)
 
 上面这幅图很好的说明了 HTTP 从建立连接开始 -> 发起请求报文 -> 关闭连接的全过程，但是上面这个过程还忽略了一个很重要的点，那就是**TCP 建立连接的过程**。
 
@@ -44,7 +44,7 @@ TCP 建立连接需要经过三次握手，交换三个报文，我相信大家�
 
 再来回顾一下上面的 HTTP 事务的过程，你觉得有哪几个过程会造成 HTTP 事务时延呢？如下图所示
 
-![image-20210724224611391](https://tva1.sinaimg.cn/large/008i3skNly1gssf9wweeaj30jq0910ts.jpg)
+![](http://www.cxuan.vip/image-20230202221257663.png)
 
 从图中可以看出，主要是有下面这几个因素影响 HTTP 事务的时延
 
@@ -60,7 +60,7 @@ TCP 建立连接需要经过三次握手，交换三个报文，我相信大家�
 
 试想一个问题，假设一个页面有五个资源（元素），每个资源都需要客户端打开一个 TCP 连接、获取资源、断开连接，而且每个连接都是串行打开的，如下图所示：
 
-![image-20210726231625034](https://tva1.sinaimg.cn/large/008i3skNly1gsurdxw2ptj60kt09875k02.jpg)
+![](http://www.cxuan.vip/image-20230202221308437.png)
 
 串行的意思就是，这五个连接必须是有先后顺序，不会出现同时有两个以上的连接同时打开的情况。
 
@@ -74,7 +74,7 @@ TCP 建立连接需要经过三次握手，交换三个报文，我相信大家�
 
 这是一种最常见的，也是最容易想到的一种连接方式，HTTP 允许客户端打开多条连接，并行执行多个 HTTP 事务，加入并行连接后，整个 HTTP 事务的请求过程是这样的。
 
-![image-20210727234028172](https://tva1.sinaimg.cn/large/008i3skNly1gsvxpbxqh9j30c70lk760.jpg)
+![](http://www.cxuan.vip/image-20230202221321099.png)
 
 采用并行连接这种方式会克服单条连接的空载时间和带宽限制，因为每个事务都有连接，因此时延能够重叠起来，会提高页面的加载速度。
 
@@ -104,13 +104,13 @@ HTTP 1.1 版本都是持久性连接，如果想要断开连接时，需要指�
 
 下面是使用了持久连接之后的 HTTP 事务与使用串行 HTTP 事务连接的对比图
 
-![image-20210729224744113](https://tva1.sinaimg.cn/large/008i3skNly1gsy7ezalgoj30yn0u0454.jpg)
+![](http://www.cxuan.vip/image-20230202221335719.png)
 
 这张图对比了 HTTP 事务在串行连接上和持久连接的时间损耗图，可以看到，HTTP 持久连接省去了**连接打开 - 连接关闭**的时间，所以在时间损耗上有所缩减。
 
 在持久性连接中，还有一个非常有意思的地方，就是 Connection 选项，Connection 是一个**通用选项**，也就是客户端和服务端都具有的一个标头，下面是一个具有持久性连接的客户端和服务端的请求-响应图
 
-![image-20210729230851879](https://tva1.sinaimg.cn/large/008i3skNly1gsy80yq6bfj30k4095aar.jpg)
+![](http://www.cxuan.vip/image-20230202221351361.png)
 
 从这张图可以看出，持久连接主要使用的就是 Connection 标头，这也就意味着，Connection 就是持久性连接的实现方式。所以下面我们主要讨论一下 Connection 这个大佬。
 
@@ -182,7 +182,7 @@ Keep-Alive 的使用有一定限制，下面我们就来讨论一下 Keep-Alive 
 
 假设一个 Web 客户端正在通过一个哑代理服务器与 Web 服务器进行对话，如下图所示
 
-![image-20210801143652945](https://tva1.sinaimg.cn/large/008i3skNgy1gt1a39bhttj61b60r0tgf02.jpg)
+![](http://www.cxuan.vip/image-20230202221405479.png)
 
 来解释一下上面这幅图
 
@@ -218,7 +218,7 @@ HTTP/1.1 逐渐停止了对 Keep-Alive 连接的支持，用一种名为 `persis
 
 HTTP/1.1 允许在持久连接上使用**请求管道**。这是相对于 Keep-Alive 连接的又一个性能优化。管道就是一个承载 HTTP 请求的载体，我们可以将多个 HTTP 请求放入管道，这样能够降低网络的环回时间，提升性能。下图是使用串行连接、并行连接、管道化连接的示意图：
 
-![image-20210801173109348](https://tva1.sinaimg.cn/large/008i3skNly1gt1f4i0241j30u00w90zr.jpg)
+![](http://www.cxuan.vip/image-20230202221418595.png)
 
 使用管道化的连接也有几处限制：
 
@@ -244,29 +244,6 @@ HTTP 关闭连接一共分为三种情况：**完全关闭、半关闭和正常�
 
 关于 TCP 一些关闭问题的深入研究，你可以阅读 cxuan 的另一篇文章 [TCP 基础知识](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247491621&idx=1&sn=78a182f89093ef1cc807bdef21cdcb4d&chksm=e99a1537deed9c2169257574c17877933b68fadd061f371c2f53a50e7f640d52f5f1667c895c&token=632815717&lang=zh_CN#rd)
 
-![image-20210716163352584](https://tva1.sinaimg.cn/large/008i3skNly1gsivkbczxoj31l20t8al5.jpg)
+如果你在阅读文章的过程中发现错误和问题，请及时与我联系！
 
-![image-20210716163433337](https://tva1.sinaimg.cn/large/008i3skNly1gsivl4khz9j31d60h8mze.jpg)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+如果文章对你有帮助，希望小伙伴们三连走起！

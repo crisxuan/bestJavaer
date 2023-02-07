@@ -35,11 +35,11 @@ List<String> list = Arrays.asList(arr);
 
 Arrays.asList() 将返回一个 ArrayList，它是 Arrays 中的私有静态类，它不是 java.util.ArrayList 类。如下图所示
 
-![image-20211005232205213](https://tva1.sinaimg.cn/large/008i3skNly1gv4ujo7xmdj30rj072dgc.jpg)
+![](http://www.cxuan.vip/image-20230203180823167.png)
 
 Arrays 内部的 ArrayList 只有 set、get、contains 等方法，但是没有能够像是 add 这种能够使其内部结构进行改变的方法，所以 Arrays 内部的 ArrayList 的大小是固定的。
 
-![image-20211006094537453](https://tva1.sinaimg.cn/large/008i3skNly1gv5ckgz3nkj607z08hwet02.jpg)
+![](http://www.cxuan.vip/image-20230203180838777.png)
 
 如果要创建一个能够添加元素的 ArrayList ，你可以使用下面这种创建方式：
 
@@ -49,7 +49,7 @@ ArrayList<String> arrayList = new ArrayList<String>(Arrays.asList(arr));
 
 因为 ArrayList 的构造方法是可以接收一个 Collection 集合的，所以这种创建方式是可行的。
 
-![image-20211006094827686](https://tva1.sinaimg.cn/large/008i3skNly1gv5cnf7xvaj60h70bbq4202.jpg)
+![](http://www.cxuan.vip/image-20230203180857076.png)
 
 ## 错误二：检查数组是否包含某个值
 
@@ -82,7 +82,7 @@ return false;
 
 这个错误我相信很多小伙伴都知道了，在循环中删除元素是个禁忌，有段时间内我在审查代码的时候就喜欢看团队的其他小伙伴有没有犯这个错误。
 
-<img src="https://tva1.sinaimg.cn/large/008i3skNly1gv5dh9519ij60fc0aggly02.jpg" alt="image-20211006101709155" style="zoom:50%;" />
+![](http://www.cxuan.vip/image-20230203180916978.png)
 
 说到底，为什么不能这么做（集合内删除元素）呢？且看下面代码
 
@@ -121,7 +121,7 @@ for (String s : list) {
 
 在阿里开发规范上，也有不要在 for-each 循环内对元素进行 remove/add 操作的说明。
 
-![image-20211006100608623](https://tva1.sinaimg.cn/large/008i3skNly1gv5d5ta0u0j60p10ext9x02.jpg)
+![](http://www.cxuan.vip/image-20230203180933892.png)
 
 所以大家要使用 List 进行元素的添加或者删除操作，一定要使用迭代器进行删除。也就是
 
@@ -165,7 +165,7 @@ public static void main(String[] args){
 
 这段代码会抛出 *java.lang.ClassCastException* 异常，为啥呢？
 
-<img src="https://tva1.sinaimg.cn/large/008i3skNly1gv5o8jcvzcj60bx08eq3602.jpg" alt="image-20211006162921268" style="zoom:50%;" />
+![](http://www.cxuan.vip/image-20230203180954305.png)
 
 使用原始类型集合是比较危险的，因为原始类型会跳过泛型检查而且不安全，`Set、Set<?> 和 Set<Object>` 存在巨大的差异，而且泛型在使用中很容易造成类型擦除。
 
@@ -204,8 +204,6 @@ public class Test {
 
 哈哈哈，ArrayList 是我见过程序员使用频次最高的工具类，没有之一。
 
-<img src="https://tva1.sinaimg.cn/large/008i3skNly1gv5p07snopj60j70j90ve02.jpg" alt="image-20211006165557687" style="zoom:50%;" />
-
 当开发人员不知道 ArrayList 和 LinkedList 的区别时，他们经常使用 ArrayList（其实实际上，就算知道他们的区别，他们也不用 LinkedList，因为这点性能不值一提），因为看起来 ArrayList 更熟悉。。。。。。
 
 但是实际上，ArrayList 和 LinkedList 存在巨大的性能差异，简而言之，如果添加/删除操作大量且随机访问操作不是很多，则应首选 LinkedList。如果存在大量的访问操作，那么首选 ArrayList，但是 ArrayList 不适合进行大量的添加/删除操作。
@@ -229,7 +227,7 @@ for(String s: arr){
 
 首先看一段代码，分析为什么会编译不通过？
 
-![image-20211006172246303](https://tva1.sinaimg.cn/large/008i3skNly1gv5ps43xgsj60a80apgm402.jpg)
+![](http://www.cxuan.vip/image-20230203181025470.png)
 
 发生此编译错误是因为未定义默认 Super 的构造函数。 在 Java 中，如果一个类没有定义构造函数，编译器会默认为该类插入一个默认的无参数构造函数。 如果在 Super 类中定义了构造函数，在这种情况下 Super(String s)，编译器将不会插入默认的无参数构造函数。 这就是上面 Super 类的情况。
 
@@ -272,15 +270,4 @@ System.out.println(c.equals(d)); // True
 
 今天我给你汇总了一下 Java 开发中常见的 10 个错误，虽然比较简单，但是很容易忽视的问题，细节成就完美，看看你还会不会再犯了，如果再犯，嘿嘿嘿。
 
-<img src="https://tva1.sinaimg.cn/large/008i3skNly1gv4u2gxe51j60kg0gadgh02.jpg" alt="image-20211005230533419" style="zoom:50%;" />
-
 点赞在看分享朋友圈是基操哦！快来一键三连！！！
-
-## 最后
-
-cxuan 写了六本 PDF，全网下载量已经 10w + ，每本都非常硬核，你可以关注下方公众号在后台回复「cxuan」即可领取。
-
-![image-20210716163352584](https://tva1.sinaimg.cn/large/008i3skNly1gsivkbczxoj31l20t8al5.jpg)
-
-![image-20210716163433337](https://tva1.sinaimg.cn/large/008i3skNly1gsivl4khz9j31d60h8mze.jpg)
-

@@ -32,7 +32,7 @@ String s = "abc";
 
 字符串是恒定的，一旦创建出来就不会被修改，怎么理解这句话？我们可以看下 String 源码的声明
 
-![](https://img2020.cnblogs.com/blog/1515111/202006/1515111-20200606094628294-70991660.png)
+![](http://www.cxuan.vip/image-20230204144151567.png)
 
 告诉我你看到了什么？String 对象是由`final` 修饰的，一旦使用 final 修饰的类不能被继承、方法不能被重写、属性不能被修改。而且 String 不只只有类是 final 的，它其中的方法也是由 final 修饰的，换句话说，Sring 类就是一个典型的 `Immutable` 类。也由于 String 􏰆的不可变性，类似字符串拼接、字符串截取等操作都会产生新的 String 对象。
 
@@ -47,7 +47,7 @@ String s4 = new String("aaa");
 
 分别创建了几个对象？
 
-![](https://img2020.cnblogs.com/blog/1515111/202006/1515111-20200606094635706-1981312253.png)
+![](http://www.cxuan.vip/image-20230204144201968.png)
 
 * 首先第一个问题，s1 创建了几个对象。字符串在创建对象时，会在常量池中看有没有 aaa 这个字符串；如果没有此时还会在常量池中创建一个；如果有则不创建。我们默认是没有的情况，所以会创建一个对象。下同。
 * 那么 s2 创建了几个对象呢？是两个对象还是一个对象？我们可以使用 `javap -c` 看一下反汇编代码
@@ -79,7 +79,7 @@ public class com.sendmessage.api.StringDemo {
 
 * 下面来看 s3，s3 创建了几个对象呢？是一个还是两个？还是有其他选项？我们使用 javap -c 来看一下
 
-![](https://img2020.cnblogs.com/blog/1515111/202006/1515111-20200606094645027-599115776.png)
+![](http://www.cxuan.vip/image-20230204144214310.png)
 
 我们可以看到，s3 执行 + 操作会创建一个 `StringBuilder` 对象然后执行初始化。执行 + 号相当于是执行 `new StringBuilder.append()` 操作。所以
 
@@ -103,17 +103,15 @@ public String toString() {
 
 * 下面来看 s4 创建了几个对象，在创建这个对象时因为使用了 new 关键字，所以肯定会在堆中创建一个对象。然后会在常量池中看有没有 aaa 这个字符串；如果没有此时还会在常量池中创建一个；如果有则不创建。所以可能是创建一个或者两个对象，但是一定存在两个对象。
 
-![](https://img2020.cnblogs.com/blog/1515111/202006/1515111-20200606094659171-837644031.png)
-
 说完了 String 对象，我们再来说一下 StringBuilder 和 StringBuffer 对象。
 
 上面的 String 对象竟然和 StringBuilder 产生了千丝万缕的联系。不得不说 StringBuilder 是一个牛逼的对象。String 对象底层是使用了 StringBuilder 对象的 append 方法进行字符串拼接的，不由得对 StringBuilder 心生敬意。
 
-![](https://img2020.cnblogs.com/blog/1515111/202006/1515111-20200606094706958-1026088195.png)
+![](http://www.cxuan.vip/image-20230204144234194.png)
 
 不由得我们想要真正认识一下这个 StringBuilder 大佬，但是在认识大佬前，还有一个大 boss 就是 StringBuffer 对象，这也是你不得不跨越的鸿沟。
 
-![](https://img2020.cnblogs.com/blog/1515111/202006/1515111-20200606094726665-283624008.png)
+![](http://www.cxuan.vip/image-20230204144244678.png)
 
 ### StringBuffer
 
@@ -127,13 +125,13 @@ System.out.println(b);
 
 我们上面提到 `+` 操作符连接两个字符串，会自动执行 `toString()` 方法。那你猜 StringBuffer.append 方法会自动调用吗？直接看一下反汇编代码不就完了么？
 
-![](https://img2020.cnblogs.com/blog/1515111/202006/1515111-20200606094736101-907429953.png)
+![](http://www.cxuan.vip/image-20230204144259588.png)
 
 上图左边是手动调用 toString 方法的代码，右图是没有调用 toString 方法的代码，可以看到，toString() 方法不像 `+` 一样自动被调用。
 
 StringBuffer 是线程安全的，我们可以通过它的源码可以看出
 
-![](https://img2020.cnblogs.com/blog/1515111/202006/1515111-20200606094743859-1675924661.png)
+![](http://www.cxuan.vip/image-20230204144308685.png)
 
 StringBuffer 在字符串拼接上面直接使用 `synchronized` 关键字加锁，从而保证了线程安全性。
 
@@ -141,7 +139,7 @@ StringBuffer 在字符串拼接上面直接使用 `synchronized` 关键字加锁
 
 最后来认识大佬了，StringBuilder 其实是和 StringBuffer 几乎一样，只不过 StringBuilder 是`非线程安全`的。并且，为什么 + 号操作符使用 StringBuilder 作为拼接条件而不是使用 StringBuffer 呢？我猜测原因是加锁是一个比较耗时的操作，而加锁会影响性能，所以 String 底层使用 StringBuilder 作为字符串拼接。
 
-![](https://img2020.cnblogs.com/blog/1515111/202006/1515111-20200606094751519-958929745.png)
+![](http://www.cxuan.vip/image-20230204144323557.png)
 
 ## 深入理解 String、StringBuilder、StringBuffer
 
@@ -166,7 +164,7 @@ for(int i = 0; i < 10000; i++) {
 
 你能看出来需要注意的地方了吗？在每次进行循环时，都会创建一个 `StringBuilder` 对象，每次都会把一个新的字符串元素 `bbb` 拼接到 `aaa` 的后面，所以，执行几次后的结果如下
 
-![](https://img2020.cnblogs.com/blog/1515111/202006/1515111-20200606094811992-1811793626.png)
+![](http://www.cxuan.vip/image-20230204144335803.png)
 
 每次都会创建一个 StringBuilder ，并把引用赋给 StringBuilder 对象，因此每个 StringBuilder 对象都是`强引用`， 这样在创建完毕后，内存中就会多了很多 StringBuilder 的无用对象。了解更多关于引用的知识，请看 
 
@@ -221,11 +219,11 @@ false
 
 和你预想的一样吗？为什么会这样呢？我们先来看一下 intern 方法的官方解释
 
-![](https://img2020.cnblogs.com/blog/1515111/202006/1515111-20200606094826009-535882680.png)
+![](http://www.cxuan.vip/image-20230204144348859.png)
 
 这里你需要知道 JVM 的内存模型
 
-![](https://img2020.cnblogs.com/blog/1515111/202006/1515111-20200606094833601-371217293.png)
+![](http://www.cxuan.vip/image-20230204144400765.png)
 
 * `虚拟机栈` : Java 虚拟机栈是线程私有的数据区，Java 虚拟机栈的生命周期与线程相同，虚拟机栈也是局部变量的存储位置。方法在执行过程中，会在虚拟机栈种创建一个 `栈帧(stack frame)`。
 * `本地方法栈`: 本地方法栈也是线程私有的数据区，本地方法栈存储的区域主要是 Java 中使用 `native` 关键字修饰的方法所存储的区域
@@ -251,7 +249,7 @@ System.out.println(a.intern() == b);
 
 输出什么？ false，为什么呢？画一张图你就明白了（图画的有些问题，栈应该是后入先出，所以 b 应该在 a 上面，不过不影响效果）
 
-![](https://img2020.cnblogs.com/blog/1515111/202006/1515111-20200606094842538-98826537.png)
+![](http://www.cxuan.vip/image-20230204144412837.png)
 
 a.intern 返回的是常量池中的 ab，而 b 是直接返回的是堆中的 ab。地址不一样，肯定输出 false
 
@@ -263,7 +261,7 @@ System.out.println(a.intern() == b.intern());
 
 也就没问题了吧，它们都返回的是字符串常量池中的 ab，地址相同，所以输出 true
 
-![](https://img2020.cnblogs.com/blog/1515111/202006/1515111-20200606094849673-56953440.png)
+![](http://www.cxuan.vip/image-20230204144424906.png)
 
 然后来看第三个
 
@@ -273,7 +271,7 @@ System.out.println(a.intern() == c);
 
 图示如下
 
-![](https://img2020.cnblogs.com/blog/1515111/202006/1515111-20200606094900036-732161572.png)
+![](http://www.cxuan.vip/image-20230204144435086.png)
 
 a 不会变，因为常量池中已经有了 ab ，所以 c 不会再创建一个 ab 字符串，这是编译器做的优化，为了提高效率。
 
@@ -283,7 +281,7 @@ a 不会变，因为常量池中已经有了 ab ，所以 c 不会再创建一�
 System.out.println(a.intern() == f);
 ```
 
-![](https://img2020.cnblogs.com/blog/1515111/202006/1515111-20200606101414394-1335228723.png)
+![](http://www.cxuan.vip/image-20230204144444393.png)
 
 ### String
 
@@ -312,15 +310,13 @@ String str = new String(data);
 
 原来这么回事啊！
 
-![](https://img2020.cnblogs.com/blog/1515111/202006/1515111-20200606094915270-1709279254.png)
-
 所以，String 中有一个用于存储字符的 char 数组 `value[]`，这个数组存储了每个字符。另外一个就是 hash 属性，它用于缓存字符串的哈希码。因为 String 经常被用于比较，比如在 HashMap 中。如果每次进行比较都重新计算其 hashcode 的值的话，那无疑是比较麻烦的，而保存一个 hashcode 的缓存无疑能优化这样的操作。
 
-![](https://img2020.cnblogs.com/blog/1515111/202006/1515111-20200606094921692-747199245.png)
+![](http://www.cxuan.vip/image-20230204144500564.png)
 
 String 可以通过许多途径创建，也可以根据 Stringbuffer 和 StringBuilder 进行创建。
 
-![](https://img2020.cnblogs.com/blog/1515111/202006/1515111-20200606094929051-300935433.png)
+![](http://www.cxuan.vip/image-20230204144509268.png)
 
 毕竟我们本篇文章探讨的不是源码分析的文章，所以涉及到的源码不会很多。
 
@@ -434,9 +430,7 @@ private int newCapacity(int minCapacity) {
 
 本篇文章主要描述了 String 、StringBuilder 和 StringBuffer 的主要特性，String、StringBuilder 和 StringBuffer 的底层构造是怎样的，以及 String 常量池的优化、StringBuilder 和 StringBuffer 的扩容特性等。
 
-如果有错误的地方，还请大佬们提出宝贵意见。
+如果你在阅读文章的过程中发现错误和问题，请及时与我联系！
 
-![image-20210716163352584](https://tva1.sinaimg.cn/large/008i3skNly1gsivkbczxoj31l20t8al5.jpg)
-
-![image-20210716163433337](https://tva1.sinaimg.cn/large/008i3skNly1gsivl4khz9j31d60h8mze.jpg)
+如果文章对你有帮助，希望小伙伴们三连走起！
 

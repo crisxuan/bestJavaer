@@ -44,8 +44,6 @@
          * [减少磁盘臂运动](#减少磁盘臂运动)
          * [磁盘碎片整理](#磁盘碎片整理)
 
-![](https://img2020.cnblogs.com/blog/1515111/202003/1515111-20200325140107452-1598756467.png)
-
 
 所有的应用程序都需要`存储`和`检索`信息。进程运行时，它能够在自己的存储空间内存储一定量的信息。然而，存储容量受`虚拟地址空间`大小的限制。对于一些应用程序来说，存储空间的大小是充足的，但是对于其他一些应用程序，比如航空订票系统、银行系统、企业记账系统来说，这些容量又显得太小了。
 
@@ -934,41 +932,6 @@ Windows 系统有`分页文件(paging files)` 和 `休眠文件(hibernation file
 
 磁盘碎片整理程序会在让文件系统上很好地运行。Linux 文件系统（特别是 ext2 和 ext3）由于其选择磁盘块的方式，在磁盘碎片整理上一般不会像 Windows 一样困难，因此很少需要手动的磁盘碎片整理。而且，固态硬盘并不受磁盘碎片的影响，事实上，在固态硬盘上做磁盘碎片整理反倒是多此一举，不仅没有提高性能，反而磨损了固态硬盘。所以碎片整理只会缩短固态硬盘的寿命。
 
-![](https://img2020.cnblogs.com/blog/1515111/202006/1515111-20200603170910090-837533246.png)
-	
+如果你在阅读文章的过程中发现错误和问题，请及时与我联系！
 
-相关参考：
-
-https://zhuanlan.zhihu.com/p/41358013
-
-https://www.linuxtoday.com/blog/what-is-an-inode.html
-
-https://www.lifewire.com/what-is-fragmentation-defragmentation-2625884
-
-https://www.geeksforgeeks.org/free-space-management-in-operating-system/
-
-https://sites.ualberta.ca/dept/chemeng/AIX-43/share/man/info/C/a_doc_lib/aixprggd/genprogc/fsyslayout.htm
-
-https://en.wikipedia.org/wiki/Disk_partitioning
-
-https://en.wikipedia.org/wiki/Master_boot_record
-
-https://en.wikipedia.org/wiki/Booting
-
-https://www.computerhope.com/jargon/f/fileprot.htm
-
-https://en.wikipedia.org/wiki/File_attribute
-
-https://en.wikipedia.org/wiki/Make_(software)
-
-https://unix.stackexchange.com/questions/60034/what-are-character-special-and-block-special-files-in-a-unix-system
-
-https://www.computerhope.com/jargon/d/director.htm
-
-https://www.computerhope.com/jargon/r/regular-file.htm
-
-https://baike.baidu.com/item/固态硬盘/453510?fr=aladdin
-
-《现代操作系统》第四版
-
-《Modern Operation System》fourth
+如果文章对你有帮助，希望小伙伴们三连走起！

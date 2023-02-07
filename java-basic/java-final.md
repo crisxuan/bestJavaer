@@ -14,8 +14,6 @@
          * [finally 一定会执行吗](#finally-一定会执行吗)
       * [finalize 真的没用吗](#finalize-真的没用吗)
 
-<img src="https://s1.ax1x.com/2020/11/02/BBZApD.png" alt="final001" border="0">
-
 `final` 是 Java 中的关键字，它也是 Java 中很重要的一个关键字，final 修饰的类、方法、变量有不同的含义；`finally` 也是一个关键字，不过我们可以使用 finally 和其他关键字结合做一些组合操作； `finalize` 是一个不让人待见的方法，它是对象祖宗 `Object` 中的一个方法，finalize 机制现在已经不推荐使用了。本篇文章，cxuan 就带你从这三个关键字入手，带你从用法、应用、原理的角度带你深入浅出理解这三个关键字。
 
 ## final、finally 和 finalize
@@ -26,13 +24,13 @@
 
 `final` 可以用来修饰类，final 修饰的类不允许其他类继承，也就是说，final 修饰的类是独一无二的。如下所示
 
-<img src="https://s1.ax1x.com/2020/11/02/BBZFfO.png" alt="final002" border="0">
+![](http://www.cxuan.vip/image-20230204143050167.png)
 
 我们首先定义了一个 FinalUsage 类，它使用 final 修饰，同时我们又定义了一个 FinalUsageExtend 类，它想要`继承(extend)` FinalUsage，我们如上继承后，编译器不让我们这么玩儿，它提示我们 **不能从 FinalUsage** 类继承，为什么呢？不用管，这是 Java 的约定，有一些为什么没有必要，遵守就行。
 
 `final` 可以用来修饰方法，final 修饰的方法不允许被重写，我们先演示一下不用 final 关键字修饰的情况
 
-<img src="https://s1.ax1x.com/2020/11/02/BBZPk6.png" alt="final003" border="0" style="zoom:50%;" >
+![](http://www.cxuan.vip/image-20230204143105714.png)
 
 如上图所示，我们使用 FinalUsageExtend 类继承了 FinalUsage 类，并提供了 `writeArticle` 方法的重写。这样编译是没有问题的，重写的关键点是 `@Override` 注解和方法修饰符、名称、返回值的一致性。
 
@@ -40,13 +38,13 @@
 
 当我们使用 final 修饰方法后，这个方法则不能被重写，如下所示
 
-<img src="https://s1.ax1x.com/2020/11/02/BBZp01.png" alt="final004" border="0">
+![](http://www.cxuan.vip/image-20230204143117600.png)
 
 当我们把 writeArticle 方法声明为 void 后，重写的方法会报错，无法重写 writeArticle 方法。
 
 `final` 可以修饰变量，final 修饰的变量一经定义后就不能被修改，如下所示
 
-<img src="https://s1.ax1x.com/2020/11/02/BBVxX9.png" alt="final005" border="0" style="zoom:50%;" >
+![](http://www.cxuan.vip/image-20230204143128558.png)
 
 编译器提示的错误正是不能继承一个被 final 修饰的类。
 
@@ -54,7 +52,7 @@
 
 我们改写一下，使用基本数据类型来演示
 
-<img src="https://s1.ax1x.com/2020/11/02/BBZSmR.png" alt="final006" border="0">
+![](http://www.cxuan.vip/image-20230204143138086.png)
 
 同样的可以看到，编译器仍然给出了 age 不能被改写的提示，由此可以证明，final 修饰的变量不能被重写。
 
@@ -257,7 +255,7 @@ static int foo(){
 
 我们分别编译一下两个 `foo` 方法，会发现如下字节码
 
-<img src="https://s1.ax1x.com/2020/11/02/BBZitK.png" alt="final007" border="0">
+![](http://www.cxuan.vip/image-20230204143156263.png)
 
 左边是非 final 关键字修饰的代码，右边是有 final 关键字修饰的代码，对比这两个字节码，可以得出如下结论。
 
@@ -361,7 +359,7 @@ public static void main(String[] args) {
 
 抱着疑问，我们先来看一下这段代码的字节码
 
-<img src="https://s1.ax1x.com/2020/11/02/BBZE1e.png" alt="final008" border="0">
+![](http://www.cxuan.vip/image-20230204143209284.png)
 
 字节码的中文注释我已经给你标出来了，这里需要注意一下下面的 `Exception table`，Exception table 是异常表，异常表中每一个条目代表一个异常发生器，异常发生器由 From 指针，To 指针，Target 指针和应该捕获的异常类型构成。 
 
@@ -401,7 +399,7 @@ public static void main(String[] args) {
 
 比如上面我们使用了一段非常简单的程序来验证，编译后我们来看一下它的字节码
 
-<img src="https://s1.ax1x.com/2020/11/02/BBZ9Tx.png" alt="final009" border="0">
+![](http://www.cxuan.vip/image-20230204143226409.png)
 
 可以看到，果然没有异常表的存在。
 
@@ -432,7 +430,7 @@ finalize 的工作方式是这样的：一旦垃圾回收器准备好释放对�
 
 我们在日常开发中并不提倡使用 finalize 方法，能用 finalize 方法的地方，使用 try...finally 会处理的更好。
 
-![image-20210716163352584](https://tva1.sinaimg.cn/large/008i3skNly1gsivkbczxoj31l20t8al5.jpg)
+如果你在阅读文章的过程中发现错误和问题，请及时与我联系！
 
-![image-20210716163433337](https://tva1.sinaimg.cn/large/008i3skNly1gsivl4khz9j31d60h8mze.jpg)
+如果文章对你有帮助，希望小伙伴们三连走起！
 

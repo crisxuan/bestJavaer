@@ -202,7 +202,7 @@ public void foo() {
 
 从设计的角度上来说，所有语言的设计目的都是用来把人类可读的代码转换为机器指令。下面是一幅语言分类图。
 
-![image-20210907222622439](https://tva1.sinaimg.cn/large/008i3skNly1gu8fl585ofj60hv0dsmxy02.jpg)
+![](http://www.cxuan.vip/image-20230204085124179.png)
 
 动态语言是为了能够让程序员提高编码效率，因此你可以使用更少的代码来实现功能。静态语言设计是用来让硬件执行的更高效，因此需要程序员编写准确无误的代码，以此来让你的代码尽快的执行。从这个角度来说，静态语言的执行效率要比动态语言高，速度更快。这是特点四。
 
@@ -210,11 +210,11 @@ public void foo() {
 
 Java 有一句非常著名的口号： `Write once, run anywhere`，也就是一次编写、到处运行。为什么 Java 能够吹出这种牛批的口号来？核心就是 `JVM`。我们知道，计算机应用程序和硬件之间会屏蔽很多细节，它们之间依靠操作系统完成调度和协调，大致的体系结构如下
 
-![image-20210907222642565](https://tva1.sinaimg.cn/large/008i3skNly1gu8flfl9qnj30m90cdjs2.jpg)
+![](http://www.cxuan.vip/image-20230204085136576.png)
 
 那么加上 Java 应用、JVM 的体系结构会变为如下
 
-![image-20210907222654021](https://tva1.sinaimg.cn/large/008i3skNly1gu8flmwnucj30ix0ccglx.jpg)
+![](http://www.cxuan.vip/image-20230204085145764.png)
 
 Java 是跨平台的，已编译的 Java 程序可以在任何带有 JVM 的平台上运行。你可以在 Windows 平台下编写代码，然后拿到 Linux 平台下运行，该如何实现呢？
 
@@ -286,7 +286,7 @@ Java 语言支持 Internet 应用的开发，Java 中有 net api，它提供了�
 
 `JDK（Java Development Kit）`称为 Java 开发包或 Java 开发工具，是一个编写 Java 的 Applet 小程序和应用程序的程序开发环境。JDK是整个Java的核心，包括了`Java运行环境（Java Runtime Environment）`，一些`Java 工具` 和 `Java 的核心类库（Java API）`。
 
-![image-20210907222710633](https://tva1.sinaimg.cn/large/008i3skNly1gu8flyohaoj60lv0bd75u02.jpg)
+![](http://www.cxuan.vip/image-20230204085202133.png)
 
 我们可以认真研究一下这张图，它几乎包括了 Java 中所有的概念，我使用的是 `jdk1.8`，可以点进去 `Description of Java Conceptual Diagram`， 可以发现这里面包括了所有关于 Java 的描述。
 
@@ -342,7 +342,7 @@ double 是双精度浮点型，占用 8 位，1 double = 64 bits，默认值是 
 
 以上 `x 位`都指的是在内存中的占用。
 
-![image-20210907222746854](https://tva1.sinaimg.cn/large/008i3skNly1gu8fmjs5eqj60lo09hwes02.jpg)
+![](http://www.cxuan.vip/image-20230204085217492.png)
 
 ### 基础语法
 
@@ -365,7 +365,7 @@ double 是双精度浮点型，占用 8 位，1 double = 64 bits，默认值是 
 
 算数运算符就和数学中的数值计算差不多，主要有 
 
-![image-20210907222804980](https://tva1.sinaimg.cn/large/008i3skNly1gu8fmv00o6j30lt06ft8p.jpg)
+![](http://www.cxuan.vip/image-20230204085230739.png)
 
 算数运算符需要注意的就是`优先级问题`，当一个表达式中存在多个操作符时，操作符的优先级顺序就决定了计算顺序，最简单的规则就是先乘除后加减，`()` 的优先级最高，没必要记住所有的优先级顺序，不确定的直接用 () 就可以了。
 
@@ -385,23 +385,23 @@ c = a++;
 
 比较运算符的运算结果是 boolean 型。当运算符对应的关系成立时，运算的结果为 true，否则为 false。比较运算符共有 6 个，通常作为判断的依据用于条件语句中。
 
-![image-20210907222824045](https://tva1.sinaimg.cn/large/008i3skNly1gu8fn6sf5sj60lu07adg402.jpg)
+![](http://www.cxuan.vip/image-20230204085241948.png)
 
 * 逻辑运算符
 
 逻辑运算符主要有三种，与、或、非
 
-![image-20210907222837435](https://tva1.sinaimg.cn/large/008i3skNly1gu8fnfm0pwj60ls07cwek02.jpg)
+![](http://www.cxuan.vip/image-20230204085252802.png)
 
 下面是逻辑运算符对应的 true/false 符号表
 
-![image-20210907222850103](https://tva1.sinaimg.cn/large/008i3skNly1gu8fnnhskbj60lj07ygmf02.jpg)
+![](http://www.cxuan.vip/image-20230204085318228.png)
 
 * 按位运算符
 
 按位运算符用来操作整数基本类型中的每个`比特`位，也就是二进制位。按位操作符会对两个参数中对应的位执行布尔代数运算，并最终生成一个结果。
 
-![image-20210907222905936](https://tva1.sinaimg.cn/large/008i3skNly1gu8fnye1vbj60mf05h3yl02.jpg)
+![](http://www.cxuan.vip/image-20230204085332322.png)
 
 如果进行比较的双方是数字的话，那么进行比较就会变为按位运算。
 
@@ -417,11 +417,11 @@ c = a++;
 
 移位运算符用来将操作数向某个方向（向左或者右）移动指定的二进制位数。
 
-![image-20210907222926218](https://tva1.sinaimg.cn/large/008i3skNly1gu8fo9wjpwj60lr03dq2w02.jpg)
+![](http://www.cxuan.vip/image-20230204085342917.png)
 
 * 三元运算符
 
-三元运算符是类似 `if...else...` 这种的操作符，语法为：**条件表达式？表达式 1：表达式 2**。问号前面的位置是判断的条件，判断结果为布尔型，为 true 时调用表达式 1，为 false 时调用表达式 2。
+三元运算符是类似 if...else.. 这种的操作符，语法为：**条件表达式？表达式 1：表达式 2**。问号前面的位置是判断的条件，判断结果为布尔型，为 true 时调用表达式 1，为 false 时调用表达式 2。
 
 ## Java 执行控制流程
 
@@ -478,7 +478,7 @@ if(x > 60) {
 
 #### switch case多分支语句
 
-一种比 **if...else if ** 语句更优雅的方式是使用 `switch` 多分支语句，它的示例如下：
+一种比 **if...else if** 语句更优雅的方式是使用 `switch` 多分支语句，它的示例如下：
 
 ```java
 switch (week) {
@@ -511,7 +511,7 @@ switch (week) {
 
 ### 循环语句
 
-循环语句就是在满足一定的条件下反复执行某一表达式的操作，直到满足循环语句的要求。使用的循环语句主要有 **for、do...while() 、 while **。
+循环语句就是在满足一定的条件下反复执行某一表达式的操作，直到满足循环语句的要求。使用的循环语句主要有 **for、do...while() 、 while**。
 
 #### while 循环语句
 
@@ -758,7 +758,7 @@ class createApple {
 
 这里需要注意一点的是，即使 JVM 会为你默认添加一个无参的构造器，但是如果你手动定义了任何一个构造方法，**JVM 就不再为你提供默认的构造器，你必须手动指定，否则会出现编译错误**。
 
-![image-20210907222946943](https://tva1.sinaimg.cn/large/008i3skNly1gu8fomo2vsj60c809o0t002.jpg)
+![](http://www.cxuan.vip/image-20230204090516528.png)
 
 显示的错误是，必须提供 Apple 带有 int 参数的构造函数，而默认的无参构造函数没有被允许使用。
 
@@ -849,7 +849,7 @@ Java 会尽量保证每个变量在使用前都会获得初始化，初始化涉
 
 * 一种是编译器默认指定的字段初始化，基本数据类型的初始化
 
-  ![image-20210907223003059](https://tva1.sinaimg.cn/large/008i3skNly1gu8fowm7ehj60kx095jrj02.jpg)
+  ![](http://www.cxuan.vip/image-20230204090533048.png)
 
   一种是其他对象类型的初始化，String 也是一种对象，对象的初始值都为 `null` ，其中也包括基本类型的包装类。
 
@@ -979,7 +979,7 @@ add(new int[] {1, 3, 2});  // 传递数组
 
 虽然 Java 语言是基于 C++ 的，但是它和 C/C++ 一个重要的特征就是不需要手动管理对象的销毁工作。在著名的一书 《深入理解 Java 虚拟机》中提到一个观点
 
-![image-20210907223020842](https://tva1.sinaimg.cn/large/008i3skNly1gu8fp885whj60m402sdfy02.jpg)
+![](http://www.cxuan.vip/image-20230204090546715.png)
 
 在 Java 中，我们不再需要手动管理对象的销毁，它是由 Java 虚拟机（JVM）进行管理和销毁的。虽然我们不需要手动管理对象，但是你需要知道 `对象作用域` 这个概念。
 
@@ -1071,7 +1071,7 @@ public class Apple {
 
 你会发现上面这段代码使用的不是 this, 而是 `this(参数)`。它相当于调用了其他构造方法，然后传递参数进去。这里注意一点：this() 必须放在构造方法的第一行，否则编译不通过。
 
-![image-20210907223035882](https://tva1.sinaimg.cn/large/008i3skNly1gu8fph3c9aj60ez0bot9h02.jpg)
+![](http://www.cxuan.vip/image-20230204090559816.png)
 
 如果你把 this 理解为指向自身的一个引用，那么 super 就是指向父类的一个引用。super 关键字和 this 一样，你可以使用 `super.对象` 来引用父类的成员，如下：
 
@@ -1101,7 +1101,7 @@ public class Apple extends Fruit{
 
 下面为你汇总了 this 关键字和 super 关键字的比较。
 
-![image-20210907223047478](https://tva1.sinaimg.cn/large/008i3skNly1gu8fpokopnj60ls04fq3902.jpg)
+![](http://www.cxuan.vip/image-20230204090612755.png)
 
 ## 访问控制权限
 
@@ -1111,13 +1111,13 @@ public class Apple extends Fruit{
 
 Java中成员的访问权限共有四种，分别是 **public、protected、default、private**，它们的可见性如下
 
-![image-20210907223100206](https://tva1.sinaimg.cn/large/008i3skNly1gu8fpwsfuvj60lx06tglv02.jpg)
+![](http://www.cxuan.vip/image-20230204090625911.png)
 
 ### 继承
 
 继承是所有 `OOP(Object Oriented Programming)` 语言和 Java 语言都不可或缺的一部分。只要我们创建了一个类，就隐式的继承自 `Object` 父类，只不过没有指定。如果你显示指定了父类，那么你继承于父类，而你的父类继承于 Object 类。
 
-![image-20210908223815666](https://tva1.sinaimg.cn/large/008i3skNly1gu9ljr8qzej60lc0dadgb02.jpg)
+![](http://www.cxuan.vip/image-20230204090636799.png)
 
 继承的关键字是 `extends` ，如上图所示，如果使用了 extends 显示指定了继承，那么我们可以说 Father 是父类，而 Son 是子类，用代码表示如下
 
@@ -1128,7 +1128,13 @@ class Father{}class Son extends Father{}
 继承双方拥有某种共性的特征
 
 ```java
-class Father{    public void feature(){    System.out.println("父亲的特征");  }}class Son extends Father {}
+class Father{
+  public void feature(){
+    System.out.println("父亲的特征");  
+  }
+}
+
+class Son extends Father {}
 ```
 
 如果 Son 没有实现自己的方法的话，那么默认就是用的是父类的 `feature` 方法。如果子类实现了自己的 feature 方法，那么就相当于是重写了父类的 feature 方法，这也是我们上面提到的重写了。
@@ -1146,7 +1152,24 @@ class Father{    public void feature(){    System.out.println("父亲的特征")
 比如下面这段代码
 
 ```java
-public class Fruit {    int num;    public void eat(){        System.out.println("eat Fruit");    }}public class Apple extends Fruit{    @Override    public void eat() {        super.num = 10;        System.out.println("eat " + num + " Apple");    }    public static void main(String[] args) {        Fruit fruit = new Apple();        fruit.eat();    }}
+public class Fruit {
+  int num;    
+  public void eat(){
+    System.out.println("eat Fruit");    
+  }
+}
+
+public class Apple extends Fruit{
+  @Override    
+  public void eat() {
+    super.num = 10;
+    System.out.println("eat " + num + " Apple");
+  }    
+  public static void main(String[] args) {
+    Fruit fruit = new Apple();
+    fruit.eat();    
+  }
+}
 ```
 
 你可以发现 `main` 方法中有一个很神奇的地方，`Fruit fruit = new Apple()`，Fruit 类型的对象竟然指向了 Apple 对象的引用，这其实就是多态 -> 父类引用指向子类对象，因为 Apple 继承于 Fruit，并且重写了 eat 方法，所以能够表现出来多种状态的形式。
@@ -1156,14 +1179,21 @@ public class Fruit {    int num;    public void eat(){        System.out.println
 组合其实不难理解，就是将对象引用置于新类中即可。组合也是一种提高类的复用性的一种方式。如果你想让类具有更多的扩展功能，你需要记住一句话**多用组合，少用继承**。
 
 ```java
-public class SoccerPlayer {        private String name;    private Soccer soccer;    }public class Soccer {        private String soccerName;    }
+public class SoccerPlayer {
+  private String name;
+  private Soccer soccer;
+}
+
+public class Soccer {
+  private String soccerName;
+}
 ```
 
 代码中 SoccerPlayer 引用了 Soccer 类，通过引用 Soccer 类，来达到调用 soccer 中的属性和方法。
 
 组合和继承是有区别的，它们的主要区别如下。
 
-![image-20210907223116239](https://tva1.sinaimg.cn/large/008i3skNly1gu8fq755xtj60lp06sdga02.jpg)
+![](http://www.cxuan.vip/image-20230204090652710.png)
 
 关于继承和组合孰优孰劣的争论没有结果，只要发挥各自的长处和优点即可，一般情况下，组合和继承也是一对可以连用的好兄弟。
 
@@ -1228,13 +1258,19 @@ static String name = "cxuan";
 * 使用 static 修饰的方法称为静态方法，静态方法能够直接使用**类名.方法名** 进行调用。由于静态方法不依赖于任何对象就可以直接访问，因此对于静态方法来说，是没有 this 关键字的，实例变量都会有 this 关键字。在静态方法中不能访问类的非静态成员变量和非静态方法，
 
 ```java
-static void printMessage(){  System.out.println("cxuan is writing the article");}
+static void printMessage(){
+  System.out.println("cxuan is writing the article");
+}
 ```
 
 static 除了修饰属性和方法外，还有`静态代码块` 的功能，可用于类的初始化操作。进而提升程序的性能。
 
 ```java
-public class StaicBlock {    static{        System.out.println("I'm A static code block");    }}
+public class StaicBlock {
+  static{
+    System.out.println("I'm A static code block");    
+  }
+}
 ```
 
 由于静态代码块随着类的加载而执行，因此，很多时候会将只需要进行一次的初始化操作放在 static 代码块中进行。
@@ -1248,13 +1284,22 @@ final 的意思是最后的、最终的，它可以修饰**类、属性和方法
 * final 修饰类时，表明这个类不能被继承。final 类中的成员变量可以根据需要设为 final，但是要注意 final 类中的所有成员方法都会被隐式地指定为 final 方法。
 
 ```java
-class Parent {}final class Person extends Parent{} //可以继承Parent类class Child extends Person{} //不能继承Person类
+class Parent {}
+
+final class Person extends Parent{} //可以继承Parent类class Child extends Person{} //不能继承Person类
 ```
 
 * final 修饰方法时，表明这个方法不能被任何子类重写，因此，如果只有在想明确禁止该方法在子类中被覆盖的情况下才将方法设置为 final。
 
 ```java
-class Parent {	// final修饰的方法，不可以被覆盖，但可以继承使用    public final void method1(){}  //这个方法不可以重写    public void method2(){}}class Child extends Parent {	//可以重写method2方法	public final void method2(){}}
+class Parent {	// final修饰的方法，不可以被覆盖，但可以继承使用    
+  public final void method1(){}  //这个方法不可以重写    
+  public void method2(){}
+}
+
+class Child extends Parent {	//可以重写method2方法	
+  public final void method2(){}
+}
 ```
 
 * final 修饰变量分为两种情况，一种是修饰基本数据类型，表示数据类型的值不能被修改；一种是修饰引用类型，表示对其初始化之后便不能再让其指向另一个对象。
@@ -1290,7 +1335,12 @@ public interface CxuanGoodJob {    void writeWell();}
 * 接口只提供方法的定义，接口没有实现，但是接口可以被其他类实现。也就是说，实现接口的类需要提供方法的实现，实现接口使用 `implements` 关键字来表示，一个接口可以有多个实现。
 
 ```java
-class CXuanWriteWell implements CxuanGoodJob{    @Override    public void writeWell() {        System.out.println("Cxuan write Java is vary well");    }}
+class CXuanWriteWell implements CxuanGoodJob{
+  @Override    
+  public void writeWell() {
+    System.out.println("Cxuan write Java is vary well");   
+  }
+}
 ```
 
 * 接口不能被实例化，所以接口中不能有任何构造方法，你定义构造方法编译会出错。
@@ -1301,7 +1351,16 @@ class CXuanWriteWell implements CxuanGoodJob{    @Override    public void writeW
 抽象类是一种抽象能力弱于接口的类，在 Java 中，抽象类使用 `abstract` 关键字来表示。如果把接口形容为狗这个物种，那么抽象类可以说是毛发是白色、小体的品种，而实现类可以是具体的类，比如说是博美、泰迪等。你可以像下面这样定义抽象类
 
 ```java
-public interface Dog {    void FurColor();}abstract class WhiteDog implements Dog{    public void FurColor(){        System.out.println("Fur is white");    }    abstract void SmallBody();}
+public interface Dog {
+  void FurColor();
+}
+
+abstract class WhiteDog implements Dog{
+  public void FurColor(){
+    System.out.println("Fur is white");    
+  }
+  abstract void SmallBody();
+}
 ```
 
 在抽象类中，具有如下特征
@@ -1338,7 +1397,7 @@ Throwable 类是 Java 语言中所有`错误(errors)`和`异常(exceptions)`的�
 
 那么，按照这种逻辑关系，我们可以对 Throwable 及其子类进行归类分析
 
-![image-20210907223136780](https://tva1.sinaimg.cn/large/008i3skNly1gu8fqj5h6xj60ls0czt9j02.jpg)
+![](http://www.cxuan.vip/image-20230204091017407.png)
 
 可以看到，Throwable 位于异常和错误的最顶层，我们查看 Throwable 类中发现它的方法和属性有很多，我们只讨论其中几个比较常用的
 
@@ -1369,11 +1428,11 @@ public synchronized Throwable fillInStackTrace();
 
 RuntimeException
 
-![image-20210907223603308](https://tva1.sinaimg.cn/large/008i3skNly1gu8fv5qm3xj30lu07gaai.jpg)
+![](http://www.cxuan.vip/image-20230204091031687.png)
 
 UncheckedException
 
-![image-20210907223632991](https://tva1.sinaimg.cn/large/008i3skNly1gu8fvorheij60lm057jrr02.jpg)
+![](http://www.cxuan.vip/image-20230204091041373.png)
 
 ### 与 Exception 有关的 Java 关键字
 
@@ -1386,7 +1445,9 @@ UncheckedException
 throws 和 throw 通常是成对出现的，例如
 
 ```java
-static void cacheException() throws Exception{  throw new Exception();}
+static void cacheException() throws Exception{
+  throw new Exception();
+}
 ```
 
 throw 语句用在方法体内，表示抛出异常，由方法体内的语句处理。
@@ -1402,13 +1463,29 @@ throw 是具体向外抛异常的动作，所以它是抛出一个异常实例�
 try...catch 表示对某一段代码可能抛出异常进行的捕获，如下
 
 ```java
-static void cacheException() throws Exception{  try {    System.out.println("1");  }catch (Exception e){    e.printStackTrace();  }}
+static void cacheException() throws Exception{
+  try {
+    System.out.println("1");  
+  }catch (Exception e){
+    e.printStackTrace();  
+  }
+}
 ```
 
 try...finally 表示对一段代码不管执行情况如何，都会走 finally 中的代码
 
 ```java
-static void cacheException() throws Exception{  for (int i = 0; i < 5; i++) {    System.out.println("enter: i=" + i);    try {      System.out.println("execute: i=" + i);      continue;    } finally {      System.out.println("leave: i=" + i);    }  }}
+static void cacheException() throws Exception{
+  for (int i = 0; i < 5; i++) {
+    System.out.println("enter: i=" + i);
+    try {
+      System.out.println("execute: i=" + i);
+      continue;    
+    } finally {      
+      System.out.println("leave: i=" + i);    
+    }  
+  }
+}
 ```
 
 try...catch...finally 也是一样的，表示对异常捕获后，再走 finally 中的代码逻辑。
@@ -1417,7 +1494,7 @@ try...catch...finally 也是一样的，表示对异常捕获后，再走 finall
 
 Error 是程序无法处理的错误，表示运行应用程序中较严重问题。大多数错误与代码编写者执行的操作无关，而表示代码运行时 JVM（Java 虚拟机）出现的问题。这些错误是不可检查的，因为它们在应用程序的控制和处理能力之 外，而且绝大多数是程序运行时不允许出现的状况，比如 `OutOfMemoryError` 和 `StackOverflowError`异常的出现会有几种情况，这里需要先介绍一下 Java 内存模型 JDK1.7。
 
-![image-20210907223649891](https://tva1.sinaimg.cn/large/008i3skNly1gu8fvz8qd8j60l40fxq4e02.jpg)
+![](http://www.cxuan.vip/image-20230204091137279.png)
 
 其中包括两部分，**由所有线程共享的数据区和线程隔离的数据区**组成，在上面的 Java 内存模型中，**只有程序计数器**是不会发生 `OutOfMemoryError` 情况的区域，程序计数器控制着计算机指令的分支、循环、跳转、异常处理和线程恢复，并且程序计数器是每个线程私有的。
 
@@ -1439,13 +1516,13 @@ Error 是程序无法处理的错误，表示运行应用程序中较严重问�
 
 距今为止，我们了解的都是普通类的定义，那就是直接在 IDEA 中直接新建一个 class 。
 
-![image-20210907223703017](https://tva1.sinaimg.cn/large/008i3skNly1gu8fw76ccqj60lv089wf502.jpg)
+![](http://www.cxuan.vip/image-20230204091149840.png)
 
 新建完成后，你就会拥有一个 class 文件的定义，这种操作太简单了，时间长了就会枯燥，我们年轻人多需要更新潮和骚气的写法，好吧，既然你提到了那就使用 `内部类`吧，这是一种有用而且骚气的定义类的方式，内部类的定义非常简单：**可以将一个类的定义放在另一个类的内部，这就是内部类**。
 
 内部类是一种非常有用的特性，定义在类内部的类，持有外部类的引用，但却对其他外部类不可见，看起来就像是一种隐藏代码的机制，就和 `弗兰奇将军` 似的，弗兰奇可以和弗兰奇将军进行通讯，但是外面的敌人却无法直接攻击到弗兰奇本体。
 
-![image-20210907223713681](https://tva1.sinaimg.cn/large/008i3skNly1gu8fwdwwtqj60hu0faac302.jpg)
+![](http://www.cxuan.vip/image-20230204091159671.png)
 
 下面我们就来聊一聊创建内部类的方式。
 
@@ -1584,7 +1661,28 @@ Parcel3
 本文到现在所展示的都是本类持有内部类的访问权限，那么，与此类无关的类是如何持有此类内部类的访问权限呢？而且内部类与向上转型到底有什么关系呢？
 
 ```java
-public interface Animal {    void eat();}public class Parcel4 {    private class Dog implements Animal {        @Override        public void eat() {            System.out.println("啃骨头");        }    }    public Animal getDog(){        return new Dog();    }    public static void main(String[] args) {        Parcel4 p4 = new Parcel4();        //Animal dog = p4.new Dog();        Animal dog = p4.getDog();        dog.eat();    }}
+public interface Animal {
+  void eat();
+}
+
+public class Parcel4 {
+  private class Dog implements Animal {
+    @Override        
+    public void eat() {
+      System.out.println("啃骨头");
+    }    
+  }    
+  public Animal getDog(){
+    return new Dog();    
+  }    
+  
+  public static void main(String[] args) {
+    Parcel4 p4 = new Parcel4();
+    //Animal dog = p4.new Dog();
+    Animal dog = p4.getDog();
+    dog.eat();    
+  }
+}
 ```
 
 输出： 啃骨头
@@ -1612,7 +1710,25 @@ public interface Animal {    void eat();}public class Parcel4 {    private class
 - __定义在方法内部的类又被称为局部内部类__
 
 ```java
-public class Parcel5 {  private Destination destination(String s){    class PDestination implements Destination{      String label;      public PDestination(String whereTo){        label = whereTo;      }      @Override      public String readLabel() {        return label;      }    }    return new PDestination(s);  }  public static void main(String[] args) {    Parcel5 p5 = new Parcel5();    Destination destination = p5.destination("China");    System.out.println(destination.readLabel());  }}
+public class Parcel5 {
+  private Destination destination(String s){
+    class PDestination implements Destination{
+      String label;      
+      public PDestination(String whereTo){
+        label = whereTo;      
+      }      
+      @Override      
+      public String readLabel() {
+        return label;      
+      }    
+    }    
+    return new PDestination(s);  
+  }  
+  public static void main(String[] args) {
+    Parcel5 p5 = new Parcel5();    
+    Destination destination = p5.destination("China");    						  System.out.println(destination.readLabel());  
+  }
+}
 ```
 
 输出 ： China
@@ -1671,7 +1787,27 @@ public class Parcel6 {
 我们都知道接口是不能被实例化的，也就是说你不能 return 一个接口的对象，你只能是返回这个接口子类的对象，但是如果像下面这样定义，你会不会表示怀疑呢？
 
 ```java
-public interface Contents {    int getValue();}public class Parcel7 {    private Contents contents(){        return new Contents() {            private int value = 11;            @Override            public int getValue() {                return value;            }        };    }    public static void main(String[] args) {        Parcel7 p7 = new Parcel7();        System.out.println(p7.contents().getValue());    }}
+public interface Contents {
+  int getValue();
+}
+
+public class Parcel7 {
+  private Contents contents(){
+    return new Contents() {
+      private int value = 11;
+      @Override           
+      public int getValue() {
+        return value;            
+      }        
+    };    
+  }    
+  
+  public static void main(String[] args) {
+    
+    Parcel7 p7 = new Parcel7();
+    System.out.println(p7.contents().getValue());    
+  }
+}
 ```
 
 输出 : 11
@@ -1679,7 +1815,23 @@ public interface Contents {    int getValue();}public class Parcel7 {    private
 为什么能够返回一个接口的定义？而且还有 {}，这到底是什么鬼？ 这其实是一种匿名内部类的写法，其实和上面所讲的内部类和向上转型是相似的。也就是说匿名内部类返回的 new Contents() 其实也是属于 Contents 的一个实现类，只不过这个实现类的名字被隐藏掉了，能用如下的代码示例来进行转换：
 
 ```java
-public class Parcel7b {    private class MyContents implements Contents {        private int value = 11;        @Override        public int getValue() {            return 11;        }    }    public Contents contents(){        return new MyContents();    }    public static void main(String[] args) {        Parcel7b parcel7b = new Parcel7b();        System.out.println(parcel7b.contents().getValue());    }}
+public class Parcel7b {
+  private class MyContents implements Contents {
+    private int value = 11;        
+    @Override        
+    public int getValue() {            
+      return 11;        
+    }    
+  }    
+  
+  public Contents contents(){
+    return new MyContents();    
+  }    
+  
+  public static void main(String[] args) {
+    Parcel7b parcel7b = new Parcel7b();          System.out.println(parcel7b.contents().getValue());
+  }
+}
 ```
 
 输出的结果你应该知道了吧～！ 你是不是觉得这段代码和 10.3 章节所表示的代码很一致呢？
@@ -1689,7 +1841,27 @@ public class Parcel7b {    private class MyContents implements Contents {       
 如果你想返回一个带有参数的构造器(非默认的构造器)，该怎么表示呢？
 
 ```java
-public class WithArgsConstructor {    private int sum;    public WithArgsConstructor(int sum){        this.sum = sum;    }    public int sumAll(){        return sum;    }}public class Parcel8 {    private WithArgsConstructor withArgsConstructor(int x){        // 返回WithArgsConstructor带参数的构造器，执行字段初始化        return new WithArgsConstructor(x){            // 重写sumAll方法，实现子类的执行逻辑            @Override            public int sumAll(){                return super.sumAll() * 2;            }        };    }    public static void main(String[] args) {        Parcel8 p8 = new Parcel8();        System.out.println(p8.withArgsConstructor(10).sumAll());    }}
+public class WithArgsConstructor {
+  private int sum;    
+  public WithArgsConstructor(int sum){
+    this.sum = sum;    
+  }    
+  public int sumAll(){
+    return sum;    
+  }
+}public class Parcel8 {
+  private WithArgsConstructor withArgsConstructor(int x){        // 返回WithArgsConstructor带参数的构造器，执行字段初始化        
+    return new WithArgsConstructor(x){            // 重写sumAll方法，实现子类的执行逻辑            
+      @Override            
+      public int sumAll(){
+        return super.sumAll() * 2;
+      }        
+    };    
+  }    
+  public static void main(String[] args) {
+    Parcel8 p8 = new Parcel8();        		System.out.println(p8.withArgsConstructor(10).sumAll());    
+  }
+}
 ```
 
 以上 WithArgsConstructor 中的代码很简单，定义一个 sum 字段，构造器进行初始化，sumAll 方法返回 sum 的值，Parcel8 中的 withArgsConstructor 方法直接返回 x 的值，但是在这个时候，你想在返回值上做一些特殊的处理，比如你想定义一个类，重写 sumAll 方法，来实现子类的业务逻辑。 Java 编程思想198页中说 代码中的“;”并不是表示内部类结束，而是表达式的结束，只不过这个表达式正巧包含了匿名内部类而已。
@@ -1699,7 +1871,21 @@ public class WithArgsConstructor {    private int sum;    public WithArgsConstru
 上面代码确实可以进行初始化操作，不过是通过构造器执行字段的初始化，如果没有带参数的构造器，还能执行初始化操作吗？ 这样也是可以的。
 
 ```java 
-public class Parcel9 {    private Destination destination(String dest){        return new Destination() {            // 初始化赋值操作            private String label = dest;            @Override            public String readLabel() {                return label;            }        };    }    public static void main(String[] args) {        Parcel9 p9 = new Parcel9();        System.out.println(p9.destination("pen").readLabel());    }}
+public class Parcel9 {
+  private Destination destination(String dest){
+    return new Destination() {
+      // 初始化赋值操作            
+      private String label = dest;
+      @Override            
+      public String readLabel() {
+        return label;            
+      }        
+    };    
+  }    
+  public static void main(String[] args) {
+    Parcel9 p9 = new Parcel9();        System.out.println(p9.destination("pen").readLabel());    
+  }
+}
 ```
 
 Java 编程思想 p198 中说如果给字段进行初始化操作，那么形参必须是 final 的，如果不是 final，编译器会报错，这部分提出来质疑，因为我不定义为final，编译器也没有报错。我考虑过是不是 private 的问题，当我把 private 改为 public，也没有任何问题。
@@ -1709,7 +1895,27 @@ Java 编程思想 p198 中说如果给字段进行初始化操作，那么形参
 - 一个匿名类，它通过实例初始化实现构造
 
 ```java
-public abstract class Base {    public Base(int i){        System.out.println("Base Constructor = " + i);    }    abstract void f();}public class AnonymousConstructor {    private static Base getBase(int i){        return new Base(i){            {                System.out.println("Base Initialization" + i);            }            @Override            public void f(){                System.out.println("AnonymousConstructor.f()方法被调用了");            }        };    }    public static void main(String[] args) {        Base base = getBase(57);        base.f();    }}
+public abstract class Base {
+  public Base(int i){
+    System.out.println("Base Constructor = " + i);    
+  }    
+  abstract void f();}public class AnonymousConstructor {
+  private static Base getBase(int i){
+    return new Base(i){
+      {                
+        System.out.println("Base Initialization" + i);            
+      }            
+      @Override            
+      public void f(){
+        System.out.println("AnonymousConstructor.f()方法被调用了");            
+      }        
+    };    
+  }    
+  public static void main(String[] args) {
+    Base base = getBase(57);        
+    base.f();    
+  }
+}
 ```
 
 输出：
@@ -1733,7 +1939,43 @@ Java编程思想 p201 页讲到：如果不需要内部类与其外围类之前�
 看下面代码
 
 ```java
-public class Parcel10 {    private int value = 11;    static int bValue = 12;    // 静态内部类    private static class PContents implements Contents {        // 编译报错，静态内部类PContents中没有叫value的字段        @Override        public int getValue() {            return value;        }        // 编译不报错，静态内部类PContents可以访问静态属性bValue        public int f(){            return bValue;        }    }    // 普通内部类    private class PDestination implements Destination {        @Override        public String readLabel() {            return "label";        }    }    // 编译不报错，因为静态方法可以访问静态内部类    public static Contents contents(){        return new PContents();    }    // 编译报错，因为非静态方法不能访问静态内部类    public Contents contents2(){        Parcel10 p10 = new Parcel10();        return p10.new PContents();    }    // 编译不报错，静态方法可以访问非静态内部类    public static Destination destination(){        Parcel10 p10 = new Parcel10();        return p10.new PDestination();    }    // 编译不报错，非静态方法可以访问非静态内部类    public Destination destination2(){        return new PDestination();    }}
+public class Parcel10 {
+  private int value = 11;    
+  static int bValue = 12;    // 静态内部类    
+  private static class PContents implements Contents {
+    // 编译报错，静态内部类PContents中没有叫value的字段        
+    @Override        
+    public int getValue() {
+      return value;        
+    }        // 编译不报错，静态内部类PContents可以访问静态属性bValue        
+    public int f(){
+      return bValue;        
+    }    
+  }    // 普通内部类    
+  private class PDestination implements Destination {
+    @Override        
+    public String readLabel() {
+      return "label";        
+    }    
+  }    // 编译不报错，因为静态方法可以访问静态内部类    
+  public static Contents contents(){
+    return new PContents();    
+  }    // 编译报错，因为非静态方法不能访问静态内部类    
+  
+  public Contents contents2(){
+    Parcel10 p10 = new Parcel10();        
+    return p10.new PContents();    
+  }    // 编译不报错，静态方法可以访问非静态内部类    
+  
+  public static Destination destination(){
+    Parcel10 p10 = new Parcel10();        
+    return p10.new PDestination();    
+  }    // 编译不报错，非静态方法可以访问非静态内部类    
+  
+  public Destination destination2(){
+    return new PDestination();    
+  }
+}
 ```
 
 由上面代码可以解释，编译出错的原因是**静态方法不能直接访问非静态内部类，而需要通过创建外围类的对象来访问普通内部类**。
@@ -1745,7 +1987,19 @@ public class Parcel10 {    private int value = 11;    static int bValue = 12;   
 正常情况下，不能在接口内部放置任何代码，但是嵌套类作为接口的一部分，你放在接口中的任何类默认都是public 和 static 的。因为类是 static 的，只是将嵌套类置于接口的命名空间内，这并不违反接口的规则，你甚至可以在内部类实现外部类的接口，不过一般我们不提倡这么写。
 
 ```java
-public interface InnerInterface {    void f();    class InnerClass implements InnerInterface {        @Override        public void f() {            System.out.println("实现了接口的方法");        }        public static void main(String[] args) {            new InnerClass().f();        }    }    // 不能在接口中使用main方法，你必须把它定义在接口的内部类中//    public static void main(String[] args) {}}
+public interface InnerInterface {
+  void f();    
+  class InnerClass implements InnerInterface {
+    @Override        
+    public void f() {
+      System.out.println("实现了接口的方法");        
+    }        
+    public static void main(String[] args) {
+      new InnerClass().f();        
+    }    
+  }    // 不能在接口中使用main方法，你必须把它定义在接口的内部类中//    
+  
+  public static void main(String[] args) {}}
 ```
 
 输出： 实现了接口的方法
@@ -1757,7 +2011,36 @@ public interface InnerInterface {    void f();    class InnerClass implements In
 参考 chenssy 的文章 http://www.cnblogs.com/chenssy/p/3389027.html 已经写的很不错了。
 
 ```java
-public class Food {    private class InnerFruit implements Fruit{        void meakFruit(){            System.out.println("种一个水果");        }    }    private class InnerMeat implements Meat{        void makeMeat(){            System.out.println("煮一块肉");        }    }    public Fruit fruit(){        return new InnerFruit();    }    public Meat meat(){        return new InnerMeat();    }    public static void main(String[] args) {        Food food = new Food();        InnerFruit innerFruit = (InnerFruit)food.fruit();        innerFruit.meakFruit();        InnerMeat innerMeat = (InnerMeat) food.meat();        innerMeat.makeMeat();    }}
+public class Food {
+  private class InnerFruit implements Fruit{
+    void meakFruit(){
+      System.out.println("种一个水果");        
+    }    
+  }    
+  
+  private class InnerMeat implements Meat{
+    void makeMeat(){            
+      System.out.println("煮一块肉");        
+    }    
+  
+  }    
+  
+  public Fruit fruit(){
+    return new InnerFruit();    
+  }    
+  
+  public Meat meat(){
+    return new InnerMeat();    
+  }    
+  
+  public static void main(String[] args) {
+    Food food = new Food();        
+    InnerFruit innerFruit = (InnerFruit)food.fruit();        
+    innerFruit.meakFruit();        
+    InnerMeat innerMeat = (InnerMeat) food.meat();        
+    innerMeat.makeMeat();    
+  }
+}
 ```
 
 输出： 
@@ -1769,7 +2052,49 @@ public class Food {    private class InnerFruit implements Fruit{        void me
 内部类之间也可以实现继承，与普通类之间的继承相似，不过不完全一样。
 
 ```java
-public class BaseClass {    class BaseInnerClass {        public void f(){            System.out.println("BaseInnerClass.f()");        }    }    private void g(){        System.out.println("BaseClass.g()");    }}/** *  可以看到，InheritInner只是继承自内部类BaseInnerClass，而不是外围类 *  但是默认的构造方式会报编译错误， *  必须使用类似enclosingClassReference.super()才能编译通过 *  用来来说明内部类与外部类对象引用之间的关联。 * */public class InheritInner extends BaseClass.BaseInnerClass{    // 编译出错//    public InheritInner(){}    public InheritInner(BaseClass bc){        bc.super();    }    @Override    public void f() {        System.out.println("InheritInner.f()");    }    /*    * 加上@Override 会报错，因为BaseInnerClass 中没有g()方法    * 这也是为什么覆写一定要加上Override注解的原因，否则默认是本类    * 中持有的方法，会造成误解，程序员以为g()方法是重写过后的。    @Override    public void g(){        System.out.println("InheritInner.g()");    }*/    public static void main(String[] args) {        BaseClass baseClass = new BaseClass();        InheritInner inheritInner = new InheritInner(baseClass);        inheritInner.f();    }}
+public class BaseClass {
+  class BaseInnerClass {
+    public void f(){
+      System.out.println("BaseInnerClass.f()");        
+    }    
+  }    
+  
+  private void g(){
+    System.out.println("BaseClass.g()");    
+  }
+
+}/** *  可以看到，InheritInner只是继承自内部类BaseInnerClass，而不是外围类 *  但是默认的构造方式会报编译错误， *  必须使用类似enclosingClassReference.super()才能编译通过 *  用来来说明内部类与外部类对象引用之间的关联。 * */
+
+public class InheritInner extends BaseClass.BaseInnerClass{
+  // 编译出错//    
+  
+  public InheritInner(){}    
+  public InheritInner(BaseClass bc){
+    bc.super();    
+  }    
+  
+  @Override    
+  public void f() {
+    System.out.println("InheritInner.f()");    
+  }    
+  
+  /*    
+  * 加上@Override 会报错，因为BaseInnerClass 中没有g()方法    
+  * 这也是为什么覆写一定要加上Override注解的原因，否则默认是本类    
+  * 中持有的方法，会造成误解，程序员以为g()方法是重写过后的。    
+  
+  @Override    
+  public void g(){        
+  	System.out.println("InheritInner.g()");    
+  }
+  */    
+  
+  public static void main(String[] args) {
+    BaseClass baseClass = new BaseClass();
+    InheritInner inheritInner = new InheritInner(baseClass);        
+    inheritInner.f();    
+  }
+}
 ```
 
 输出：InheritInner.f()
@@ -1779,7 +2104,32 @@ public class BaseClass {    class BaseInnerClass {        public void f(){      
 关于内部类的覆盖先来看一段代码：
 
 ```java
-public class Man {    private ManWithKnowledge man;    protected class ManWithKnowledge {        public void haveKnowledge(){            System.out.println("当今社会是需要知识的");        }    }    // 我们想让它输出子类的haveKnowledge()方法    public Man(){        System.out.println("当我们有了一个孩子，我们更希望他可以当一个科学家，而不是网红");        new ManWithKnowledge().haveKnowledge();    }}// 网红public class InternetCelebrity extends Man {    protected class ManWithKnowledge {        public void haveKnowledge(){            System.out.println("网红是当今社会的一种病态");        }    }    public static void main(String[] args) {        new InternetCelebrity();    }}
+public class Man {    
+  private ManWithKnowledge man;
+  protected class ManWithKnowledge {        
+    public void haveKnowledge(){            
+      System.out.println("当今社会是需要知识的");        
+    }    
+  }    
+  // 我们想让它输出子类的haveKnowledge()方法    
+  public Man(){
+    System.out.println("当我们有了一个孩子，我们更希望他可以当一个科学家，而不是网红");
+    new ManWithKnowledge().haveKnowledge();    
+  }
+
+}
+// 网红
+public class InternetCelebrity extends Man {
+  protected class ManWithKnowledge {
+    public void haveKnowledge(){
+      System.out.println("网红是当今社会的一种病态");        
+    }    
+  }    
+  
+  public static void main(String[] args) {
+    new InternetCelebrity();    
+  }
+}
 ```
 
 输出：当我们有了一个孩子，我们更希望他可以当一个科学家，而不是网红
@@ -1813,7 +2163,7 @@ public class Man {    private ManWithKnowledge man;    protected class ManWithKn
 
 **是时候祭出这张神图了**
 
-![image-20210907223747116](https://tva1.sinaimg.cn/large/008i3skNly1gu8fwytfknj60lw0gemyc02.jpg)
+![](http://www.cxuan.vip/image-20230204093929219.png)
 
 首先来介绍的就是列表爷爷辈儿的接口- **Iterator**
 
@@ -1936,7 +2286,7 @@ SortedSet s = Collections.synchronizedSortedSet(new TreeSet(...))
 
 LinkedHashSet 继承于 Set，先来看一下 LinkedHashSet 的继承体系：
 
-![image-20210907223758284](https://tva1.sinaimg.cn/large/008i3skNly1gu8fx57cyaj60dw0cp3z102.jpg)
+![](http://www.cxuan.vip/image-20230204093951324.png)
 
 LinkedHashSet 是 Set 接口的 Hash 表和 LinkedList 的实现。这个实现不同于 HashSet 的是它维护着一个贯穿所有条目的双向链表。此链表定义了元素插入集合的顺序。注意：如果元素重新插入，则插入顺序不会受到影响。
 
@@ -2063,7 +2413,7 @@ Java1.5 并发包 `(java.util.concurrent)` 提供了线程安全的 collections 
 
 下图汇总了部分集合框架的主要实现类的特征图，让你能有清晰明了看出每个实现类之间的差异性
 
-![image-20210907223813609](https://tva1.sinaimg.cn/large/008i3skNly1gu8fxf5g2dj60lv0clgme02.jpg)
+![](http://www.cxuan.vip/image-20230204094009134.png)
 
 ## 泛型
 
@@ -2264,7 +2614,7 @@ Java 反射机制主要提供了以下这几个功能
 
 在 Java 中，使用 `Java.lang.reflect`包实现了反射机制。Java.lang.reflect 所设计的类如下
 
-![image-20210907223829738](https://tva1.sinaimg.cn/large/008i3skNly1gu8fxozmh8j608n0ib3zd02.jpg)
+![](http://www.cxuan.vip/image-20230204094029049.png)
 
 下面是一个简单的反射类
 
@@ -2573,7 +2923,7 @@ Field 类提供类或接口中单独字段的信息，以及对单独字段的�
 
 反射中，还有一个非常重要的类就是 ClassLoader 类，类装载器是用来把`类(class)` 装载进 `JVM `的。ClassLoader 使用的是双亲委托模型来搜索加载类的，这个模型也就是双亲委派模型。ClassLoader 的类继承图如下
 
-![image-20210907223844550](https://tva1.sinaimg.cn/large/008i3skNly1gu8fxy9e0zj60jk0e6dgv02.jpg)
+![](http://www.cxuan.vip/image-20230204094123709.png)
 
 深入理解反射，可以阅读作者的这篇文章 [学会反射后，我被录取了！（干货）](https://mp.weixin.qq.com/s?__biz=MzkwMDE1MzkwNQ==&mid=2247495851&idx=1&sn=fe53ba6e2f2d1098fb0c8cd82420e885&chksm=c04ae7f5f73d6ee35caa07a1ecb649d99aba9248e0db1178c0526f524c9f1f66abe37f76a246&token=1680060231&lang=zh_CN#rd)
 
@@ -2582,13 +2932,22 @@ Field 类提供类或接口中单独字段的信息，以及对单独字段的�
 枚举可能是我们使用次数比较少的特性，在 Java 中，枚举使用 `enum` 关键字来表示，枚举其实是一项非常有用的特性，你可以把它理解为具有特定性质的类。enum 不仅仅 Java 有，C 和 C++ 也有枚举的概念。下面是一个枚举的例子。
 
 ```java
-public enum Family {    FATHER,    MOTHER,    SON,    Daughter;}
+public enum Family {
+  FATHER,    
+  MOTHER,
+  SON,    
+  Daughter;
+}
 ```
 
 上面我们创建了一个 `Family`的枚举类，它具有 4 个值，由于枚举类型都是常量，所以都用大写字母来表示。那么 enum 创建出来了，该如何引用呢？
 
 ```java
-public class EnumUse {    public static void main(String[] args) {        Family s = Family.FATHER;    }}
+public class EnumUse {
+  public static void main(String[] args) {
+    Family s = Family.FATHER;    
+  }
+}
 ```
 
 ### 枚举特性
@@ -2606,7 +2965,7 @@ public static void main(String[] args) {
 
 enum 可以进行静态导入包，静态导入包可以做到不用输入 `枚举类名.常量`，可以直接使用常量，神奇吗? 使用 ennum 和 `static` 关键字可以做到静态导入包
 
-![image-20210907223907374](https://tva1.sinaimg.cn/large/008i3skNly1gu8fycawezj60bq06n74b02.jpg)
+![](http://www.cxuan.vip/image-20230204094141315.png)
 
 上面代码导入的是 Family 中所有的常量，也可以单独指定常量。
 
@@ -2647,7 +3006,24 @@ public enum OrdinalEnum {
 一般 switch 可以和 enum 一起连用，来构造一个小型的状态转换机。
 
 ```java
-enum Signal {  GREEN, YELLOW, RED}public class TrafficLight {    Signal color = Signal.RED;    public void change() {        switch (color) {        case RED:            color = Signal.GREEN;            break;        case YELLOW:            color = Signal.RED;            break;        case GREEN:            color = Signal.YELLOW;            break;        }    }}
+enum Signal {
+  GREEN, YELLOW, RED
+}
+
+public class TrafficLight {
+  Signal color = Signal.RED;
+  public void change() {
+    switch (color) 
+    {        
+      case RED:color = Signal.GREEN;
+        break;        
+      case YELLOW:color = Signal.RED;
+        break;        
+      case GREEN:color = Signal.YELLOW;
+        break;        
+    }    
+  }
+}
 ```
 
 是不是代码顿时觉得优雅整洁了些许呢？
@@ -2656,13 +3032,13 @@ enum Signal {  GREEN, YELLOW, RED}public class TrafficLight {    Signal color = 
 
 在 Java 中，万事万物都是对象，enum 虽然是个关键字，但是它却隐式的继承于 `Enum` 类。我们来看一下 Enum 类，此类位于 `java.lang` 包下，可以自动引用。
 
-![image-20210907223923592](https://tva1.sinaimg.cn/large/008i3skNly1gu8fymopszj60k00hc75p02.jpg)
+![](http://www.cxuan.vip/image-20230204094157308.png)
 
 此类的属性和方法都比较少。你会发现这个类中没有我们的 values 方法。前面刚说到，`values()` 方法是你使用枚举时被编译器添加进来的 static 方法。**可以使用反射来验证一下**。
 
 除此之外，enum 还和 Class 类有交集，在 Class 类中有三个关于 Enum 的方法
 
-![image-20210907223931510](https://tva1.sinaimg.cn/large/008i3skNly1gu8fyrcxwpj608302b0sm02.jpg)
+![](http://www.cxuan.vip/image-20230204094208874.png)
 
 前面两个方法用于获取 enum 常量，`isEnum` 用于判断是否是枚举类型的。
 
@@ -2684,11 +3060,11 @@ EnumMap 是一种特殊的 Map，它要求其中的 key 键值是来自一个 en
 
 IO 类设计出来，肯定是为了解决 IO 相关操作的，最常见的 I/O 读写就是网络、磁盘等。在 Java 中，对文件的操作是一个典型的 I/O 操作。下面我们就对 I/O 进行一个分类。
 
-![image-20210907223943720](https://tva1.sinaimg.cn/large/008i3skNly1gu8fyzag2pj60lq097gmg02.jpg)
+![](http://www.cxuan.vip/image-20230204094227903.png)
 
 I/O 还可以根据操作对象来进行区分：主要分为
 
-![image-20210907224000191](https://tva1.sinaimg.cn/large/008i3skNly1gu8fza0337j60lk0a3dh202.jpg)
+![](http://www.cxuan.vip/image-20230204094240115.png)
 
 除此之外，I/O 中还有其他比较重要的类
 
@@ -2699,30 +3075,79 @@ File 类是对文件系统中文件以及文件夹进行操作的类，可以通
 文件创建操作如下，主要涉及 **文件创建、删除文件、获取文件描述符等**
 
 ```java
-class FileDemo{   public static void main(String[] args) {       File file = new File("D:\\file.txt");       try{         f.createNewFile(); // 创建一个文件                  // File类的两个常量         //路径分隔符(与系统有关的）<windows里面是 ; linux里面是 ： >        System.out.println(File.pathSeparator);  //   ;        //与系统有关的路径名称分隔符<windows里面是 \ linux里面是/ >        System.out.println(File.separator);      //  \                  // 删除文件         /*         File file = new File(fileName);         if(f.exists()){             f.delete();         }else{             System.out.println("文件不存在");         }            */                }catch (Exception e) {           e.printStackTrace();       }    }}
+class FileDemo{
+  public static void main(String[] args) {
+    File file = new File("D:\\file.txt");
+    try{
+      f.createNewFile(); // 创建一个文件
+      
+      // File类的两个常量         
+      //路径分隔符(与系统有关的）<windows里面是 ; linux里面是 ： >        
+      System.out.println(File.pathSeparator);  //   ;        
+      //与系统有关的路径名称分隔符<windows里面是 \ linux里面是/ >        
+      System.out.println(File.separator);      //  \                  
+      // 删除文件         
+      /*         
+      File file = new File(fileName);
+      	if(f.exists()){
+      	f.delete();         
+      }else{
+      	System.out.println("文件不存在");
+      }            
+      */       
+      
+    }catch (Exception e) {
+      e.printStackTrace();       
+    }    
+  }
+}
 ```
 
 也可以对文件夹进行操作
 
 ```java
-class FileDemo{  public static void main(String[] args) {    String fileName = "D:"+ File.separator + "filepackage";    File file = new File(fileName);    f.mkdir();    		// 列出所有文件    /*    String[] str = file.list();    for (int i = 0; i < str.length; i++) {      System.out.println(str[i]);    }    */        // 使用 file.listFiles(); 列出所有文件，包括隐藏文件        // 使用 file.isDirectory() 判断指定路径是否是目录  }}
+class FileDemo{
+  public static void main(String[] args) {
+    String fileName = "D:"+ File.separator + "filepackage";    
+    File file = new File(fileName);    
+    f.mkdir();    		
+    
+    // 列出所有文件    
+    /*    
+    String[] str = file.list();
+    for (int i = 0; i < str.length; i++) {
+    	System.out.println(str[i]);    
+    }    
+    */        
+    
+    // 使用 file.listFiles(); 列出所有文件，包括隐藏文件        
+    // 使用 file.isDirectory() 判断指定路径是否是目录  
+  }
+}
 ```
 
 上面只是举出来了两个简单的示例，实际上，还有一些其他对文件的操作没有使用。比如创建文件，就可以使用三种方式来创建
 
 ```java
-File(String directoryPath);File(String directoryPath, String filename);File(File dirObj, String filename);
+File(String directoryPath);
+File(String directoryPath, String filename);
+File(File dirObj, String filename);
 ```
 
 directoryPath 是文件的路径名，filename 是文件名，dirObj 是一个 File 对象。例如
 
 ```java
-File file = new File("D:\\java\\file1.txt");  //双\\是转义System.out.println(file);File file2 = new File("D:\\java","file2.txt");//父路径、子路径--可以适用于多个文件的！System.out.println(file2);File parent = new File("D:\\java");File file3 = new File(parent,"file3.txt");//File类的父路径、子路径System.out.println(file3);
+File file = new File("D:\\java\\file1.txt");  //双\\是转义
+System.out.println(file);
+File file2 = new File("D:\\java","file2.txt");//父路径、子路径--可以适用于多个文件的！
+System.out.println(file2);File parent = new File("D:\\java");
+File file3 = new File(parent,"file3.txt");//File类的父路径、子路径
+System.out.println(file3);
 ```
 
 现在对 File 类进行总结
 
-![image-20210907224017172](https://tva1.sinaimg.cn/large/008i3skNly1gu8fzjzsmoj60lq0bzwfr02.jpg)
+![](http://www.cxuan.vip/image-20230204094259137.png)
 
 ### 基础 IO 类和相关方法
 
@@ -2732,25 +3157,25 @@ File file = new File("D:\\java\\file1.txt");  //双\\是转义System.out.println
 
 InputStream 是一个定义了 Java 流式字节输入模式的抽象类。该类的所有方法在出错条件下引发一个IOException 异常。它的主要方法定义如下
 
-![image-20210907224027459](https://tva1.sinaimg.cn/large/008i3skNly1gu8fzqdbxkj60lu08haat02.jpg)
+![](http://www.cxuan.vip/image-20230204094311860.png)
 
 #### OutputStream
 
 OutputStream 是定义了流式字节输出模式的抽象类。该类的所有方法返回一个void 值并且在出错情况下引发一个IOException异常。它的主要方法定义如下
 
-![image-20210907224038211](https://tva1.sinaimg.cn/large/008i3skNly1gu8fzx0cayj60lo073dgd02.jpg)
+![](http://www.cxuan.vip/image-20230204094331362.png)
 
 #### Reader 类
 
 Reader 是 Java 定义的流式字符输入模式的抽象类。类中的方法在出错时引发 `IOException` 异常。
 
-![image-20210907224047953](https://tva1.sinaimg.cn/large/008i3skNly1gu8g03njx9j60lh0cdabi02.jpg)
+![](http://www.cxuan.vip/image-20230204094344980.png)
 
 #### Writer 类
 
 Writer 是定义流式字符输出的抽象类。 所有该类的方法都返回一个 void 值并在出错条件下引发 IOException 异常
 
-![image-20210907224100871](https://tva1.sinaimg.cn/large/008i3skNly1gu8g0bhal7j30lr09rgmk.jpg)
+![](http://www.cxuan.vip/image-20230204094358626.png)
 
 ### InputStream 及其子类
 
@@ -2838,7 +3263,17 @@ RetentionPolicy.RUNTIME：注解不仅被保存到 class 文件中，jvm 加载 
 * `@Target`： 标记这个注解说明了 Annotation 所修饰的对象范围，Annotation 可被用于 packages、types（类、接口、枚举、Annotation类型）、类型成员（方法、构造方法、成员变量、枚举值）、方法参数和本地变量（如循环变量、catch参数）。取值如下
 
 ```java
-public enum ElementType {    TYPE, 						// 类、接口、注解、枚举    FIELD,						// 字段    METHOD,						// 方法    PARAMETER,				// 参数    CONSTRUCTOR,			// 构造方法    LOCAL_VARIABLE,		// 本地变量    ANNOTATION_TYPE,	// 注解    PACKAGE,					// 包    TYPE_PARAMETER,		// 类型参数    TYPE_USE					// 类型使用
+public enum ElementType {
+  TYPE, 						// 类、接口、注解、枚举    
+  FIELD,						// 字段   
+  METHOD,						// 方法    
+  PARAMETER,				// 参数    
+  CONSTRUCTOR,			// 构造方法    
+  LOCAL_VARIABLE,		// 本地变量    
+  ANNOTATION_TYPE,	// 注解    
+  PACKAGE,					// 包    
+  TYPE_PARAMETER,		// 类型参数    
+  TYPE_USE					// 类型使用
 ```
 
 * `@Inherited` ： 标记这个注解是继承于哪个注解类的。
@@ -2874,13 +3309,13 @@ public enum ElementType {    TYPE, 						// 类、接口、注解、枚举    FI
 
 那么关于 null ，你应该知道下面这几件事情来有效的了解 null ，从而避免很多由 null 引起的错误。
 
-![image-20210908220944817](https://tva1.sinaimg.cn/large/008i3skNly1gu9kq6fr1cj60dk0b60tj02.jpg)
+![](http://www.cxuan.vip/image-20230204094416719.png)
 
 ### 大小写敏感
 
 首先，null 是 Java 中的`关键字`，像是 **public、static、final。**它是大小写敏感的，你不能将 null 写成 Null 或 NULL，编辑器将不能识别它们然后报错。
 
-![image-20210908221001686](https://tva1.sinaimg.cn/large/008i3skNly1gu9kqfdpvpj60a8040q2v02.jpg)
+![](http://www.cxuan.vip/image-20230204094429218.png)
 
 这个问题已经几乎不会出现，因为 eclipse 和 Idea 编译器已经给出了编译器提示，所以你不用考虑这个问题。
 
@@ -2890,7 +3325,7 @@ null 是所有引用类型的默认值，Java 中的任何引用变量都将null
 
 下面是基本数据类型的初始值
 
-![image-20210908221018989](https://tva1.sinaimg.cn/large/008i3skNly1gu9kqqrshqj60lq09emxc02.jpg)
+![](http://www.cxuan.vip/image-20230204094444843.png)
 
 ### null 只是一种特殊的值
 
@@ -2967,10 +3402,15 @@ number 没有赋值，所以默认为null，使用`String.value(number)` 静态�
 你可以使用 `==` 或者 `!=` 操作来比较 null 值，但是不能使用其他算法或者逻辑操作，例如小于或者大于。跟SQL不一样，在Java中 null == null 将返回 true，如下所示：
 
 ```java
-public class CompareNull {    private static String str1;    private static String str2;    public static void main(String[] args) {        System.out.println("str1 == str2 ? " + str1 == str2);        System.out.println(null == null);    }}
+public class CompareNull {
+  private static String str1;
+  private static String str2;
+  public static void main(String[] args) {
+    System.out.println("str1 == str2 ? " + str1 == str2);
+    System.out.println(null == null);    
+  }
+}
 ```
 
-![image-20210716163352584](https://tva1.sinaimg.cn/large/008i3skNly1gsivkbczxoj31l20t8al5.jpg)
 
-![image-20210716163433337](https://tva1.sinaimg.cn/large/008i3skNly1gsivl4khz9j31d60h8mze.jpg)
 

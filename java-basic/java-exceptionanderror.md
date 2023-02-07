@@ -36,7 +36,7 @@ Throwable 类是 Java 语言中所有`错误(errors)`和`异常(exceptions)`的�
 
 那么，按照这种逻辑关系，我们可以对 Throwable 及其子类进行归类分析
 
-![](https://img2020.cnblogs.com/blog/1515111/202004/1515111-20200408140301956-1960607146.png)
+![](http://www.cxuan.vip/image-20230204094933462.png)
 
 可以看到，Throwable 位于异常和错误的最顶层，我们查看 Throwable 类中发现它的方法和属性有很多，我们只讨论其中几个比较常用的
 
@@ -67,23 +67,11 @@ public synchronized Throwable fillInStackTrace();
 
 RuntimeException
 
-| 序号 | 异常名称                       | 异常描述         |
-| ---- | ------------------------------ | ---------------- |
-| 1    | ArrayIndexOutOfBoundsException | 数组越界异常     |
-| 2    | NullPointerException           | 空指针异常       |
-| 3    | IllegalArgumentException       | 非法参数异常     |
-| 4    | NegativeArraySizeException     | 数组长度为负异常 |
-| 5    | IllegalStateException          | 非法状态异常     |
-| 6    | ClassCastException             | 类型转换异常     |
+![](http://www.cxuan.vip/image-20230204095144470.png)
 
 UncheckedException
 
-| 序号 | 异常名称               | 异常描述                         |
-| ---- | ---------------------- | -------------------------------- |
-| 1    | NoSuchFieldException   | 表示该类没有指定名称抛出来的异常 |
-| 2    | NoSuchMethodException  | 表示该类没有指定方法抛出来的异常 |
-| 3    | IllegalAccessException | 不允许访问某个类的异常           |
-| 4    | ClassNotFoundException | 类没有找到抛出异常               |
+![](http://www.cxuan.vip/image-20230204095156789.png)
 
 ### 与 Exception 有关的 Java 关键字
 
@@ -266,7 +254,7 @@ static void copyAutoClose(String src,String dst) throws IOException{
 
 Error 是程序无法处理的错误，表示运行应用程序中较严重问题。大多数错误与代码编写者执行的操作无关，而表示代码运行时 JVM（Java 虚拟机）出现的问题。这些错误是不可检查的，因为它们在应用程序的控制和处理能力之 外，而且绝大多数是程序运行时不允许出现的状况，比如 `OutOfMemoryError` 和 `StackOverflowError`异常的出现会有几种情况，这里需要先介绍一下 Java 内存模型 JDK1.7。
 
-![](https://img2020.cnblogs.com/blog/1515111/202004/1515111-20200408140326181-1670569087.png)
+![](http://www.cxuan.vip/image-20230204094950841.png)
 
 其中包括两部分，**由所有线程共享的数据区和线程隔离的数据区**组成，在上面的 Java 内存模型中，**只有程序计数器**是不会发生 `OutOfMemoryError` 情况的区域，程序计数器控制着计算机指令的分支、循环、跳转、异常处理和线程恢复，并且程序计数器是每个线程私有的。
 
@@ -300,7 +288,7 @@ Error 是程序无法处理的错误，表示运行应用程序中较严重问�
 >
 >* Java.lang.ClassLoader 的子类，用户可以定制类的加载方式。
 
-![](https://img2020.cnblogs.com/blog/1515111/202004/1515111-20200408140335459-1187705494.png)
+![](http://www.cxuan.vip/image-20230204095000552.png)
 
 另一方面，ClassNotFoundException 与编译时期无关，当你尝试在运行时使用反射加载类时，ClassNotFoundException 就会出现。
 
@@ -309,11 +297,11 @@ Error 是程序无法处理的错误，表示运行应用程序中较严重问�
 * NoClassDefFoundError 是 JVM 引起的错误，是 unchecked，未经检查的。因此不会使用 try-catch 或者 finally 语句块；另外，ClassNotFoundException 是受检异常，因此需要 try-catch 语句块或者 try-finally 语句块包围，否则会导致编译错误。
 * 调用 **Class.forName()、ClassLoader.findClass() 和 ClassLoader.loadClass()** 等方法时可能会引起 `java.lang.ClassNotFoundException`，如图所示
 
-![](https://img2020.cnblogs.com/blog/1515111/202004/1515111-20200408140342229-905972753.png)
+![](http://www.cxuan.vip/image-20230204095010539.png)
 
 * NoClassDefFoundError 是链接错误，发生在链接阶段，当解析引用找不到对应的类，就会触发；而 ClassNotFoundException 是发生在运行时的异常。
 
-![image-20210716163352584](https://tva1.sinaimg.cn/large/008i3skNly1gsivkbczxoj31l20t8al5.jpg)
+如果你在阅读文章的过程中发现错误和问题，请及时与我联系！
 
-![image-20210716163433337](https://tva1.sinaimg.cn/large/008i3skNly1gsivl4khz9j31d60h8mze.jpg)
+如果文章对你有帮助，希望小伙伴们三连走起！
 

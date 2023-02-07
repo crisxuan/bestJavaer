@@ -26,8 +26,6 @@
       * [JWT 和 Session Cookies 的选型](#jwt-和-session-cookies-的选型)
    * [后记](#后记)
 
-![](https://img2020.cnblogs.com/blog/1515111/202004/1515111-20200405090920745-1422513552.png)
-
 
 ## Cookie 和 Session
 
@@ -41,7 +39,7 @@ HTTP 协议是一种`无状态协议`，即每次服务端接收到客户端的�
 
 服务器第一次接收到请求时，开辟了一块 Session 空间（创建了Session对象），同时生成一个 sessionId ，并通过响应头的 **Set-Cookie：JSESSIONID=XXXXXXX **命令，向客户端发送要求设置 Cookie 的响应； 客户端收到响应后，在本机客户端设置了一个 **JSESSIONID=XXXXXXX **的 Cookie 信息，该 Cookie 的过期时间为浏览器会话结束；
 
-![](https://img2020.cnblogs.com/blog/1515111/202004/1515111-20200405090321438-2032814831.png)
+![](http://www.cxuan.vip/image-20230202222041370.png)
 
 接下来客户端每次向同一个网站发送请求时，请求头都会带上该 Cookie信息（包含 sessionId ）， 然后，服务器通过读取请求头中的 Cookie 信息，获取名称为 JSESSIONID 的值，得到此次请求的 sessionId。
 
@@ -51,7 +49,7 @@ Session 机制有个缺点，比如 A 服务器存储了 Session，就是做了�
 
 ### Cookies 是什么
 
-![](https://img2020.cnblogs.com/blog/1515111/202004/1515111-20200405090329852-726935682.png)
+![](http://www.cxuan.vip/image-20230202222055358.png)
 
 HTTP 协议中的 Cookie 包括 `Web Cookie` 和`浏览器 Cookie`，它是服务器发送到 Web 浏览器的一小块数据。服务器发送到浏览器的 Cookie，浏览器会进行存储，并与下一个请求一起发送到服务器。通常，它用于判断两个请求是否来自于同一个浏览器，例如用户保持登录状态。
 
@@ -81,13 +79,13 @@ Cookie 曾经用于一般的客户端存储。虽然这是合法的，因为它�
 
 `Set-Cookie` HTTP 响应标头将 cookie 从服务器发送到用户代理。下面是一个发送 Cookie 的例子
 
-![](https://img2020.cnblogs.com/blog/1515111/202004/1515111-20200405090350874-162215808.png)
+![](http://www.cxuan.vip/image-20230202222107301.png)
 
 此标头告诉客户端存储 Cookie
 
 现在，随着对服务器的每个新请求，浏览器将使用 Cookie 头将所有以前存储的 Cookie 发送回服务器。
 
-![](https://img2020.cnblogs.com/blog/1515111/202004/1515111-20200405090358057-1079553368.png)
+![](http://www.cxuan.vip/image-20230202222114783.png)
 
 有两种类型的 Cookies，一种是 Session Cookies，一种是 Persistent Cookies，如果 Cookie 不包含到期日期，则将其视为会话 Cookie。会话 Cookie 存储在内存中，永远不会写入磁盘，当浏览器关闭时，此后 Cookie 将永久丢失。如果 Cookie 包含`有效期` ，则将其视为持久性 Cookie。在到期指定的日期，Cookie 将从磁盘中删除。
 
@@ -147,7 +145,7 @@ Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT;
 
 如果没有这两者，那你可能需要在每个页面切换时都需要进行登录了。因为 HTTP 是一个无状态的协议。这也就意味着当你访问某个网页，然后单击同一站点上的另一个页面时，服务器的`内存中`将不会记住你之前的操作。
 
-![](https://img2020.cnblogs.com/blog/1515111/202004/1515111-20200405090447168-1412892230.png)
+![](http://www.cxuan.vip/image-20230202222122863.png)
 
 因此，如果你登录并访问了你有权访问的另一个页面，由于 HTTP 不会记录你刚刚登录的信息，因此你将再次登录。
 
@@ -163,7 +161,7 @@ Session Cookies 也称为`会话 Cookies`，在 Session Cookies 中，用户的�
 
 在每次请求时，服务器都会从会话 Cookie 中读取 SessionId，如果服务端的数据和读取的 SessionId 相同，那么服务器就会发送响应给浏览器，允许用户登录。
 
-![](https://img2020.cnblogs.com/blog/1515111/202004/1515111-20200405090456816-1567261814.png)
+![](http://www.cxuan.vip/image-20230202222130275.png)
 
 ### 什么是 Json Web Tokens
 
@@ -186,7 +184,7 @@ JWT 主要由三部分组成，每个部分用 `.` 进行分割，各个部分�
 
 因此，一个非常简单的 JWT 组成会是下面这样
 
-![](https://img2020.cnblogs.com/blog/1515111/202004/1515111-20200405090510532-1017074382.png)
+![](http://www.cxuan.vip/image-20230202222142097.png)
 
 然后我们分别对不同的部分进行探讨。
 
@@ -265,7 +263,7 @@ HMACSHA256(
 eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ
 ```
 
-![](https://img2020.cnblogs.com/blog/1515111/202004/1515111-20200405090523721-51310429.png)
+![](http://www.cxuan.vip/image-20230202222152326.png)
 
 如果想自己测试编写的话，可以访问 JWT 官网 https://jwt.io/#debugger-io
 
@@ -305,14 +303,13 @@ Session Cookies 只能用在`单个节点的域`或者它的`子域`中有效。
 
 前两天面试的时候问到了这个题，所以写篇文章总结一下，还问到了一个面试题，**禁用 Cookies，如何使用 Session** ？网上百度了一下，发现这是 PHP 的面试题......
 
-![](https://img2020.cnblogs.com/blog/1515111/202004/1515111-20200405090536271-79379471.png)
+![](http://www.cxuan.vip/image-20230202222201148.png)
 
 但还是选择了解了一下，如何禁用 Cookies 后，使用 Session
 
 * 如果禁用了 Cookies，服务器仍会将 sessionId 以 cookie 的方式发送给浏览器，但是，浏览器不再保存这个cookie (即sessionId) 了。
 * 如果想要继续使用 session，需要采用 `URL 重写` 的方式来实现，可以参考 https://www.cnblogs.com/Renyi-Fan/p/11012086.html
 
-![image-20210716163352584](https://tva1.sinaimg.cn/large/008i3skNly1gsivkbczxoj31l20t8al5.jpg)
+如果你在阅读文章的过程中发现错误和问题，请及时与我联系！
 
-![image-20210716163433337](https://tva1.sinaimg.cn/large/008i3skNly1gsivl4khz9j31d60h8mze.jpg)
-
+如果文章对你有帮助，希望小伙伴们三连走起！

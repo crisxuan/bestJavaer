@@ -34,11 +34,11 @@ public class TestStatic {
 
 静态变量也被称为类变量，静态变量是属于这个类所有的。什么意思呢？这其实就是说，static 关键字只能定义在类的 `{}` 中，而不能定义在任何方法中。
 
-![](https://img2020.cnblogs.com/blog/1515111/202005/1515111-20200531112615469-3463548.png)
+![](http://www.cxuan.vip/image-20230204151700269.png)
 
 就算把方法中的 static 关键字去掉也是一样的。
 
-![](https://img2020.cnblogs.com/blog/1515111/202005/1515111-20200531112621569-1106286631.png)
+![](http://www.cxuan.vip/image-20230204151709862.png)
 
 static 属于类所有，由类来直接调用 static 修饰的变量，它不需要手动实例化类进行调用
 
@@ -59,10 +59,6 @@ public class TestStatic {
 * 定义在方法、构造方法、代码块`内`的变量被称为局部变量；
 * 定义在方法参数`中`的变量被称为参数。
 
-详情参考 
-
-
-
 ### static 修饰方法
 
 static 可以修饰方法，被 static 修饰的方法被称为`静态方法`，其实就是在一个方法定义中加上 `static` 关键字进行修饰，例如下面这样
@@ -77,7 +73,7 @@ static void sayHello(){}
 
 其中有一句非常重要的话就是 **static 方法就是没有 this 的方法**，也就是说，可以在不用创建对象的前提下就能够访问 static 方法，如何做到呢？看下面一段代码
 
-![](https://img2020.cnblogs.com/blog/1515111/202005/1515111-20200531112631544-1221882463.png)
+![](http://www.cxuan.vip/image-20230204151725083.png)
 
 在上面的例子中，由于 `staticMethod` 是静态方法，所以能够使用 类名.变量名进行调用。
 
@@ -88,17 +84,17 @@ static void sayHello(){}
 * 首先第一点就是最常用的，不用创建对象，直接`类名.变量名` 即可访问；
 * static 修饰的方法内部不能调用非静态方法；
 
-![](https://img2020.cnblogs.com/blog/1515111/202005/1515111-20200531112642836-419444156.png)
+![](http://www.cxuan.vip/image-20230204151735893.png)
 
 * 非静态方法内部可以调用 static 静态方法。
 
-![](https://img2020.cnblogs.com/blog/1515111/202005/1515111-20200531112649976-2042624207.png)
+![](http://www.cxuan.vip/image-20230204151745628.png)
 
 ### static 修饰代码块
 
 static 关键字可以用来修饰代码块，代码块分为两种，一种是使用 `{}` 代码块；一种是 `static {}` 静态代码块。static 修饰的代码块被称为静态代码块。静态代码块可以置于类中的任何地方，类中可以有多个 static 块，在类初次被加载的时候，会按照 static 代码块的顺序来执行，每个 static 修饰的代码块只能执行一次。我们会面会说一下代码块的加载顺序。下面是静态代码块的例子
 
-![](https://img2020.cnblogs.com/blog/1515111/202005/1515111-20200531112657178-851431268.png)
+![](http://www.cxuan.vip/image-20230204151756784.png)
 
 static 代码块可以用来**优化程序执行顺序**，是因为它的特性：只会在类加载的时候执行一次。
 
@@ -152,7 +148,7 @@ public class ClassDemo {
 
 不知道你注意到这种现象没有，比如你使用了 `java.util` 内的工具类时，你需要导入 java.util 包，才能使用其内部的工具类，如下
 
-![](https://img2020.cnblogs.com/blog/1515111/202005/1515111-20200531112708060-1225257533.png)
+![](http://www.cxuan.vip/image-20230204151807592.png)
 
 但是还有一种导包方式是使用`静态导包`，静态导入就是使用 `import static` 用来导入某个类或者某个包中的静态方法或者静态变量。
 
@@ -180,7 +176,7 @@ static 所修饰的属性和方法都属于类的，不会属于任何对象；�
 
 首先，先来认识一下 JVM 的不同存储区域。
 
-![](https://img2020.cnblogs.com/blog/1515111/202005/1515111-20200531112716049-785669819.png)
+![](http://www.cxuan.vip/image-20230204151817230.png)
 
 * `虚拟机栈` : Java 虚拟机栈是线程私有的数据区，Java 虚拟机栈的生命周期与线程相同，虚拟机栈也是局部变量的存储位置。方法在执行过程中，会在虚拟机栈种创建一个 `栈帧(stack frame)`。
 * `本地方法栈`: 本地方法栈也是线程私有的数据区，本地方法栈存储的区域主要是 Java 中使用 `native` 关键字修饰的方法所存储的区域
@@ -312,13 +308,11 @@ public class test.StaticTest {
 
 我们发现，在调用 static 方法时是使用的 `invokestatic` 指令，new 对象调用的是 `invokespecial` 指令，而且在 JVM 规范中 https://docs.oracle.com/javase/specs/jvms/se7/html/jvms-6.html#jvms-6.5.invokestatic 说到 
 
-![](https://img2020.cnblogs.com/blog/1515111/202005/1515111-20200531112727532-1542376786.png)
-
-![](https://img2020.cnblogs.com/blog/1515111/202005/1515111-20200531112733139-60373309.png)
+![](http://www.cxuan.vip/image-20230204151830997.png)
 
 从这个角度来讲，`invokestatic` 指令是专门用来执行 static 方法的指令；`invokespecial` 是专门用来执行实例方法的指令；从这个角度来讲，构造器也不是静态的。
 
-![image-20210716163352584](https://tva1.sinaimg.cn/large/008i3skNly1gsivkbczxoj31l20t8al5.jpg)
+如果你在阅读文章的过程中发现错误和问题，请及时与我联系！
 
-![image-20210716163433337](https://tva1.sinaimg.cn/large/008i3skNly1gsivl4khz9j31d60h8mze.jpg)
+如果文章对你有帮助，希望小伙伴们三连走起！
 
