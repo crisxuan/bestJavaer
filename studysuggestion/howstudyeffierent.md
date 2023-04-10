@@ -56,7 +56,7 @@
 
 体系化的知识比零散的更容易记忆和理解，这正如一部好的电视剧，剧情环环相扣才能吸引观众。建议大家使用思维导图罗列知识点，构建体系结构，如下图所示：
 
-![image-20220923211016855](https://tva1.sinaimg.cn/large/e6c9d24ely1h6guhex9v4j20nl10rq5m.jpg)
+![](https://www.cxuan.vip/image-20230405220016186.png)
 
 ### 克服遗忘
 
@@ -84,7 +84,7 @@
 
 从下面这张图我们可以看到，教授他人是知识留存率最高的方式。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/libYRuvULTdVJnianau1DBNcCpM1B0QrpmDFYiaSDUKZdRr26Hpljo60nFUibJj0gnRUDooKZvdcqic0TeZY1dJicKhg/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](https://www.cxuan.vip/image-20230405220051906.png)
 
 准备 PPT 和演讲内容，给同事来一场技术分享。不光复习知识，还锻炼口才。曾经有个同事说话又快又急，口头禅也多，比如**对吧、是不是**，别人经常听不清，但是他本人不以为然。领导让他做了几次技术分享，听众的反应可想而知，他才彻底认清缺点。
 

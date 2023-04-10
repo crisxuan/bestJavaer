@@ -28,11 +28,11 @@ i++ 不是线程安全的操作，因为它不是一个原子性操作。
 
 `AtomicInteger` 是 JDK 1.5 新添加的工具类，我们首先来看一下它的继承关系
 
-<img src="https://s1.ax1x.com/2020/09/20/wosPYV.png" alt="AtomicInteger01" border="0">
+![](http://www.cxuan.vip/image-20230207133635803.png)
 
 与 int 的包装类 Integer 一样，都是继承于 `Number` 类的。
 
-<img src="https://s1.ax1x.com/2020/09/20/wos4pT.png" alt="AtomicInteger02" border="0">
+![](http://www.cxuan.vip/image-20230207133649786.png)
 
 这个 Number 类是基本数据类型的包装类，一般和数据类型有关的对象都会继承于 Number 类。
 
@@ -42,7 +42,7 @@ i++ 不是线程安全的操作，因为它不是一个原子性操作。
 
 AtomicInteger 的基本属性有三个
 
-<img src="https://s1.ax1x.com/2020/09/20/wTiyJH.png" alt="wTiyJH.png" border="0" />
+![](http://www.cxuan.vip/image-20230207133704024.png)
 
 `Unsafe` 是 `sun.misc` 包下面的类，AtomicInteger 主要是依赖于 sun.misc.Unsafe 提供的一些 native 方法保证操作的原子性。
 
@@ -56,7 +56,7 @@ Unsafe 的 `objectFieldOffset` 方法可以获取成员属性在内存中的地�
 
 继续往下看，AtomicInteger 的构造方法只有两个，一个是无参数的构造方法，无参数的构造方法默认的 value 初始值是 0 ，带参数的构造方法可以指定初始值。
 
-<img src="https://s1.ax1x.com/2020/09/20/wosWt0.png" alt="AtomicInteger04" border="0">
+![](http://www.cxuan.vip/image-20230207133720865.png)
 
 ### AtomicInteger 中的方法
 
@@ -70,9 +70,9 @@ Unsafe 的 `objectFieldOffset` 方法可以获取成员属性在内存中的地�
 
 `set()` : 设置当前 AtomicInteger 的值
 
-get() 可以原子性的读取 AtomicInteger  中的数据，set() 可以原子性的设置当前的值，因为 get() 和 set() 最终都是作用于 value 变量，而 value 是由 `volatile` 修饰的，所以 get 、set 相当于都是对内存进行读取和设置。如下图所示
+get() 可以原子性的读取 AtomicInteger  中的数据，set() 可以原子性的设置当前的值，因为 get() 和 set() 最终都是作用于 value 变量，而 value 是由 `volatile` 修饰的，所以 get 、set 相当于都是对内存进行读取和设置。如下图所示。
 
-<img src="https://s1.ax1x.com/2020/09/20/wosRkq.png" alt="AtomicInteger05" border="0">
+![](http://www.cxuan.vip/image-20230207133746243.png)
 
 我们上面提到了 i++ 和 i++ 的非原子性操作，我们说可以使用 AtomicInteger 中的方法进行替换。
 
@@ -82,7 +82,7 @@ AtomicInteger 中的 `Incremental` 相关方法可以满足我们的需求
 
 * `getAndIncrement()` :  原子性的增加当前的值，并把结果返回。相当于 `i++` 的操作。
 
-<img src="https://s1.ax1x.com/2020/09/20/wTFV0K.png" alt="wTFV0K.png" border="0" />
+![](http://www.cxuan.vip/image-20230207133810454.png)
 
 为了验证是不是线程安全的，我们用下面的例子进行测试
 
@@ -112,11 +112,11 @@ public class TAtomicTest implements Runnable{
 
 通过输出结果你会发现它是一个线程安全的操作，你可以修改 i 的值，但是最后的结果仍然是 i - 1，因为先取值，然后再 + 1，它的示意图如下。
 
-<img src="https://s1.ax1x.com/2020/09/20/wosg7n.png" alt="AtomicInteger06" border="0">
+![](http://www.cxuan.vip/image-20230207133918158.png)
 
 * `incrementAndGet` 与此相反，首先执行 + 1 操作，然后返回自增后的结果，该操作方法能够确保对 value 的原子性操作。如下图所示
 
-<img src="https://s1.ax1x.com/2020/09/20/wosc0s.png" alt="AtomicInteger07" border="0">
+![](http://www.cxuan.vip/image-20230207133937994.png)
 
 #### Decremental 操作
 
@@ -152,11 +152,11 @@ class TAtomicTestDecrement implements Runnable{
 
 下面是 getAndDecrement 的示意图
 
-<img src="https://s1.ax1x.com/2020/09/20/wos6mj.png" alt="AtomicInteger08" border="0">
+![](http://www.cxuan.vip/image-20230207134036513.png)
 
 * `decrementAndGet`：同样的，decrementAndGet 方法就是先执行递减操作，然后再获取 value 的值，示意图如下
 
-<img src="https://s1.ax1x.com/2020/09/20/wossXQ.png" alt="AtomicInteger09" border="0">
+![](http://www.cxuan.vip/image-20230207134116061.png)
 
 #### LazySet 方法
 
@@ -174,15 +174,13 @@ CPU 使用了很多优化，使用缓存、指令重排等，其最终的目的�
 
 也可以说是：**懒得设置屏障了**
 
-<img src="https://s1.ax1x.com/2020/09/20/wosD1S.png" alt="AtomicInteger10" border="0">
-
 #### GetAndSet 方法
 
 以原子方式设置为给定值并返回旧值。
 
 它的源码就是调用了一下 unsafe 中的 getAndSetInt 方法，如下所示
 
-<img src="https://s1.ax1x.com/2020/09/20/woswff.png" alt="AtomicInteger11" border="0">
+![](http://www.cxuan.vip/image-20230207134328372.png)
 
 就是先进行循环，然后调用 `getIntVolatile` 方法，这个方法我在 cpp 中没有找到，找到的小伙伴们记得及时告诉让我学习一下。
 
@@ -192,7 +190,7 @@ CPU 使用了很多优化，使用缓存、指令重排等，其最终的目的�
 
 我们一直常说的 CAS 其实就是 `CompareAndSet` 方法，这个方法顾名思义，就是 **比较并更新** 的意思，当然这是字面理解，字面理解有点偏差，其实人家的意思是先比较，如果满足那么再进行更新。
 
-<img src="https://s1.ax1x.com/2020/09/20/wosBp8.png" alt="AtomicInteger12" border="0">
+![](http://www.cxuan.vip/image-20230207134350057.png)
 
 上面给出了 CAS Java 层面的源码，JDK 官方给它的解释就是 **如果当前值等于 expect 的值，那么就以原子性的方式将当前值设置为 update 给定值**，这个方法会返回一个 boolean 类型，如果是 true 就表示比较并更新成功，否则表示失败。
 
@@ -274,25 +272,19 @@ else{
 
 也可以拿生活场景中的买票举例子，你去景区旅游肯定要持票才能进，如果你拿着是假票或者不符合景区的票肯定是能够被识别出来的，如果你没有拿票拿你也肯定进不去景区。
 
-废话少说，这就祭出来 compareAndSet 的示意图
-
-<img src="https://s1.ax1x.com/2020/09/20/wosNTI.png" alt="AtomicInteger14" border="0">
-
 * `weakCompareAndSet`: 妈的非常认真看了好几遍，发现 JDK1.8 的这个方法和 compareAndSet 方法完全一摸一样啊，坑我。。。
-
-<img src="https://s1.ax1x.com/2020/09/20/wosYmd.png" alt="AtomicInteger15" border="0">
 
 但是真的是这样么？并不是，JDK 源码很博大精深，才不会设计一个重复的方法，你想想 JDK 团队也不是会犯这种低级团队，但是原因是什么呢？
 
 《Java 高并发详解》这本书给出了我们一个答案
 
-<img src="https://s1.ax1x.com/2020/09/20/wosr6g.png" alt="AtomicInteger16" border="0">
+![](http://www.cxuan.vip/image-20230207135416935.png)
 
 #### AddAndGet 
 
 AddAndGet 和 getAndIncrement、getAndAdd、incrementAndGet 等等方法都是使用了 do ... while  + CAS 操作，其实也就相当于是一个自旋锁，如果 CAS 修改成功就会一直循环，修改失败才会返回。示意图如下
 
-<img src="https://s1.ax1x.com/2020/09/20/wosGOH.png" alt="AtomicInteger17" border="0">
+![](http://www.cxuan.vip/image-20230207135436367.png)
 
 ### 深入 AtomicInteger
 
@@ -302,11 +294,11 @@ AddAndGet 和 getAndIncrement、getAndAdd、incrementAndGet 等等方法都是�
 
 我们再来瞧瞧这个可爱的 `compareAndSetL(CAS)` 方法，为什么就这两行代码就保证原子性了？
 
-<img src="https://s1.ax1x.com/2020/09/20/wos86e.png" alt="AtomicInteger18" border="0">
+![](http://www.cxuan.vip/image-20230207135451740.png)
 
 我们可以看到，这个 CAS 方法相当于是调用了 unsafe 中的 `compareAndSwapInt` 方法，我们进到 unsafe 方能发中看一下具体实现。
 
-<img src="https://s1.ax1x.com/2020/09/20/wos3lD.png" alt="AtomicInteger19" border="0">
+![](http://www.cxuan.vip/image-20230207135503679.png)
 
 compareAndSwapInt 是 `sun.misc` 中的方法，这个方法是一个 `native` 方法，它的底层是 C/C++ 实现的，所以我们需要看 C/C++ 的源码。
 
@@ -314,25 +306,25 @@ compareAndSwapInt 是 `sun.misc` 中的方法，这个方法是一个 `native` �
 
 compareAndSwapInt 的源码在 `jdk8u-dev/hotspot/src/share/vm/prims/unsafe.app` 路径下，它的源码实现是 
 
-<img src="https://s1.ax1x.com/2020/09/20/wosMY6.png" alt="AtomicInteger20" border="0">
+![](http://www.cxuan.vip/image-20230207135520586.png)
 
 也就是 `Unsafe_CompareAndSwapInt` 方法，我们找到这个方法
 
-<img src="https://s1.ax1x.com/2020/09/20/wosKFx.png" alt="AtomicInteger21" border="0">
+![](http://www.cxuan.vip/image-20230207135531291.png)
 
 C/C++ 源码我也看不懂，但是这不妨碍我们找到关键代码 `Atomic::cmpxchg` ，cmpxchg 是 x86 CPU 架构的汇编指令，它的主要作用就是比较并交换操作数。我们继续往下跟找一下这个指令的定义。
 
 我们会发现对应不同的 os，其底层实现方式不一样
 
-<img src="https://s1.ax1x.com/2020/09/20/wos1SO.png" alt="AtomicInteger22" border="0">
+![](http://www.cxuan.vip/image-20230207135545389.png)
 
 我们找到 Windows 的实现方式如下
 
-<img src="https://s1.ax1x.com/2020/09/20/wosQfK.png" alt="AtomicInteger23" border="0">
+![](http://www.cxuan.vip/image-20230207135600260.png)
 
 我们继续向下找，它其实定义的是第 216 行的代码，我们找进去
 
-<img src="https://s1.ax1x.com/2020/09/20/wosnT1.png" alt="AtomicInteger24" border="0">
+![](http://www.cxuan.vip/image-20230207135612552.png)
 
 此时就需要汇编指令和寄存器相关的知识了。
 
@@ -340,7 +332,7 @@ C/C++ 源码我也看不懂，但是这不妨碍我们找到关键代码 `Atomic
 
 __asm 中的代码是汇编程序，大致来说就是把 dest、exchange_value 、compare_value 的值都放在寄存器中，下面的 `LOCK_IF_MP` 中代码的大致意思就是
 
-<img src="https://s1.ax1x.com/2020/09/20/wosmwR.png" alt="AtomicInteger25" border="0">
+![](http://www.cxuan.vip/image-20230207135630416.png)
 
 如果是多处理器的话就会执行 lock，然后进行比较操作。其中的 cmp 表示比较，mp 表示的就是 `MultiProcess`，`je` 表示相等跳转，L0 表示的是标识位。
 
@@ -370,31 +362,31 @@ ABA 问题说的是，如果一个变量第一次读取的值是 A，准备好�
 
 假如现在有一个单链表，如下图所示
 
-<img src="https://s1.ax1x.com/2020/09/20/wosem9.png" alt="AtomicInteger26" border="0">
+<img src="http://www.cxuan.vip/image-20230207135647755.png" style="zoom:50%;" />
 
 A.next = B ，B.next = null，此时有两个线程 T1 和 T2 分别从单链表中取出 A ，由于一些特殊原因，T2 把 A 改为 B ，然后又改为 A ，此时 T1 执行 CAS 方法，发现单链表仍然是 A ，就会执行 CAS 方法，虽然结果没错，但是这种操作会造成一些潜在的问题。
 
-<img src="https://s1.ax1x.com/2020/09/20/wosEy4.png" alt="AtomicInteger27" border="0">
+<img src="http://www.cxuan.vip/image-20230207135700586.png" style="zoom:50%;" />
 
 此时还是一个单链表，两个线程 T1 和 T2 分别从单链表中取出 A ，然后 T1 把链表改为 ACD 如下图所示
 
-<img src="https://s1.ax1x.com/2020/09/20/wosVOJ.png" alt="AtomicInteger28" border="0">
+![](http://www.cxuan.vip/image-20230207135725296.png)
 
 此时 T2，发现内存值还是 A ，就会把 A 的值尝试替换为 B ，因为 B 的引用是 null，此时就会造成 C、D 处于游离态
 
-<img src="https://s1.ax1x.com/2020/09/20/wosCF0.png" alt="AtomicInteger29" border="0">
+![](http://www.cxuan.vip/image-20230207135735663.png)
 
 JDK 1.5 以后的 `AtomicStampedReference `类就提供了此种能力，其中的 `compareAndSet` 方法就是首先检查当前值是否等于预期值，判断的标准就是当前引用和邮戳分别和预期引用和邮戳相等，如果全部相等，则以原子方式设置为给定的更新值。
 
-<img src="https://s1.ax1x.com/2020/09/20/woskSU.png" alt="AtomicInteger30" border="0">
+![](http://www.cxuan.vip/image-20230207135753932.png)
 
 好了，上面就是 Java 代码流程了，看到 native 我们知道又要撸 cpp 了。开撸
 
-<img src="https://s1.ax1x.com/2020/09/20/wosiWT.png" alt="AtomicInteger31" border="0">
+![](http://www.cxuan.vip/image-20230207135808728.png)
 
 简单解释一下就是 `UnsafeWrapper` 就是包装器，换个名字而已。然后经过一些 JNI 的处理，因为 compareAndSwapOject 比较的是引用，所以需要经过 C++ 面向对象的转换。最主要的方法是 `atomic_compare_exchange_oop` 
 
-<img src="https://s1.ax1x.com/2020/09/20/wosAlF.png" alt="AtomicInteger32" border="0">
+![](http://www.cxuan.vip/image-20230207135820871.png)
 
 可以看到，又出现了熟悉的词汇 `cmpxchg` ，也就是说 compareAndSwapOject 使用的还是 cmpxchg 原子性指令，只是它经过了一系列转换。
 
@@ -405,8 +397,3 @@ JDK 1.5 以后的 `AtomicStampedReference `类就提供了此种能力，其中�
 还有一个问题，`getIntVolatile` 方法的 cpp 源码在哪里？怎么找？
 
 如果上面大佬们对这两个问题有兴趣，欢迎交流。
-
-![image-20210716163352584](https://tva1.sinaimg.cn/large/008i3skNly1gsivkbczxoj31l20t8al5.jpg)
-
-![image-20210716163433337](https://tva1.sinaimg.cn/large/008i3skNly1gsivl4khz9j31d60h8mze.jpg)
-
