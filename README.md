@@ -1,9 +1,7 @@
 # 成为一个更好的Java程序员
 这是一个成为更好的 `Java 程序员`的系列教程（作者公众号：程序员cxuan，欢迎关注）
 
-<img src="https://www.cxuan.vip/icons8-person_facepalming.png" height="60px" style="float:left"> 
-
- 最近 chatGPT 和互联网寒冬来了之后，感觉大家几乎已经丧失了学习的兴趣，这是我作为一个技术原创博主所非常不愿意看到的，而且很多公众号已经摆烂，原创技术博主越来越少，导致优质内容流失严重，为了在这个恶劣的环境中保持一颗初心，同时也提供一个良好的学习环境，我开设了一个知识星球，大家可以详细了解下。
+最近 chatGPT 和互联网寒冬来了之后，感觉大家几乎已经丧失了学习的兴趣，这是我作为一个技术原创博主所非常不愿意看到的，而且很多公众号已经摆烂，原创技术博主越来越少，导致优质内容流失严重，为了在这个恶劣的环境中保持一颗初心，同时也提供一个良好的学习环境，我开设了一个知识星球，大家可以详细了解下。
 
 [我的知识星球](https://github.com/crisxuan/bestJavaer/blob/master/studysuggestion/knowledge-earth.md)
 
