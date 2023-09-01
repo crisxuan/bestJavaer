@@ -7,7 +7,7 @@
 
 >声明：这是完全手写的仓库，不严谨的地方请提出 ISSUE 或者 PR，作者会及时处理。
 >
->此项目无法和 Dubbo 等开源框架相提并论，请读者不要盲目崇拜，此项目只是作者近来的读书、学习笔记总结。
+>此项目无法和 Dubbo 等开源框架相提并论，此项目只是作者近来的读书、学习笔记总结，但是会保证原创。
 >
 >如果你 star 一下我会高兴一整天；
 >
@@ -17,15 +17,15 @@
 >
 >**本仓库仅供学习使用，商业用途请联系作者 (微信： lx252279279 )**
 
-![image-20210718221749417](https://tva1.sinaimg.cn/large/008i3skNgy1gslgqsilcpj317406adfw.jpg)
+![](https://www.cxuan.vip/image-20230415215250626.png)
 
-![](https://img.shields.io/static/v1?label=bestjavaer&message=操作系统&color=blue)![](https://img.shields.io/static/v1?label=bestjavaer&message=计算机基础&color=<COLOR>)![](https://img.shields.io/static/v1?label=bestjavaer&message=计算机网络&color=yellowgreen)
+![](http://img.shields.io/static/v1?label=bestjavaer&message=操作系统&color=blue)![](https://img.shields.io/static/v1?label=bestjavaer&message=计算机基础&color=<COLOR>)![](https://img.shields.io/static/v1?label=bestjavaer&message=计算机网络&color=yellowgreen)
 
-![](https://img.shields.io/static/v1?label=bestjavaer&message=Java基础&color=orange)![](https://img.shields.io/static/v1?label=bestjavaer&message=设计模式&color=success)![](https://img.shields.io/static/v1?label=bestjavaer&message=JVM&color=important)![](https://img.shields.io/static/v1?label=bestjavaer&message=Java并发&color=9cf)
+![](http://img.shields.io/static/v1?label=bestjavaer&message=Java基础&color=orange)![](https://img.shields.io/static/v1?label=bestjavaer&message=设计模式&color=success)![](http://img.shields.io/static/v1?label=bestjavaer&message=JVM&color=important)![](https://img.shields.io/static/v1?label=bestjavaer&message=Java并发&color=9cf)
 
-![](https://img.shields.io/static/v1?label=bestjavaer&message=Spring&color=blueviolet)![](https://img.shields.io/static/v1?label=bestjavaer&message=SpringBoot&color=informational)![](https://img.shields.io/static/v1?label=bestjavaer&message=Springcloud&color=ff69b4)
+![](http://img.shields.io/static/v1?label=bestjavaer&message=Spring&color=blueviolet)![](http://img.shields.io/static/v1?label=bestjavaer&message=SpringBoot&color=informational)![](http://img.shields.io/static/v1?label=bestjavaer&message=Springcloud&color=ff69b4)
 
-![](https://raw.githubusercontent.com/crisxuan/bestJavaer/master/mindmanage/bestjavaer.png)
+![](https://www.cxuan.vip/image-20230415215309372.png)
 
 这是一个成为更好的程序员的系列教程内容涵盖
 
@@ -85,6 +85,26 @@
 采用全面解析面试题的方式，让你去理解每个面试题的概念，而不只是单纯的背诵...... 
 
 不多说，搞起。
+
+## 阅读须知
+
+有一部分小伙伴/读者想让我出一个这个仓库的学习路线，否则不知道该从哪里开始看，我的建议是这样的（当然你可以不采纳）
+
+计算机入门系列是小白必看的，这个系列会介绍 CPU、内存、磁盘、文件系统、操作系统的基础知识，这些知识都比较好理解，而且我也附了很多配图，通俗易懂。
+
+其次是操作系统系列和计算机网络系列，这也是大学计算机科班的基础，想要在开发这个岗位走的更远，这些是很重要的方面。这两个系列是我觉得个人写的比较好的，而且系列内容我也在持续更新 ing ：）
+
+HTTP 系列，HTTP 这个系列写的比较早，其中全面了解 HTTP 和 Cookie、Session 那篇获得很多小伙伴好评。
+
+Linux 系列是能帮助你全面了解 Linux 操作系统的一个部分。
+
+如果你是 Java 开发，可以看看本人写的 Java 基础系列和并发系列，这两个系列都是刨根问底形式的，我都研究到了字节码甚至 C++ 这一层。Spring 和 Mybatis 也可以看看（虽然我并没有写多少 逃...）
+
+MySQL 这个部分比较基础，可以跟着一点一点写。
+
+汇编语言和 C 语言还在更新 ing ......
+
+其他的不想说了 ：）
 
 ## 操作系统系列👍
 
@@ -263,26 +283,10 @@
 * [@Configuration 全部用法](https://github.com/crisxuan/bestJavaer/blob/master/spring/spring-configuration.md)
 * [Spring Resource 体系介绍](https://github.com/crisxuan/bestJavaer/blob/master/spring/spring-resource.md)
 
-### 源码分析
-
-TODO
-
-## SpringBoot 系列
-
-TODO
-
 ## Kafka 系列教程
 
 * [真的，Kafka 入门一篇就够了](https://github.com/crisxuan/bestJavaer/blob/master/kafka/kafka-basic.md)
 * [你能说出这些 Kafka 的原理吗](https://github.com/crisxuan/bestJavaer/blob/master/kafka/kafka-deep.md)
-
-## Redis 系列教程
-
-缓存贯穿、缓存失效、缓存雪崩都是什么
-
-## Nginx 系列教程
-
-TODO
 
 ## ZooKeeper 系列教程
 
@@ -314,16 +318,6 @@ TODO
 * [JavaGuide 的 github](https://github.com/Snailclimb/JavaGuide) 
 
 * [小傅哥的 Github](https://github.com/fuzhengwei/CodeGuide/wiki)
-
-## 算法
-
-
-
-## 实战篇
-
-
-
-
 
 ## 思维导图
 
@@ -381,14 +375,6 @@ TODO
 * [如何评价《Java 并发编程艺术》这本书？](https://github.com/crisxuan/bestJavaer/blob/master/book-view/read-theArtOfJavaConcurrencyProgramming.md)
 * [如何评价《On Java 中文版》这本书？](https://github.com/crisxuan/bestJavaer/blob/master/book-view/read-onJava.md)
 * [《CSAPP》是一本什么书？](https://github.com/crisxuan/bestJavaer/blob/master/book-view/read-csapp.md)
-
-## 内推计划
-
-我的读者群几乎隔一段时间就会发送招聘信息，这些招聘信息良莠不齐，而且大多太过分散，需要的时候看不到，不需要的时候又出现了。所以为了能够让更多人享受到内推的福利和好处，我这边汇总了一下自己读者的内推信息，如果有需要，可以联系对应的负责人。
-
-* [腾讯内推](https://github.com/crisxuan/bestJavaer/blob/master/interview-jd/tencent.md)
-* [新奥内推](https://github.com/crisxuan/bestJavaer/blob/master/interview-jd/xinao.md)
-* [美团内推](https://github.com/crisxuan/bestJavaer/blob/master/interview-jd/meituan.md)
 
 
 ## 欢迎关注
