@@ -226,6 +226,12 @@ MySQL 这个部分比较基础，可以跟着一点一点写。
 * [Linux 操作系统之内存管理](https://github.com/crisxuan/bestJavaer/blob/master/linux/linux-memroy-management.md)
 * [Linux 操作系统之IO管理](https://github.com/crisxuan/bestJavaer/blob/master/linux/linux-io.md)
 * [Linux 操作系统之文件系统](https://github.com/crisxuan/bestJavaer/blob/master/linux/linux-file-system.md)
+* [Linux 硬件和 BIOS](https://github.com/crisxuan/bestJavaer/blob/master/linux/linux-hardware.md)
+* [Linux 中断机制](https://github.com/crisxuan/bestJavaer/blob/master/linux/linux-interrupt.md)
+* [Linux 分段机制](https://github.com/crisxuan/bestJavaer/blob/master/linux/linux-segmentation.md)
+* [Linux 分页机制](https://github.com/crisxuan/bestJavaer/blob/master/linux/linux-pagination.md)
+* [Linux 保护机制](https://github.com/crisxuan/bestJavaer/blob/master/linux/linux-protect.md)
+* [为什么 x86 中 BIOS 会把 MBR 放在 0x7c00 处](https://github.com/crisxuan/bestJavaer/blob/master/linux/whyx86loadsMBR.md)
 
 
 ## 设计模式系列
@@ -242,6 +248,10 @@ MySQL 这个部分比较基础，可以跟着一点一点写。
 * [从指令集的角度看汇编](https://github.com/crisxuan/bestJavaer/blob/master/assembly/assembly01.md)
 * [寄存器入门第一篇](https://github.com/crisxuan/bestJavaer/blob/master/assembly/assembly02.md)
 * [汇编 Debug 实战](https://github.com/crisxuan/bestJavaer/blob/master/assembly/assembly03.md)
+* [x86 汇编循环指令](https://github.com/crisxuan/bestJavaer/blob/master/assembly/assembly04-loop.md)
+* [x86 汇编 debug 循环指令](https://github.com/crisxuan/bestJavaer/blob/master/assembly/assembly05-debugprogram.md)
+* [简单了解下段](https://github.com/crisxuan/bestJavaer/blob/master/assembly/assembly06-segment.md)
+* [多个段的程序](https://github.com/crisxuan/bestJavaer/blob/master/assembly/assembly07-moresegment.md)
 
 ## C 语言
 
@@ -343,7 +353,7 @@ MySQL 这个部分比较基础，可以跟着一点一点写。
 * [AQS 框架](https://github.com/crisxuan/bestJavaer/blob/master/mindmanage/java-aqs.png)
 * [Java.net 包](https://github.com/crisxuan/bestJavaer/blob/master/mindmanage/java-net.png)
 
-## 关于认知
+## 关于 cxuan
 
 * [2019 我是怎样熬过来的](https://github.com/crisxuan/bestJavaer/blob/master/aboutlife/cxuan-2019.md)
 * [这是对我最大的认可和鼓励](https://github.com/crisxuan/bestJavaer/blob/master/aboutlife/cxuan-confidence.md)
@@ -361,10 +371,19 @@ MySQL 这个部分比较基础，可以跟着一点一点写。
 * [自媒体技术的困境](https://github.com/crisxuan/bestJavaer/blob/master/aboutlife/selfmedia-difficult.md)
 * [cxuan 结婚啦！！！](https://github.com/crisxuan/bestJavaer/blob/master/aboutlife/cxuan-marrige.md)
 * [cxuan 国庆的躺平经历](https://github.com/crisxuan/bestJavaer/blob/master/aboutlife/cxuan-nationalday.md)
+* [陪媳妇暑假去旅游了](https://github.com/crisxuan/bestJavaer/blob/master/aboutlife/cxuan-trip.md)
+
+## ChatGPT
+
+* [我的 ChatGPT 梭哈操作系统](https://github.com/crisxuan/bestJavaer/blob/master/chatgpt/chatGPT-operating-system.md)
 
 ## 程序员
 
-[程序员都必知的一些网站](https://github.com/crisxuan/bestJavaer/blob/master/programmer/website-recommand.md)
+* [程序员都必知的一些网站](https://github.com/crisxuan/bestJavaer/blob/master/programmer/website-recommand.md)
+* [世界上最伟大的女程序员](https://github.com/crisxuan/bestJavaer/blob/master/programmer/thegreatffemaleprogrammerintheworld.md)
+* [我眼里的左耳朵耗子](https://github.com/crisxuan/bestJavaer/blob/master/programmer/never-say-goodbay-collshell.md)
+
+
 
 ## 每日一题计划
 

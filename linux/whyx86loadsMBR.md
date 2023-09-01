@@ -1,6 +1,10 @@
 # 为什么 x86 中 BIOS 会把 MBR 放在 0x7c00 地址处？
 
-[toc]
+* [为什么 x86 中 BIOS 会把 MBR 放在 0x7c00 地址处？](#为什么-x86-中-bios-会把-mbr-放在-0x7c00-地址处)
+   * [0x7C00 首次出现在 IBM PC 5150 ROM BIOS INT 19h 处理程序中](#0x7c00-首次出现在-ibm-pc-5150-rom-bios-int-19h-处理程序中)
+   * [0x7c00 的起源](#0x7c00-的起源)
+      * [为什么 CPU Monitor 要把 bootloader 加载到 0x200 ?](#为什么-cpu-monitor-要把-bootloader-加载到-0x200-)
+   * [谁决定了 0x7c00?](#谁决定了-0x7c00)
 
 这是一个很值得拿来探讨一下的问题。
 
