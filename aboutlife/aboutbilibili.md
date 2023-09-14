@@ -1,3 +1,7 @@
+layout: page
+title: "PAGE-TITLE"
+permalink: /aboutlife
+
 # 由 bilibili 关于后浪的有感 --- 如何做一个快乐的程序员
 
 针对从客观上说`搞开发的很累`这种说法，我也来发表一下我的看法。
