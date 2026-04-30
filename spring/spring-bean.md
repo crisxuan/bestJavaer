@@ -43,7 +43,7 @@ SpringIOC 容器管理一个或者多个bean，这些bean都需要在@Configurat
 public class AppConfig {
 
   	// 使用@Bean 注解表明myBean需要交给Spring进行管理
-  	// 未指定bean 的名称，默认采用的是 "方法名" + "首字母小写"的配置方式
+  	// 未指定bean 的名称，默认采用的是 "方法名"
     @Bean
     public MyBean myBean(){
         return new MyBean();
