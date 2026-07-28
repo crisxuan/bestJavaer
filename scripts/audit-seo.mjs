@@ -76,7 +76,7 @@ articlePages.forEach((filePath) => {
   const relative = path.relative(outputDir, filePath);
   const jsonLdMatch = source.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/);
 
-  if (!/<link rel="canonical" href="https:\/\/bestjavaer-nine\.vercel\.app\/(?:en\/)?articles\//.test(source)) {
+  if (!/<link rel="canonical" href="https:\/\/cxuan-labs\.vercel\.app\/(?:en\/)?articles\//.test(source)) {
     failures.push(`${relative}: clean canonical is missing.`);
   }
 

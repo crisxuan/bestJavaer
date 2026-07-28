@@ -19,7 +19,7 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: https://bestjavaer-nine.vercel.app/
+      url: https://cxuan-labs.vercel.app/
     runs-on: ubuntu-latest
     steps:
       - name: Configure Pages
@@ -35,14 +35,14 @@ jobs:
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <meta name="robots" content="noindex">
-            <link rel="canonical" href="https://bestjavaer-nine.vercel.app/">
-            <meta http-equiv="refresh" content="0; url=https://bestjavaer-nine.vercel.app/">
+            <link rel="canonical" href="https://cxuan-labs.vercel.app/">
+            <meta http-equiv="refresh" content="0; url=https://cxuan-labs.vercel.app/">
             <title>Moved to Vercel</title>
           </head>
           <body>
             <script>
               (function () {
-                var target = 'https://bestjavaer-nine.vercel.app/';
+                var target = 'https://cxuan-labs.vercel.app/';
                 var route = window.location.pathname.replace(/^\/bestJavaer\/?/, '').replace(/\/$/, '');
                 var query = window.location.search || '';
                 var hash = window.location.hash || '';
@@ -59,7 +59,7 @@ jobs:
                 window.location.replace(target + (route ? '#/' + route : '') + query);
               }());
             </script>
-            <p>This site has moved to <a href="https://bestjavaer-nine.vercel.app/">bestjavaer-nine.vercel.app</a>.</p>
+            <p>This site has moved to <a href="https://cxuan-labs.vercel.app/">cxuan-labs.vercel.app</a>.</p>
           </body>
           </html>
           HTML

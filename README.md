@@ -17,7 +17,7 @@ This repository documents practical AI-assisted development workflows, Agent exp
 </div>
 
 <div class="home-primary-links">
-  <a href="https://bestjavaer-nine.vercel.app/">Live Preview</a>
+  <a href="https://cxuan-labs.vercel.app/">Live Preview</a>
   <span>·</span>
   <a href="./en/ai-articles/README.md">AI Articles</a>
   <span>·</span>

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://bestjavaer-nine.vercel.app/sitemap.xml
+Sitemap: https://cxuan-labs.vercel.app/sitemap.xml

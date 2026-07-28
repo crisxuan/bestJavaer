@@ -8,7 +8,7 @@ import { marked } from 'marked';
 const scriptDir = path.dirname(fileURLToPath(import.meta.url));
 const rootDir = path.resolve(scriptDir, '..');
 const outputDir = path.join(rootDir, 'dist');
-const baseUrl = (process.env.SITE_URL || 'https://bestjavaer-nine.vercel.app').replace(/\/+$/, '');
+const baseUrl = (process.env.SITE_URL || 'https://cxuan-labs.vercel.app').replace(/\/+$/, '');
 const categories = [
   { id: '01-agent-and-coding', zh: 'AI Agent 与编程工具', en: 'AI Agent & Coding' },
   { id: '02-models-and-research', zh: '模型、研究与 Prompt', en: 'Models, Research & Prompt' },

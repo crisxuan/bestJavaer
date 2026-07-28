@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 
 const rootDir = path.resolve(__dirname, '..');
-const baseUrl = (process.env.SITE_URL || 'https://bestjavaer-nine.vercel.app').replace(/\/+$/, '');
+const baseUrl = (process.env.SITE_URL || 'https://cxuan-labs.vercel.app').replace(/\/+$/, '');
 const now = new Date().toISOString();
 
 const categories = [

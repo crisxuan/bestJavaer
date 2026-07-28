@@ -17,7 +17,7 @@
 </div>
 
 <div class="home-primary-links">
-  <a href="https://bestjavaer-nine.vercel.app/">在线预览</a>
+  <a href="https://cxuan-labs.vercel.app/">在线预览</a>
   <span>·</span>
   <a href="./ai-articles/README.md">AI 文章</a>
   <span>·</span>
