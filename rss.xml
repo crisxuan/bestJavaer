@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>cxuan-ai-labs</title>
+    <link>https://bestjavaer-nine.vercel.app/articles/</link>
+    <description>把复杂的 AI，讲成能上手的干货。</description>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 28 Jul 2026 03:09:56 GMT</lastBuildDate>
+    <item>
+      <title>Grok Build 被众人唾骂，结果老马把它开源了</title>
+      <link>https://bestjavaer-nine.vercel.app/articles/01-agent-and-coding/Grok%20Build%20%E8%A2%AB%E4%BC%97%E4%BA%BA%E5%94%BE%E9%AA%82%EF%BC%8C%E7%BB%93%E6%9E%9C%E8%80%81%E9%A9%AC%E6%8A%8A%E5%AE%83%E5%BC%80%E6%BA%90%E4%BA%86/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/articles/01-agent-and-coding/Grok%20Build%20%E8%A2%AB%E4%BC%97%E4%BA%BA%E5%94%BE%E9%AA%82%EF%BC%8C%E7%BB%93%E6%9E%9C%E8%80%81%E9%A9%AC%E6%8A%8A%E5%AE%83%E5%BC%80%E6%BA%90%E4%BA%86/</guid>
+      <pubDate>Wed, 22 Jul 2026 00:00:00 GMT</pubDate>
+      <description>English | 中文</description>
+    </item>
+    <item>
+      <title>OpenAI 把 HuggingFace 打穿了</title>
+      <link>https://bestjavaer-nine.vercel.app/articles/04-industry-and-business/OpenAI%20%E6%8A%8A%20HuggingFace%20%E6%89%93%E7%A9%BF%E4%BA%86/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/articles/04-industry-and-business/OpenAI%20%E6%8A%8A%20HuggingFace%20%E6%89%93%E7%A9%BF%E4%BA%86/</guid>
+      <pubDate>Wed, 22 Jul 2026 00:00:00 GMT</pubDate>
+      <description>English | 中文</description>
+    </item>
+    <item>
+      <title>Qoder + Qwen 3.8 实测</title>
+      <link>https://bestjavaer-nine.vercel.app/articles/02-models-and-research/Qoder%20%2B%20Qwen%203.8%20%E5%AE%9E%E6%B5%8B/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/articles/02-models-and-research/Qoder%20%2B%20Qwen%203.8%20%E5%AE%9E%E6%B5%8B/</guid>
+      <pubDate>Wed, 22 Jul 2026 00:00:00 GMT</pubDate>
+      <description>English | 中文</description>
+    </item>
+    <item>
+      <title>好家伙，继 Fable 5 系统提示词被扒之后，又一个 Claude 系统提示词被扒了。</title>
+      <link>https://bestjavaer-nine.vercel.app/articles/02-models-and-research/%E5%A5%BD%E5%AE%B6%E4%BC%99%EF%BC%8C%E7%BB%A7%20Fable%205%20%E7%B3%BB%E7%BB%9F%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A2%AB%E6%89%92%E4%B9%8B%E5%90%8E%EF%BC%8C%E5%8F%88%E4%B8%80%E4%B8%AA%20Claude%20%E7%B3%BB%E7%BB%9F%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A2%AB%E6%89%92%E4%BA%86%E3%80%82/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/articles/02-models-and-research/%E5%A5%BD%E5%AE%B6%E4%BC%99%EF%BC%8C%E7%BB%A7%20Fable%205%20%E7%B3%BB%E7%BB%9F%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A2%AB%E6%89%92%E4%B9%8B%E5%90%8E%EF%BC%8C%E5%8F%88%E4%B8%80%E4%B8%AA%20Claude%20%E7%B3%BB%E7%BB%9F%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A2%AB%E6%89%92%E4%BA%86%E3%80%82/</guid>
+      <pubDate>Wed, 22 Jul 2026 00:00:00 GMT</pubDate>
+      <description>English | 中文</description>
+    </item>
+    <item>
+      <title>Loop 还没玩明白，Graph Engineering 又火了：说白了，就是给 Agent 组个团队</title>
+      <link>https://bestjavaer-nine.vercel.app/articles/01-agent-and-coding/Loop%20%E8%BF%98%E6%B2%A1%E7%8E%A9%E6%98%8E%E7%99%BD%EF%BC%8CGraph%20Engineering%20%E5%8F%88%E7%81%AB%E4%BA%86%EF%BC%9A%E8%AF%B4%E7%99%BD%E4%BA%86%EF%BC%8C%E5%B0%B1%E6%98%AF%E7%BB%99%20Agent%20%E7%BB%84%E4%B8%AA%E5%9B%A2%E9%98%9F/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/articles/01-agent-and-coding/Loop%20%E8%BF%98%E6%B2%A1%E7%8E%A9%E6%98%8E%E7%99%BD%EF%BC%8CGraph%20Engineering%20%E5%8F%88%E7%81%AB%E4%BA%86%EF%BC%9A%E8%AF%B4%E7%99%BD%E4%BA%86%EF%BC%8C%E5%B0%B1%E6%98%AF%E7%BB%99%20Agent%20%E7%BB%84%E4%B8%AA%E5%9B%A2%E9%98%9F/</guid>
+      <pubDate>Tue, 21 Jul 2026 00:00:00 GMT</pubDate>
+      <description>English | 中文</description>
+    </item>
+    <item>
+      <title>OpenAI 官方提示词指南</title>
+      <link>https://bestjavaer-nine.vercel.app/articles/02-models-and-research/OpenAI%20%E5%AE%98%E6%96%B9%E6%8F%90%E7%A4%BA%E8%AF%8D%E6%8C%87%E5%8D%97/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/articles/02-models-and-research/OpenAI%20%E5%AE%98%E6%96%B9%E6%8F%90%E7%A4%BA%E8%AF%8D%E6%8C%87%E5%8D%97/</guid>
+      <pubDate>Mon, 20 Jul 2026 00:00:00 GMT</pubDate>
+      <description>English | 中文</description>
+    </item>
+    <item>
+      <title>LibTV</title>
+      <link>https://bestjavaer-nine.vercel.app/articles/05-ai-creation-and-media/LibTV/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/articles/05-ai-creation-and-media/LibTV/</guid>
+      <pubDate>Sat, 18 Jul 2026 00:00:00 GMT</pubDate>
+      <description>English | 中文</description>
+    </item>
+    <item>
+      <title>周三跟大家说的一些模型可能要发布，结果今天 Kimi 就炸场了。</title>
+      <link>https://bestjavaer-nine.vercel.app/articles/02-models-and-research/%E5%91%A8%E4%B8%89%E8%B7%9F%E5%A4%A7%E5%AE%B6%E8%AF%B4%E7%9A%84%E4%B8%80%E4%BA%9B%E6%A8%A1%E5%9E%8B%E5%8F%AF%E8%83%BD%E8%A6%81%E5%8F%91%E5%B8%83%EF%BC%8C%E7%BB%93%E6%9E%9C%E4%BB%8A%E5%A4%A9%20Kimi%20%E5%B0%B1%E7%82%B8%E5%9C%BA%E4%BA%86%E3%80%82/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/articles/02-models-and-research/%E5%91%A8%E4%B8%89%E8%B7%9F%E5%A4%A7%E5%AE%B6%E8%AF%B4%E7%9A%84%E4%B8%80%E4%BA%9B%E6%A8%A1%E5%9E%8B%E5%8F%AF%E8%83%BD%E8%A6%81%E5%8F%91%E5%B8%83%EF%BC%8C%E7%BB%93%E6%9E%9C%E4%BB%8A%E5%A4%A9%20Kimi%20%E5%B0%B1%E7%82%B8%E5%9C%BA%E4%BA%86%E3%80%82/</guid>
+      <pubDate>Sat, 18 Jul 2026 00:00:00 GMT</pubDate>
+      <description>English | 中文</description>
+    </item>
+    <item>
+      <title>离谱，GPT-5.6 竟然在后台执行了 rm -rf</title>
+      <link>https://bestjavaer-nine.vercel.app/articles/01-agent-and-coding/%E7%A6%BB%E8%B0%B1%EF%BC%8CGPT-5.6%20%E7%AB%9F%E7%84%B6%E5%9C%A8%E5%90%8E%E5%8F%B0%E6%89%A7%E8%A1%8C%E4%BA%86%20rm%20-rf/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/articles/01-agent-and-coding/%E7%A6%BB%E8%B0%B1%EF%BC%8CGPT-5.6%20%E7%AB%9F%E7%84%B6%E5%9C%A8%E5%90%8E%E5%8F%B0%E6%89%A7%E8%A1%8C%E4%BA%86%20rm%20-rf/</guid>
+      <pubDate>Thu, 16 Jul 2026 00:00:00 GMT</pubDate>
+      <description>English | 中文</description>
+    </item>
+    <item>
+      <title>Claude Design 的系统提示词被人扒出来了，精彩，确实精彩。</title>
+      <link>https://bestjavaer-nine.vercel.app/articles/02-models-and-research/Claude%20Design%20%E7%9A%84%E7%B3%BB%E7%BB%9F%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A2%AB%E4%BA%BA%E6%89%92%E5%87%BA%E6%9D%A5%E4%BA%86%EF%BC%8C%E7%B2%BE%E5%BD%A9%EF%BC%8C%E7%A1%AE%E5%AE%9E%E7%B2%BE%E5%BD%A9%E3%80%82/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/articles/02-models-and-research/Claude%20Design%20%E7%9A%84%E7%B3%BB%E7%BB%9F%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A2%AB%E4%BA%BA%E6%89%92%E5%87%BA%E6%9D%A5%E4%BA%86%EF%BC%8C%E7%B2%BE%E5%BD%A9%EF%BC%8C%E7%A1%AE%E5%AE%9E%E7%B2%BE%E5%BD%A9%E3%80%82/</guid>
+      <pubDate>Wed, 15 Jul 2026 00:00:00 GMT</pubDate>
+      <description>English | 中文</description>
+    </item>
+    <item>
+      <title>GPT 5.6 发布了，但我可能得泼点冷水了。</title>
+      <link>https://bestjavaer-nine.vercel.app/articles/02-models-and-research/GPT%205.6%20%E5%8F%91%E5%B8%83%E4%BA%86%EF%BC%8C%E4%BD%86%E6%88%91%E5%8F%AF%E8%83%BD%E5%BE%97%E6%B3%BC%E7%82%B9%E5%86%B7%E6%B0%B4%E4%BA%86%E3%80%82/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/articles/02-models-and-research/GPT%205.6%20%E5%8F%91%E5%B8%83%E4%BA%86%EF%BC%8C%E4%BD%86%E6%88%91%E5%8F%AF%E8%83%BD%E5%BE%97%E6%B3%BC%E7%82%B9%E5%86%B7%E6%B0%B4%E4%BA%86%E3%80%82/</guid>
+      <pubDate>Fri, 10 Jul 2026 00:00:00 GMT</pubDate>
+      <description>English | 中文</description>
+    </item>
+    <item>
+      <title>Cursor 掀桌子了，Grok 4.5 这次要上天了？</title>
+      <link>https://bestjavaer-nine.vercel.app/articles/02-models-and-research/Cursor%20%E6%8E%80%E6%A1%8C%E5%AD%90%E4%BA%86%EF%BC%8CGrok%204.5%20%E8%BF%99%E6%AC%A1%E8%A6%81%E4%B8%8A%E5%A4%A9%E4%BA%86%EF%BC%9F/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/articles/02-models-and-research/Cursor%20%E6%8E%80%E6%A1%8C%E5%AD%90%E4%BA%86%EF%BC%8CGrok%204.5%20%E8%BF%99%E6%AC%A1%E8%A6%81%E4%B8%8A%E5%A4%A9%E4%BA%86%EF%BC%9F/</guid>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>
+      <description>English | 中文</description>
+    </item>
+    <item>
+      <title>GPT-5.6 终于解禁：Sol、Terra、Luna，本周四一起上！</title>
+      <link>https://bestjavaer-nine.vercel.app/articles/02-models-and-research/GPT-5.6%20%E7%BB%88%E4%BA%8E%E8%A7%A3%E7%A6%81%EF%BC%9ASol%E3%80%81Terra%E3%80%81Luna%EF%BC%8C%E6%9C%AC%E5%91%A8%E5%9B%9B%E4%B8%80%E8%B5%B7%E4%B8%8A%EF%BC%81/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/articles/02-models-and-research/GPT-5.6%20%E7%BB%88%E4%BA%8E%E8%A7%A3%E7%A6%81%EF%BC%9ASol%E3%80%81Terra%E3%80%81Luna%EF%BC%8C%E6%9C%AC%E5%91%A8%E5%9B%9B%E4%B8%80%E8%B5%B7%E4%B8%8A%EF%BC%81/</guid>
+      <pubDate>Wed, 08 Jul 2026 00:00:00 GMT</pubDate>
+      <description>English | 中文</description>
+    </item>
+    <item>
+      <title>OceanBase 为什么要做 AI 数据库？</title>
+      <link>https://bestjavaer-nine.vercel.app/articles/04-industry-and-business/OceanBase%20%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%81%9A%20AI%20%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%9F/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/articles/04-industry-and-business/OceanBase%20%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%81%9A%20AI%20%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%9F/</guid>
+      <pubDate>Wed, 08 Jul 2026 00:00:00 GMT</pubDate>
+      <description>English | 中文</description>
+    </item>
+    <item>
+      <title>读懂 Claude Code 架构分析系列，第二篇：Claude Code 是怎样启动的？</title>
+      <link>https://bestjavaer-nine.vercel.app/articles/01-agent-and-coding/%E8%AF%BB%E6%87%82%20Claude%20Code%20%E6%9E%B6%E6%9E%84%E5%88%86%E6%9E%90%E7%B3%BB%E5%88%97%EF%BC%8C%E7%AC%AC%E4%BA%8C%E7%AF%87%EF%BC%9AClaude%20Code%20%E6%98%AF%E6%80%8E%E6%A0%B7%E5%90%AF%E5%8A%A8%E7%9A%84%EF%BC%9F/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/articles/01-agent-and-coding/%E8%AF%BB%E6%87%82%20Claude%20Code%20%E6%9E%B6%E6%9E%84%E5%88%86%E6%9E%90%E7%B3%BB%E5%88%97%EF%BC%8C%E7%AC%AC%E4%BA%8C%E7%AF%87%EF%BC%9AClaude%20Code%20%E6%98%AF%E6%80%8E%E6%A0%B7%E5%90%AF%E5%8A%A8%E7%9A%84%EF%BC%9F/</guid>
+      <pubDate>Tue, 07 Jul 2026 00:00:00 GMT</pubDate>
+      <description>English | 中文</description>
+    </item>
+    <item>
+      <title>今天阿里宣布全面封禁 Claude Code 了。</title>
+      <link>https://bestjavaer-nine.vercel.app/articles/04-industry-and-business/%E4%BB%8A%E5%A4%A9%E9%98%BF%E9%87%8C%E5%AE%A3%E5%B8%83%E5%85%A8%E9%9D%A2%E5%B0%81%E7%A6%81%20Claude%20Code%20%E4%BA%86%E3%80%82/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/articles/04-industry-and-business/%E4%BB%8A%E5%A4%A9%E9%98%BF%E9%87%8C%E5%AE%A3%E5%B8%83%E5%85%A8%E9%9D%A2%E5%B0%81%E7%A6%81%20Claude%20Code%20%E4%BA%86%E3%80%82/</guid>
+      <pubDate>Sat, 04 Jul 2026 00:00:00 GMT</pubDate>
+      <description>English | 中文</description>
+    </item>
+    <item>
+      <title>读懂 Claude Code 架构分析系列，第一篇，开始！</title>
+      <link>https://bestjavaer-nine.vercel.app/articles/01-agent-and-coding/%E8%AF%BB%E6%87%82%20Claude%20Code%20%E6%9E%B6%E6%9E%84%E5%88%86%E6%9E%90%E7%B3%BB%E5%88%97%EF%BC%8C%E7%AC%AC%E4%B8%80%E7%AF%87%EF%BC%8C%E5%BC%80%E5%A7%8B%EF%BC%81/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/articles/01-agent-and-coding/%E8%AF%BB%E6%87%82%20Claude%20Code%20%E6%9E%B6%E6%9E%84%E5%88%86%E6%9E%90%E7%B3%BB%E5%88%97%EF%BC%8C%E7%AC%AC%E4%B8%80%E7%AF%87%EF%BC%8C%E5%BC%80%E5%A7%8B%EF%BC%81/</guid>
+      <pubDate>Mon, 29 Jun 2026 00:00:00 GMT</pubDate>
+      <description>English | 中文</description>
+    </item>
+    <item>
+      <title>Codex 会把磁盘给烧了？完整复盘来了！</title>
+      <link>https://bestjavaer-nine.vercel.app/articles/01-agent-and-coding/Codex%20%E4%BC%9A%E6%8A%8A%E7%A3%81%E7%9B%98%E7%BB%99%E7%83%A7%E4%BA%86%EF%BC%9F%E5%AE%8C%E6%95%B4%E5%A4%8D%E7%9B%98%E6%9D%A5%E4%BA%86%EF%BC%81/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/articles/01-agent-and-coding/Codex%20%E4%BC%9A%E6%8A%8A%E7%A3%81%E7%9B%98%E7%BB%99%E7%83%A7%E4%BA%86%EF%BC%9F%E5%AE%8C%E6%95%B4%E5%A4%8D%E7%9B%98%E6%9D%A5%E4%BA%86%EF%BC%81/</guid>
+      <pubDate>Wed, 24 Jun 2026 00:00:00 GMT</pubDate>
+      <description>English | 中文</description>
+    </item>
+    <item>
+      <title>实测千问大模型</title>
+      <link>https://bestjavaer-nine.vercel.app/articles/02-models-and-research/%E5%AE%9E%E6%B5%8B%20Qwen3.7-Max%E5%A4%A7%E6%A8%A1%E5%9E%8B/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/articles/02-models-and-research/%E5%AE%9E%E6%B5%8B%20Qwen3.7-Max%E5%A4%A7%E6%A8%A1%E5%9E%8B/</guid>
+      <pubDate>Sat, 20 Jun 2026 00:00:00 GMT</pubDate>
+      <description>English | 中文</description>
+    </item>
+    <item>
+      <title>DeepSeek 杀入多模态，识图功能正式上线！</title>
+      <link>https://bestjavaer-nine.vercel.app/articles/02-models-and-research/DeepSeek%20%E5%BC%80%E5%A4%A9%E7%9C%BC%E4%BA%86%EF%BC%8C%E8%AF%86%E5%9B%BE%E5%8A%9F%E8%83%BD%E4%B8%8A%E7%BA%BF%EF%BC%81/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/articles/02-models-and-research/DeepSeek%20%E5%BC%80%E5%A4%A9%E7%9C%BC%E4%BA%86%EF%BC%8C%E8%AF%86%E5%9B%BE%E5%8A%9F%E8%83%BD%E4%B8%8A%E7%BA%BF%EF%BC%81/</guid>
+      <pubDate>Fri, 19 Jun 2026 00:00:00 GMT</pubDate>
+      <description>English | 中文</description>
+    </item>
+    <item>
+      <title>AI 真能预测世界杯了？而且最准的竟然是文心一言？</title>
+      <link>https://bestjavaer-nine.vercel.app/articles/02-models-and-research/AI%E7%9C%9F%E7%9A%84%E8%83%BD%E9%A2%84%E6%B5%8B%E4%B8%96%E7%95%8C%E6%9D%AF%EF%BC%9F%E6%96%87%E5%BF%83%E8%BF%99%E6%AC%A1%E6%8A%8A%E6%AF%94%E5%88%86%E9%83%BD%E7%8C%9C%E4%B8%AD%E4%BA%86/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/articles/02-models-and-research/AI%E7%9C%9F%E7%9A%84%E8%83%BD%E9%A2%84%E6%B5%8B%E4%B8%96%E7%95%8C%E6%9D%AF%EF%BC%9F%E6%96%87%E5%BF%83%E8%BF%99%E6%AC%A1%E6%8A%8A%E6%AF%94%E5%88%86%E9%83%BD%E7%8C%9C%E4%B8%AD%E4%BA%86/</guid>
+      <pubDate>Tue, 16 Jun 2026 00:00:00 GMT</pubDate>
+      <description>English | 中文</description>
+    </item>
+    <item>
+      <title>OiiOii升级2.0，我终于认真做了一次 AI 视频</title>
+      <link>https://bestjavaer-nine.vercel.app/articles/05-ai-creation-and-media/OiiOii%202.0%20%E5%8D%87%E7%BA%A7-%E8%A1%A5%E5%85%A8%E7%89%88/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/articles/05-ai-creation-and-media/OiiOii%202.0%20%E5%8D%87%E7%BA%A7-%E8%A1%A5%E5%85%A8%E7%89%88/</guid>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+      <description>English | 中文</description>
+    </item>
+    <item>
+      <title>太突然了，Fable 5 被禁了。</title>
+      <link>https://bestjavaer-nine.vercel.app/articles/02-models-and-research/%E5%A4%AA%E7%AA%81%E7%84%B6%E4%BA%86%EF%BC%8CFable%205%20%E8%A2%AB%E7%A6%81%E4%BA%86%E3%80%82/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/articles/02-models-and-research/%E5%A4%AA%E7%AA%81%E7%84%B6%E4%BA%86%EF%BC%8CFable%205%20%E8%A2%AB%E7%A6%81%E4%BA%86%E3%80%82/</guid>
+      <pubDate>Sat, 13 Jun 2026 00:00:00 GMT</pubDate>
+      <description>日期：2026 06 13</description>
+    </item>
+    <item>
+      <title>Fable 5 的系统提示词被人扒出来了，精彩，太精彩了。</title>
+      <link>https://bestjavaer-nine.vercel.app/articles/02-models-and-research/Fable%205%20%E7%9A%84%E7%B3%BB%E7%BB%9F%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A2%AB%E4%BA%BA%E6%89%92%E5%87%BA%E6%9D%A5%E4%BA%86%EF%BC%8C%E7%B2%BE%E5%BD%A9%EF%BC%8C%E5%A4%AA%E7%B2%BE%E5%BD%A9%E4%BA%86%E3%80%82/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/articles/02-models-and-research/Fable%205%20%E7%9A%84%E7%B3%BB%E7%BB%9F%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A2%AB%E4%BA%BA%E6%89%92%E5%87%BA%E6%9D%A5%E4%BA%86%EF%BC%8C%E7%B2%BE%E5%BD%A9%EF%BC%8C%E5%A4%AA%E7%B2%BE%E5%BD%A9%E4%BA%86%E3%80%82/</guid>
+      <pubDate>Fri, 12 Jun 2026 00:00:00 GMT</pubDate>
+      <description>日期：2026 06 12</description>
+    </item>
+    <item>
+      <title>OpenAI 邀请一个人直接重置额度，以一己之力把价格打下来了。</title>
+      <link>https://bestjavaer-nine.vercel.app/articles/04-industry-and-business/OpenAI%20%E9%82%80%E8%AF%B7%E4%B8%80%E4%B8%AA%E4%BA%BA%E7%9B%B4%E6%8E%A5%E9%87%8D%E7%BD%AE%E9%A2%9D%E5%BA%A6%EF%BC%8C%E4%BB%A5%E4%B8%80%E5%B7%B1%E4%B9%8B%E5%8A%9B%E6%8A%8A%E4%BB%B7%E6%A0%BC%E6%89%93%E4%B8%8B%E6%9D%A5%E4%BA%86%E3%80%82/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/articles/04-industry-and-business/OpenAI%20%E9%82%80%E8%AF%B7%E4%B8%80%E4%B8%AA%E4%BA%BA%E7%9B%B4%E6%8E%A5%E9%87%8D%E7%BD%AE%E9%A2%9D%E5%BA%A6%EF%BC%8C%E4%BB%A5%E4%B8%80%E5%B7%B1%E4%B9%8B%E5%8A%9B%E6%8A%8A%E4%BB%B7%E6%A0%BC%E6%89%93%E4%B8%8B%E6%9D%A5%E4%BA%86%E3%80%82/</guid>
+      <pubDate>Fri, 12 Jun 2026 00:00:00 GMT</pubDate>
+      <description>日期：2026 06 12</description>
+    </item>
+    <item>
+      <title>Claude Fable 5 来了</title>
+      <link>https://bestjavaer-nine.vercel.app/articles/02-models-and-research/Claude%20Fable%205%20%E6%9D%A5%E4%BA%86/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/articles/02-models-and-research/Claude%20Fable%205%20%E6%9D%A5%E4%BA%86/</guid>
+      <pubDate>Wed, 10 Jun 2026 00:00:00 GMT</pubDate>
+      <description>日期：2026 06 10</description>
+    </item>
+    <item>
+      <title>瑞幸出 CLI 了，这会是迈向 AGI 的第一步吗？</title>
+      <link>https://bestjavaer-nine.vercel.app/articles/04-industry-and-business/%E7%91%9E%E5%B9%B8%E5%87%BA%20CLI%20%E4%BA%86%EF%BC%8C%E8%BF%99%E4%BC%9A%E6%98%AF%E8%BF%88%E5%90%91%20AGI%20%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AD%A5%E5%90%97%EF%BC%9F/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/articles/04-industry-and-business/%E7%91%9E%E5%B9%B8%E5%87%BA%20CLI%20%E4%BA%86%EF%BC%8C%E8%BF%99%E4%BC%9A%E6%98%AF%E8%BF%88%E5%90%91%20AGI%20%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AD%A5%E5%90%97%EF%BC%9F/</guid>
+      <pubDate>Wed, 10 Jun 2026 00:00:00 GMT</pubDate>
+      <description>日期：2026 06 10</description>
+    </item>
+    <item>
+      <title>Agents.md 是什么</title>
+      <link>https://bestjavaer-nine.vercel.app/articles/01-agent-and-coding/Agents.md%20%E6%98%AF%E4%BB%80%E4%B9%88/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/articles/01-agent-and-coding/Agents.md%20%E6%98%AF%E4%BB%80%E4%B9%88/</guid>
+      <pubDate>Tue, 09 Jun 2026 00:00:00 GMT</pubDate>
+      <description>日期：2026 06 09</description>
+    </item>
+    <item>
+      <title>我最近最常用的 10 个 Codex 技巧</title>
+      <link>https://bestjavaer-nine.vercel.app/articles/01-agent-and-coding/%E6%88%91%E6%9C%80%E8%BF%91%E6%9C%80%E5%B8%B8%E7%94%A8%E7%9A%84%2010%20%E4%B8%AA%20Codex%20%E6%8A%80%E5%B7%A7/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/articles/01-agent-and-coding/%E6%88%91%E6%9C%80%E8%BF%91%E6%9C%80%E5%B8%B8%E7%94%A8%E7%9A%84%2010%20%E4%B8%AA%20Codex%20%E6%8A%80%E5%B7%A7/</guid>
+      <pubDate>Tue, 09 Jun 2026 00:00:00 GMT</pubDate>
+      <description>日期：2026 06 09</description>
+    </item>
+    <item>
+      <title>AI 时代，如何超过大多数人</title>
+      <link>https://bestjavaer-nine.vercel.app/articles/06-notes-and-observations/AI%20%E6%97%B6%E4%BB%A3%EF%BC%8C%E5%A6%82%E4%BD%95%E8%B6%85%E8%BF%87%E5%A4%A7%E5%A4%9A%E6%95%B0%E4%BA%BA/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/articles/06-notes-and-observations/AI%20%E6%97%B6%E4%BB%A3%EF%BC%8C%E5%A6%82%E4%BD%95%E8%B6%85%E8%BF%87%E5%A4%A7%E5%A4%9A%E6%95%B0%E4%BA%BA/</guid>
+      <pubDate>Mon, 08 Jun 2026 00:00:00 GMT</pubDate>
+      <description>日期：2026 06 08</description>
+    </item>
+    <item>
+      <title>姚顺雨这次访谈，腾讯终于把 AI 下半场讲明白了</title>
+      <link>https://bestjavaer-nine.vercel.app/articles/04-industry-and-business/%E5%A7%9A%E9%A1%BA%E9%9B%A8%E8%BF%99%E6%AC%A1%E8%AE%BF%E8%B0%88%EF%BC%8C%E8%85%BE%E8%AE%AF%E7%BB%88%E4%BA%8E%E6%8A%8A%20AI%20%E4%B8%8B%E5%8D%8A%E5%9C%BA%E8%AE%B2%E6%98%8E%E7%99%BD%E4%BA%86/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/articles/04-industry-and-business/%E5%A7%9A%E9%A1%BA%E9%9B%A8%E8%BF%99%E6%AC%A1%E8%AE%BF%E8%B0%88%EF%BC%8C%E8%85%BE%E8%AE%AF%E7%BB%88%E4%BA%8E%E6%8A%8A%20AI%20%E4%B8%8B%E5%8D%8A%E5%9C%BA%E8%AE%B2%E6%98%8E%E7%99%BD%E4%BA%86/</guid>
+      <pubDate>Sun, 07 Jun 2026 00:00:00 GMT</pubDate>
+      <description>日期：2026 06 07</description>
+    </item>
+    <item>
+      <title>说个暴论，OpenAI 或许会成为下一个 A 社。</title>
+      <link>https://bestjavaer-nine.vercel.app/articles/04-industry-and-business/%E8%AF%B4%E4%B8%AA%E6%9A%B4%E8%AE%BA%EF%BC%8COpenAI%20%E6%88%96%E8%AE%B8%E4%BC%9A%E6%88%90%E4%B8%BA%E4%B8%8B%E4%B8%80%E4%B8%AA%20A%20%E7%A4%BE%E3%80%82/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/articles/04-industry-and-business/%E8%AF%B4%E4%B8%AA%E6%9A%B4%E8%AE%BA%EF%BC%8COpenAI%20%E6%88%96%E8%AE%B8%E4%BC%9A%E6%88%90%E4%B8%BA%E4%B8%8B%E4%B8%80%E4%B8%AA%20A%20%E7%A4%BE%E3%80%82/</guid>
+      <pubDate>Sat, 06 Jun 2026 00:00:00 GMT</pubDate>
+      <description>日期：2026 06 06</description>
+    </item>
+    <item>
+      <title>Codex 一直 Reconnecting？我最后发现，常见就两个坑</title>
+      <link>https://bestjavaer-nine.vercel.app/articles/01-agent-and-coding/Codex%20%E4%B8%80%E7%9B%B4%20Reconnecting%EF%BC%9F%E6%88%91%E6%9C%80%E5%90%8E%E5%8F%91%E7%8E%B0%EF%BC%8C%E5%B8%B8%E8%A7%81%E5%B0%B1%E4%B8%A4%E4%B8%AA%E5%9D%91/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/articles/01-agent-and-coding/Codex%20%E4%B8%80%E7%9B%B4%20Reconnecting%EF%BC%9F%E6%88%91%E6%9C%80%E5%90%8E%E5%8F%91%E7%8E%B0%EF%BC%8C%E5%B8%B8%E8%A7%81%E5%B0%B1%E4%B8%A4%E4%B8%AA%E5%9D%91/</guid>
+      <pubDate>Fri, 05 Jun 2026 00:00:00 GMT</pubDate>
+      <description>日期：2026 06 05</description>
+    </item>
+    <item>
+      <title>为每个任务配一套 harness：Claude Code 里的动态工作流</title>
+      <link>https://bestjavaer-nine.vercel.app/articles/01-agent-and-coding/%E4%B8%BA%E6%AF%8F%E4%B8%AA%E4%BB%BB%E5%8A%A1%E9%85%8D%E4%B8%80%E5%A5%97%20harness%EF%BC%9AClaude%20Code%20%E9%87%8C%E7%9A%84%E5%8A%A8%E6%80%81%E5%B7%A5%E4%BD%9C%E6%B5%81/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/articles/01-agent-and-coding/%E4%B8%BA%E6%AF%8F%E4%B8%AA%E4%BB%BB%E5%8A%A1%E9%85%8D%E4%B8%80%E5%A5%97%20harness%EF%BC%9AClaude%20Code%20%E9%87%8C%E7%9A%84%E5%8A%A8%E6%80%81%E5%B7%A5%E4%BD%9C%E6%B5%81/</guid>
+      <pubDate>Fri, 05 Jun 2026 00:00:00 GMT</pubDate>
+      <description>日期：2026 06 05</description>
+    </item>
+    <item>
+      <title>我读完 105 页《置身钉内》，最扎心的不是 ONE 失败了</title>
+      <link>https://bestjavaer-nine.vercel.app/articles/04-industry-and-business/%E6%88%91%E8%AF%BB%E5%AE%8C%20105%20%E9%A1%B5%E3%80%8A%E7%BD%AE%E8%BA%AB%E9%92%89%E5%86%85%E3%80%8B%EF%BC%8C%E6%9C%80%E6%89%8E%E5%BF%83%E7%9A%84%E4%B8%8D%E6%98%AF%20ONE%20%E5%A4%B1%E8%B4%A5%E4%BA%86/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/articles/04-industry-and-business/%E6%88%91%E8%AF%BB%E5%AE%8C%20105%20%E9%A1%B5%E3%80%8A%E7%BD%AE%E8%BA%AB%E9%92%89%E5%86%85%E3%80%8B%EF%BC%8C%E6%9C%80%E6%89%8E%E5%BF%83%E7%9A%84%E4%B8%8D%E6%98%AF%20ONE%20%E5%A4%B1%E8%B4%A5%E4%BA%86/</guid>
+      <pubDate>Fri, 05 Jun 2026 00:00:00 GMT</pubDate>
+      <description>日期：2026 06 05</description>
+    </item>
+    <item>
+      <title>太顶了，ChatGPT 要和 Codex 搞一起了。</title>
+      <link>https://bestjavaer-nine.vercel.app/articles/01-agent-and-coding/%E5%A4%AA%E9%A1%B6%E4%BA%86%EF%BC%8CChatGPT%20%E8%A6%81%E5%92%8C%20Codex%20%E6%90%9E%E4%B8%80%E8%B5%B7%E4%BA%86%E3%80%82/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/articles/01-agent-and-coding/%E5%A4%AA%E9%A1%B6%E4%BA%86%EF%BC%8CChatGPT%20%E8%A6%81%E5%92%8C%20Codex%20%E6%90%9E%E4%B8%80%E8%B5%B7%E4%BA%86%E3%80%82/</guid>
+      <pubDate>Wed, 03 Jun 2026 00:00:00 GMT</pubDate>
+      <description>日期：2026 06 03</description>
+    </item>
+    <item>
+      <title>MiniMax M3 发布，据说接近 Opus 4.7？真的假的</title>
+      <link>https://bestjavaer-nine.vercel.app/articles/02-models-and-research/MiniMax%20M3%20%E5%8F%91%E5%B8%83%EF%BC%8C%E6%8D%AE%E8%AF%B4%E6%8E%A5%E8%BF%91%20Opus%204.7%EF%BC%9F%E7%9C%9F%E7%9A%84%E5%81%87%E7%9A%84/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/articles/02-models-and-research/MiniMax%20M3%20%E5%8F%91%E5%B8%83%EF%BC%8C%E6%8D%AE%E8%AF%B4%E6%8E%A5%E8%BF%91%20Opus%204.7%EF%BC%9F%E7%9C%9F%E7%9A%84%E5%81%87%E7%9A%84/</guid>
+      <pubDate>Tue, 02 Jun 2026 00:00:00 GMT</pubDate>
+      <description>日期：2026 06 02</description>
+    </item>
+    <item>
+      <title>这个 6.6 k star 的仓库，我差点删库了。</title>
+      <link>https://bestjavaer-nine.vercel.app/articles/06-notes-and-observations/%E8%BF%99%E4%B8%AA%206.6%20k%20star%20%E7%9A%84%E4%BB%93%E5%BA%93%EF%BC%8C%E6%88%91%E5%B7%AE%E7%82%B9%E5%88%A0%E5%BA%93%E4%BA%86%E3%80%82/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/articles/06-notes-and-observations/%E8%BF%99%E4%B8%AA%206.6%20k%20star%20%E7%9A%84%E4%BB%93%E5%BA%93%EF%BC%8C%E6%88%91%E5%B7%AE%E7%82%B9%E5%88%A0%E5%BA%93%E4%BA%86%E3%80%82/</guid>
+      <pubDate>Tue, 02 Jun 2026 00:00:00 GMT</pubDate>
+      <description>日期：2026 06 02</description>
+    </item>
+    <item>
+      <title>我花了两天时间，终于把 Codex 额度掉太快的问题整明白了！！</title>
+      <link>https://bestjavaer-nine.vercel.app/articles/01-agent-and-coding/%E6%88%91%E8%8A%B1%E4%BA%86%E4%B8%A4%E5%A4%A9%E6%97%B6%E9%97%B4%EF%BC%8C%E7%BB%88%E4%BA%8E%E6%8A%8A%20Codex%20%E9%A2%9D%E5%BA%A6%E6%8E%89%E5%A4%AA%E5%BF%AB%E7%9A%84%E9%97%AE%E9%A2%98%E6%95%B4%E6%98%8E%E7%99%BD%E4%BA%86%EF%BC%81%EF%BC%81/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/articles/01-agent-and-coding/%E6%88%91%E8%8A%B1%E4%BA%86%E4%B8%A4%E5%A4%A9%E6%97%B6%E9%97%B4%EF%BC%8C%E7%BB%88%E4%BA%8E%E6%8A%8A%20Codex%20%E9%A2%9D%E5%BA%A6%E6%8E%89%E5%A4%AA%E5%BF%AB%E7%9A%84%E9%97%AE%E9%A2%98%E6%95%B4%E6%98%8E%E7%99%BD%E4%BA%86%EF%BC%81%EF%BC%81/</guid>
+      <pubDate>Sat, 30 May 2026 00:00:00 GMT</pubDate>
+      <description>估计不少人和我一样，最近都被 Codex 额度消耗过快的问题困扰着。</description>
+    </item>
+    <item>
+      <title>还在用 Codex 开 xhigh 拉满跑？大错特错</title>
+      <link>https://bestjavaer-nine.vercel.app/articles/01-agent-and-coding/%E8%BF%98%E5%9C%A8%E7%94%A8%20Codex%20%E5%BC%80%20xhigh%20%E6%8B%89%E6%BB%A1%E8%B7%91%EF%BC%9F%E5%A4%A7%E9%94%99%E7%89%B9%E9%94%99/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/articles/01-agent-and-coding/%E8%BF%98%E5%9C%A8%E7%94%A8%20Codex%20%E5%BC%80%20xhigh%20%E6%8B%89%E6%BB%A1%E8%B7%91%EF%BC%9F%E5%A4%A7%E9%94%99%E7%89%B9%E9%94%99/</guid>
+      <pubDate>Sat, 30 May 2026 00:00:00 GMT</pubDate>
+      <description>我最近发现一个挺有意思的现象。</description>
+    </item>
+    <item>
+      <title>如何把 Codex 用到极致</title>
+      <link>https://bestjavaer-nine.vercel.app/articles/01-agent-and-coding/%E5%A6%82%E4%BD%95%E6%8A%8A%20Codex%20%E7%94%A8%E5%88%B0%E6%9E%81%E8%87%B4/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/articles/01-agent-and-coding/%E5%A6%82%E4%BD%95%E6%8A%8A%20Codex%20%E7%94%A8%E5%88%B0%E6%9E%81%E8%87%B4/</guid>
+      <pubDate>Thu, 28 May 2026 00:00:00 GMT</pubDate>
+      <description>大多数开发者第一次用编程 agent 都是为了写代码：检查一个仓库、生成一份 diff、跑测试、开一个 pull request。</description>
+    </item>
+    <item>
+      <title>离谱，OpenAI 把我的开源赞助账号封了</title>
+      <link>https://bestjavaer-nine.vercel.app/articles/04-industry-and-business/%E7%A6%BB%E8%B0%B1%EF%BC%8COpenAI%20%E6%8A%8A%E6%88%91%E7%9A%84%E5%BC%80%E6%BA%90%E8%B5%9E%E5%8A%A9%E8%B4%A6%E5%8F%B7%E5%B0%81%E4%BA%86/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/articles/04-industry-and-business/%E7%A6%BB%E8%B0%B1%EF%BC%8COpenAI%20%E6%8A%8A%E6%88%91%E7%9A%84%E5%BC%80%E6%BA%90%E8%B5%9E%E5%8A%A9%E8%B4%A6%E5%8F%B7%E5%B0%81%E4%BA%86/</guid>
+      <pubDate>Wed, 27 May 2026 00:00:00 GMT</pubDate>
+      <description>日期：2026 05 27</description>
+    </item>
+    <item>
+      <title>Codex 官方：goal 的正确打开方式</title>
+      <link>https://bestjavaer-nine.vercel.app/articles/01-agent-and-coding/Codex%20%E5%AE%98%E6%96%B9%EF%BC%9Agoal%20%E7%9A%84%E6%AD%A3%E7%A1%AE%E6%89%93%E5%BC%80%E6%96%B9%E5%BC%8F/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/articles/01-agent-and-coding/Codex%20%E5%AE%98%E6%96%B9%EF%BC%9Agoal%20%E7%9A%84%E6%AD%A3%E7%A1%AE%E6%89%93%E5%BC%80%E6%96%B9%E5%BC%8F/</guid>
+      <pubDate>Mon, 25 May 2026 00:00:00 GMT</pubDate>
+      <description>日期：2026 05 25</description>
+    </item>
+    <item>
+      <title>Codex 把我家网给优化了，我 TM 直接原地起飞了。</title>
+      <link>https://bestjavaer-nine.vercel.app/articles/01-agent-and-coding/Codex%20%E6%8A%8A%E6%88%91%E5%AE%B6%E7%BD%91%E7%BB%99%E4%BC%98%E5%8C%96%E4%BA%86%EF%BC%8C%E6%88%91%20TM%20%E7%9B%B4%E6%8E%A5%E5%8E%9F%E5%9C%B0%E8%B5%B7%E9%A3%9E%E4%BA%86%E3%80%82/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/articles/01-agent-and-coding/Codex%20%E6%8A%8A%E6%88%91%E5%AE%B6%E7%BD%91%E7%BB%99%E4%BC%98%E5%8C%96%E4%BA%86%EF%BC%8C%E6%88%91%20TM%20%E7%9B%B4%E6%8E%A5%E5%8E%9F%E5%9C%B0%E8%B5%B7%E9%A3%9E%E4%BA%86%E3%80%82/</guid>
+      <pubDate>Sun, 24 May 2026 00:00:00 GMT</pubDate>
+      <description>日期：2026 05 24</description>
+    </item>
+    <item>
+      <title>这两天受组委会邀请，去北京中关村听了一个会。</title>
+      <link>https://bestjavaer-nine.vercel.app/articles/04-industry-and-business/%E8%BF%99%E4%B8%A4%E5%A4%A9%E5%8F%97%E7%BB%84%E5%A7%94%E4%BC%9A%E9%82%80%E8%AF%B7%EF%BC%8C%E5%8E%BB%E5%8C%97%E4%BA%AC%E4%B8%AD%E5%85%B3%E6%9D%91%E5%90%AC%E4%BA%86%E4%B8%80%E4%B8%AA%E4%BC%9A%E3%80%82/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/articles/04-industry-and-business/%E8%BF%99%E4%B8%A4%E5%A4%A9%E5%8F%97%E7%BB%84%E5%A7%94%E4%BC%9A%E9%82%80%E8%AF%B7%EF%BC%8C%E5%8E%BB%E5%8C%97%E4%BA%AC%E4%B8%AD%E5%85%B3%E6%9D%91%E5%90%AC%E4%BA%86%E4%B8%80%E4%B8%AA%E4%BC%9A%E3%80%82/</guid>
+      <pubDate>Sat, 23 May 2026 00:00:00 GMT</pubDate>
+      <description>日期：2026 05 23</description>
+    </item>
+    <item>
+      <title>Agent Workflow Kit 接入你的项目</title>
+      <link>https://bestjavaer-nine.vercel.app/articles/01-agent-and-coding/Agent%20Workflow%20Kit%20%E6%8E%A5%E5%85%A5%E4%BD%A0%E7%9A%84%E9%A1%B9%E7%9B%AE/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/articles/01-agent-and-coding/Agent%20Workflow%20Kit%20%E6%8E%A5%E5%85%A5%E4%BD%A0%E7%9A%84%E9%A1%B9%E7%9B%AE/</guid>
+      <pubDate>Thu, 21 May 2026 00:00:00 GMT</pubDate>
+      <description>日期：2026 05 21</description>
+    </item>
+    <item>
+      <title>Deepseek 会泄露其他玩家的对话</title>
+      <link>https://bestjavaer-nine.vercel.app/articles/02-models-and-research/Deepseek%20%E4%BC%9A%E6%B3%84%E9%9C%B2%E5%85%B6%E4%BB%96%E7%8E%A9%E5%AE%B6%E7%9A%84%E5%AF%B9%E8%AF%9D/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/articles/02-models-and-research/Deepseek%20%E4%BC%9A%E6%B3%84%E9%9C%B2%E5%85%B6%E4%BB%96%E7%8E%A9%E5%AE%B6%E7%9A%84%E5%AF%B9%E8%AF%9D/</guid>
+      <pubDate>Tue, 19 May 2026 00:00:00 GMT</pubDate>
+      <description>日期：2026 05 19</description>
+    </item>
+    <item>
+      <title>给大家详细介绍下 weread skills</title>
+      <link>https://bestjavaer-nine.vercel.app/articles/03-tools-and-resources/%E7%BB%99%E5%A4%A7%E5%AE%B6%E8%AF%A6%E7%BB%86%E4%BB%8B%E7%BB%8D%E4%B8%8B%20weread%20skills/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/articles/03-tools-and-resources/%E7%BB%99%E5%A4%A7%E5%AE%B6%E8%AF%A6%E7%BB%86%E4%BB%8B%E7%BB%8D%E4%B8%8B%20weread%20skills/</guid>
+      <pubDate>Tue, 19 May 2026 00:00:00 GMT</pubDate>
+      <description>日期：2026 05 19</description>
+    </item>
+    <item>
+      <title>当 00 后开始用 token 给学校送礼</title>
+      <link>https://bestjavaer-nine.vercel.app/articles/04-industry-and-business/%E5%BD%93%2000%20%E5%90%8E%E5%BC%80%E5%A7%8B%E7%94%A8%20token%20%E7%BB%99%E5%AD%A6%E6%A0%A1%E9%80%81%E7%A4%BC/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/articles/04-industry-and-business/%E5%BD%93%2000%20%E5%90%8E%E5%BC%80%E5%A7%8B%E7%94%A8%20token%20%E7%BB%99%E5%AD%A6%E6%A0%A1%E9%80%81%E7%A4%BC/</guid>
+      <pubDate>Mon, 18 May 2026 00:00:00 GMT</pubDate>
+      <description>日期：2026 05 18</description>
+    </item>
+    <item>
+      <title>我说怎么今天用 GPT-5.5 感觉有点弱智 。。。。。。。</title>
+      <link>https://bestjavaer-nine.vercel.app/articles/02-models-and-research/%E6%88%91%E8%AF%B4%E6%80%8E%E4%B9%88%E4%BB%8A%E5%A4%A9%E7%94%A8%20GPT-5.5%20%E6%84%9F%E8%A7%89%E6%9C%89%E7%82%B9%E5%BC%B1%E6%99%BA%20%E3%80%82%E3%80%82%E3%80%82%E3%80%82%E3%80%82%E3%80%82%E3%80%82/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/articles/02-models-and-research/%E6%88%91%E8%AF%B4%E6%80%8E%E4%B9%88%E4%BB%8A%E5%A4%A9%E7%94%A8%20GPT-5.5%20%E6%84%9F%E8%A7%89%E6%9C%89%E7%82%B9%E5%BC%B1%E6%99%BA%20%E3%80%82%E3%80%82%E3%80%82%E3%80%82%E3%80%82%E3%80%82%E3%80%82/</guid>
+      <pubDate>Sun, 17 May 2026 00:00:00 GMT</pubDate>
+      <description>日期：2026 05 17</description>
+    </item>
+  </channel>
+</rss>

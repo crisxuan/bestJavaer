@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>cxuan-ai-labs - AI Articles</title>
+    <link>https://bestjavaer-nine.vercel.app/en/articles/</link>
+    <description>Practical AI notes, tutorials, observations, and resources from cxuan-ai-labs.</description>
+    <language>en</language>
+    <lastBuildDate>Tue, 28 Jul 2026 03:09:56 GMT</lastBuildDate>
+    <item>
+      <title>Claude Design&apos;s System Prompt Leaked: The Essential Lessons</title>
+      <link>https://bestjavaer-nine.vercel.app/en/articles/02-models-and-research/claude-design-system-prompt-essential-lessons/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/en/articles/02-models-and-research/claude-design-system-prompt-essential-lessons/</guid>
+      <pubDate>Wed, 22 Jul 2026 00:00:00 GMT</pubDate>
+      <description>English | Chinese Original</description>
+    </item>
+    <item>
+      <title>Grok Build Was Widely Criticized, Then Elon Open-Sourced It</title>
+      <link>https://bestjavaer-nine.vercel.app/en/articles/01-agent-and-coding/grok-build-was-criticized-then-open-sourced/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/en/articles/01-agent-and-coding/grok-build-was-criticized-then-open-sourced/</guid>
+      <pubDate>Wed, 22 Jul 2026 00:00:00 GMT</pubDate>
+      <description>English | Chinese Original</description>
+    </item>
+    <item>
+      <title>OpenAI Broke Through Hugging Face&apos;s Infrastructure</title>
+      <link>https://bestjavaer-nine.vercel.app/en/articles/04-industry-and-business/openai-broke-through-hugging-face-infrastructure/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/en/articles/04-industry-and-business/openai-broke-through-hugging-face-infrastructure/</guid>
+      <pubDate>Wed, 22 Jul 2026 00:00:00 GMT</pubDate>
+      <description>English | Chinese Original</description>
+    </item>
+    <item>
+      <title>Qoder + Qwen 3.8: A Hands-On Test</title>
+      <link>https://bestjavaer-nine.vercel.app/en/articles/02-models-and-research/qoder-qwen-3-8-hands-on-test/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/en/articles/02-models-and-research/qoder-qwen-3-8-hands-on-test/</guid>
+      <pubDate>Wed, 22 Jul 2026 00:00:00 GMT</pubDate>
+      <description>English | Chinese Original</description>
+    </item>
+    <item>
+      <title>Still Learning Loops? Graph Engineering Is Already Taking Off</title>
+      <link>https://bestjavaer-nine.vercel.app/en/articles/01-agent-and-coding/graph-engineering-is-already-taking-off/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/en/articles/01-agent-and-coding/graph-engineering-is-already-taking-off/</guid>
+      <pubDate>Tue, 21 Jul 2026 00:00:00 GMT</pubDate>
+      <description>English | Chinese Original</description>
+    </item>
+    <item>
+      <title>OpenAI&apos;s Official Prompting Guide</title>
+      <link>https://bestjavaer-nine.vercel.app/en/articles/02-models-and-research/openai-official-prompting-guide/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/en/articles/02-models-and-research/openai-official-prompting-guide/</guid>
+      <pubDate>Mon, 20 Jul 2026 00:00:00 GMT</pubDate>
+      <description>English | Chinese Original</description>
+    </item>
+    <item>
+      <title>Kimi K3 Stole the Show</title>
+      <link>https://bestjavaer-nine.vercel.app/en/articles/02-models-and-research/kimi-k3-stole-the-show/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/en/articles/02-models-and-research/kimi-k3-stole-the-show/</guid>
+      <pubDate>Sat, 18 Jul 2026 00:00:00 GMT</pubDate>
+      <description>English | Chinese Original</description>
+    </item>
+    <item>
+      <title>LibTV Helped Me Get Past My Creative Anxiety</title>
+      <link>https://bestjavaer-nine.vercel.app/en/articles/05-ai-creation-and-media/libtv-helped-me-get-past-creative-anxiety/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/en/articles/05-ai-creation-and-media/libtv-helped-me-get-past-creative-anxiety/</guid>
+      <pubDate>Sat, 18 Jul 2026 00:00:00 GMT</pubDate>
+      <description>English | Chinese Original</description>
+    </item>
+    <item>
+      <title>GPT-5.6 Ran rm -rf in the Background</title>
+      <link>https://bestjavaer-nine.vercel.app/en/articles/01-agent-and-coding/gpt-5-6-ran-rm-rf-in-the-background/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/en/articles/01-agent-and-coding/gpt-5-6-ran-rm-rf-in-the-background/</guid>
+      <pubDate>Thu, 16 Jul 2026 00:00:00 GMT</pubDate>
+      <description>English | Chinese Original</description>
+    </item>
+    <item>
+      <title>Claude Design&apos;s 647-Line System Prompt Leaked: A Complete Walkthrough</title>
+      <link>https://bestjavaer-nine.vercel.app/en/articles/02-models-and-research/claude-design-647-line-system-prompt-complete-walkthrough/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/en/articles/02-models-and-research/claude-design-647-line-system-prompt-complete-walkthrough/</guid>
+      <pubDate>Wed, 15 Jul 2026 00:00:00 GMT</pubDate>
+      <description>English | Chinese Original</description>
+    </item>
+    <item>
+      <title>GPT-5.6 Is Here, but the Hype Needs a Reality Check</title>
+      <link>https://bestjavaer-nine.vercel.app/en/articles/02-models-and-research/gpt-5-6-is-here-but-the-hype-needs-a-reality-check/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/en/articles/02-models-and-research/gpt-5-6-is-here-but-the-hype-needs-a-reality-check/</guid>
+      <pubDate>Fri, 10 Jul 2026 00:00:00 GMT</pubDate>
+      <description>English | Chinese Original</description>
+    </item>
+    <item>
+      <title>Cursor Flipped the Table: Is Grok 4.5 Ready to Take Off?</title>
+      <link>https://bestjavaer-nine.vercel.app/en/articles/02-models-and-research/cursor-grok-4-5-ready-to-take-off/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/en/articles/02-models-and-research/cursor-grok-4-5-ready-to-take-off/</guid>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>
+      <description>English | Chinese Original</description>
+    </item>
+    <item>
+      <title>GPT-5.6 Is Finally Opening Up: Sol, Terra, and Luna Arrive This Thursday</title>
+      <link>https://bestjavaer-nine.vercel.app/en/articles/02-models-and-research/gpt-5-6-sol-terra-and-luna-are-finally-opening-up/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/en/articles/02-models-and-research/gpt-5-6-sol-terra-and-luna-are-finally-opening-up/</guid>
+      <pubDate>Wed, 08 Jul 2026 00:00:00 GMT</pubDate>
+      <description>English | Chinese Original</description>
+    </item>
+    <item>
+      <title>Why Is OceanBase Building an AI Database?</title>
+      <link>https://bestjavaer-nine.vercel.app/en/articles/04-industry-and-business/why-oceanbase-is-building-an-ai-database/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/en/articles/04-industry-and-business/why-oceanbase-is-building-an-ai-database/</guid>
+      <pubDate>Wed, 08 Jul 2026 00:00:00 GMT</pubDate>
+      <description>English | Chinese Original</description>
+    </item>
+    <item>
+      <title>Understanding Claude Code Architecture, Part 2: How Does Claude Code Start So Fast?</title>
+      <link>https://bestjavaer-nine.vercel.app/en/articles/01-agent-and-coding/understanding-claude-code-architecture-part-2-fast-startup/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/en/articles/01-agent-and-coding/understanding-claude-code-architecture-part-2-fast-startup/</guid>
+      <pubDate>Tue, 07 Jul 2026 00:00:00 GMT</pubDate>
+      <description>English | Chinese Original</description>
+    </item>
+    <item>
+      <title>Alibaba Has Announced a Company-Wide Ban on Claude Code</title>
+      <link>https://bestjavaer-nine.vercel.app/en/articles/04-industry-and-business/alibaba-company-wide-ban-on-claude-code/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/en/articles/04-industry-and-business/alibaba-company-wide-ban-on-claude-code/</guid>
+      <pubDate>Sat, 04 Jul 2026 00:00:00 GMT</pubDate>
+      <description>English | Chinese Original</description>
+    </item>
+    <item>
+      <title>Understanding Claude Code Architecture, Part 1: Let&apos;s Begin</title>
+      <link>https://bestjavaer-nine.vercel.app/en/articles/01-agent-and-coding/understanding-claude-code-architecture-part-1/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/en/articles/01-agent-and-coding/understanding-claude-code-architecture-part-1/</guid>
+      <pubDate>Mon, 29 Jun 2026 00:00:00 GMT</pubDate>
+      <description>English | Chinese Original</description>
+    </item>
+    <item>
+      <title>Can Codex Wear Out Your SSD? A Complete Investigation</title>
+      <link>https://bestjavaer-nine.vercel.app/en/articles/01-agent-and-coding/can-codex-wear-out-your-ssd-a-complete-investigation/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/en/articles/01-agent-and-coding/can-codex-wear-out-your-ssd-a-complete-investigation/</guid>
+      <pubDate>Wed, 24 Jun 2026 00:00:00 GMT</pubDate>
+      <description>English | Chinese Original</description>
+    </item>
+    <item>
+      <title>Testing Qwen3.7-Max in a Real Agent Workflow</title>
+      <link>https://bestjavaer-nine.vercel.app/en/articles/02-models-and-research/testing-qwen3-7-max-in-a-real-agent-workflow/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/en/articles/02-models-and-research/testing-qwen3-7-max-in-a-real-agent-workflow/</guid>
+      <pubDate>Sat, 20 Jun 2026 00:00:00 GMT</pubDate>
+      <description>English | Chinese Original</description>
+    </item>
+    <item>
+      <title>DeepSeek Enters Multimodal: Image Understanding Is Now Live</title>
+      <link>https://bestjavaer-nine.vercel.app/en/articles/02-models-and-research/deepseek-enters-multimodal-image-understanding-is-now-live/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/en/articles/02-models-and-research/deepseek-enters-multimodal-image-understanding-is-now-live/</guid>
+      <pubDate>Fri, 19 Jun 2026 00:00:00 GMT</pubDate>
+      <description>English | Chinese Original</description>
+    </item>
+    <item>
+      <title>Can AI Really Predict the World Cup? Wenxin Was the Most Accurate</title>
+      <link>https://bestjavaer-nine.vercel.app/en/articles/02-models-and-research/can-ai-really-predict-the-world-cup-wenxin-was-the-most-accurate/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/en/articles/02-models-and-research/can-ai-really-predict-the-world-cup-wenxin-was-the-most-accurate/</guid>
+      <pubDate>Tue, 16 Jun 2026 00:00:00 GMT</pubDate>
+      <description>English | Chinese Original</description>
+    </item>
+    <item>
+      <title>OiiOii 2.0: I Finally Took AI Video Creation Seriously</title>
+      <link>https://bestjavaer-nine.vercel.app/en/articles/05-ai-creation-and-media/oiioii-2-0-i-finally-took-ai-video-creation-seriously/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/en/articles/05-ai-creation-and-media/oiioii-2-0-i-finally-took-ai-video-creation-seriously/</guid>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+      <description>English | Chinese Original</description>
+    </item>
+    <item>
+      <title>Fable 5 Was Suddenly Banned</title>
+      <link>https://bestjavaer-nine.vercel.app/en/articles/02-models-and-research/fable-5-was-suddenly-banned/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/en/articles/02-models-and-research/fable-5-was-suddenly-banned/</guid>
+      <pubDate>Sat, 13 Jun 2026 00:00:00 GMT</pubDate>
+      <description>English | Chinese Original</description>
+    </item>
+    <item>
+      <title>Fable 5&apos;s 120k-Character System Prompt Leaked</title>
+      <link>https://bestjavaer-nine.vercel.app/en/articles/02-models-and-research/fable-5-120k-character-system-prompt-leaked/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/en/articles/02-models-and-research/fable-5-120k-character-system-prompt-leaked/</guid>
+      <pubDate>Fri, 12 Jun 2026 00:00:00 GMT</pubDate>
+      <description>English | Chinese Original</description>
+    </item>
+    <item>
+      <title>One OpenAI Invite Reset the Quota and Pulled Prices Down</title>
+      <link>https://bestjavaer-nine.vercel.app/en/articles/04-industry-and-business/one-openai-invite-reset-the-quota-and-pulled-prices-down/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/en/articles/04-industry-and-business/one-openai-invite-reset-the-quota-and-pulled-prices-down/</guid>
+      <pubDate>Fri, 12 Jun 2026 00:00:00 GMT</pubDate>
+      <description>English | Chinese Original</description>
+    </item>
+    <item>
+      <title>Claude Fable 5 Is Here</title>
+      <link>https://bestjavaer-nine.vercel.app/en/articles/02-models-and-research/claude-fable-5-is-here/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/en/articles/02-models-and-research/claude-fable-5-is-here/</guid>
+      <pubDate>Wed, 10 Jun 2026 00:00:00 GMT</pubDate>
+      <description>English | Chinese Original</description>
+    </item>
+    <item>
+      <title>Luckin Released a CLI. Is This a Step Toward AGI?</title>
+      <link>https://bestjavaer-nine.vercel.app/en/articles/04-industry-and-business/luckin-released-a-cli-is-this-a-step-toward-agi/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/en/articles/04-industry-and-business/luckin-released-a-cli-is-this-a-step-toward-agi/</guid>
+      <pubDate>Wed, 10 Jun 2026 00:00:00 GMT</pubDate>
+      <description>English | Chinese Original</description>
+    </item>
+    <item>
+      <title>The 10 Codex Tips I Use Most Often</title>
+      <link>https://bestjavaer-nine.vercel.app/en/articles/01-agent-and-coding/the-10-codex-tips-i-use-most-often/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/en/articles/01-agent-and-coding/the-10-codex-tips-i-use-most-often/</guid>
+      <pubDate>Tue, 09 Jun 2026 00:00:00 GMT</pubDate>
+      <description>English | Chinese Original</description>
+    </item>
+    <item>
+      <title>What Is AGENTS.md?</title>
+      <link>https://bestjavaer-nine.vercel.app/en/articles/01-agent-and-coding/what-is-agents-md/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/en/articles/01-agent-and-coding/what-is-agents-md/</guid>
+      <pubDate>Tue, 09 Jun 2026 00:00:00 GMT</pubDate>
+      <description>English | Chinese Original</description>
+    </item>
+    <item>
+      <title>How to Get Ahead in the AI Era</title>
+      <link>https://bestjavaer-nine.vercel.app/en/articles/06-notes-and-observations/how-to-get-ahead-in-the-ai-era/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/en/articles/06-notes-and-observations/how-to-get-ahead-in-the-ai-era/</guid>
+      <pubDate>Mon, 08 Jun 2026 00:00:00 GMT</pubDate>
+      <description>English | Chinese Original</description>
+    </item>
+    <item>
+      <title>Yao Shunyu&apos;s Interview Explained Tencent&apos;s Second Half of AI</title>
+      <link>https://bestjavaer-nine.vercel.app/en/articles/04-industry-and-business/yao-shunyu-interview-explained-tencent-second-half-of-ai/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/en/articles/04-industry-and-business/yao-shunyu-interview-explained-tencent-second-half-of-ai/</guid>
+      <pubDate>Sun, 07 Jun 2026 00:00:00 GMT</pubDate>
+      <description>English | Chinese Original</description>
+    </item>
+    <item>
+      <title>Hot Take: OpenAI May Become the Next Anthropic</title>
+      <link>https://bestjavaer-nine.vercel.app/en/articles/04-industry-and-business/hot-take-openai-may-become-the-next-anthropic/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/en/articles/04-industry-and-business/hot-take-openai-may-become-the-next-anthropic/</guid>
+      <pubDate>Sat, 06 Jun 2026 00:00:00 GMT</pubDate>
+      <description>English | Chinese Original</description>
+    </item>
+    <item>
+      <title>A Harness for Every Task: Dynamic Workflows in Claude Code</title>
+      <link>https://bestjavaer-nine.vercel.app/en/articles/01-agent-and-coding/a-harness-for-every-task-dynamic-workflows-in-claude-code/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/en/articles/01-agent-and-coding/a-harness-for-every-task-dynamic-workflows-in-claude-code/</guid>
+      <pubDate>Fri, 05 Jun 2026 00:00:00 GMT</pubDate>
+      <description>English | Chinese Original</description>
+    </item>
+    <item>
+      <title>After Reading 105 Pages of Inside DingTalk, ONE&apos;s Failure Was Not the Most Painful Part</title>
+      <link>https://bestjavaer-nine.vercel.app/en/articles/04-industry-and-business/inside-dingtalk-one-failure-was-not-the-most-painful-part/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/en/articles/04-industry-and-business/inside-dingtalk-one-failure-was-not-the-most-painful-part/</guid>
+      <pubDate>Fri, 05 Jun 2026 00:00:00 GMT</pubDate>
+      <description>English | Chinese Original</description>
+    </item>
+    <item>
+      <title>Codex Keeps Reconnecting? The Two Common Causes I Found</title>
+      <link>https://bestjavaer-nine.vercel.app/en/articles/01-agent-and-coding/codex-keeps-reconnecting-the-two-common-causes-i-found/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/en/articles/01-agent-and-coding/codex-keeps-reconnecting-the-two-common-causes-i-found/</guid>
+      <pubDate>Fri, 05 Jun 2026 00:00:00 GMT</pubDate>
+      <description>English | Chinese Original</description>
+    </item>
+    <item>
+      <title>ChatGPT and Codex Are Becoming One Workflow</title>
+      <link>https://bestjavaer-nine.vercel.app/en/articles/01-agent-and-coding/chatgpt-and-codex-are-becoming-one-workflow/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/en/articles/01-agent-and-coding/chatgpt-and-codex-are-becoming-one-workflow/</guid>
+      <pubDate>Wed, 03 Jun 2026 00:00:00 GMT</pubDate>
+      <description>English | Chinese Original</description>
+    </item>
+    <item>
+      <title>I Almost Deleted My 6.6k-Star Repository</title>
+      <link>https://bestjavaer-nine.vercel.app/en/articles/06-notes-and-observations/i-almost-deleted-my-6-6k-star-repository/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/en/articles/06-notes-and-observations/i-almost-deleted-my-6-6k-star-repository/</guid>
+      <pubDate>Tue, 02 Jun 2026 00:00:00 GMT</pubDate>
+      <description>English | Chinese Original</description>
+    </item>
+    <item>
+      <title>MiniMax M3 Is Here: How Close Is It to Opus 4.7?</title>
+      <link>https://bestjavaer-nine.vercel.app/en/articles/02-models-and-research/minimax-m3-is-here-how-close-is-it-to-opus-4-7/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/en/articles/02-models-and-research/minimax-m3-is-here-how-close-is-it-to-opus-4-7/</guid>
+      <pubDate>Tue, 02 Jun 2026 00:00:00 GMT</pubDate>
+      <description>English | Chinese Original</description>
+    </item>
+    <item>
+      <title>It took me two days to figure out how fast Codex fell!</title>
+      <link>https://bestjavaer-nine.vercel.app/en/articles/01-agent-and-coding/it-took-me-two-days-to-figure-out-how-fast-cordex-fell/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/en/articles/01-agent-and-coding/it-took-me-two-days-to-figure-out-how-fast-cordex-fell/</guid>
+      <pubDate>Sat, 30 May 2026 00:00:00 GMT</pubDate>
+      <description>English | Chinese Original</description>
+    </item>
+    <item>
+      <title>Still using Codex to drive x high? Big mistake.</title>
+      <link>https://bestjavaer-nine.vercel.app/en/articles/01-agent-and-coding/still-using-codex-to-drive-x-high-big-mistake/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/en/articles/01-agent-and-coding/still-using-codex-to-drive-x-high-big-mistake/</guid>
+      <pubDate>Sat, 30 May 2026 00:00:00 GMT</pubDate>
+      <description>English | Chinese Original</description>
+    </item>
+    <item>
+      <title>How to Get the Most Out of Codex</title>
+      <link>https://bestjavaer-nine.vercel.app/en/articles/01-agent-and-coding/how-to-get-the-most-out-of-codex/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/en/articles/01-agent-and-coding/how-to-get-the-most-out-of-codex/</guid>
+      <pubDate>Thu, 28 May 2026 00:00:00 GMT</pubDate>
+      <description>English | Chinese Original</description>
+    </item>
+    <item>
+      <title>OpenAI Blocked My Open-Source Sponsorship Account</title>
+      <link>https://bestjavaer-nine.vercel.app/en/articles/04-industry-and-business/openai-blocked-my-open-source-sponsorship-account/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/en/articles/04-industry-and-business/openai-blocked-my-open-source-sponsorship-account/</guid>
+      <pubDate>Wed, 27 May 2026 00:00:00 GMT</pubDate>
+      <description>English | Chinese Original</description>
+    </item>
+    <item>
+      <title>The Official Codex Guide: How to Use /goal Correctly</title>
+      <link>https://bestjavaer-nine.vercel.app/en/articles/01-agent-and-coding/the-official-codex-guide-how-to-use-goal-correctly/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/en/articles/01-agent-and-coding/the-official-codex-guide-how-to-use-goal-correctly/</guid>
+      <pubDate>Mon, 25 May 2026 00:00:00 GMT</pubDate>
+      <description>English | Chinese Original</description>
+    </item>
+    <item>
+      <title>After Codex optimized my shitty net, I TM took off in situ.</title>
+      <link>https://bestjavaer-nine.vercel.app/en/articles/01-agent-and-coding/after-codex-optimized-my-shitty-net-i-tm-took-off-in-situ/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/en/articles/01-agent-and-coding/after-codex-optimized-my-shitty-net-i-tm-took-off-in-situ/</guid>
+      <pubDate>Sun, 24 May 2026 00:00:00 GMT</pubDate>
+      <description>English | Chinese Original</description>
+    </item>
+    <item>
+      <title>At the invitation of the organizing committee, a meeting was held in Katsumura, Beijing.</title>
+      <link>https://bestjavaer-nine.vercel.app/en/articles/04-industry-and-business/at-the-invitation-of-the-organizing-committee-a-meeting-was-held-in-katsumura-beij/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/en/articles/04-industry-and-business/at-the-invitation-of-the-organizing-committee-a-meeting-was-held-in-katsumura-beij/</guid>
+      <pubDate>Sat, 23 May 2026 00:00:00 GMT</pubDate>
+      <description>English | Chinese Original</description>
+    </item>
+    <item>
+      <title>Connecting Agent Workflow Kit to Your Project</title>
+      <link>https://bestjavaer-nine.vercel.app/en/articles/01-agent-and-coding/connecting-agent-workflow-kit-to-your-project/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/en/articles/01-agent-and-coding/connecting-agent-workflow-kit-to-your-project/</guid>
+      <pubDate>Thu, 21 May 2026 00:00:00 GMT</pubDate>
+      <description>English | Chinese Original</description>
+    </item>
+    <item>
+      <title>DeepSeek, enter &lt;think&apos; &gt;, so you can spy on people&apos;s conversations? Don&apos;t rush to conclusions.</title>
+      <link>https://bestjavaer-nine.vercel.app/en/articles/02-models-and-research/deepseek-enter-think-so-you-can-spy-on-people-s-conversations-don-t-rush-to-conclu/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/en/articles/02-models-and-research/deepseek-enter-think-so-you-can-spy-on-people-s-conversations-don-t-rush-to-conclu/</guid>
+      <pubDate>Tue, 19 May 2026 00:00:00 GMT</pubDate>
+      <description>English | Chinese Original</description>
+    </item>
+    <item>
+      <title>We&apos;re officially sending Skills, giving me shit.</title>
+      <link>https://bestjavaer-nine.vercel.app/en/articles/03-tools-and-resources/we-re-officially-sending-skills-giving-me-shit/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/en/articles/03-tools-and-resources/we-re-officially-sending-skills-giving-me-shit/</guid>
+      <pubDate>Tue, 19 May 2026 00:00:00 GMT</pubDate>
+      <description>English | Chinese Original</description>
+    </item>
+    <item>
+      <title>And then when it&apos;s 00, it starts to give it to school.</title>
+      <link>https://bestjavaer-nine.vercel.app/en/articles/04-industry-and-business/and-then-when-it-s-00-it-starts-to-give-it-to-school/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/en/articles/04-industry-and-business/and-then-when-it-s-00-it-starts-to-give-it-to-school/</guid>
+      <pubDate>Mon, 18 May 2026 00:00:00 GMT</pubDate>
+      <description>English | Chinese Original</description>
+    </item>
+    <item>
+      <title>I say how it feels to be a little retarded today with GPT-5. 5.</title>
+      <link>https://bestjavaer-nine.vercel.app/en/articles/02-models-and-research/i-say-how-it-feels-to-be-a-little-retarded-today-with-gpt-5-5/</link>
+      <guid isPermaLink="true">https://bestjavaer-nine.vercel.app/en/articles/02-models-and-research/i-say-how-it-feels-to-be-a-little-retarded-today-with-gpt-5-5/</guid>
+      <pubDate>Sun, 17 May 2026 00:00:00 GMT</pubDate>
+      <description>English | Chinese Original</description>
+    </item>
+  </channel>
+</rss>

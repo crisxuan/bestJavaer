@@ -166,7 +166,7 @@ synchronized(TSynchronized.class){
 
 这三块区域的内存分布如下图所示
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20201202064002278.png" alt="image-20201202064002278" style="zoom:50%;" />
+<img src="../../assets/archive-image-unavailable.svg" alt="image-20201202064002278" style="zoom:50%;" />
 
 我们来详细介绍一下上面对象中的内容。
 
@@ -216,11 +216,11 @@ synchronized(TSynchronized.class){
 
 所以我们的重点放在对 synchronized 重量级锁的研究上，当 monitor 被某个线程持有后，它就会处于锁定状态。在 HotSpot 虚拟机中，monitor 的底层代码是由 `ObjectMonitor` 实现的，其主要数据结构如下（位于 HotSpot 虚拟机源码 ObjectMonitor.hpp 文件，C++ 实现的）
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20210530233842535.png" alt="image-20210530233842535" style="zoom:50%;" />
+<img src="../../assets/archive-image-unavailable.svg" alt="image-20210530233842535" style="zoom:50%;" />
 
 这段 C++ 中需要注意几个属性：_WaitSet 、 _EntryList 和 _Owner，每个等待获取锁的线程都会被封装称为 `ObjectWaiter` 对象。
 
-![image-20210531072722659](/Users/mr.l/Library/Application Support/typora-user-images/image-20210531072722659.png)
+![image-20210531072722659](../../assets/archive-image-unavailable.svg)
 
 _Owner 是指向了 ObjectMonitor 对象的线程，而 _WaitSet 和 _EntryList 就是用来保存每个线程的列表。
 
@@ -230,13 +230,13 @@ _Owner 是指向了 ObjectMonitor 对象的线程，而 _WaitSet 和 _EntryList 
 
 当多个线程同时访问某段同步代码时，首先会进入 _EntryList 集合，当线程获取到对象的 monitor 之后，就会进入 _Owner 区域，并把 ObjectMonitor 对象的 _Owner 指向为当前线程，并使 _count + 1，如果调用了释放锁（比如 wait）的操作，就会释放当前持有的 monitor ，owner = null， _count - 1，同时这个线程会进入到 _WaitSet 列表中等待被唤醒。如果当前线程执行完毕后也会释放 monitor 锁，只不过此时不会进入 _WaitSet 列表了，而是直接复位 _count 的值。
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20210531093349681.png" alt="image-20210531093349681" style="zoom:50%;" />
+<img src="../../assets/archive-image-unavailable.svg" alt="image-20210531093349681" style="zoom:50%;" />
 
 Klass Pointer 表示的是类型指针，也就是对象指向它的类元数据的指针，虚拟机通过这个指针来确定这个对象是哪个类的实例。
 
 >你可能不是很理解指针是个什么概念，你可以简单理解为指针就是指向某个数据的地址。
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20210530220010468.png" alt="image-20210530220010468" style="zoom:50%;" />
+<img src="../../assets/archive-image-unavailable.svg" alt="image-20210530220010468" style="zoom:50%;" />
 
 #### 实例数据 Instance Data
 
@@ -355,7 +355,7 @@ public class SynchronizedTest {
 
 我们主要关注一下 synchronized 的字节码，如下所示
 
-![image-20210531200555874](/Users/mr.l/Library/Application Support/typora-user-images/image-20210531200555874.png)
+![image-20210531200555874](../../assets/archive-image-unavailable.svg)
 
 从这段字节码中我们可以知道，同步语句块使用的是 monitorenter 和 monitorexit 指令，其中 monitorenter 指令指向同步代码块的开始位置，monitorexit 指令指向同步代码块的结束位置。
 
@@ -382,7 +382,7 @@ public class SynchronizedTest {
 
 这次我们使用 **javap -verbose** 来输出详细的结果
 
-![image-20210531215902053](/Users/mr.l/Library/Application Support/typora-user-images/image-20210531215902053.png)
+![image-20210531215902053](../../assets/archive-image-unavailable.svg)
 
 从字节码上可以看出，synchronized 修饰的方法并没有使用 monitorenter 和 monitorexit 指令，取得代之是ACC_SYNCHRONIZED 标识，该标识指明了此方法是一个同步方法，JVM 通过该 ACC_SYNCHRONIZED 访问标志来辨别一个方法是否声明为同步方法，从而执行相应的同步调用。这就是 synchronized 锁在同步代码块上和同步方法上的实现差别。
 

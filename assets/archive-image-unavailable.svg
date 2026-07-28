@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" role="img" aria-labelledby="title desc">
+  <title id="title">历史图片未随仓库保留</title>
+  <desc id="desc">旧版文章中的原始本地图片已不可用。</desc>
+  <rect width="1200" height="320" rx="28" fill="#11161f"/>
+  <rect x="1" y="1" width="1198" height="318" rx="27" fill="none" stroke="#29323d" stroke-width="2"/>
+  <path d="M94 92h112a18 18 0 0 1 18 18v100a18 18 0 0 1-18 18H94a18 18 0 0 1-18-18V110a18 18 0 0 1 18-18Z" fill="#0d1218" stroke="#3ddc97" stroke-opacity=".55" stroke-width="3"/>
+  <circle cx="120" cy="127" r="12" fill="#3ddc97" fill-opacity=".78"/>
+  <path d="m92 204 42-45 30 29 19-21 25 37H92Z" fill="#3ddc97" fill-opacity=".16" stroke="#3ddc97" stroke-opacity=".64" stroke-width="3" stroke-linejoin="round"/>
+  <text x="274" y="145" fill="#dbe2ea" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="34" font-weight="700">历史图片未随仓库保留</text>
+  <text x="274" y="193" fill="#7f8b98" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22">ARCHIVE MEDIA · SOURCE FILE UNAVAILABLE</text>
+</svg>

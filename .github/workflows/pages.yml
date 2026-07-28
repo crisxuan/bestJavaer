@@ -1,4 +1,4 @@
-name: Deploy GitHub Pages
+name: Redirect GitHub Pages to Vercel
 
 on:
   push:
@@ -13,35 +13,57 @@ permissions:
 
 concurrency:
   group: pages
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   deploy:
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: https://bestjavaer-nine.vercel.app/
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Check article quality
-        run: |
-          if [ "${{ github.event_name }}" = "push" ] && [ "${{ github.event.before }}" != "0000000000000000000000000000000000000000" ]; then
-            python3 scripts/check_article_quality.py --base "${{ github.event.before }}" --head "${{ github.sha }}"
-          else
-            python3 scripts/check_article_quality.py --base HEAD --head HEAD
-          fi
-
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
-      - name: Prepare site
+      - name: Prepare redirect site
         run: |
           mkdir _site
-          rsync -av --exclude='.git' --exclude='.github' --exclude='_site' ./ _site/
+          cat > _site/index.html <<'HTML'
+          <!DOCTYPE html>
+          <html lang="en">
+          <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta name="robots" content="noindex">
+            <link rel="canonical" href="https://bestjavaer-nine.vercel.app/">
+            <meta http-equiv="refresh" content="0; url=https://bestjavaer-nine.vercel.app/">
+            <title>Moved to Vercel</title>
+          </head>
+          <body>
+            <script>
+              (function () {
+                var target = 'https://bestjavaer-nine.vercel.app/';
+                var route = window.location.pathname.replace(/^\/bestJavaer\/?/, '').replace(/\/$/, '');
+                var query = window.location.search || '';
+                var hash = window.location.hash || '';
+
+                if (hash) {
+                  window.location.replace(target + hash);
+                  return;
+                }
+
+                if (route.slice(-3).toLowerCase() === '.md') {
+                  route = route.slice(0, -3);
+                }
+
+                window.location.replace(target + (route ? '#/' + route : '') + query);
+              }());
+            </script>
+            <p>This site has moved to <a href="https://bestjavaer-nine.vercel.app/">bestjavaer-nine.vercel.app</a>.</p>
+          </body>
+          </html>
+          HTML
+          cp _site/index.html _site/404.html
           touch _site/.nojekyll
 
       - name: Upload artifact
@@ -49,6 +71,6 @@ jobs:
         with:
           path: _site
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy redirect to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

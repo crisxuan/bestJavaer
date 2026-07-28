@@ -646,7 +646,7 @@ RAID 有不同的级别
 
 我们可以计算一下磁盘臂所跨越的磁盘数量为 5 + 9 + 2 + 10 + 6 + 7 + 12 = 51，相当于是跨越了 51 次盘面，如果使用最短路径优先，我们来计算一下跨越的盘面
 
-![image-20200614184609291](/Users/mr.l/Library/Application Support/typora-user-images/image-20200614184609291.png)
+![image-20200614184609291](../../assets/archive-image-unavailable.svg)
 
 跨越的磁盘数量为 4 + 1 + 1 + 4 + 3 + 3 + 1 = 17 ，相比 51 足足省了两倍的时间。
 

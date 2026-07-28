@@ -489,7 +489,7 @@ sql-mode = "xx_mode"
   select 'berska' regexp '.s', 'zara' regexp '.a';
   ```
 
-  <img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20210123210447592.png" alt="image-20210123210447592" style="zoom:67%;" />
+  <img src="../../assets/archive-image-unavailable.svg" alt="image-20210123210447592" style="zoom:67%;" />
 
 * `[...]` 表示匹配括号内的任意字符，示例如下
 
@@ -497,7 +497,7 @@ sql-mode = "xx_mode"
   select 'whosyourdaddy' regexp '[abc]';
   ```
 
-  ![image-20210123210746829](/Users/mr.l/Library/Application Support/typora-user-images/image-20210123210746829.png)
+  ![image-20210123210746829](../../assets/archive-image-unavailable.svg)
 
 * `[^...]` 匹配括号内不包含的任意字符，和 `[...]` 是相反的，如果有任何匹配不上，返回 0 ，全部匹配上返回 1。
 
@@ -505,7 +505,7 @@ sql-mode = "xx_mode"
   select 'x' regexp '[^xyz]';
   ```
 
-  ![image-20210123222923573](/Users/mr.l/Library/Application Support/typora-user-images/image-20210123222923573.png)
+  ![image-20210123222923573](../../assets/archive-image-unavailable.svg)
 
 * `n*` 表示匹配零个或者多个 n 字符串，如下
 
@@ -513,7 +513,7 @@ sql-mode = "xx_mode"
   select 'aabbcc' regexp 'd*';
   ```
 
-  ![image-20210123223316050](/Users/mr.l/Library/Application Support/typora-user-images/image-20210123223316050.png)
+  ![image-20210123223316050](../../assets/archive-image-unavailable.svg)
 
   没有 d 出现也可以返回 1 ，因为 * 表示 0 或者多个。
 
@@ -523,7 +523,7 @@ sql-mode = "xx_mode"
   select 'aabbcc' regexp 'd+';
   ```
 
-  ![image-20210123224310069](/Users/mr.l/Library/Application Support/typora-user-images/image-20210123224310069.png)
+  ![image-20210123224310069](../../assets/archive-image-unavailable.svg)
 
 * `n?` 的用法和 n+ 类似，只不过 n? 可以匹配空串
 
@@ -549,7 +549,7 @@ CREATE TABLE `clerk_Info` (
 
 然后插入一些数据，插入完成后的数据如下。
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20210124084948449.png" alt="image-20210124084948449" style="zoom:67%;" />
+<img src="../../assets/archive-image-unavailable.svg" alt="image-20210124084948449" style="zoom:67%;" />
 
 然后我们可以使用 RAND() 函数进行随机检索数据行
 
@@ -559,7 +559,7 @@ select * from clerk_info order by rand();
 
 检索完成后的数据如下
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20210124085333652.png" alt="image-20210124085333652" style="zoom:67%;" />
+<img src="../../assets/archive-image-unavailable.svg" alt="image-20210124085333652" style="zoom:67%;" />
 
 多次查询后发现每次检索的数据顺序都是随机的。
 
@@ -575,7 +575,7 @@ select * from clerk_info order by rand();
 select name,sum(salary) from clerk_info group by name with rollup;
 ```
 
-![image-20210124125743028](/Users/mr.l/Library/Application Support/typora-user-images/image-20210124125743028.png)
+![image-20210124125743028](../../assets/archive-image-unavailable.svg)
 
 可以看到上面的表按照 name 进行分组，然后再对 money 进行统计。
 
@@ -589,7 +589,7 @@ select name,sum(salary) from clerk_info group by name with rollup;
 
 在 MySQL 中，数据库名和表名是由 `lower_case_tables_name` 系统变量决定的。可以在启动 `mysqld` 时设置这个系统变量。下面是 `lower_case_tables_name` 的值。
 
-![image-20210124131941141](/Users/mr.l/Library/Application Support/typora-user-images/image-20210124131941141.png)
+![image-20210124131941141](../../assets/archive-image-unavailable.svg)
 
 如果只在一个平台上使用 MySQL 的话，通常不需要修改 `lower_case_tables_name` 变量。如果想要在不同系统系统之间迁移表就会涉及到大小写问题，因为 UNIX 中 clerk_info 和 CLERK_INFO 被认为是两个不同的表，而 Windows 中则认为是一个。在 UNIX 中使用 lower_case_tables_name=0， 而在 Windows 中使用lower_case_tables_name=2，这样可以保留数据库名和表名的大小写，但是不能保证所有的 SQL 查询中使用的表名和数据库名的大小写相同。如果 SQL 语句中没有正确引用数据库名和表名的大小写，那么虽然在 Windows 中能正确执行，但是如果将查询转移到 UNIX 中，大小写不正确，将会导致查询失败。
 
@@ -627,51 +627,51 @@ select name,sum(salary) from clerk_info group by name with rollup;
 
 * LOWER(str) 和 UPPER(str) 函数：用于转换大小写
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200618164012868.png" alt="image-20200618164012868" style="zoom: 67%;" />
+<img src="../../assets/archive-image-unavailable.svg" alt="image-20200618164012868" style="zoom: 67%;" />
 
 * CONCAT(s1,s2 ... sn) ：把传入的参数拼接成一个字符串
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200618164319587.png" alt="image-20200618164319587" style="zoom:67%;" />
+<img src="../../assets/archive-image-unavailable.svg" alt="image-20200618164319587" style="zoom:67%;" />
 
 上面把 `c xu an` 拼接成为了一个字符串，另外需要注意一点，任何和 NULL 进行字符串拼接的结果都是 NULL。
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200618164428383.png" alt="image-20200618164428383" style="zoom:67%;" />
+<img src="../../assets/archive-image-unavailable.svg" alt="image-20200618164428383" style="zoom:67%;" />
 
 * LEFT(str,x) 和 RIGHT(str,x) 函数：分别返回字符串最左边的 x 个字符和最右边的 x 个字符。如果第二个参数是 NULL，那么将不会返回任何字符串
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200618172529748.png" alt="image-20200618172529748" style="zoom:67%;" />
+<img src="../../assets/archive-image-unavailable.svg" alt="image-20200618172529748" style="zoom:67%;" />
 
 * INSERT(str,x,y,instr) ： 将字符串 str 从指定 x 的位置开始， 取 y 个长度的字串替换为 instr。
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200618184422862.png" alt="image-20200618184422862" style="zoom:67%;" />
+<img src="../../assets/archive-image-unavailable.svg" alt="image-20200618184422862" style="zoom:67%;" />
 
 * LTRIM(str) 和 RTRIM(str) 分别表示去掉字符串 str 左侧和右侧的空格
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200618184615703.png" alt="image-20200618184615703" style="zoom:67%;" />
+<img src="../../assets/archive-image-unavailable.svg" alt="image-20200618184615703" style="zoom:67%;" />
 
 * REPEAT(str,x) 函数：返回 str 重复 x 次的结果
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200618184850749.png" alt="image-20200618184850749" style="zoom:67%;" />
+<img src="../../assets/archive-image-unavailable.svg" alt="image-20200618184850749" style="zoom:67%;" />
 
 * TRIM(str) 函数：用于去掉目标字符串的空格
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200618190739027.png" alt="image-20200618190739027" style="zoom:67%;" />
+<img src="../../assets/archive-image-unavailable.svg" alt="image-20200618190739027" style="zoom:67%;" />
 
 * SUBSTRING(str,x,y) 函数：返回从字符串 str 中第 x 位置起 y 个字符长度的字符串
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200618190933606.png" alt="image-20200618190933606" style="zoom:67%;" />
+<img src="../../assets/archive-image-unavailable.svg" alt="image-20200618190933606" style="zoom:67%;" />
 
 * LPAD(str,n,pad) 和 RPAD(str,n,pad) 函数：用字符串 pad 对 str 左边和右边进行填充，直到长度为 n 个字符长度
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200618191304880.png" alt="image-20200618191304880" style="zoom:67%;" />
+<img src="../../assets/archive-image-unavailable.svg" alt="image-20200618191304880" style="zoom:67%;" />
 
 * STRCMP(s1,s2) 用于比较字符串 s1 和 s2 的 ASCII 值大小。如果 s1 < s2，则返回 -1；如果 s1 = s2 ，返回 0 ；如果 s1 > s2 ，返回 1。
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200618191457478.png" alt="image-20200618191457478" style="zoom:67%;" />
+<img src="../../assets/archive-image-unavailable.svg" alt="image-20200618191457478" style="zoom:67%;" />
 
 * REPLACE(str,a,b) : 用字符串 b 替换字符串 str 种所有出现的字符串 a
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200618185040904.png" alt="image-20200618185040904" style="zoom:67%;" />
+<img src="../../assets/archive-image-unavailable.svg" alt="image-20200618185040904" style="zoom:67%;" />
 
 ### 数值函数
 
@@ -691,31 +691,31 @@ MySQL 支持数值函数，这些函数能够处理很多数值运算。下面�
 
 * ABS(x) 函数：返回 x 的绝对值
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200618194657865.png" alt="image-20200618194657865" style="zoom:67%;" />
+<img src="../../assets/archive-image-unavailable.svg" alt="image-20200618194657865" style="zoom:67%;" />
 
 * CEIL(x) 函数： 返回大于 x 的整数
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200618194939934.png" alt="image-20200618194939934" style="zoom:67%;" />
+<img src="../../assets/archive-image-unavailable.svg" alt="image-20200618194939934" style="zoom:67%;" />
 
 * MOD(x,y)，对 x 和 y 进行取模操作
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200618195052733.png" alt="image-20200618195052733" style="zoom:67%;" />
+<img src="../../assets/archive-image-unavailable.svg" alt="image-20200618195052733" style="zoom:67%;" />
 
 * ROUND(x,y) 返回 x 四舍五入后保留 y 位小数的值；如果是整数，那么 y 位就是 0 ；如果不指定 y ，那么 y 默认也是 0 。
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200618230452093.png" alt="image-20200618230452093" style="zoom:67%;" />
+<img src="../../assets/archive-image-unavailable.svg" alt="image-20200618230452093" style="zoom:67%;" />
 
 * FLOOR(x) : 返回小于 x 的最大整数，用法与 CEIL 相反
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200618230600793.png" alt="image-20200618230600793" style="zoom:67%;" />
+<img src="../../assets/archive-image-unavailable.svg" alt="image-20200618230600793" style="zoom:67%;" />
 
 * TRUNCATE(x,y): 返回数字 x 截断为 y 位小数的结果， TRUNCATE 知识截断，并不是四舍五入。
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200618230848465.png" alt="image-20200618230848465" style="zoom:67%;" />
+<img src="../../assets/archive-image-unavailable.svg" alt="image-20200618230848465" style="zoom:67%;" />
 
 * RAND() ：返回 0 到 1 的随机值
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200618231058270.png" alt="image-20200618231058270" style="zoom:67%;" />
+<img src="../../assets/archive-image-unavailable.svg" alt="image-20200618231058270" style="zoom:67%;" />
 
 ### 日期和时间函数
 
@@ -741,35 +741,35 @@ MySQL 支持数值函数，这些函数能够处理很多数值运算。下面�
 
 * NOW(): 返回当前的日期和时间
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200619142036108.png" alt="image-20200619142036108" style="zoom:67%;" />
+<img src="../../assets/archive-image-unavailable.svg" alt="image-20200619142036108" style="zoom:67%;" />
 
 * WEEK(DATE) 和 YEAR(DATE) ：前者返回的是一年中的第几周，后者返回的是给定日期的哪一年
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200619142356885.png" alt="image-20200619142356885" style="zoom:67%;" />
+<img src="../../assets/archive-image-unavailable.svg" alt="image-20200619142356885" style="zoom:67%;" />
 
 * HOUR(time) 和 MINUTE(time) : 返回给定时间的小时，后者返回给定时间的分钟
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200619142526187.png" alt="image-20200619142526187" style="zoom:67%;" />
+<img src="../../assets/archive-image-unavailable.svg" alt="image-20200619142526187" style="zoom:67%;" />
 
 * MONTHNAME(date) 函数：返回 date 的英文月份
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200619142957654.png" alt="image-20200619142957654" style="zoom:67%;" />
+<img src="../../assets/archive-image-unavailable.svg" alt="image-20200619142957654" style="zoom:67%;" />
 
 * CURDATE() 函数：返回当前日期，只包含年月日
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200619143225773.png" alt="image-20200619143225773" style="zoom:67%;" />
+<img src="../../assets/archive-image-unavailable.svg" alt="image-20200619143225773" style="zoom:67%;" />
 
 * CURTIME() 函数：返回当前时间，只包含时分秒
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200619143304467.png" alt="image-20200619143304467" style="zoom:67%;" />
+<img src="../../assets/archive-image-unavailable.svg" alt="image-20200619143304467" style="zoom:67%;" />
 
 * UNIX_TIMESTAMP(date) : 返回 UNIX 的时间戳
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200619143408681.png" alt="image-20200619143408681" style="zoom:67%;" />
+<img src="../../assets/archive-image-unavailable.svg" alt="image-20200619143408681" style="zoom:67%;" />
 
 * FROM_UNIXTIME(date) : 返回 UNIXTIME 时间戳的日期值，和 UNIX_TIMESTAMP 相反
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200619143532109.png" alt="image-20200619143532109" style="zoom:67%;" />
+<img src="../../assets/archive-image-unavailable.svg" alt="image-20200619143532109" style="zoom:67%;" />
 
 * DATE_FORMAT(date,fmt) 函数：按照字符串 fmt 对 date 进行格式化，格式化后按照指定日期格式显示
 
@@ -777,7 +777,7 @@ MySQL 支持数值函数，这些函数能够处理很多数值运算。下面�
 
 我们演示一下将当前日期显示为**年月日**的这种形式，使用的日期格式是 **%M %D %Y**。
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200619145256956.png" alt="image-20200619145256956" style="zoom:67%;" />
+<img src="../../assets/archive-image-unavailable.svg" alt="image-20200619145256956" style="zoom:67%;" />
 
 * DATE_ADD(date, interval, expr type) 函数：返回与所给日期 date 相差 interval 时间段的日期
 
@@ -801,7 +801,7 @@ interval 表示间隔类型的关键字，expr 是表达式，这个表达式对
 
 * DATE_DIFF(date1, date2) 用来计算两个日期之间相差的天数
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200619150346397.png" alt="image-20200619150346397" style="zoom:67%;" />
+<img src="../../assets/archive-image-unavailable.svg" alt="image-20200619150346397" style="zoom:67%;" />
 
 查看离 2021 - 01 - 01 还有多少天
 
@@ -834,31 +834,31 @@ interval 表示间隔类型的关键字，expr 是表达式，这个表达式对
 
 * VERSION: 返回当前数据库版本
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200619170425342.png" alt="image-20200619170425342" style="zoom:67%;" />
+<img src="../../assets/archive-image-unavailable.svg" alt="image-20200619170425342" style="zoom:67%;" />
 
 * DATABASE: 返回当前的数据库名
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200619170514694.png" alt="image-20200619170514694" style="zoom:67%;" />
+<img src="../../assets/archive-image-unavailable.svg" alt="image-20200619170514694" style="zoom:67%;" />
 
 * USER : 返回当前登录用户名
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200619170650887.png" alt="image-20200619170650887" style="zoom:67%;" />
+<img src="../../assets/archive-image-unavailable.svg" alt="image-20200619170650887" style="zoom:67%;" />
 
 * PASSWORD(str) : 返回字符串的加密版本，例如
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200619170838908.png" alt="image-20200619170838908" style="zoom:67%;" />
+<img src="../../assets/archive-image-unavailable.svg" alt="image-20200619170838908" style="zoom:67%;" />
 
 * MD5(str) 函数：返回字符串 str 的 MD5 值
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200619171240119.png" alt="image-20200619171240119" style="zoom:67%;" />
+<img src="../../assets/archive-image-unavailable.svg" alt="image-20200619171240119" style="zoom:67%;" />
 
 * INET_ATON(IP): 返回 IP 的网络字节序列
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200619171425647.png" alt="image-20200619171425647" style="zoom:67%;" />
+<img src="../../assets/archive-image-unavailable.svg" alt="image-20200619171425647" style="zoom:67%;" />
 
 * INET_NTOA(num)函数：返回网络字节序列代表的 IP 地址，与 INET_ATON 相对
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200619171523449.png" alt="image-20200619171523449" style="zoom:67%;" />
+<img src="../../assets/archive-image-unavailable.svg" alt="image-20200619171523449" style="zoom:67%;" />
 
 ## 总结
 

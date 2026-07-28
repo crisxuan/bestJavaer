@@ -1,0 +1,875 @@
+/* ==========================================================================
+   cxuan-ai-labs · Home "Print 印刷编辑室"（复古报纸风，明/暗双主题）
+   独立入口 print.html 使用；与突触版 (home-v2.css) 互不加载。
+   主题类：html.print-light / html.print-dark（仅首页挂载）
+   ========================================================================== */
+
+/* ---------- 主题变量 ---------- */
+
+html.print-light {
+  --ph-bg: #f2eee3;
+  --ph-ink: #1d1912;
+  --ph-red: #c23a1c;
+  --ph-muted: #7d7565;
+  --ph-faint: #a49b87;
+  --ph-line: #ddd5c1;
+  --ph-line-strong: #1d1912;
+  --ph-card: #efe9da;
+}
+
+html.print-dark {
+  --ph-bg: #17130b;
+  --ph-ink: #f0e8d4;
+  --ph-red: #ec5a1f;
+  --ph-muted: #948b76;
+  --ph-faint: #6d6552;
+  --ph-line: #38311f;
+  --ph-line-strong: #f0e8d4;
+  --ph-card: #1e1910;
+  /* docsify 基础调色板联动（标题 / strong / 引用等派生色自动跟随） */
+  --cx-bg: #17130b;
+  --cx-page: #17130b;
+  --cx-panel: #1e1910;
+  --cx-surface: #1e1910;
+  --cx-surface-2: #262014;
+  --cx-text: #f0e8d4;
+  --cx-muted: #948b76;
+  --cx-faint: #6d6552;
+  --cx-border: #38311f;
+  --cx-border-strong: #55503c;
+  --cx-accent: #ec5a1f;
+  --cx-accent-deep: #ff7a3d;
+  --cx-accent-soft: rgba(236, 90, 31, 0.14);
+}
+
+/* ---------- 页面基底 ---------- */
+
+html.print-light,
+html.print-light body,
+html.print-light .content,
+html.print-light .markdown-section,
+html.print-dark,
+html.print-dark body,
+html.print-dark .content,
+html.print-dark .markdown-section {
+  background: var(--ph-bg) !important;
+  color: var(--ph-ink);
+}
+
+.home-page .markdown-section > .ph {
+  margin: 0;
+  max-width: none;
+  width: 100%;
+}
+
+/* ---------- 基础重置 ---------- */
+
+.ph,
+.ph * {
+  box-sizing: border-box;
+}
+
+.ph h1,
+.ph h2,
+.ph p,
+.ph ol,
+.ph ul,
+.ph li,
+.ph dl,
+.ph dt,
+.ph dd {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.ph a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.ph {
+  background: var(--ph-bg);
+  color: var(--ph-ink);
+  font-family: "IBM Plex Sans", "Noto Sans SC", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.7;
+  min-height: 100dvh;
+  transition: background 0.35s ease, color 0.35s ease;
+}
+
+.print-light ::selection {
+  background: var(--ph-red);
+  color: #f7f2e4;
+}
+
+.print-dark ::selection {
+  background: var(--ph-red);
+  color: #17130b;
+}
+
+/* ---------- 报头 ---------- */
+
+.ph-masthead {
+  align-items: center;
+  border-bottom: 1px solid var(--ph-line-strong);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 28px;
+  justify-content: space-between;
+  padding: 18px clamp(20px, 4.5vw, 56px);
+}
+
+.ph-brand {
+  align-items: center;
+  display: inline-flex;
+  gap: 12px;
+}
+
+.ph-brand-mark {
+  align-items: center;
+  background: var(--ph-ink);
+  color: var(--ph-bg);
+  display: inline-flex;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 13px;
+  font-weight: 700;
+  height: 34px;
+  justify-content: center;
+  letter-spacing: 0.04em;
+  width: 34px;
+}
+
+.ph-brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.4;
+}
+
+.ph-brand-text strong {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.ph-brand-text em {
+  color: var(--ph-muted);
+  font-family: "IBM Plex Mono", "Noto Sans SC", monospace;
+  font-size: 10.5px;
+  font-style: normal;
+  letter-spacing: 0.06em;
+}
+
+.ph-mast-right {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.ph-date {
+  color: var(--ph-muted);
+  font-family: "IBM Plex Mono", "Noto Sans SC", monospace;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  margin-right: 6px;
+}
+
+.ph-btn {
+  appearance: none;
+  background: transparent;
+  border: 1px solid var(--ph-ink);
+  color: var(--ph-ink);
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "IBM Plex Mono", "Noto Sans SC", monospace;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  line-height: 1;
+  padding: 8px 13px;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.ph-btn:hover {
+  background: var(--ph-ink);
+  color: var(--ph-bg);
+}
+
+/* ---------- Hero ---------- */
+
+.ph-hero {
+  padding: clamp(48px, 7vh, 84px) clamp(20px, 4.5vw, 56px) 0;
+  position: relative;
+}
+
+.ph-kicker {
+  align-items: center;
+  color: var(--ph-muted);
+  display: flex;
+  flex-wrap: wrap;
+  font-family: "IBM Plex Mono", "Noto Sans SC", monospace;
+  font-size: 11.5px;
+  gap: 10px;
+  letter-spacing: 0.18em;
+  max-width: 70%;
+}
+
+.ph-kicker i {
+  background: var(--ph-red);
+  display: inline-block;
+  height: 7px;
+  width: 7px;
+}
+
+.ph-title {
+  color: var(--ph-ink);
+  font-family: "Noto Serif SC", serif;
+  font-size: clamp(52px, 8.6vw, 116px);
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+  margin-top: 26px;
+}
+
+.ph-title em {
+  font-family: "Newsreader", "Noto Serif SC", serif;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.ph-title .ph-accent {
+  border-bottom: 0.09em solid var(--ph-red);
+  color: var(--ph-red);
+}
+
+.ph-en .ph-title {
+  font-family: "Newsreader", "Noto Serif SC", serif;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+.ph-en .ph-title .ph-accent {
+  font-weight: 600;
+}
+
+/* 红印章 */
+
+.ph-stamp {
+  border: 2px solid var(--ph-red);
+  color: var(--ph-red);
+  font-family: "Noto Serif SC", serif;
+  font-size: 21px;
+  font-weight: 700;
+  left: 73%;
+  letter-spacing: 0.1em;
+  line-height: 1.25;
+  outline: 1px solid var(--ph-red);
+  outline-offset: 3px;
+  padding: 8px 10px;
+  position: absolute;
+  text-align: center;
+  top: clamp(40px, 6vh, 72px);
+  transform: rotate(7deg);
+  writing-mode: vertical-rl;
+}
+
+/* 右侧竖排标语 */
+
+.ph-vertical {
+  color: var(--ph-faint);
+  font-family: "IBM Plex Mono", "Noto Sans SC", monospace;
+  font-size: 10px;
+  letter-spacing: 0.32em;
+  position: absolute;
+  right: 18px;
+  top: 42%;
+  writing-mode: vertical-rl;
+}
+
+/* Hero 底部：导语 + 数据 */
+
+.ph-hero-foot {
+  align-items: flex-end;
+  border-top: 1px solid var(--ph-line);
+  display: flex;
+  gap: 48px;
+  justify-content: space-between;
+  margin-top: clamp(36px, 5vh, 56px);
+  padding-top: 30px;
+}
+
+.ph-lede {
+  color: var(--ph-muted);
+  font-family: "Noto Sans SC", sans-serif;
+  font-size: 14.5px;
+  line-height: 1.95;
+  max-width: 600px;
+}
+
+.ph-stats {
+  display: flex;
+  flex: 0 0 auto;
+}
+
+.ph-stat {
+  border-left: 1px solid var(--ph-line);
+  padding: 2px 26px;
+}
+
+.ph-stat:first-child {
+  border-left: 0;
+  padding-left: 0;
+}
+
+.ph-stat b {
+  display: block;
+  font-family: "Noto Serif SC", serif;
+  font-size: 42px;
+  font-weight: 900;
+  line-height: 1.1;
+}
+
+.ph-stat span {
+  color: var(--ph-muted);
+  display: block;
+  font-family: "IBM Plex Mono", "Noto Sans SC", monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
+  margin-top: 4px;
+}
+
+/* ---------- 快报滚动条 ---------- */
+
+.ph-ticker {
+  align-items: stretch;
+  border-bottom: 1px solid var(--ph-line);
+  border-top: 1px solid var(--ph-line-strong);
+  display: flex;
+  margin-top: clamp(36px, 5vh, 54px);
+  overflow: hidden;
+}
+
+.ph-ticker-label {
+  align-items: center;
+  background: var(--ph-red);
+  color: var(--ph-bg);
+  display: inline-flex;
+  flex: 0 0 auto;
+  font-family: "Noto Sans SC", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  padding: 10px 18px;
+}
+
+.ph-ticker-viewport {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+.ph-ticker-track {
+  align-items: center;
+  display: inline-flex;
+  gap: 44px;
+  padding: 10px 22px;
+  white-space: nowrap;
+  will-change: transform;
+}
+
+.ph-ticker-track.is-live {
+  animation: phTicker 42s linear infinite;
+}
+
+@keyframes phTicker {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.ph-ticker-item {
+  align-items: baseline;
+  display: inline-flex;
+  font-family: "IBM Plex Mono", "Noto Sans SC", monospace;
+  font-size: 12px;
+  gap: 10px;
+}
+
+.ph-ticker-item::before {
+  background: var(--ph-red);
+  content: "";
+  display: inline-block;
+  height: 6px;
+  margin-right: 22px;
+  transform: translateY(-1px);
+  width: 6px;
+}
+
+.ph-ticker-item time {
+  color: var(--ph-faint);
+}
+
+.ph-ticker-item strong {
+  color: var(--ph-ink);
+  font-weight: 600;
+}
+
+.ph-ticker-item:hover strong {
+  color: var(--ph-red);
+}
+
+/* ---------- 版块通用 ---------- */
+
+.ph-section {
+  padding: clamp(56px, 8vh, 92px) clamp(20px, 4.5vw, 56px) 0;
+}
+
+.ph-sec-head {
+  align-items: baseline;
+  border-bottom: 2px solid var(--ph-line-strong);
+  display: flex;
+  gap: 18px;
+  padding-bottom: 16px;
+}
+
+.ph-sec-no {
+  color: var(--ph-red);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.ph-sec-head h2 {
+  font-family: "Noto Serif SC", serif;
+  font-size: clamp(28px, 3vw, 38px);
+  font-weight: 900;
+  line-height: 1.1;
+}
+
+.ph-sec-en {
+  color: var(--ph-faint);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.ph-sec-more {
+  font-family: "IBM Plex Mono", "Noto Sans SC", monospace;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  margin-left: auto;
+  white-space: nowrap;
+}
+
+.ph-sec-more:hover {
+  color: var(--ph-red);
+}
+
+/* ---------- 最新刊发 ---------- */
+
+.home-page .markdown-section ol.ph-dispatch,
+.ph-dispatch {
+  list-style: none;
+  padding-left: 0;
+}
+
+.ph-dispatch li {
+  border-bottom: 1px solid var(--ph-line);
+}
+
+.ph-dispatch a {
+  align-items: baseline;
+  display: flex;
+  gap: 30px;
+  padding: 26px 4px;
+  transition: background 0.15s ease;
+}
+
+.ph-dispatch a:hover {
+  background: var(--ph-card);
+}
+
+.ph-d-no {
+  color: var(--ph-faint);
+  flex: 0 0 auto;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+}
+
+.ph-d-title {
+  display: block;
+  font-family: "Noto Serif SC", serif;
+  font-size: clamp(19px, 1.8vw, 25px);
+  font-weight: 700;
+  line-height: 1.35;
+  transition: color 0.15s ease;
+}
+
+.ph-dispatch a:hover .ph-d-title {
+  color: var(--ph-red);
+}
+
+.ph-d-meta {
+  color: var(--ph-muted);
+  display: block;
+  font-family: "IBM Plex Mono", "Noto Sans SC", monospace;
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  margin-top: 8px;
+}
+
+/* ---------- 栏目 ---------- */
+
+.ph-grid {
+  border: 1px solid var(--ph-line-strong);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 34px;
+}
+
+.ph-cell {
+  border-bottom: 1px solid var(--ph-line-strong);
+  border-right: 1px solid var(--ph-line-strong);
+  display: block;
+  padding: 30px 32px 34px;
+  transition: background 0.15s ease;
+}
+
+.ph-cell:nth-child(3n) {
+  border-right: 0;
+}
+
+.ph-cell:nth-last-child(-n + 3) {
+  border-bottom: 0;
+}
+
+.ph-cell:hover {
+  background: var(--ph-card);
+}
+
+.ph-cell-no {
+  color: var(--ph-red);
+  display: block;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+.ph-cell strong {
+  display: block;
+  font-family: "Noto Serif SC", serif;
+  font-size: 25px;
+  font-weight: 900;
+  line-height: 1.2;
+  margin-top: 14px;
+}
+
+.ph-cell small {
+  color: var(--ph-muted);
+  display: block;
+  font-family: "IBM Plex Mono", "Noto Sans SC", monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
+  margin-top: 6px;
+}
+
+.ph-cell p {
+  color: var(--ph-muted);
+  font-size: 13px;
+  line-height: 1.8;
+  margin-top: 16px;
+}
+
+/* ---------- 作品与开源 ---------- */
+
+.ph-works {
+  display: grid;
+  gap: 22px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 34px;
+}
+
+.ph-work {
+  border: 1px solid var(--ph-line-strong);
+  border-top: 3px solid var(--ph-line-strong);
+  display: block;
+  padding: 26px 30px 28px;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.ph-work:hover {
+  background: var(--ph-card);
+  transform: translateY(-2px);
+}
+
+.ph-work-tag {
+  border: 1px solid var(--ph-faint);
+  color: var(--ph-muted);
+  display: inline-block;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 9.5px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  padding: 4px 8px;
+}
+
+.ph-work strong {
+  display: block;
+  font-family: "IBM Plex Sans", "Noto Sans SC", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-top: 16px;
+}
+
+.ph-work p {
+  color: var(--ph-muted);
+  font-size: 13.5px;
+  line-height: 1.75;
+  margin-top: 10px;
+}
+
+.ph-work-link {
+  color: var(--ph-red);
+  display: inline-block;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  margin-top: 16px;
+}
+
+/* ---------- 为什么值得订阅 ---------- */
+
+.ph-follow {
+  align-items: start;
+  display: grid;
+  gap: clamp(40px, 5vw, 80px);
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+}
+
+.ph-follow-text {
+  font-family: "Noto Serif SC", serif;
+  font-size: clamp(16px, 1.4vw, 19px);
+  font-weight: 600;
+  line-height: 2.05;
+}
+
+.ph-follow-text::first-letter {
+  color: var(--ph-red);
+  float: left;
+  font-size: 3.4em;
+  font-weight: 900;
+  line-height: 0.85;
+  padding: 6px 12px 0 0;
+}
+
+.ph-en .ph-follow-text::first-letter {
+  font-family: "Newsreader", serif;
+}
+
+.ph-follow-sign {
+  color: var(--ph-muted);
+  font-family: "IBM Plex Mono", "Noto Sans SC", monospace;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  margin-top: 22px;
+}
+
+.ph-follow-links {
+  border: 1px solid var(--ph-line-strong);
+  padding: 10px 26px;
+}
+
+.ph-follow-links a {
+  align-items: baseline;
+  border-bottom: 1px solid var(--ph-line);
+  display: flex;
+  justify-content: space-between;
+  padding: 13px 2px;
+}
+
+.ph-follow-links a:last-child {
+  border-bottom: 0;
+}
+
+.ph-follow-links a:hover {
+  color: var(--ph-red);
+}
+
+.ph-follow-links b {
+  font-family: "Noto Serif SC", serif;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.ph-follow-links span {
+  color: var(--ph-faint);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+/* ---------- 页脚 ---------- */
+
+.ph-footer {
+  align-items: center;
+  border-top: 1px solid var(--ph-line-strong);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 32px;
+  justify-content: space-between;
+  margin-top: clamp(56px, 8vh, 92px);
+  padding: 22px clamp(20px, 4.5vw, 56px) 26px;
+}
+
+.ph-footer span,
+.ph-footer a {
+  color: var(--ph-muted);
+  font-family: "IBM Plex Mono", "Noto Sans SC", monospace;
+  font-size: 11px;
+  letter-spacing: 0.05em;
+}
+
+.ph-footer a:hover {
+  color: var(--ph-red);
+}
+
+.ph-footer .ph-footer-strong {
+  color: var(--ph-ink);
+  font-weight: 600;
+}
+
+/* ---------- 进场动效 ---------- */
+
+.ph-js [data-ph-reveal] {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.ph-js [data-ph-reveal].is-in {
+  opacity: 1;
+  transform: none;
+}
+
+/* ---------- 响应式 ---------- */
+
+@media (max-width: 960px) {
+  .ph-stamp {
+    left: auto;
+    right: clamp(20px, 4.5vw, 56px);
+    top: 30px;
+    transform: rotate(7deg) scale(0.86);
+  }
+
+  .ph-vertical {
+    display: none;
+  }
+
+  .ph-hero-foot {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .ph-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ph-cell:nth-child(3n) {
+    border-right: 1px solid var(--ph-line-strong);
+  }
+
+  .ph-cell:nth-child(2n) {
+    border-right: 0;
+  }
+
+  .ph-cell:nth-last-child(-n + 3) {
+    border-bottom: 1px solid var(--ph-line-strong);
+  }
+
+  .ph-cell:nth-last-child(-n + 2) {
+    border-bottom: 0;
+  }
+
+  .ph-follow {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 620px) {
+  .ph-masthead {
+    gap: 12px;
+  }
+
+  .ph-date {
+    display: none;
+  }
+
+  .ph-title {
+    font-size: clamp(42px, 12.5vw, 64px);
+  }
+
+  .ph-stats {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 18px;
+  }
+
+  .ph-stat {
+    padding: 2px 18px;
+  }
+
+  .ph-stat:nth-child(odd) {
+    border-left: 0;
+    padding-left: 0;
+  }
+
+  .ph-stat b {
+    font-size: 32px;
+  }
+
+  .ph-grid,
+  .ph-works {
+    grid-template-columns: 1fr;
+  }
+
+  .ph-cell,
+  .ph-cell:nth-child(2n),
+  .ph-cell:nth-child(3n) {
+    border-right: 0;
+  }
+
+  .ph-cell:nth-last-child(-n + 2) {
+    border-bottom: 1px solid var(--ph-line-strong);
+  }
+
+  .ph-cell:last-child {
+    border-bottom: 0;
+  }
+
+  .ph-dispatch a {
+    gap: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ph-ticker-track.is-live {
+    animation: none;
+  }
+
+  .ph-js [data-ph-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none;
+  }
+}

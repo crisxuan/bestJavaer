@@ -1,0 +1,19 @@
+{
+  "name": "cxuan-ai-labs",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Static Docsify site for cxuan-ai-labs.",
+  "scripts": {
+    "build": "npm run build:feeds && node scripts/build-seo.mjs",
+    "build:feeds": "node scripts/build-feeds.js",
+    "build:seo": "node scripts/build-seo.mjs",
+    "audit:links": "node scripts/audit-content-links.js",
+    "audit:seo": "node scripts/audit-seo.mjs",
+    "test": "node --check assets/article-cards.js && node --check api/geo.js && node --check scripts/build-feeds.js && node --check scripts/build-seo.mjs && node --check scripts/audit-seo.mjs && node --check assets/home-v2.js && node --check scripts/dev-server.js && node --check scripts/audit-content-links.js && npm run build && npm run audit:links && npm run audit:seo",
+    "dev": "node scripts/dev-server.js",
+    "serve": "python3 -m http.server 4173 --bind 127.0.0.1"
+  },
+  "devDependencies": {
+    "marked": "^18.0.7"
+  }
+}

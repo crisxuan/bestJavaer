@@ -28,7 +28,7 @@
 
 也会不定期分享优质资源
 
-<img src="/Users/mr.l/Library/Application Support/typora-user-images/image-20200112083120846.png" alt="image-20200112083120846" style="zoom: 25%;" />
+<img src="../../assets/archive-image-unavailable.svg" alt="image-20200112083120846" style="zoom: 25%;" />
 
 这个群我真的希望大家能够学到东西，增长视野，得到提高，**加群方式：文末添加个人微信号回复加群**
 

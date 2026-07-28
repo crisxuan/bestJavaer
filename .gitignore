@@ -1,1 +1,8 @@
 .DS_Store
+.claude/
+.playwright-cli
+.vercel
+_site
+output/
+dist/
+node_modules/

@@ -790,7 +790,7 @@ MySQL 支持所有标准的 SQL 数据类型，这些数据类型包括严格数
 
 在整数类型中，按照取值范围和存储方式的不同，分为 
 
-![image-20200613091331344](/Users/mr.l/Library/Application Support/typora-user-images/image-20200613091331344.png)
+![image-20200613091331344](../../assets/archive-image-unavailable.svg)
 
 * TINYINT ，占用 1 字节
 * SMALLINT，占用 2 字节

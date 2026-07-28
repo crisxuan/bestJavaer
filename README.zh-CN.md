@@ -1,7 +1,7 @@
 [English](./README.md) | [中文](./README.zh-CN.md)
 
 <div align="center">
-  <img src="./assets/cxuan-ai-labs.gif" alt="cxuan-ai-labs" width="70%">
+  <img src="./assets/cxuan-ai-labs-logo.png" alt="cxuan-ai-labs" width="70%">
 </div>
 
 # cxuan-ai-labs
@@ -46,12 +46,12 @@
 * [OpenAI 把 HuggingFace 打穿了](./ai-articles/04-industry-and-business/OpenAI%20%E6%8A%8A%20HuggingFace%20%E6%89%93%E7%A9%BF%E4%BA%86.md)
 
   2026-07-22
-* [我个人非常不理解甚至有些厌恶用 AI 写书的。](./ai-articles/06-notes-and-observations/%E6%88%91%E4%B8%AA%E4%BA%BA%E9%9D%9E%E5%B8%B8%E4%B8%8D%E7%90%86%E8%A7%A3%E7%94%9A%E8%87%B3%E6%9C%89%E4%BA%9B%E5%8E%8C%E6%81%B6%E7%94%A8%20AI%20%E5%86%99%E4%B9%A6%E7%9A%84%E3%80%82.md)
-
-  2026-07-22
 * [Loop 还没玩明白，Graph Engineering 又火了：说白了，就是给 Agent 组个团队](./ai-articles/01-agent-and-coding/Loop%20%E8%BF%98%E6%B2%A1%E7%8E%A9%E6%98%8E%E7%99%BD%EF%BC%8CGraph%20Engineering%20%E5%8F%88%E7%81%AB%E4%BA%86%EF%BC%9A%E8%AF%B4%E7%99%BD%E4%BA%86%EF%BC%8C%E5%B0%B1%E6%98%AF%E7%BB%99%20Agent%20%E7%BB%84%E4%B8%AA%E5%9B%A2%E9%98%9F.md)
 
   2026-07-21
+* [OpenAI 官方提示词指南](./ai-articles/02-models-and-research/OpenAI%20%E5%AE%98%E6%96%B9%E6%8F%90%E7%A4%BA%E8%AF%8D%E6%8C%87%E5%8D%97.md)
+
+  2026-07-20
 
 ## 新主线
 
@@ -77,7 +77,6 @@
 * 2026-07-22 · [Qoder + Qwen 3.8 实测](./ai-articles/02-models-and-research/Qoder%20%2B%20Qwen%203.8%20%E5%AE%9E%E6%B5%8B.md)
 * 2026-07-22 · [好家伙，继 Fable 5 系统提示词被扒之后，又一个 Claude 系统提示词被扒了。](./ai-articles/02-models-and-research/%E5%A5%BD%E5%AE%B6%E4%BC%99%EF%BC%8C%E7%BB%A7%20Fable%205%20%E7%B3%BB%E7%BB%9F%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A2%AB%E6%89%92%E4%B9%8B%E5%90%8E%EF%BC%8C%E5%8F%88%E4%B8%80%E4%B8%AA%20Claude%20%E7%B3%BB%E7%BB%9F%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%A2%AB%E6%89%92%E4%BA%86%E3%80%82.md)
 * 2026-07-22 · [OpenAI 把 HuggingFace 打穿了](./ai-articles/04-industry-and-business/OpenAI%20%E6%8A%8A%20HuggingFace%20%E6%89%93%E7%A9%BF%E4%BA%86.md)
-* 2026-07-22 · [我个人非常不理解甚至有些厌恶用 AI 写书的。](./ai-articles/06-notes-and-observations/%E6%88%91%E4%B8%AA%E4%BA%BA%E9%9D%9E%E5%B8%B8%E4%B8%8D%E7%90%86%E8%A7%A3%E7%94%9A%E8%87%B3%E6%9C%89%E4%BA%9B%E5%8E%8C%E6%81%B6%E7%94%A8%20AI%20%E5%86%99%E4%B9%A6%E7%9A%84%E3%80%82.md)
 * 2026-07-21 · [Loop 还没玩明白，Graph Engineering 又火了：说白了，就是给 Agent 组个团队](./ai-articles/01-agent-and-coding/Loop%20%E8%BF%98%E6%B2%A1%E7%8E%A9%E6%98%8E%E7%99%BD%EF%BC%8CGraph%20Engineering%20%E5%8F%88%E7%81%AB%E4%BA%86%EF%BC%9A%E8%AF%B4%E7%99%BD%E4%BA%86%EF%BC%8C%E5%B0%B1%E6%98%AF%E7%BB%99%20Agent%20%E7%BB%84%E4%B8%AA%E5%9B%A2%E9%98%9F.md)
 * 2026-07-20 · [OpenAI 官方提示词指南](./ai-articles/02-models-and-research/OpenAI%20%E5%AE%98%E6%96%B9%E6%8F%90%E7%A4%BA%E8%AF%8D%E6%8C%87%E5%8D%97.md)
 * 2026-07-18 · [周三跟大家说的一些模型可能要发布，结果今天 Kimi 就炸场了。](./ai-articles/02-models-and-research/%E5%91%A8%E4%B8%89%E8%B7%9F%E5%A4%A7%E5%AE%B6%E8%AF%B4%E7%9A%84%E4%B8%80%E4%BA%9B%E6%A8%A1%E5%9E%8B%E5%8F%AF%E8%83%BD%E8%A6%81%E5%8F%91%E5%B8%83%EF%BC%8C%E7%BB%93%E6%9E%9C%E4%BB%8A%E5%A4%A9%20Kimi%20%E5%B0%B1%E7%82%B8%E5%9C%BA%E4%BA%86%E3%80%82.md)
@@ -90,6 +89,16 @@
 * 文章会保留“踩坑”和“失败路径”，因为 AI 时代最值钱的往往不是结论，而是排错过程。
 * 资源页不追求大而全，只收适合读者顺手收藏、试用或作为参考的项目。
 * 旧 bestJavaer 的内容不会丢，新内容会继续向 AI 工具、Agent 工作流和个人实验转移。
+
+## 构建与 SEO
+
+```bash
+pnpm install
+pnpm build
+pnpm test
+```
+
+生产构建会保留现有 Docsify 动态阅读体验，同时在 `/articles/` 与 `/en/articles/` 输出可直接抓取的完整 HTML，并为每篇文章生成 RSS、Sitemap、Canonical、hreflang、Open Graph 和 Article JSON-LD。
 
 ## 旧内容
 

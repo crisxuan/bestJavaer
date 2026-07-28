@@ -1,35 +1,220 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="cxuan-ai-labs: an open-source lab for AI coding workflows, Agent experiments, and developer education.">
-  <meta name="theme-color" content="#00b38a">
+  <meta http-equiv="Cache-Control" content="no-store">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <meta name="description" content="cxuan-ai-labs: Codex 与 AI 工具教程、实战实验和优质资源。">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <meta name="theme-color" content="#f5f7f7">
   <meta property="og:title" content="cxuan-ai-labs">
-  <meta property="og:description" content="An open-source lab for AI coding workflows, Agent experiments, and developer education.">
+  <meta property="og:description" content="Codex 与 AI 工具教程、实战实验和优质资源。">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://crisxuan.github.io/bestJavaer/">
-  <meta property="og:image" content="https://crisxuan.github.io/bestJavaer/assets/cxuan-ai-labs.gif">
+  <meta property="og:site_name" content="cxuan-ai-labs">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:url" content="https://bestjavaer-nine.vercel.app/">
+  <meta property="og:image" content="https://bestjavaer-nine.vercel.app/assets/home-neural-hero.png">
+  <meta property="og:image:alt" content="cxuan-ai-labs：Codex、Claude Code 与 Agent 工作流实战记录">
+  <meta property="og:image:width" content="1672">
+  <meta property="og:image:height" content="941">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="cxuan-ai-labs">
+  <meta name="twitter:description" content="Codex 与 AI 工具教程、实战实验和优质资源。">
+  <meta name="twitter:image" content="https://bestjavaer-nine.vercel.app/assets/home-neural-hero.png">
+  <link rel="canonical" href="https://bestjavaer-nine.vercel.app/">
+  <link rel="alternate" hreflang="zh-CN" href="https://bestjavaer-nine.vercel.app/">
+  <link rel="alternate" hreflang="en" href="https://bestjavaer-nine.vercel.app/en/">
+  <link rel="alternate" hreflang="x-default" href="https://bestjavaer-nine.vercel.app/">
   <title>cxuan-ai-labs</title>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "cxuan-ai-labs",
+      "url": "https://bestjavaer-nine.vercel.app/",
+      "description": "长期折腾 Codex、Claude Code 和 Agent 工作流，记录真实踩坑、工具实测和产品判断。",
+      "inLanguage": ["zh-CN", "en"],
+      "publisher": {
+        "@type": "Person",
+        "name": "cxuan",
+        "url": "https://github.com/crisxuan",
+        "sameAs": ["https://github.com/crisxuan"]
+      }
+    }
+  </script>
+  <style>
+    .seo-fallback{box-sizing:border-box;color:#12231f;margin:0 auto;max-width:1180px;min-height:100vh;padding:19vh 6vw 10vh}.seo-fallback small{color:#079268;font:600 12px/1.5 monospace;letter-spacing:.14em}.seo-fallback h1{font:700 clamp(44px,8vw,96px)/1.03 sans-serif;letter-spacing:-.055em;margin:20px 0 24px}.seo-fallback>p{color:#64746f;font:400 clamp(17px,2vw,22px)/1.7 sans-serif;max-width:720px}.seo-fallback nav{display:flex;flex-wrap:wrap;gap:12px;margin-top:38px}.seo-fallback nav a{border:1px solid rgba(18,35,31,.18);color:#12231f;font:600 13px/1.2 monospace;padding:13px 18px;text-decoration:none}.cx-theme-dark .seo-fallback{color:#e8efed}.cx-theme-dark .seo-fallback nav a{border-color:rgba(232,239,237,.18);color:#e8efed}
+  </style>
+  <script>
+    (function bootDesignRoute() {
+      var hash;
+      var route;
+      var html;
+      var isHome;
+      var isArticleIndex;
+      var isCategoryIndex;
+      var isArticleDetail;
+      var isDesignManaged;
+      var isDirectoryRoute;
+      var hasManualLanguage;
+      var manualLanguage;
+      var neuralTheme;
+
+      if (window.location.protocol !== 'file:') {
+        hash = window.location.hash || '#/';
+      } else {
+        hash = window.location.hash || '#/';
+        window.location.replace('http://localhost:4173/' + hash);
+        return;
+      }
+
+      route = hash.indexOf('#/') === 0 ? hash.slice(2) : hash.replace(/^#/, '');
+      route = route.split('?')[0].split('#')[0].replace(/^\/+/, '').replace(/\.md$/i, '').replace(/\/+$/, '');
+
+      try {
+        route = decodeURIComponent(route);
+      } catch (error) {
+        route = route;
+      }
+
+      try {
+        manualLanguage = window.localStorage.getItem('cxuan-home-language') || '';
+      } catch (error) {
+        manualLanguage = '';
+      }
+
+      try {
+        neuralTheme = window.localStorage.getItem('cxuan-home-neural-theme') || 'light';
+      } catch (error) {
+        neuralTheme = 'light';
+      }
+
+      if (/^en/i.test(manualLanguage) && (route === '' || route === '/' || route === 'README')) {
+        window.location.replace(window.location.pathname + window.location.search + '#/home.en');
+        return;
+      }
+
+      html = document.documentElement;
+      neuralTheme = neuralTheme === 'dark' ? 'dark' : 'light';
+      isHome = route === '' || route === '/' || route === 'README' || route === 'home.en';
+      isArticleIndex = (
+        route === 'ai-articles' ||
+        route === 'ai-articles/README' ||
+        route === 'en/ai-articles' ||
+        route === 'en/ai-articles/README' ||
+        /^(?:en\/)?ai-articles\/[^/]+\/README$/.test(route)
+      );
+      isCategoryIndex = /^(?:en\/)?ai-articles\/0[1-6]-[^/]+\/README$/.test(route);
+      isArticleDetail = /^(?:en\/)?ai-articles\/[^/]+\/.+$/.test(route) && !/\/README$/.test(route);
+      isDesignManaged = isHome || isArticleIndex || isArticleDetail;
+      isDirectoryRoute = /^(?:en\/)?(?:works|ai-resources|development-guidelines)\/README$/.test(route);
+
+      html.classList.toggle('home-page', isHome);
+      html.classList.toggle('wide-page', isHome || isArticleIndex);
+      html.classList.toggle('article-index-page', isArticleIndex);
+      html.classList.toggle('category-design-page', isCategoryIndex);
+      html.classList.toggle('article-detail-page', isArticleDetail);
+      html.classList.toggle(
+        'cx-design-page',
+        route === 'ai-articles' ||
+          route === 'ai-articles/README' ||
+          route === 'en/ai-articles' ||
+          route === 'en/ai-articles/README'
+      );
+      html.classList.toggle('cx-design-managed', isDesignManaged);
+      html.classList.toggle('cx-doc-page', !isDesignManaged);
+      html.classList.toggle('cx-directory-route', isDirectoryRoute);
+      html.classList.toggle('cx-legacy-page', route.indexOf('archive-bestjavaer') === 0);
+      html.classList.toggle('cx-theme-light', neuralTheme === 'light');
+      html.classList.toggle('cx-theme-dark', neuralTheme === 'dark');
+      html.classList.toggle('home-neural-light', isHome && neuralTheme === 'light');
+      html.classList.toggle('home-neural-dark', isHome && neuralTheme !== 'light');
+      html.style.colorScheme = neuralTheme;
+
+      if (document.querySelector('meta[name="theme-color"]')) {
+        document.querySelector('meta[name="theme-color"]').setAttribute(
+          'content',
+          neuralTheme === 'light' ? '#f5f7f7' : '#0a0c10'
+        );
+      }
+      html.lang = route === 'home.en' || route === 'home.print.en' || /^en(?:\/|$)/.test(route)
+        ? 'en'
+        : 'zh-CN';
+
+      if (isDesignManaged) {
+        html.classList.add('cx-design-booting');
+      }
+
+      if (isArticleDetail) {
+        window.setTimeout(function revealArticleDetailWhenRendered() {
+          var section = document.querySelector('.markdown-section');
+          var hasRenderedArticle =
+            section &&
+            section.querySelector('h1') &&
+            section.textContent.replace(/\s+/g, '').length > 30;
+
+          if (hasRenderedArticle) {
+            html.classList.remove('cx-design-booting');
+            return;
+          }
+
+          if (html.classList.contains('article-detail-page')) {
+            window.setTimeout(revealArticleDetailWhenRendered, 160);
+          }
+        }, 500);
+      }
+
+      hasManualLanguage = !!manualLanguage;
+
+      if (!hasManualLanguage && (route === '' || route === '/' || route === 'README')) {
+        html.classList.add('cx-language-detecting');
+      }
+    }());
+  </script>
   <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">
-  <link rel="stylesheet" href="./assets/docsify.css?v=20260618-home-labels">
+  <link rel="alternate" type="application/rss+xml" title="cxuan-ai-labs RSS" href="./rss.xml">
+  <link rel="alternate" type="application/rss+xml" title="cxuan-ai-labs English RSS" href="./rss.en.xml">
+  <link rel="sitemap" type="application/xml" href="./sitemap.xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Noto+Sans+SC:wght@400;500;700;900&family=Noto+Serif+SC:wght@600;700;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/vendor/theme-simple.css">
+  <link rel="stylesheet" href="./assets/docsify.css?v=20260701-home-neural-pointer-1">
+  <link rel="stylesheet" href="./assets/home-v2.css?v=20260728-works2-2">
 </head>
 <body>
-  <div id="app">Loading...</div>
+  <div id="app">
+    <main class="seo-fallback">
+      <small>CXUAN · AI LABS</small>
+      <h1>把复杂的 AI，<br>讲成能上手的干货。</h1>
+      <p>长期折腾 Codex、Claude Code 和 Agent 工作流，记录真实踩坑、工具实测和产品判断。</p>
+      <nav aria-label="内容入口">
+        <a href="/articles/">全部文章</a>
+        <a href="/articles/01-agent-and-coding/">AI Agent 与编程工具</a>
+        <a href="/articles/02-models-and-research/">模型与研究</a>
+        <a href="/articles/03-tools-and-resources/">工具与资源</a>
+        <a href="/en/">English</a>
+      </nav>
+    </main>
+  </div>
   <script>
     window.$docsify = {
       name: 'cxuan-ai-labs',
       nameLink: '#/',
       repo: 'crisxuan/bestJavaer',
-      homepage: 'README.md?v=20260604-bilingual-readme',
+      homepage: 'home.md?v=20260728-about-1',
       loadNavbar: '_navbar.md',
       loadSidebar: '_sidebar.md',
       alias: {
         '/.*/_sidebar.md': '/_sidebar.md',
         '/.*/_navbar.md': '/_navbar.md'
       },
-      notFoundPage: true,
+      notFoundPage: {
+        '/en/': '/_404.en.md',
+        '/': '/_404.md'
+      },
       subMaxLevel: 2,
       auto2top: true,
       relativePath: true,
@@ -41,7 +226,10 @@
 
             if (cleanHash && cleanHash !== window.location.hash) {
               window.location.replace(window.location.pathname + window.location.search + cleanHash);
+              return;
             }
+
+            cleanDesignNavigationQuery();
           });
         }
       ],
@@ -55,9 +243,9 @@
         placeholder: 'Search articles'
       },
       copyCode: {
-        buttonText: 'Copy',
-        errorText: 'Copy failed',
-        successText: 'Copied'
+        buttonText: '复制',
+        errorText: '复制失败',
+        successText: '已复制'
       }
     };
 
@@ -89,10 +277,35 @@
 
       return '#/' + cleaned.join('/') + query;
     }
+
+    function cleanDesignNavigationQuery() {
+      var params;
+
+      if (!window.location.search || window.location.search.indexOf('cx-nav=') === -1) {
+        return;
+      }
+
+      if (!window.history || !window.history.replaceState) {
+        return;
+      }
+
+      params = new URLSearchParams(window.location.search);
+      params.delete('cx-nav');
+      params.delete('cx-r');
+
+      window.history.replaceState(
+        null,
+        '',
+        window.location.pathname +
+          (params.toString() ? '?' + params.toString() : '') +
+          window.location.hash
+      );
+    }
   </script>
-  <script src="./assets/article-cards.js?v=20260617-algolia-search-credit"></script>
-  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/docsify-copy-code@2/dist/docsify-copy-code.min.js"></script>
+  <script src="./assets/article-cards.js?v=20260727-story8-5"></script>
+  <script src="./assets/home-v2.js?v=20260727-story8-5"></script>
+  <script src="./assets/vendor/docsify.min.js"></script>
+  <script src="./assets/vendor/search.min.js"></script>
+  <script src="./assets/vendor/docsify-copy-code.min.js"></script>
 </body>
 </html>

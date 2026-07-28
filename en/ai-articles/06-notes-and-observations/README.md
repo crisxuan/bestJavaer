@@ -2,8 +2,6 @@
 
 Personal observations, essays, pitfalls, incidents, and cross-topic records.
 
-- 2026-07-22 - [I Strongly Dislike Books Written by AI](./i-strongly-dislike-books-written-by-ai.md)
-- 2026-07-15 - [Recent AI Events Have Been Surreal](./recent-ai-events-have-been-surreal.md)
 - 2026-06-08 - [How to Get Ahead in the AI Era](./how-to-get-ahead-in-the-ai-era.md)
 - 2026-06-02 - [I Almost Deleted My 6.6k-Star Repository](./i-almost-deleted-my-6-6k-star-repository.md)
 - 2026-04-20 - [I've actually refused, AI.](./i-ve-actually-refused-ai.md)

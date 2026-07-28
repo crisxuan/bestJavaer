@@ -1,7 +1,7 @@
 [English](./README.md) | [中文](./README.zh-CN.md)
 
 <div align="center">
-  <img src="./assets/cxuan-ai-labs.gif" alt="cxuan-ai-labs" width="70%">
+  <img src="./assets/cxuan-ai-labs-logo.png" alt="cxuan-ai-labs" width="70%">
 </div>
 
 # cxuan-ai-labs
@@ -46,12 +46,12 @@ This repository documents practical AI-assisted development workflows, Agent exp
 * [OpenAI Broke Through Hugging Face's Infrastructure](./en/ai-articles/04-industry-and-business/openai-broke-through-hugging-face-infrastructure.md)
 
   2026-07-22
-* [I Strongly Dislike Books Written by AI](./en/ai-articles/06-notes-and-observations/i-strongly-dislike-books-written-by-ai.md)
-
-  2026-07-22
 * [Still Learning Loops? Graph Engineering Is Already Taking Off](./en/ai-articles/01-agent-and-coding/graph-engineering-is-already-taking-off.md)
 
   2026-07-21
+* [OpenAI's Official Prompting Guide](./en/ai-articles/02-models-and-research/openai-official-prompting-guide.md)
+
+  2026-07-20
 
 ## Main Sections
 
@@ -77,7 +77,6 @@ This repository documents practical AI-assisted development workflows, Agent exp
 * 2026-07-22 · [Qoder + Qwen 3.8: A Hands-On Test](./en/ai-articles/02-models-and-research/qoder-qwen-3-8-hands-on-test.md)
 * 2026-07-22 · [Claude Design's System Prompt Leaked: The Essential Lessons](./en/ai-articles/02-models-and-research/claude-design-system-prompt-essential-lessons.md)
 * 2026-07-22 · [OpenAI Broke Through Hugging Face's Infrastructure](./en/ai-articles/04-industry-and-business/openai-broke-through-hugging-face-infrastructure.md)
-* 2026-07-22 · [I Strongly Dislike Books Written by AI](./en/ai-articles/06-notes-and-observations/i-strongly-dislike-books-written-by-ai.md)
 * 2026-07-21 · [Still Learning Loops? Graph Engineering Is Already Taking Off](./en/ai-articles/01-agent-and-coding/graph-engineering-is-already-taking-off.md)
 * 2026-07-20 · [OpenAI's Official Prompting Guide](./en/ai-articles/02-models-and-research/openai-official-prompting-guide.md)
 * 2026-07-18 · [Kimi K3 Stole the Show](./en/ai-articles/02-models-and-research/kimi-k3-stole-the-show.md)
@@ -90,6 +89,16 @@ This repository documents practical AI-assisted development workflows, Agent exp
 * Failure paths and debugging notes are kept because, in the AI era, the troubleshooting process is often more valuable than the final answer.
 * The resource pages are intentionally curated instead of trying to be exhaustive.
 * The older bestJavaer materials remain available, while the active project direction moves toward AI tools, Agent workflows, and personal experiments.
+
+## Build & SEO
+
+```bash
+pnpm install
+pnpm build
+pnpm test
+```
+
+The production build keeps the interactive Docsify experience and generates clean, crawlable HTML under `/articles/` and `/en/articles/`. It also rebuilds RSS feeds, `sitemap.xml`, canonical URLs, hreflang alternates, Open Graph metadata, and Article JSON-LD for every indexed article.
 
 ## Legacy Content
 

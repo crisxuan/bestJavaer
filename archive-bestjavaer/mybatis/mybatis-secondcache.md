@@ -153,7 +153,7 @@ public class MyBatisSecondCacheTest {
 
 测试结果如下：
 
-![image-20190720161244429](/Users/mr.l/Library/Application Support/typora-user-images/image-20190720161244429.png)
+![image-20190720161244429](../../assets/archive-image-unavailable.svg)
 
 通过结果可以得知，首次执行的SQL语句是从数据库中查询得到的结果，然后第一个 SqlSession 执行提交，第二个 SqlSession 执行相同的查询后是从缓存中查取的。
 

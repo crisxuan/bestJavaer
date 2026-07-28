@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-store">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <meta name="description" content="cxuan-ai-labs 印刷版：技术编辑室风格的个人主页。">
+  <meta name="robots" content="noindex,follow">
+  <link rel="canonical" href="https://bestjavaer-nine.vercel.app/">
+  <meta name="theme-color" content="#f2eee3">
+  <meta property="og:title" content="cxuan-ai-labs · 印刷编辑室">
+  <meta property="og:description" content="Codex 与 AI 工具教程、实战实验和优质资源。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bestjavaer-nine.vercel.app/print.html">
+  <meta property="og:image" content="https://bestjavaer-nine.vercel.app/assets/cxuan-ai-labs.gif">
+  <title>cxuan-ai-labs · 印刷编辑室</title>
+  <script>
+    (function bootDesignRoute() {
+      var hash;
+      var route;
+      var html;
+      var isHome;
+      var isArticleIndex;
+      var isCategoryIndex;
+      var isArticleDetail;
+      var isDesignManaged;
+      var hasManualLanguage;
+      var manualLanguage;
+      var printTheme;
+
+      if (window.location.protocol !== 'file:') {
+        hash = window.location.hash || '#/';
+      } else {
+        hash = window.location.hash || '#/';
+        window.location.replace('http://localhost:4173/print.html' + hash);
+        return;
+      }
+
+      route = hash.indexOf('#/') === 0 ? hash.slice(2) : hash.replace(/^#/, '');
+      route = route.split('?')[0].split('#')[0].replace(/^\/+/, '').replace(/\.md$/i, '').replace(/\/+$/, '');
+
+      try {
+        route = decodeURIComponent(route);
+      } catch (error) {
+        route = route;
+      }
+
+      try {
+        manualLanguage = window.localStorage.getItem('cxuan-home-language') || '';
+      } catch (error) {
+        manualLanguage = '';
+      }
+
+      try {
+        printTheme =
+          window.localStorage.getItem('cxuan-print-theme') ||
+          window.localStorage.getItem('cxuan-home-neural-theme') ||
+          'light';
+      } catch (error) {
+        printTheme = 'light';
+      }
+
+      if (/^en/i.test(manualLanguage) && (route === '' || route === '/' || route === 'README')) {
+        window.location.replace(window.location.pathname + window.location.search + '#/home.print.en');
+        return;
+      }
+
+      html = document.documentElement;
+      isHome =
+        route === '' ||
+        route === '/' ||
+        route === 'README' ||
+        route === 'home.print' ||
+        route === 'home.print.en';
+      isArticleIndex = (
+        route === 'ai-articles' ||
+        route === 'ai-articles/README' ||
+        route === 'en/ai-articles' ||
+        route === 'en/ai-articles/README' ||
+        /^(?:en\/)?ai-articles\/[^/]+\/README$/.test(route)
+      );
+      isCategoryIndex = /^(?:en\/)?ai-articles\/0[1-6]-[^/]+\/README$/.test(route);
+      isArticleDetail = /^(?:en\/)?ai-articles\/[^/]+\/.+$/.test(route) && !/\/README$/.test(route);
+      isDesignManaged = isHome || isArticleIndex || isArticleDetail;
+
+      html.classList.toggle('home-page', isHome);
+      html.classList.toggle('wide-page', isHome || isArticleIndex);
+      html.classList.toggle('article-index-page', isArticleIndex);
+      html.classList.toggle('category-design-page', isCategoryIndex);
+      html.classList.toggle('article-detail-page', isArticleDetail);
+      html.classList.toggle(
+        'cx-design-page',
+        route === 'ai-articles' ||
+          route === 'ai-articles/README' ||
+          route === 'en/ai-articles' ||
+          route === 'en/ai-articles/README'
+      );
+      html.classList.toggle('cx-design-managed', isDesignManaged);
+      html.classList.toggle('cx-doc-page', !isDesignManaged);
+      html.classList.toggle('print-light', isHome && printTheme !== 'dark');
+      html.classList.toggle('print-dark', isHome && printTheme === 'dark');
+      html.lang = route === 'home.print.en' || /^en(?:\/|$)/.test(route) ? 'en' : 'zh-CN';
+
+      if (isDesignManaged) {
+        html.classList.add('cx-design-booting');
+      }
+
+      if (isArticleDetail) {
+        window.setTimeout(function revealArticleDetailWhenRendered() {
+          var section = document.querySelector('.markdown-section');
+          var hasRenderedArticle =
+            section &&
+            section.querySelector('h1') &&
+            section.textContent.replace(/\s+/g, '').length > 30;
+
+          if (hasRenderedArticle) {
+            html.classList.remove('cx-design-booting');
+            return;
+          }
+
+          if (html.classList.contains('article-detail-page')) {
+            window.setTimeout(revealArticleDetailWhenRendered, 160);
+          }
+        }, 500);
+      }
+
+      hasManualLanguage = !!manualLanguage;
+
+      if (!hasManualLanguage && (route === '' || route === '/' || route === 'README')) {
+        html.classList.add('cx-language-detecting');
+      }
+    }());
+  </script>
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="alternate" type="application/rss+xml" title="cxuan-ai-labs RSS" href="./rss.xml">
+  <link rel="alternate" type="application/rss+xml" title="cxuan-ai-labs English RSS" href="./rss.en.xml">
+  <link rel="sitemap" type="application/xml" href="./sitemap.xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Noto+Sans+SC:wght@400;500;700;900&family=Noto+Serif+SC:wght@600;700;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/vendor/theme-simple.css">
+  <link rel="stylesheet" href="./assets/docsify.css?v=20260701-home-neural-pointer-1">
+  <link rel="stylesheet" href="./assets/home-print.css?v=20260719-print-2">
+</head>
+<body>
+  <div id="app">Loading...</div>
+  <script>
+    window.$docsify = {
+      name: 'cxuan-ai-labs',
+      nameLink: '#/',
+      repo: 'crisxuan/bestJavaer',
+      homepage: 'home.print.md?v=20260719-print-1',
+      loadNavbar: '_navbar.md',
+      loadSidebar: '_sidebar.md',
+      alias: {
+        '/.*/_sidebar.md': '/_sidebar.md',
+        '/.*/_navbar.md': '/_navbar.md'
+      },
+      notFoundPage: {
+        '/en/': '/_404.en.md',
+        '/': '/_404.md'
+      },
+      subMaxLevel: 2,
+      auto2top: true,
+      relativePath: true,
+      mergeNavbar: true,
+      plugins: [
+        function routeCleaner(hook) {
+          hook.init(function () {
+            var cleanHash = normalizeRouteHash(window.location.hash);
+
+            if (cleanHash && cleanHash !== window.location.hash) {
+              window.location.replace(window.location.pathname + window.location.search + cleanHash);
+              return;
+            }
+
+            cleanDesignNavigationQuery();
+          });
+        }
+      ],
+      requestHeaders: {
+        'cache-control': 'no-cache'
+      },
+      search: {
+        depth: 4,
+        noData: 'No results',
+        paths: 'auto',
+        placeholder: 'Search articles'
+      },
+      copyCode: {
+        buttonText: '复制',
+        errorText: '复制失败',
+        successText: '已复制'
+      }
+    };
+
+    function normalizeRouteHash(hash) {
+      if (!hash || hash.indexOf('#/') !== 0) {
+        return hash;
+      }
+
+      var route = hash.slice(2);
+      var queryIndex = route.indexOf('?');
+      var query = queryIndex >= 0 ? route.slice(queryIndex) : '';
+      var path = queryIndex >= 0 ? route.slice(0, queryIndex) : route;
+      var parts = path.split('/').filter(Boolean);
+      var cleaned = [];
+
+      parts.forEach(function (part) {
+        var previous = cleaned[cleaned.length - 1];
+
+        if (part === previous) {
+          return;
+        }
+
+        if (part === 'ai-articles' && cleaned.indexOf('ai-articles') !== -1) {
+          return;
+        }
+
+        cleaned.push(part);
+      });
+
+      return '#/' + cleaned.join('/') + query;
+    }
+
+    function cleanDesignNavigationQuery() {
+      var params;
+
+      if (!window.location.search || window.location.search.indexOf('cx-nav=') === -1) {
+        return;
+      }
+
+      if (!window.history || !window.history.replaceState) {
+        return;
+      }
+
+      params = new URLSearchParams(window.location.search);
+      params.delete('cx-nav');
+      params.delete('cx-r');
+
+      window.history.replaceState(
+        null,
+        '',
+        window.location.pathname +
+          (params.toString() ? '?' + params.toString() : '') +
+          window.location.hash
+      );
+    }
+  </script>
+  <script src="./assets/article-cards.js?v=20260719-repo-audit-1"></script>
+  <script src="./assets/home-print.js?v=20260719-print-1"></script>
+  <script src="./assets/vendor/docsify.min.js"></script>
+  <script src="./assets/vendor/search.min.js"></script>
+  <script src="./assets/vendor/docsify-copy-code.min.js"></script>
+</body>
+</html>

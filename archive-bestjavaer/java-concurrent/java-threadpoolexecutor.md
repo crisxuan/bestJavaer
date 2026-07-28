@@ -269,7 +269,7 @@ scheduledExecutorService.scheduleWithFixedDelay(command,10,1000,TimeUnit.MILLISE
 
 wiki 上说，线程池其实就是一种软件设计模式，这种设计模式用于实现计算机程序中的并发。
 
-![image-20210202200016478](/Users/mr.l/Library/Application Support/typora-user-images/image-20210202200016478.png)
+![image-20210202200016478](../../assets/archive-image-unavailable.svg)
 
 比如下面就是一个简单的线程池概念图。
 
